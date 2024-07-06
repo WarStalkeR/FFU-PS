@@ -1,0 +1,4 @@
+#global								
+Parameter	Value							
+TutorialItemsInLocker	tech_katana spec_smg_rv medium_police_ammo doom_armor doom_helmet doom_pants doom_boots pmc_vest big_backpack splint bandage antibiotics mre_pack nanoinjection sigs_kosmos tape quasi_sensor_device regular_food_container military_food_container luxury_food_container water_container alcogol_container regular_clothing_container miner_clothing_container worker_clothing_container scientist_clothing_container security_clothing_container weapon_container armor_container tool_container robot_parts_container electrical_parts_container military_parts_container engineering_parts_container itemChip merkUSB classUSB							
+#end								

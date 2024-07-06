@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B12956B3-D6FD-4725-855E-B11BE4920D8B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FFU_Phase_Shift</RootNamespace>
+    <AssemblyName>FFU_Phase_Shift</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\Quasimorph_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\Quasimorph_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\Quasimorph_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FFU_PS_Init.cs" />
+    <Compile Include="FFU_PS_Logger.cs" />
+    <Compile Include="FFU_PS_Tools.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Files\Configs\cfg_global_tutorial_items.csv" />
+    <None Include="Files\modmanifest.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Files\logo_full.png" />
+    <Content Include="Files\thumbnail.png" />
+    <Content Include="Files\workshop.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>rmdir /S /Q "$(SolutionDir)..\..\Mods\FFU_PS\Configs"
+rmdir /S /Q "$(SolutionDir)..\..\..\..\workshop\content\2059170\3283318778\Configs"
+
+echo F | xcopy /F /Y "$(TargetPath)" "$(SolutionDir)..\..\Mods\FFU_PS\FFU_Phase_Shift.dll"
+echo F | xcopy /F /Y "$(ProjectDir)\Files\thumbnail.png" "$(SolutionDir)..\..\Mods\FFU_PS\thumbnail.png"
+echo F | xcopy /F /Y "$(ProjectDir)\Files\modmanifest.json" "$(SolutionDir)..\..\Mods\FFU_PS\modmanifest.json"
+xcopy /E /H /C /I /Y "$(ProjectDir)\Files\Configs" "$(SolutionDir)..\..\Mods\FFU_PS\Configs"
+
+echo F | xcopy /F /Y "$(TargetPath)" "$(SolutionDir)..\..\..\..\workshop\content\2059170\3283318778\FFU_Phase_Shift.dll"
+echo F | xcopy /F /Y "$(ProjectDir)\Files\thumbnail.png" "$(SolutionDir)..\..\..\..\workshop\content\2059170\3283318778\thumbnail.png"
+echo F | xcopy /F /Y "$(ProjectDir)\Files\modmanifest.json" "$(SolutionDir)..\..\..\..\workshop\content\2059170\3283318778\modmanifest.json"
+xcopy /E /H /C /I /Y "$(ProjectDir)\Files\Configs" "$(SolutionDir)..\..\..\..\workshop\content\2059170\3283318778\Configs"
+
+del "$(TargetPath)" /F</PostBuildEvent>
+  </PropertyGroup>
+</Project>

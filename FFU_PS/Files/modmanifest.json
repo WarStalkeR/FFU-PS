@@ -1,0 +1,7 @@
+{
+	"UniqueModName": "FFU_PS",
+	"Assemblies": [
+		"FFU_Phase_Shift.dll"
+	],
+	"Dependencies": []
+}
