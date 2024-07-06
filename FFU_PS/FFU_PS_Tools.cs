@@ -527,6 +527,20 @@ namespace FFU_Phase_Shift {
             _parsers.Add(parser);
         }
 
+        /// <remarks>
+        /// Loads custom configuration files and overwrites existing entries, if possible.
+        /// 
+        /// <br/><br/>Configuration file is a TAB-bases CSV file that follows extremely strict writing pattern:
+        /// <br/><c>#region_name</c> - defines start of the config region and its type (i.e. <c>#ammo</c>).
+        /// <br/><c>[Key][Value]</c> - defines parameter columns (i.e. <c>ammoId</c>, <c>maxStack</c>). Can have more columns.
+        /// <br/><c>[123][Data_45]</c> - row(s) with data that follow defined pattern by parameter columns.
+        /// <br/><c>#end</c> - defines end of the config region. Add blank line after it, if there are more configs regions.
+        /// 
+        /// <br/><br/>Since config file is pretty much TAB-based CSV, just use CSV editor to handle it.
+        /// <br/>Such as LibreCalc. Just make sure that you save it as TAB-based CSV as well.
+        /// 
+        /// <br/><br/>For possible parameters and config regions please refer to original config files.
+        /// </remarks>
         public void ProcessConfigFile(string configPath) {
             string configFile = File.ReadAllText(configPath);
             string[] configEntries = configFile.Split(new char[] { '\n' }, StringSplitOptions.None);
