@@ -544,32 +544,32 @@ namespace FFU_Phase_Shift {
         public void ProcessConfigFile(string configPath) {
             string configFile = File.ReadAllText(configPath);
             string[] configEntries = configFile.Split(new char[] { '\n' }, StringSplitOptions.None);
-            bool parserFound = false;
-            string parserType = string.Empty;
-            DescriptorsCollection dCollection = null;
-            IConfigParser cfgParser = null;
+            bool headerParsed = false;
+            string currentKey = string.Empty;
+            DescriptorsCollection colDescriptors = null;
+            IConfigParser currParser = null;
             foreach (string cfgEntry in configEntries) {
                 if (!string.IsNullOrEmpty(cfgEntry) && (cfgEntry.Length < 2 || cfgEntry[0] != '/' || cfgEntry[1] != '/')) {
-                    if (parserFound) {
-                        parserFound = false;
-                        cfgParser.ParseHeaders(this.SplitLine(cfgEntry));
+                    if (headerParsed) {
+                        headerParsed = false;
+                        currParser.ParseHeaders(SplitLine(cfgEntry));
                     } else if (cfgEntry.Contains("#end")) {
-                        cfgParser = null;
-                        dCollection = null;
+                        currParser = null;
+                        colDescriptors = null;
                     } else if (cfgEntry[0] == '#') {
-                        parserType = cfgEntry.Trim(new char[] { '\t', '\r', '\n', '#' });
-                        foreach (IConfigParser refParser in this._parsers) {
-                            if (refParser.ValidTableKey(parserType)) {
-                                parserFound = true;
-                                cfgParser = refParser;
+                        currentKey = cfgEntry.Trim(new char[] { '\t', '\r', '\n', '#' });
+                        foreach (IConfigParser refParser in _parsers) {
+                            if (refParser.ValidTableKey(currentKey)) {
+                                headerParsed = true;
+                                currParser = refParser;
                             }
                         }
-                        dCollection = Resources.Load<DescriptorsCollection>("DescriptorsCollections/" + parserType + "_descriptors");
-                        if (dCollection != null) {
-                            this.OnDescriptorsLoaded(parserType, dCollection);
+                        colDescriptors = Resources.Load<DescriptorsCollection>("DescriptorsCollections/" + currentKey + "_descriptors");
+                        if (colDescriptors != null) {
+                            OnDescriptorsLoaded(currentKey, colDescriptors);
                         }
-                    } else if (cfgParser != null) {
-                        cfgParser.ParseLine(this.SplitLine(cfgEntry), parserType, dCollection);
+                    } else if (currParser != null) {
+                        currParser.ParseLine(SplitLine(cfgEntry), currentKey, colDescriptors);
                     }
                 }
             }
