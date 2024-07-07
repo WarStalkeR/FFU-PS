@@ -1,0 +1,9 @@
+py csv_json_converter.py _config_barter_orig.json
+py csv_json_converter.py _config_drops_orig.json
+py csv_json_converter.py _config_globals_orig.json
+py csv_json_converter.py _config_items_orig.json
+py csv_json_converter.py _config_magnum_orig.json
+py csv_json_converter.py _config_mercenaries_orig.json
+py csv_json_converter.py _config_monsters_orig.json
+py csv_json_converter.py _config_spacesandbox_orig.json
+py csv_json_converter.py _config_wounds_orig.json

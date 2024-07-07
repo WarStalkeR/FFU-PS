@@ -1,0 +1,3770 @@
+#monsterdrop_test1				\r
+TechLevel	ContentIds	Weight	Points	\r
+	possesed_jungleman possesed_jungleman possesed_jungleman possesed_jungleman	100	250	\r
+	possesed_jungleman possesed_jungleman possesed_jungleman possesed_jungleman possesed_jungleman possesed_jungleman	80	750	\r
+#end				\r
+				\r
+#monsterdrop_crtutorial2				\r
+TechLevel	ContentIds	Weight	Points	\r
+	cresist_free_worker_man cresist_free_worker_woman cresist_free_worker_woman	60	50	\r
+	cresist_free_worker_man cresist_free_worker_woman woman_lowskills_worker_cresist	60	50	\r
+	man_worker_cresist woman_worker_cresist cresist_free_worker_man	60	50	\r
+	cresist_free_worker_woman cresist_soldier_man man_medic_cres woman_medic_cres	30	60	\r
+	cresist_free_worker_woman man_worker_cresist woman_worker_cresist man_medic_cres woman_medic_cres	30	60	\r
+	woman_medic_cres man_worker_cresist woman_lowskills_worker_cresist	30	60	\r
+	woman_lowskills_worker_cresist cresist_soldier_man cresist_soldier_woman	15	80	\r
+	woman_worker_cresist cresist_free_worker_man cresist_free_worker_woman security_man_cres security_woman_cres	15	80	\r
+	woman_medic_cres security_man_cres security_woman_cres	15	80	\r
+	cresist_soldier_woman security_man_cres security_woman_cres security_woman_cres	10	100	\r
+	security_woman_cres man_worker_cresist woman_lowskills_worker_cresist man_worker_cresist woman_worker_cresist	10	100	\r
+	security_man_cres security_woman_cres security_man_cres security_woman_cres	10	100	\r
+#end				\r
+				\r
+#monsterdrop_ComAndAnarchy1				\r
+TechLevel	ContentIds	Weight	Points	\r
+	realware_milita_man realware_milita_woman security_man_rw	60	30	\r
+	man_medic_rw realware_milita_man realware_milita_woman	60	30	\r
+	realware_milita_man realware_milita_woman security_man_rw security_woman_rw	60	30	\r
+	realware_warrobot realware_milita_man realware_milita_woman realware_milita_woman	30	40	\r
+	realware_milita_man realware_milita_woman man_medic_rw security_man_rw security_woman_rw	30	40	\r
+	heavy_security_man_rw heavy_security_woman_rw mercury_force_woman	30	40	\r
+	realware_warrobot heavy_security_woman_rw security_man_rw	10	60	\r
+	realware_elite_man security_man_rw security_woman_rw security_woman_rw	10	60	\r
+#end				\r
+				\r
+#monsterdrop_ComAndAnarchy2				\r
+TechLevel	ContentIds	Weight	Points	\r
+	possesed_elite_azt_man possesed_elite_azt_woman possesed_azt_man possesed_azt_woman	60	20	\r
+	venus_eagle_knight possesed_centaur possesed_centaur	60	20	\r
+	possesed_BigArm venus_custodian venus_custodian	60	20	\r
+	venus_jaguar_knight venus_jaguar_knight venus_jaguar_knight	30	30	\r
+	venus_jaguar_knight venus_demon_cat venus_demon_cat possesed_centaur	30	30	\r
+	possesed_BlobMan possesed_BlobMan possesed_BlobMan possesed_BlobMan	30	30	\r
+	venus_jaguar_knight venus_jaguar_knight venus_jaguar_knight	20	30	\r
+	venus_demon_warrior venus_eagle_knight venus_eagle_knight	20	30	\r
+	venus_taskmaster venus_custodian venus_taskmaster venus_custodian	20	30	\r
+	venus_demon_warrior venus_demon_warrior venus_demon_warrior	10	40	\r
+#end				\r
+				\r
+#itemdrop_redbarreldrop				\r
+TechLevel	ContentIds	Weight	Points	\r
+	gas_ammo	20	20	\r
+#end				\r
+				\r
+#itemdrop_bookcaseContainer				\r
+TechLevel	ContentIds	Weight	Points	\r
+	sigs_kosmos	4	20	\r
+	rags	8	5	\r
+	vodka	4	10	\r
+	tape	4	10	\r
+	anulator	2	40	\r
+	human_skin	4	5	\r
+	plastic	8	5	\r
+	glass	4	5	\r
+	rubber	8	5	\r
+	ledgerBook	32	10	\r
+	prototype_schematics	16	20	\r
+	memory_software	8	20	\r
+	entertainment_software	8	20	\r
+	expert_disk	16	20	\r
+	gunbang_magazine	32	20	\r
+#end				\r
+				\r
+#itemdrop_CnA_skullStorage				\r
+TechLevel	ContentIds	Weight	Points	\r
+	quest_goldenSkull	100	1	\r
+#end				\r
+				\r
+#itemdrop_industryContainer				\r
+TechLevel	ContentIds	Weight	Points	\r
+	tool_container	20	20	\r
+	robot_parts_container	20	20	\r
+	engineering_parts_container	20	20	\r
+	welding_machine_device	20	20	\r
+	mining_equipment	10	40	\r
+	construction_equipment	10	40	\r
+	armor_shards	10	10	\r
+	weapon_shards	10	10	\r
+	coarse_gears	10	10	\r
+#end				\r
+				\r
+#itemdrop_scienceContainer				\r
+TechLevel	ContentIds	Weight	Points	\r
+	scientist_clothing_container	10	40	\r
+	electrical_parts_container	10	40	\r
+	medical_equipment	20	20	\r
+	scientific_equipment	20	20	\r
+	chemical_analyzer	20	20	\r
+	quasiresearch_disk	20	20	\r
+	research_disk	20	20	\r
+	quasisamples	20	20	\r
+	biomass_tank	20	20	\r
+	medical_components	20	20	\r
+#end				\r
+				\r
+#itemdrop_watertankdrop				\r
+TechLevel	ContentIds	Weight	Points	\r
+	water	20	20	\r
+#end				\r
+				\r
+#itemdrop_toxicbarreldrop				\r
+TechLevel	ContentIds	Weight	Points	\r
+	toxic_ammo	20	20	\r
+#end				\r
+				\r
+#itemdrop_toiletdrop				\r
+TechLevel	ContentIds	Weight	Points	\r
+	water	80	20	\r
+	human_poop	20	20	\r
+#end				\r
+				\r
+#itemdrop_bloodsinkdrop				\r
+TechLevel	ContentIds	Weight	Points	\r
+	bloodBag	20	20	\r
+#end				\r
+				\r
+#itemdrop_poppycontainer				\r
+TechLevel	ContentIds	Weight	Points	\r
+	poppy_box	20	20	\r
+#end				\r
+				\r
+#itemdrop_test1				\r
+TechLevel	ContentIds	Weight	Points	\r
+	army_knife	20	42	\r
+	glass_knife	10	28	\r
+	corp_bone	20	42	\r
+	machete	20	42	\r
+	metal_pipe	20	42	\r
+	scarp_club	20	42	\r
+	pmc_club	20	42	\r
+	corp_hand	20	28	\r
+	corp_leg	20	28	\r
+	knuckles	20	28	\r
+	franch_baton	20	56	\r
+	hatchet	20	28	\r
+	choppa_axe	20	28	\r
+	spec_hatchet	20	56	\r
+	bandit_axe	20	42	\r
+	army_pistol	10	70	\r
+	army_pistol_2	10	70	\r
+	pmc_pistol	10	70	\r
+	pmc_pistol_2	10	70	\r
+	spec_pistol	10	70	\r
+	dark_pistol	10	70	\r
+	dark_pistol_2	10	70	\r
+	petrov_pistol	10	70	\r
+	petrov_pistol_2	10	70	\r
+	petrov_pistol_3	10	70	\r
+	civres_pistol	10	70	\r
+	pmc_shotgun	10	70	\r
+	desert_shotgun	10	70	\r
+	bandit_shotgun	10	70	\r
+	pmc_smg	10	70	\r
+	bandit_smg_2	10	70	\r
+	desert_assault	10	70	\r
+	desert_marksman	10	70	\r
+	pistol_basic_ammo	30	21	\r
+	shotgun_bullet_ammo	30	21	\r
+	shotgun_shrapnel_ammo	30	21	\r
+	heavy_basic_ammo	30	21	\r
+	bandage	30	14	\r
+	medpack	30	14	\r
+	splint	30	14	\r
+	antiradin	30	14	\r
+	antibiotics	30	14	\r
+	sorbent	30	14	\r
+	sigs_kosmos	30	14	\r
+	antidote	30	14	\r
+	painkillers	30	14	\r
+	beer	30	14	\r
+	wiskey	30	14	\r
+	rottenMeat	30	14	\r
+	plaster	30	14	\r
+	military_kit	30	14	\r
+	blueSoda	30	14	\r
+	cannedMeat	30	14	\r
+	cannedVeg	30	14	\r
+	chocolateBar	30	14	\r
+	packedGoodRation	30	14	\r
+	packedRation	30	14	\r
+	water	30	14	\r
+	burgerMeat	30	14	\r
+	burgerVeg	30	14	\r
+	synthChicken	30	14	\r
+	synthBeef	30	14	\r
+	rocketCandy	5	56	\r
+	caviar	5	56	\r
+	small_backpack	10	42	\r
+	medium_backpack	5	42	\r
+	pmc_vest	20	42	\r
+	cevlar_vest	20	42	\r
+	bandit_armor	10	28	\r
+	bandit_helmet	10	28	\r
+	bandit_pants	10	28	\r
+	bandit_boots	10	28	\r
+	power_armor	10	42	\r
+	power_helmet	10	42	\r
+	power_pants	10	42	\r
+	power_boots	10	42	\r
+	pmc_armor	10	42	\r
+	pmc_helmet	10	42	\r
+	pmc_pants	10	42	\r
+	pmc_boots	10	42	\r
+	security_armor	10	42	\r
+	franch_helmet	10	42	\r
+	franch_pants	10	42	\r
+	franch_boots	10	42	\r
+	employee_vest	10	28	\r
+	employee_hat	10	28	\r
+	employee_pants	10	28	\r
+	yellow_pants	10	28	\r
+	blue_boots	10	28	\r
+	common_boots	10	28	\r
+	armor_shards	25	14	\r
+	weapon_shards	25	14	\r
+	tape	10	28	\r
+	frag_grenade	10	21	\r
+	frag_mine	10	14	\r
+	packaged_recreational_robot	5	112	\r
+	plastic	30	3	\r
+	powder	30	2	\r
+	glass	30	6	\r
+	metal_tread	30	9	\r
+	wire	40	12	\r
+	rubber	30	3	\r
+	tread	30	6	\r
+	explosives	30	14	\r
+	acid	30	9	\r
+	tin	30	6	\r
+	glassBottle	30	9	\r
+	ledgerBook	10	28	\r
+	spring	30	7	\r
+	regular_food_container	15	56	\r
+	military_food_container	15	70	\r
+	luxury_food_container	15	112	\r
+	water_container	15	42	\r
+	alcogol_container	15	112	\r
+	regular_clothing_container	15	56	\r
+	miner_clothing_container	15	70	\r
+	worker_clothing_container	15	84	\r
+	scientist_clothing_container	15	84	\r
+	security_clothing_container	15	98	\r
+	weapon_container	15	140	\r
+	armor_container	15	112	\r
+	tool_container	15	84	\r
+	robot_parts_container	15	56	\r
+	electrical_parts_container	15	56	\r
+	military_parts_container	15	70	\r
+	engineering_parts_container	15	56	\r
+	ai_module	15	112	\r
+	communication_relay	15	56	\r
+	defibrillator_device	15	84	\r
+	quasi_sensor_device	15	84	\r
+	geoscanner_device	15	84	\r
+	welding_machine_device	15	84	\r
+	medical_equipment	15	70	\r
+	scientific_equipment	15	84	\r
+	mining_equipment	15	56	\r
+	construction_equipment	15	56	\r
+	chemical_analyzer	15	42	\r
+	hydraulic_pump	15	42	\r
+	quasiresearch_disk	15	84	\r
+	research_disk	15	98	\r
+	prototype_schematics	15	112	\r
+	management_unit	15	28	\r
+	darknet_unit	15	56	\r
+	military_unit	15	56	\r
+	memory_software	15	84	\r
+	entertainment_software	15	70	\r
+	expert_disk	15	42	\r
+	quasisamples	15	112	\r
+	biomass_tank	15	28	\r
+	precious_metals	15	140	\r
+	drug_cargo	15	140	\r
+	gunbang_magazine	15	70	\r
+	medical_components	15	84	\r
+	watermelon	15	70	\r
+	itemChip	30	84	\r
+	mediumItemChip	15	168	\r
+	merkUSB	15	140	\r
+	classUSB	15	140	\r
+#end				\r
+				\r
+#itemdrop_prison				\r
+TechLevel	ContentIds	Weight	Points	\r
+	army_knife	10	54	\r
+	glass_knife	10	28	\r
+	corp_bone	20	42	\r
+	machete	20	42	\r
+	metal_pipe	30	42	\r
+	scarp_club	30	42	\r
+	pmc_club	20	42	\r
+	corp_hand	20	28	\r
+	corp_leg	20	28	\r
+	knuckles	40	28	\r
+	franch_baton	5	82	\r
+	hatchet	30	28	\r
+	choppa_axe	20	28	\r
+	spec_hatchet	20	56	\r
+	bandit_axe	20	42	\r
+	army_pistol	5	90	\r
+	army_pistol_2	5	90	\r
+	pmc_pistol	5	90	\r
+	pmc_pistol_2	5	90	\r
+	spec_pistol	5	90	\r
+	dark_pistol	5	90	\r
+	dark_pistol_2	5	90	\r
+	petrov_pistol	5	90	\r
+	petrov_pistol_2	5	90	\r
+	petrov_pistol_3	5	90	\r
+	civres_pistol	5	90	\r
+	pmc_shotgun	5	90	\r
+	desert_shotgun	5	90	\r
+	bandit_shotgun	5	90	\r
+	pmc_smg	5	90	\r
+	bandit_smg_2	5	90	\r
+	desert_assault	5	90	\r
+	desert_marksman	5	90	\r
+	pistol_basic_ammo	30	21	\r
+	shotgun_bullet_ammo	30	21	\r
+	shotgun_shrapnel_ammo	30	21	\r
+	heavy_basic_ammo	30	21	\r
+	bandage	30	14	\r
+	medpack	30	14	\r
+	splint	30	14	\r
+	antiradin	10	14	\r
+	antibiotics	30	14	\r
+	sorbent	10	14	\r
+	sigs_kosmos	40	14	\r
+	antidote	30	14	\r
+	painkillers	30	14	\r
+	beer	40	14	\r
+	wiskey	40	14	\r
+	rottenMeat	40	14	\r
+	plaster	30	14	\r
+	military_kit	10	14	\r
+	blueSoda	30	14	\r
+	cannedMeat	30	14	\r
+	cannedVeg	30	14	\r
+	chocolateBar	30	14	\r
+	packedGoodRation	15	14	\r
+	packedRation	30	14	\r
+	water	30	14	\r
+	burgerMeat	30	14	\r
+	burgerVeg	30	14	\r
+	synthChicken	30	14	\r
+	synthBeef	30	14	\r
+	rocketCandy	5	56	\r
+	caviar	5	56	\r
+	small_backpack	10	42	\r
+	medium_backpack	5	42	\r
+	pmc_vest	20	42	\r
+	cevlar_vest	20	42	\r
+	bandit_armor	10	28	\r
+	bandit_helmet	10	28	\r
+	bandit_pants	10	28	\r
+	bandit_boots	10	28	\r
+	power_armor	5	42	\r
+	power_helmet	5	42	\r
+	power_pants	5	42	\r
+	power_boots	5	42	\r
+	pmc_armor	10	56	\r
+	pmc_helmet	10	56	\r
+	pmc_pants	10	56	\r
+	pmc_boots	10	56	\r
+	security_armor	5	42	\r
+	franch_helmet	5	42	\r
+	franch_pants	5	42	\r
+	franch_boots	5	42	\r
+	employee_vest	10	28	\r
+	employee_hat	10	28	\r
+	employee_pants	10	28	\r
+	yellow_pants	10	28	\r
+	blue_boots	10	28	\r
+	common_boots	10	28	\r
+	armor_shards	35	14	\r
+	weapon_shards	35	14	\r
+	tape	20	28	\r
+	frag_grenade	5	21	\r
+	frag_mine	5	14	\r
+	packaged_recreational_robot	5	112	\r
+	plastic	40	3	\r
+	powder	40	2	\r
+	glass	40	6	\r
+	metal_tread	40	9	\r
+	wire	40	12	\r
+	rubber	40	3	\r
+	tread	40	6	\r
+	explosives	40	14	\r
+	acid	40	9	\r
+	tin	40	6	\r
+	glassBottle	40	9	\r
+	ledgerBook	20	28	\r
+	spring	30	7	\r
+	regular_food_container	15	56	\r
+	military_food_container	5	70	\r
+	luxury_food_container	5	112	\r
+	water_container	15	42	\r
+	alcogol_container	15	112	\r
+	regular_clothing_container	15	56	\r
+	miner_clothing_container	5	70	\r
+	worker_clothing_container	15	84	\r
+	scientist_clothing_container	5	84	\r
+	security_clothing_container	15	98	\r
+	weapon_container	5	140	\r
+	armor_container	5	112	\r
+	tool_container	15	84	\r
+	robot_parts_container	5	56	\r
+	gunbang_magazine	30	70	\r
+	medical_components	15	84	\r
+	watermelon	15	70	\r
+	itemChip	30	84	\r
+	mediumItemChip	15	168	\r
+	merkUSB	15	140	\r
+	classUSB	15	140	\r
+	medical_equipment	25	70	\r
+	organsBox	15	70	\r
+	morphine	30	14	\r
+	biomass_tank	20	28	\r
+	trowable_heart	10	14	\r
+	surgicalKit	5	56	\r
+	drug_cargo	20	105	\r
+#end				\r
+				\r
+#itemdrop_mining				\r
+TechLevel	ContentIds	Weight	Points	\r
+	communication_relay	20	42	\r
+	circuit_board	5	42	\r
+	capacitor	20	42	\r
+	ai_module	20	42	\r
+	microelectronics	5	42	\r
+	transformer	25	28	\r
+	electrical_parts_container	5	28	\r
+	miner_knife	5	28	\r
+	metal_pipe	20	42	\r
+	scarp_club	20	42	\r
+	breaker	20	42	\r
+	crowbar	20	42	\r
+	wrench	5	28	\r
+	sapper_shovel	20	42	\r
+	bandit_axe	5	56	\r
+	bandit_sawblade	20	70	\r
+	miner_pistol	5	70	\r
+	core_nailgun	10	70	\r
+	pistol_basic_ammo	10	70	\r
+	miner_bolts_ammo	5	70	\r
+	medium_basic_ammo	5	70	\r
+	shotgun_bullet_ammo	10	70	\r
+	heavy_basic_ammo	5	70	\r
+	battery_charge	5	70	\r
+	battery_crafted_charge	10	70	\r
+	gas_ammo	10	70	\r
+	sawblade_ammo	10	70	\r
+	bandage	10	70	\r
+	medpack	30	21	\r
+	splint	30	21	\r
+	antibiotics	30	21	\r
+	medicalClue	30	21	\r
+	naloxone	30	21	\r
+	sorbent	30	21	\r
+	sigs_kosmos	30	21	\r
+	rags	30	21	\r
+	antidote	30	14	\r
+	painkillers	30	14	\r
+	beer	30	14	\r
+	vodka	30	14	\r
+	wiskey	30	14	\r
+	armagnac	30	14	\r
+	mre_pack	30	14	\r
+	packedGoodRation	30	14	\r
+	packedRation	30	14	\r
+	redSoda	30	14	\r
+	water	10	14	\r
+	burgerMeat	30	14	\r
+	burgerVeg	10	14	\r
+	synthChicken	30	14	\r
+	synthBeef	30	14	\r
+	rocketCandy	30	14	\r
+	caviar	30	14	\r
+	wagyu_steak	30	14	\r
+	truffle_oil	30	14	\r
+	tuna_steak	30	14	\r
+	small_backpack	30	14	\r
+	medium_backpack	30	14	\r
+	servo_backpack	30	14	\r
+	pmc_vest	1	42	\r
+	bandit_vest	10	42	\r
+	cevlar_vest_pockets	5	28	\r
+	smuggler_armor	10	28	\r
+	worker_armor	10	28	\r
+	pmc_armor	10	28	\r
+	svn_cap_vest	10	28	\r
+	pb_vest	10	28	\r
+	core_hard_vest	10	28	\r
+	employee_vest	10	28	\r
+	spider_armor	10	28	\r
+	jackal_armor	10	28	\r
+	green_tshirt	10	28	\r
+	green_vest	10	28	\r
+	blue_tshirt	1	28	\r
+	prison_tshirt	1	28	\r
+	singlet_shirt	5	28	\r
+	scientist_shirt	10	28	\r
+	hyber_shirt	10	28	\r
+	armor_shards	25	14	\r
+	weapon_shards	25	6	\r
+	blunt_melee_shards	5	6	\r
+	pierce_melee_shards	10	3	\r
+	broken_weapon	20	7	\r
+	rusty_shards	30	9	\r
+	coarse_gears	30	7	\r
+	rod	10	28	\r
+	ceramite_shards	10	14	\r
+	tape	10	14	\r
+	armor_repair_kit	10	14	\r
+	weapon_repair_kit	15	112	\r
+	melee_repair_kit	10	3	\r
+	bandit_boots	30	3	\r
+	smuggler_boots	30	2	\r
+	pmc_boots	30	6	\r
+	pb_boots	30	9	\r
+	common_boots	30	12	\r
+	jackal_boots	30	3	\r
+	blue_boots	30	6	\r
+	broun_boots	30	14	\r
+	bandit_pants	30	9	\r
+	smuggler_pants	30	6	\r
+	pmc_pants	30	9	\r
+	svn_cap_pants	15	56	\r
+	pb_pants	5	70	\r
+	core_hard_pants	10	112	\r
+	employee_pants	15	42	\r
+	blue_pants	10	112	\r
+	brown_pants	10	56	\r
+	yellow_pants	15	70	\r
+	dark_pants	15	84	\r
+	hyber_pants	10	84	\r
+	bandit_helmet	10	98	\r
+	pmc_helmet	10	140	\r
+	svn_cap_hat	15	112	\r
+	pb_hard_hat	30	84	\r
+	core_hard_hat	20	56	\r
+	employee_hat	20	56	\r
+	balaklava	5	70	\r
+	plastic	20	56	\r
+	powder	20	112	\r
+	glass	20	56	\r
+	metal_tread	5	84	\r
+	wire	40	12	\r
+	rubber	15	84	\r
+	tread	30	84	\r
+	explosives	10	70	\r
+	acid	5	84	\r
+	tin	30	56	\r
+	glassBottle	20	56	\r
+	spring	10	42	\r
+	bulb	30	42	\r
+	construction_equipment	5	84	\r
+	engineering_parts_container	20	98	\r
+	worker_clothing_container	15	112	\r
+	tool_container	5	28	\r
+	hydraulic_pump	5	56	\r
+	antiradin	5	56	\r
+	handmade_frag_grenade	5	84	\r
+	handmade_thermal_grenade	5	70	\r
+	itemChip	30	84	\r
+	mediumItemChip	15	168	\r
+	merkUSB	15	140	\r
+	classUSB	15	140	\r
+#end				\r
+				\r
+#itemdrop_construction				\r
+TechLevel	ContentIds	Weight	Points	\r
+	miner_knife	10	42	\r
+	metal_pipe	20	42	\r
+	scarp_club	20	42	\r
+	pmc_club	5	42	\r
+	corp_hand	5	28	\r
+	corp_leg	5	28	\r
+	breaker	20	42	\r
+	crowbar	20	42	\r
+	wrench	20	42	\r
+	hatchet	15	42	\r
+	choppa_axe	5	28	\r
+	sapper_shovel	20	42	\r
+	bandit_sawblade	5	56	\r
+	miner_pistol	10	70	\r
+	pmc_pistol	5	70	\r
+	core_nailgun	10	70	\r
+	gh_pistol	10	70	\r
+	franch_pistol	5	70	\r
+	pmc_shotgun	5	70	\r
+	desert_shotgun	10	70	\r
+	bandit_shotgun	5	70	\r
+	bandit_smg	5	70	\r
+	miner_mg	10	70	\r
+	core_nailmachinegun	10	70	\r
+	core_laser	10	70	\r
+	miner_disctrower	5	70	\r
+	battery_crafted_charge	30	21	\r
+	miner_bolts_ammo	5	21	\r
+	pistol_basic_ammo	30	21	\r
+	shotgun_bullet_ammo	30	21	\r
+	shotgun_shrapnel_ammo	30	21	\r
+	heavy_basic_ammo	30	21	\r
+	gas_ammo	30	21	\r
+	sawblade_ammo	30	21	\r
+	bandage	30	14	\r
+	medpack	30	14	\r
+	splint	30	14	\r
+	antiradin	30	14	\r
+	antibiotics	30	14	\r
+	sorbent	30	14	\r
+	sigs_kosmos	30	14	\r
+	rags	30	14	\r
+	bloodBag	30	14	\r
+	painkillers	30	14	\r
+	beer	5	14	\r
+	spider_soup	5	14	\r
+	rottenMeat	5	14	\r
+	plaster	30	14	\r
+	cannedMeat	30	14	\r
+	cannedVeg	30	14	\r
+	chocolateBar	30	14	\r
+	packedGoodRation	30	14	\r
+	packedRation	30	14	\r
+	water	30	14	\r
+	synthChicken	30	14	\r
+	synthBeef	30	14	\r
+	rocketCandy	30	14	\r
+	wagyu_steak	5	42	\r
+	servo_backpack	10	42	\r
+	bandit_vest	5	28	\r
+	worker_armor	10	28	\r
+	worker_helmet	10	28	\r
+	worker_pants	10	28	\r
+	worker_boots	10	28	\r
+	core_hard_vest	5	28	\r
+	core_hard_hat	5	28	\r
+	core_hard_pants	5	28	\r
+	pb_vest	10	28	\r
+	pb_hard_hat	10	28	\r
+	pb_pants	10	28	\r
+	pb_boots	10	28	\r
+	singlet_shirt	5	28	\r
+	brown_pants	10	28	\r
+	common_boots	10	28	\r
+	armor_shards	5	14	\r
+	blunt_melee_shards	25	6	\r
+	pierce_melee_shards	25	6	\r
+	broken_weapon	5	3	\r
+	rusty_shards	30	7	\r
+	coarse_gears	30	9	\r
+	rod	30	7	\r
+	tape	30	28	\r
+	handmade_frag_grenade	10	14	\r
+	handmade_thermal_grenade	10	14	\r
+	frag_mine	5	14	\r
+	packaged_industrial_robot	20	112	\r
+	plastic	30	3	\r
+	powder	30	2	\r
+	glass	30	6	\r
+	metal_tread	30	9	\r
+	wire	40	12	\r
+	rubber	30	3	\r
+	tread	30	6	\r
+	explosives	30	14	\r
+	acid	30	9	\r
+	tin	30	6	\r
+	glassBottle	30	9	\r
+	regular_food_container	15	56	\r
+	military_food_container	5	70	\r
+	luxury_food_container	10	112	\r
+	water_container	15	42	\r
+	alcogol_container	10	112	\r
+	regular_clothing_container	10	56	\r
+	miner_clothing_container	15	70	\r
+	worker_clothing_container	15	84	\r
+	security_clothing_container	5	98	\r
+	weapon_container	5	140	\r
+	armor_container	15	112	\r
+	tool_container	30	84	\r
+	robot_parts_container	20	56	\r
+	electrical_parts_container	20	56	\r
+	military_parts_container	5	70	\r
+	engineering_parts_container	20	56	\r
+	ai_module	20	112	\r
+	communication_relay	20	56	\r
+	defibrillator_device	5	84	\r
+	quasi_sensor_device	5	84	\r
+	geoscanner_device	15	84	\r
+	welding_machine_device	40	64	\r
+	medical_equipment	10	70	\r
+	scientific_equipment	5	84	\r
+	mining_equipment	30	56	\r
+	construction_equipment	20	56	\r
+	chemical_analyzer	10	42	\r
+	hydraulic_pump	30	42	\r
+	quasiresearch_disk	5	84	\r
+	research_disk	20	98	\r
+	prototype_schematics	15	112	\r
+	management_unit	5	28	\r
+	darknet_unit	5	56	\r
+	memory_software	5	84	\r
+	entertainment_software	50	70	\r
+	expert_disk	3	42	\r
+	biomass_tank	5	28	\r
+	precious_metals	15	140	\r
+	drug_cargo	10	140	\r
+	gunbang_magazine	5	70	\r
+	medical_components	10	84	\r
+	watermelon	5	70	\r
+	itemChip	30	84	\r
+	mediumItemChip	15	168	\r
+	merkUSB	15	140	\r
+	classUSB	15	140	\r
+#end				\r
+				\r
+#itemdrop_office				\r
+TechLevel	ContentIds	Weight	Points	\r
+	ledgerBook	20	21	\r
+	expert_disk	20	32	\r
+	memory_software	20	63	\r
+	personalKey	20	32	\r
+	gunbang_magazine	20	53	\r
+	management_unit	20	21	\r
+	darknet_unit	40	28	\r
+	precious_metals	20	105	\r
+	entertainment_software	20	70	\r
+	knuckles	20	28	\r
+	crowbar	20	42	\r
+	hatchet	20	42	\r
+	choppa_axe	20	28	\r
+	spec_hatchet	20	56	\r
+	bandit_shotgun	10	70	\r
+	bandit_smg	10	70	\r
+	bandit_assault	10	70	\r
+	pistol_basic_ammo	30	21	\r
+	medium_basic_ammo	30	21	\r
+	shotgun_bullet_ammo	30	21	\r
+	heavy_basic_ammo	30	21	\r
+	battery_charge	30	21	\r
+	battery_crafted_charge	30	21	\r
+	gas_ammo	30	21	\r
+	sawblade_ammo	30	21	\r
+	bandage	30	14	\r
+	medpack	30	34	\r
+	splint	30	14	\r
+	antibiotics	30	14	\r
+	medicalClue	30	14	\r
+	sorbent	30	14	\r
+	sigs_kosmos	40	14	\r
+	rags	30	10	\r
+	antidote	30	14	\r
+	painkillers	30	14	\r
+	beer	30	14	\r
+	vodka	20	14	\r
+	wiskey	10	14	\r
+	armagnac	5	14	\r
+	packedGoodRation	30	14	\r
+	packedRation	30	14	\r
+	redSoda	30	14	\r
+	water	30	14	\r
+	burgerMeat	30	14	\r
+	burgerVeg	30	14	\r
+	synthChicken	30	14	\r
+	synthBeef	30	14	\r
+	rocketCandy	30	14	\r
+	caviar	30	14	\r
+	wagyu_steak	15	14	\r
+	truffle_oil	10	14	\r
+	tuna_steak	5	14	\r
+	small_backpack	10	42	\r
+	pmc_vest	20	42	\r
+	bandit_vest	15	28	\r
+	smuggler_armor	20	28	\r
+	pmc_armor	20	42	\r
+	svn_cap_vest	10	84	\r
+	pb_vest	10	46	\r
+	core_hard_vest	10	46	\r
+	employee_vest	10	28	\r
+	spider_armor	10	28	\r
+	jackal_armor	10	28	\r
+	green_tshirt	10	28	\r
+	green_vest	10	28	\r
+	blue_tshirt	10	28	\r
+	singlet_shirt	10	28	\r
+	scientist_shirt	10	28	\r
+	hyber_shirt	10	28	\r
+	armor_shards	25	14	\r
+	weapon_shards	25	14	\r
+	blunt_melee_shards	25	14	\r
+	pierce_melee_shards	25	14	\r
+	broken_weapon	25	14	\r
+	rusty_shards	25	14	\r
+	coarse_gears	25	14	\r
+	rod	30	7	\r
+	microelectronics	15	28	\r
+	ceramite_shards	15	14	\r
+	tape	10	28	\r
+	armor_repair_kit	25	14	\r
+	weapon_repair_kit	25	14	\r
+	melee_repair_kit	25	14	\r
+	bandit_boots	25	14	\r
+	smuggler_boots	10	42	\r
+	pmc_boots	10	42	\r
+	pb_boots	10	42	\r
+	common_boots	10	42	\r
+	jackal_boots	10	42	\r
+	blue_boots	10	42	\r
+	broun_boots	10	42	\r
+	bandit_pants	10	42	\r
+	smuggler_pants	10	42	\r
+	pmc_pants	10	42	\r
+	svn_cap_pants	10	42	\r
+	pb_pants	10	42	\r
+	core_hard_pants	10	42	\r
+	employee_pants	10	42	\r
+	blue_pants	10	42	\r
+	brown_pants	10	42	\r
+	yellow_pants	10	42	\r
+	dark_pants	10	42	\r
+	hyber_pants	10	42	\r
+	bandit_helmet	10	42	\r
+	pmc_helmet	10	42	\r
+	svn_cap_hat	10	42	\r
+	employee_hat	10	42	\r
+	balaklava	10	42	\r
+	plastic	30	3	\r
+	powder	30	2	\r
+	glass	30	6	\r
+	metal_tread	30	9	\r
+	wire	40	12	\r
+	rubber	30	3	\r
+	tread	30	6	\r
+	explosives	30	14	\r
+	acid	30	9	\r
+	tin	30	6	\r
+	glassBottle	30	9	\r
+	spring	30	7	\r
+	bulb	15	28	\r
+	itemChip	30	84	\r
+	mediumItemChip	15	168	\r
+	merkUSB	15	140	\r
+	classUSB	15	140	\r
+#end				\r
+				\r
+#itemdrop_industry1				\r
+TechLevel	ContentIds	Weight	Points	\r
+	miner_knife	20	42	\r
+	machete	20	42	\r
+	metal_pipe	20	42	\r
+	scarp_club	20	42	\r
+	pmc_club	20	42	\r
+	corp_hand	20	28	\r
+	corp_leg	20	28	\r
+	knuckles	20	28	\r
+	breaker	20	42	\r
+	crowbar	20	42	\r
+	wrench	20	42	\r
+	hatchet	20	42	\r
+	choppa_axe	20	28	\r
+	sapper_shovel	20	42	\r
+	bandit_sawblade	20	56	\r
+	miner_pistol	10	70	\r
+	pmc_pistol	10	70	\r
+	core_nailgun	10	70	\r
+	gh_pistol	10	70	\r
+	franch_pistol	10	70	\r
+	pmc_shotgun	10	70	\r
+	desert_shotgun	10	70	\r
+	bandit_shotgun	10	70	\r
+	bandit_smg	10	70	\r
+	miner_mg	10	70	\r
+	core_nailmachinegun	10	70	\r
+	core_laser	10	70	\r
+	miner_disctrower	10	70	\r
+	battery_crafted_charge	30	21	\r
+	miner_bolts_ammo	30	21	\r
+	pistol_basic_ammo	30	21	\r
+	shotgun_bullet_ammo	30	21	\r
+	shotgun_shrapnel_ammo	30	21	\r
+	heavy_basic_ammo	30	21	\r
+	gas_ammo	30	21	\r
+	sawblade_ammo	30	21	\r
+	bandage	30	14	\r
+	medpack	30	14	\r
+	splint	30	14	\r
+	antiradin	30	14	\r
+	antibiotics	30	14	\r
+	sorbent	30	14	\r
+	sigs_kosmos	30	14	\r
+	rags	30	14	\r
+	bloodBag	30	14	\r
+	painkillers	30	14	\r
+	beer	30	14	\r
+	spider_soup	30	14	\r
+	rottenMeat	30	14	\r
+	plaster	30	14	\r
+	cannedMeat	30	14	\r
+	cannedVeg	30	14	\r
+	chocolateBar	30	14	\r
+	packedGoodRation	30	14	\r
+	packedRation	30	14	\r
+	water	30	14	\r
+	synthChicken	30	14	\r
+	synthBeef	30	14	\r
+	rocketCandy	30	14	\r
+	wagyu_steak	5	42	\r
+	servo_backpack	10	42	\r
+	bandit_vest	15	28	\r
+	worker_armor	10	28	\r
+	worker_helmet	10	28	\r
+	worker_pants	10	28	\r
+	worker_boots	10	28	\r
+	core_hard_vest	10	28	\r
+	core_hard_hat	10	28	\r
+	core_hard_pants	10	28	\r
+	pb_vest	10	28	\r
+	pb_hard_hat	10	28	\r
+	pb_pants	10	28	\r
+	pb_boots	10	28	\r
+	prison_tshirt	10	28	\r
+	prison_pants	10	28	\r
+	singlet_shirt	10	28	\r
+	brown_pants	10	28	\r
+	common_boots	10	28	\r
+	armor_shards	25	14	\r
+	blunt_melee_shards	25	6	\r
+	pierce_melee_shards	25	6	\r
+	broken_weapon	25	3	\r
+	rusty_shards	30	7	\r
+	coarse_gears	30	9	\r
+	rod	30	7	\r
+	tape	10	28	\r
+	handmade_frag_grenade	10	14	\r
+	handmade_thermal_grenade	10	14	\r
+	frag_mine	10	14	\r
+	packaged_industrial_robot	5	112	\r
+	spider_meat	10	3	\r
+	plastic	30	3	\r
+	powder	30	2	\r
+	glass	30	6	\r
+	metal_tread	30	9	\r
+	wire	40	12	\r
+	rubber	30	3	\r
+	tread	30	6	\r
+	explosives	30	14	\r
+	acid	30	9	\r
+	tin	30	6	\r
+	glassBottle	30	9	\r
+	regular_food_container	15	56	\r
+	military_food_container	15	70	\r
+	luxury_food_container	15	112	\r
+	water_container	15	42	\r
+	alcogol_container	15	112	\r
+	regular_clothing_container	15	56	\r
+	miner_clothing_container	15	70	\r
+	worker_clothing_container	15	84	\r
+	scientist_clothing_container	15	84	\r
+	security_clothing_container	15	98	\r
+	weapon_container	15	140	\r
+	armor_container	15	112	\r
+	tool_container	15	84	\r
+	robot_parts_container	15	56	\r
+	electrical_parts_container	15	56	\r
+	military_parts_container	15	70	\r
+	engineering_parts_container	15	56	\r
+	ai_module	15	112	\r
+	communication_relay	15	56	\r
+	defibrillator_device	15	84	\r
+	quasi_sensor_device	15	84	\r
+	geoscanner_device	15	84	\r
+	welding_machine_device	30	52	\r
+	medical_equipment	15	70	\r
+	scientific_equipment	15	84	\r
+	mining_equipment	15	56	\r
+	construction_equipment	15	56	\r
+	chemical_analyzer	15	42	\r
+	hydraulic_pump	15	42	\r
+	quasiresearch_disk	15	84	\r
+	research_disk	15	98	\r
+	prototype_schematics	15	112	\r
+	management_unit	15	28	\r
+	darknet_unit	20	56	\r
+	military_unit	15	56	\r
+	memory_software	20	64	\r
+	entertainment_software	15	70	\r
+	expert_disk	15	42	\r
+	quasisamples	15	112	\r
+	biomass_tank	15	28	\r
+	precious_metals	15	140	\r
+	drug_cargo	15	140	\r
+	gunbang_magazine	15	70	\r
+	medical_components	15	84	\r
+	watermelon	15	70	\r
+	itemChip	30	84	\r
+	mediumItemChip	15	168	\r
+	merkUSB	15	140	\r
+	classUSB	15	140	\r
+#end				\r
+				\r
+#itemdrop_military1				\r
+TechLevel	ContentIds	Weight	Points	\r
+	civres_pistol_2	10	70	\r
+	desert_shotgun	10	70	\r
+	bandit_shotgun	10	70	\r
+	civres_smg	10	70	\r
+	bandit_assault	10	70	\r
+	civres_assault	10	70	\r
+	civres_marksman	10	70	\r
+	regular_launcher	10	70	\r
+	heavy_armorpierce_ammo	30	14	\r
+	shotgun_flechette_ammo	30	14	\r
+	pistol_basic_ammo	30	21	\r
+	shotgun_bullet_ammo	30	21	\r
+	shotgun_shrapnel_ammo	30	21	\r
+	heavy_basic_ammo	30	21	\r
+	gas_ammo	30	21	\r
+	bandage	30	14	\r
+	medpack	30	14	\r
+	splint	30	14	\r
+	antiradin	30	14	\r
+	antibiotics	30	14	\r
+	sorbent	30	14	\r
+	sigs_kosmos	30	14	\r
+	painkillers	30	14	\r
+	vodka	30	14	\r
+	rottenMeat	30	14	\r
+	plaster	30	14	\r
+	military_kit	30	14	\r
+	mre_pack	30	14	\r
+	packedGoodRation	30	14	\r
+	packedRation	30	14	\r
+	redSoda	30	14	\r
+	water	30	14	\r
+	synthChicken	30	14	\r
+	synthBeef	30	14	\r
+	rocketCandy	5	56	\r
+	big_backpack	5	56	\r
+	army_vest	20	42	\r
+	cevlar_vest	20	42	\r
+	smuggler_armor	10	28	\r
+	smuggler_helmet	10	28	\r
+	smuggler_pants	10	28	\r
+	smuggler_boots	10	28	\r
+	jackal_armor	10	28	\r
+	jackal_helmet	10	28	\r
+	jackal_pants	10	28	\r
+	jackal_boots	10	28	\r
+	green_tshirt	10	28	\r
+	green_vest	10	28	\r
+	balaklava	10	28	\r
+	dark_pants	10	28	\r
+	common_boots	10	28	\r
+	armor_shards	30	14	\r
+	weapon_shards	30	14	\r
+	tape	10	28	\r
+	thermal_grenade	20	28	\r
+	stun_grenade	20	28	\r
+	trowing_knife	20	28	\r
+	stationary_turret	10	28	\r
+	frag_mine	20	28	\r
+	packaged_security_robot	5	112	\r
+	personalKey	15	42	\r
+	plastic	30	3	\r
+	powder	30	2	\r
+	glass	30	6	\r
+	metal_tread	30	9	\r
+	wire	40	12	\r
+	rubber	30	3	\r
+	tread	30	6	\r
+	explosives	30	14	\r
+	acid	30	9	\r
+	tin	30	6	\r
+	glassBottle	30	9	\r
+	regular_food_container	15	56	\r
+	military_food_container	15	70	\r
+	luxury_food_container	15	112	\r
+	water_container	15	42	\r
+	alcogol_container	15	112	\r
+	regular_clothing_container	15	56	\r
+	miner_clothing_container	15	70	\r
+	worker_clothing_container	15	84	\r
+	scientist_clothing_container	15	84	\r
+	security_clothing_container	15	98	\r
+	weapon_container	15	140	\r
+	armor_container	15	112	\r
+	tool_container	15	84	\r
+	robot_parts_container	15	56	\r
+	electrical_parts_container	15	56	\r
+	military_parts_container	15	70	\r
+	engineering_parts_container	15	56	\r
+	ai_module	15	112	\r
+	communication_relay	15	56	\r
+	defibrillator_device	15	84	\r
+	quasi_sensor_device	15	84	\r
+	geoscanner_device	15	84	\r
+	welding_machine_device	20	84	\r
+	medical_equipment	15	70	\r
+	scientific_equipment	15	84	\r
+	mining_equipment	15	56	\r
+	construction_equipment	15	56	\r
+	chemical_analyzer	15	42	\r
+	hydraulic_pump	15	42	\r
+	quasiresearch_disk	15	84	\r
+	research_disk	15	98	\r
+	prototype_schematics	15	112	\r
+	management_unit	15	28	\r
+	darknet_unit	20	56	\r
+	military_unit	30	28	\r
+	memory_software	20	84	\r
+	entertainment_software	15	70	\r
+	expert_disk	15	42	\r
+	quasisamples	15	112	\r
+	biomass_tank	15	28	\r
+	precious_metals	15	140	\r
+	drug_cargo	15	140	\r
+	gunbang_magazine	15	70	\r
+	medical_components	15	84	\r
+	watermelon	15	70	\r
+	itemChip	30	140	\r
+	mediumItemChip	15	280	\r
+	merkUSB	15	84	\r
+	classUSB	30	140	\r
+#end				\r
+				\r
+#itemdrop_tutorial				\r
+TechLevel	ContentIds	Weight	Points	\r
+	army_knife	20	42	\r
+	miner_knife	20	42	\r
+	corp_bone	20	42	\r
+	machete	20	42	\r
+	metal_pipe	20	42	\r
+	scarp_club	20	42	\r
+	pmc_club	20	42	\r
+	corp_hand	20	42	\r
+	corp_leg	20	42	\r
+	hatchet	20	42	\r
+	choppa_axe	20	42	\r
+	bandit_axe	20	42	\r
+	bandit_sawblade	20	42	\r
+	miner_pistol	10	70	\r
+	army_pistol	10	70	\r
+	pmc_pistol	10	70	\r
+	spec_pistol	10	70	\r
+	dark_pistol	10	70	\r
+	rail_pistol	10	70	\r
+	petrov_pistol	10	70	\r
+	pmc_shotgun	10	70	\r
+	desert_shotgun	10	70	\r
+	bandit_shotgun	10	70	\r
+	pmc_smg	10	70	\r
+	bandit_smg	10	70	\r
+	bandit_assault	10	70	\r
+	desert_assault	10	70	\r
+	desert_marksman	10	70	\r
+	miner_mg	10	70	\r
+	desert_hmg	10	70	\r
+	miner_disctrower	5	70	\r
+	miner_flametrower	5	70	\r
+	pistol_basic_ammo	30	21	\r
+	miner_bolts_ammo	30	21	\r
+	shotgun_shrapnel_ammo	30	21	\r
+	heavy_basic_ammo	30	21	\r
+	battery_crafted_charge	30	21	\r
+	gas_ammo	30	21	\r
+	sawblade_ammo	30	21	\r
+	bandage	30	14	\r
+	medpack	30	14	\r
+	morphine	30	14	\r
+	splint	30	14	\r
+	antibiotics	30	14	\r
+	medicalClue	30	14	\r
+	naloxone	5	14	\r
+	sorbent	30	14	\r
+	sigs_kosmos	30	14	\r
+	rags	30	14	\r
+	antidote	30	14	\r
+	bloodBag	30	14	\r
+	painkillers	30	14	\r
+	vodka	5	14	\r
+	wiskey	5	14	\r
+	armagnac	5	14	\r
+	meat1	30	14	\r
+	furuncle	30	14	\r
+	blueSoda	30	14	\r
+	cannedMeat	30	14	\r
+	cannedVeg	30	14	\r
+	chocolateBar	30	14	\r
+	mre_pack	30	14	\r
+	packedGoodRation	30	14	\r
+	packedRation	30	14	\r
+	redSoda	30	14	\r
+	water	30	14	\r
+	beer	30	14	\r
+	burgerMeat	30	14	\r
+	burgerVeg	30	14	\r
+	synthChicken	30	14	\r
+	synthBeef	30	14	\r
+	rocketCandy	10	14	\r
+	small_backpack	10	42	\r
+	medium_backpack	5	42	\r
+	bandit_vest	20	42	\r
+	army_vest	20	42	\r
+	bandit_armor	10	42	\r
+	smuggler_armor	10	42	\r
+	pmc_armor	20	42	\r
+	security_armor	20	42	\r
+	green_tshirt	20	42	\r
+	green_vest	20	42	\r
+	blue_tshirt	20	42	\r
+	singlet_shirt	20	42	\r
+	scientist_shirt	20	42	\r
+	bandit_helmet	10	42	\r
+	smuggler_helmet	10	42	\r
+	pmc_helmet	20	42	\r
+	balaklava	20	42	\r
+	blue_pants	20	42	\r
+	brown_pants	20	42	\r
+	yellow_pants	20	42	\r
+	dark_pants	20	42	\r
+	prison_pants	20	42	\r
+	pmc_pants	20	42	\r
+	bandit_pants	10	42	\r
+	smuggler_pants	10	42	\r
+	bandit_boots	10	42	\r
+	smuggler_boots	10	42	\r
+	pmc_boots	20	42	\r
+	blue_boots	20	42	\r
+	broun_boots	20	42	\r
+	armor_shards	25	14	\r
+	weapon_shards	25	14	\r
+	pierce_melee_shards	25	14	\r
+	blunt_melee_shards	25	14	\r
+	armor_repair_kit	25	14	\r
+	weapon_repair_kit	25	14	\r
+	melee_repair_kit	25	14	\r
+	automap	25	14	\r
+	frag_grenade	25	14	\r
+	thermal_grenade	25	14	\r
+	stun_grenade	25	14	\r
+	trowable_heart	10	14	\r
+	frag_mine	25	14	\r
+	stationary_turret	10	14	\r
+	human_wrist	30	7	\r
+	human_feet	30	7	\r
+	human_skin	30	7	\r
+	human_poop	30	7	\r
+	human_rib	30	7	\r
+	human_skull	30	7	\r
+	human_ear	30	7	\r
+	human_aye	30	7	\r
+	broken_weapon	30	7	\r
+	plastic	30	7	\r
+	powder	30	7	\r
+	glass	30	7	\r
+	metal_tread	30	7	\r
+	tape	30	7	\r
+	rubber	30	7	\r
+	explosives	30	7	\r
+	acid	30	7	\r
+	tin	30	7	\r
+	glassBottle	30	7	\r
+	personalKey	30	7	\r
+	circuit_board	30	7	\r
+	ledgerBook	30	7	\r
+	rod	30	7	\r
+	rusty_shards	30	7	\r
+	coarse_gears	30	7	\r
+	spring	30	7	\r
+	capacitor	15	14	\r
+	microelectronics	15	14	\r
+	transformer	30	14	\r
+	bulb	15	14	\r
+	ceramite_shards	15	14	\r
+	lens	15	14	\r
+#end				\r
+				\r
+#itemdrop_venusDrop1				\r
+TechLevel	ContentIds	Weight	Points	\r
+	azt_sickle	10	70	\r
+	azt_club	10	70	\r
+	corp_hand	20	28	\r
+	corp_leg	20	28	\r
+	corp_bone	20	42	\r
+	azt_big_axe	10	70	\r
+	azt_pistol	10	70	\r
+	azt_shotgun	10	70	\r
+	azt_rifle	10	70	\r
+	quasi_basic_ammo	10	70	\r
+	rags	20	7	\r
+	aztec_rags	5	70	\r
+	meat1	20	2	\r
+	spider_meat	20	2	\r
+	furuncle	20	14	\r
+	slanina	20	14	\r
+	rottenMeat	20	7	\r
+	spider_hemlet	10	28	\r
+	spider_armor	10	28	\r
+	spider_pants	10	28	\r
+	spider_boots	10	28	\r
+	azt_light_armor	10	28	\r
+	azt_heavy_armor	10	28	\r
+	azt_plum_helmet	10	28	\r
+	azt_mask	10	28	\r
+	azt_linecloth	10	28	\r
+	azt_boots	10	28	\r
+	packedGoodRation	30	14	\r
+	packedRation	30	14	\r
+	redSoda	30	14	\r
+	water	30	14	\r
+	pistol_basic_ammo	30	21	\r
+	miner_bolts_ammo	30	21	\r
+	shotgun_shrapnel_ammo	30	21	\r
+	trowable_heart	30	7	\r
+	human_wrist	30	2	\r
+	human_feet	30	2	\r
+	human_skin	30	2	\r
+	human_poop	30	2	\r
+	human_rib	30	2	\r
+	human_skull	30	2	\r
+	human_ear	30	2	\r
+	human_aye	30	2	\r
+	itemChip	40	56	\r
+	mediumItemChip	10	112	\r
+	merkUSB	20	56	\r
+	classUSB	20	56	\r
+#end				\r
+				\r
+#itemdrop_mercuryDrop1				\r
+TechLevel	ContentIds	Weight	Points	\r
+	army_knife	15	28	\r
+	miner_knife	15	28	\r
+	metal_pipe	15	7	\r
+	scarp_club	15	14	\r
+	pmc_club	10	14	\r
+	hatchet	10	14	\r
+	choppa_axe	10	28	\r
+	bandit_sawblade	5	42	\r
+	miner_pistol	15	14	\r
+	army_pistol	15	14	\r
+	army_pistol_2	10	28	\r
+	army_pistol_3	5	42	\r
+	pmc_pistol_2	10	28	\r
+	spec_pistol	10	28	\r
+	dark_pistol	10	28	\r
+	dark_pistol_2	5	42	\r
+	rail_pistol	5	42	\r
+	rail_pistol_2	5	56	\r
+	petrov_pistol	25	14	\r
+	petrov_pistol_2	20	28	\r
+	petrov_pistol_3	15	42	\r
+	pmc_shotgun	20	28	\r
+	dark_shotgun	15	14	\r
+	spec_shotgun	10	56	\r
+	bandit_shotgun	15	28	\r
+	army_sniper	5	70	\r
+	miner_mg	20	70	\r
+	miner_disctrower	20	70	\r
+	miner_flametrower	15	70	\r
+	pistol_basic_ammo	15	7	\r
+	pistol_burst_ammo	10	14	\r
+	miner_bolts_ammo	5	7	\r
+	shotgun_bullet_ammo	10	14	\r
+	shotgun_shrapnel_ammo	15	7	\r
+	shotgun_flechette_ammo	10	14	\r
+	shotgun_dragon_ammo	5	28	\r
+	gas_ammo	20	14	\r
+	sawblade_ammo	15	14	\r
+	bandage	25	14	\r
+	medpack	15	56	\r
+	morphine	5	28	\r
+	splint	25	14	\r
+	antibiotics	10	14	\r
+	medicalClue	10	28	\r
+	naloxone	5	14	\r
+	sorbent	15	14	\r
+	surgicalKit	5	56	\r
+	sigs_kosmos	10	42	\r
+	rags	25	7	\r
+	antidote	5	21	\r
+	bloodBag	10	21	\r
+	painkillers	10	14	\r
+	beer	5	14	\r
+	vodka	5	28	\r
+	wiskey	5	28	\r
+	blueSoda	25	7	\r
+	cannedMeat	15	28	\r
+	cannedVeg	15	28	\r
+	packedGoodRation	20	14	\r
+	packedRation	20	14	\r
+	redSoda	20	7	\r
+	water	20	14	\r
+	synthChicken	25	7	\r
+	synthBeef	25	7	\r
+	rocketCandy	5	7	\r
+	small_backpack	20	14	\r
+	medium_backpack	5	56	\r
+	servo_backpack	10	42	\r
+	bandit_vest	20	28	\r
+	army_vest	15	28	\r
+	snake_belt	1	42	\r
+	christmas_hat	0	42	\r
+	bandit_armor	20	28	\r
+	smuggler_armor	20	28	\r
+	worker_armor	15	42	\r
+	green_tshirt	25	14	\r
+	green_vest	25	14	\r
+	singlet_shirt	25	7	\r
+	bandit_helmet	20	28	\r
+	smuggler_helmet	20	28	\r
+	worker_helmet	15	42	\r
+	blue_pants	25	14	\r
+	brown_pants	25	14	\r
+	bandit_pants	20	14	\r
+	smuggler_pants	20	28	\r
+	worker_pants	15	42	\r
+	bandit_boots	20	28	\r
+	smuggler_boots	20	28	\r
+	worker_boots	15	42	\r
+	armor_shards	30	14	\r
+	weapon_shards	30	14	\r
+	pierce_melee_shards	25	14	\r
+	blunt_melee_shards	25	14	\r
+	armor_repair_kit	20	28	\r
+	weapon_repair_kit	20	28	\r
+	melee_repair_kit	15	28	\r
+	frag_grenade	15	14	\r
+	thermal_grenade	10	14	\r
+	frag_mine	25	14	\r
+	fire_turret	10	70	\r
+	broken_weapon	30	7	\r
+	plastic	30	7	\r
+	glass	30	7	\r
+	metal_tread	30	7	\r
+	tape	30	7	\r
+	wire	40	7	\r
+	rubber	30	7	\r
+	explosives	30	7	\r
+	acid	30	7	\r
+	tin	30	7	\r
+	gas_ammo	30	7	\r
+	glassBottle	30	7	\r
+	personalKey	30	7	\r
+	circuit_board	30	7	\r
+	ledgerBook	30	7	\r
+	rod	30	7	\r
+	rusty_shards	30	7	\r
+	coarse_gears	30	7	\r
+	spring	30	7	\r
+	capacitor	15	14	\r
+	microelectronics	15	14	\r
+	transformer	15	14	\r
+	bulb	15	14	\r
+	ceramite_shards	15	14	\r
+	lens	15	14	\r
+	itemChip	40	56	\r
+	mediumItemChip	10	112	\r
+	merkUSB	20	56	\r
+	classUSB	20	56	\r
+#end				\r
+				\r
+#itemdrop_labDrop1				\r
+TechLevel	ContentIds	Weight	Points	\r
+	rail_pistol	10	70	\r
+	tech_pistol	10	70	\r
+	tech_pistol_2	10	70	\r
+	daydream_frostgun	10	70	\r
+	sl_pistol	10	70	\r
+	tech_smg	10	70	\r
+	tech_pistol_3	10	70	\r
+	toxic_smg	10	70	\r
+	tech_rifle	10	70	\r
+	rail_rifle	10	70	\r
+	toxic_trower	10	70	\r
+	battery_charge	10	70	\r
+	shotgun_dragon_ammo	10	70	\r
+	pistol_basic_ammo	30	21	\r
+	gas_ammo	30	21	\r
+	toxic_ammo	30	21	\r
+	medicalClue	30	14	\r
+	naloxone	30	14	\r
+	morphine	30	14	\r
+	bandage	30	14	\r
+	medpack	30	14	\r
+	splint	30	14	\r
+	antiradin	30	14	\r
+	antibiotics	30	14	\r
+	sorbent	30	14	\r
+	surgicalKit	30	14	\r
+	sigs_kosmos	30	14	\r
+	antidote	30	14	\r
+	bloodBag	30	14	\r
+	painkillers	30	14	\r
+	armagnac	30	14	\r
+	nanoinjection	30	14	\r
+	plaster	30	14	\r
+	packedGoodRation	30	14	\r
+	packedRation	30	14	\r
+	water	30	14	\r
+	burgerMeat	30	14	\r
+	burgerVeg	30	14	\r
+	rocketCandy	5	56	\r
+	truffle_oil	5	42	\r
+	tuna_steak	5	56	\r
+	small_backpack	10	42	\r
+	medium_backpack	10	70	\r
+	daydream_chem_vest	10	28	\r
+	daydream_chem_helmet	10	28	\r
+	daydream_chem_pants	10	28	\r
+	daydream_chem_boots	10	28	\r
+	security_armor	10	28	\r
+	blue_tshirt	10	28	\r
+	blue_pants	10	28	\r
+	scientist_shirt	10	28	\r
+	broun_boots	10	28	\r
+	common_boots	10	28	\r
+	armor_shards	20	14	\r
+	microelectronics	15	28	\r
+	ceramite_shards	15	28	\r
+	capacitor	15	28	\r
+	tape	10	28	\r
+	nanorobot_grenade	10	112	\r
+	spider_poisongland	20	28	\r
+	organsBox	15	70	\r
+	cyborg_head	15	28	\r
+	circuit_board	15	28	\r
+	plastic	30	3	\r
+	powder	30	2	\r
+	glass	30	6	\r
+	metal_tread	30	9	\r
+	wire	40	12	\r
+	rubber	30	3	\r
+	tread	30	6	\r
+	explosives	30	14	\r
+	acid	30	9	\r
+	tin	30	6	\r
+	glassBottle	15	9	\r
+	poppy_box	15	28	\r
+	ledgerBook	15	28	\r
+	lens	15	28	\r
+	transformer	20	28	\r
+	bulb	15	28	\r
+	regular_food_container	15	56	\r
+	military_food_container	15	70	\r
+	luxury_food_container	15	112	\r
+	water_container	15	42	\r
+	alcogol_container	15	112	\r
+	regular_clothing_container	15	56	\r
+	miner_clothing_container	15	70	\r
+	worker_clothing_container	15	84	\r
+	scientist_clothing_container	15	84	\r
+	security_clothing_container	15	98	\r
+	weapon_container	15	140	\r
+	armor_container	15	112	\r
+	tool_container	15	84	\r
+	robot_parts_container	15	56	\r
+	electrical_parts_container	15	56	\r
+	military_parts_container	15	70	\r
+	engineering_parts_container	15	56	\r
+	ai_module	15	112	\r
+	communication_relay	15	56	\r
+	defibrillator_device	15	84	\r
+	quasi_sensor_device	15	84	\r
+	geoscanner_device	15	84	\r
+	welding_machine_device	10	84	\r
+	medical_equipment	15	70	\r
+	scientific_equipment	30	34	\r
+	mining_equipment	15	56	\r
+	construction_equipment	15	56	\r
+	chemical_analyzer	15	42	\r
+	hydraulic_pump	15	42	\r
+	quasiresearch_disk	15	84	\r
+	research_disk	15	98	\r
+	prototype_schematics	15	112	\r
+	management_unit	15	28	\r
+	darknet_unit	30	56	\r
+	military_unit	15	56	\r
+	memory_software	30	42	\r
+	entertainment_software	15	70	\r
+	expert_disk	15	42	\r
+	quasisamples	15	112	\r
+	biomass_tank	15	28	\r
+	precious_metals	15	140	\r
+	drug_cargo	15	140	\r
+	gunbang_magazine	15	70	\r
+	medical_components	15	84	\r
+	watermelon	15	70	\r
+	itemChip	15	84	\r
+	mediumItemChip	15	168	\r
+	merkUSB	15	84	\r
+	classUSB	15	84	\r
+#end				\r
+				\r
+#itemdrop_amplifiercontainers				\r
+TechLevel	ContentIds	Weight	Points	\r
+	pistol_basic_ammo	4	28	\r
+	pistol_burst_ammo	3	42	\r
+	shotgun_bullet_ammo	4	42	\r
+	shotgun_shrapnel_ammo	5	28	\r
+	shotgun_flechette_ammo	3	56	\r
+	shotgun_dragon_ammo	3	70	\r
+	heavy_basic_ammo	3	28	\r
+	battery_charge	2	56	\r
+	bandage	5	28	\r
+	medpack	4	42	\r
+	splint	5	28	\r
+	antibiotics	6	28	\r
+	medicalClue	6	42	\r
+	sorbent	8	14	\r
+	surgicalKit	2	70	\r
+	rags	6	14	\r
+	blueSoda	4	14	\r
+	cannedMeat	3	42	\r
+	cannedVeg	3	28	\r
+	chocolateBar	5	14	\r
+	mre_pack	2	70	\r
+	packedGoodRation	4	28	\r
+	packedRation	4	28	\r
+	redSoda	4	14	\r
+	water	5	14	\r
+	beer	2	14	\r
+	burgerMeat	3	28	\r
+	burgerVeg	3	28	\r
+	medium_backpack	3	112	\r
+	servo_backpack	3	112	\r
+	armor_repair_kit	5	84	\r
+	weapon_repair_kit	5	84	\r
+	melee_repair_kit	5	84	\r
+	automap	1	210	\r
+	frag_grenade	5	84	\r
+	thermal_grenade	5	84	\r
+	stun_grenade	4	56	\r
+	frag_mine	5	84	\r
+#end				\r
+				\r
+#itemdrop_medicalcontainer				\r
+TechLevel	ContentIds	Weight	Points	\r
+	bandage	15	7	\r
+	medpack	10	14	\r
+	morphine	10	14	\r
+	splint	15	7	\r
+	antibiotics	10	14	\r
+	antiradin	10	14	\r
+	medicalClue	10	14	\r
+	naloxone	10	14	\r
+	sorbent	10	14	\r
+	surgicalKit	5	21	\r
+	antidote	10	14	\r
+	bloodBag	10	14	\r
+	painkillers	10	14	\r
+	nanoinjection	5	21	\r
+	plaster	10	14	\r
+	military_kit	10	14	\r
+	trowable_heart	10	14	\r
+	organsBox	2	28	\r
+	defibrillator_device	2	28	\r
+	medical_equipment	2	28	\r
+	chemical_analyzer	2	28	\r
+	drug_cargo	2	28	\r
+	medical_components	2	28	\r
+#end				\r
+				\r
+#itemdrop_ammocontainer				\r
+TechLevel	ContentIds	Weight	Points	\r
+	pistol_basic_ammo	10	7	\r
+	pistol_burst_ammo	10	14	\r
+	pistol_expansive_ammo	10	14	\r
+	medium_basic_ammo	10	7	\r
+	medium_police_ammo	10	14	\r
+	shotgun_bullet_ammo	10	14	\r
+	shotgun_shrapnel_ammo	10	7	\r
+	shotgun_flechette_ammo	10	14	\r
+	shotgun_dragon_ammo	10	14	\r
+	heavy_basic_ammo	10	7	\r
+	heavy_armorpierce_ammo	10	14	\r
+	battery_charge	10	14	\r
+#end				\r
+				\r
+#itemdrop_weaponSmallcontainer				\r
+TechLevel	ContentIds	Weight	Points	\r
+	army_pistol	10	14	\r
+	army_pistol_2	10	14	\r
+	pmc_pistol	10	14	\r
+	pmc_pistol_2	10	14	\r
+	spec_pistol	10	14	\r
+	spec_pistol_2	10	14	\r
+	dark_pistol	10	14	\r
+	dark_pistol_2	10	14	\r
+	rail_pistol	10	14	\r
+	petrov_pistol	10	14	\r
+	petrov_pistol_2	10	14	\r
+	petrov_pistol_3	10	14	\r
+	pmc_smg	10	14	\r
+	toxic_smg	10	14	\r
+#end				\r
+				\r
+#itemdrop_weaponBigcontainer				\r
+TechLevel	ContentIds	Weight	Points	\r
+	regular_launcher	5	14	\r
+	pmc_shotgun	10	14	\r
+	dark_shotgun	10	14	\r
+	desert_shotgun	10	14	\r
+	desert_shotgun_2	10	14	\r
+	pmc_smg	10	14	\r
+	pmc_smg_2	10	14	\r
+	spec_smg	10	14	\r
+	bandit_smg_2	10	14	\r
+	pmc_assault	10	14	\r
+	desert_assault	10	14	\r
+	desert_marksman	10	14	\r
+#end				\r
+				\r
+#itemdrop_weaponElitecontainer				\r
+TechLevel	ContentIds	Weight	Points	\r
+	army_pistol_3	5	14	\r
+	spec_pistol_3	5	14	\r
+	dark_pistol_3	5	14	\r
+	rail_pistol_2	5	14	\r
+	tech_pistol_2	5	14	\r
+	petrov_pistol_3	5	14	\r
+	tech_smg	5	14	\r
+	tech_pistol_3	5	14	\r
+	tech_rifle	5	14	\r
+#end				\r
+				\r
+#itemdrop_armorLabcontainer				\r
+TechLevel	ContentIds	Weight	Points	\r
+	daydream_chem_vest	10	14	\r
+	daydream_armored_vest	5	14	\r
+	employee_vest	10	14	\r
+	scientist_shirt	10	14	\r
+#end				\r
+				\r
+#itemdrop_armorMilitarycontainer				\r
+TechLevel	ContentIds	Weight	Points	\r
+	civres_armor	5	14	\r
+	ancom_police_armor	10	14	\r
+	pmc_armor	10	14	\r
+	security_armor	20	14	\r
+	rw_militia_vest	20	14	\r
+#end				\r
+				\r
+#itemdrop_armorIndustrycontainer				\r
+TechLevel	ContentIds	Weight	Points	\r
+	worker_armor	10	14	\r
+	core_hard_vest	10	14	\r
+	pb_vest	20	14	\r
+	smuggler_armor	20	14	\r
+	green_vest	20	14	\r
+#end				\r
+				\r
+#factiondrop_AnCom_units				\r
+TechLevel	ContentIds	Weight	Points	\r
+1	man_worker woman_worker man_scientist_ancom	5	40	\r
+1	man_worker woman_worker man_worker woman_worker	5	40	\r
+1	woman_lowskills_worker man_lowskills_worker man_worker man_scientist_ancom	5	40	\r
+1	man_worker woman_worker man_worker man_lowskills_worker woman_lowskills_worker	5	40	\r
+2	man_scientist_ancom man_worker cyborg_basic	10	60	\r
+2	woman_scientist_ancom cyborg_basic woman_worker	10	60	\r
+2	security_woman_ancom man_worker security_man_ancom	10	60	\r
+2	man_scientist_ancom woman_scientist_ancom security_man_ancom cyborg_basic cyborg_basic	10	60	\r
+3	cyborg_basic man_scientist_ancom man_worker woman_worker	15	80	\r
+3	cyborg_basic cyborg_basic man_worker woman_worker	15	80	\r
+3	woman_manager_ancom man_worker security_woman_ancom	15	80	\r
+3	stationary_turret woman_scientist_ancom man_worker woman_worker	15	80	\r
+4	cyborg_basic cyborg_basic cyborg_basic man_professor	20	100	\r
+4	stationary_turret cyborg_basic man_scientist_ancom woman_scientist_ancom	20	100	\r
+4	man_scientist_ancom woman_professor woman_scientist_ancom man_manager_ancom	20	100	\r
+4	security_man_ancom security_woman_ancom cyborg_basic man_professor	20	100	\r
+5	cyborg_basic heavy_security_man_ancom heavy_security_man_ancom man_scientist_ancom	25	120	\r
+5	ancom_police_man woman_manager_ancom ancom_police_woman ancom_police_woman	25	120	\r
+5	cyborg_basic heavy_security_man_ancom man_scientist_ancom man_manager_ancom	25	120	\r
+5	pmc_man_soldier pmc_woman_soldier stationary_turret man_manager_ancom	25	120	\r
+6	cyborg_basic heavy_security_woman_ancom heavy_security_man_ancom cyborg_basic	30	140	\r
+6	ancom_police_man ancom_police_woman ancom_police_man ancom_police_woman	30	140	\r
+6	woman_scientist_ancom woman_professor pmc_man_soldier pmc_woman_soldier	30	140	\r
+6	fire_turret man_worker woman_worker heavy_security_man_ancom	30	140	\r
+7	ancom_elite_man heavy_security_man_ancom ancom_agent_man ancom_agent_woman	40	160	\r
+7	ancom_elite_man ancom_elite_woman ancom_elite_man ancom_elite_woman	40	160	\r
+7	stationary_turret cyborg_basic ancom_elite_man	40	160	\r
+7	stationary_turret stationary_turret cyborg_basic ancom_elite_man	40	160	\r
+8	fire_turret fire_turret heavy_security_man_ancom	50	180	\r
+8	ancom_elite_man ancom_elite_woman ancom_elite_man ancom_elite_woman	50	180	\r
+8	heavy_security_woman_ancom pmc_man_soldier pmc_woman_soldier	50	180	\r
+8	man_professor woman_professor ancom_elite_man ancom_elite_woman cyborg_battle	50	180	\r
+9	cyborg_basic cyborg_basic cyborg_battle pmc_man_soldier pmc_woman_soldier	70	200	\r
+9	ancom_elite_man ancom_elite_woman ancom_elite_man ancom_elite_woman energy_turret	70	200	\r
+9	stationary_turret energy_turret woman_professor pmc_man_soldier	70	200	\r
+9	fire_turret fire_turret pmc_man_soldier pmc_woman_soldier	70	200	\r
+10	ancom_agent_man ancom_agent_man ancom_agent_woman cyborg_battle	100	240	\r
+10	ancom_elite_man ancom_agent_man ancom_agent_woman energy_turret	100	240	\r
+10	ancom_elite_woman cyborg_battle ancom_agent_man ancom_agent_woman	100	240	\r
+10	ancom_elite_man ancom_elite_man ancom_elite_woman fire_turret	100	240	\r
+#end				\r
+				\r
+#factiondrop_AnCom_items				\r
+TechLevel	ContentIds	Weight	Points	\r
+1	pistol_basic_ammo	30	28	\r
+1	miner_bolts_ammo	30	14	\r
+1	shotgun_shrapnel_ammo	30	28	\r
+1	bandage	30	28	\r
+1	splint	30	28	\r
+1	sorbent	30	14	\r
+1	rags	30	14	\r
+1	blueSoda	30	14	\r
+1	chocolateBar	30	14	\r
+1	redSoda	30	14	\r
+1	water	30	14	\r
+1	beer	30	28	\r
+1	pmc_shotgun	20	84	\r
+1	dark_pistol	15	84	\r
+1	spec_pistol	20	84	\r
+1	spec_pistol_2	15	84	\r
+1	army_pistol	15	84	\r
+1	army_pistol_2	10	84	\r
+1	bandit_smg	15	84	\r
+1	petrov_pistol	15	56	\r
+1	small_backpack	25	56	\r
+1	medium_backpack	10	84	\r
+1	bandit_vest	20	56	\r
+1	army_vest	15	84	\r
+1	green_tshirt	15	14	\r
+1	green_vest	15	14	\r
+1	blue_tshirt	15	14	\r
+1	singlet_shirt	15	14	\r
+1	balaklava	20	14	\r
+1	blue_pants	15	14	\r
+1	brown_pants	15	14	\r
+1	yellow_pants	15	14	\r
+1	dark_pants	15	14	\r
+1	blue_boots	15	14	\r
+1	broun_boots	15	14	\r
+1	armor_shards	25	28	\r
+1	weapon_shards	25	28	\r
+1	pierce_melee_shards	10	14	\r
+1	powder	25	14	\r
+1	glass	25	14	\r
+1	metal_tread	25	14	\r
+1	tape	25	14	\r
+1	rubber	25	14	\r
+1	explosives	25	14	\r
+1	acid	25	14	\r
+1	gas_ammo	30	14	\r
+1	itemChip	10	112	\r
+2	army_knife	15	42	\r
+2	pmc_club	15	42	\r
+2	pmc_pistol	20	84	\r
+2	pmc_pistol_2	15	84	\r
+2	merkUSB	5	140	\r
+3	pistol_burst_ammo	25	56	\r
+3	shotgun_bullet_ammo	25	56	\r
+3	heavy_basic_ammo	25	56	\r
+3	battery_charge	20	70	\r
+3	classUSB	5	140	\r
+4	cannedMeat	25	42	\r
+4	cannedVeg	25	42	\r
+4	mre_pack	20	70	\r
+4	dark_pistol_2	20	98	\r
+5	spec_shotgun	15	112	\r
+5	rail_pistol	15	112	\r
+5	hatchet	15	56	\r
+5	mediumItemChip	5	140	\r
+6	choppa_axe	10	70	\r
+6	bandit_axe	10	70	\r
+6	rail_pistol_2	10	84	\r
+6	medpack	20	84	\r
+7	morphine	10	70	\r
+7	cannedMeat	15	56	\r
+7	cannedVeg	15	56	\r
+7	machete	5	112	\r
+8	dark_shotgun_2	5	126	\r
+8	tech_katana	5	140	\r
+8	tech_pistol	5	140	\r
+8	plazma_smg	5	140	\r
+8	highItemChip	5	196	\r
+9	desert_hmg	5	168	\r
+9	army_sniper	5	168	\r
+10	spec_assault	5	196	\r
+10	AncomItemChip	3	280	\r
+10	heavy_armorpierce_ammo	10	70	\r
+#end				\r
+				\r
+#factiondrop_AnCom_tradeItems				\r
+TechLevel	ContentIds	Weight	Points	RewardWeight\r
+1	pmc_shotgun	15	20	4\r
+1	pmc_smg	20	20	4\r
+1	pistol_expansive_ammo	30	2	2\r
+1	itemChip	20	100	9\r
+1	pmc_pistol_2	20	10	3\r
+1	medium_backpack	10	80	8\r
+2	pmc_vest	10	80	8\r
+2	pmc_shotgun_2	10	40	6\r
+2	merkUSB	5	400	15\r
+2	shotgun_bullet_ammo	10	1	1\r
+2	tech_katana	10	40	6\r
+3	ancom_police_armor	10	40	6\r
+3	ancom_police_boots	10	40	6\r
+3	ancom_police_mask	10	40	6\r
+3	ancom_police_pants	10	40	6\r
+3	classUSB	5	500	16\r
+3	weapon_repair_kit	10	30	5\r
+4	ancom_agent_armor	15	60	7\r
+4	ancom_agent_boots	15	60	7\r
+4	ancom_agent_mask	15	60	7\r
+4	ancom_agent_pants	15	60	7\r
+5	ancm_smg	5	120	10\r
+5	mediumItemChip	5	200	14\r
+5	pmc_assault	10	60	7\r
+5	ancm_quasi_pistol	5	80	8\r
+6	pmc_smg_3	10	40	6\r
+6	ceramit_vest	10	160	12\r
+6	ancm_quasi_assault	5	200	14\r
+7	ancom_armor	15	100	9\r
+7	ancom_helmet	15	100	9\r
+7	ancom_pants	15	100	9\r
+7	ancom_boots	15	100	9\r
+7	AncomItemChip	5	500	16\r
+8	fire_turret	10	100	9\r
+8	ancm_marksman	5	140	11\r
+8	highItemChip	5	400	15\r
+9	ancm_shotgun	5	80	8\r
+10	army_sniper_2	10	180	13\r
+#end				\r
+				\r
+#factiondrop_Tezctlan_units				\r
+TechLevel	ContentIds	Weight	Points	\r
+1	possesed_azt_man possesed_azt_woman	5	40	\r
+1	jungle_spider_regular jungle_spider_regular jungle_spider_regular	5	40	\r
+1	jungle_spider_regular jungle_spider_regular jungle_spider_regular possesed_azt_man possesed_azt_woman	5	40	\r
+2	possesed_azt_man possesed_azt_woman possesed_centaur	10	60	\r
+2	possesed_azt_man possesed_azt_woman possesed_BigArm	10	60	\r
+2	venus_slave possesed_elite_azt_man possesed_elite_azt_woman	10	60	\r
+3	possesed_elite_azt_man possesed_elite_azt_woman possesed_azt_man possesed_azt_woman	15	80	\r
+3	possesed_centaur venus_acolyte venus_slave venus_acolyte	15	80	\r
+3	venus_taskmaster venus_slave venus_slave venus_slave venus_slave	15	80	\r
+4	venus_eagle_knight possesed_centaur possesed_centaur	20	100	\r
+4	venus_jaguar_knight possesed_azt_woman possesed_elite_azt_man possesed_azt_woman possesed_elite_azt_man	20	100	\r
+4	venus_jaguar_knight venus_demon_cat venus_demon_cat possesed_centaur	20	100	\r
+5	possesed_BlobMan possesed_BlobMan possesed_BlobMan possesed_BlobMan	25	120	\r
+5	possesed_BigArm venus_custodian venus_custodian	25	120	\r
+5	venus_jaguar_knight venus_jaguar_knight venus_jaguar_knight	25	120	\r
+6	venus_eagle_knight possesed_centaur possesed_centaur	30	140	\r
+6	venus_jaguar_knight possesed_man_worker possesed_woman_worker possesed_man_worker possesed_woman_worker	30	140	\r
+6	venus_jaguar_knight venus_demon_cat venus_demon_cat possesed_centaur	30	140	\r
+7	possesed_BlobMan possesed_BlobMan possesed_BlobMan possesed_BlobMan	40	160	\r
+7	possesed_BigArm venus_custodian venus_custodian	40	160	\r
+7	venus_jaguar_knight venus_jaguar_knight venus_jaguar_knight	40	160	\r
+8	venus_demon_warrior venus_eagle_knight venus_eagle_knight	50	180	\r
+8	venus_taskmaster venus_custodian venus_taskmaster venus_custodian	50	180	\r
+8	venus_demon_warrior venus_demon_warrior venus_demon_warrior	50	180	\r
+9	possesed_BlobMan possesed_BlobMan possesed_BlobMan possesed_BlobMan	70	200	\r
+9	possesed_BigArm venus_custodian venus_custodian	70	200	\r
+9	venus_jaguar_knight venus_jaguar_knight venus_jaguar_knight	70	200	\r
+10	venus_demon_warrior venus_eagle_knight venus_eagle_knight	100	240	\r
+10	venus_taskmaster venus_custodian venus_taskmaster venus_custodian	100	240	\r
+10	venus_demon_warrior venus_demon_warrior venus_demon_warrior	100	240	\r
+#end				\r
+				\r
+#factiondrop_Tezctlan_items				\r
+TechLevel	ContentIds	Weight	Points	\r
+1	pistol_basic_ammo	30	28	\r
+1	miner_bolts_ammo	30	14	\r
+1	shotgun_shrapnel_ammo	30	28	\r
+1	bandage	30	28	\r
+1	splint	30	28	\r
+1	sorbent	30	14	\r
+1	rags	30	14	\r
+1	blueSoda	30	14	\r
+1	chocolateBar	30	14	\r
+1	redSoda	30	14	\r
+1	water	30	14	\r
+1	beer	30	28	\r
+1	pmc_shotgun	20	84	\r
+1	dark_pistol	15	84	\r
+1	spec_pistol	20	84	\r
+1	spec_pistol_2	15	84	\r
+1	army_pistol	15	84	\r
+1	army_pistol_2	10	84	\r
+1	bandit_smg	15	84	\r
+1	petrov_pistol	15	56	\r
+1	small_backpack	25	56	\r
+1	medium_backpack	10	84	\r
+1	bandit_vest	20	56	\r
+1	army_vest	15	84	\r
+1	green_tshirt	15	14	\r
+1	green_vest	15	14	\r
+1	blue_tshirt	15	14	\r
+1	singlet_shirt	15	14	\r
+1	balaklava	20	14	\r
+1	blue_pants	15	14	\r
+1	brown_pants	15	14	\r
+1	yellow_pants	15	14	\r
+1	dark_pants	15	14	\r
+1	blue_boots	15	14	\r
+1	broun_boots	15	14	\r
+1	armor_shards	25	28	\r
+1	weapon_shards	25	28	\r
+1	pierce_melee_shards	10	14	\r
+1	powder	25	14	\r
+1	glass	25	14	\r
+1	metal_tread	25	14	\r
+1	tape	25	14	\r
+1	rubber	25	14	\r
+1	explosives	25	14	\r
+1	acid	25	14	\r
+1	gas_ammo	30	14	\r
+2	army_knife	15	42	\r
+2	pmc_club	15	42	\r
+2	pmc_pistol	20	84	\r
+2	pmc_pistol_2	15	84	\r
+3	pistol_burst_ammo	25	56	\r
+3	shotgun_bullet_ammo	25	56	\r
+3	heavy_basic_ammo	25	56	\r
+3	battery_charge	20	70	\r
+4	cannedMeat	25	42	\r
+4	cannedVeg	25	42	\r
+4	mre_pack	20	70	\r
+4	dark_pistol_2	20	98	\r
+5	spec_shotgun	15	112	\r
+5	rail_pistol	15	112	\r
+5	hatchet	15	56	\r
+6	choppa_axe	10	70	\r
+6	bandit_axe	10	70	\r
+6	rail_pistol_2	10	84	\r
+6	medpack	20	84	\r
+7	morphine	10	70	\r
+7	cannedMeat	15	56	\r
+7	cannedVeg	15	56	\r
+7	machete	5	112	\r
+8	dark_shotgun_2	5	126	\r
+8	tech_katana	5	140	\r
+8	tech_pistol	5	140	\r
+8	plazma_smg	5	140	\r
+9	desert_hmg	5	168	\r
+9	army_sniper	5	168	\r
+10	spec_assault	5	196	\r
+10	heavy_armorpierce_ammo	10	70	\r
+#end				\r
+				\r
+#factiondrop_Tezctlan_tradeItems				\r
+TechLevel	ContentIds	Weight	Points	RewardWeight\r
+1	azt_club	20	80	3\r
+1	azt_pistol	20	80	3\r
+1	quasi_basic_ammo	20	50	1\r
+1	aztec_rags	20	60	2\r
+2	azt_mask	20	100	4\r
+2	azt_heavy_armor	20	100	4\r
+2	azt_sickle	20	80	3\r
+3	azt_rifle	15	120	5\r
+3	venus_armor_shards	15	80	3\r
+3	azt_big_axe	15	120	5\r
+4	azt_shotgun	15	150	6\r
+4	venus_weapon_shard	15	80	3\r
+5	demonic_medicine	10	150	6\r
+5	demonic_shards	10	150	6\r
+6	demonic_idol	10	150	6\r
+6	demonic_aye	10	150	6\r
+7	skull_bloodstrike	5	500	7\r
+8	skull_bloodlust	5	500	7\r
+9	skull_call_of_blood	5	500	7\r
+10	skull_contract_venus	5	500	7\r
+#end				\r
+				\r
+#factiondrop_XiomaraMasks_units				\r
+TechLevel	ContentIds	Weight	Points	\r
+1	possesed_azt_man possesed_azt_woman	5	50	\r
+1	jungle_spider_regular jungle_spider_regular jungle_spider_regular	5	50	\r
+1	jungle_spider_regular jungle_spider_regular jungle_spider_regular possesed_azt_man possesed_azt_woman	5	50	\r
+2	possesed_azt_man possesed_azt_woman possesed_centaur	10	75	\r
+2	possesed_azt_man possesed_azt_woman possesed_BigArm	10	75	\r
+2	venus_slave possesed_elite_azt_man possesed_elite_azt_woman	10	75	\r
+3	possesed_elite_azt_man possesed_elite_azt_woman possesed_azt_man possesed_azt_woman	15	100	\r
+3	possesed_centaur venus_acolyte venus_slave venus_acolyte	15	100	\r
+3	venus_taskmaster venus_slave venus_slave venus_slave venus_slave	15	100	\r
+4	venus_eagle_knight possesed_centaur possesed_centaur	20	125	\r
+4	venus_jaguar_knight possesed_azt_woman possesed_elite_azt_man possesed_azt_woman possesed_elite_azt_man	20	125	\r
+4	venus_jaguar_knight venus_demon_cat venus_demon_cat possesed_centaur	20	125	\r
+5	possesed_BlobMan possesed_BlobMan possesed_BlobMan possesed_BlobMan	25	150	\r
+5	possesed_BigArm venus_custodian venus_custodian	25	150	\r
+5	venus_jaguar_knight venus_jaguar_knight venus_jaguar_knight	25	150	\r
+6	venus_eagle_knight possesed_centaur possesed_centaur	30	175	\r
+6	venus_jaguar_knight possesed_man_worker possesed_woman_worker possesed_man_worker possesed_woman_worker	30	175	\r
+6	venus_jaguar_knight venus_demon_cat venus_demon_cat possesed_centaur	30	175	\r
+7	possesed_BlobMan possesed_BlobMan possesed_BlobMan possesed_BlobMan	40	200	\r
+7	possesed_BigArm venus_custodian venus_custodian	40	200	\r
+7	venus_jaguar_knight venus_jaguar_knight venus_jaguar_knight	40	200	\r
+8	venus_demon_warrior venus_eagle_knight venus_eagle_knight	50	225	\r
+8	venus_taskmaster venus_custodian venus_taskmaster venus_custodian	50	225	\r
+8	venus_demon_warrior venus_demon_warrior venus_demon_warrior	50	225	\r
+9	possesed_BlobMan possesed_BlobMan possesed_BlobMan possesed_BlobMan	70	250	\r
+9	possesed_BigArm venus_custodian venus_custodian	70	250	\r
+9	venus_jaguar_knight venus_jaguar_knight venus_jaguar_knight	70	250	\r
+10	venus_demon_warrior venus_eagle_knight venus_eagle_knight	100	275	\r
+10	venus_taskmaster venus_custodian venus_taskmaster venus_custodian	100	275	\r
+10	venus_demon_warrior venus_demon_warrior venus_demon_warrior	100	275	\r
+#end				\r
+				\r
+#factiondrop_XiomaraMasks_items				\r
+TechLevel	ContentIds	Weight	Points	\r
+1	pistol_basic_ammo	30	28	\r
+1	miner_bolts_ammo	30	14	\r
+1	shotgun_shrapnel_ammo	30	28	\r
+1	bandage	30	28	\r
+1	splint	30	28	\r
+1	sorbent	30	14	\r
+1	rags	30	14	\r
+1	blueSoda	30	14	\r
+1	chocolateBar	30	14	\r
+1	redSoda	30	14	\r
+1	water	30	14	\r
+1	beer	30	28	\r
+1	pmc_shotgun	20	84	\r
+1	dark_pistol	15	84	\r
+1	spec_pistol	20	84	\r
+1	spec_pistol_2	15	84	\r
+1	army_pistol	15	84	\r
+1	army_pistol_2	10	84	\r
+1	bandit_smg	15	84	\r
+1	petrov_pistol	15	56	\r
+1	small_backpack	25	56	\r
+1	medium_backpack	10	84	\r
+1	bandit_vest	20	56	\r
+1	army_vest	15	84	\r
+1	green_tshirt	15	14	\r
+1	green_vest	15	14	\r
+1	blue_tshirt	15	14	\r
+1	singlet_shirt	15	14	\r
+1	balaklava	20	14	\r
+1	blue_pants	15	14	\r
+1	brown_pants	15	14	\r
+1	yellow_pants	15	14	\r
+1	dark_pants	15	14	\r
+1	blue_boots	15	14	\r
+1	broun_boots	15	14	\r
+1	armor_shards	25	28	\r
+1	weapon_shards	25	28	\r
+1	pierce_melee_shards	10	14	\r
+1	powder	25	14	\r
+1	glass	25	14	\r
+1	metal_tread	25	14	\r
+1	tape	25	14	\r
+1	rubber	25	14	\r
+1	explosives	25	14	\r
+1	acid	25	14	\r
+1	gas_ammo	30	14	\r
+2	army_knife	15	42	\r
+2	pmc_club	15	42	\r
+2	pmc_pistol	20	84	\r
+2	pmc_pistol_2	15	84	\r
+3	pistol_burst_ammo	25	56	\r
+3	shotgun_bullet_ammo	25	56	\r
+3	heavy_basic_ammo	25	56	\r
+3	battery_charge	20	70	\r
+4	cannedMeat	25	42	\r
+4	cannedVeg	25	42	\r
+4	mre_pack	20	70	\r
+4	dark_pistol_2	20	98	\r
+5	spec_shotgun	15	112	\r
+5	rail_pistol	15	112	\r
+5	hatchet	15	56	\r
+6	choppa_axe	10	70	\r
+6	bandit_axe	10	70	\r
+6	rail_pistol_2	10	84	\r
+6	medpack	20	84	\r
+7	morphine	10	70	\r
+7	cannedMeat	15	56	\r
+7	cannedVeg	15	56	\r
+7	machete	5	112	\r
+8	dark_shotgun_2	5	126	\r
+8	tech_katana	5	140	\r
+8	tech_pistol	5	140	\r
+8	plazma_smg	5	140	\r
+9	desert_hmg	5	168	\r
+9	army_sniper	5	168	\r
+10	spec_assault	5	196	\r
+10	heavy_armorpierce_ammo	10	70	\r
+#end				\r
+				\r
+#factiondrop_XiomaraMasks_tradeItems				\r
+TechLevel	ContentIds	Weight	Points	RewardWeight\r
+1	azt_club	20	80	3\r
+1	azt_pistol	20	80	3\r
+1	quasi_basic_ammo	20	50	1\r
+1	aztec_rags	20	60	2\r
+2	azt_mask	20	100	4\r
+2	azt_heavy_armor	20	100	4\r
+2	azt_sickle	20	80	3\r
+3	azt_rifle	15	120	5\r
+3	venus_armor_shards	15	80	3\r
+3	azt_big_axe	15	120	5\r
+4	azt_shotgun	15	150	6\r
+4	venus_weapon_shard	15	80	3\r
+5	demonic_medicine	10	150	6\r
+5	demonic_shards	10	150	6\r
+6	demonic_idol	10	150	6\r
+6	demonic_aye	10	150	6\r
+7	skull_bloodstrike	5	500	7\r
+8	skull_bloodlust	5	500	7\r
+9	skull_call_of_blood	5	500	7\r
+10	skull_contract_venus	5	500	7\r
+#end				\r
+				\r
+#factiondrop_SBN_units				\r
+TechLevel	ContentIds	Weight	Points	\r
+1	woman_worker man_medic_sbn woman_medic_sbn	5	40	\r
+1	man_worker man_medic_sbn woman_medic_sbn	5	40	\r
+1	man_lowskills_worker woman_lowskills_worker man_lowskills_worker woman_lowskills_worker cyborg_basic	5	40	\r
+2	man_medic_sbn woman_medic_sbn man_scientist_sbn	10	60	\r
+2	sbn_geishabot sbn_officer_man sbn_officer_woman	10	60	\r
+2	security_man_sbn security_man_sbn woman_medic_sbn	10	60	\r
+3	sbn_officer_man sbn_officer_woman security_man_sbn woman_manager_sbn	15	80	\r
+3	man_manager_sbn woman_manager_sbn security_man_sbn sbn_geishabot	15	80	\r
+3	sbn_geishabot cyborg_basic man_medic_sbn woman_medic_sbn	15	80	\r
+4	sbn_officer_man sbn_officer_woman security_man_sbn man_manager_sbn	20	100	\r
+4	security_man_sbn security_woman_sbn security_man_sbn man_scientist_sbn	20	100	\r
+4	sbn_geishabot security_man_sbn sbn_geishabot woman_medic_sbn	20	100	\r
+5	heavy_security_man_sbn heavy_security_woman_sbn security_man_sbn	25	120	\r
+5	pmc_man_soldier pmc_woman_soldier man_scientist_sbn woman_scientist_sbn	25	120	\r
+5	stationary_turret man_manager_sbn heavy_security_man_sbn heavy_security_woman_sbn	25	120	\r
+6	heavy_security_man_sbn pmc_man_soldier pmc_woman_soldier	30	140	\r
+6	man_scientist_sbn woman_scientist_sbn man_manager_sbn woman_manager_sbn	30	140	\r
+6	stationary_turret man_scientist_sbn woman_scientist_sbn man_medic_sbn	30	140	\r
+7	man_scientist_sbn woman_scientist_sbn man_medic_sbn woman_medic_sbn	40	160	\r
+7	pmc_man_soldier pmc_woman_soldier pmc_man_soldier pmc_woman_soldier	40	160	\r
+7	stationary_turret sbn_mirmidon_man pmc_woman_soldier security_man_sbn	40	160	\r
+8	sbn_elite_woman heavy_security_man_sbn heavy_security_woman_sbn	50	180	\r
+8	man_medic_sbn man_scientist_sbn heavy_security_man_sbn heavy_security_woman_sbn	50	180	\r
+8	energy_turret man_scientist_sbn woman_scientist_sbn woman_medic_sbn	50	180	\r
+9	sbn_elite_man sbn_elite_woman man_medic_sbn security_man_sbn	70	200	\r
+9	sbn_mirmidon_man sbn_mirmidon_woman security_man_sbn	70	200	\r
+9	energy_turret sbn_elite_man sbn_elite_woman man_medic_sbn	70	200	\r
+10	sbn_elite_man sbn_elite_woman sbn_mirmidon_man sbn_mirmidon_woman	100	240	\r
+10	sbn_elite_man sbn_elite_woman sbn_elite_man sbn_mirmidon_man sbn_mirmidon_woman	100	240	\r
+10	energy_turret sbn_elite_man sbn_elite_woman sbn_elite_man	100	240	\r
+#end				\r
+				\r
+#factiondrop_SBN_items				\r
+TechLevel	ContentIds	Weight	Points	\r
+1	pistol_basic_ammo	30	28	\r
+1	miner_bolts_ammo	30	14	\r
+1	shotgun_shrapnel_ammo	30	28	\r
+1	bandage	30	28	\r
+1	splint	30	28	\r
+1	sorbent	30	14	\r
+1	rags	30	14	\r
+1	blueSoda	30	14	\r
+1	chocolateBar	30	14	\r
+1	redSoda	30	14	\r
+1	water	30	14	\r
+1	beer	30	28	\r
+1	pmc_shotgun	20	84	\r
+1	dark_pistol	15	84	\r
+1	spec_pistol	20	84	\r
+1	spec_pistol_2	15	84	\r
+1	army_pistol	15	84	\r
+1	army_pistol_2	10	84	\r
+1	bandit_smg	15	84	\r
+1	petrov_pistol	15	56	\r
+1	small_backpack	25	56	\r
+1	medium_backpack	10	84	\r
+1	bandit_vest	20	56	\r
+1	army_vest	15	84	\r
+1	green_tshirt	15	14	\r
+1	green_vest	15	14	\r
+1	blue_tshirt	15	14	\r
+1	singlet_shirt	15	14	\r
+1	balaklava	20	14	\r
+1	blue_pants	15	14	\r
+1	brown_pants	15	14	\r
+1	yellow_pants	15	14	\r
+1	dark_pants	15	14	\r
+1	blue_boots	15	14	\r
+1	broun_boots	15	14	\r
+1	armor_shards	25	28	\r
+1	weapon_shards	25	28	\r
+1	pierce_melee_shards	10	14	\r
+1	powder	25	14	\r
+1	glass	25	14	\r
+1	metal_tread	25	14	\r
+1	tape	25	14	\r
+1	rubber	25	14	\r
+1	explosives	25	14	\r
+1	acid	25	14	\r
+1	gas_ammo	30	14	\r
+1	itemChip	10	112	\r
+2	army_knife	15	42	\r
+2	pmc_club	15	42	\r
+2	pmc_pistol	20	84	\r
+2	pmc_pistol_2	15	84	\r
+2	merkUSB	5	140	\r
+3	pistol_burst_ammo	25	56	\r
+3	shotgun_bullet_ammo	25	56	\r
+3	heavy_basic_ammo	25	56	\r
+3	battery_charge	20	70	\r
+3	classUSB	5	140	\r
+4	cannedMeat	25	42	\r
+4	cannedVeg	25	42	\r
+4	mre_pack	20	70	\r
+4	dark_pistol_2	20	98	\r
+5	spec_shotgun	15	112	\r
+5	rail_pistol	15	112	\r
+5	hatchet	15	56	\r
+5	mediumItemChip	5	140	\r
+6	choppa_axe	10	70	\r
+6	bandit_axe	10	70	\r
+6	rail_pistol_2	10	84	\r
+6	medpack	20	84	\r
+7	morphine	10	70	\r
+7	cannedMeat	15	56	\r
+7	cannedVeg	15	56	\r
+7	machete	5	112	\r
+7	SBNItemChip	3	280	\r
+8	dark_shotgun_2	5	126	\r
+8	tech_katana	5	140	\r
+8	tech_pistol	5	140	\r
+8	plazma_smg	5	140	\r
+8	highItemChip	5	196	\r
+9	desert_hmg	5	168	\r
+9	army_sniper	5	168	\r
+10	spec_assault	5	196	\r
+10	heavy_armorpierce_ammo	10	70	\r
+#end				\r
+				\r
+#factiondrop_SBN_tradeItems				\r
+TechLevel	ContentIds	Weight	Points	RewardWeight\r
+1	tech_pistol_2	10	80	3\r
+1	battery_charge	10	40	1\r
+1	stun_grenade	10	60	2\r
+1	cevlar_vest	10	80	3\r
+1	itemChip	20	120	5\r
+1	army_pistol_3	10	100	4\r
+2	sbn_pistol	5	100	4\r
+2	merkUSB	5	120	5\r
+2	classUSB	5	120	5\r
+2	tech_rifle	5	150	6\r
+2	tech_pistol_3	10	100	4\r
+2	energy_turret	5	100	4\r
+3	mediumItemChip	5	100	5\r
+3	svn_cap_vest	10	100	5\r
+3	svn_cap_hat	10	100	5\r
+3	svn_cap_pants	5	100	5\r
+3	army_pistol_4	10	100	5\r
+4	tech_smg	10	100	4\r
+4	sbn_shotgun	10	120	5\r
+5	sbn_smg	5	100	5\r
+5	automap	5	100	5\r
+6	tech_marksman	10	100	6\r
+6	plazma_hmg	10	100	6\r
+7	svn_heavy_armor	5	100	6\r
+7	svn_heavy_helmet	5	150	6\r
+7	svn_heavy_pants	5	160	7\r
+7	svn_heavy_boots	5	200	8\r
+8	highItemChip	5	200	8\r
+9	solnet_armor	15	300	9\r
+9	solnet_helmet	15	300	9\r
+9	solnet_pants	15	300	9\r
+9	solnet_boots	15	300	9\r
+10	tech_hfg	5	400	10\r
+10	SBNItemChip	5	400	10\r
+#end				\r
+				\r
+#factiondrop_RealWare_units				\r
+TechLevel	ContentIds	Weight	Points	\r
+1	man_lowskills_worker_rw man_worker_rw cyborg_basic	5	40	\r
+1	man_lowskills_worker_rw woman_lowskills_worker_rw woman_lowskills_worker_rw	5	40	\r
+1	man_worker_rw woman_worker_rw man_lowskills_worker_rw	5	40	\r
+2	realware_warrobot realware_warrobot security_man_rw	10	60	\r
+2	man_medic_rw realware_milita_man realware_milita_woman	10	60	\r
+2	realware_warrobot security_man_rw woman_lowskills_worker_rw man_worker_rw	10	60	\r
+3	realware_warrobot stationary_turret security_man_rw security_woman_rw	15	80	\r
+3	realware_warrobot man_lowskills_worker_rw realware_milita_man realware_milita_woman	15	80	\r
+3	realware_warrobot realware_warrobot security_man_rw woman_worker_rw	15	80	\r
+4	stationary_turret man_medic_rw security_man_rw security_woman_rw	20	100	\r
+4	man_medic_rw woman_medic_rw man_medic_rw woman_medic_rw	20	100	\r
+4	stationary_turret realware_milita_man realware_milita_woman woman_worker_rw	20	100	\r
+5	realware_milita_man realware_milita_woman man_worker_rw woman_worker_rw	25	120	\r
+5	stationary_turret realware_milita_man realware_milita_woman	25	120	\r
+5	stationary_turret man_worker_rw security_woman_rw man_medic_rw	25	120	\r
+6	heavy_security_man_rw heavy_security_woman_rw mercury_force_woman	30	140	\r
+6	fire_turret heavy_security_man_rw heavy_security_woman_rw security_man_rw	30	140	\r
+6	mercury_force_man mercury_force_woman heavy_security_woman_rw mercury_force_man	30	140	\r
+7	realware_elite_man security_man_rw security_woman_rw security_woman_rw	40	160	\r
+7	fire_turret security_man_rw heavy_security_woman_rw mercury_force_man	40	160	\r
+7	mercury_force_man security_woman_rw man_medic_rw	40	160	\r
+8	man_medic_rw woman_medic_rw mercury_force_woman realware_elite_man	50	180	\r
+8	realware_elite_man realware_elite_woman security_woman_rw	50	180	\r
+8	security_woman_rw man_medic_rw mercury_force_woman realware_elite_man	50	180	\r
+9	man_medic_rw woman_medic_rw fire_turret heavy_security_woman_rw	70	200	\r
+9	fire_turret fire_turret realware_warlord_man realware_warlord_woman	70	200	\r
+9	mercury_force_man mercury_force_woman mercury_force_man mercury_force_woman	70	200	\r
+10	realware_elite_man realware_elite_woman realware_warlord_man realware_warlord_woman	100	240	\r
+10	realware_warlord_man realware_warlord_woman heavy_security_man_rw heavy_security_woman_rw	100	240	\r
+10	fire_turret realware_elite_man realware_elite_woman	100	240	\r
+#end				\r
+				\r
+#factiondrop_RealWare_items				\r
+TechLevel	ContentIds	Weight	Points	\r
+1	pistol_basic_ammo	30	28	\r
+1	miner_bolts_ammo	30	14	\r
+1	shotgun_shrapnel_ammo	30	28	\r
+1	bandage	30	28	\r
+1	splint	30	28	\r
+1	sorbent	30	14	\r
+1	rags	30	14	\r
+1	blueSoda	30	14	\r
+1	chocolateBar	30	14	\r
+1	redSoda	30	14	\r
+1	water	30	14	\r
+1	beer	30	28	\r
+1	pmc_shotgun	20	84	\r
+1	dark_pistol	15	84	\r
+1	spec_pistol	20	84	\r
+1	spec_pistol_2	15	84	\r
+1	army_pistol	15	84	\r
+1	army_pistol_2	10	84	\r
+1	bandit_smg	15	84	\r
+1	petrov_pistol	15	56	\r
+1	small_backpack	25	56	\r
+1	medium_backpack	10	84	\r
+1	bandit_vest	20	56	\r
+1	army_vest	15	84	\r
+1	green_tshirt	15	14	\r
+1	green_vest	15	14	\r
+1	blue_tshirt	15	14	\r
+1	singlet_shirt	15	14	\r
+1	balaklava	20	14	\r
+1	blue_pants	15	14	\r
+1	brown_pants	15	14	\r
+1	yellow_pants	15	14	\r
+1	dark_pants	15	14	\r
+1	blue_boots	15	14	\r
+1	broun_boots	15	14	\r
+1	armor_shards	25	28	\r
+1	weapon_shards	25	28	\r
+1	pierce_melee_shards	10	14	\r
+1	powder	25	14	\r
+1	glass	25	14	\r
+1	metal_tread	25	14	\r
+1	tape	25	14	\r
+1	rubber	25	14	\r
+1	explosives	25	14	\r
+1	acid	25	14	\r
+1	gas_ammo	30	14	\r
+1	itemChip	10	112	\r
+2	army_knife	15	42	\r
+2	pmc_club	15	42	\r
+2	pmc_pistol	20	84	\r
+2	pmc_pistol_2	15	84	\r
+2	merkUSB	5	140	\r
+3	pistol_burst_ammo	25	56	\r
+3	shotgun_bullet_ammo	25	56	\r
+3	heavy_basic_ammo	25	56	\r
+3	battery_charge	20	70	\r
+3	classUSB	5	140	\r
+4	cannedMeat	25	42	\r
+4	cannedVeg	25	42	\r
+4	mre_pack	20	70	\r
+4	dark_pistol_2	20	98	\r
+5	spec_shotgun	15	112	\r
+5	rail_pistol	15	112	\r
+5	hatchet	15	56	\r
+5	mediumItemChip	5	140	\r
+6	choppa_axe	10	70	\r
+6	bandit_axe	10	70	\r
+6	rail_pistol_2	10	84	\r
+6	medpack	20	84	\r
+7	morphine	10	70	\r
+7	cannedMeat	15	56	\r
+7	cannedVeg	15	56	\r
+7	machete	5	112	\r
+7	RealWareItemChip	3	280	\r
+8	dark_shotgun_2	5	126	\r
+8	tech_katana	5	140	\r
+8	tech_pistol	5	140	\r
+8	plazma_smg	5	140	\r
+8	highItemChip	5	196	\r
+9	desert_hmg	5	168	\r
+9	army_sniper	5	168	\r
+10	spec_assault	5	196	\r
+10	heavy_armorpierce_ammo	10	70	\r
+#end				\r
+				\r
+#factiondrop_RealWare_tradeItems				\r
+TechLevel	ContentIds	Weight	Points	RewardWeight\r
+1	spec_pistol_2	10	80	2\r
+1	frag_grenade	10	70	1\r
+1	frag_mine	10	70	1\r
+1	spec_pistol_3	10	100	3\r
+1	rw_militia_vest	5	100	4\r
+1	rw_militia_helmet	5	100	4\r
+1	rw_militia_pants	5	100	4\r
+2	merkUSB	5	120	4\r
+2	classUSB	5	120	4\r
+2	big_backpack	10	150	6\r
+2	pmc_vest_armored	15	100	3\r
+3	itemChip	20	120	4\r
+3	spec_shotgun	10	100	3\r
+4	spec_smg	10	120	4\r
+4	tech_katana	10	80	2\r
+4	stationary_turret	5	100	3\r
+5	spec_assault	10	160	7\r
+5	mediumItemChip	5	160	7\r
+6	army_sniper	10	200	8\r
+6	spec_pistol_rv	15	140	5\r
+7	realwear_armor	25	300	10\r
+7	realwear_helmet	25	300	10\r
+8	realwear_pants	25	300	10\r
+8	realwear_boots	25	300	10\r
+8	spec_smg_rv	10	300	10\r
+9	spec_assault_rv	15	250	9\r
+9	highItemChip	5	300	9\r
+10	spec_hmg	10	300	10\r
+10	RealWareItemChip	5	300	10\r
+10	rw_warlord_armor	5	300	10\r
+10	rw_warlord_helmet	5	300	10\r
+10	rw_warlord_pants	5	300	10\r
+10	rw_warlord_boots	5	300	10\r
+#end				\r
+				\r
+#factiondrop_DaydreamChems_units				\r
+TechLevel	ContentIds	Weight	Points	\r
+1	man_worker woman_worker man_medic_dd	5	40	\r
+1	man_lowskills_worker man_worker woman_scientist_dd	5	40	\r
+1	man_worker man_medic_dd man_lowskills_worker	5	40	\r
+1	woman_lowskills_worker man_lowskills_worker woman_lowskills_worker man_lowskills_worker man_medic_dd	5	40	\r
+2	cyborg_basic woman_worker man_medic_dd	10	60	\r
+2	woman_medic_dd daydream_chemtrooper_man woman_professor	10	60	\r
+2	cyborg_basic man_scientist_dd man_worker	10	60	\r
+3	woman_medic_dd woman_manager_dd woman_worker man_medic_dd	15	80	\r
+3	daydream_chemtrooper_man daydream_chemtrooper_woman man_medic_dd woman_scientist_dd	15	80	\r
+3	cyborg_basic man_professor security_woman_dd man_manager_dd	15	80	\r
+4	man_professor woman_professor security_man_dd heavy_security_woman_dd	20	100	\r
+4	daydream_chemtrooper_man daydream_chemtrooper_woman woman_medic_dd man_manager_dd	20	100	\r
+4	cyborg_basic man_professor woman_professor man_medic_dd	20	100	\r
+5	man_professor woman_professor security_man_dd man_manager_dd	25	120	\r
+5	cyborg_basic pmc_heavy_man pmc_heavy_woman	25	120	\r
+5	woman_scientist_dd daydream_professor_man daydream_professor_woman heavy_security_man_dd	25	120	\r
+6	woman_professor security_man_dd cyborg_basic man_professor	30	140	\r
+6	stationary_turret cyborg_basic security_man_dd security_woman_dd	30	140	\r
+6	woman_medic_dd daydream_chemtrooper_man daydream_chemtrooper_woman stationary_turret	30	140	\r
+7	pmc_heavy_man pmc_heavy_woman heavy_security_man_dd heavy_security_woman_dd	40	160	\r
+7	security_man_dd security_woman_dd heavy_security_man_dd heavy_security_woman_dd	40	160	\r
+7	stationary_turret heavy_security_man_dd heavy_security_woman_dd heavy_security_man_dd	40	160	\r
+8	pmc_heavy_man pmc_heavy_woman pmc_heavy_man	50	180	\r
+8	heavy_security_woman_dd stationary_turret mercury_force_woman	50	180	\r
+8	stationary_turret stationary_turret cyborg_basic cyborg_basic	50	180	\r
+9	heavy_security_woman_dd stationary_turret mercury_force_man woman_professor	70	200	\r
+9	cyborg_basic man_professor ghost_force_man ghost_force_woman	70	200	\r
+9	woman_professor security_man_dd security_woman_dd heavy_security_man_dd	70	200	\r
+10	man_medic_dd heavy_security_man_dd heavy_security_man_dd stationary_turret	100	240	\r
+10	man_scientist_dd ghost_force_man ghost_force_woman mercury_force_woman woman_professor	100	240	\r
+10	ghost_force_man ghost_force_woman mercury_force_man heavy_security_woman_dd	100	240	\r
+#end				\r
+				\r
+#factiondrop_DaydreamChems_items				\r
+TechLevel	ContentIds	Weight	Points	\r
+1	pistol_basic_ammo	30	28	\r
+1	miner_bolts_ammo	30	14	\r
+1	shotgun_shrapnel_ammo	30	28	\r
+1	bandage	30	28	\r
+1	splint	30	28	\r
+1	sorbent	30	14	\r
+1	rags	30	14	\r
+1	blueSoda	30	14	\r
+1	chocolateBar	30	14	\r
+1	redSoda	30	14	\r
+1	water	30	14	\r
+1	beer	30	28	\r
+1	pmc_shotgun	20	84	\r
+1	dark_pistol	15	84	\r
+1	spec_pistol	20	84	\r
+1	spec_pistol_2	15	84	\r
+1	army_pistol	15	84	\r
+1	army_pistol_2	10	84	\r
+1	bandit_smg	15	84	\r
+1	petrov_pistol	15	56	\r
+1	small_backpack	25	56	\r
+1	medium_backpack	10	84	\r
+1	bandit_vest	20	56	\r
+1	army_vest	15	84	\r
+1	green_tshirt	15	14	\r
+1	green_vest	15	14	\r
+1	blue_tshirt	15	14	\r
+1	singlet_shirt	15	14	\r
+1	balaklava	20	14	\r
+1	blue_pants	15	14	\r
+1	brown_pants	15	14	\r
+1	yellow_pants	15	14	\r
+1	dark_pants	15	14	\r
+1	blue_boots	15	14	\r
+1	broun_boots	15	14	\r
+1	armor_shards	25	28	\r
+1	weapon_shards	25	28	\r
+1	pierce_melee_shards	10	14	\r
+1	powder	25	14	\r
+1	glass	25	14	\r
+1	metal_tread	25	14	\r
+1	tape	25	14	\r
+1	rubber	25	14	\r
+1	explosives	25	14	\r
+1	acid	25	14	\r
+1	gas_ammo	30	14	\r
+1	itemChip	10	112	\r
+2	army_knife	15	42	\r
+2	pmc_club	15	42	\r
+2	pmc_pistol	20	84	\r
+2	pmc_pistol_2	15	84	\r
+2	merkUSB	5	140	\r
+3	pistol_burst_ammo	25	56	\r
+3	shotgun_bullet_ammo	25	56	\r
+3	heavy_basic_ammo	25	56	\r
+3	battery_charge	20	70	\r
+3	classUSB	5	140	\r
+4	cannedMeat	25	42	\r
+4	cannedVeg	25	42	\r
+4	mre_pack	20	70	\r
+4	dark_pistol_2	20	98	\r
+5	spec_shotgun	15	112	\r
+5	rail_pistol	15	112	\r
+5	hatchet	15	56	\r
+5	mediumItemChip	5	140	\r
+6	choppa_axe	10	70	\r
+6	bandit_axe	10	70	\r
+6	rail_pistol_2	10	84	\r
+6	medpack	20	84	\r
+7	morphine	10	70	\r
+7	cannedMeat	15	56	\r
+7	cannedVeg	15	56	\r
+7	machete	5	112	\r
+7	DayDreamItemChip	3	280	\r
+8	dark_shotgun_2	5	126	\r
+8	tech_katana	5	140	\r
+8	tech_pistol	5	140	\r
+8	plazma_smg	5	140	\r
+8	highItemChip	5	196	\r
+9	desert_hmg	5	168	\r
+9	army_sniper	5	168	\r
+10	spec_assault	5	196	\r
+10	heavy_armorpierce_ammo	10	70	\r
+#end				\r
+				\r
+#factiondrop_DaydreamChems_tradeItems				\r
+TechLevel	ContentIds	Weight	Points	RewardWeight\r
+1	toxic_smg	10	60	2\r
+1	desert_shotgun	10	80	3\r
+1	antidote	15	60	2\r
+1	desert_shotgun_2	10	100	4\r
+1	nanoinjection	10	120	5\r
+1	itemChip	20	120	5\r
+2	daydream_chem_vest	15	150	6\r
+2	daydream_chem_helmet	15	150	6\r
+2	daydream_chem_pants	15	150	6\r
+2	daydream_chem_boots	15	150	6\r
+3	mediumItemChip	10	180	6\r
+3	toxic_trower	10	160	7\r
+4	daydream_armored_vest	10	160	7\r
+4	daydream_armored_helmet	10	160	7\r
+4	daydream_armored_pants	10	160	7\r
+4	painkillers	10	80	3\r
+5	morphine	10	80	4\r
+5	daydream_frostgun	10	80	3\r
+5	highItemChip	10	80	3\r
+6	desert_assault	10	160	7\r
+7	desert_hmg	10	200	7\r
+7	power_armor	10	200	8\r
+7	power_helmet	10	200	8\r
+7	power_pants	10	200	8\r
+7	power_boots	10	200	8\r
+8	surgicalKit	10	100	4\r
+9	pmc_vest_armored	10	100	4\r
+9	DayDreamItemChip	10	100	4\r
+9	big_backpack	10	150	6\r
+10	doom_armor	15	250	9\r
+10	doom_helmet	15	250	9\r
+10	doom_pants	15	250	9\r
+10	doom_boots	15	250	9\r
+#end				\r
+				\r
+#factiondrop_PlanetBridge_units				\r
+TechLevel	ContentIds	Weight	Points	\r
+1	man_lowskills_worker_pb woman_lowskills_worker_pb man_lowskills_worker_pb	5	40	\r
+1	man_lowskills_worker_pb woman_lowskills_worker_pb man_manager	5	40	\r
+1	planet_builder_man planet_builder_woman planet_workerbot	5	40	\r
+2	woman_lowskills_worker_pb woman_worker_pb woman_manager	10	60	\r
+2	woman_lowskills_worker_pb woman_worker_pb man_worker_pb	10	60	\r
+2	planet_builder_man planet_builder_woman planet_workerbot man_medic woman_medic	10	60	\r
+3	woman_worker_pb woman_medic man_worker_pb security_man_pb	15	80	\r
+3	planet_builder_man planet_builder_woman man_manager security_woman_pb	15	80	\r
+3	planet_builder_man planet_workerbot security_man_pb heavy_security_man_pb	15	80	\r
+4	security_man_pb security_woman_pb security_man_pb security_woman_pb	20	100	\r
+4	planet_workerbot man_medic security_man_pb stationary_turret	20	100	\r
+4	planet_builder_man heavy_security_man_pb heavy_security_woman_pb stationary_turret	20	100	\r
+5	planet_builder_man planet_builder_woman cyborg_basic security_man_pb security_woman_pb	25	120	\r
+5	planet_builder_man planet_builder_woman planet_heavy_builder_man planet_heavy_builder_woman	25	120	\r
+5	man_manager cyborg_basic security_man_pb security_woman_pb	25	120	\r
+6	planet_builder_man planet_builder_woman planet_heavy_builder_man planet_heavy_builder_woman	30	140	\r
+6	man_worker_pb woman_worker_pb heavy_security_man_pb heavy_security_woman_pb	30	140	\r
+6	cyborg_basic planet_heavy_builder_man planet_heavy_builder_woman stationary_turret	30	140	\r
+7	planet_heavy_builder_man planet_heavy_builder_woman heavy_security_man_pb heavy_security_woman_pb	40	160	\r
+7	planet_heavy_builder_man planet_heavy_builder_woman planet_heavy_builder_man planet_heavy_builder_woman	40	160	\r
+7	planet_workerbot planet_elite_man planet_elite_woman	40	160	\r
+8	planet_heavy_builder_man planet_heavy_builder_woman planet_heavy_builder_man planet_heavy_builder_woman	50	180	\r
+8	planet_workerbot planet_workerbot planet_workerbot heavy_security_man_pb	50	180	\r
+8	planet_heavy_builder_man woman_medic mercury_force_man	50	180	\r
+9	woman_medic heavy_security_man_pb heavy_security_woman_pb mercury_force_man	70	200	\r
+9	planet_heavy_builder_man planet_heavy_builder_woman planet_elite_man planet_elite_woman	70	200	\r
+9	planet_workerbot man_medic planet_elite_man planet_elite_woman	70	200	\r
+10	heavy_security_man_pb heavy_security_woman_pb stationary_turret mercury_force_woman	100	240	\r
+10	stationary_turret planet_elite_man planet_elite_woman heavy_security_woman_pb	100	240	\r
+10	planet_elite_man planet_elite_woman planet_elite_man planet_elite_woman	100	240	\r
+#end				\r
+				\r
+#factiondrop_PlanetBridge_items				\r
+TechLevel	ContentIds	Weight	Points	\r
+1	pistol_basic_ammo	30	28	\r
+1	miner_bolts_ammo	30	14	\r
+1	shotgun_shrapnel_ammo	30	28	\r
+1	bandage	30	28	\r
+1	splint	30	28	\r
+1	sorbent	30	14	\r
+1	rags	30	14	\r
+1	blueSoda	30	14	\r
+1	chocolateBar	30	14	\r
+1	redSoda	30	14	\r
+1	water	30	14	\r
+1	beer	30	28	\r
+1	pmc_shotgun	20	84	\r
+1	dark_pistol	15	84	\r
+1	spec_pistol	20	84	\r
+1	spec_pistol_2	15	84	\r
+1	army_pistol	15	84	\r
+1	army_pistol_2	10	84	\r
+1	bandit_smg	15	84	\r
+1	petrov_pistol	15	56	\r
+1	small_backpack	25	56	\r
+1	medium_backpack	10	84	\r
+1	bandit_vest	20	56	\r
+1	army_vest	15	84	\r
+1	green_tshirt	15	14	\r
+1	green_vest	15	14	\r
+1	blue_tshirt	15	14	\r
+1	singlet_shirt	15	14	\r
+1	balaklava	20	14	\r
+1	blue_pants	15	14	\r
+1	brown_pants	15	14	\r
+1	yellow_pants	15	14	\r
+1	dark_pants	15	14	\r
+1	blue_boots	15	14	\r
+1	broun_boots	15	14	\r
+1	armor_shards	25	28	\r
+1	weapon_shards	25	28	\r
+1	pierce_melee_shards	10	14	\r
+1	powder	25	14	\r
+1	glass	25	14	\r
+1	metal_tread	25	14	\r
+1	tape	25	14	\r
+1	rubber	25	14	\r
+1	explosives	25	14	\r
+1	acid	25	14	\r
+1	gas_ammo	30	14	\r
+1	itemChip	10	112	\r
+2	army_knife	15	42	\r
+2	pmc_club	15	42	\r
+2	pmc_pistol	20	84	\r
+2	pmc_pistol_2	15	84	\r
+2	merkUSB	5	140	\r
+3	pistol_burst_ammo	25	56	\r
+3	shotgun_bullet_ammo	25	56	\r
+3	heavy_basic_ammo	25	56	\r
+3	battery_charge	20	70	\r
+3	classUSB	5	140	\r
+4	cannedMeat	25	42	\r
+4	cannedVeg	25	42	\r
+4	mre_pack	20	70	\r
+4	dark_pistol_2	20	98	\r
+5	spec_shotgun	15	112	\r
+5	rail_pistol	15	112	\r
+5	hatchet	15	56	\r
+5	mediumItemChip	5	140	\r
+6	choppa_axe	10	70	\r
+6	bandit_axe	10	70	\r
+6	rail_pistol_2	10	84	\r
+6	medpack	20	84	\r
+7	morphine	10	70	\r
+7	cannedMeat	15	56	\r
+7	cannedVeg	15	56	\r
+7	machete	5	112	\r
+7	PlanetBridgeItemChip	3	280	\r
+8	dark_shotgun_2	5	126	\r
+8	tech_katana	5	140	\r
+8	tech_pistol	5	140	\r
+8	plazma_smg	5	140	\r
+8	highItemChip	5	196	\r
+9	desert_hmg	5	168	\r
+9	army_sniper	5	168	\r
+10	spec_assault	5	196	\r
+10	heavy_armorpierce_ammo	10	70	\r
+#end				\r
+				\r
+#factiondrop_PlanetBridge_tradeItems				\r
+TechLevel	ContentIds	Weight	Points	RewardWeight\r
+1	petrov_pistol_3	15	60	2\r
+1	army_vest	15	60	2\r
+1	merkUSB	5	150	6\r
+1	classUSB	5	150	6\r
+1	medpack	20	80	3\r
+1	rail_pistol_2	15	100	4\r
+1	pb_vest	15	100	4\r
+1	pb_hard_hat	15	100	4\r
+1	pb_pants	15	100	4\r
+1	pb_boots	15	100	4\r
+2	antidote	10	80	4\r
+2	medium_backpack	15	120	5\r
+3	rail_rifle	10	120	5\r
+3	itemChip	20	150	6\r
+3	pmc_smg_2	10	120	5\r
+4	cevlar_vest	15	80	3\r
+4	pmc_vest	15	100	4\r
+5	pb_heavy_armor	15	150	6\r
+5	pb_heavy_helmet	15	150	6\r
+5	pb_heavy_pants	15	150	6\r
+5	pb_heavy_boots	15	150	6\r
+5	big_backpack	10	150	6\r
+6	pb_shockgun	5	150	6\r
+6	desert_assault	10	160	7\r
+7	PlanetBridgeItemChip	5	160	7\r
+7	heavy_armorpierce_ammo	15	50	1\r
+8	desert_hmg	10	200	8\r
+8	tech_marksman	10	250	9\r
+8	mediumItemChip	5	250	9\r
+9	dark_pistol_4	20	100	4\r
+9	dark_pistol_5	20	100	4\r
+10	automap	20	300	10\r
+10	highItemChip	10	300	10\r
+#end				\r
+				\r
+#factiondrop_Grasshopper_units				\r
+TechLevel	ContentIds	Weight	Points	\r
+1	man_lowskills_worker_grass woman_lowskills_worker_grass man_lowskills_worker_grass	5	40	\r
+1	man_lowskills_worker_grass woman_lowskills_worker_grass	5	40	\r
+1	grass_worker_man grass_worker_woman cyborg_basic	5	40	\r
+2	woman_lowskills_worker_grass man_worker_grass woman_worker_grass	10	60	\r
+2	woman_lowskills_worker_grass woman_worker_grass man_medic_grass	10	60	\r
+2	grass_worker_man grass_worker_woman cyborg_basic man_medic_grass woman_medic_grass	10	60	\r
+3	woman_manager_gh man_medic_grass woman_medic_grass grass_security_man	15	80	\r
+3	grass_worker_man grass_worker_woman man_manager_gh grass_security_woman	15	80	\r
+3	grass_worker_woman cyborg_basic grass_security_man man_manager_gh	15	80	\r
+4	security_man_grass security_woman_grass security_man_grass security_woman_grass	20	100	\r
+4	cyborg_basic man_manager_gh security_man_grass stationary_turret	20	100	\r
+4	grass_worker_man heavy_security_man_grass heavy_security_woman_grass stationary_turret	20	100	\r
+5	grass_worker_woman man_manager_gh security_man_grass security_woman_grass	25	120	\r
+5	grass_security_man grass_security_woman grass_elite_man	25	120	\r
+5	grass_security_woman man_manager_gh security_man_grass security_woman_grass	25	120	\r
+6	grass_security_man pmc_heavy_man pmc_heavy_woman	30	140	\r
+6	grass_worker_man woman_worker_grass heavy_security_man_grass heavy_security_woman_grass	30	140	\r
+6	cyborg_basic man_medic_grass heavy_security_woman_grass stationary_turret	30	140	\r
+7	woman_medic_grass pmc_heavy_man pmc_heavy_woman heavy_security_woman_grass	40	160	\r
+7	grass_security_man grass_security_woman heavy_security_man_grass heavy_security_woman_grass	40	160	\r
+7	grass_security_man grass_security_woman pmc_heavy_man pmc_heavy_woman	40	160	\r
+8	grass_elite_man grass_elite_woman grass_security_man grass_security_woman	50	180	\r
+8	cyborg_basic cyborg_basic pmc_heavy_man pmc_heavy_woman heavy_security_man_grass	50	180	\r
+8	pmc_heavy_man pmc_heavy_woman mercury_force_man	50	180	\r
+9	woman_medic_grass heavy_security_man_grass heavy_security_woman_grass mercury_force_man	70	200	\r
+9	grass_elite_man grass_elite_woman grass_worker_man grass_worker_woman grass_worker_man grass_worker_woman	70	200	\r
+9	cyborg_basic man_medic_grass heavy_security_man_grass heavy_security_woman_grass	70	200	\r
+10	heavy_security_man_grass heavy_security_woman_grass stationary_turret mercury_force_woman	100	240	\r
+10	stationary_turret grass_elite_man grass_elite_woman heavy_security_woman_grass	100	240	\r
+10	grass_elite_man grass_elite_woman grass_elite_man grass_elite_woman	100	240	\r
+#end				\r
+				\r
+#factiondrop_Grasshopper_items				\r
+TechLevel	ContentIds	Weight	Points	\r
+1	pistol_basic_ammo	30	28	\r
+1	miner_bolts_ammo	30	14	\r
+1	shotgun_shrapnel_ammo	30	28	\r
+1	bandage	30	28	\r
+1	splint	30	28	\r
+1	sorbent	30	14	\r
+1	rags	30	14	\r
+1	blueSoda	30	14	\r
+1	chocolateBar	30	14	\r
+1	redSoda	30	14	\r
+1	water	30	14	\r
+1	beer	30	28	\r
+1	pmc_shotgun	20	84	\r
+1	dark_pistol	15	84	\r
+1	spec_pistol	20	84	\r
+1	spec_pistol_2	15	84	\r
+1	army_pistol	15	84	\r
+1	army_pistol_2	10	84	\r
+1	bandit_smg	15	84	\r
+1	petrov_pistol	15	56	\r
+1	small_backpack	25	56	\r
+1	medium_backpack	10	84	\r
+1	bandit_vest	20	56	\r
+1	army_vest	15	84	\r
+1	green_tshirt	15	14	\r
+1	green_vest	15	14	\r
+1	blue_tshirt	15	14	\r
+1	singlet_shirt	15	14	\r
+1	balaklava	20	14	\r
+1	blue_pants	15	14	\r
+1	brown_pants	15	14	\r
+1	yellow_pants	15	14	\r
+1	dark_pants	15	14	\r
+1	blue_boots	15	14	\r
+1	broun_boots	15	14	\r
+1	armor_shards	25	28	\r
+1	weapon_shards	25	28	\r
+1	pierce_melee_shards	10	14	\r
+1	powder	25	14	\r
+1	glass	25	14	\r
+1	metal_tread	25	14	\r
+1	tape	25	14	\r
+1	rubber	25	14	\r
+1	explosives	25	14	\r
+1	acid	25	14	\r
+1	gas_ammo	30	14	\r
+1	itemChip	10	112	\r
+2	army_knife	15	42	\r
+2	pmc_club	15	42	\r
+2	pmc_pistol	20	84	\r
+2	pmc_pistol_2	15	84	\r
+2	merkUSB	5	140	\r
+3	pistol_burst_ammo	25	56	\r
+3	shotgun_bullet_ammo	25	56	\r
+3	heavy_basic_ammo	25	56	\r
+3	battery_charge	20	70	\r
+3	classUSB	5	140	\r
+4	cannedMeat	25	42	\r
+4	cannedVeg	25	42	\r
+4	mre_pack	20	70	\r
+4	dark_pistol_2	20	98	\r
+5	spec_shotgun	15	112	\r
+5	rail_pistol	15	112	\r
+5	hatchet	15	56	\r
+5	mediumItemChip	5	140	\r
+6	choppa_axe	10	70	\r
+6	bandit_axe	10	70	\r
+6	rail_pistol_2	10	84	\r
+6	medpack	20	84	\r
+7	morphine	10	70	\r
+7	cannedMeat	15	56	\r
+7	cannedVeg	15	56	\r
+7	machete	5	112	\r
+7	GrassHopperItemChip	3	280	\r
+8	dark_shotgun_2	5	126	\r
+8	tech_katana	5	140	\r
+8	tech_pistol	5	140	\r
+8	plazma_smg	5	140	\r
+8	highItemChip	5	196	\r
+9	desert_hmg	5	168	\r
+9	army_sniper	5	168	\r
+10	spec_assault	5	196	\r
+10	heavy_armorpierce_ammo	10	70	\r
+#end				\r
+				\r
+#factiondrop_Grasshopper_tradeItems				\r
+TechLevel	ContentIds	Weight	Points	RewardWeight\r
+1	classUSB	5	150	7\r
+1	merkUSB	5	150	7\r
+1	army_vest	15	60	2\r
+1	chocolateBar	15	40	1\r
+1	cannedMeat	15	70	3\r
+1	itemChip	20	150	7\r
+2	servo_backpack	10	80	4\r
+3	worker_armor	15	100	5\r
+3	worker_helmet	15	100	5\r
+3	gh_pistol	10	100	5\r
+3	worker_pants	15	100	5\r
+3	worker_boots	15	100	5\r
+3	frag_grenade	10	80	4\r
+4	gh_marksman	10	80	4\r
+4	thermal_grenade	10	80	4\r
+4	cevlar_vest_pockets	15	120	6\r
+5	gh_assault	15	120	6\r
+5	sigs_kosmos	10	150	6\r
+6	mediumItemChip	10	150	6\r
+6	shotgun_flechette_ammo	15	60	2\r
+7	shotgun_dragon_ammo	15	60	2\r
+7	energy_turret	10	120	6\r
+8	highItemChip	10	120	6\r
+9	doom_armor	20	250	9\r
+9	doom_helmet	20	250	9\r
+9	doom_pants	20	250	9\r
+9	doom_boots	20	250	9\r
+10	spec_smg_rv	40	120	6\r
+10	GrassHopperItemChip	20	120	6\r
+10	spec_assault	40	160	8\r
+10	spec_hmg	20	300	10\r
+#end				\r
+				\r
+#factiondrop_Sunlight_units				\r
+TechLevel	ContentIds	Weight	Points	\r
+1	man_worker woman_worker man_medic_sl woman_medic_sl	5	40	\r
+1	man_worker woman_worker man_manager woman_manager	5	40	\r
+1	man_manager woman_manager cyborg_basic	5	40	\r
+2	man_worker woman_worker man_manager woman_manager	10	60	\r
+2	man_worker man_manager woman_manager man_worker	10	60	\r
+2	man_medic_sl woman_medic_sl man_chemist woman_chemist	10	60	\r
+3	man_manager woman_manager man_scientist_sl woman_scientist_sl	15	80	\r
+3	man_worker woman_worker man_scientist_sl woman_scientist_sl	15	80	\r
+3	man_medic_sl woman_medic_sl woman_scientist_sl cyborg_basic	15	80	\r
+4	man_chemist woman_chemist man_professor woman_professor	20	100	\r
+4	man_worker woman_worker man_scientist_sl woman_scientist_sl	20	100	\r
+4	man_medic_sl woman_medic_sl man_scientist_sl woman_scientist_sl	20	100	\r
+5	woman_worker man_scientist_sl man_chemist woman_chemist	25	120	\r
+5	security_man_sl security_woman_sl man_scientist_sl woman_scientist_sl	25	120	\r
+5	cyborg_basic cyborg_basic pmc_man_soldier pmc_woman_soldier	25	120	\r
+6	man_medic_sl pmc_heavy_man pmc_heavy_woman stationary_turret	30	140	\r
+6	security_man_sl security_woman_sl security_man_sl security_woman_sl	30	140	\r
+6	sunlight_heavy_man sunlight_heavy_woman man_scientist_sl	30	140	\r
+7	sunlight_heavy_man sunlight_heavy_woman stationary_turret	40	160	\r
+7	sunlight_elite_man security_man_sl security_woman_sl security_man_sl security_woman_sl	40	160	\r
+7	cyborg_basic pmc_heavy_man pmc_heavy_woman pmc_man_soldier	40	160	\r
+8	sunlight_heavy_man sunlight_elite_man sunlight_elite_woman	50	180	\r
+8	stationary_turret heavy_security_man_sl heavy_security_woman_sl pmc_woman_soldier	50	180	\r
+8	pmc_man_soldier pmc_woman_soldier woman_scientist_sl man_scientist_sl	50	180	\r
+9	sunlight_heavy_man sunlight_heavy_woman sunlight_elite_man sunlight_elite_woman	70	200	\r
+9	stationary_turret pmc_man_soldier pmc_woman_soldier	70	200	\r
+9	pmc_man_soldier pmc_woman_soldier woman_medic_sl man_scientist_sl	70	200	\r
+10	sunlight_elite_man sunlight_elite_woman sunlight_elite_man sunlight_elite_woman	100	240	\r
+10	ghost_force_man ghost_force_woman mercury_force_man mercury_force_woman	100	240	\r
+10	mercury_force_man mercury_force_woman sunlight_elite_man sunlight_elite_woman stationary_turret	100	240	\r
+#end				\r
+				\r
+#factiondrop_Sunlight_items				\r
+TechLevel	ContentIds	Weight	Points	\r
+1	pistol_basic_ammo	30	28	\r
+1	miner_bolts_ammo	30	14	\r
+1	shotgun_shrapnel_ammo	30	28	\r
+1	bandage	30	28	\r
+1	splint	30	28	\r
+1	sorbent	30	14	\r
+1	rags	30	14	\r
+1	blueSoda	30	14	\r
+1	chocolateBar	30	14	\r
+1	redSoda	30	14	\r
+1	water	30	14	\r
+1	beer	30	28	\r
+1	pmc_shotgun	20	84	\r
+1	dark_pistol	15	84	\r
+1	spec_pistol	20	84	\r
+1	spec_pistol_2	15	84	\r
+1	army_pistol	15	84	\r
+1	army_pistol_2	10	84	\r
+1	bandit_smg	15	84	\r
+1	petrov_pistol	15	56	\r
+1	small_backpack	25	56	\r
+1	medium_backpack	10	84	\r
+1	bandit_vest	20	56	\r
+1	army_vest	15	84	\r
+1	green_tshirt	15	14	\r
+1	green_vest	15	14	\r
+1	blue_tshirt	15	14	\r
+1	singlet_shirt	15	14	\r
+1	balaklava	20	14	\r
+1	blue_pants	15	14	\r
+1	brown_pants	15	14	\r
+1	yellow_pants	15	14	\r
+1	dark_pants	15	14	\r
+1	blue_boots	15	14	\r
+1	broun_boots	15	14	\r
+1	armor_shards	25	28	\r
+1	weapon_shards	25	28	\r
+1	pierce_melee_shards	10	14	\r
+1	powder	25	14	\r
+1	glass	25	14	\r
+1	metal_tread	25	14	\r
+1	tape	25	14	\r
+1	rubber	25	14	\r
+1	explosives	25	14	\r
+1	acid	25	14	\r
+1	gas_ammo	30	14	\r
+1	itemChip	10	112	\r
+2	army_knife	15	42	\r
+2	pmc_club	15	42	\r
+2	pmc_pistol	20	84	\r
+2	pmc_pistol_2	15	84	\r
+2	merkUSB	5	140	\r
+3	pistol_burst_ammo	25	56	\r
+3	shotgun_bullet_ammo	25	56	\r
+3	heavy_basic_ammo	25	56	\r
+3	battery_charge	20	70	\r
+3	classUSB	5	140	\r
+4	cannedMeat	25	42	\r
+4	cannedVeg	25	42	\r
+4	mre_pack	20	70	\r
+4	dark_pistol_2	20	98	\r
+5	spec_shotgun	15	112	\r
+5	rail_pistol	15	112	\r
+5	hatchet	15	56	\r
+5	mediumItemChip	5	140	\r
+6	choppa_axe	10	70	\r
+6	bandit_axe	10	70	\r
+6	rail_pistol_2	10	84	\r
+6	medpack	20	84	\r
+7	morphine	10	70	\r
+7	cannedMeat	15	56	\r
+7	cannedVeg	15	56	\r
+7	machete	5	112	\r
+7	SunLightItemChip	3	280	\r
+8	dark_shotgun_2	5	126	\r
+8	tech_katana	5	140	\r
+8	tech_pistol	5	140	\r
+8	plazma_smg	5	140	\r
+8	highItemChip	5	196	\r
+9	desert_hmg	5	168	\r
+9	army_sniper	5	168	\r
+10	spec_assault	5	196	\r
+10	heavy_armorpierce_ammo	10	70	\r
+#end				\r
+				\r
+#factiondrop_Sunlight_tradeItems				\r
+TechLevel	ContentIds	Weight	Points	RewardWeight\r
+1	classUSB	5	150	6\r
+1	desert_marksman	10	100	4\r
+1	dark_pistol	10	70	2\r
+1	redSoda	10	60	1\r
+1	burgerMeat	10	60	1\r
+1	merkUSB	5	150	6\r
+2	itemChip	15	150	6\r
+2	desert_marksman_2	10	100	4\r
+3	sl_pistol	10	100	4\r
+3	dark_pistol_2	10	80	3\r
+3	cevlar_vest_pockets	10	80	3\r
+4	armor_repair_kit	10	80	3\r
+4	big_backpack	10	120	5\r
+5	sl_shotgun	10	120	5\r
+5	dark_pistol_4	10	100	4\r
+5	melee_repair_kit	10	80	3\r
+6	mediumItemChip	10	80	3\r
+6	sl_sniper	10	80	3\r
+6	dark_pistol_5	10	100	4\r
+6	weapon_repair_kit	10	80	3\r
+7	surgicalKit	10	100	4\r
+7	regular_launcher	10	150	6\r
+8	highItemChip	10	150	6\r
+9	sl_power_armor	20	250	7\r
+9	sl_power_helmet	20	250	7\r
+9	sl_power_pants	20	250	7\r
+9	sl_power_boots	20	250	7\r
+10	anulator	5	400	8\r
+10	SunLightItemChip	5	400	8\r
+#end				\r
+				\r
+#factiondrop_FrancheComte_units				\r
+TechLevel	ContentIds	Weight	Points	\r
+1	man_prisoner woman_prisoner man_prisoner woman_prisoner man_prisoner	5	40	\r
+1	man_prisoner woman_prisoner man_prisoner woman_prisoner man_prisoner	5	40	\r
+1	security_man_fc man_prisoner woman_prisoner	5	40	\r
+2	man_prisoner man_prisoner woman_prisoner man_prisoner woman_prisoner man_prisoner	10	60	\r
+2	man_prisoner woman_prisoner man_prisoner woman_prisoner man_prisoner security_man_fc	10	60	\r
+2	security_man_fc security_woman_fc police_man police_woman	10	60	\r
+3	man_prisoner woman_prisoner man_prisoner woman_prisoner man_prisoner	15	80	\r
+3	man_prisoner woman_prisoner security_man_fc police_man police_woman	15	80	\r
+3	man_prisoner woman_prisoner cyborg_basic	15	80	\r
+4	security_woman_fc cyborg_basic heavy_security_man_fc heavy_security_woman_fc	20	100	\r
+4	stationary_turret police_man police_woman	20	100	\r
+4	cyborg_basic man_prisoner woman_prisoner man_prisoner woman_prisoner	20	100	\r
+5	cyborg_basic cyborg_basic pmc_heavy_man pmc_heavy_woman	25	120	\r
+5	cyborg_basic heavy_security_man_fc heavy_security_woman_fc stationary_turret	25	120	\r
+5	stationary_turret stationary_turret cyborg_basic	25	120	\r
+6	heavy_security_man_fc pmc_heavy_man pmc_heavy_woman	30	140	\r
+6	security_man_fc security_woman_fc heavy_security_man_fc stationary_turret	30	140	\r
+6	man_prisoner man_prisoner woman_prisoner pmc_heavy_man pmc_heavy_woman possesed_prisoner_woman	30	140	\r
+7	man_prisoner woman_prisoner man_prisoner woman_prisoner man_prisoner woman_prisoner man_prisoner woman_prisoner	40	160	\r
+7	franche_security_man franche_security_woman heavy_security_man_fc heavy_security_woman_fc	40	160	\r
+7	fire_turret franche_security_man franche_security_woman cyborg_basic	40	160	\r
+8	security_man_fc security_woman_fc security_man_fc security_woman_fc	50	180	\r
+8	franche_security_man franche_security_woman heavy_security_man_fc heavy_security_woman_fc	50	180	\r
+8	cyborg_basic heavy_security_man_fc franche_elite_man franche_elite_woman stationary_turret	50	180	\r
+9	mercury_force_man security_man_fc security_woman_fc stationary_turret	70	200	\r
+9	cyborg_basic heavy_security_woman_fc cyborg_basic heavy_security_woman_fc	70	200	\r
+9	security_woman_fc franche_elite_man fire_turret	70	200	\r
+10	heavy_security_woman_fc stationary_turret franche_elite_man franche_elite_woman	100	240	\r
+10	franche_elite_man franche_elite_woman mercury_force_man mercury_force_woman	100	240	\r
+10	franche_elite_man franche_elite_woman franche_elite_man franche_elite_woman fire_turret	100	240	\r
+#end				\r
+				\r
+#factiondrop_FrancheComte_items				\r
+TechLevel	ContentIds	Weight	Points	\r
+1	pistol_basic_ammo	30	28	\r
+1	miner_bolts_ammo	30	14	\r
+1	shotgun_shrapnel_ammo	30	28	\r
+1	bandage	30	28	\r
+1	splint	30	28	\r
+1	sorbent	30	14	\r
+1	rags	30	14	\r
+1	blueSoda	30	14	\r
+1	chocolateBar	30	14	\r
+1	redSoda	30	14	\r
+1	water	30	14	\r
+1	beer	30	28	\r
+1	pmc_shotgun	20	84	\r
+1	dark_pistol	15	84	\r
+1	spec_pistol	20	84	\r
+1	spec_pistol_2	15	84	\r
+1	army_pistol	15	84	\r
+1	army_pistol_2	10	84	\r
+1	bandit_smg	15	84	\r
+1	petrov_pistol	15	56	\r
+1	small_backpack	25	56	\r
+1	medium_backpack	10	84	\r
+1	bandit_vest	20	56	\r
+1	army_vest	15	84	\r
+1	green_tshirt	15	14	\r
+1	green_vest	15	14	\r
+1	blue_tshirt	15	14	\r
+1	singlet_shirt	15	14	\r
+1	balaklava	20	14	\r
+1	blue_pants	15	14	\r
+1	brown_pants	15	14	\r
+1	yellow_pants	15	14	\r
+1	dark_pants	15	14	\r
+1	blue_boots	15	14	\r
+1	broun_boots	15	14	\r
+1	armor_shards	25	28	\r
+1	weapon_shards	25	28	\r
+1	pierce_melee_shards	10	14	\r
+1	powder	25	14	\r
+1	glass	25	14	\r
+1	metal_tread	25	14	\r
+1	tape	25	14	\r
+1	rubber	25	14	\r
+1	explosives	25	14	\r
+1	acid	25	14	\r
+1	gas_ammo	30	14	\r
+1	itemChip	10	112	\r
+2	army_knife	15	42	\r
+2	pmc_club	15	42	\r
+2	pmc_pistol	20	84	\r
+2	pmc_pistol_2	15	84	\r
+2	merkUSB	5	140	\r
+3	pistol_burst_ammo	25	56	\r
+3	shotgun_bullet_ammo	25	56	\r
+3	heavy_basic_ammo	25	56	\r
+3	battery_charge	20	70	\r
+3	classUSB	5	140	\r
+4	cannedMeat	25	42	\r
+4	cannedVeg	25	42	\r
+4	mre_pack	20	70	\r
+4	dark_pistol_2	20	98	\r
+5	spec_shotgun	15	112	\r
+5	rail_pistol	15	112	\r
+5	hatchet	15	56	\r
+5	mediumItemChip	5	140	\r
+6	choppa_axe	10	70	\r
+6	bandit_axe	10	70	\r
+6	rail_pistol_2	10	84	\r
+6	medpack	20	84	\r
+7	morphine	10	70	\r
+7	cannedMeat	15	56	\r
+7	cannedVeg	15	56	\r
+7	machete	5	112	\r
+7	FrancheItemChip	3	280	\r
+8	dark_shotgun_2	5	126	\r
+8	tech_katana	5	140	\r
+8	tech_pistol	5	140	\r
+8	plazma_smg	5	140	\r
+8	highItemChip	5	196	\r
+9	desert_hmg	5	168	\r
+9	army_sniper	5	168	\r
+10	spec_assault	5	196	\r
+10	heavy_armorpierce_ammo	10	70	\r
+#end				\r
+				\r
+#factiondrop_FrancheComte_tradeItems				\r
+TechLevel	ContentIds	Weight	Points	RewardWeight\r
+1	pistol_burst_ammo	15	80	3\r
+1	medium_basic_ammo	15	80	3\r
+1	thermal_grenade	15	80	3\r
+1	itemChip	15	80	3\r
+1	franch_pistol	20	50	1\r
+1	medium_backpack	10	100	4\r
+1	security_armor	10	100	4\r
+2	franch_helmet	10	100	4\r
+2	franch_pants	10	100	4\r
+2	franch_boots	10	80	3\r
+2	armor_repair_kit	10	70	2\r
+2	weapon_repair_kit	10	70	2\r
+3	melee_repair_kit	10	70	2\r
+3	frag_grenade	15	80	3\r
+3	fire_turret	10	120	5\r
+4	franch_heavy_armor	10	120	5\r
+4	franch_heavy_mask	10	120	5\r
+4	franch_heavy_pants	10	120	5\r
+4	franch_heavy_boots	10	120	5\r
+4	stationary_turret	10	120	5\r
+5	franch_smg	10	100	4\r
+5	mediumItemChip	10	100	4\r
+6	big_backpack	15	200	8\r
+7	franch_assault	10	160	7\r
+7	heavy_armorpierce_ammo	15	80	3\r
+8	automap	10	300	10\r
+9	power_armor	20	150	6\r
+9	power_helmet	20	150	6\r
+9	power_pants	20	150	6\r
+9	power_boots	20	150	6\r
+9	highItemChip	20	150	6\r
+10	plazma_shotgun	20	250	9\r
+10	FrancheItemChip	20	250	9\r
+10	plazma_smg	20	250	9\r
+#end				\r
+				\r
+#factiondrop_ChurchRevelation_units				\r
+TechLevel	ContentIds	Weight	Points	\r
+1	possesed_church_man possesed_church_woman possesed_church_man possesed_church_woman	5	40	\r
+1	possesed_church_man possesed_church_woman possesed_church_man possesed_church_woman	5	40	\r
+1	man_manager woman_manager cyborg_basic	5	40	\r
+2	police_man police_woman man_manager woman_manager	10	60	\r
+2	man_worker woman_worker woman_manager church_priest_man	10	60	\r
+2	church_priest_man woman_worker man_medic_ch woman_medic_ch	10	60	\r
+3	possesed_church_man possesed_church_woman possesed_church_man possesed_church_woman	15	80	\r
+3	police_man police_woman man_scientist_ch woman_scientist_ch	15	80	\r
+3	man_medic_ch woman_medic_ch woman_scientist_ch cyborg_basic	15	80	\r
+4	church_priest_man church_priest_woman possesed_church_man possesed_church_woman	20	100	\r
+4	possesed_church_man possesed_church_woman possesed_church_man possesed_church_woman	20	100	\r
+4	man_medic_ch police_man police_woman woman_scientist_ch	20	100	\r
+5	church_priest_man church_priest_woman church_priest_man church_priest_woman	25	120	\r
+5	possesed_church_man possesed_church_woman possesed_church_man possesed_church_woman	25	120	\r
+5	cyborg_basic cyborg_basic pmc_man_soldier pmc_woman_soldier	25	120	\r
+6	man_medic_ch security_man_ch security_woman_ch stationary_turret	30	140	\r
+6	possesed_church_man possesed_church_woman possesed_church_man possesed_church_woman	30	140	\r
+6	church_priest_man church_priest_woman man_scientist_ch	30	140	\r
+7	church_priest_man church_priest_woman stationary_turret	40	160	\r
+7	possesed_heavy_church_man possesed_heavy_church_woman possesed_heavy_church_man possesed_heavy_church_woman	40	160	\r
+7	cyborg_basic heavy_security_man_ch heavy_security_woman_ch pmc_man_soldier	40	160	\r
+8	possesed_heavy_church_man possesed_heavy_church_woman possesed_heavy_church_man possesed_heavy_church_woman	50	180	\r
+8	stationary_turret heavy_security_man_ch pmc_man_soldier pmc_woman_soldier	50	180	\r
+8	pmc_man_soldier pmc_woman_soldier woman_medic_ch man_scientist_ch	50	180	\r
+9	possesed_heavy_church_man possesed_heavy_church_woman possesed_heavy_church_man possesed_heavy_church_woman	70	200	\r
+9	heavy_security_man_ch stationary_turret ghost_force_man ghost_force_woman	70	200	\r
+9	pmc_man_soldier pmc_woman_soldier woman_medic_ch man_scientist_ch	70	200	\r
+10	possesed_heavy_church_man possesed_heavy_church_woman possesed_heavy_church_man possesed_heavy_church_woman	100	240	\r
+10	church_elite_man church_elite_woman church_elite_man church_elite_woman	100	240	\r
+10	church_elite_man church_elite_woman church_elite_man church_elite_woman stationary_turret	100	240	\r
+#end				\r
+				\r
+#factiondrop_ChurchRevelation_items				\r
+TechLevel	ContentIds	Weight	Points	\r
+1	pistol_basic_ammo	30	28	\r
+1	miner_bolts_ammo	30	14	\r
+1	shotgun_shrapnel_ammo	30	28	\r
+1	bandage	30	28	\r
+1	splint	30	28	\r
+1	sorbent	30	14	\r
+1	rags	30	14	\r
+1	blueSoda	30	14	\r
+1	chocolateBar	30	14	\r
+1	redSoda	30	14	\r
+1	water	30	14	\r
+1	beer	30	28	\r
+1	pmc_shotgun	20	84	\r
+1	dark_pistol	15	84	\r
+1	spec_pistol	20	84	\r
+1	spec_pistol_2	15	84	\r
+1	army_pistol	15	84	\r
+1	army_pistol_2	10	84	\r
+1	bandit_smg	15	84	\r
+1	petrov_pistol	15	56	\r
+1	small_backpack	25	56	\r
+1	medium_backpack	10	84	\r
+1	bandit_vest	20	56	\r
+1	army_vest	15	84	\r
+1	green_tshirt	15	14	\r
+1	green_vest	15	14	\r
+1	blue_tshirt	15	14	\r
+1	singlet_shirt	15	14	\r
+1	balaklava	20	14	\r
+1	blue_pants	15	14	\r
+1	brown_pants	15	14	\r
+1	yellow_pants	15	14	\r
+1	dark_pants	15	14	\r
+1	blue_boots	15	14	\r
+1	broun_boots	15	14	\r
+1	armor_shards	25	28	\r
+1	weapon_shards	25	28	\r
+1	pierce_melee_shards	10	14	\r
+1	powder	25	14	\r
+1	glass	25	14	\r
+1	metal_tread	25	14	\r
+1	tape	25	14	\r
+1	rubber	25	14	\r
+1	explosives	25	14	\r
+1	acid	25	14	\r
+1	gas_ammo	30	14	\r
+1	itemChip	10	112	\r
+2	army_knife	15	42	\r
+2	pmc_club	15	42	\r
+2	pmc_pistol	20	84	\r
+2	pmc_pistol_2	15	84	\r
+2	merkUSB	5	140	\r
+3	pistol_burst_ammo	25	56	\r
+3	shotgun_bullet_ammo	25	56	\r
+3	heavy_basic_ammo	25	56	\r
+3	battery_charge	20	70	\r
+3	classUSB	5	140	\r
+4	cannedMeat	25	42	\r
+4	cannedVeg	25	42	\r
+4	mre_pack	20	70	\r
+4	dark_pistol_2	20	98	\r
+5	spec_shotgun	15	112	\r
+5	rail_pistol	15	112	\r
+5	hatchet	15	56	\r
+5	mediumItemChip	5	140	\r
+6	choppa_axe	10	70	\r
+6	bandit_axe	10	70	\r
+6	rail_pistol_2	10	84	\r
+6	medpack	20	84	\r
+7	morphine	10	70	\r
+7	cannedMeat	15	56	\r
+7	cannedVeg	15	56	\r
+7	machete	5	112	\r
+7	ChurchItemChip	3	280	\r
+8	dark_shotgun_2	5	126	\r
+8	tech_katana	5	140	\r
+8	tech_pistol	5	140	\r
+8	plazma_smg	5	140	\r
+8	highItemChip	5	196	\r
+9	desert_hmg	5	168	\r
+9	army_sniper	5	168	\r
+10	spec_assault	5	196	\r
+10	heavy_armorpierce_ammo	10	70	\r
+#end				\r
+				\r
+#factiondrop_ChurchRevelation_tradeItems				\r
+TechLevel	ContentIds	Weight	Points	RewardWeight\r
+1	rail_pistol	10	80	3\r
+1	dark_shotgun	10	150	5\r
+1	vodka	5	70	2\r
+1	wiskey	5	70	2\r
+1	armagnac	5	70	2\r
+1	itemChip	10	150	7\r
+1	rail_pistol_2	10	100	5\r
+2	mre_pack	15	90	4\r
+2	rail_pistol_3	10	120	6\r
+3	dark_shotgun_2	10	100	5\r
+3	shotgun_flechette_ammo	15	60	1\r
+3	sigs_kosmos	10	150	7\r
+4	mediumItemChip	10	150	7\r
+4	dark_shotgun_3	10	120	6\r
+5	church_priest_shirt	10	120	6\r
+5	church_priest_helmet	10	120	6\r
+5	church_priest_pants	10	120	6\r
+5	church_priest_boots	10	120	6\r
+5	plazma_shotgun	10	150	7\r
+6	highItemChip	10	150	7\r
+6	plazma_assault	10	200	8\r
+7	anulator	5	400	11\r
+7	plazma_smg	10	250	9\r
+8	church_power_armor	10	250	9\r
+8	church_power_helmet	10	250	9\r
+8	church_power_pants	10	250	9\r
+8	church_power_boots	10	250	9\r
+9	shotgun_dragon_ammo	10	100	5\r
+9	ChurchItemChip	5	100	9\r
+10	church_shotgun	5	300	10\r
+#end				\r
+				\r
+#factiondrop_CoreWard_units				\r
+TechLevel	ContentIds	Weight	Points	\r
+1	man_lowskills_worker_core man_worker_core cyborg_basic	5	40	\r
+1	man_lowskills_worker_core woman_lowskills_worker_core woman_lowskills_worker_core	5	40	\r
+1	core_miner_man core_miner_woman man_lowskills_worker_core	5	40	\r
+2	cyborg_basic core_miner_man core_miner_woman security_man_cw	10	60	\r
+2	man_medic_core security_man_cw security_woman_cw	10	60	\r
+2	cyborg_basic security_man_cw core_miner_man core_miner_woman	10	60	\r
+3	cyborg_basic stationary_turret security_man_cw security_woman_cw	15	80	\r
+3	cyborg_basic core_heavy_miner_man core_heavy_miner_woman woman_worker_core	15	80	\r
+3	cyborg_basic cyborg_basic security_man_cw woman_worker_core	15	80	\r
+4	stationary_turret man_medic_core security_man_cw security_woman_cw	20	100	\r
+4	man_medic_core woman_medic_core core_heavy_miner_man core_heavy_miner_woman	20	100	\r
+4	stationary_turret security_man_cw man_worker_core woman_worker_core	20	100	\r
+5	heavy_security_man_cw heavy_security_woman_cw core_heavy_miner_man core_heavy_miner_woman	25	120	\r
+5	stationary_turret heavy_security_man_cw heavy_security_woman_cw	25	120	\r
+5	heavy_security_man_cw heavy_security_woman_cw mercury_force_woman	25	120	\r
+6	stationary_turret man_worker_core security_woman_cw man_medic_core	30	140	\r
+6	fire_turret heavy_security_man_cw heavy_security_woman_cw security_man_cw	30	140	\r
+6	mercury_force_man mercury_force_woman heavy_security_woman_cw mercury_force_man	30	140	\r
+7	mercury_force_man security_man_cw security_woman_cw security_woman_cw	40	160	\r
+7	fire_turret security_man_cw heavy_security_woman_cw core_heavy_miner_man core_heavy_miner_woman	40	160	\r
+7	mercury_force_man security_woman_cw man_medic_core	40	160	\r
+8	man_medic_core woman_medic_core mercury_force_woman mercury_force_man	50	180	\r
+8	mercury_force_man mercury_force_woman security_woman_cw	50	180	\r
+8	security_woman_cw man_medic_core mercury_force_woman mercury_force_man	50	180	\r
+9	man_medic_core core_elite_miner_man core_elite_miner_woman security_woman_cw	70	200	\r
+9	fire_turret fire_turret heavy_security_man_cw heavy_security_woman_cw	70	200	\r
+9	core_elite_miner_man core_elite_miner_woman core_elite_miner_man core_elite_miner_woman	70	200	\r
+10	mercury_force_man core_elite_miner_man core_elite_miner_woman mercury_force_woman	100	240	\r
+10	core_elite_miner_man core_elite_miner_woman heavy_security_man_cw heavy_security_woman_cw	100	240	\r
+10	fire_turret mercury_force_man mercury_force_woman	100	240	\r
+#end				\r
+				\r
+#factiondrop_CoreWard_items				\r
+TechLevel	ContentIds	Weight	Points	\r
+1	pistol_basic_ammo	30	28	\r
+1	miner_bolts_ammo	30	14	\r
+1	shotgun_shrapnel_ammo	30	28	\r
+1	bandage	30	28	\r
+1	splint	30	28	\r
+1	sorbent	30	14	\r
+1	rags	30	14	\r
+1	blueSoda	30	14	\r
+1	chocolateBar	30	14	\r
+1	redSoda	30	14	\r
+1	water	30	14	\r
+1	beer	30	28	\r
+1	pmc_shotgun	20	84	\r
+1	dark_pistol	15	84	\r
+1	spec_pistol	20	84	\r
+1	spec_pistol_2	15	84	\r
+1	army_pistol	15	84	\r
+1	army_pistol_2	10	84	\r
+1	bandit_smg	15	84	\r
+1	petrov_pistol	15	56	\r
+1	small_backpack	25	56	\r
+1	medium_backpack	10	84	\r
+1	bandit_vest	20	56	\r
+1	army_vest	15	84	\r
+1	green_tshirt	15	14	\r
+1	green_vest	15	14	\r
+1	blue_tshirt	15	14	\r
+1	singlet_shirt	15	14	\r
+1	balaklava	20	14	\r
+1	blue_pants	15	14	\r
+1	brown_pants	15	14	\r
+1	yellow_pants	15	14	\r
+1	dark_pants	15	14	\r
+1	blue_boots	15	14	\r
+1	broun_boots	15	14	\r
+1	armor_shards	25	28	\r
+1	weapon_shards	25	28	\r
+1	pierce_melee_shards	10	14	\r
+1	powder	25	14	\r
+1	glass	25	14	\r
+1	metal_tread	25	14	\r
+1	tape	25	14	\r
+1	rubber	25	14	\r
+1	explosives	25	14	\r
+1	acid	25	14	\r
+1	gas_ammo	30	14	\r
+1	itemChip	10	112	\r
+2	army_knife	15	42	\r
+2	pmc_club	15	42	\r
+2	pmc_pistol	20	84	\r
+2	pmc_pistol_2	15	84	\r
+2	merkUSB	5	140	\r
+3	pistol_burst_ammo	25	56	\r
+3	shotgun_bullet_ammo	25	56	\r
+3	heavy_basic_ammo	25	56	\r
+3	battery_charge	20	70	\r
+3	classUSB	5	140	\r
+4	cannedMeat	25	42	\r
+4	cannedVeg	25	42	\r
+4	mre_pack	20	70	\r
+4	dark_pistol_2	20	98	\r
+5	spec_shotgun	15	112	\r
+5	rail_pistol	15	112	\r
+5	hatchet	15	56	\r
+5	mediumItemChip	5	140	\r
+6	choppa_axe	10	70	\r
+6	bandit_axe	10	70	\r
+6	rail_pistol_2	10	84	\r
+6	medpack	20	84	\r
+7	morphine	10	70	\r
+7	cannedMeat	15	56	\r
+7	cannedVeg	15	56	\r
+7	machete	5	112	\r
+7	CoreItemChip	3	280	\r
+8	dark_shotgun_2	5	126	\r
+8	tech_katana	5	140	\r
+8	tech_pistol	5	140	\r
+8	plazma_smg	5	140	\r
+8	highItemChip	5	196	\r
+9	desert_hmg	5	168	\r
+9	army_sniper	5	168	\r
+10	spec_assault	5	196	\r
+10	heavy_armorpierce_ammo	10	70	\r
+#end				\r
+				\r
+#factiondrop_CoreWard_tradeItems				\r
+TechLevel	ContentIds	Weight	Points	RewardWeight\r
+1	elite_knife	10	80	2\r
+1	hatchet	10	80	2\r
+1	merkUSB	5	120	4\r
+1	core_nailgun	15	60	1\r
+1	classUSB	5	120	4\r
+1	core_hard_vest	15	100	3\r
+1	core_hard_hat	15	100	3\r
+1	core_hard_pants	15	100	3\r
+2	tech_katana	15	120	4\r
+2	bandit_sawblade	15	120	4\r
+3	itemChip	20	150	5\r
+3	core_nailmachinegun	10	100	3\r
+4	core_disctrower	10	100	3\r
+4	pmc_vest	15	80	2\r
+4	core_flametrower	15	80	2\r
+5	mediumItemChip	15	80	2\r
+5	surgicalKit	5	120	4\r
+5	core_laser	5	120	4\r
+6	highItemChip	5	120	4\r
+6	army_pistol_4	10	120	4\r
+6	rail_pistol_3	10	120	4\r
+7	core_power_armor	10	120	4\r
+7	core_power_helmet	10	120	4\r
+7	core_power_pants	10	120	4\r
+7	core_power_boots	10	120	4\r
+8	regular_launcher	20	160	6\r
+8	army_sniper_2	20	200	7\r
+9	ceramit_vest	20	200	7\r
+10	frag_mine	20	100	3\r
+10	CoreItemChip	10	300	8\r
+#end				\r
+				\r
+#factiondrop_CResistance_units				\r
+TechLevel	ContentIds	Weight	Points	\r
+1	cresist_free_worker_man cresist_free_worker_woman cresist_free_worker_man cresist_free_worker_woman	5	40	\r
+1	cresist_free_worker_man cresist_free_worker_woman man_lowskills_worker_cresisit woman_lowskills_worker_cresist	5	40	\r
+1	man_worker_cresist woman_worker_cresist cresist_free_worker_man cresist_free_worker_woman	5	40	\r
+2	cresist_free_worker_man cresist_free_worker_woman cresist_soldier_man man_medic_cres woman_medic_cres	10	60	\r
+2	cresist_free_worker_man cresist_free_worker_woman man_worker_cresist woman_worker_cresist man_medic_cres woman_medic_cres	10	60	\r
+2	man_medic_cres woman_medic_cres man_worker_cresist woman_lowskills_worker_cresist	10	60	\r
+3	man_lowskills_worker_cresisit woman_lowskills_worker_cresist cresist_soldier_man cresist_soldier_woman	15	80	\r
+3	man_worker_cresist woman_worker_cresist cresist_free_worker_man cresist_free_worker_woman security_man_cres security_woman_cres	15	80	\r
+3	man_medic_cres woman_medic_cres heavy_security_man_cres heavy_security_woman_cres	15	80	\r
+4	cresist_soldier_man cresist_soldier_woman security_man_cres security_woman_cres security_woman_cres	20	100	\r
+4	security_man_cres security_woman_cres man_worker_cresist woman_lowskills_worker_cresist man_worker_cresist woman_worker_cresist	20	100	\r
+4	security_man_cres security_woman_cres heavy_security_man_cres heavy_security_woman_cres	20	100	\r
+5	cresist_soldier_man cresist_soldier_woman man_worker_cresist woman_worker_cresist	25	120	\r
+5	cresist_free_worker_man cresist_free_worker_woman man_worker_cresist woman_worker_cresist mercury_force_man	25	120	\r
+5	cresist_elite_man man_worker_cresist woman_worker_cresist man_worker_cresist woman_worker_cresist	25	120	\r
+6	stationary_turret man_worker_cresist woman_worker_cresist man_worker_cresist woman_worker_cresist	30	140	\r
+6	man_medic_cres cresist_free_worker_man cresist_free_worker_woman cresist_soldier_man cresist_soldier_woman	30	140	\r
+6	heavy_security_man_cres heavy_security_woman_cres security_woman_cres heavy_security_man_cres	30	140	\r
+7	security_man_cres cresist_soldier_man cresist_soldier_woman man_medic_cres	40	160	\r
+7	security_man_cres security_woman_cres man_worker_cresist woman_worker_cresist woman_worker_cresist man_medic_cres	40	160	\r
+7	mercury_force_man mercury_force_woman mercury_force_woman cresist_elite_man	40	160	\r
+8	cresist_elite_man cresist_soldier_man cresist_soldier_woman man_worker_cresist woman_worker_cresist	50	180	\r
+8	mercury_force_man cresist_colnode_man cresist_colnode_woman stationary_turret	50	180	\r
+8	heavy_security_man_cres heavy_security_woman_cres mercury_force_man mercury_force_woman	50	180	\r
+9	cresist_elite_man cresist_elite_woman heavy_security_man_cres heavy_security_woman_cres	70	200	\r
+9	cresist_colnode_man mercury_force_woman stationary_turret	70	200	\r
+9	stationary_turret mercury_force_man mercury_force_woman mercury_force_man mercury_force_woman	70	200	\r
+10	cresist_elite_man cresist_elite_woman stationary_turret cresist_elite_man cresist_elite_woman	100	240	\r
+10	cresist_elite_man cresist_elite_woman cresist_elite_man cresist_elite_woman	100	240	\r
+10	cresist_colnode_man cresist_colnode_woman cresist_elite_man cresist_elite_woman	100	240	\r
+#end				\r
+				\r
+#factiondrop_CResistance_items				\r
+TechLevel	ContentIds	Weight	Points	\r
+1	pistol_basic_ammo	30	28	\r
+1	miner_bolts_ammo	30	14	\r
+1	shotgun_shrapnel_ammo	30	28	\r
+1	bandage	30	28	\r
+1	splint	30	28	\r
+1	sorbent	30	14	\r
+1	rags	30	14	\r
+1	blueSoda	30	14	\r
+1	chocolateBar	30	14	\r
+1	redSoda	30	14	\r
+1	water	30	14	\r
+1	beer	30	28	\r
+1	pmc_shotgun	20	84	\r
+1	dark_pistol	15	84	\r
+1	spec_pistol	20	84	\r
+1	spec_pistol_2	15	84	\r
+1	army_pistol	15	84	\r
+1	army_pistol_2	10	84	\r
+1	bandit_smg	15	84	\r
+1	petrov_pistol	15	56	\r
+1	small_backpack	25	56	\r
+1	medium_backpack	10	84	\r
+1	bandit_vest	20	56	\r
+1	army_vest	15	84	\r
+1	green_tshirt	15	14	\r
+1	green_vest	15	14	\r
+1	blue_tshirt	15	14	\r
+1	singlet_shirt	15	14	\r
+1	balaklava	20	14	\r
+1	blue_pants	15	14	\r
+1	brown_pants	15	14	\r
+1	yellow_pants	15	14	\r
+1	dark_pants	15	14	\r
+1	blue_boots	15	14	\r
+1	broun_boots	15	14	\r
+1	armor_shards	25	28	\r
+1	weapon_shards	25	28	\r
+1	pierce_melee_shards	10	14	\r
+1	powder	25	14	\r
+1	glass	25	14	\r
+1	metal_tread	25	14	\r
+1	tape	25	14	\r
+1	rubber	25	14	\r
+1	explosives	25	14	\r
+1	acid	25	14	\r
+1	gas_ammo	30	14	\r
+2	army_knife	15	42	\r
+2	pmc_club	15	42	\r
+2	pmc_pistol	20	84	\r
+2	pmc_pistol_2	15	84	\r
+3	pistol_burst_ammo	25	56	\r
+3	shotgun_bullet_ammo	25	56	\r
+3	heavy_basic_ammo	25	56	\r
+3	battery_charge	20	70	\r
+4	cannedMeat	25	42	\r
+4	cannedVeg	25	42	\r
+4	mre_pack	20	70	\r
+4	dark_pistol_2	20	98	\r
+5	spec_shotgun	15	112	\r
+5	rail_pistol	15	112	\r
+5	hatchet	15	56	\r
+6	choppa_axe	10	70	\r
+6	bandit_axe	10	70	\r
+6	rail_pistol_2	10	84	\r
+6	medpack	20	84	\r
+7	morphine	10	70	\r
+7	cannedMeat	15	56	\r
+7	cannedVeg	15	56	\r
+7	machete	5	112	\r
+8	dark_shotgun_2	5	126	\r
+8	tech_katana	5	140	\r
+8	tech_pistol	5	140	\r
+8	plazma_smg	5	140	\r
+9	desert_hmg	5	168	\r
+9	army_sniper	5	168	\r
+10	spec_assault	5	196	\r
+10	heavy_armorpierce_ammo	10	70	\r
+#end				\r
+				\r
+#factiondrop_CResistance_tradeItems				\r
+TechLevel	ContentIds	Weight	Points	RewardWeight\r
+1	miner_pistol	10	40	1\r
+1	servo_backpack	10	80	3\r
+1	jackal_armor	15	100	4\r
+1	jackal_helmet	15	100	4\r
+1	jackal_pants	15	100	4\r
+1	jackal_boots	15	100	4\r
+2	stun_grenade	15	100	4\r
+2	miner_mg	10	120	5\r
+2	frag_mine	10	120	5\r
+3	civres_pistol	10	150	6\r
+3	miner_flametrower	10	150	6\r
+3	frag_grenade	10	150	6\r
+4	gas_ammo	15	50	2\r
+4	miner_disctrower	10	150	6\r
+5	sawblade_ammo	15	50	2\r
+5	civres_assault	10	120	5\r
+6	thermal_grenade	10	120	5\r
+6	vodka	10	80	3\r
+6	ceramit_vest	20	150	6\r
+7	civres_armor	20	200	7\r
+7	civres_helmet	20	200	7\r
+7	civres_pants	20	200	7\r
+7	civres_boots	20	200	7\r
+8	nanorobot_grenade	20	200	7\r
+9	plazma_hmg	10	250	8\r
+10	tech_hfg	10	300	9\r
+#end				

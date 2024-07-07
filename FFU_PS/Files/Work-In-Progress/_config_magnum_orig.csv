@@ -1,0 +1,267 @@
+								
+#magnum_default_params								
+Parameter	Value							
+NDSkillChargeBonus	1							
+NDCooldownTimeReduce	30							
+NDRewardPointPerFloor	0							
+NDReputationBonus	0							
+HWSCScanFloorBonus	1							
+HWSCEnemyFloorBonus	0							
+HWSCItemDropScanFloorBonus	0							
+HWSCItemLevelDropBonus	0							
+WPSTWeaponUpgradeSpeed	0							
+WPSTUpgradeWeaponCostReduce	0							
+WPSTUpgradeMoreWeapon	1							
+WPSTAdditGradeUpgrade	0							
+ARMSTUpgradeMoreArmors	1							
+ARMSTUpgradeSpeed	0							
+ARMSTUpgradeArmorCostReduce	0							
+ARMSTAdditGrade	0							
+PRLNProduceSpeed	0							
+PRLNItemSlotCount	1							
+PRLNQueueSlotCount	1							
+PUBGBonusResources	1							
+PUBGBonusFoodMeds	1							
+PUBGBonusAmmoGrenades	1							
+PUBGBonusArmorWeapons	1							
+StoreConstructorDepartment	0							
+STCONDisassemblyItemsSpeed	24							
+STCONMoreCompsOnDisassembly	0							
+STCONAdditMDCompOnDisassembly	0							
+GNEDOperatorsToUpgrade	1							
+GNEDOperatorUpgradeSpeed	0							
+MEMDFfClassesToModify	1							
+MEMDFClassUpgradeSpeed	0							
+MEMDFPerkCountToSwitch	3							
+BTEXCRankUpgradeLimit	1							
+TRCNOperatorsCountLimit	1							
+TRCNPerkUpgradeLevel	2							
+TRDSHShuttleMoveSpeed	96							
+TRDSHShuttleRestoreSpeed	24							
+CGSHSTShuttleInventorySize	1							
+AUCAPChargesCount	1							
+AUCAPCapsuleInventorySize	2							
+AUCAPCapsuleRestoreSpeed	24							
+#end								
+								
+#magnum_perks								
+Id	Enabled	ModuleId	DepartmentId	IsDepartment	PositionInGraph	Parents	Modifiers	UpgradePrice
+news_department	TRUE	navigation		TRUE	2 0		NewsAnalyticsDepartment + 1	communication_relay
+nd_charge_bonus	TRUE	navigation	news_department	FALSE	1 0	news_department	NDSkillChargeBonus + 1	expert_disk circuit_board
+nd_cooldown_time_reduce	TRUE	navigation	news_department	FALSE	3 0	news_department	NDCooldownTimeReduce - 2	communication_relay capacitor
+nd_reward_points_per_floor	TRUE	navigation	news_department	FALSE	1 1	nd_charge_bonus	NDRewardPointPerFloor + 20	ai_module ledgerBook
+nd_reputation_bonus	TRUE	navigation	news_department	FALSE	4 0	nd_cooldown_time_reduce	NDReputationBonus + 3	memory_software microelectronics
+nd_reputation_bonus_2	TRUE	navigation	news_department	FALSE	0 1	nd_reward_points_per_floor	NDReputationBonus + 3	memory_software memory_software microelectronics
+nd_cooldown_time_reduce_2	TRUE	navigation	news_department	FALSE	2 1	nd_reward_points_per_floor	NDCooldownTimeReduce - 2	communication_relay communication_relay capacitor
+nd_charge_bonus_2	TRUE	navigation	news_department	FALSE	4 1	nd_reputation_bonus	NDSkillChargeBonus + 1	expert_disk expert_disk circuit_board
+nd_reward_points_per_floor_2	TRUE	navigation	news_department	FALSE	3 1	nd_cooldown_time_reduce_2 nd_charge_bonus_2	NDRewardPointPerFloor + 20	ai_module ai_module ledgerBook
+hyperwave_scanner_department	TRUE	navigation		TRUE	3 2	nd_reward_points_per_floor_2	HyperWaveScannerDepartment + 1	geoscanner_device
+hwsc_scan_floor_bonus	TRUE	navigation	hyperwave_scanner_department	FALSE	2 2	hyperwave_scanner_department	HWSCScanFloorBonus + 1	geoscanner_device lens
+hwsc_enemy_floor_bonus	TRUE	navigation	hyperwave_scanner_department	FALSE	4 2	hyperwave_scanner_department	HWSCEnemyFloorBonus - 30	quasi_sensor_device transformer
+hwsc_itemdrop_scanfloor_bonus	TRUE	navigation	hyperwave_scanner_department	FALSE	1 2	hwsc_scan_floor_bonus	HWSCItemDropScanFloorBonus + 40	personalKey circuit_board
+hwsc_enemy_floor_bonus_2	TRUE	navigation	hyperwave_scanner_department	FALSE	1 3	hwsc_itemdrop_scanfloor_bonus	HWSCEnemyFloorBonus - 30	quasi_sensor_device quasi_sensor_device transformer
+hwsc_itemdrop_scanfloor_bonus_2	TRUE	navigation	hyperwave_scanner_department	FALSE	2 3	hwsc_enemy_floor_bonus_2	HWSCItemDropScanFloorBonus + 40	personalKey personalKey circuit_board
+hwsc_scan_floor_bonus_2	TRUE	navigation	hyperwave_scanner_department	FALSE	3 3	hwsc_itemdrop_scanfloor_bonus_2	HWSCScanFloorBonus + 1	geoscanner_device geoscanner_device lens
+hwsc_item_tlevel_drop_bonus	TRUE	navigation	hyperwave_scanner_department	FALSE	4 3	hwsc_scan_floor_bonus_2 hwsc_enemy_floor_bonus	HWSCItemLevelDropBonus + 1	electrical_parts_container scientific_equipment
+hwsc_item_tlevel_drop_bonus_2	TRUE	navigation	hyperwave_scanner_department	FALSE	5 3	hwsc_item_tlevel_drop_bonus	HWSCItemLevelDropBonus + 1	electrical_parts_container electrical_parts_container scientific_equipment
+proxycorp_department	FALSE	navigation		TRUE	1 4	hwsc_enemy_floor_bonus_2		
+prco_corp_inventory	FALSE	navigation	proxycorp_department	FALSE	0 4	proxycorp_department		
+prco_corp_strategy	FALSE	navigation	proxycorp_department	FALSE	2 4	proxycorp_department		
+prco_gain_techlevel_bonus	FALSE	navigation	proxycorp_department	FALSE	3 4	prco_corp_strategy		
+prco_item_prodspeed_bonus	FALSE	navigation	proxycorp_department	FALSE	4 4	prco_gain_techlevel_bonus		
+weaponstation_department	TRUE	engineer		TRUE	4 0		WeaponStationDepartment + 1	weapon_container
+armorstation_department	TRUE	engineer		TRUE	1 0		ArmorStationDepartment + 1	armor_container
+augmentstation_department	FALSE	engineer		TRUE	3 3	wpst_addit_grade_upgrade armst_addit_grade_upgrade		
+wpst_weapon_upgrade_speed	TRUE	engineer	weaponstation_department	FALSE	3 0	weaponstation_department	WPSTWeaponUpgradeSpeed - 1	weapon_container explosives
+wpst_upg_weapon_cost_reduce	TRUE	engineer	weaponstation_department	FALSE	5 0	weaponstation_department	WPSTUpgradeWeaponCostReduce - 1	military_parts_container weapon_repair_kit
+wpst_upg_more_weapons	TRUE	engineer	weaponstation_department	FALSE	3 1	wpst_weapon_upgrade_speed	WPSTUpgradeMoreWeapon + 3	robot_parts_container lens
+wpst_upg_weapon_cost_reduce_2	TRUE	engineer	weaponstation_department	FALSE	4 1	wpst_upg_more_weapons	WPSTUpgradeWeaponCostReduce - 1	military_parts_container military_parts_container weapon_repair_kit
+wpst_upg_more_weapons_2	TRUE	engineer	weaponstation_department	FALSE	5 1	wpst_upg_weapon_cost_reduce	WPSTUpgradeMoreWeapon + 6	robot_parts_container robot_parts_container lens
+wpst_weapon_upgrade_speed_2	TRUE	engineer	weaponstation_department	FALSE	4 2	wpst_upg_weapon_cost_reduce_2 wpst_weapon_upgrade_speed_3	WPSTWeaponUpgradeSpeed - 3	weapon_container weapon_container explosives
+wpst_weapon_upgrade_speed_3	TRUE	engineer	weaponstation_department	FALSE	5 2	wpst_upg_more_weapons_2 wpst_weapon_upgrade_speed_2	WPSTWeaponUpgradeSpeed - 6	weapon_container weapon_container weapon_container explosives
+wpst_addit_grade_upgrade	TRUE	engineer	weaponstation_department	FALSE	4 3	wpst_weapon_upgrade_speed_2	WPSTAdditGradeUpgrade + 1	gunbang_magazine ai_module
+armst_upg_more_armors	TRUE	engineer	armorstation_department	FALSE	0 0	armorstation_department	ARMSTUpgradeMoreArmors + 3	robot_parts_container security_clothing_container
+armst_armor_upgrade_speed	TRUE	engineer	armorstation_department	FALSE	2 0	armorstation_department	ARMSTUpgradeSpeed - 1	armor_container metal_tread
+armst_armor_upgrade_speed_2	TRUE	engineer	armorstation_department	FALSE	0 1	armst_upg_more_armors	ARMSTUpgradeSpeed - 3	armor_container armor_container metal_tread
+armst_armor_upgrade_speed_3	TRUE	engineer	armorstation_department	FALSE	2 1	armst_armor_upgrade_speed	ARMSTUpgradeSpeed - 6	armor_container armor_container armor_container metal_tread
+armst_upg_armor_cost_reduce	TRUE	engineer	armorstation_department	FALSE	1 1	armst_armor_upgrade_speed_2 armst_armor_upgrade_speed_3	ARMSTUpgradeArmorCostReduce - 1	military_parts_container ceramite_shards
+armst_upg_more_armors_2	TRUE	engineer	armorstation_department	FALSE	1 2	armst_upg_armor_cost_reduce	ARMSTUpgradeMoreArmors + 6	robot_parts_container robot_parts_container security_clothing_container
+armst_upg_armor_cost_reduce_2	TRUE	engineer	armorstation_department	FALSE	1 3	armst_upg_more_armors_2	ARMSTUpgradeArmorCostReduce - 1	military_parts_container military_parts_container ceramite_shards
+armst_addit_grade_upgrade	TRUE	engineer	armorstation_department	FALSE	2 3	armst_upg_armor_cost_reduce_2	ARMSTAdditGrade + 1	prototype_schematics ai_module
+augst_augmenic_upgrade_speed	FALSE	engineer	augmentstation_department	FALSE	3 4	augmentstation_department		
+augst_upg_augmenic_cost_reduce	FALSE	engineer	augmentstation_department	FALSE	2 4	augst_augmenic_upgrade_speed		
+augst_addit_grade_upgrade	FALSE	engineer	augmentstation_department	FALSE	1 4	augst_upg_augmenic_cost_reduce		
+augst_upg_more_augmentics	FALSE	engineer	augmentstation_department	FALSE	4 4	augst_augmenic_upgrade_speed		
+prodline_department	TRUE	supply		TRUE	2 0		ProdlineDepartment + 1	welding_machine_device
+purge_brigade_department	TRUE	supply		TRUE	4 2	prln_magnum_produce_speed_4	PurgeBrigadeDepartment + 1	weapon_container armor_container
+store_constructor_department	TRUE	supply		TRUE	1 4	pubg_bonus_food_meds_2	StoreConstructorDepartment + 1	construction_equipment
+prln_magnum_produce_speed	TRUE	supply	prodline_department	FALSE	1 0	prodline_department	PRLNProduceSpeed - 1	welding_machine_device
+prln_magnum_produce_speed_2	TRUE	supply	prodline_department	FALSE	3 0	prodline_department	PRLNProduceSpeed - 1	welding_machine_device welding_machine_device
+prln_produce_item_slot_count	TRUE	supply	prodline_department	FALSE	4 0	prln_magnum_produce_speed_2	PRLNItemSlotCount + 1	engineering_parts_container armor_shards
+prln_produce_queue_slot_count	TRUE	supply	prodline_department	FALSE	5 0	prln_produce_item_slot_count	PRLNQueueSlotCount + 2	construction_equipment packaged_industrial_robot
+prln_produce_item_slot_count_2	TRUE	supply	prodline_department	FALSE	1 1	prln_magnum_produce_speed	PRLNItemSlotCount + 1	engineering_parts_container engineering_parts_container armor_shards armor_shards
+prln_magnum_produce_speed_3	TRUE	supply	prodline_department	FALSE	2 1	prln_produce_item_slot_count_2	PRLNProduceSpeed - 1	welding_machine_device welding_machine_device welding_machine_device
+prln_produce_item_slot_count_3	TRUE	supply	prodline_department	FALSE	3 1	prln_magnum_produce_speed_3	PRLNItemSlotCount + 1	engineering_parts_container engineering_parts_container engineering_parts_container armor_shards armor_shards armor_shards
+prln_magnum_produce_speed_4	TRUE	supply	prodline_department	FALSE	4 1	prln_produce_item_slot_count_3 prln_produce_item_slot_count	PRLNProduceSpeed - 1	welding_machine_device welding_machine_device welding_machine_device welding_machine_device
+pubg_bonus_resources	TRUE	supply	purge_brigade_department	FALSE	3 2	purge_brigade_department	PUBGBonusResources + 1	worker_clothing_container tool_container
+pubg_bonus_food_meds	TRUE	supply	purge_brigade_department	FALSE	2 2	pubg_bonus_resources	PUBGBonusFoodMeds + 1	worker_clothing_container tool_container
+pubg_bonus_ammo_grenades	TRUE	supply	purge_brigade_department	FALSE	1 2	pubg_bonus_food_meds	PUBGBonusAmmoGrenades + 1	worker_clothing_container weapon_container
+pubg_bonus_armors_weapons	TRUE	supply	purge_brigade_department	FALSE	0 2	pubg_bonus_ammo_grenades	PUBGBonusArmorWeapons + 1	armor_container weapon_container
+pubg_bonus_food_meds_2	TRUE	supply	purge_brigade_department	FALSE	1 3	pubg_bonus_ammo_grenades pubg_bonus_resources_2	PUBGBonusFoodMeds + 1	worker_clothing_container tool_container tool_container
+pubg_bonus_resources_2	TRUE	supply	purge_brigade_department	FALSE	2 3	pubg_bonus_armors_weapons_2	PUBGBonusResources + 1	worker_clothing_container tool_container tool_container
+pubg_bonus_armors_weapons_2	TRUE	supply	purge_brigade_department	FALSE	3 3	pubg_bonus_ammo_grenades_2	PUBGBonusArmorWeapons + 1	armor_container armor_container weapon_container weapon_container
+pubg_bonus_ammo_grenades_2	TRUE	supply	purge_brigade_department	FALSE	4 3	purge_brigade_department	PUBGBonusAmmoGrenades + 1	worker_clothing_container weapon_container weapon_container
+stcon_disassembly_items_speed	TRUE	supply	store_constructor_department	FALSE	0 4	store_constructor_department	STCONDisassemblyItemsSpeed - 1	scientist_clothing_container
+stcon_more_comps_on_disasm	TRUE	supply	store_constructor_department	FALSE	2 4	store_constructor_department	STCONMoreCompsOnDisassembly + 1	hydraulic_pump
+stcon_disassembly_items_speed_2	TRUE	supply	store_constructor_department	FALSE	3 4	stcon_more_comps_on_disasm	STCONDisassemblyItemsSpeed - 1	scientist_clothing_container scientist_clothing_container
+stcon_more_comps_on_disasm_2	TRUE	supply	store_constructor_department	FALSE	4 4	stcon_disassembly_items_speed_2	STCONMoreCompsOnDisassembly + 1	hydraulic_pump hydraulic_pump
+stcon_addit_rnd_comp_on_disasm	TRUE	supply	store_constructor_department	FALSE	5 4	stcon_more_comps_on_disasm_2	STCONAdditMDCompOnDisassembly + 1	construction_equipment construction_equipment construction_equipment
+memdefrag_department	TRUE	research		TRUE	3 0		MemdefragDepartment + 1	scientific_equipment
+morphanal_department	FALSE	research		TRUE	1 2	memdf_perks_count_to_switch	MorphanalDepartment + 1	
+bramengine_department	FALSE	research		TRUE	4 4	memdf_classes_to_modify_3	BramengineDepartment + 1	
+memdf_classes_to_modify	TRUE	research	memdefrag_department	FALSE	2 0	memdefrag_department	MEMDFfClassesToModify + 3	research_disk acid acid
+memdf_class_upgrade_speed	TRUE	research	memdefrag_department	FALSE	1 0	memdf_classes_to_modify	MEMDFClassUpgradeSpeed - 1	scientist_clothing_container
+memdf_class_upgrade_speed_2	TRUE	research	memdefrag_department	FALSE	2 1	memdf_classes_to_modify	MEMDFClassUpgradeSpeed - 4	scientist_clothing_container scientist_clothing_container
+memdf_perks_count_to_switch	TRUE	research	memdefrag_department	FALSE	1 1	memdf_class_upgrade_speed	MEMDFPerkCountToSwitch + 1	scientific_equipment chemical_analyzer
+memdf_perks_count_to_switch_2	TRUE	research	memdefrag_department	FALSE	3 1	memdf_class_upgrade_speed_2	MEMDFPerkCountToSwitch + 2	scientific_equipment scientific_equipment chemical_analyzer
+memdf_classes_to_modify_2	TRUE	research	memdefrag_department	FALSE	3 2	memdf_perks_count_to_switch_2	MEMDFfClassesToModify + 6	research_disk research_disk acid acid acid
+memdf_perks_count_to_switch_3	TRUE	research	memdefrag_department	FALSE	3 3	memdf_classes_to_modify_2	MEMDFPerkCountToSwitch + 2	scientific_equipment scientific_equipment scientific_equipment chemical_analyzer
+memdf_classes_to_modify_3	TRUE	research	memdefrag_department	FALSE	4 3	memdf_perks_count_to_switch_3	MEMDFfClassesToModify + 1	research_disk research_disk research_disk acid acid acid acid
+moranl_pacts_to_modify	FALSE	research	morphanal_department	FALSE	0 2	morphanal_department	MORANIPactsToModify + 1	
+moranl_pact_upgrade_speed	FALSE	research	morphanal_department	FALSE	2 2	morphanal_department	MORANIPactUpgradeSpeed + 1	
+moranl_pact_upgrade_speed_2	FALSE	research	morphanal_department	FALSE	0 3	moranl_pacts_to_modify moranl_pacts_to_modify_2	MORANIPactUpgradeSpeed + 1	
+moranl_pacts_to_modify_2	FALSE	research	morphanal_department	FALSE	1 3	moranl_pacts_to_modify_3	MORANIPactsToModify + 1	
+moranl_pacts_to_modify_3	FALSE	research	morphanal_department	FALSE	2 3	moranl_pact_upgrade_speed	MORANIPactsToModify + 1	
+moranl_pact_addit_props	FALSE	research	morphanal_department	FALSE	0 4	moranl_pact_upgrade_speed_2	MORANIPactAdditProp + 1	
+breng_reduce_reload_duration	FALSE	research	bramengine_department	FALSE	5 4	bramengine_department	BRENGReduceReload + 1	
+breng_reduce_reload_duration_2	FALSE	research	bramengine_department	FALSE	3 4	bramengine_department	BRENGReduceReload + 1	
+breng_reduce_reload_duration_3	FALSE	research	bramengine_department	FALSE	2 4	breng_reduce_reload_duration_2	BRENGReduceReload + 1	
+breng_reduce_reload_duration_4	FALSE	research	bramengine_department	FALSE	1 4	breng_reduce_reload_duration_3	BRENGReduceReload + 1	
+autonomcapsule_department	TRUE	hangar		TRUE	1 0		AutonomCapsuleDepartment + 1	management_unit
+cargoshuttle_department	TRUE	hangar		TRUE	4 1	aucap_capsule_inventory_size_2 aucap_capsule_charges_count	CargoShuttleDepartment + 1	ceramite_shards ceramite_shards armor_shards armor_shards
+tradeshuttle_department	TRUE	hangar		TRUE	3 3	cgsht_shuttle_inventory_size_2	TradeShuttleDepartment + 1	memory_software
+aucap_capsule_inventory_size	TRUE	hangar	autonomcapsule_department	FALSE	2 0	autonomcapsule_department	AUCAPCapsuleInventorySize + 2	transformer
+aucap_capsule_restore_speed	TRUE	hangar	autonomcapsule_department	FALSE	3 0	aucap_capsule_inventory_size	AUCAPCapsuleRestoreSpeed - 1	capacitor
+aucap_capsule_inventory_size_2	TRUE	hangar	autonomcapsule_department	FALSE	4 0	aucap_capsule_restore_speed	AUCAPCapsuleInventorySize + 2	transformer transformer
+aucap_capsule_inventory_size_3	TRUE	hangar	autonomcapsule_department	FALSE	1 1	autonomcapsule_department	AUCAPCapsuleInventorySize + 2	transformer transformer transformer
+aucap_capsule_restore_speed_2	TRUE	hangar	autonomcapsule_department	FALSE	2 1	aucap_capsule_inventory_size_3	AUCAPCapsuleRestoreSpeed - 1	capacitor capacitor
+aucap_capsule_charges_count	TRUE	hangar	autonomcapsule_department	FALSE	3 1	aucap_capsule_restore_speed_2	AUCAPChargesCount + 1	nanorobot_grenade
+cgsht_shuttle_inventory_size	TRUE	hangar	cargoshuttle_department	FALSE	4 2	cargoshuttle_department	CGSHSTShuttleInventorySize + 1	ceramite_shards microelectronics capacitor
+cgsht_shuttle_inventory_size_2	TRUE	hangar	cargoshuttle_department	FALSE	3 2	cgsht_shuttle_inventory_size	CGSHSTShuttleInventorySize + 2	ceramite_shards ceramite_shards microelectronics microelectronics capacitor capacitor
+trdsh_shuttle_move_speed	TRUE	hangar	tradeshuttle_department	FALSE	4 3	tradeshuttle_department	TRDSHShuttleMoveSpeed - 1	darknet_unit precious_metals
+trdsh_value_of_shuttle_items	TRUE	hangar	tradeshuttle_department	FALSE	4 4	trdsh_shuttle_move_speed	TRDSHValueOfShuttleItems + 1	ledgerBook darknet_unit
+trdsh_shuttle_restore_speed	TRUE	hangar	tradeshuttle_department	FALSE	2 3	tradeshuttle_department	TRDSHShuttleRestoreSpeed - 1	memory_software
+trdsh_shuttle_move_speed_2	TRUE	hangar	tradeshuttle_department	FALSE	1 3	trdsh_shuttle_restore_speed	TRDSHShuttleMoveSpeed - 1	darknet_unit darknet_unit precious_metals
+trdsh_shuttle_restore_speed_2	TRUE	hangar	tradeshuttle_department	FALSE	1 4	trdsh_shuttle_move_speed_2	TRDSHShuttleRestoreSpeed - 1	memory_software memory_software
+trdsh_value_of_shuttle_items_2	TRUE	hangar	tradeshuttle_department	FALSE	0 4	trdsh_shuttle_restore_speed_2	TRDSHValueOfShuttleItems + 1	ledgerBook darknet_unit ledgerBook darknet_unit
+trdsh_shuttle_move_speed_3	TRUE	hangar	tradeshuttle_department	FALSE	2 4	trdsh_shuttle_restore_speed_2	TRDSHShuttleMoveSpeed - 1	darknet_unit darknet_unit darknet_unit precious_metals
+genomeeditor_department	TRUE	cloning		TRUE	3 0		GenomeEditorDepartment + 1	medical_equipment
+trainingcenter_department	TRUE	cloning		TRUE	0 1	gned_operator_upgrade_speed_2	TrainingCenterDepartment + 1	stationary_turret
+battleexpcond_department	TRUE	cloning		TRUE	3 4	gned_operators_to_upgrade_4	BattleExpCondDepartment + 1	military_unit
+gned_operator_upgrade_speed	TRUE	cloning	genomeeditor_department	FALSE	2 0	genomeeditor_department	GNEDOperatorUpgradeSpeed - 1	organsBox
+gned_operators_to_upgrade	TRUE	cloning	genomeeditor_department	FALSE	1 0	gned_operator_upgrade_speed	GNEDOperatorsToUpgrade + 1	medical_equipment
+gned_operator_upgrade_speed_2	TRUE	cloning	genomeeditor_department	FALSE	1 1	gned_operators_to_upgrade	GNEDOperatorUpgradeSpeed - 3	organsBox organsBox
+gned_operators_to_upgrade_2	TRUE	cloning	genomeeditor_department	FALSE	3 1	genomeeditor_department	GNEDOperatorsToUpgrade + 3	medical_equipment medical_equipment
+gned_operator_upgrade_speed_3	TRUE	cloning	genomeeditor_department	FALSE	4 1	gned_operators_to_upgrade_2	GNEDOperatorUpgradeSpeed - 4	organsBox organsBox morphine morphine
+gned_operators_to_upgrade_3	TRUE	cloning	genomeeditor_department	FALSE	4 2	gned_operator_upgrade_speed_3	GNEDOperatorsToUpgrade + 4	medical_equipment medical_equipment biomass_tank biomass_tank
+gned_operator_upgrade_speed_4	TRUE	cloning	genomeeditor_department	FALSE	4 3	gned_operators_to_upgrade_3	GNEDOperatorUpgradeSpeed - 4	organsBox organsBox morphine morphine trowable_heart trowable_heart
+gned_operators_to_upgrade_4	TRUE	cloning	genomeeditor_department	FALSE	3 3	gned_operator_upgrade_speed_4	GNEDOperatorsToUpgrade + 6	medical_equipment medical_equipment biomass_tank biomass_tank morphine morphine
+trcn_operators_count_limit	TRUE	cloning	trainingcenter_department	FALSE	0 2	trainingcenter_department	TRCNOperatorsCountLimit + 1	gunbang_magazine
+trcn_operators_count_limit_2	TRUE	cloning	trainingcenter_department	FALSE	0 3	trcn_operators_count_limit	TRCNOperatorsCountLimit + 3	gunbang_magazine gunbang_magazine surgicalKit
+trcn_perk_upgrade_level_limit	TRUE	cloning	trainingcenter_department	FALSE	1 2	trcn_operators_count_limit	TRCNPerkUpgradeLevel + 1	drug_cargo
+trcn_perk_upgrade_level_limit_2	TRUE	cloning	trainingcenter_department	FALSE	1 3	trcn_perk_upgrade_level_limit	TRCNPerkUpgradeLevel + 1	drug_cargo drug_cargo entertainment_software
+btexc_rank_uprade_limit	TRUE	cloning	battleexpcond_department	FALSE	2 4	battleexpcond_department	BTEXCRankUpgradeLimit + 1	military_unit
+btexc_rank_uprade_limit_2	TRUE	cloning	battleexpcond_department	FALSE	1 4	btexc_rank_uprade_limit	BTEXCRankUpgradeLimit + 1	military_unit military_unit
+btexc_rank_uprade_limit_3	TRUE	cloning	battleexpcond_department	FALSE	0 4	btexc_rank_uprade_limit_2	BTEXCRankUpgradeLimit + 2	military_unit military_unit military_unit
+btexc_kill_count_to_ugprade	TRUE	cloning	battleexpcond_department	FALSE	4 4	battleexpcond_department	BTEXCKillCountToUpgrade - 10	automap personalKey
+btexc_kill_count_to_ugprade_2	TRUE	cloning	battleexpcond_department	FALSE	5 4	btexc_kill_count_to_ugprade	BTEXCKillCountToUpgrade - 30	automap automap personalKey management_unit
+#end								
+								
+#magnum_projects_params								
+Id	ParameterName	ParameterType	ProjectType	ViewType	MinValue	MaxValue	Step	TooltipTag
+rangeweapon_damage	Damage	Damage	RangeWeapon	Damage	1	999	2	ui.property.Damage
+rangeweapon_crit_damage	Damage	CritDamage	RangeWeapon	Percent	1	999	0.01	ui.property.CritDamage
+rangeweapon_max_durability	MaxDurability	Integer	RangeWeapon	Integer	1	999	5	ui.property.Condition
+rangeweapon_accuracy	BonusAccuracy	WeaponAccuracy	RangeWeapon	Percent	0	1	0.01	ui.property.Accuracy
+rangeweapon_scatter_angle	BonusScatterAngle	WeaponScatterAngle	RangeWeapon	Angle	0	180	-0.1	ui.property.ScatterAngle
+rangeweapon_weight	Weight	Float	RangeWeapon	Float0_0	0.1	999	-0.1	ui.property.ItemWeight
+rangeweapon_reload_duration	ReloadDuration	Integer	RangeWeapon	Integer	1	999	-1	ui.property.ReloadDuration
+rangeweapon_magazine_capacity	MagazineCapacity	Integer	RangeWeapon	Integer	1	999	1	ui.property.AmmoCapacity
+rangeweapon_special_ability	SpecialAbility	RangeWeaponTrait	RangeWeapon	None				
+meleeweapon_damage	Damage	Damage	MeleeWeapon	Damage	1	999	2	ui.property.MeleeDamage
+meleeweapon_crit_damage	Damage	CritDamage	MeleeWeapon	Percent	1	999	0.01	ui.property.CritDamage
+meleeweapon_max_durability	MaxDurability	Integer	MeleeWeapon	Integer	1	999	5	ui.property.Condition
+meleeweapon_accuracy	BonusAccuracy	WeaponAccuracy	MeleeWeapon	Percent	0	1	0.01	ui.property.MeleeAccuracy
+meleeweapon_weight	Weight	Float	MeleeWeapon	Float0_0	0.1	999	-0.1	ui.property.ItemWeight
+meleeweapon_reload_duration	ReloadDuration	Integer	MeleeWeapon	Integer	1	999	-1	ui.property.ReloadDuration
+meleeweapon_magazine_capacity	MagazineCapacity	Integer	MeleeWeapon	Integer	1	999	1	ui.property.AmmoCapacity
+meleeweapon_special_ability	SpecialAbility	MeleeWeaponTrait	MeleeWeapon	None				
+helmet_resist_blunt	ResistSheet	ResistBlunt	Helmet	Integer	0	999	2	ui.property.ResistBlunt
+helmet_resist_pierce	ResistSheet	ResistPierce	Helmet	Integer	0	999	2	ui.property.ResistPiercing
+helmet_resist_lacer	ResistSheet	ResistLacer	Helmet	Integer	0	999	2	ui.property.ResistLacer
+helmet_resist_fire	ResistSheet	ResistFire	Helmet	Integer	0	999	2	ui.property.ResistFire
+helmet_resist_beam	ResistSheet	ResistBeam	Helmet	Integer	0	999	2	ui.property.ResistRadiation
+helmet_resist_shock	ResistSheet	ResistShock	Helmet	Integer	0	999	2	ui.property.ResistShock
+helmet_resist_poison	ResistSheet	ResistPoison	Helmet	Integer	0	999	2	ui.property.ResistPoison
+helmet_resist_cold	ResistSheet	ResistCold	Helmet	Integer	0	999	2	ui.property.ResistCold
+helmet_max_durability	MaxDurability	Integer	Helmet	Integer	1	999	5	ui.property.Condition
+helmet_weight	Weight	Float	Helmet	Float0_0	0.1	999	-0.1	ui.property.ItemWeight
+armor_resist_blunt	ResistSheet	ResistBlunt	Armor	Integer	0	999	2	ui.property.ResistBlunt
+armor_resist_pierce	ResistSheet	ResistPierce	Armor	Integer	0	999	2	ui.property.ResistPiercing
+armor_resist_lacer	ResistSheet	ResistLacer	Armor	Integer	0	999	2	ui.property.ResistLacer
+armor_resist_fire	ResistSheet	ResistFire	Armor	Integer	0	999	2	ui.property.ResistFire
+armor_resist_beam	ResistSheet	ResistBeam	Armor	Integer	0	999	2	ui.property.ResistRadiation
+armor_resist_shock	ResistSheet	ResistShock	Armor	Integer	0	999	2	ui.property.ResistShock
+armor_resist_poison	ResistSheet	ResistPoison	Armor	Integer	0	999	2	ui.property.ResistPoison
+armor_resist_cold	ResistSheet	ResistCold	Armor	Integer	0	999	2	ui.property.ResistCold
+armor_max_durability	MaxDurability	Integer	Armor	Integer	1	999	5	ui.property.Condition
+armor_weight	Weight	Float	Armor	Float0_0	0.1	999	-0.1	ui.property.ItemWeight
+leggings_resist_blunt	ResistSheet	ResistBlunt	Leggings	Integer	0	999	2	ui.property.ResistBlunt
+leggings_resist_pierce	ResistSheet	ResistPierce	Leggings	Integer	0	999	2	ui.property.ResistPiercing
+leggings_resist_lacer	ResistSheet	ResistLacer	Leggings	Integer	0	999	2	ui.property.ResistLacer
+leggings_resist_fire	ResistSheet	ResistFire	Leggings	Integer	0	999	2	ui.property.ResistFire
+leggings_resist_beam	ResistSheet	ResistBeam	Leggings	Integer	0	999	2	ui.property.ResistRadiation
+leggings_resist_shock	ResistSheet	ResistShock	Leggings	Integer	0	999	2	ui.property.ResistShock
+leggings_resist_poison	ResistSheet	ResistPoison	Leggings	Integer	0	999	2	ui.property.ResistPoison
+leggings_resist_cold	ResistSheet	ResistCold	Leggings	Integer	0	999	2	ui.property.ResistCold
+leggings_max_durability	MaxDurability	Integer	Leggings	Integer	1	999	5	ui.property.Condition
+leggings_weight	Weight	Float	Leggings	Float0_0	0.1	999	-0.1	ui.property.ItemWeight
+boots_resist_blunt	ResistSheet	ResistBlunt	Boots	Integer	0	999	2	ui.property.ResistBlunt
+boots_resist_pierce	ResistSheet	ResistPierce	Boots	Integer	0	999	2	ui.property.ResistPiercing
+boots_resist_lacer	ResistSheet	ResistLacer	Boots	Integer	0	999	2	ui.property.ResistLacer
+boots_resist_fire	ResistSheet	ResistFire	Boots	Integer	0	999	2	ui.property.ResistFire
+boots_resist_beam	ResistSheet	ResistBeam	Boots	Integer	0	999	2	ui.property.ResistRadiation
+boots_resist_shock	ResistSheet	ResistShock	Boots	Integer	0	999	2	ui.property.ResistShock
+boots_resist_poison	ResistSheet	ResistPoison	Boots	Integer	0	999	2	ui.property.ResistPoison
+boots_resist_cold	ResistSheet	ResistCold	Boots	Integer	0	999	2	ui.property.ResistCold
+boots_max_durability	MaxDurability	Integer	Boots	Integer	1	999	5	ui.property.Condition
+boots_weight	Weight	Float	Boots	Float0_0	0.1	999	-0.1	ui.property.ItemWeight
+mercenary_health	Health	Integer	Mercenary	Integer		999	5	ui.property.Health
+mercenary_pain_threshold	PainThresholdLimit	Integer	Mercenary	Integer	1	999	1	ui.property.MaxPainThreshold
+mercenary_starvation	StarvationLimit	Integer	Mercenary	Integer	1	9999	20	ui.property.StarvationLimit
+mercenary_talent	TalentPerkId	Talent	Mercenary	None				
+mercenary_dodge	Dodge	Float	Mercenary	Percent	0	1	0.01	ui.property.DodgeChance
+mercenary_los	Los	Integer	Mercenary	Integer	1	10	1	ui.property.SightRange
+mercenary_range_accuracy	RangeAccuracy	Float	Mercenary	Percent	0	1	0.01	ui.property.Accuracy
+mercenary_melee_accuracy	MeleeAccuracy	Float	Mercenary	Percent	0	1	0.01	ui.property.MeleeAccuracy
+mercenary_melee_damage	MeleeDamage	Damage	Mercenary	Damage		999	2	ui.property.MeleeDamage
+mercenary_melee_critdamage	MeleeDamage	CritDamage	Mercenary	Percent		999	0.01	ui.property.CritDamage
+mercenaryclass_perk0	PerkIds	Perk0	MercenaryClass	None				
+mercenaryclass_perk1	PerkIds	Perk1	MercenaryClass	None				
+mercenaryclass_perk2	PerkIds	Perk2	MercenaryClass	None				
+mercenaryclass_perk3	PerkIds	Perk3	MercenaryClass	None				
+mercenaryclass_perk4	PerkIds	Perk4	MercenaryClass	None				
+mercenaryclass_perk5	PerkIds	Perk5	MercenaryClass	None				
+#end								
+								
+#magnum_projects_prices								
+ProjectType	ItemsGrades							
+RangeWeapon	weapon_shards 1 lens 5 itemChip 25							
+MeleeWeapon	blunt_melee_shards 1 pierce_melee_shards 5 itemChip 25							
+Helmet	rubber 1 armor_shards 12 itemChip 25							
+Armor	rubber 1 armor_shards 12 itemChip 25							
+Leggings	rubber 1 armor_shards 12 itemChip 25							
+Boots	rubber 1 armor_shards 12 itemChip 25							
+Mercenary	merkUSB 1 organsBox 3 biomass_tank 6 medical_components 21							
+MercenaryClass	classUSB 1 memory_software 3 research_disk 6 ai_module 21							
+#end								
