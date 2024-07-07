@@ -193,11 +193,16 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<ItemExpireRecord>("itemexpire", delegate (ItemExpireRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, itemexpire: {r.Id}");
-                if (Data.ItemExpire.GetRecord(r.Id) != null) {
-                    FieldInfo refInfo = typeof(ConfigRecordCollection<ItemExpireRecord>).GetField("_records", BindingFlags.NonPublic | BindingFlags.Instance);
-                    var records = (Dictionary<string, ItemExpireRecord>)refInfo.GetValue(Data.ItemExpire);
-                    records[r.Id] = r;
-                } else Data.ItemExpire.AddRecord(r.Id, r);
+                if (r.Id.StartsWith("--")) {
+                    string refId = r.Id.Replace("--", string.Empty);
+                    if (Data.ItemExpire.GetRecord(refId) != null) Data.ItemExpire.RemoveRecord(refId);
+                } else {
+                    if (Data.ItemExpire.GetRecord(r.Id) != null) {
+                        FieldInfo refInfo = typeof(ConfigRecordCollection<ItemExpireRecord>).GetField("_records", BindingFlags.NonPublic | BindingFlags.Instance);
+                        var records = (Dictionary<string, ItemExpireRecord>)refInfo.GetValue(Data.ItemExpire);
+                        records[r.Id] = r;
+                    } else Data.ItemExpire.AddRecord(r.Id, r);
+                }
             }));
             _cfgLoader.AddParser(new TableParser<WoundSlotRecord>("woundslots", delegate (WoundSlotRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, woundslots: {r.Id}");
@@ -269,8 +274,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<AmmoRecord>("ammo", delegate (AmmoRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, ammo: {r.Id}");
-                bool isReference = r.Id.Contains("*");
-                if (r.Id.Contains("*")) r.TrimId();
+                bool isReference = r.Id.StartsWith("*");
+                if (isReference) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     FieldInfo refInfo = typeof(ConfigRecordCollection<BasePickupItemRecord>).GetField("_records", BindingFlags.NonPublic | BindingFlags.Instance);
                     var records = (Dictionary<string, BasePickupItemRecord>)refInfo.GetValue(Data.Items);
@@ -289,8 +294,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<WeaponRecord>("meleeweapons", delegate (WeaponRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, meleeweapons: {r.Id}");
-                bool isReference = r.Id.Contains("*");
-                if (r.Id.Contains("*")) r.TrimId();
+                bool isReference = r.Id.StartsWith("*");
+                if (isReference) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     FieldInfo refInfo = typeof(ConfigRecordCollection<BasePickupItemRecord>).GetField("_records", BindingFlags.NonPublic | BindingFlags.Instance);
                     var records = (Dictionary<string, BasePickupItemRecord>)refInfo.GetValue(Data.Items);
@@ -313,8 +318,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<WeaponRecord>("rangeweapons", delegate (WeaponRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, rangeweapons: {r.Id}");
-                bool isReference = r.Id.Contains("*");
-                if (r.Id.Contains("*")) r.TrimId();
+                bool isReference = r.Id.StartsWith("*");
+                if (isReference) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     FieldInfo refInfo = typeof(ConfigRecordCollection<BasePickupItemRecord>).GetField("_records", BindingFlags.NonPublic | BindingFlags.Instance);
                     var records = (Dictionary<string, BasePickupItemRecord>)refInfo.GetValue(Data.Items);
@@ -334,8 +339,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<MedkitRecord>("medkits", delegate (MedkitRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, medkits: {r.Id}");
-                bool isReference = r.Id.Contains("*");
-                if (r.Id.Contains("*")) r.TrimId();
+                bool isReference = r.Id.StartsWith("*");
+                if (isReference) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     FieldInfo refInfo = typeof(ConfigRecordCollection<BasePickupItemRecord>).GetField("_records", BindingFlags.NonPublic | BindingFlags.Instance);
                     var records = (Dictionary<string, BasePickupItemRecord>)refInfo.GetValue(Data.Items);
@@ -354,8 +359,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<FoodRecord>("food", delegate (FoodRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, food: {r.Id}");
-                bool isReference = r.Id.Contains("*");
-                if (r.Id.Contains("*")) r.TrimId();
+                bool isReference = r.Id.StartsWith("*");
+                if (isReference) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     FieldInfo refInfo = typeof(ConfigRecordCollection<BasePickupItemRecord>).GetField("_records", BindingFlags.NonPublic | BindingFlags.Instance);
                     var records = (Dictionary<string, BasePickupItemRecord>)refInfo.GetValue(Data.Items);
@@ -374,8 +379,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<BackpackRecord>("backpacks", delegate (BackpackRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, backpacks: {r.Id}");
-                bool isReference = r.Id.Contains("*");
-                if (r.Id.Contains("*")) r.TrimId();
+                bool isReference = r.Id.StartsWith("*");
+                if (isReference) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     FieldInfo refInfo = typeof(ConfigRecordCollection<BasePickupItemRecord>).GetField("_records", BindingFlags.NonPublic | BindingFlags.Instance);
                     var records = (Dictionary<string, BasePickupItemRecord>)refInfo.GetValue(Data.Items);
@@ -394,8 +399,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<VestRecord>("vests", delegate (VestRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, vests: {r.Id}");
-                bool isReference = r.Id.Contains("*");
-                if (r.Id.Contains("*")) r.TrimId();
+                bool isReference = r.Id.StartsWith("*");
+                if (isReference) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     FieldInfo refInfo = typeof(ConfigRecordCollection<BasePickupItemRecord>).GetField("_records", BindingFlags.NonPublic | BindingFlags.Instance);
                     var records = (Dictionary<string, BasePickupItemRecord>)refInfo.GetValue(Data.Items);
@@ -414,8 +419,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<HelmetRecord>("helmets", delegate (HelmetRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, helmets: {r.Id}");
-                bool isReference = r.Id.Contains("*");
-                if (r.Id.Contains("*")) r.TrimId();
+                bool isReference = r.Id.StartsWith("*");
+                if (isReference) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     FieldInfo refInfo = typeof(ConfigRecordCollection<BasePickupItemRecord>).GetField("_records", BindingFlags.NonPublic | BindingFlags.Instance);
                     var records = (Dictionary<string, BasePickupItemRecord>)refInfo.GetValue(Data.Items);
@@ -434,8 +439,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<ArmorRecord>("armors", delegate (ArmorRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, armors: {r.Id}");
-                bool isReference = r.Id.Contains("*");
-                if (r.Id.Contains("*")) r.TrimId();
+                bool isReference = r.Id.StartsWith("*");
+                if (isReference) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     FieldInfo refInfo = typeof(ConfigRecordCollection<BasePickupItemRecord>).GetField("_records", BindingFlags.NonPublic | BindingFlags.Instance);
                     var records = (Dictionary<string, BasePickupItemRecord>)refInfo.GetValue(Data.Items);
@@ -454,8 +459,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<LeggingsRecord>("leggings", delegate (LeggingsRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, leggings: {r.Id}");
-                bool isReference = r.Id.Contains("*");
-                if (r.Id.Contains("*")) r.TrimId();
+                bool isReference = r.Id.StartsWith("*");
+                if (isReference) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     FieldInfo refInfo = typeof(ConfigRecordCollection<BasePickupItemRecord>).GetField("_records", BindingFlags.NonPublic | BindingFlags.Instance);
                     var records = (Dictionary<string, BasePickupItemRecord>)refInfo.GetValue(Data.Items);
@@ -474,8 +479,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<BootsRecord>("boots", delegate (BootsRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, boots: {r.Id}");
-                bool isReference = r.Id.Contains("*");
-                if (r.Id.Contains("*")) r.TrimId();
+                bool isReference = r.Id.StartsWith("*");
+                if (isReference) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     FieldInfo refInfo = typeof(ConfigRecordCollection<BasePickupItemRecord>).GetField("_records", BindingFlags.NonPublic | BindingFlags.Instance);
                     var records = (Dictionary<string, BasePickupItemRecord>)refInfo.GetValue(Data.Items);
@@ -494,8 +499,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<RepairRecord>("repairs", delegate (RepairRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, repairs: {r.Id}");
-                bool isReference = r.Id.Contains("*");
-                if (r.Id.Contains("*")) r.TrimId();
+                bool isReference = r.Id.StartsWith("*");
+                if (isReference) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     FieldInfo refInfo = typeof(ConfigRecordCollection<BasePickupItemRecord>).GetField("_records", BindingFlags.NonPublic | BindingFlags.Instance);
                     var records = (Dictionary<string, BasePickupItemRecord>)refInfo.GetValue(Data.Items);
@@ -514,8 +519,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<SkullRecord>("skulls", delegate (SkullRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, skulls: {r.Id}");
-                bool isReference = r.Id.Contains("*");
-                if (r.Id.Contains("*")) r.TrimId();
+                bool isReference = r.Id.StartsWith("*");
+                if (isReference) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     FieldInfo refInfo = typeof(ConfigRecordCollection<BasePickupItemRecord>).GetField("_records", BindingFlags.NonPublic | BindingFlags.Instance);
                     var records = (Dictionary<string, BasePickupItemRecord>)refInfo.GetValue(Data.Items);
@@ -534,8 +539,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<QuasiArtifactRecord>("quasiartifacts", delegate (QuasiArtifactRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, quasiartifacts: {r.Id}");
-                bool isReference = r.Id.Contains("*");
-                if (r.Id.Contains("*")) r.TrimId();
+                bool isReference = r.Id.StartsWith("*");
+                if (isReference) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     FieldInfo refInfo = typeof(ConfigRecordCollection<BasePickupItemRecord>).GetField("_records", BindingFlags.NonPublic | BindingFlags.Instance);
                     var records = (Dictionary<string, BasePickupItemRecord>)refInfo.GetValue(Data.Items);
@@ -554,8 +559,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<GrenadeRecord>("grenades", delegate (GrenadeRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, grenades: {r.Id}");
-                bool isReference = r.Id.Contains("*");
-                if (r.Id.Contains("*")) r.TrimId();
+                bool isReference = r.Id.StartsWith("*");
+                if (isReference) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     FieldInfo refInfo = typeof(ConfigRecordCollection<BasePickupItemRecord>).GetField("_records", BindingFlags.NonPublic | BindingFlags.Instance);
                     var records = (Dictionary<string, BasePickupItemRecord>)refInfo.GetValue(Data.Items);
@@ -574,8 +579,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<MineRecord>("mines", delegate (MineRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, mines: {r.Id}");
-                bool isReference = r.Id.Contains("*");
-                if (r.Id.Contains("*")) r.TrimId();
+                bool isReference = r.Id.StartsWith("*");
+                if (isReference) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     FieldInfo refInfo = typeof(ConfigRecordCollection<BasePickupItemRecord>).GetField("_records", BindingFlags.NonPublic | BindingFlags.Instance);
                     var records = (Dictionary<string, BasePickupItemRecord>)refInfo.GetValue(Data.Items);
@@ -594,8 +599,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<AutomapRecord>("automaps", delegate (AutomapRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, automaps: {r.Id}");
-                bool isReference = r.Id.Contains("*");
-                if (r.Id.Contains("*")) r.TrimId();
+                bool isReference = r.Id.StartsWith("*");
+                if (isReference) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     FieldInfo refInfo = typeof(ConfigRecordCollection<BasePickupItemRecord>).GetField("_records", BindingFlags.NonPublic | BindingFlags.Instance);
                     var records = (Dictionary<string, BasePickupItemRecord>)refInfo.GetValue(Data.Items);
@@ -614,8 +619,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<ResurrectKitRecord>("resurrectkits", delegate (ResurrectKitRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, resurrectkits: {r.Id}");
-                bool isReference = r.Id.Contains("*");
-                if (r.Id.Contains("*")) r.TrimId();
+                bool isReference = r.Id.StartsWith("*");
+                if (isReference) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     FieldInfo refInfo = typeof(ConfigRecordCollection<BasePickupItemRecord>).GetField("_records", BindingFlags.NonPublic | BindingFlags.Instance);
                     var records = (Dictionary<string, BasePickupItemRecord>)refInfo.GetValue(Data.Items);
@@ -634,8 +639,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<TrashRecord>("trash", delegate (TrashRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, trash: {r.Id}");
-                bool isReference = r.Id.Contains("*");
-                if (r.Id.Contains("*")) r.TrimId();
+                bool isReference = r.Id.StartsWith("*");
+                if (isReference) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     FieldInfo refInfo = typeof(ConfigRecordCollection<BasePickupItemRecord>).GetField("_records", BindingFlags.NonPublic | BindingFlags.Instance);
                     var records = (Dictionary<string, BasePickupItemRecord>)refInfo.GetValue(Data.Items);
@@ -654,8 +659,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<DatadiskRecord>("datadisks", delegate (DatadiskRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, datadisks: {r.Id}");
-                bool isReference = r.Id.Contains("*");
-                if (r.Id.Contains("*")) r.TrimId();
+                bool isReference = r.Id.StartsWith("*");
+                if (isReference) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     FieldInfo refInfo = typeof(ConfigRecordCollection<BasePickupItemRecord>).GetField("_records", BindingFlags.NonPublic | BindingFlags.Instance);
                     var records = (Dictionary<string, BasePickupItemRecord>)refInfo.GetValue(Data.Items);
@@ -674,8 +679,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<TurretRecord>("turrets", delegate (TurretRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, turrets: {r.Id}");
-                bool isReference = r.Id.Contains("*");
-                if (r.Id.Contains("*")) r.TrimId();
+                bool isReference = r.Id.StartsWith("*");
+                if (isReference) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     FieldInfo refInfo = typeof(ConfigRecordCollection<BasePickupItemRecord>).GetField("_records", BindingFlags.NonPublic | BindingFlags.Instance);
                     var records = (Dictionary<string, BasePickupItemRecord>)refInfo.GetValue(Data.Items);
