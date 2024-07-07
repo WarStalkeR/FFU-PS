@@ -1095,7 +1095,7 @@ frag_mine		explosives explosives explosives
 stationary_turret		spec_hmg armor_shards weapon_shards circuit_board																										
 fire_turret		miner_flametrower armor_shards weapon_shards circuit_board																										
 energy_turret		tech_marksman armor_shards weapon_shards circuit_board																										
-organsBox		bloodBag bloodBag furuncle trowable_heart human_aye human_ear																										
+organsBox		bloodBag bloodBag furuncle trowable_heart human_aye human_ear meat1 meat1 meat1																										
 cyborg_head		armor_shards plastic glass bulb circuit_board																										
 glassBottle		glass glass																										
 itemsBox		army_knife pmc_pistol spec_pistol pmc_armor balaklava blue_pants bandit_boots medium_basic_ammo pistol_basic_ammo bandage splint antibiotics synthChicken synthBeef small_backpack																										
