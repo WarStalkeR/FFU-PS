@@ -3,6 +3,7 @@ using System.IO;
 
 namespace FFU_Phase_Shift {
     public static class ModMain {
+        // Data Modification
         [Hook(ModHookType.AfterConfigsLoaded)]
         public static void AfterConfigsLoaded(IModContext context) {
             // Starting initialization

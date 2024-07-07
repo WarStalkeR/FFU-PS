@@ -1243,18 +1243,19 @@ Id		OutputItem	RequiredItems	ProduceTimeInHours	ModifyStartCost	ModifyStep	Modif
 		petrov_pistol_3	plastic weapon_shards	24	1	1.01	pistol_basic_ammo 1 weapon_shards 20 weapon_repair_kit 100 weapon_container 500																					
 		core_nailgun	rusty_shards plastic spring	26	1	1.01	miner_bolts_ammo 1 weapon_shards 20 coarse_gears 100 weapon_container 500																					
 		ancm_quasi_pistol	ceramite_shards microelectronics venus_weapon_shard wire	46	1	1.01	quasi_basic_ammo 1 venus_weapon_shard 15 ceramite_shards 45 microelectronics 145 weapon_container 500																					
-		sbn_pistol	armor_shards microelectronics capacitor metal_tread	36	1	1.01	weapon_shards 1 circuit_board 5 itemChip 10 SBNItemChip 30																					
-		daydream_frostgun	plastic circuit_board circuit_board bulb wire	40	1	1.01	wire 1 circuit_board 5 itemChip 10 DayDreamItemChip 30																					
-		gh_pistol	rubber weapon_shards spring	32	1	1.01	weapon_shards 1 rod 5 itemChip 10 GrassHopperItemChip 30																					
-		sl_pistol	armor_shards microelectronics bulb wire	42	1	1.01	wire 1 capacitor 7 itemChip 12 SunLightItemChip 30																					
-		franch_pistol	rubber weapon_shards spring metal_tread	28	1	1.01	weapon_shards 1 rod 5 itemChip 10 FrancheItemChip 30																					
-		pmc_shotgun	rubber weapon_shards blunt_melee_shards	24	1	1.01	weapon_shards 1 broken_weapon 5 itemChip 25 mediumItemChip 60																					
-		pmc_shotgun_2	armor_shards weapon_shards blunt_melee_shards	38	1	1.01	weapon_shards 1 weapon_repair_kit 3 itemChip 40 mediumItemChip 80																					
-		dark_shotgun	rubber weapon_shards spring blunt_melee_shards	28	1	1.01	weapon_shards 1 blunt_melee_shards 5 itemChip 25 mediumItemChip 60																					
-		dark_shotgun_2	armor_shards weapon_shards spring blunt_melee_shards	36	1	1.01	blunt_melee_shards 1 weapon_repair_kit 3 itemChip 6 mediumItemChip 36																					
-		dark_shotgun_3	ceramite_shards weapon_shards spring blunt_melee_shards	44	1	1.01	weapon_container 1 itemChip 3 mediumItemChip 6 highItemChip 24																					
-		desert_shotgun_2	rubber weapon_shards spring blunt_melee_shards	24	1	1.01	weapon_shards 1 blunt_melee_shards 5 itemChip 26 mediumItemChip 80																					
-		plazma_shotgun	ceramite_shards ceramite_shards microelectronics capacitor	50	1	1.01	electrical_parts_container 1 itemChip 3 mediumItemChip 6 highItemChip 24																					
+		sbn_pistol	armor_shards microelectronics capacitor metal_tread	36	1	1.01	battery_charge 1 armor_shards 15 capacitor 45 microelectronics 145 weapon_container 500																					
+		daydream_frostgun	plastic circuit_board circuit_board bulb wire	40	1	1.01	battery_charge 1 plastic 15 bulb 45 circuit_board 145 weapon_container 500																					
+		gh_pistol	rubber weapon_shards spring	32	1	1.01	heavy_basic_ammo 1 weapon_shards 20 spring 100 weapon_container 500																					
+		sl_pistol	armor_shards microelectronics bulb wire	42	1	1.01	battery_charge 1 armor_shards 15 bulb 45 microelectronics 145 weapon_container 500																					
+		franch_pistol	rubber weapon_shards spring metal_tread	28	1	1.01	pistol_basic_ammo 1 weapon_shards 20 weapon_repair_kit 100 weapon_container 500																					
+		pmc_shotgun	rubber weapon_shards blunt_melee_shards	24	1	1.01	shotgun_shrapnel_ammo 1 rubber 20 blunt_melee_shards 100 weapon_container 500																					
+		pmc_shotgun_2	armor_shards weapon_shards blunt_melee_shards	38	1	1.01	shotgun_shrapnel_ammo 1 rubber 15 blunt_melee_shards 45 spring 145 weapon_container 500																					
+		dark_shotgun	rubber weapon_shards spring blunt_melee_shards	28	1	1.01	shotgun_shrapnel_ammo 1 blunt_melee_shards 20 spring 100 weapon_container 500																					
+		dark_shotgun_2	armor_shards weapon_shards spring blunt_melee_shards	36	1	1.01	shotgun_shrapnel_ammo 1 blunt_melee_shards 15 spring 45 weapon_repair_kit 145 weapon_container 500																					
+		dark_shotgun_3	ceramite_shards weapon_shards spring blunt_melee_shards	44	1	1.01	shotgun_shrapnel_ammo 1 blunt_melee_shards 15 spring 45 ceramite_shards 145 weapon_container 500																					
+		desert_shotgun	rubber weapon_shards blunt_melee_shards	20	1	1.01	shotgun_shrapnel_ammo 1 blunt_melee_shards 20 coarse_gears 100 weapon_container 500																					
+		desert_shotgun_2	rubber weapon_shards spring blunt_melee_shards	24	1	1.01	shotgun_shrapnel_ammo 1 blunt_melee_shards 20 spring 100 weapon_container 500																					
+		plazma_shotgun	ceramite_shards ceramite_shards microelectronics capacitor	50	1	1.01	battery_charge 1 capacitor 15 ceramite_shards 45 microelectronics 145 weapon_container 500																					
 		spec_shotgun	armor_shards weapon_shards blunt_melee_shards	26	1	1.01	weapon_container 1 itemChip 3 mediumItemChip 6 highItemChip 24																					
 		church_shotgun	ceramite_shards ceramite_shards weapon_shards spring blunt_melee_shards	50	1	1.01	weapon_container 1 itemChip 6 mediumItemChip 12 ChurchItemChip 24																					
 		ancm_shotgun	armor_shards ceramite_shards weapon_shards blunt_melee_shards	48	1	1.01	weapon_container 1 itemChip 6 mediumItemChip 12 AncomItemChip 24																					
