@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using UnityEngine;
@@ -749,6 +750,106 @@ namespace FFU_Phase_Shift {
 
             // Read and parse config file into data
             _cfgLoader.ProcessConfigFile(cfgPath, _verbose);
+        }
+
+        public void DumpConfig(string configName, string savePath) {
+            TextAsset tAsset = Resources.Load(configName) as TextAsset;
+            if (tAsset == null) { ModLog.Error($"DumpConfig: '{configName}' text asset doesn't exist!"); return; };
+            if (!Directory.Exists(savePath)) Directory.CreateDirectory(savePath);
+            File.WriteAllText(Path.Combine(savePath, $"{configName}.csv"), tAsset.text);
+            ModLog.Info($"DUMP: TextAsset '{configName}' saved as {configName}.csv");
+        }
+        public void DumpDescriptor() {
+            var refDesc = Data.Descriptors.First().Value.Descriptors.First() as WeaponDescriptor;
+            string descDump = JsonUtility.ToJson(refDesc);
+            ModLog.Info($"{refDesc.name}: {descDump}");
+            //var test = new WeaponDescriptor();
+            //test.LoadJSON(descDump);
+            //ModLog.Info($"TEST: {test.RandomDryShotSoundBank.name}");
+            //WeaponDescriptor test = ScriptableObject.CreateInstance("WeaponDescriptor") as WeaponDescriptor;
+            //test._hasHFGOverlay = true;
+        }
+
+        public void DumpDescriptors() {
+            foreach (var collection in Data.Descriptors) {
+                ModLog.Info($"COLLECTION: {collection.Key}");
+                foreach (var descriptor in collection.Value.Descriptors) {
+                    switch (descriptor.GetType().ToString()) {
+                        case "MGSC.WeaponDescriptor": {
+                            var refDesc = descriptor as WeaponDescriptor;
+                            string descDump = JsonUtility.ToJson(refDesc);
+                            ModLog.Info(descDump);
+                            break;
+                        }
+                        case "MGSC.FireModeDescriptor": {
+                            break;
+                        }
+                        case "MGSC.AmmoDescriptor": {
+                            break;
+                        }
+                        case "MGSC.MedkitDescriptor": {
+                            break;
+                        }
+                        case "MGSC.FoodDescriptor": {
+                            break;
+                        }
+                        case "MGSC.BackpackDescriptor": {
+                            break;
+                        }
+                        case "MGSC.VestDescriptor": {
+                            break;
+                        }
+                        case "MGSC.ArmorDescriptor": {
+                            break;
+                        }
+                        case "MGSC.HelmetDescriptor": {
+                            break;
+                        }
+                        case "MGSC.LeggingsDescriptor": {
+                            break;
+                        }
+                        case "MGSC.BootsDescriptor": {
+                            break;
+                        }
+                        case "MGSC.RepairDescriptor": {
+                            break;
+                        }
+                        case "MGSC.AutomapDescriptor": {
+                            break;
+                        }
+                        case "MGSC.SkullDescriptor": {
+                            break;
+                        }
+                        case "MGSC.QuasiArtifactDescriptor": {
+                            break;
+                        }
+                        case "MGSC.GrenadeItemDescriptor": {
+                            break;
+                        }
+                        case "MGSC.MineItemDescriptor": {
+                            break;
+                        }
+                        case "MGSC.TurretDescriptor": {
+                            break;
+                        }
+                        case "MGSC.ItemContentDescriptor": {
+                            break;
+                        }
+                        case "MGSC.DatadiskDescriptor": {
+                            break;
+                        }
+                        case "UnityEngine.GameObject": {
+                            break;
+                        }
+                        case "MGSC.StatusEffectDescriptor": {
+                            break;
+                        }
+                        case "MGSC.DamageTypesDescriptor": {
+                            break;
+                        }
+                    }
+                }
+            }
         }
     }
 

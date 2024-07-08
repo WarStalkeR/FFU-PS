@@ -1,0 +1,1450 @@
+#meleeweapons																												
+Id		Price	Weight	InventoryWidthSize	WeaponClass	WeaponSubClass	RequiredAmmo	OverrideAmmo	DefaultAmmoId	Damage	Firemodes	MagazineCapacity	ReloadDuration	ReloadOneClip	DurabilityLossOnThrow	ThrowRange	MeleeCanAmputate	MaxDurability	MinDurabilityAfterRepair	Unbreakable	RepairCategory							
+army_knife		100	0.7	2	Knife	Default			implicted_combat_knife	12 16 crit 1.50	knife_single knife_triple	0	1	FALSE	1	5	TRUE	90	0	FALSE	pierce_melee							
+elite_knife		200	0.5	2	Knife	Default			implicted_combat_knife	18 20 crit 1.50	knife_single knife_triple	0	1	FALSE	1	5	TRUE	90	0	FALSE	pierce_melee							
+miner_knife		100	0.3	2	Knife	Default			implicted_knife	10 14 crit 1.50	knife_single knife_triple	0	1	FALSE	1	5	TRUE	75	0	FALSE	pierce_melee							
+glass_knife		200	0.1	1	Knife	Default			implicted_knife	10 12 crit 1.50	knife_single knife_triple	0	1	FALSE	1	5	TRUE	30	0	FALSE	nothing							
+azt_sickle		200	1.2	2	Knife	Default			implicted_combat_knife	12 24 crit 1.75	knife_single	0	1	FALSE	1	5	TRUE	90	0	FALSE	venus_weapon							
+azt_fistclaw		600	2.2	2	Fist	Default			implicted_combat_knife	24 48 crit 1.55	knife_single knife_triple	0	1	FALSE	1	0	TRUE	120	0	FALSE	venus_weapon							
+corp_bone		20	1	2	Knife	Default			implicted_knife	8 12 crit 2.00	knife_single knife_triple	0	1	FALSE	1	5	TRUE	60	0	FALSE	nothing							
+spider_claw		20	0.8	2	Knife	Default			implicted_knife	12 26 crit 1.75	knife_single	0	1	FALSE	1	5	TRUE	60	0	FALSE	nothing							
+machete		200	4	2	Blade	Default			implicted_katana	20 24 crit 1.50	blade_single	0	1	FALSE	1	0	TRUE	120	0	FALSE	pierce_melee							
+tech_katana		400	4	2	Blade	Default			implicted_katana	16 36 crit 1.75	blade_single blade_double	0	1	FALSE	1	0	TRUE	105	0	FALSE	pierce_melee							
+moon_falchion		800	4	2	Blade	Default			implicted_katana	30 44 crit 1.50	blade_single	0	1	FALSE	1	0	TRUE	120	0	FALSE	moon_weapon							
+metal_pipe		20	2	2	Club	Default			implicted_club	16 20 crit 1.40	blunt_single blunt_duble	0	1	FALSE	1	5	FALSE	90	0	FALSE	nothing							
+scarp_club		20	2	2	Club	Default			implicted_heavy_axe	14 18 crit 1.75	axe_single axe_heavy	0	1	FALSE	1	5	TRUE	90	0	FALSE	trash_weapon							
+pmc_club		100	2	2	Club	Default			implicted_club	16 24 crit 1.50	blunt_single blunt_duble	0	1	FALSE	1	5	FALSE	120	0	FALSE	blunt_melee							
+azt_club		200	3	2	Club	Default			implicted_club	24 28 crit 1.30	blunt_single blunt_heavy	0	1	FALSE	1	5	FALSE	120	0	FALSE	venus_weapon							
+corp_hand		20	4	2	Club	Default			implicted_body_part	14 18 crit 1.40	blunt_single blunt_heavy	0	1	FALSE	1	5	FALSE	60	0	FALSE	nothing							
+corp_leg		20	5	2	Club	Default			implicted_body_part	14 18 crit 1.40	blunt_single blunt_heavy	0	1	FALSE	1	5	FALSE	60	0	FALSE	nothing							
+knuckles		20	0.2	1	Fist	Default			implicted_club	10 14 crit 1.50	blunt_single blunt_duble	0	1	FALSE	1	0	FALSE	75	0	FALSE	blunt_melee							
+breaker		300	5	2	Fist	Tool	Gas	implicted_club	gas_ammo	16 24 crit 2.00	blunt_breaker	20	3	FALSE	1	0	FALSE	105	0	FALSE	engineering_weapon							
+crowbar		200	1	2	Club	Tool			implicted_club	14 22 crit 2.00	blunt_single blunt_duble	0	1	FALSE	1	5	FALSE	120	0	FALSE	blunt_melee							
+wrench		200	2.8	2	Club	Tool			implicted_club	10 18 crit 2.00	blunt_single blunt_duble	0	1	FALSE	1	5	FALSE	105	0	FALSE	blunt_melee							
+franch_baton		400	2	2	Club	Electric	BatteryCells	implicted_shockclub	battery_charge	12 16 crit 1.75	blunt_ammo_single blunt_ammo_duble	6	1	FALSE	1	5	FALSE	120	0	FALSE	tech_weapon							
+civres_powerfist		400	0.4	2	Fist	Default	BatteryCells	implicted_club	battery_crafted_charge	24 36 crit 1.35	blunt_ammo_single blunt_ammo_triple	10	2	FALSE	1	0	FALSE	120	0	FALSE	tech_weapon							
+moon_morgenshtern		800	4	2	Club	Default			implicted_club	26 40 crit 1.5	blunt_single blunt_heavy	0	1	FALSE	1	5	FALSE	120	0	FALSE	moon_weapon							
+hatchet		200	2	2	Axe	Default			implicted_heavy_axe	14 32 crit 1.75	axe_single axe_heavy	0	1	FALSE	1	5	TRUE	120	0	FALSE	pierce_melee							
+choppa_axe		100	3	2	Axe	Default			implicted_heavy_axe	12 30 crit 1.75	axe_single axe_heavy	0	1	FALSE	1	5	TRUE	120	0	FALSE	pierce_melee							
+spec_hatchet		400	2.5	2	Axe	Default			implicted_heavy_axe	16 32 crit 2.00	axe_single axe_heavy	0	1	FALSE	1	5	TRUE	150	0	FALSE	pierce_melee							
+sapper_shovel		200	3.5	2	Axe	Tool			implicted_heavy_axe	10 22 crit 2.25	axe_single axe_heavy	0	1	FALSE	1	5	TRUE	75	0	FALSE	pierce_melee							
+bandit_axe		100	4	2	Axe	Default			implicted_heavy_axe	18 30 crit 2.10	axe_single axe_heavy	0	1	FALSE	1	5	TRUE	90	0	FALSE	pierce_melee							
+azt_big_axe		400	4	2	Axe	Default			implicted_heavy_axe	30 48 crit 1.30	axe_single axe_heavy	0	1	FALSE	1	5	TRUE	120	0	FALSE	venus_weapon							
+bandit_sawblade		600	4	2	Chainsaw	Default	Gas	implicted_sawblade	gas_ammo	28 40 crit 2.00	sawsword_single sawsword_heavy	10	1	FALSE	1	0	TRUE	45	0	FALSE	trash_weapon							
+#end																												
+																												
+#rangeweapons																												
+Id		Price	Weight	InventoryWidthSize	WeaponClass	WeaponSubClass	RequiredAmmo	OverrideAmmo	DefaultAmmoId	DefaultGrenadeId	Damage	Firemodes	Range	MagazineCapacity	MinRandomAmmoCount	ReloadDuration	SilencerShotChance	ReloadOneClip	MaxDurability	MinDurabilityAfterRepair	Unbreakable	RepairCategory	AllowedGrenadeIds	IsSelfCharge				
+miner_pistol		100	2	2	Pistol	Rail	Bolts		miner_bolts_ammo		10 16 crit 1.50	basic_pistol_single	3	10	5	3	0.9	FALSE	75	0	FALSE	engineering_weapon		FALSE				
+army_pistol		100	2	2	Pistol	Firearm	Shells		shotgun_shrapnel_ammo		12 32 crit 1.50	basic_pistol_single basic_pistol_burst	2	4	2	1	0	TRUE	90	0	FALSE	weapon		FALSE				
+army_pistol_2		200	2	2	Pistol	Firearm	Shells		shotgun_shrapnel_ammo		14 34 crit 1.50	basic_pistol_burst basic_pistol_shortauto	3	12	6	3	0	FALSE	105	0	FALSE	weapon		FALSE				
+army_pistol_3		400	3	2	Pistol	Firearm	Shells		shotgun_shrapnel_ammo		16 36 crit 1.50	advanced_pistol_burst advanced_pistol_shortauto	3	12	6	3	0	FALSE	105	0	FALSE	weapon		FALSE				
+army_pistol_4		400	3	2	Pistol	Firearm	Shells		shotgun_shrapnel_ammo		20 40 crit 1.60	advanced_pistol_burst advanced_pistol_shortauto	3	12	6	3	0	FALSE	120	0	FALSE	weapon		FALSE				
+pmc_pistol		100	1	2	Pistol	Firearm	Medium		medium_basic_ammo		10 20 crit 1.70	basic_pistol_single basic_pistol_burst	4	8	4	2	0	FALSE	90	0	FALSE	weapon		FALSE				
+pmc_pistol_2		100	2	2	Pistol	Firearm	Medium		medium_basic_ammo		12 20 crit 1.70	basic_pistol_single basic_pistol_burst	4	12	6	2	0.9	FALSE	105	0	FALSE	weapon		FALSE				
+pmc_pistol_3		200	3	2	Pistol	Firearm	Medium		medium_basic_ammo		14 20 crit 1.70	basic_pistol_single basic_pistol_shortauto	5	24	12	3	0	FALSE	120	0	FALSE	weapon		FALSE				
+spec_pistol		100	2	2	Pistol	Firearm	Bullets		pistol_basic_ammo		12 26 crit 1.60	basic_pistol_single basic_pistol_burst	4	14	7	2	0	FALSE	105	0	FALSE	weapon		FALSE				
+spec_pistol_2		200	3	2	Pistol	Firearm	Bullets		pistol_basic_ammo		14 26 crit 1.60	advanced_pistol_single advanced_pistol_burst	4	14	7	2	0	FALSE	120	0	FALSE	weapon		FALSE				
+spec_pistol_3		400	3	2	Pistol	Firearm	Bullets		pistol_basic_ammo		16 28 crit 1.60	advanced_pistol_single advanced_pistol_burst	5	14	7	2	0	FALSE	135	0	FALSE	weapon		FALSE				
+spec_pistol_rv		600	3	2	Pistol	Firearm	Bullets		pistol_basic_ammo		30 36 crit 1.40	advanced_pistol_single advanced_pistol_burst	5	18	9	2	0	FALSE	165	0	FALSE	weapon		FALSE				
+dark_pistol		100	3	2	Pistol	Firearm	Heavy		heavy_basic_ammo		14 28 crit 1.75	basic_pistol_single	5	6	3	1	0	TRUE	90	0	FALSE	weapon		FALSE				
+dark_pistol_2		200	3	2	Pistol	Firearm	Heavy		heavy_basic_ammo		16 28 crit 1.75	basic_pistol_single	5	6	3	1	0	TRUE	105	0	FALSE	weapon		FALSE				
+dark_pistol_3		400	3	2	Pistol	Firearm	Heavy		heavy_basic_ammo		18 28 crit 1.75	advanced_pistol_single	5	6	3	1	0	TRUE	120	0	FALSE	weapon		FALSE				
+dark_pistol_4		600	3	2	Pistol	Firearm	Heavy		heavy_basic_ammo		20 28 crit 1.70	advanced_pistol_single	6	8	4	1	0	TRUE	135	0	FALSE	weapon		FALSE				
+dark_pistol_5		600	4	2	Pistol	Firearm	Heavy		heavy_basic_ammo		24 32 crit 1.70	advanced_pistol_single	5	4	2	1	0	TRUE	135	0	FALSE	weapon		FALSE				
+rail_pistol		200	1	2	Pistol	Rail			implicted_em_ammo		20 20 crit 1.75	basic_pistol_single	5	1	0	0	0.9	FALSE	60	0	FALSE	tech_weapon		FALSE				
+rail_pistol_2		400	2	2	Pistol	Rail			implicted_em_ammo		22 22 crit 1.75	basic_pistol_single	5	1	0	0	0.9	FALSE	75	0	FALSE	tech_weapon		FALSE				
+rail_pistol_3		600	3	2	Pistol	Rail			implicted_em_ammo		24 24 crit 1.75	basic_pistol_single	5	1	0	0	0.9	FALSE	90	0	FALSE	tech_weapon		FALSE				
+tech_pistol		400	1	2	Pistol	Laser	BatteryCells		battery_charge		24 36 crit 1.60	basic_energy_pistol_single basic_energy_pistol_burst	5	4	2	2	0	FALSE	60	0	FALSE	tech_weapon		FALSE				
+tech_pistol_2		400	1	2	Pistol	Laser	BatteryCells		battery_charge		26 36 crit 1.60	basic_energy_pistol_single basic_energy_pistol_burst	5	6	2	2	0	FALSE	75	0	FALSE	tech_weapon		FALSE				
+petrov_pistol		100	1	2	Pistol	Firearm	Bullets		pistol_basic_ammo		10 22 crit 1.75	basic_pistol_single	3	6	3	2	0	FALSE	75	0	FALSE	weapon		FALSE				
+petrov_pistol_2		200	1	2	Pistol	Firearm	Bullets		pistol_basic_ammo		14 26 crit 1.75	basic_pistol_single basic_pistol_shortauto	4	6	3	2	0.9	FALSE	90	0	FALSE	weapon		FALSE				
+petrov_pistol_3		300	2	2	Pistol	Firearm	Bullets		pistol_basic_ammo		18 30 crit 1.75	basic_pistol_single basic_pistol_shortauto	4	6	3	2	0.9	FALSE	105	0	FALSE	weapon		FALSE				
+civres_pistol		200	3	2	Pistol	Firearm	Bullets		pistol_basic_ammo		14 20 crit 1.50	basic_pistol_burst basic_pistol_shortauto	5	30	15	2	0	FALSE	75	0	FALSE	weapon		FALSE				
+civres_pistol_2		100	1.5	2	Pistol	Firearm	Bullets		pistol_basic_ammo		12 16 crit 2.00	basic_pistol_single	4	6	5	2	0	FALSE	105	0	FALSE	weapon		FALSE				
+core_nailgun		400	1.8	2	Pistol	Rail	Bolts		miner_bolts_ammo		12 20 crit 1.75	basic_pistol_single basic_pistol_shortauto	4	20	10	3	0.9	FALSE	105	0	FALSE	engineering_weapon		FALSE				
+ancm_quasi_pistol		800	1.2	2	Pistol	Quasi	QuasiCells	implicted_shockgun	quasi_basic_ammo		14 24 crit 2.00	quasi_pistol_single quasi_pistol_burst	5	16	8	4	0	FALSE	90	0	FALSE	tech_weapon		FALSE				
+sbn_pistol		800	0.8	2	Pistol	Rail			implicted_em_ammo		26 26 crit 1.75	advanced_pistol_single	6	1	0	0	0.9	FALSE	105	0	FALSE	tech_weapon		FALSE				
+daydream_frostgun		800	0.9	2	Pistol	Coldgun	BatteryCells	implicted_coldgun	battery_charge		30 50 crit 1.50	advanced_energy_pistol_single	3	4	2	2	0	FALSE	75	0	FALSE	tech_weapon		FALSE				
+gh_pistol		600	1.4	2	Pistol	Firearm	Heavy		heavy_basic_ammo		14 32 crit 2.00	advanced_pistol_single advanced_pistol_burst	4	4	2	1	0	TRUE	105	0	FALSE	weapon		FALSE				
+sl_pistol		600	0.7	2	Pistol	Laser	BatteryCells		battery_charge		24 34 crit 1.50	advanced_energy_pistol_single advanced_energy_pistol_burst	5	8	4	3	0	FALSE	90	0	FALSE	tech_weapon		FALSE				
+franch_pistol		400	1.1	2	Pistol	Firearm	Bullets		pistol_basic_ammo		26 32 crit 1.30	advanced_pistol_single advanced_pistol_burst	3	8	4	1	0	FALSE	90	0	FALSE	weapon		FALSE				
+azt_pistol		800	3	2	Pistol	Quasi	QuasiCells		quasi_basic_ammo		10 20 crit 1.75	quasi_pistol_single quasi_pistol_burst	2	8	4	2	0	FALSE	75	0	FALSE	venus_weapon		FALSE				
+pmc_shotgun		200	3	2	Shotgun	Firearm	Shells		shotgun_shrapnel_ammo		20 50 crit 1.50	basic_shotgun_single basic_shotgun_burst	4	12	6	3	0	FALSE	135	0	FALSE	weapon		FALSE				
+pmc_shotgun_2		400	4	2	Shotgun	Firearm	Shells		shotgun_shrapnel_ammo		22 54 crit 1.50	advanced_shotgun_single advanced_shotgun_burst	4	24	12	4	0	FALSE	150	0	FALSE	weapon		FALSE				
+dark_shotgun		400	3	2	Shotgun	Firearm	Shells		shotgun_shrapnel_ammo		20 52 crit 1.50	basic_shotgun_single basic_shotgun_auto	4	12	6	3	0	FALSE	135	0	FALSE	weapon		FALSE				
+dark_shotgun_2		600	4	2	Shotgun	Firearm	Shells		shotgun_shrapnel_ammo		22 54 crit 1.50	basic_shotgun_single basic_shotgun_auto	5	24	12	4	0	FALSE	150	0	FALSE	weapon		FALSE				
+dark_shotgun_3		800	4	2	Shotgun	Firearm	Shells		shotgun_shrapnel_ammo		24 56 crit 1.50	advanced_shotgun_single advanced_shotgun_auto	5	24	12	4	0	FALSE	180	0	FALSE	weapon		FALSE				
+desert_shotgun		200	3	2	Shotgun	Firearm	Shells		shotgun_shrapnel_ammo		20 44 crit 1.75	basic_shotgun_single	5	8	4	1	0	TRUE	120	0	FALSE	weapon		FALSE				
+desert_shotgun_2		400	3	2	Shotgun	Firearm	Shells		shotgun_shrapnel_ammo		24 48 crit 1.75	advanced_shotgun_single	5	12	6	1	0	TRUE	135	0	FALSE	weapon		FALSE				
+plazma_shotgun		800	5.2	2	Shotgun	Plasma	BatteryCells	implicted_plasma_shrapnel	battery_charge		24 72 crit 1.50	basic_energy_shotgun_single basic_energy_shotgun_burst	4	12	6	4	0	FALSE	120	0	FALSE	tech_weapon		FALSE				
+spec_shotgun		600	2	2	Shotgun	Firearm	Shells		shotgun_shrapnel_ammo		28 64 crit 1.75	advanced_shotgun_single advanced_shotgun_duble	3	2	1	3	0	TRUE	150	0	FALSE	weapon		FALSE				
+bandit_shotgun		200	2	2	Shotgun	Firearm	Shells		shotgun_shrapnel_ammo		16 36 crit 1.40	basic_shotgun_single	3	6	3	2	0	TRUE	75	0	FALSE	trash_weapon		FALSE				
+church_shotgun		1400	4.8	2	Shotgun	Firearm	Shells		shotgun_shrapnel_ammo		30 60 crit 1.75	advanced_shotgun_single advanced_shotgun_auto	5	24	12	4	0	FALSE	180	0	FALSE	weapon		FALSE				
+ancm_shotgun		800	2.9	2	Shotgun	Firearm	Shells		shotgun_shrapnel_ammo		26 64 crit 1.85	advanced_shotgun_single advanced_shotgun_auto	4	10	5	3	0	FALSE	180	0	FALSE	weapon		FALSE				
+sbn_shotgun		1000	2.5	2	Shotgun	Rail			implicted_em_ammo		32 32 crit 1.35	advanced_energy_shotgun_single advanced_energy_shotgun_burst	4	1	0	0	0.9	FALSE	150	0	FALSE	tech_weapon		FALSE				
+sl_shotgun		1000	5	2	Shotgun	Laser	BatteryCells		battery_charge		24 68 crit 1.70	advanced_energy_shotgun_single advanced_energy_shotgun_burst	4	16	8	4	0	FALSE	120	0	FALSE	tech_weapon		FALSE				
+azt_shotgun		100	6	2	Shotgun	Quasi	QuasiCells		quasi_basic_ammo		16 38 crit 1.70	quasi_pistol_burst	2	6	4	4	0	FALSE	120	0	FALSE	venus_weapon		FALSE				
+pmc_smg		200	2	2	Smg	Firearm	Bullets		pistol_basic_ammo		20 28 crit 1.50	basic_smg_shortauto basic_smg_single	4	16	8	2	0	FALSE	165	0	FALSE	weapon		FALSE				
+pmc_smg_2		300	2	2	Smg	Firearm	Bullets		pistol_basic_ammo		22 30 crit 1.50	basic_smg_shortauto basic_smg_single	5	24	12	2	0	FALSE	180	0	FALSE	weapon		FALSE				
+pmc_smg_3		400	2	2	Smg	Firearm	Bullets		pistol_basic_ammo		24 32 crit 1.50	advanced_smg_shortauto advanced_smg_auto	5	32	16	3	0	FALSE	210	0	FALSE	weapon		FALSE				
+spec_smg		600	3	2	Smg	Firearm	Medium		medium_basic_ammo		14 36 crit 1.75	basic_smg_shortauto basic_smg_auto	5	24	12	2	0.25	FALSE	180	0	FALSE	weapon		FALSE				
+mercury_smg		120	2	2	Smg	Quasi	QuasiCells	implicted_quasi_beam	quasi_basic_ammo		30 46 crit 1.50	advanced_energy_smg_shortauto	4	36	16	2	0	FALSE	120	0	FALSE	nothing		FALSE				
+bandit_smg		200	3	2	Smg	Firearm	Shells		shotgun_shrapnel_ammo		12 36 crit 2.00	basic_shotgun_burst	3	16	8	3	0	FALSE	90	0	FALSE	trash_weapon		FALSE				
+bandit_smg_2		400	3	2	Smg	Firearm	Shells		shotgun_shrapnel_ammo		16 40 crit 2.00	advanced_shotgun_burst	4	16	8	3	0	FALSE	180	0	FALSE	weapon		FALSE				
+tech_smg		600	2	2	Smg	Laser	BatteryCells		battery_charge		24 36 crit 1.40	basic_energy_smg_shortauto basic_energy_smg_single	5	12	6	3	0	FALSE	120	0	FALSE	tech_weapon		FALSE				
+tech_pistol_3		500	2	2	Smg	Laser	BatteryCells		battery_charge		28 36 crit 1.40	basic_energy_smg_shortauto basic_energy_smg_single	6	4	2	4	0	FALSE	90	0	FALSE	tech_weapon		FALSE				
+plazma_assault		800	4	2	Smg	Plasma	BatteryCells	implicted_plasma_charge	battery_charge		28 42 crit 1.50	basic_energy_smg_single	5	6	3	5	0	FALSE	75	0	FALSE	tech_weapon		FALSE				
+spec_smg_rv		1500	3.5	2	Smg	Firearm	Medium		medium_basic_ammo		18 38 crit 1.80	advanced_smg_shortauto advanced_smg_auto	6	32	16	3	0.25	FALSE	270	0	FALSE	weapon		FALSE				
+civres_smg		600	2.6	2	Smg	Firearm	Medium		medium_basic_ammo		16 22 crit 1.60	basic_smg_shortauto basic_smg_auto	4	20	10	2	0	FALSE	180	0	FALSE	weapon		FALSE				
+ancm_smg		1200	2.7	2	Smg	Firearm	Medium		medium_basic_ammo		20 32 crit 1.60	advanced_smg_shortauto advanced_smg_auto	5	40	20	3	0.25	FALSE	240	0	FALSE	weapon		FALSE				
+franch_smg		800	1.9	2	Smg	Firearm	Bullets		pistol_basic_ammo		20 30 crit 1.50	advanced_smg_shortauto advanced_smg_single	4	16	8	1	0	FALSE	210	0	FALSE	weapon		FALSE				
+sbn_smg		1400	2.1	2	Smg	Rail			implicted_em_ammo		22 22 crit 1.50	advanced_energy_smg_shortauto advanced_energy_smg_auto	5	1	0	0	0.9	FALSE	180	0	FALSE	tech_weapon		FALSE				
+toxic_smg		400	2	2	Smg	Toxic	Toxic		toxic_ammo		16 32 crit 1.75	advanced_pistol_single	7	8	4	2	0.8	TRUE	75	0	FALSE	tech_weapon		FALSE				
+pmc_assault		600	3	2	AssaultRifle	Firearm	Heavy		heavy_basic_ammo		18 36 crit 1.60	basic_rifle_shortauto basic_rifle_burst	6	24	12	4	0	FALSE	150	0	FALSE	weapon		FALSE				
+spec_assault		1200	4	2	AssaultRifle	Firearm	Heavy		heavy_basic_ammo		20 40 crit 1.70	advanced_rifle_auto advanced_rifle_burst	5	24	12	4	0	FALSE	180	0	FALSE	weapon		FALSE				
+spec_assault_rv		1800	4	2	AssaultRifle	Firearm	Heavy		heavy_basic_ammo		26 40 crit 1.70	advanced_rifle_auto advanced_rifle_burst	6	36	18	4	0	FALSE	210	0	FALSE	weapon		FALSE				
+moon_assault		200	3	2	AssaultRifle	Quasi	Bolts		quasi_bolts_ammo		22 40 crit 1.50	advanced_rifle_burst	6	18	9	3	0.8	FALSE	90	0	FALSE	moon_weapon		FALSE				
+bandit_assault		200	3	2	AssaultRifle	Firearm	Heavy		heavy_basic_ammo		14 28 crit 1.75	basic_rifle_shortauto basic_rifle_burst	5	30	15	4	0	FALSE	90	0	FALSE	trash_weapon		FALSE				
+desert_assault		600	3	2	AssaultRifle	Firearm	Heavy		heavy_basic_ammo		16 32 crit 1.75	basic_rifle_shortauto basic_rifle_burst	6	24	12	3	0	FALSE	135	0	FALSE	weapon		FALSE				
+civres_assault		800	3	2	AssaultRifle	Firearm	Heavy		heavy_basic_ammo		16 32 crit 1.75	basic_rifle_shortauto basic_rifle_burst	6	40	20	4	0	FALSE	135	0	FALSE	weapon		FALSE				
+ancm_quasi_assault		2000	4.2	2	AssaultRifle	Quasi	QuasiCells	implicted_shockgun	quasi_basic_ammo		20 34 crit 2.00	quasi_rifle_auto quasi_rifle_single	7	16	8	5	0	FALSE	120	0	FALSE	tech_weapon		FALSE				
+gh_assault		600	3.9	2	AssaultRifle	Firearm	Heavy		heavy_basic_ammo		14 34 crit 2.00	advanced_rifle_shortauto advanced_rifle_burst	5	30	15	3	0	FALSE	150	0	FALSE	weapon		FALSE				
+franch_assault		1000	3.1	2	AssaultRifle	Firearm	Heavy		heavy_basic_ammo		22 42 crit 1.75	advanced_rifle_auto advanced_rifle_burst	6	18	9	2	0	FALSE	165	0	FALSE	weapon		FALSE				
+plazma_smg		1600	3	2	AssaultRifle	Plasma	BatteryCells	implicted_plasma_charge	battery_charge		28 42 crit 1.50	basic_energy_rifle_shortauto basic_energy_rifle_burst	5	24	12	4	0	FALSE	120	0	FALSE	tech_weapon		FALSE				
+army_sniper		1200	4	2	MarksmanRifle	Firearm	Heavy		heavy_basic_ammo		28 50 crit 2.00	basic_rifle_single	8	6	3	5	0	FALSE	75	0	FALSE	weapon		FALSE				
+army_sniper_2		1800	4	2	MarksmanRifle	Firearm	Heavy		heavy_basic_ammo		32 56 crit 2.50	advanced_rifle_single	9	8	4	4	0	FALSE	90	0	FALSE	weapon		FALSE				
+desert_marksman		600	3	2	MarksmanRifle	Firearm	Heavy		heavy_basic_ammo		20 40 crit 2.35	basic_rifle_single basic_rifle_burst	7	2	1	2	0	TRUE	75	0	FALSE	weapon		FALSE				
+desert_marksman_2		800	3	2	MarksmanRifle	Firearm	Heavy		heavy_basic_ammo		26 40 crit 2.50	advanced_rifle_single advanced_rifle_burst	8	4	2	2	0	TRUE	90	0	FALSE	weapon		FALSE				
+tech_marksman		1800	4	2	MarksmanRifle	Laser	BatteryCells		battery_charge		38 56 crit 2.50	basic_energy_rifle_single	9	6	3	5	0.15	FALSE	60	0	FALSE	tech_weapon		FALSE				
+tech_rifle		1600	4	2	MarksmanRifle	Laser	BatteryCells		battery_charge		24 36 crit 2.25	basic_energy_rifle_single basic_energy_rifle_burst	7	10	5	5	0	FALSE	75	0	FALSE	tech_weapon		FALSE				
+civres_marksman		1200	3.7	2	MarksmanRifle	Firearm	Medium		medium_basic_ammo		22 34 crit 2.30	basic_rifle_single basic_rifle_burst	6	10	5	3	0	FALSE	90	0	FALSE	weapon		FALSE				
+ancm_marksman		1400	4.5	2	MarksmanRifle	Firearm	Medium		medium_basic_ammo		38 60 crit 2.25	advanced_rifle_single advanced_rifle_burst	8	5	3	4	0	FALSE	105	0	FALSE	weapon		FALSE				
+rail_rifle		1400	3.2	2	MarksmanRifle	Rail			implicted_em_ammo		40 40 crit 2.00	basic_rifle_single	7	1	0	1	0.9	FALSE	75	0	FALSE	tech_weapon		FALSE				
+gh_marksman		1200	4.1	2	MarksmanRifle	Firearm	Heavy		heavy_basic_ammo		28 42 crit 2.35	advanced_rifle_single advanced_rifle_burst	7	6	3	1	0	TRUE	105	0	FALSE	weapon		FALSE				
+sl_sniper		1800	5.8	2	MarksmanRifle	Laser	BatteryCells		battery_charge		40 60 crit 2.00	advanced_energy_rifle_single advanced_energy_rifle_burst	9	10	5	6	0.15	FALSE	75	0	FALSE	tech_weapon		FALSE				
+azt_rifle		200	4	2	MarksmanRifle	Quasi	QuasiCells		quasi_basic_ammo		16 32 crit 2.00	quasi_rifle_shortauto quasi_rifle_single	5	12	6	5	0	FALSE	90	0	FALSE	venus_weapon		FALSE				
+moon_crossbow		300	4	2	MarksmanRifle	Quasi	Bolts		quasi_bolts_ammo		36 72 crit 1.60	basic_rifle_single	6	1	1	4	0.8	FALSE	75	0	FALSE	moon_weapon		FALSE				
+mercury_staff		300	4	2	MarksmanRifle	Quasi	QuasiCells	implicted_quasi_beam	quasi_basic_ammo		38 76 crit 2.50	advanced_energy_rifle_single	6	1	1	5	0	FALSE	75	0	FALSE	nothing		FALSE				
+miner_mg		600	4	2	Machinegun	Rail	Bolts		miner_bolts_ammo		8 16 crit 1.80	basic_machinegun_auto basic_machinegun_shortauto	5	80	40	5	0.5	FALSE	150	0	FALSE	engineering_weapon		FALSE				
+core_nailmachinegun		800	5.1	2	Machinegun	Rail	Bolts		miner_bolts_ammo		12 20 crit 1.80	advanced_machinegun_auto advanced_machinegun_shortauto	6	80	40	6	0.5	FALSE	225	0	FALSE	engineering_weapon		FALSE				
+core_laser		1200	6.2	2	Machinegun	Laser			battery_charge		32 42 crit 1.50	basic_energy_rifle_single	7	1	0	3	0	FALSE	120	0	FALSE	engineering_weapon		TRUE				
+desert_hmg		1600	5	2	Machinegun	Firearm	Heavy		heavy_basic_ammo		14 42 crit 1.80	basic_machinegun_auto basic_machinegun_longauto	5	52	26	6	0	FALSE	300	0	FALSE	weapon		FALSE				
+plazma_hmg		2000	5	2	Machinegun	Plasma	BatteryCells	implicted_plasma_charge	battery_charge		32 60 crit 1.70	basic_energy_machinegun_auto basic_energy_machinegun_shortauto	5	48	24	6	0	FALSE	150	0	FALSE	tech_weapon		FALSE				
+tezctlan_spear		9000	5	2	Machinegun	Quasi	QuasiCells		quasi_basic_ammo		80 92 crit 2.00	tezktlan_spear_auto	8	35	7	6	0	FALSE	150	0	TRUE	venus_weapon		FALSE				
+spec_hmg		2500	6	2	Minigun	Firearm	Heavy		heavy_basic_ammo		14 42 crit 1.80	advanced_machinegun_auto advanced_machinegun_longauto	5	80	40	6	0	FALSE	375	0	FALSE	weapon		FALSE				
+pb_shockgun		3000	6.5	2	Minigun	Electric	BatteryCells	implicted_shockgun	battery_charge		26 36 crit 1.50	thunder_rifle_shortauto thunder_rifle_auto	6	60	30	6	0	FALSE	180	0	FALSE	tech_weapon		FALSE				
+tech_hfg		4000	6	2	HFG	Laser	BatteryCells		battery_charge		80 100 crit 2.00	energy_hfg_single	10	40	20	6	0	FALSE	60	0	FALSE	tech_weapon		FALSE				
+toxic_trower		2000	5	2	Flamethrower	Toxic	Toxic	implicted_toxicthrower	toxic_ammo		15 25 crit 1.50	toxicthrower_single	5	60	30	4	0	FALSE	90	0	FALSE	tech_weapon		FALSE				
+miner_disctrower		1500	3.1	2	Discthrower	Tool	SawBlade		sawblade_ammo		20 40 crit 1.75	basic_sawtrower_single	6	12	6	5	0	FALSE	105	0	FALSE	engineering_weapon		FALSE				
+core_disctrower		1800	3.5	2	Discthrower	Tool	SawBlade		sawblade_ammo		24 44 crit 1.85	advanced_sawtrower_single advanced_sawtrower_burst	6	15	7	6	0	FALSE	135	0	FALSE	engineering_weapon		FALSE				
+miner_flametrower		1400	5.2	2	Flamethrower	Tool	Gas	implicted_flamethrower	gas_ammo		15 25 crit 1.50	flamethrower_single	4	60	30	5	0	FALSE	120	0	FALSE	engineering_weapon		FALSE				
+core_flametrower		2000	5.5	2	Flamethrower	Tool	Gas	implicted_flamethrower	gas_ammo		20 30 crit 1.60	flamethrower_single	5	80	40	6	0	FALSE	150	0	FALSE	engineering_weapon		FALSE				
+miner_harpoon		999	1	2	Harpoonthrower	Tool	Heavy		heavy_basic_ammo		99 99 crit 1.00	basic_pistol_single	7	4	2	4	0	FALSE	45	0	FALSE	engineering_weapon		FALSE				
+toxic_launcher		999	1	2	Flamethrower	Toxic	Toxic		toxic_ammo		99 99 crit 1.00	basic_pistol_single	7	4	2	4	0	FALSE	45	0	FALSE	tech_weapon		FALSE				
+regular_launcher		2000	4	2	GrenadeLauncher	Launcher	Heavy		heavy_basic_ammo	frag_grenade	99 99 crit 1.00	basic_grenade_single	6	6	3	3	0	TRUE	60	0	FALSE	weapon	frag_grenade qwasi_grenade thermal_grenade stun_grenade	FALSE				
+monster_xiomara_range		100	1	2	Machinegun	Quasi			implicted_xiomara_range		20 20 crit 1.50	basic_machinegun_auto	3	999	9	4	0	FALSE	45	0	TRUE	weapon		FALSE				
+monster_mars_flametrower		100	1	2	Flamethrower	Quasi			implicted_flamethrower		20 30 crit 1.75	flamethrower_single	5	80	40	6	0	FALSE	135	0	TRUE	weapon		FALSE				
+monster_mars_launcher		100	1	2	GrenadeLauncher	Quasi	Heavy		heavy_basic_ammo	frag_grenade	99 99 crit 1.00	basic_grenade_single	6	6	3	3	0	FALSE	135	0	TRUE	weapon		FALSE				
+monster_mars_gun		100	1	2	AssaultRifle	Quasi			implicted_plasma_shrapnel		28 42 crit 1.50	basic_energy_rifle_shortauto basic_energy_rifle_burst	5	24	12	4	0	FALSE	135	0	TRUE	weapon		FALSE				
+monster_turret		100	10	2	Turret	Firearm	Heavy		heavy_basic_ammo		18 20 crit 1.50	basic_machinegun_auto	6	999	40	1	0	FALSE	90	0	TRUE	weapon		FALSE				
+monster_turret_fire		100	10	2	Turret	Tool	Gas	implicted_flamethrower	gas_ammo		8 16 crit 1.75	flamethrower_single	5	999	40	1	0	FALSE	85	0	TRUE	weapon		FALSE				
+monster_turret_energy		100	10	2	Turret	Laser	BatteryCells		battery_charge		16 18 crit 1.60	basic_energy_rifle_single	7	999	40	1	0	FALSE	75	0	TRUE	weapon		FALSE				
+monster_urparp_gun		100	1	2	Machinegun	Quasi			implicted_plasma_shrapnel		60 100 crit 1.50	basic_machinegun_auto	6	999	9	4	0	FALSE	45	0	TRUE	weapon		FALSE				
+#end																												
+																												
+#firemodes																												
+Id		AmmoPerShot	WeaponCastsCount	RequiredAllAmmoToShot	Accuracy	DamageMult	ScatterAngle	DelayInSecsBetweenShots																				
+knife_single		0	1	FALSE	0.25	1	0	0																				
+knife_triple		0	3	FALSE	0.1	0.6	0	0.4																				
+blunt_single		0	1	FALSE	0.25	1	0	0																				
+blunt_heavy		0	1	FALSE	0.15	1.5	0	0																				
+blunt_duble		0	2	FALSE	0.12	0.8	0	0.5																				
+blunt_breaker		1	4	FALSE	0.15	1	0	0.5																				
+blunt_ammo_single		1	1	FALSE	0.25	1	0	0																				
+blunt_ammo_duble		2	2	FALSE	0.15	1	0	0.5																				
+blunt_ammo_triple		3	3	FALSE	0.1	1	0	0.5																				
+axe_single		0	1	FALSE	0.2	1	0	0																				
+axe_heavy		0	1	FALSE	0.1	1.5	0	0																				
+sawsword_single		1	1	FALSE	0.2	1	0	0																				
+sawsword_heavy		1	1	FALSE	0.05	1.5	0	0																				
+blade_single		0	1	FALSE	0.25	1	0	0																				
+blade_double		0	2	FALSE	0.15	0.9	0	0.5																				
+basic_pistol_single		1	1	FALSE	0.2	1	4	0																				
+basic_pistol_burst		2	2	FALSE	0.15	1	5	0.06																				
+basic_pistol_shortauto		3	3	FALSE	0.1	1	6	0.05																				
+advanced_pistol_single		1	1	FALSE	0.25	1	3	0																				
+advanced_pistol_burst		2	2	FALSE	0.2	1	4	0.06																				
+advanced_pistol_shortauto		3	3	FALSE	0.15	1	6	0.05																				
+basic_smg_single		1	1	FALSE	0.25	1	3	0																				
+basic_smg_shortauto		3	3	FALSE	0.20	1	4	0.05																				
+basic_smg_auto		6	6	FALSE	0.15	1	6	0.045																				
+advanced_smg_single		1	1	FALSE	0.3	1	2.5	0																				
+advanced_smg_shortauto		4	4	FALSE	0.25	1	3.5	0.05																				
+advanced_smg_auto		7	7	FALSE	0.2	1	5.5	0.045																				
+basic_shotgun_single		1	1	FALSE	0.3	1	7	0																				
+basic_shotgun_burst		3	3	FALSE	0.2	1	8	0.05																				
+basic_shotgun_auto		4	4	FALSE	0.15	1	9	0.05																				
+advanced_shotgun_single		1	1	FALSE	0.35	1	6.5	0																				
+advanced_shotgun_duble		2	2	FALSE	0.3	1	7	0																				
+advanced_shotgun_burst		3	3	FALSE	0.25	1	7.5	0.05																				
+advanced_shotgun_auto		4	4	FALSE	0.15	1	8.5	0.05																				
+basic_rifle_single		1	1	FALSE	0.3	1	2.8	0																				
+basic_rifle_burst		2	2	FALSE	0.25	1	3.2	0.05																				
+basic_rifle_shortauto		4	4	FALSE	0.2	1	4	0.05																				
+basic_rifle_auto		5	5	FALSE	0.15	1	5	0.045																				
+advanced_rifle_single		1	1	FALSE	0.35	1	2.5	0																				
+advanced_rifle_burst		2	2	FALSE	0.3	1	3	0.05																				
+advanced_rifle_shortauto		4	4	FALSE	0.25	1	3.5	0.05																				
+advanced_rifle_auto		5	5	FALSE	0.2	1	4.5	0.045																				
+basic_machinegun_shortauto		3	3	FALSE	0.1	1	6	0.05																				
+basic_machinegun_auto		5	5	FALSE	0.05	1	7	0.045																				
+basic_machinegun_longauto		8	8	FALSE	0.05	1	8	0.04																				
+advanced_machinegun_shortauto		3	3	FALSE	0.2	1	5.5	0.05																				
+advanced_machinegun_auto		5	5	FALSE	0.15	1	6.5	0.045																				
+advanced_machinegun_longauto		8	8	FALSE	0.1	1	7.5	0.04																				
+basic_energy_pistol_single		1	1	FALSE	0.25	1	3	0																				
+basic_energy_pistol_burst		2	2	FALSE	0.2	1.1	4	0.06																				
+basic_energy_pistol_shortauto		3	3	FALSE	0.15	1.2	5	0.05																				
+advanced_energy_pistol_single		1	1	FALSE	0.3	1	2	0																				
+advanced_energy_pistol_burst		2	2	FALSE	0.25	1.1	3	0.06																				
+advanced_energy_pistol_shortauto		3	3	FALSE	0.2	1.2	4.5	0.05																				
+basic_energy_smg_single		1	1	FALSE	0.35	1	2.5	0																				
+basic_energy_smg_shortauto		3	3	FALSE	0.3	1.2	3.5	0.05																				
+basic_energy_smg_auto		6	6	FALSE	0.25	1.3	5	0.045																				
+advanced_energy_smg_single		1	1	FALSE	0.4	1	2	0																				
+advanced_energy_smg_shortauto		4	4	FALSE	0.35	1.2	3	0.05																				
+advanced_energy_smg_auto		7	7	FALSE	0.3	1.3	4.5	0.045																				
+basic_energy_shotgun_single		1	1	FALSE	0.35	1	6.5	0																				
+basic_energy_shotgun_burst		3	3	FALSE	0.3	1.2	7.5	0.05																				
+basic_energy_shotgun_auto		4	4	FALSE	0.25	1.3	8.5	0.05																				
+advanced_energy_shotgun_single		1	1	FALSE	0.4	1	6.5	0																				
+advanced_energy_shotgun_duble		2	2	FALSE	0.35	1.1	7	0																				
+advanced_energy_shotgun_burst		3	3	FALSE	0.3	1.2	7.5	0.05																				
+advanced_energy_shotgun_auto		4	4	FALSE	0.25	1.3	8.5	0.05																				
+basic_energy_rifle_single		1	1	FALSE	0.35	1	2.6	0																				
+basic_energy_rifle_burst		2	2	FALSE	0.3	1.1	3	0.03																				
+basic_energy_rifle_shortauto		4	4	FALSE	0.25	1.2	3.8	0.05																				
+basic_energy_rifle_auto		5	5	FALSE	0.2	1.3	4.8	0.045																				
+advanced_energy_rifle_single		1	1	FALSE	0.4	1	2.3	0																				
+advanced_energy_rifle_burst		2	2	FALSE	0.35	1.1	2.8	0.05																				
+advanced_energy_rifle_shortauto		4	4	FALSE	0.3	1.2	3.3	0.05																				
+advanced_energy_rifle_auto		5	5	FALSE	0.25	1.3	4.2	0.045																				
+basic_energy_machinegun_shortauto		5	5	FALSE	0.15	1.1	7.8	0.05																				
+basic_energy_machinegun_auto		7	7	FALSE	0.1	1.3	6.8	0.045																				
+basic_energy_machinegun_longauto		8	8	FALSE	0.1	1.5	7.8	0.04																				
+advanced_energy_machinegun_shortauto		5	5	FALSE	0.2	1.1	5.3	0.05																				
+advanced_energy_machinegun_auto		7	7	FALSE	0.15	1.3	6.3	0.045																				
+advanced_energy_machinegun_longauto		8	8	FALSE	0.1	1.5	7.3	0.04																				
+quasi_pistol_single		1	1	FALSE	0.3	1	2	0																				
+quasi_pistol_burst		2	2	FALSE	0.25	1	3	0.06																				
+quasi_rifle_single		1	1	FALSE	0.35	1	2.3	0																				
+quasi_rifle_shortauto		3	3	FALSE	0.3	1	3.3	0.05																				
+quasi_rifle_auto		4	4	FALSE	0.25	1	4.2	0.045																				
+thunder_pistol_single		1	1	FALSE	0.3	1	2	0																				
+thunder_rifle_single		1	1	FALSE	0.35	1	2.3	0																				
+thunder_rifle_shortauto		3	3	FALSE	0.3	1	3.3	0.06																				
+thunder_rifle_auto		5	5	FALSE	0.25	1	4.2	0.05																				
+flamethrower_single		10	1	TRUE	1	1	3	0.05																				
+toxicthrower_single		10	1	TRUE	1	1	3	0.05																				
+basic_sawtrower_single		1	1	FALSE	0.2	1	4	0																				
+advanced_sawtrower_single		1	1	FALSE	0.25	1	3	0																				
+advanced_sawtrower_burst		2	2	FALSE	0.2	1	4	0.06																				
+plasma_energy_single		1	1	FALSE	0.35	1	2.3	0																				
+plasma_energy_burst		2	2	FALSE	0.3	1.1	2.8	0.06																				
+plasma_energy_shortauto		4	4	FALSE	0.25	1.2	3.3	0.05																				
+basic_grenade_single		1	1	FALSE	0.2	1	4	0																				
+energy_hfg_single		40	1	TRUE	1	1	2	0																				
+tezktlan_spear_auto		7	7	FALSE	0.2	1.3	6.3	0.045																				
+#end																												
+																												
+#ammo																												
+Id		Price	Weight	InventoryWidthSize	MaxStack	BallisticType	MinAmmoAmount	MaxAmmoAmount	AmmoType	DmgType	DmgCritChance	AccuracyMult	DamageMult	BulletCastsPerShot	TargetBurningChance	TileBurningChance	TileToxicLiquidChance	PierceCreaturesChance	ThrowBackChance	StunChance	StunDuration							
+pistol_basic_ammo		10	0.01	1	60	Ballistic	10	20	Bullets	blunt	0.03	1	1	1	0	0	0	0	0.1	0	0							
+pistol_burst_ammo		20	0.01	1	60	Ballistic	10	20	Bullets	explosion	0.06	1	1.2	1	0.2	0.1	0	0	0.2	0	0							
+pistol_expansive_ammo		20	0.01	1	60	Ballistic	10	20	Bullets	lacer	0.16	1	1.4	1	0	0	0	0	0	0	0							
+*miner_bolts_ammo		1	0.01	1	60	Ballistic	10	20	Bolts	pierce	0.24	1	1	1	0	0	0	0.8	0	0	0							
+medium_basic_ammo		10	0.02	1	50	Ballistic	10	20	Medium	pierce	0.03	1	1	1	0	0	0	0.4	0	0	0							
+medium_police_ammo		10	0.02	1	50	Ballistic	10	20	Medium	blunt	0.06	1	1.2	1	0	0	0	0	0.25	0	0							
+shotgun_bullet_ammo		10	0.03	1	50	Ballistic	10	20	Shells	blunt	0.06	1	0.8	1	0	0	0	0.2	0.2	0	0							
+shotgun_shrapnel_ammo		10	0.03	1	50	Ballistic	10	20	Shells	lacer	0.16	1	2	4	0	0	0	0	0.05	0	0							
+shotgun_flechette_ammo		20	0.03	1	50	Ballistic	10	20	Shells	pierce	0.24	1	1.2	4	0	0	0	0.8	0	0	0							
+shotgun_dragon_ammo		20	0.03	1	50	Ballistic	10	20	Shells	fire	0.16	1	1.2	4	0.2	0.8	0	0	0.2	0	0							
+heavy_basic_ammo		10	0.02	1	40	Ballistic	10	20	Heavy	pierce	0.03	1	1	1	0	0	0	0.6	0	0	0							
+heavy_armorpierce_ammo		20	0.02	1	40	Ballistic	10	20	Heavy	pierce	0.05	1	1.2	1	0	0	0	0.95	0	0	0							
+battery_charge		30	0.02	1	40	Ballistic	10	20	BatteryCells	beam	0.06	1	1	1	0.2	0	0	0.7	0	0	0							
+battery_crafted_charge		1	0.02	1	40	Ballistic	10	20	BatteryCells	beam	0.02	1	0.8	1	0.1	0	0	0.5	0	0	0							
+*gas_ammo		1	0.02	1	40	Ballistic	10	20	Gas	fire	0	1	1	6	0.8	0.8	0	0	0	0	0							
+sawblade_ammo		2	0.04	1	20	Richoshet	10	20	SawBlade	lacer	0.16	1	1	1	0	0	0	0.85	0	0	0							
+quasi_basic_ammo		4	0.04	1	20	Ballistic	10	20	QuasiCells	poison	0.05	1	1	1	0	0	0	0.2	0	0	0							
+quasi_bolts_ammo		4	0.04	1	20	Ballistic	10	20	Bolts	pierce	1	1	1	1	0	0	0	1	0	0	0							
+quasi_energy_ammo		4	0.04	1	20	Ballistic	10	20	BatteryCells	plasma	0.3	1	1.4	1	1	0.4	0	0	0	0	0							
+toxic_ammo		1	0.01	1	60	Ballistic	10	20	Toxic	poison	0.08	1	1	1	0	0	0.25	0	0	0	0							
+implicted_em_ammo		100	1	1	0	Ballistic	0	0	Bolts	pierce	0.05	1	1	1	0	0	0	0.8	0	0	0							
+implicted_combat_knife		100	1	1	50	Ballistic	0	0		pierce	0.12	1	1	1	0	0	0	0	0	0	0							
+implicted_knife		100	1	1	50	Ballistic	0	0		pierce	0.05	1	1	1	0	0	0	0	0	0	0							
+implicted_club		100	1	1	50	Ballistic	0	0		blunt	0.06	1	1	1	0	0	0	0	0.3	0	0							
+implicted_shockclub		100	1	1	50	Ballistic	0	0		shock	0.1	1	1	1	0	0	0	0	0.3	0	0							
+implicted_shockgun		100	1	1	50	Ballistic	0	0		shock	0	1	1	1	0	0	0	0	0	0	0							
+implicted_coldgun		100	1	1	50	Ballistic	0	0	BatteryCells	cold	0.06	1	1	1	0	0	0	0	0	0	0							
+implicted_heavy_axe		100	1	1	50	Ballistic	0	0		lacer	0.03	1	1	1	0	0	0	0	0.6	0	0							
+implicted_katana		100	1	1	50	Ballistic	0	0		lacer	0.24	1	1	1	0	0	0	0	0	0	0							
+implicted_body_part		100	1	1	50	Ballistic	0	0		blunt	0.03	1	1	1	0	0	0	0	0.2	0	0							
+implicted_xiomara_range		100	1	1	50	Ballistic	0	0		poison	0	1	1	1	0	0	0	0	0	0	0							
+implicted_flamethrower		100	1	1	0	Flame	0	0		fire	0	1	1	1	1	0.8	0	0	0	0	0							
+implicted_sawblade		100	1	1	0	Ballistic	0	0		lacer	0.12	1	1	1	0	0	0	0	0	0	0							
+implicted_energy_shrapnel		100	1	1	50	Ballistic	10	20		plasma	0.06	1	1	4	0.8	0	0	0.4	0	0	0							
+implicted_plasma_shrapnel		100	1	1	50	Ballistic	10	20		plasma	0.06	1	1	4	0.8	0	0	0.4	0	0	0							
+implicted_plasma_charge		100	1	1	40	Ballistic	10	20		plasma	0.06	1	1	1	0.2	0	0	0.7	0	0	0							
+implicted_toxicthrower		100	1	1	0	ToxicFlame	0	0		poison	0	1	1	1	0	0	0.8	0	0	0	0							
+implicted_quasi_beam		100	1	1	20	Ballistic	10	20	QuasiCells	beam	0.05	1	1	1	0	0	0	0.2	0	0	0							
+#end																												
+																												
+#medkits																												
+Id		Price	Weight	InventoryWidthSize	MaxStack	RestoreHealthAmount	InstantHeal	IncreaseMaxHealthLevel	HealDuration	RestoreStarvationValue	QmorphosValue	CanFixWound	FixWeights	FixAllWounds	FixedResolutionPeriod	PainDecreaseAmount	HealSpecificWound	HealAllWounds	ActivatesEatMedsTrigger	StatusEffectApplyChance	StatusEffectProgression	FixAllWoundsChance						
+bandage		20	0.1	1	5	2	FALSE	0	10	0	0	TRUE	blunt 0 pierce 0.2 lacer 0.2 fire 0 beam 0 shock 0 poison 0 cold 0.2 explosion 0 plasma 0	FALSE	10	0	FALSE	FALSE	FALSE			0						
+medpack		100	0.5	1	5	15	FALSE	0	4	0	0	FALSE		TRUE	4	5	FALSE	FALSE	FALSE		infectionEffect -20 poisonEffect -20	0.2						
+morphine		200	0.05	1	5	0	TRUE	0	0	0	-100	FALSE		TRUE	10	5	FALSE	FALSE	TRUE	morphineAddiction 0.15		-0.45						
+splint		20	0.1	1	5	2	FALSE	0	10	0	0	TRUE	blunt 0.2 pierce 0 lacer 0 fire 0 beam 0 shock 0.2 poison 0 cold 0 explosion 0.2 plasma 0	FALSE	10	0	FALSE	FALSE	FALSE			0						
+antibiotics		100	0.01	1	10	0	TRUE	0	0	0	0	FALSE		FALSE	0	0	FALSE	FALSE	TRUE		infectionEffect -80 poisonEffect -40	0						
+antiradin		100	0.05	1	5	0	TRUE	0	0	0	0	FALSE		FALSE	0	0	FALSE	FALSE	TRUE		beamEffect -80	0						
+medicalClue		40	0.2	1	5	4	FALSE	0	6	0	0	TRUE	blunt 0 pierce 0.3 lacer 0.3 fire 0.3 beam 0 shock 0 poison 0 cold 0 explosion 0 plasma 0.3	FALSE	6	0	FALSE	FALSE	FALSE			0						
+naloxone		100	0.05	1	5	0	TRUE	0	0	0	0	FALSE		FALSE	0	2	FALSE	FALSE	TRUE		morphineAddiction -80 alcoholAddiction -50 gavaahAddiction -20	0						
+sorbent		20	0.04	1	10	0	TRUE	0	0	0	0	FALSE		FALSE	0	0	FALSE	FALSE	TRUE		alcoholAddiction -40 infectionEffect -40 poisonEffect -40	0						
+surgicalKit		108	4	1	1	80	TRUE	0	1	0	0	FALSE		FALSE	1	20	TRUE	FALSE	FALSE			0						
+stimpack_green		999	1	1	1	0	TRUE	0	0	0	0	FALSE		FALSE	0	0	FALSE	FALSE	FALSE			0						
+stimpack_purple		999	1	1	1	0	TRUE	0	0	0	0	FALSE		FALSE	0	0	FALSE	FALSE	FALSE			0						
+stimpack_red		999	1	1	1	0	TRUE	0	0	0	0	FALSE		FALSE	0	0	FALSE	FALSE	FALSE			0						
+stimpack_yellow		999	1	1	1	0	TRUE	0	0	0	0	FALSE		FALSE	0	0	FALSE	FALSE	FALSE			0						
+sigs_kosmos		40	0.1	1	5	0	TRUE	0	0	0	-100	FALSE		FALSE	0	0	FALSE	FALSE	FALSE	nicotineAddiction 0.15		0						
+rags		10	0.2	1	20	0	FALSE	0	20	0	0	TRUE	blunt 0 pierce 0.1 lacer 0.1 fire 0 beam 0 shock 0 poison 0 cold 0.1 explosion 0 plasma 0	FALSE	20	0	FALSE	FALSE	FALSE	infectionEffect 0.15		0						
+demonic_medicine		120	1	1	1	100	TRUE	0	0	1000	0	FALSE		FALSE	0	100	FALSE	TRUE	TRUE	gavaahAddiction 0.15		0						
+demonic_idol		120	2	1	1	0	FALSE	0	0	0	-600	FALSE		FALSE	0	0	FALSE	FALSE	FALSE	gavaahAddiction 0.15		0						
+antidote		100	0.05	1	5	0	FALSE	0	0	0	0	FALSE		FALSE	0	0	FALSE	FALSE	TRUE		poisonEffect -80 alcoholAddiction -40	0						
+bloodBag		50	0.7	1	5	10	FALSE	0	10	0	50	FALSE		FALSE	10	0	FALSE	FALSE	FALSE			0						
+painkillers		100	0.05	1	5	0	TRUE	0	0	0	0	FALSE		FALSE	0	20	FALSE	FALSE	TRUE		nicotineAddiction -50	0						
+aztec_rags		60	1	1	5	4	FALSE	0	10	0	100	TRUE	blunt 0 pierce 0.4 lacer 0.4 fire 0 beam 0 shock 0 poison 0.4 cold 0.4 explosion 0 plasma 0	FALSE	10	0	FALSE	FALSE	FALSE	poisonEffect 0.1		0						
+beer		40	0.5	1	5	0	FALSE	0	0	0	-25	FALSE		FALSE	0	1	FALSE	FALSE	FALSE	alcoholAddiction 0.1	coldEffect -10	0						
+vodka		100	1	1	2	0	FALSE	0	0	0	-100	FALSE		FALSE	0	1	FALSE	FALSE	FALSE	alcoholAddiction 0.2	coldEffect -50 beamEffect -20	0						
+wiskey		100	1	1	2	0	FALSE	0	0	0	-100	FALSE		FALSE	0	1	FALSE	FALSE	FALSE	alcoholAddiction 0.2	coldEffect -50 beamEffect -20	0						
+armagnac		100	1	1	2	0	FALSE	0	0	0	-100	FALSE		FALSE	0	1	FALSE	FALSE	FALSE	alcoholAddiction 0.2	coldEffect -50 beamEffect -20	0						
+meat1		1	1	1	5	0	FALSE	0	0	0	100	FALSE		FALSE	0	0	FALSE	FALSE	FALSE	infectionEffect 0.2		0						
+spider_meat		1	1	1	5	0	FALSE	0	0	0	100	FALSE		FALSE	0	0	FALSE	FALSE	FALSE	poisonEffect 0.2		0						
+furuncle		40	1	1	5	0	FALSE	5	0	0	100	FALSE		FALSE	0	0	FALSE	FALSE	FALSE	infectionEffect 0.2		0						
+spider_soup		2	1	1	5	0	FALSE	0	0	0	0	FALSE		FALSE	0	0	FALSE	FALSE	FALSE			0						
+slanina		1	1	1	5	0	FALSE	0	0	0	100	FALSE		FALSE	0	0	FALSE	FALSE	FALSE			0						
+roastedMeat		1	1	1	5	0	FALSE	0	0	0	100	FALSE		FALSE	0	0	FALSE	FALSE	FALSE			0						
+rottenMeat		1	1.2	1	5	0	FALSE	0	0	0	0	FALSE		FALSE	0	0	FALSE	FALSE	FALSE	infectionEffect 0.2		0						
+nanoinjection		200	0.2	1	5	8	FALSE	0	6	0	0	TRUE	blunt 0 pierce 0 lacer 0 fire 0.4 beam 0.4 shock 0.4 poison 0 cold 0 explosion 0 plasma 0.4	FALSE	6	2	FALSE	FALSE	TRUE		shockEffect -80	0						
+plaster		40	0.5	1	5	4	FALSE	0	6	0	0	TRUE	blunt 0.3 pierce 0 lacer 0 fire 0 beam 0 shock 0.3 poison 0 cold 0 explosion 0.3 plasma 0	FALSE	6	0	FALSE	FALSE	FALSE			0						
+military_kit		200	0.7	1	5	20	FALSE	0	4	0	0	FALSE		TRUE	4	10	FALSE	FALSE	FALSE		infectionEffect -30 poisonEffect -30	0.3						
+#end																												
+																												
+#food																												
+Id		Price	Weight	InventoryWidthSize	MaxStack	RestoreStarvationValue	RestoreHealthValue	GarbageItemId	ActivatesCanibalizm	DrunkEffectChance	RemovesFire																	
+blueSoda		1	0.3	1	5	300	0	tin	FALSE	0	TRUE																	
+cannedMeat		20	0.6	1	2	1200	0	tin	FALSE	0	FALSE																	
+cannedVeg		20	0.4	1	2	600	0	tin	FALSE	0	FALSE																	
+chocolateBar		1	0.08	1	10	150	0	plastic	FALSE	0	FALSE																	
+*meat1		1	1	1	5	400	-10	human_rib	TRUE	0	FALSE																	
+*rottenMeat		1	1.2	1	5	400	-25	human_rib	TRUE	0	FALSE																	
+*roastedMeat		1	0.7	1	5	500	0	human_rib	TRUE	0	FALSE																	
+mre_pack		200	0.6	1	2	1800	0	plastic	FALSE	0	FALSE																	
+packedGoodRation		4	0.28	1	5	450	0	plastic	FALSE	0	FALSE																	
+packedRation		4	0.24	1	5	450	0	plastic	FALSE	0	FALSE																	
+redSoda		1	0.3	1	5	300	0	tin	FALSE	0	TRUE																	
+water		1	0.5	1	5	0	10	plastic	FALSE	0	TRUE																	
+*beer		4	0.5	1	5	400	0	tin	FALSE	0.5	TRUE																	
+burgerMeat		5	0.34	1	5	500	0	plastic	FALSE	0	FALSE																	
+burgerVeg		5	0.24	1	5	450	0	plastic	FALSE	0	FALSE																	
+synthChicken		2	0.2	1	5	350	0	plastic	FALSE	0	FALSE																	
+synthBeef		2	0.2	1	5	400	0	plastic	FALSE	0	FALSE																	
+rocketCandy		100	0.01	1	10	100	0	plastic	FALSE	0	FALSE																	
+*vodka		10	1	1	2	900	0	glassBottle	FALSE	1	FALSE																	
+*wiskey		10	1	1	2	900	0	glassBottle	FALSE	1	FALSE																	
+*armagnac		10	1	1	2	900	0	glassBottle	FALSE	1	FALSE																	
+*spider_meat		1	1	1	5	400	-10		FALSE	0	FALSE																	
+*furuncle		40	1	1	5	300	0		TRUE	0	FALSE																	
+*spider_soup		2	0.6	1	5	600	-5	tin	FALSE	0	TRUE																	
+*slanina		1	0.4	1	5	500	0		TRUE	0	FALSE																	
+caviar		60	0.4	1	5	500	0	tin	FALSE	0	FALSE																	
+wagyu_steak		60	0.4	1	5	500	0	plastic	FALSE	0	FALSE																	
+truffle_oil		40	0.4	1	5	500	0	glassBottle	FALSE	0	TRUE																	
+tuna_steak		60	0.4	1	5	500	0	plastic	FALSE	0	FALSE																	
+watermelon_slice		20	0.4	1	5	500	0		FALSE	0	FALSE																	
+#end																												
+																												
+#backpacks																												
+Id		Price	Weight	InventoryWidthSize	Width	Height	DropChanceOnBroken	MaxDurability	MinDurabilityAfterRepair	Unbreakable	RepairCategory	AddServoArm	TotalItemsWeightMult	ReloadTurnBonus														
+small_backpack		20	1	1	6	2	0.08	100	0	FALSE	cloth	FALSE	0.6	0														
+medium_backpack		500	2	1	6	3	0.08	150	0	FALSE	cloth	FALSE	0.8	0														
+big_backpack		1500	4	1	6	4	0.08	200	0	FALSE	cloth	FALSE	1	0														
+servo_backpack		500	3	1	6	2	0.08	200	0	FALSE	engineering_weapon	TRUE	0.5	1														
+#end																												
+																												
+#vests																												
+Id		Price	Weight	InventoryWidthSize	SlotCapacity	ReloadTurnBonus	DropChanceOnBroken	MaxDurability	MinDurabilityAfterRepair	Unbreakable	RepairCategory	ResistSheet																
+pmc_vest		800	4	1	3	2	0.08	150	0	FALSE	cloth	blunt 0 pierce 0 lacer 0 fire 4 cold 0 poison 0 shock 0 beam 4																
+pmc_vest_armored		1000	5	1	3	2	0.08	200	0	FALSE	armor	blunt 8 pierce 8 lacer 0 fire 8 cold 0 poison 0 shock 0 beam 8																
+bandit_vest		20	1	1	2	0	0.08	60	0	FALSE	cloth	blunt 0 pierce 0 lacer 0 fire 0 cold 2 poison 0 shock 0 beam 0																
+bandit_vest_armored		40	3	1	2	0	0.08	60	0	FALSE	trash_armor	blunt 6 pierce 6 lacer 0 fire 0 cold 4 poison 0 shock 0 beam 0																
+army_vest		500	2	1	2	1	0.08	100	0	FALSE	cloth	blunt 0 pierce 0 lacer 0 fire 0 cold 0 poison 0 shock 0 beam 0																
+cevlar_vest		500	3	1	1	0	0.08	150	0	FALSE	armor	blunt 0 pierce 8 lacer 8 fire 0 cold 0 poison 0 shock 0 beam 4																
+cevlar_vest_pockets		800	4	1	2	0	0.08	150	0	FALSE	armor	blunt 0 pierce 8 lacer 8 fire 0 cold 0 poison 0 shock 0 beam 6																
+ceramit_vest		1600	6	1	1	0	0.08	200	0	FALSE	heavy_armor	blunt 10 pierce 10 lacer 10 fire 0 cold 0 poison 0 shock 8 beam 8																
+snake_belt		400	1	1	1	0	0.08	50	0	FALSE	cloth	blunt 0 pierce 0 lacer 0 fire 0 cold 0 poison 10 shock 0 beam 0																
+#end																												
+																												
+#armors																												
+Id		Price	Weight	InventoryWidthSize	MaxDurability	MinDurabilityAfterRepair	Unbreakable	RepairCategory	ResistSheet																			
+doom_armor		800	6.5	1	250	0	FALSE	heavy_armor	blunt 14 pierce 14 lacer 10 fire 10 cold 0 poison 0 shock 0 beam 0																			
+ancom_armor		1000	4.6	1	180	0	FALSE	heavy_armor	blunt 16 pierce 0 lacer 16 fire 16 cold 16 poison 0 shock 16 beam 16																			
+bandit_armor		20	1.8	1	80	0	FALSE	trash_armor	blunt 2 pierce 4 lacer 4 fire 0 cold 0 poison 0 shock 0 beam 0																			
+civres_armor		800	4.8	1	200	0	FALSE	armor	blunt 6 pierce 6 lacer 12 fire 12 cold 0 poison 0 shock 0 beam 10																			
+cultist_armor		999	4	1	100	0	FALSE	armor	blunt 1 pierce 0 lacer 1 fire 0 cold 0 poison 0 shock 0 beam 4																			
+power_armor		800	5.3	1	160	0	FALSE	armor	blunt 14 pierce 0 lacer 14 fire 10 cold 10 poison 0 shock 0 beam 14																			
+realwear_armor		1000	4.7	1	200	0	FALSE	heavy_armor	blunt 16 pierce 16 lacer 16 fire 16 cold 16 poison 0 shock 0 beam 16																			
+smuggler_armor		400	2.6	1	90	0	FALSE	armor	blunt 0 pierce 8 lacer 8 fire 6 cold 0 poison 0 shock 0 beam 6																			
+solnet_armor		800	4.5	1	190	0	FALSE	heavy_armor	blunt 0 pierce 10 lacer 0 fire 16 cold 12 poison 12 shock 12 beam 16																			
+worker_armor		600	3.1	1	100	0	FALSE	armor	blunt 6 pierce 0 lacer 6 fire 8 cold 0 poison 6 shock 0 beam 8																			
+pmc_armor		400	3.7	1	100	0	FALSE	armor	blunt 8 pierce 8 lacer 8 fire 6 cold 4 poison 0 shock 0 beam 0																			
+security_armor		600	4	1	100	0	FALSE	armor	blunt 8 pierce 8 lacer 6 fire 0 cold 0 poison 0 shock 8 beam 6																			
+rw_militia_vest		100	1.6	1	80	0	FALSE	armor	blunt 4 pierce 4 lacer 6 fire 0 cold 4 poison 0 shock 0 beam 0																			
+rw_warlord_armor		1000	6.8	1	250	0	FALSE	heavy_armor	blunt 19 pierce 19 lacer 19 fire 19 cold 19 poison 0 shock 0 beam 19																			
+svn_cap_vest		100	1.2	1	70	0	FALSE	armor	blunt 0 pierce 0 lacer 2 fire 4 cold 4 poison 0 shock 0 beam 4																			
+svn_heavy_armor		800	6.4	1	250	0	FALSE	heavy_armor	blunt 16 pierce 16 lacer 0 fire 10 cold 0 poison 0 shock 10 beam 14																			
+daydream_chem_vest		200	3.4	1	90	0	FALSE	cloth	blunt 0 pierce 0 lacer 0 fire 6 cold 0 poison 10 shock 0 beam 6																			
+daydream_armored_vest		400	4.4	1	160	0	FALSE	armor	blunt 0 pierce 6 lacer 6 fire 6 cold 0 poison 10 shock 0 beam 6																			
+sl_power_armor		1000	4.5	1	200	0	FALSE	heavy_armor	blunt 0 pierce 16 lacer 0 fire 16 cold 16 poison 16 shock 16 beam 16																			
+mercury_armor		1000	2.9	1	80	0	FALSE		blunt 0 pierce 6 lacer 7 fire 10 cold 0 poison 10 shock 0 beam 10																			
+ancom_police_armor		400	3.1	1	100	0	FALSE	armor	blunt 10 pierce 10 lacer 10 fire 4 cold 0 poison 0 shock 4 beam 0																			
+ancom_agent_armor		600	2	1	100	0	FALSE	armor	blunt 0 pierce 0 lacer 0 fire 14 cold 14 poison 10 shock 12 beam 14																			
+church_priest_shirt		100	2.8	1	100	0	FALSE	cloth	blunt 0 pierce 0 lacer 10 fire 8 cold 6 poison 4 shock 0 beam 6																			
+church_power_armor		1000	5	1	160	0	FALSE	armor	blunt 0 pierce 16 lacer 16 fire 16 cold 16 poison 16 shock 0 beam 16																			
+pb_vest		100	1.2	1	60	0	FALSE	cloth	blunt 4 pierce 2 lacer 4 fire 2 cold 4 poison 0 shock 0 beam 0																			
+pb_heavy_armor		600	5.5	1	170	0	FALSE	armor	blunt 12 pierce 10 lacer 12 fire 0 cold 0 poison 0 shock 0 beam 0																			
+franch_heavy_armor		600	4.9	1	200	0	FALSE	heavy_armor	blunt 14 pierce 14 lacer 12 fire 0 cold 0 poison 0 shock 0 beam 0																			
+moon_heavy_armor		100	5.9	1	180	0	FALSE	moon_armor	blunt 13 pierce 13 lacer 4 fire 8 cold 0 poison 0 shock 9 beam 0																			
+moon_armor		100	4	1	90	0	FALSE	moon_armor	blunt 9 pierce 9 lacer 4 fire 7 cold 0 poison 0 shock 6 beam 0																			
+core_hard_vest		100	1.3	1	60	0	FALSE	cloth	blunt 4 pierce 2 lacer 0 fire 2 cold 4 poison 0 shock 0 beam 4																			
+core_power_armor		1000	7.2	1	250	0	FALSE	heavy_armor	blunt 14 pierce 14 lacer 14 fire 10 cold 10 poison 0 shock 0 beam 0																			
+employee_vest		100	1.4	1	50	0	FALSE	cloth	blunt 4 pierce 0 lacer 2 fire 2 cold 4 poison 0 shock 2 beam 0																			
+spider_armor		20	3.2	1	90	0	FALSE		blunt 4 pierce 0 lacer 4 fire 0 cold 0 poison 4 shock 0 beam 4																			
+jackal_armor		400	1.9	1	80	0	FALSE	trash_armor	blunt 4 pierce 6 lacer 4 fire 2 cold 4 poison 0 shock 0 beam 0																			
+green_tshirt		10	0.3	1	40	0	FALSE	cloth	blunt 0 pierce 0 lacer 0 fire 0 cold 2 poison 0 shock 0 beam 0																			
+green_vest		10	1.8	1	50	0	FALSE	cloth	blunt 2 pierce 2 lacer 2 fire 2 cold 4 poison 0 shock 0 beam 0																			
+blue_tshirt		10	0.3	1	40	0	FALSE	cloth	blunt 0 pierce 0 lacer 0 fire 0 cold 2 poison 0 shock 0 beam 0																			
+prison_tshirt		10	1.3	1	50	0	FALSE	cloth	blunt 0 pierce 0 lacer 0 fire 4 cold 0 poison 2 shock 0 beam 0																			
+singlet_shirt		10	0.1	1	30	0	FALSE	cloth	blunt 0 pierce 0 lacer 0 fire 0 cold 1 poison 0 shock 0 beam 0																			
+scientist_shirt		10	1.6	1	40	0	FALSE	cloth	blunt 0 pierce 0 lacer 0 fire 4 cold 4 poison 4 shock 0 beam 4																			
+hyber_shirt		10	0.5	1	40	0	FALSE	cloth	blunt 0 pierce 0 lacer 0 fire 0 cold 0 poison 0 shock 0 beam 0																			
+azt_light_armor		100	1.1	1	70	0	FALSE	venus_armor	blunt 4 pierce 0 lacer 7 fire 0 cold 6 poison 12 shock 0 beam 0																			
+azt_heavy_armor		100	2.2	1	90	0	FALSE	venus_armor	blunt 12 pierce 0 lacer 9 fire 0 cold 4 poison 10 shock 0 beam 0																			
+#end																												
+																												
+#helmets																												
+Id		Price	Weight	InventoryWidthSize	MaxDurability	MinDurabilityAfterRepair	Unbreakable	RepairCategory	ResistSheet																			
+doom_helmet		800	3.2	1	230	0	FALSE	heavy_armor	blunt 10 pierce 10 lacer 10 fire 10 cold 0 poison 0 shock 0 beam 0																			
+ancom_helmet		1000	2.5	1	160	0	FALSE	heavy_armor	blunt 14 pierce 0 lacer 14 fire 14 cold 14 poison 0 shock 14 beam 14																			
+bandit_helmet		40	0.9	1	60	0	FALSE	trash_armor	blunt 2 pierce 4 lacer 4 fire 0 cold 0 poison 2 shock 0 beam 0																			
+civres_helmet		800	2.6	1	180	0	FALSE	armor	blunt 6 pierce 4 lacer 10 fire 10 cold 0 poison 0 shock 0 beam 8																			
+cultist_helmet		999	3	1	100	0	FALSE	armor	blunt 1 pierce 0 lacer 1 fire 0 cold 0 poison 0 shock 0 beam 4																			
+power_helmet		800	2.4	1	150	0	FALSE	armor	blunt 12 pierce 0 lacer 12 fire 10 cold 10 poison 0 shock 0 beam 12																			
+realwear_helmet		1000	2.6	1	170	0	FALSE	heavy_armor	blunt 14 pierce 14 lacer 14 fire 14 cold 14 poison 0 shock 0 beam 14																			
+smuggler_helmet		400	1.5	1	80	0	FALSE	armor	blunt 0 pierce 4 lacer 4 fire 4 cold 0 poison 0 shock 0 beam 4																			
+solnet_helmet		800	2.4	1	180	0	FALSE	heavy_armor	blunt 0 pierce 8 lacer 0 fire 14 cold 12 poison 10 shock 10 beam 14																			
+worker_helmet		600	1.9	1	90	0	FALSE	armor	blunt 6 pierce 0 lacer 6 fire 6 cold 0 poison 4 shock 0 beam 6																			
+pmc_helmet		400	1.6	1	90	0	FALSE	armor	blunt 8 pierce 6 lacer 6 fire 4 cold 4 poison 0 shock 0 beam 0																			
+rw_militia_helmet		600	1	1	70	0	FALSE	armor	blunt 6 pierce 4 lacer 6 fire 0 cold 2 poison 0 shock 0 beam 0																			
+rw_warlord_helmet		1000	3.6	1	250	0	FALSE	heavy_armor	blunt 16 pierce 16 lacer 16 fire 16 cold 16 poison 0 shock 0 beam 16																			
+svn_cap_hat		100	0.5	1	60	0	FALSE	cloth	blunt 0 pierce 0 lacer 2 fire 4 cold 4 poison 0 shock 0 beam 4																			
+svn_heavy_helmet		800	3.1	1	250	0	FALSE	heavy_armor	blunt 14 pierce 14 lacer 0 fire 10 cold 0 poison 0 shock 10 beam 12																			
+daydream_chem_helmet		200	2	1	80	0	FALSE	cloth	blunt 0 pierce 0 lacer 0 fire 6 cold 0 poison 12 shock 0 beam 6																			
+daydream_armored_helmet		400	2.2	1	150	0	FALSE	armor	blunt 0 pierce 6 lacer 6 fire 6 cold 0 poison 12 shock 0 beam 6																			
+sl_power_helmet		1000	2.8	1	190	0	FALSE	heavy_armor	blunt 0 pierce 14 lacer 0 fire 14 cold 14 poison 14 shock 14 beam 14																			
+mercury_diadema		100	1.3	1	70	0	FALSE		blunt 0 pierce 4 lacer 4 fire 10 cold 0 poison 10 shock 0 beam 10																			
+ancom_police_mask		400	1.8	1	100	0	FALSE	armor	blunt 8 pierce 8 lacer 8 fire 4 cold 0 poison 0 shock 4 beam 0																			
+ancom_agent_mask		600	1.2	1	90	0	FALSE	armor	blunt 0 pierce 0 lacer 0 fire 12 cold 12 poison 10 shock 14 beam 14																			
+church_priest_helmet		100	1.7	1	90	0	FALSE	armor	blunt 0 pierce 0 lacer 2 fire 4 cold 6 poison 6 shock 0 beam 10																			
+church_power_helmet		1000	2.2	1	150	0	FALSE	armor	blunt 0 pierce 14 lacer 14 fire 14 cold 14 poison 14 shock 0 beam 14																			
+church_head_device		100	0.5	1	20	0	FALSE		blunt 0 pierce 0 lacer 0 fire 0 cold 0 poison 0 shock 0 beam 0																			
+pb_hard_hat		200	1	1	50	0	FALSE	trash_armor	blunt 4 pierce 0 lacer 4 fire 0 cold 0 poison 0 shock 0 beam 0																			
+pb_heavy_helmet		600	2.6	1	160	0	FALSE	armor	blunt 10 pierce 8 lacer 10 fire 0 cold 0 poison 0 shock 0 beam 0																			
+franch_helmet		400	1.7	1	90	0	FALSE	armor	blunt 8 pierce 6 lacer 6 fire 0 cold 0 poison 0 shock 8 beam 6																			
+franch_heavy_mask		600	2.7	1	200	0	FALSE	heavy_armor	blunt 12 pierce 12 lacer 12 fire 0 cold 0 poison 0 shock 0 beam 0																			
+moon_helmet		100	1.8	1	80	0	FALSE	moon_armor	blunt 7 pierce 7 lacer 4 fire 5 cold 0 poison 0 shock 3 beam 0																			
+core_hard_hat		200	0.9	1	50	0	FALSE	trash_armor	blunt 4 pierce 0 lacer 0 fire 0 cold 0 poison 0 shock 0 beam 4																			
+core_power_helmet		1000	3.9	1	240	0	FALSE	heavy_armor	blunt 12 pierce 12 lacer 12 fire 10 cold 10 poison 0 shock 0 beam 0																			
+employee_hat		100	0.2	1	40	0	FALSE	cloth	blunt 2 pierce 0 lacer 2 fire 0 cold 0 poison 0 shock 2 beam 0																			
+spider_hemlet		20	1.5	1	80	0	FALSE		blunt 6 pierce 0 lacer 4 fire 0 cold 0 poison 2 shock 0 beam 4																			
+jackal_helmet		400	0.8	1	70	0	FALSE	trash_armor	blunt 2 pierce 2 lacer 2 fire 0 cold 0 poison 12 shock 0 beam 0																			
+balaklava		10	0.2	1	20	0	FALSE	cloth	blunt 0 pierce 0 lacer 0 fire 0 cold 4 poison 0 shock 0 beam 0																			
+azt_plum_helmet		100	0.6	1	60	0	FALSE	venus_armor	blunt 8 pierce 7 lacer 0 fire 0 cold 4 poison 8 shock 0 beam 0																			
+azt_mask		100	1.2	1	80	0	FALSE	venus_armor	blunt 12 pierce 9 lacer 0 fire 0 cold 4 poison 8 shock 0 beam 0																			
+christmas_hat		100	0.2	1	50	0	FALSE	cloth	blunt 1 pierce 0 lacer 1 fire 0 cold 6 poison 0 shock 0 beam 0																			
+#end																												
+																												
+#leggings																												
+Id		Price	Weight	InventoryWidthSize	MaxDurability	MinDurabilityAfterRepair	Unbreakable	RepairCategory	ResistSheet																			
+doom_pants		800	6.1	1	250	0	FALSE	heavy_armor	blunt 14 pierce 14 lacer 10 fire 10 cold 0 poison 0 shock 0 beam 0																			
+ancom_pants		1000	4.2	1	180	0	FALSE	heavy_armor	blunt 16 pierce 0 lacer 16 fire 16 cold 16 poison 0 shock 16 beam 16																			
+bandit_pants		20	1.7	1	80	0	FALSE	trash_armor	blunt 2 pierce 4 lacer 4 fire 0 cold 0 poison 2 shock 0 beam 0																			
+civres_pants		800	4.4	1	190	0	FALSE	armor	blunt 6 pierce 6 lacer 12 fire 12 cold 0 poison 0 shock 0 beam 12																			
+cultist_pants		999	4	1	100	0	FALSE	armor	blunt 1 pierce 0 lacer 1 fire 0 cold 0 poison 0 shock 0 beam 4																			
+power_pants		800	5.1	1	160	0	FALSE	armor	blunt 14 pierce 0 lacer 14 fire 10 cold 10 poison 0 shock 0 beam 14																			
+realwear_pants		1000	4.3	1	200	0	FALSE	heavy_armor	blunt 16 pierce 16 lacer 16 fire 16 cold 16 poison 0 shock 0 beam 16																			
+smuggler_pants		400	2.2	1	90	0	FALSE	armor	blunt 0 pierce 8 lacer 8 fire 6 cold 0 poison 0 shock 0 beam 6																			
+solnet_pants		800	4.1	1	190	0	FALSE	heavy_armor	blunt 0 pierce 10 lacer 0 fire 16 cold 12 poison 12 shock 12 beam 16																			
+worker_pants		600	3	1	100	0	FALSE	armor	blunt 6 pierce 0 lacer 6 fire 6 cold 0 poison 6 shock 0 beam 8																			
+pmc_pants		1000	3.5	1	100	0	FALSE	armor	blunt 8 pierce 8 lacer 8 fire 6 cold 4 poison 0 shock 0 beam 0																			
+rw_militia_pants		100	1.6	1	80	0	FALSE	cloth	blunt 4 pierce 4 lacer 6 fire 0 cold 4 poison 0 shock 0 beam 0																			
+rw_warlord_pants		1000	6.4	1	250	0	FALSE	heavy_armor	blunt 19 pierce 19 lacer 19 fire 19 cold 19 poison 0 shock 0 beam 19																			
+svn_cap_pants		100	1.3	1	70	0	FALSE	cloth	blunt 0 pierce 0 lacer 2 fire 4 cold 4 poison 0 shock 0 beam 4																			
+svn_heavy_pants		800	6	1	250	0	FALSE	heavy_armor	blunt 16 pierce 16 lacer 0 fire 10 cold 0 poison 0 shock 10 beam 14																			
+daydream_chem_pants		200	3.2	1	90	0	FALSE	cloth	blunt 0 pierce 0 lacer 0 fire 6 cold 0 poison 10 shock 0 beam 6																			
+daydream_armored_pants		400	4	1	160	0	FALSE	armor	blunt 0 pierce 4 lacer 4 fire 6 cold 0 poison 10 shock 0 beam 6																			
+sl_power_pants		1000	4.8	1	200	0	FALSE	heavy_armor	blunt 0 pierce 16 lacer 0 fire 16 cold 16 poison 16 shock 16 beam 16																			
+ancom_police_pants		400	3.2	1	100	0	FALSE	armor	blunt 10 pierce 10 lacer 10 fire 4 cold 0 poison 0 shock 4 beam 0																			
+ancom_agent_pants		600	1.8	1	100	0	FALSE	armor	blunt 0 pierce 0 lacer 0 fire 14 cold 14 poison 10 shock 12 beam 14																			
+church_priest_pants		100	2.4	1	100	0	FALSE	cloth	blunt 0 pierce 0 lacer 10 fire 8 cold 6 poison 4 shock 0 beam 6																			
+church_power_pants		1000	4.9	1	160	0	FALSE	armor	blunt 0 pierce 16 lacer 16 fire 16 cold 16 poison 16 shock 0 beam 16																			
+pb_pants		100	1.6	1	60	0	FALSE	cloth	blunt 4 pierce 2 lacer 4 fire 2 cold 4 poison 0 shock 0 beam 0																			
+pb_heavy_pants		600	5.3	1	170	0	FALSE	armor	blunt 12 pierce 10 lacer 12 fire 0 cold 0 poison 0 shock 0 beam 0																			
+franch_pants		400	3.6	1	100	0	FALSE	armor	blunt 8 pierce 8 lacer 6 fire 0 cold 0 poison 0 shock 8 beam 6																			
+franch_heavy_pants		600	4.8	1	200	0	FALSE	heavy_armor	blunt 14 pierce 14 lacer 12 fire 0 cold 0 poison 0 shock 0 beam 0																			
+moon_pants		100	3.5	1	90	0	FALSE	moon_armor	blunt 9 pierce 9 lacer 4 fire 7 cold 0 poison 0 shock 6 beam 0																			
+core_hard_pants		100	1.7	1	60	0	FALSE	cloth	blunt 4 pierce 2 lacer 0 fire 2 cold 4 poison 0 shock 0 beam 4																			
+core_power_pants		1000	7.1	1	250	0	FALSE	heavy_armor	blunt 14 pierce 14 lacer 14 fire 10 cold 10 poison 0 shock 0 beam 0																			
+employee_pants		100	1.5	1	50	0	FALSE	cloth	blunt 4 pierce 0 lacer 2 fire 2 cold 4 poison 0 shock 2 beam 0																			
+spider_pants		20	3.1	1	90	0	FALSE		blunt 4 pierce 0 lacer 4 fire 0 cold 0 poison 4 shock 0 beam 4																			
+jackal_pants		200	1.8	1	80	0	FALSE	cloth	blunt 4 pierce 6 lacer 4 fire 2 cold 4 poison 0 shock 0 beam 0																			
+blue_pants		10	0.5	1	30	0	FALSE	cloth	blunt 0 pierce 0 lacer 0 fire 0 cold 2 poison 0 shock 0 beam 0																			
+brown_pants		10	0.5	1	30	0	FALSE	cloth	blunt 0 pierce 0 lacer 0 fire 0 cold 2 poison 0 shock 0 beam 0																			
+yellow_pants		10	0.4	1	30	0	FALSE	cloth	blunt 0 pierce 0 lacer 0 fire 0 cold 2 poison 0 shock 0 beam 0																			
+dark_pants		10	1.4	1	50	0	FALSE	cloth	blunt 0 pierce 0 lacer 0 fire 0 cold 2 poison 0 shock 0 beam 0																			
+prison_pants		10	1.2	1	50	0	FALSE	cloth	blunt 0 pierce 0 lacer 0 fire 4 cold 0 poison 2 shock 0 beam 0																			
+hyber_pants		10	0.6	1	40	0	FALSE	cloth	blunt 0 pierce 0 lacer 0 fire 0 cold 0 poison 0 shock 0 beam 0																			
+azt_linecloth		100	1.1	1	70	0	FALSE	venus_armor	blunt 4 pierce 0 lacer 9 fire 0 cold 6 poison 12 shock 0 beam 0																			
+#end																												
+																												
+#boots																												
+Id		Price	Weight	InventoryWidthSize	MaxDurability	MinDurabilityAfterRepair	Unbreakable	RepairCategory	ResistSheet																			
+doom_boots		800	4.1	1	230	0	FALSE	heavy_armor	blunt 10 pierce 10 lacer 10 fire 10 cold 0 poison 10 shock 0 beam 0																			
+ancom_boots		1000	2.2	1	160	0	FALSE	heavy_armor	blunt 14 pierce 0 lacer 14 fire 14 cold 14 poison 0 shock 14 beam 14																			
+bandit_boots		20	0.8	1	70	0	FALSE	trash_armor	blunt 2 pierce 4 lacer 2 fire 0 cold 0 poison 2 shock 0 beam 0																			
+civres_boots		800	2.5	1	180	0	FALSE	armor	blunt 4 pierce 4 lacer 10 fire 10 cold 0 poison 0 shock 0 beam 8																			
+cultist_boots		999	3	1	100	0	FALSE	armor	blunt 1 pierce 0 lacer 1 fire 0 cold 0 poison 0 shock 0 beam 4																			
+power_boots		800	2.2	1	150	0	FALSE	armor	blunt 12 pierce 0 lacer 12 fire 12 cold 10 poison 0 shock 0 beam 12																			
+realwear_boots		1000	2.3	1	170	0	FALSE	heavy_armor	blunt 14 pierce 14 lacer 14 fire 14 cold 14 poison 0 shock 0 beam 14																			
+smuggler_boots		400	1.7	1	80	0	FALSE	armor	blunt 0 pierce 4 lacer 4 fire 0 cold 0 poison 6 shock 0 beam 4																			
+solnet_boots		800	2.1	1	180	0	FALSE	heavy_armor	blunt 0 pierce 8 lacer 0 fire 14 cold 10 poison 10 shock 10 beam 14																			
+worker_boots		600	1.8	1	90	0	FALSE	armor	blunt 6 pierce 0 lacer 6 fire 8 cold 0 poison 4 shock 0 beam 6																			
+pmc_boots		200	1.9	1	90	0	FALSE	armor	blunt 6 pierce 6 lacer 6 fire 4 cold 4 poison 0 shock 0 beam 0																			
+rw_warlord_boots		1000	3.4	1	250	0	FALSE	heavy_armor	blunt 16 pierce 16 lacer 16 fire 16 cold 16 poison 0 shock 0 beam 16																			
+svn_heavy_boots		800	4	1	250	0	FALSE	heavy_armor	blunt 14 pierce 14 lacer 0 fire 10 cold 0 poison 0 shock 10 beam 12																			
+daydream_chem_boots		200	1.9	1	80	0	FALSE	cloth	blunt 0 pierce 0 lacer 0 fire 4 cold 0 poison 8 shock 0 beam 4																			
+sl_power_boots		1000	2.9	1	190	0	FALSE	heavy_armor	blunt 0 pierce 14 lacer 0 fire 14 cold 14 poison 14 shock 14 beam 14																			
+ancom_police_boots		400	1.6	1	100	0	FALSE	armor	blunt 8 pierce 8 lacer 8 fire 4 cold 0 poison 0 shock 4 beam 0																			
+ancom_agent_boots		600	1.2	1	90	0	FALSE	armor	blunt 0 pierce 0 lacer 0 fire 12 cold 12 poison 12 shock 10 beam 12																			
+church_priest_boots		200	1.6	1	90	0	FALSE	armor	blunt 0 pierce 0 lacer 4 fire 4 cold 6 poison 10 shock 0 beam 4																			
+church_power_boots		1000	2	1	150	0	FALSE	armor	blunt 0 pierce 14 lacer 14 fire 14 cold 14 poison 14 shock 0 beam 14																			
+pb_boots		100	0.9	1	50	0	FALSE	trash_armor	blunt 4 pierce 2 lacer 0 fire 0 cold 2 poison 2 shock 0 beam 0																			
+pb_heavy_boots		600	2.4	1	160	0	FALSE	armor	blunt 10 pierce 8 lacer 10 fire 0 cold 0 poison 4 shock 0 beam 0																			
+franch_boots		400	2	1	90	0	FALSE	armor	blunt 6 pierce 8 lacer 8 fire 0 cold 0 poison 0 shock 6 beam 4																			
+franch_heavy_boots		600	2.8	1	200	0	FALSE	heavy_armor	blunt 12 pierce 12 lacer 12 fire 0 cold 0 poison 10 shock 0 beam 0																			
+moon_boots		100	1.8	1	80	0	FALSE	moon_armor	blunt 7 pierce 8 lacer 3 fire 6 cold 0 poison 0 shock 3 beam 0																			
+common_boots		100	1	1	50	0	FALSE	cloth	blunt 2 pierce 0 lacer 0 fire 0 cold 2 poison 2 shock 2 beam 0																			
+core_power_boots		1000	3.8	1	240	0	FALSE	heavy_armor	blunt 12 pierce 12 lacer 12 fire 12 cold 10 poison 0 shock 0 beam 0																			
+spider_boots		10	1.6	1	80	0	FALSE		blunt 2 pierce 0 lacer 2 fire 0 cold 0 poison 6 shock 0 beam 2																			
+jackal_boots		100	1	1	70	0	FALSE	trash_armor	blunt 2 pierce 2 lacer 4 fire 0 cold 2 poison 4 shock 0 beam 0																			
+blue_boots		10	0.4	1	30	0	FALSE	cloth	blunt 0 pierce 0 lacer 0 fire 0 cold 2 poison 2 shock 0 beam 0																			
+broun_boots		10	0.4	1	30	0	FALSE	cloth	blunt 0 pierce 0 lacer 0 fire 0 cold 2 poison 2 shock 0 beam 0																			
+azt_boots		100	0.7	1	60	0	FALSE	venus_armor	blunt 4 pierce 0 lacer 7 fire 0 cold 4 poison 8 shock 0 beam 0																			
+#end																												
+																												
+#repairs																												
+Id		Price	Weight	InventoryWidthSize	MaxStack	RestoreAmount	ReduceMaxCapacity	RepairCategories	RestoreMaxCapacity																			
+armor_shards		2	1	1	10	30	10	armor	FALSE																			
+weapon_shards		2	0.4	1	20	30	10	weapon tech_weapon	FALSE																			
+blunt_melee_shards		2	0.3	1	20	30	10	blunt_melee	FALSE																			
+pierce_melee_shards		2	0.3	1	20	30	10	pierce_melee	FALSE																			
+broken_weapon		1	0.1	1	50	15	5	trash_weapon	FALSE																			
+rusty_shards		1	1.2	1	10	15	5	trash_armor	FALSE																			
+coarse_gears		1	1	1	10	30	10	engineering_weapon	FALSE																			
+rod		1	0.5	1	20	30	10	blunt_melee	FALSE																			
+microelectronics		10	0.05	1	20	30	5	tech_weapon	FALSE																			
+ceramite_shards		5	0.8	1	10	30	10	heavy_armor	FALSE																			
+capacitor		10	0.5	1	20	30	5	tech_weapon	FALSE																			
+tape		20	0.1	1	20	20	0	all	FALSE																			
+*rags		1	0.2	1	20	30	10	cloth	FALSE																			
+armor_repair_kit		300	1.2	1	10	80	0	armor trash_armor heavy_armor cloth	TRUE																			
+weapon_repair_kit		300	1.2	1	10	80	0	weapon engineering_weapon tech_weapon trash_weapon	TRUE																			
+melee_repair_kit		300	1.2	1	10	80	0	blunt_melee pierce_melee BluntTechnical	TRUE																			
+demonic_shards		100	0.5	1	1	500	0	all	TRUE																			
+venus_armor_shards		10	0.5	1	20	40	5	venus_armor	FALSE																			
+moon_armor_shards		10	0.6	1	20	40	5	moon_armor	FALSE																			
+moon_bones		10	0.6	1	20	40	5	moon_weapon	FALSE																			
+venus_weapon_shard		10	0.5	1	20	40	5	venus_weapon	FALSE																			
+#end																												
+																												
+#automaps																												
+Id		Price	Weight	InventoryWidthSize	ExploreLevel	DestroyJammers	HighlightQuasimorphsDuration																					
+automap		82	0.5	1	FALSE	TRUE	0																					
+demonic_aye		150	0.4	1	TRUE	FALSE	20																					
+quasi_sensor_device		0	0	0	FALSE	FALSE	20																					
+#end																												
+																												
+#skulls																												
+Id		Price	Weight	InventoryWidthSize	PerkId	CanBaronUse	Unbreakable																					
+skull_explosion		300	1	1	ultimate_explosion	TRUE	TRUE																					
+skull_ray		300	1	1	ultimate_ray	TRUE	TRUE																					
+skull_contract_mercury		300	1	1	ultimate_contract_mercury	FALSE	TRUE																					
+skull_bloodstrike		300	1	1	ultimate_blood_strike	TRUE	TRUE																					
+skull_bloodlust		300	1	1	ultimate_bloodlust	TRUE	TRUE																					
+skull_call_of_blood		300	1	1	ultimate_call_of_blood	TRUE	TRUE																					
+skull_contract_venus		300	1	1	ultimate_contract_venus	FALSE	TRUE																					
+skull_feathered_serpent		300	1	1	ultimate_feathered_serpent	FALSE	TRUE																					
+skull_transformation		300	1	1	ultimate_transformation	TRUE	TRUE																					
+skull_resurrection		300	1	1	ultimate_resurrection	TRUE	TRUE																					
+skull_contract_luna		300	1	1	ultimate_contract_luna	FALSE	TRUE																					
+#end																												
+																												
+#quasiartifacts																												
+Id		Price	Weight	InventoryWidthSize	CanRemoveSkullContract																							
+anulator		200	1	1	TRUE																							
+#end																												
+																												
+#grenades																												
+Id		Price	Weight	InventoryWidthSize	MaxStack	TurnsToExplode	RicochetTrajectory	Parameters.VisualExplosion	Parameters.Radius	Parameters.GainDmgToCreature	Parameters.GainDmgToLocation	Parameters.GainDmgToMonolith	Parameters.Damage	Parameters.DamageType	Parameters.WoundChance	Parameters.Throwback	Parameters.ThrowbackChance	Parameters.ThrowbackDependOnRadius	Parameters.Stun	Parameters.StunChance	Parameters.StunDuration	Parameters.StunDependOnRadius	Parameters.PropagateFire	Parameters.PropagateFireChance	Parameters.LargeFireChance	Parameters.FireDependOnRadius	Parameters.PropagateLiquid	Parameters.LiquidType
+frag_grenade		100	0.3	1	3	2	TRUE	TRUE	3	TRUE	TRUE	FALSE	75	explosion	70	TRUE	0.5	FALSE	FALSE	0	0	FALSE	TRUE	0.05	10	TRUE	FALSE	Red
+qwasi_grenade		100	0.1	1	3	1	TRUE	TRUE	4	TRUE	TRUE	FALSE	95	beam	50	TRUE	0.3	FALSE	FALSE	0	0	FALSE	TRUE	0.3	0	FALSE	FALSE	Red
+thermal_grenade		100	0.4	1	3	1	TRUE	FALSE	3	FALSE	FALSE	FALSE	20	fire	0	FALSE	0	FALSE	FALSE	0	0	FALSE	TRUE	0.9	75	FALSE	FALSE	Red
+stun_grenade		100	0.2	1	3	1	TRUE	TRUE	4	FALSE	FALSE	FALSE	0	shock	0	FALSE	0	FALSE	TRUE	1	4	TRUE	FALSE	0	0	FALSE	FALSE	Red
+trowable_heart		10	0.33	1	3	0	TRUE	FALSE	1	TRUE	FALSE	FALSE	10	blunt	10	FALSE	0	FALSE	FALSE	0	0	FALSE	FALSE	0	0	FALSE	TRUE	Red
+trowing_knife		10	1	1	3	0	TRUE	FALSE	1	TRUE	FALSE	FALSE	30	pierce	10	FALSE	0	FALSE	FALSE	0	0	FALSE	FALSE	0	0	FALSE	FALSE	Red
+handmade_frag_grenade		10	0.2	1	3	2	TRUE	TRUE	2	TRUE	TRUE	FALSE	30	explosion	60	TRUE	0.4	FALSE	FALSE	0	0	FALSE	TRUE	0.04	8	TRUE	FALSE	Red
+handmade_thermal_grenade		10	1	1	3	0	FALSE	FALSE	2	FALSE	FALSE	FALSE	10	fire	0	FALSE	0	FALSE	FALSE	0	0	FALSE	TRUE	0.9	75	FALSE	FALSE	Red
+nanorobot_grenade		169	1	1	3	0	FALSE	FALSE	3	TRUE	TRUE	FALSE	200	plasma	0	FALSE	0	FALSE	FALSE	0	0	FALSE	TRUE	0	0	FALSE	FALSE	Red
+phase_bomb		10	0.3	1	3	2	TRUE	TRUE	3	TRUE	TRUE	TRUE	60	pierce	70	TRUE	0.5	FALSE	FALSE	0	0	FALSE	TRUE	0.05	10	TRUE	FALSE	Red
+#end																												
+																												
+#mines																												
+Id		Price	Weight	InventoryWidthSize	MaxStack	TurnsToActivation	Parameters.VisualExplosion	Parameters.Radius	Parameters.GainDmgToCreature	Parameters.GainDmgToLocation	Parameters.Damage	Parameters.DamageType	Parameters.WoundChance	Parameters.Throwback	Parameters.ThrowbackChance	Parameters.ThrowbackDependOnRadius	Parameters.Stun	Parameters.StunChance	Parameters.StunDuration	Parameters.StunDependOnRadius	Parameters.PropagateFire	Parameters.PropagateFireChance	Parameters.LargeFireChance	Parameters.FireDependOnRadius				
+frag_mine		20	0.55	1	3	1	TRUE	4	TRUE	TRUE	90	explosion	70	TRUE	0.5	FALSE	FALSE	0	0	FALSE	TRUE	0.05	10	TRUE				
+#end																												
+																												
+#turrets																												
+Id		Price	Weight	InventoryWidthSize	TurretMonsterId																							
+stationary_turret		1000	10	2	stationary_turret																							
+fire_turret		1000	10	2	fire_turret																							
+energy_turret		1000	10	2	energy_turret																							
+packaged_industrial_robot		93	10	2	cyborg_basic																							
+packaged_security_robot		124	10	2	cyborg_battle																							
+packaged_recreational_robot		118	10	2	cyborg_recreation																							
+#end																												
+																												
+#trash																												
+Id		Price	Weight	InventoryWidthSize	MaxStack	SubType																						
+human_wrist		10	0.6	1	5	Resource																						
+human_feet		10	0.7	1	5	Resource																						
+human_skin		10	0.3	1	10	Resource																						
+human_poop		1	0.2	1	10	Resource																						
+human_rib		10	0.1	1	20	Resource																						
+human_skull		10	2.5	1	5	Resource																						
+human_ear		2	0.1	1	20	Resource																						
+human_aye		2	0.1	1	20	Resource																						
+spider_brain		5	0.8	1	10	Resource																						
+spider_joint		5	0.3	1	10	Resource																						
+spider_cocoon		5	0.5	1	10	Resource																						
+spider_aye		5	0.1	1	20	Resource																						
+spider_chitin		5	0.5	1	20	Resource																						
+spider_meat		5	1	1	10	Resource																						
+spider_poisongland		20	0.1	1	20	Resource																						
+*broken_weapon		5	0.1	1	50	Resource																						
+plastic		5	0.1	1	20	Resource																						
+powder		1	0.01	1	50	Resource																						
+glass		5	0.05	1	50	Resource																						
+metal_tread		10	0.4	1	20	Resource																						
+*tape		20	0.1	1	20	Resource																						
+wire		20	0.2	1	20	Resource																						
+rubber		5	0.3	1	20	Resource																						
+tread		1	0.01	1	20	Resource																						
+explosives		10	0.6	1	20	Resource																						
+acid		1	0.01	1	20	Resource																						
+tin		1	0.1	1	10	Resource																						
+miner_bolts_ammo		1	0.01	1	1	Resource																						
+gas_ammo		1	0.02	1	1	Resource																						
+quest_fresco_data		999	1	1	1	QuestItem																						
+quest_prison_head		999	1	1	1	QuestItem																						
+aztKey		999	1	1	1	QuestItem																						
+glassBottle		1	0.35	1	10	Resource																						
+organsBox		100	1.5	1	10	Container																						
+itemsBox		999	5	1	1	Container																						
+personalKey		20	0.02	1	10	Resource																						
+cyborg_head		20	1.5	1	5	Resource																						
+*moon_bones		20	0.6	1	20	Resource																						
+moon_guts		20	0.4	1	20	Resource																						
+aztec_guts		20	0.4	1	20	Resource																						
+mercury_guts		20	0.4	1	20	Resource																						
+mercury_scales		20	0.6	1	20	Resource																						
+*circuit_board		20	0.1	1	20	Resource																						
+ledgerBook		30	0.8	1	10	Resource																						
+poppy_box		20	0.05	1	20	Resource																						
+spring		1	0.1	1	20	Resource																						
+lens		5	0.1	1	20	Resource																						
+transformer		10	1.2	1	10	Resource																						
+bulb		10	0.3	1	20	Resource																						
+quest_device		0	1	1	1	QuestItem																						
+quest_igvalit		0	1	1	1	QuestItem																						
+quest_artefact		0	1	1	1	QuestItem																						
+quest_AncomData		0	1	1	1	QuestItem																						
+quest_secret_data		0	1	1	3	QuestItem																						
+quest_dislocatorDetal		0	1	1	4	QuestItem																						
+quest_goldenSkull		0	1	1	4	QuestItem																						
+regular_food_container		76	2.2	2	1	Container																						
+military_food_container		78	2.2	2	1	Container																						
+luxury_food_container		98	1.5	1	2	Container																						
+water_container		28	1.5	1	2	Container																						
+alcogol_container		87	1.5	1	2	Container																						
+regular_clothing_container		32	4.2	1	2	Container																						
+miner_clothing_container		47	4.2	1	2	Container																						
+worker_clothing_container		52	4.2	1	2	Container																						
+scientist_clothing_container		64	4.2	1	2	Container																						
+security_clothing_container		76	4.2	1	2	Container																						
+weapon_container		80	2.3	1	2	Container																						
+armor_container		75	2.3	1	2	Container																						
+tool_container		79	2.3	1	2	Container																						
+robot_parts_container		74	1.8	1	2	Container																						
+electrical_parts_container		89	1.2	1	2	Container																						
+military_parts_container		72	1.2	1	2	Container																						
+engineering_parts_container		64	1.2	1	2	Container																						
+ai_module		120	0.3	1	10	BartherResource																						
+communication_relay		95	0.4	1	5	BartherResource																						
+*defibrillator_device		99	0.5	1	1	BartherResource																						
+*quasi_sensor_device		86	0.5	1	1	BartherResource																						
+geoscanner_device		73	0.5	1	1	BartherResource																						
+welding_machine_device		68	0.5	1	1	BartherResource																						
+medical_equipment		156	5.8	2	1	BartherResource																						
+scientific_equipment		174	5.6	2	1	BartherResource																						
+mining_equipment		143	6.2	2	1	BartherResource																						
+construction_equipment		168	6.2	2	1	BartherResource																						
+chemical_analyzer		111	1.4	1	1	BartherResource																						
+hydraulic_pump		97	1.6	1	1	BartherResource																						
+quasiresearch_disk		118	0.2	1	5	BartherResource																						
+research_disk		104	0.2	1	5	BartherResource																						
+prototype_schematics		69	0.1	1	10	BartherResource																						
+management_unit		114	0.1	1	10	BartherResource																						
+darknet_unit		160	0.1	1	10	BartherResource																						
+military_unit		132	0.1	1	10	BartherResource																						
+memory_software		68	0.1	1	10	BartherResource																						
+entertainment_software		54	0.1	1	10	BartherResource																						
+expert_disk		98	0.1	1	10	BartherResource																						
+quasisamples		143	1.4	1	5	BartherResource																						
+biomass_tank		80	2.6	1	5	BartherResource																						
+precious_metals		204	1	1	10	BartherResource																						
+drug_cargo		196	1	1	2	BartherResource																						
+gunbang_magazine		60	0.1	1	10	BartherResource																						
+medical_components		80	2.2	1	2	BartherResource																						
+watermelon		20	0.4	1	5	Container																						
+#end																												
+																												
+#datadisks																												
+Id		Price	Weight	InventoryWidthSize	UnlockType	UnlockIds																						
+itemChip		100	0.1	1	ProductionItem	pmc_club vodka bandit_vest army_pistol hatchet army_pistol_2 pmc_pistol_2 spec_pistol_2 dark_pistol_2 rail_pistol_2 tech_pistol_2 petrov_pistol_2 petrov_pistol_3 pmc_shotgun dark_shotgun pmc_smg pmc_smg_2 bandit_smg_2 pmc_assault desert_assault desert_marksman pistol_burst_ammo shotgun_bullet_ammo medicalClue mre_pack pmc_vest bandit_vest_armored army_vest cevlar_vest smuggler_armor worker_armor pmc_armor smuggler_helmet worker_helmet pmc_helmet balaklava smuggler_pants worker_pants pmc_pants smuggler_boots worker_boots pmc_boots frag_grenade thermal_grenade stun_grenade frag_mine miner_bolts_ammo																						
+mediumItemChip		200	0.1	1	ProductionItem	tech_katana army_pistol_3 pmc_pistol_3 spec_pistol_3 dark_pistol_3 rail_pistol_3 tech_pistol_3 dark_shotgun_2 desert_shotgun_2 spec_shotgun spec_smg tech_smg plazma_smg spec_assault plazma_assault army_sniper desert_marksman_2 tech_rifle desert_hmg pistol_expansive_ammo shotgun_flechette_ammo shotgun_dragon_ammo medium_police_ammo surgicalKit antidote bloodBag painkillers medium_backpack servo_backpack pmc_vest_armored cevlar_vest_pockets doom_armor doom_helmet doom_pants doom_boots power_armor power_helmet power_pants power_boots armor_repair_kit weapon_repair_kit melee_repair_kit stationary_turret fire_turret energy_turret medium_basic_ammo medium_police_ammo heavy_basic_ammo																						
+highItemChip		400	0.1	1	ProductionItem	army_pistol_4 plazma_shotgun army_sniper_2 tech_marksman plazma_hmg spec_hmg heavy_armorpierce_ammo big_backpack ceramit_vest automap																						
+RealWareItemChip		500	0.1	1	ProductionItem	spec_hatchet spec_pistol_rv spec_smg_rv spec_assault_rv realwear_armor rw_militia_vest rw_warlord_armor realwear_helmet rw_militia_helmet rw_warlord_helmet realwear_pants rw_militia_pants rw_warlord_pants realwear_boots rw_warlord_boots																						
+SBNItemChip		500	0.1	1	ProductionItem	sbn_pistol sbn_shotgun sbn_smg solnet_armor svn_cap_vest svn_heavy_armor solnet_helmet svn_cap_hat svn_heavy_helmet solnet_pants svn_cap_pants svn_heavy_pants solnet_boots svn_heavy_boots																						
+AncomItemChip		500	0.1	1	ProductionItem	ancm_quasi_pistol pmc_shotgun_2 ancm_shotgun pmc_smg_3 ancm_smg ancm_quasi_assault ancm_marksman ancom_armor ancom_police_armor ancom_agent_armor ancom_helmet ancom_police_mask ancom_agent_mask ancom_pants ancom_police_pants ancom_agent_pants ancom_boots ancom_police_boots ancom_agent_boots																						
+DayDreamItemChip		500	0.1	1	ProductionItem	daydream_frostgun toxic_smg toxic_trower daydream_chem_vest daydream_armored_vest daydream_chem_helmet daydream_armored_helmet daydream_chem_pants daydream_armored_pants daydream_chem_boots																						
+SunLightItemChip		500	0.1	1	ProductionItem	dark_pistol_4 dark_pistol_5 sl_pistol sl_shotgun sl_sniper sl_power_armor sl_power_helmet sl_power_pants sl_power_boots																						
+CoreItemChip		500	0.1	1	ProductionItem	sapper_shovel core_nailgun core_nailmachinegun core_laser core_disctrower core_flametrower core_hard_vest core_power_armor core_hard_hat core_power_helmet core_hard_pants core_power_pants common_boots core_power_boots																						
+PlanetBridgeItemChip		500	0.1	1	ProductionItem	rail_rifle pb_shockgun pb_vest pb_heavy_armor pb_hard_hat pb_heavy_helmet pb_pants pb_heavy_pants pb_boots pb_heavy_boots																						
+GrassHopperItemChip		500	0.1	1	ProductionItem	gh_pistol gh_assault gh_marksman																						
+ChurchItemChip		500	0.1	1	ProductionItem	dark_shotgun_3 church_shotgun church_priest_shirt church_power_armor church_priest_helmet church_power_helmet church_priest_pants church_power_pants church_priest_boots church_power_boots																						
+FrancheItemChip		500	0.1	1	ProductionItem	franch_baton franch_pistol franch_smg franch_assault regular_launcher security_armor franch_heavy_armor franch_helmet franch_heavy_mask franch_pants franch_heavy_pants franch_boots franch_heavy_boots																						
+merkUSB		400	0.1	1	Mercenary	francis_reid_daly victoria_boudicca persival_fawcett Isabella_capet maximilian_rohr jacques_kennet mirza_aishatu kenzie_yukio marika_wulfnod auberon_lukas niko_medich priya_marlon																						
+classUSB		500	0.1	1	MercenaryClass	scouts_of_hades ecclipse_blades tifton_elite tunnel_rats phoenix_brigade spaceborn_ghosts angels_of_spades doppelganger_pack valkyrie_squad																						
+#end																												
+																												
+#resurrectkits																												
+Id		RessurectClass																										
+defibrillator_device		Human																										
+#end																												
+																												
+#itemtransformation																												
+Id		OutputItems																										
+army_knife		pierce_melee_shards pierce_melee_shards plastic																										
+elite_knife		pierce_melee_shards pierce_melee_shards metal_tread rubber																										
+miner_knife		broken_weapon broken_weapon pierce_melee_shards																										
+glass_knife		glass glass																										
+azt_sickle		venus_weapon_shard venus_armor_shards																										
+machete		pierce_melee_shards pierce_melee_shards rusty_shards plastic																										
+tech_katana		pierce_melee_shards pierce_melee_shards metal_tread rubber plastic																										
+moon_falchion		moon_bones moon_bones moon_armor_shards quasi_bolts_ammo																										
+scarp_club		coarse_gears coarse_gears rod broken_weapon sawblade_ammo																										
+pmc_club		blunt_melee_shards blunt_melee_shards rod plastic																										
+azt_club		venus_weapon_shard venus_armor_shards																										
+corp_hand		human_wrist human_skin meat1																										
+corp_leg		human_feet human_skin meat1																										
+metal_pipe		blunt_melee_shards blunt_melee_shards																										
+knuckles		rusty_shards rusty_shards																										
+breaker		blunt_melee_shards blunt_melee_shards rod coarse_gears																										
+crowbar		blunt_melee_shards blunt_melee_shards rod																										
+wrench		blunt_melee_shards blunt_melee_shards coarse_gears																										
+franch_baton		blunt_melee_shards blunt_melee_shards rod bulb																										
+civres_powerfist		blunt_melee_shards blunt_melee_shards plastic coarse_gears																										
+moon_morgenshtern		moon_bones moon_bones moon_armor_shards quasi_bolts_ammo																										
+hatchet		pierce_melee_shards pierce_melee_shards blunt_melee_shards rubber																										
+choppa_axe		rusty_shards rusty_shards pierce_melee_shards rod																										
+spec_hatchet		pierce_melee_shards pierce_melee_shards blunt_melee_shards armor_shards																										
+sapper_shovel		rusty_shards rusty_shards pierce_melee_shards rod																										
+bandit_axe		pierce_melee_shards pierce_melee_shards rod rubber																										
+azt_big_axe		venus_weapon_shard venus_weapon_shard venus_armor_shards																										
+bandit_sawblade		coarse_gears coarse_gears pierce_melee_shards metal_tread broken_weapon																										
+miner_pistol		rusty_shards coarse_gears spring																										
+army_pistol		plastic weapon_shards spring																										
+army_pistol_2		plastic plastic weapon_shards																										
+army_pistol_3		plastic plastic weapon_shards metal_tread																										
+army_pistol_4		ceramite_shards ceramite_shards weapon_shards metal_tread																										
+pmc_pistol		plastic weapon_shards spring																										
+pmc_pistol_2		plastic plastic weapon_shards																										
+pmc_pistol_3		plastic plastic weapon_shards metal_tread spring																										
+spec_pistol		plastic weapon_shards spring																										
+spec_pistol_2		rubber rubber weapon_shards metal_tread																										
+spec_pistol_3		rubber rubber weapon_shards metal_tread blunt_melee_shards																										
+spec_pistol_rv		ceramite_shards ceramite_shards armor_shards weapon_shards circuit_board																										
+dark_pistol		plastic plastic weapon_shards blunt_melee_shards																										
+dark_pistol_2		rubber rubber weapon_shards blunt_melee_shards																										
+dark_pistol_3		rubber rubber weapon_shards spring blunt_melee_shards																										
+dark_pistol_4		ceramite_shards ceramite_shards weapon_shards blunt_melee_shards																										
+dark_pistol_5		ceramite_shards ceramite_shards weapon_shards spring																										
+rail_pistol		plastic weapon_shards circuit_board capacitor metal_tread																										
+rail_pistol_2		rubber weapon_shards circuit_board capacitor metal_tread																										
+rail_pistol_3		rubber weapon_shards microelectronics capacitor metal_tread																										
+tech_pistol		plastic microelectronics circuit_board bulb wire																										
+tech_pistol_2		plastic microelectronics circuit_board bulb wire																										
+tech_pistol_3		plastic circuit_board microelectronics bulb wire																										
+petrov_pistol		plastic weapon_shards spring																										
+petrov_pistol_2		plastic weapon_shards spring																										
+petrov_pistol_3		plastic plastic weapon_shards																										
+civres_pistol		plastic plastic weapon_shards blunt_melee_shards																										
+civres_pistol_2		plastic plastic weapon_shards																										
+core_nailgun		rusty_shards coarse_gears plastic spring																										
+ancm_quasi_pistol		ceramite_shards ceramite_shards microelectronics venus_weapon_shard wire																										
+sbn_pistol		armor_shards armor_shards microelectronics capacitor metal_tread																										
+daydream_frostgun		plastic microelectronics circuit_board bulb wire																										
+gh_pistol		rubber rubber weapon_shards spring																										
+sl_pistol		armor_shards armor_shards microelectronics bulb wire																										
+franch_pistol		rubber rubber weapon_shards spring metal_tread																										
+azt_pistol		venus_weapon_shard venus_armor_shards																										
+pmc_shotgun		rubber rubber weapon_shards blunt_melee_shards																										
+pmc_shotgun_2		armor_shards armor_shards weapon_shards blunt_melee_shards																										
+dark_shotgun		rubber rubber weapon_shards spring blunt_melee_shards																										
+dark_shotgun_2		armor_shards armor_shards weapon_shards spring blunt_melee_shards																										
+dark_shotgun_3		ceramite_shards ceramite_shards weapon_shards spring blunt_melee_shards																										
+desert_shotgun		rubber rubber weapon_shards blunt_melee_shards																										
+desert_shotgun_2		rubber rubber weapon_shards spring blunt_melee_shards																										
+plazma_shotgun		ceramite_shards ceramite_shards microelectronics capacitor																										
+spec_shotgun		armor_shards armor_shards weapon_shards metal_pipe																										
+bandit_shotgun		rusty_shards broken_weapon blunt_melee_shards																										
+church_shotgun		ceramite_shards ceramite_shards weapon_shards spring blunt_melee_shards																										
+ancm_shotgun		armor_shards ceramite_shards weapon_shards blunt_melee_shards																										
+sbn_shotgun		armor_shards armor_shards microelectronics capacitor metal_tread																										
+sl_shotgun		ceramite_shards ceramite_shards microelectronics capacitor																										
+azt_shotgun		venus_weapon_shard venus_weapon_shard venus_armor_shards venus_armor_shards																										
+pmc_smg		rubber rubber weapon_shards blunt_melee_shards																										
+pmc_smg_2		rubber rubber weapon_shards spring blunt_melee_shards																										
+pmc_smg_3		rubber rubber weapon_shards spring blunt_melee_shards																										
+spec_smg		armor_shards armor_shards weapon_shards spring blunt_melee_shards																										
+bandit_smg		broken_weapon weapon_shards rusty_shards rod																										
+bandit_smg_2		rubber rubber weapon_shards blunt_melee_shards																										
+tech_smg		plastic plastic circuit_board bulb wire capacitor																										
+plazma_smg		ceramite_shards ceramite_shards circuit_board microelectronics transformer																										
+spec_smg_rv		ceramite_shards ceramite_shards weapon_shards spring blunt_melee_shards																										
+civres_smg		rubber rubber weapon_shards spring blunt_melee_shards																										
+ancm_smg		armor_shards armor_shards weapon_shards spring																										
+franch_smg		rubber rubber weapon_shards spring																										
+sbn_smg		ceramite_shards ceramite_shards microelectronics capacitor metal_tread																										
+toxic_smg		plastic microelectronics glass circuit_board metal_tread																										
+pmc_assault		armor_shards armor_shards weapon_shards lens blunt_melee_shards																										
+spec_assault		ceramite_shards ceramite_shards weapon_shards lens blunt_melee_shards																										
+spec_assault_rv		ceramite_shards ceramite_shards armor_shards weapon_shards microelectronics circuit_board																										
+moon_assault		moon_bones moon_bones moon_armor_shards demonic_shards																										
+bandit_assault		broken_weapon weapon_shards rusty_shards rod																										
+desert_assault		armor_shards armor_shards weapon_shards spring blunt_melee_shards																										
+civres_assault		armor_shards armor_shards weapon_shards spring blunt_melee_shards																										
+ancm_quasi_assault		armor_shards ceramite_shards microelectronics venus_weapon_shard wire																										
+gh_assault		armor_shards armor_shards weapon_shards lens blunt_melee_shards																										
+franch_assault		ceramite_shards armor_shards weapon_shards lens																										
+plazma_assault		ceramite_shards ceramite_shards circuit_board microelectronics capacitor																										
+army_sniper		ceramite_shards ceramite_shards weapon_shards lens spring metal_pipe																										
+army_sniper_2		ceramite_shards ceramite_shards weapon_shards lens microelectronics																										
+desert_marksman		rubber rubber weapon_shards blunt_melee_shards																										
+desert_marksman_2		armor_shards armor_shards weapon_shards lens metal_pipe																										
+tech_marksman		plastic plastic microelectronics lens bulb transformer																										
+tech_rifle		plastic plastic microelectronics lens bulb capacitor																										
+civres_marksman		armor_shards armor_shards weapon_shards lens metal_pipe																										
+ancm_marksman		ceramite_shards ceramite_shards weapon_shards lens microelectronics blunt_melee_shards																										
+rail_rifle		ceramite_shards ceramite_shards microelectronics capacitor metal_tread																										
+gh_marksman		armor_shards armor_shards weapon_shards lens blunt_melee_shards																										
+sl_sniper		plastic ceramite_shards microelectronics lens transformer capacitor																										
+azt_rifle		venus_weapon_shard venus_weapon_shard venus_armor_shards venus_armor_shards																										
+moon_crossbow		moon_bones moon_bones moon_armor_shards demonic_shards																										
+miner_mg		rusty_shards rusty_shards spring rod																										
+core_nailmachinegun		rusty_shards coarse_gears spring rod																										
+core_laser		armor_shards armor_shards plastic circuit_board bulb wire																										
+desert_hmg		ceramite_shards ceramite_shards weapon_shards spring metal_pipe																										
+plazma_hmg		ceramite_shards ceramite_shards microelectronics wire capacitor transformer																										
+spec_hmg		ceramite_shards ceramite_shards weapon_shards metal_tread spring metal_pipe																										
+pb_shockgun		ceramite_shards ceramite_shards microelectronics bulb capacitor transformer																										
+tech_hfg		ceramite_shards ceramite_shards microelectronics bulb capacitor transformer																										
+miner_disctrower		coarse_gears coarse_gears spring rusty_shards rod																										
+core_disctrower		coarse_gears coarse_gears spring armor_shards rod																										
+miner_flametrower		coarse_gears coarse_gears metal_tread rusty_shards rod																										
+core_flametrower		coarse_gears coarse_gears metal_tread armor_shards rod																										
+toxic_trower		armor_shards armor_shards glass circuit_board capacitor																										
+regular_launcher		armor_shards armor_shards weapon_shards spring metal_tread blunt_melee_shards																										
+mercury_staff		quasi_energy_ammo quasi_energy_ammo qwasi_grenade demonic_aye																										
+pistol_basic_ammo		powder powder																										
+pistol_burst_ammo		powder powder																										
+pistol_expansive_ammo		powder powder																										
+shotgun_bullet_ammo		powder powder																										
+shotgun_shrapnel_ammo		powder powder																										
+shotgun_flechette_ammo		powder powder																										
+shotgun_dragon_ammo		powder powder																										
+medium_basic_ammo		powder powder																										
+medium_police_ammo		powder powder																										
+heavy_basic_ammo		powder powder																										
+heavy_armorpierce_ammo		powder powder																										
+battery_charge		glass glass acid																										
+toxic_ammo		acid acid																										
+battery_crafted_charge		glass acid																										
+miner_bolts_ammo		broken_weapon broken_weapon																										
+sawblade_ammo		broken_weapon broken_weapon																										
+surgicalKit		medpack medpack morphine medicalClue naloxone																										
+mre_pack		cannedMeat cannedMeat synthBeef chocolateBar																										
+small_backpack		rags rags tread																										
+medium_backpack		rags rags plastic rubber tread																										
+big_backpack		rags rags plastic rubber armor_shards tread																										
+servo_backpack		plastic plastic rubber metal_tread wire																										
+pmc_vest		rags rags metal_tread tread																										
+pmc_vest_armored		armor_shards armor_shards metal_tread																										
+bandit_vest		rags rags tread																										
+bandit_vest_armored		rusty_shards rusty_shards metal_tread																										
+army_vest		rags rags tread																										
+cevlar_vest		armor_shards armor_shards rubber metal_tread																										
+cevlar_vest_pockets		armor_shards armor_shards rags tread																										
+ceramit_vest		ceramite_shards ceramite_shards rubber metal_tread																										
+doom_armor		armor_shards armor_shards ceramite_shards capacitor metal_tread																										
+ancom_armor		armor_shards armor_shards ceramite_shards rubber capacitor																										
+bandit_armor		rusty_shards rags rags tread																										
+civres_armor		armor_shards armor_shards ceramite_shards rubber capacitor																										
+cultist_armor		armor_shards rags tread																										
+power_armor		armor_shards armor_shards capacitor metal_tread																										
+realwear_armor		armor_shards armor_shards ceramite_shards rubber capacitor																										
+smuggler_armor		armor_shards armor_shards rubber tread																										
+solnet_armor		armor_shards armor_shards ceramite_shards rubber capacitor																										
+worker_armor		armor_shards armor_shards rubber tread																										
+pmc_armor		armor_shards armor_shards rags tread																										
+security_armor		armor_shards armor_shards rags tread																										
+rw_militia_vest		armor_shards rags rags tread																										
+rw_warlord_armor		ceramite_shards ceramite_shards armor_shards rubber capacitor																										
+svn_cap_vest		rags rags tread tread																										
+svn_heavy_armor		ceramite_shards ceramite_shards armor_shards rubber capacitor																										
+daydream_chem_vest		rubber rubber plastic tread																										
+daydream_armored_vest		armor_shards armor_shards rubber plastic tread																										
+sl_power_armor		armor_shards armor_shards ceramite_shards rubber capacitor																										
+ancom_police_armor		armor_shards armor_shards rags tread																										
+ancom_agent_armor		rags rags rubber rubber tread																										
+church_priest_shirt		rags rags rubber plastic tread																										
+church_power_armor		ceramite_shards ceramite_shards capacitor metal_tread																										
+pb_vest		rags rags rusty_shards tread																										
+pb_heavy_armor		armor_shards armor_shards ceramite_shards capacitor metal_tread																										
+franch_heavy_armor		armor_shards armor_shards ceramite_shards rubber capacitor																										
+moon_heavy_armor		moon_bones moon_armor_shards moon_armor_shards demonic_shards																										
+moon_armor		moon_bones moon_armor_shards moon_armor_shards																										
+core_hard_vest		rags rags rusty_shards tread																										
+core_power_armor		ceramite_shards ceramite_shards armor_shards capacitor																										
+employee_vest		rags rags rags tread tread																										
+spider_armor		rags tread spider_chitin spider_chitin																										
+jackal_armor		rags armor_shards rags tread																										
+green_tshirt		rags rags tread tread																										
+green_vest		rags rags tread tread																										
+blue_tshirt		rags rags tread tread																										
+prison_tshirt		rags rags tread rubber																										
+singlet_shirt		rags rags tread tread																										
+scientist_shirt		rags rags tread rubber																										
+hyber_shirt		rubber rubber tread tread																										
+azt_light_armor		aztec_rags venus_armor_shards																										
+azt_heavy_armor		aztec_rags venus_armor_shards venus_armor_shards																										
+doom_helmet		armor_shards armor_shards ceramite_shards glass circuit_board																										
+ancom_helmet		armor_shards armor_shards ceramite_shards glass microelectronics																										
+bandit_helmet		rusty_shards armor_shards plastic glass																										
+civres_helmet		armor_shards armor_shards ceramite_shards glass microelectronics																										
+cultist_helmet		armor_shards rags																										
+power_helmet		armor_shards armor_shards glass circuit_board																										
+realwear_helmet		armor_shards armor_shards ceramite_shards glass microelectronics																										
+smuggler_helmet		armor_shards armor_shards rubber glass																										
+solnet_helmet		armor_shards armor_shards ceramite_shards glass microelectronics																										
+worker_helmet		armor_shards armor_shards rubber glass																										
+pmc_helmet		armor_shards armor_shards plastic glass																										
+rw_militia_helmet		rusty_shards armor_shards plastic																										
+rw_warlord_helmet		ceramite_shards ceramite_shards armor_shards armor_shards glass microelectronics																										
+svn_cap_hat		rags rags tread																										
+svn_heavy_helmet		ceramite_shards ceramite_shards armor_shards armor_shards glass microelectronics																										
+daydream_chem_helmet		rubber rubber plastic glass																										
+daydream_armored_helmet		armor_shards armor_shards glass																										
+sl_power_helmet		armor_shards armor_shards ceramite_shards glass microelectronics																										
+ancom_police_mask		armor_shards armor_shards plastic glass																										
+ancom_agent_mask		armor_shards rubber rubber glass																										
+church_priest_helmet		armor_shards armor_shards rubber glass																										
+church_power_helmet		armor_shards armor_shards glass circuit_board																										
+church_head_device		rags rusty_shards circuit_board																										
+pb_hard_hat		rags rags rusty_shards tread																										
+pb_heavy_helmet		armor_shards armor_shards ceramite_shards glass circuit_board																										
+franch_helmet		armor_shards armor_shards plastic glass																										
+franch_heavy_mask		armor_shards armor_shards ceramite_shards glass microelectronics																										
+moon_helmet		moon_bones moon_armor_shards moon_armor_shards																										
+core_hard_hat		rags rags rusty_shards tread																										
+core_power_helmet		ceramite_shards ceramite_shards armor_shards armor_shards glass microelectronics																										
+employee_hat		rags rags tread																										
+spider_hemlet		rags tread spider_chitin spider_chitin																										
+jackal_helmet		rusty_shards armor_shards plastic glass																										
+balaklava		rags rags tread tread																										
+azt_plum_helmet		aztec_rags venus_armor_shards																										
+azt_mask		aztec_rags venus_armor_shards venus_armor_shards																										
+doom_pants		armor_shards armor_shards ceramite_shards rubber metal_tread																										
+ancom_pants		armor_shards armor_shards ceramite_shards rubber plastic																										
+bandit_pants		rusty_shards armor_shards rags tread																										
+civres_pants		armor_shards armor_shards ceramite_shards rubber plastic																										
+cultist_pants		armor_shards rags tread tread																										
+power_pants		armor_shards armor_shards rubber metal_tread																										
+realwear_pants		armor_shards armor_shards ceramite_shards rubber plastic																										
+smuggler_pants		armor_shards armor_shards rubber tread																										
+solnet_pants		armor_shards armor_shards ceramite_shards rubber plastic																										
+worker_pants		armor_shards armor_shards rubber tread																										
+pmc_pants		armor_shards armor_shards rags tread																										
+rw_militia_pants		rags rags rags tread tread																										
+rw_warlord_pants		ceramite_shards ceramite_shards armor_shards armor_shards rubber																										
+svn_cap_pants		rags rags rags tread tread																										
+svn_heavy_pants		ceramite_shards ceramite_shards armor_shards armor_shards rubber																										
+daydream_chem_pants		rubber rubber rubber tread																										
+daydream_armored_pants		armor_shards rubber rubber rubber plastic																										
+sl_power_pants		armor_shards armor_shards ceramite_shards rubber plastic																										
+ancom_police_pants		armor_shards armor_shards rags tread																										
+ancom_agent_pants		armor_shards rubber rubber tread																										
+church_priest_pants		armor_shards armor_shards rubber tread																										
+church_power_pants		armor_shards armor_shards rubber metal_tread																										
+pb_pants		rusty_shards rags rags tread																										
+pb_heavy_pants		armor_shards armor_shards ceramite_shards rubber metal_tread																										
+franch_pants		armor_shards armor_shards rags tread																										
+franch_heavy_pants		armor_shards armor_shards ceramite_shards rubber plastic																										
+moon_pants		moon_bones moon_armor_shards moon_armor_shards																										
+core_hard_pants		rusty_shards rags rags tread																										
+core_power_pants		ceramite_shards ceramite_shards armor_shards armor_shards rubber																										
+employee_pants		rags rags rags tread																										
+spider_pants		rags tread spider_chitin spider_chitin																										
+jackal_pants		rusty_shards armor_shards rags tread																										
+blue_pants		rags rags tread tread																										
+brown_pants		rags rags tread tread																										
+yellow_pants		rags rags tread tread																										
+dark_pants		rags rags tread tread																										
+prison_pants		rags rags tread rubber																										
+hyber_pants		rubber rubber tread tread																										
+azt_linecloth		aztec_rags venus_armor_shards																										
+doom_boots		armor_shards armor_shards ceramite_shards rubber metal_tread																										
+ancom_boots		armor_shards armor_shards ceramite_shards rubber plastic																										
+bandit_boots		rusty_shards armor_shards plastic rubber																										
+civres_boots		armor_shards armor_shards ceramite_shards rubber plastic																										
+cultist_boots		armor_shards rags tread tread																										
+power_boots		armor_shards armor_shards rubber metal_tread																										
+realwear_boots		armor_shards armor_shards ceramite_shards rubber plastic																										
+smuggler_boots		armor_shards armor_shards rubber rubber																										
+solnet_boots		armor_shards armor_shards ceramite_shards rubber plastic																										
+worker_boots		armor_shards armor_shards rubber rubber																										
+pmc_boots		armor_shards armor_shards plastic rubber																										
+rw_warlord_boots		ceramite_shards ceramite_shards armor_shards rubber plastic																										
+svn_heavy_boots		ceramite_shards ceramite_shards armor_shards rubber plastic																										
+daydream_chem_boots		armor_shards armor_shards rubber rubber																										
+sl_power_boots		armor_shards armor_shards ceramite_shards rubber plastic																										
+ancom_police_boots		armor_shards armor_shards plastic rubber																										
+ancom_agent_boots		armor_shards armor_shards rubber rubber																										
+church_priest_boots		armor_shards armor_shards rubber rubber																										
+church_power_boots		armor_shards armor_shards rubber metal_tread																										
+pb_boots		rusty_shards plastic plastic rubber																										
+pb_heavy_boots		armor_shards armor_shards ceramite_shards rubber metal_tread																										
+franch_boots		armor_shards armor_shards plastic rubber																										
+franch_heavy_boots		armor_shards armor_shards ceramite_shards rubber plastic																										
+moon_boots		moon_bones moon_armor_shards moon_armor_shards																										
+common_boots		rusty_shards plastic plastic rubber																										
+core_power_boots		ceramite_shards ceramite_shards armor_shards rubber plastic																										
+spider_boots		rags tread spider_chitin spider_chitin																										
+jackal_boots		rusty_shards armor_shards plastic rubber																										
+blue_boots		rags rags tread tread plastic																										
+broun_boots		rags rags tread tread plastic																										
+azt_boots		aztec_rags venus_armor_shards																										
+armor_repair_kit		tread tread rubber armor_shards ceramite_shards																										
+weapon_repair_kit		plastic plastic weapon_shards lens microelectronics																										
+melee_repair_kit		metal_tread metal_tread pierce_melee_shards blunt_melee_shards rod																										
+automap		circuit_board circuit_board microelectronics bulb																										
+frag_grenade		tin miner_bolts_ammo explosives																										
+thermal_grenade		tin gas_ammo powder																										
+stun_grenade		tin acid human_poop																										
+frag_mine		explosives explosives explosives																										
+stationary_turret		spec_hmg armor_shards weapon_shards circuit_board																										
+fire_turret		miner_flametrower armor_shards weapon_shards circuit_board																										
+energy_turret		tech_marksman armor_shards weapon_shards circuit_board																										
+organsBox		bloodBag bloodBag furuncle trowable_heart human_aye human_ear																										
+cyborg_head		armor_shards plastic glass bulb circuit_board																										
+glassBottle		glass glass																										
+itemsBox		army_knife pmc_pistol spec_pistol pmc_armor balaklava blue_pants bandit_boots medium_basic_ammo pistol_basic_ammo bandage splint antibiotics synthChicken synthBeef small_backpack																										
+handmade_frag_grenade		tin explosives																										
+handmade_thermal_grenade		glassBottle rags																										
+regular_food_container		chocolateBar packedGoodRation packedRation redSoda water synthChicken synthBeef																										
+military_food_container		cannedMeat cannedVeg cannedMeat cannedVeg chocolateBar mre_pack mre_pack water																										
+luxury_food_container		rocketCandy vodka wiskey armagnac caviar wagyu_steak truffle_oil tuna_steak																										
+water_container		water water water water water water water water																										
+alcogol_container		vodka wiskey armagnac vodka wiskey armagnac																										
+regular_clothing_container		green_tshirt blue_tshirt singlet_shirt blue_pants brown_pants yellow_pants dark_pants blue_boots broun_boots rags																										
+miner_clothing_container		worker_armor pb_vest core_hard_vest worker_helmet pb_hard_hat core_hard_hat worker_pants pb_pants core_hard_pants worker_boots pb_boots common_boots																										
+worker_clothing_container		employee_vest green_vest employee_hat balaklava employee_pants dark_pants smuggler_boots common_boots																										
+scientist_clothing_container		daydream_chem_vest daydream_armored_vest scientist_shirt daydream_chem_helmet daydream_armored_helmet daydream_chem_pants daydream_armored_pants daydream_chem_boots blue_boots																										
+security_clothing_container		security_armor rw_militia_vest ancom_police_armor rw_militia_helmet ancom_police_mask franch_helmet rw_militia_pants ancom_police_pants franch_pants ancom_police_boots franch_boots																										
+weapon_container		pmc_pistol spec_pistol dark_pistol pmc_shotgun desert_shotgun pmc_smg_2 spec_smg desert_assault desert_marksman desert_hmg																										
+armor_container		cevlar_vest power_armor pmc_armor franch_heavy_armor power_helmet pmc_helmet franch_heavy_mask power_pants pmc_pants franch_heavy_pants power_boots pmc_boots franch_heavy_boots																										
+tool_container		metal_pipe breaker crowbar wrench sapper_shovel miner_pistol miner_mg																										
+robot_parts_container		armor_shards weapon_shards rusty_shards coarse_gears rod metal_tread wire cyborg_head cyborg_head																										
+electrical_parts_container		microelectronics capacitor circuit_board transformer bulb microelectronics capacitor circuit_board transformer bulb																										
+military_parts_container		armor_shards ceramite_shards weapon_shards blunt_melee_shards pierce_melee_shards armor_repair_kit weapon_repair_kit melee_repair_kit metal_tread transformer																										
+engineering_parts_container		blunt_melee_shards pierce_melee_shards rusty_shards coarse_gears rod ceramite_shards tape explosives miner_bolts_ammo miner_bolts_ammo miner_bolts_ammo miner_bolts_ammo spring																										
+ai_module		microelectronics microelectronics microelectronics microelectronics circuit_board circuit_board																										
+communication_relay		capacitor wire transformer capacitor wire transformer capacitor wire transformer																										
+defibrillator_device		microelectronics circuit_board lens transformer bulb																										
+quasi_sensor_device		microelectronics circuit_board lens transformer bulb																										
+geoscanner_device		microelectronics circuit_board lens transformer bulb																										
+welding_machine_device		rusty_shards coarse_gears rod metal_tread wire																										
+medical_equipment		microelectronics capacitor metal_tread wire circuit_board lens transformer bulb																										
+scientific_equipment		microelectronics capacitor metal_tread wire circuit_board lens transformer bulb																										
+mining_equipment		armor_shards weapon_shards blunt_melee_shards rusty_shards coarse_gears rod ceramite_shards capacitor wire transformer																										
+construction_equipment		armor_shards weapon_shards blunt_melee_shards rusty_shards coarse_gears rod ceramite_shards capacitor wire transformer																										
+chemical_analyzer		microelectronics circuit_board lens transformer bulb																										
+hydraulic_pump		rusty_shards coarse_gears rod metal_tread wire																										
+quasiresearch_disk		microelectronics circuit_board lens transformer bulb																										
+research_disk		microelectronics circuit_board lens transformer bulb																										
+management_unit		microelectronics circuit_board lens transformer bulb																										
+darknet_unit		microelectronics circuit_board lens transformer bulb																										
+military_unit		microelectronics circuit_board lens transformer bulb																										
+memory_software		microelectronics capacitor plastic plastic																										
+entertainment_software		microelectronics capacitor plastic plastic																										
+quasisamples		demonic_medicine demonic_idol demonic_shards moon_bones moon_guts aztec_guts mercury_guts mercury_scales																										
+biomass_tank		spider_brain spider_aye spider_meat spider_poisongland human_poop human_poop glass glass glass glass																										
+drug_cargo		morphine antiradin naloxone antidote painkillers nanoinjection morphine antiradin naloxone antidote painkillers nanoinjection																										
+medical_components		medpack morphine antibiotics antiradin naloxone sorbent antidote bloodBag painkillers nanoinjection plaster military_kit																										
+watermelon		watermelon_slice watermelon_slice watermelon_slice watermelon_slice																										
+#end																												
+																												
+#workbenchreceipts																												
+Id		AllowedWorkbenches	OutputItem	RequiredItems																								
+		workbench	small_backpack	rags rags rags tread																								
+		workbench	spider_armor	spider_chitin spider_chitin spider_chitin rags																								
+		workbench	spider_hemlet	spider_chitin rags																								
+		workbench	spider_pants	spider_chitin spider_chitin rags																								
+		workbench	spider_boots	spider_chitin rags																								
+		workbench	glass_knife	glass tape																								
+		workbench	scarp_club	coarse_gears rod sawblade_ammo																								
+		workbench	handmade_frag_grenade	tin miner_bolts_ammo explosives																								
+		workbench	handmade_thermal_grenade	glassBottle gas_ammo rags																								
+		workbench	battery_crafted_charge	glass acid wire																								
+		workbench	tape	medicalClue acid plastic																								
+		stove	roastedMeat	meat1																								
+		stove	spider_soup	tin spider_meat																								
+		stove	slanina	human_skin human_skin																								
+		medicalFabricator	medpack	bandage splint antibiotics																								
+		medicalFabricator	splint	rags plastic																								
+		medicalFabricator	bandage	rags rags																								
+		medicalFabricator	surgicalKit	medpack morphine medicalClue naloxone																								
+		productionFabricator	pistol_basic_ammo	powder powder																								
+		productionFabricator	shotgun_shrapnel_ammo	powder powder																								
+		productionFabricator	heavy_basic_ammo	powder powder																								
+		productionFabricator	medium_basic_ammo	powder powder																								
+		productionFabricator	frag_grenade	tin miner_bolts_ammo explosives explosives																								
+		productionFabricator	thermal_grenade	tin gas_ammo gas_ammo powder powder																								
+		productionFabricator	stun_grenade	tin acid acid human_poop human_poop																								
+		printerFabricator	pmc_club	plastic plastic plastic plastic																								
+		printerFabricator	army_knife	pierce_melee_shards pierce_melee_shards pierce_melee_shards pierce_melee_shards																								
+		printerFabricator	sapper_shovel	armor_shards armor_shards armor_shards armor_shards																								
+		printerFabricator	spec_pistol	plastic plastic plastic plastic																								
+		printerFabricator	rail_pistol	weapon_shards weapon_shards weapon_shards weapon_shards																								
+		printerFabricator	pmc_shotgun	plastic plastic plastic plastic																								
+		printerFabricator	desert_assault	plastic plastic plastic plastic																								
+		printerFabricator	miner_mg	rusty_shards rusty_shards rusty_shards rusty_shards																								
+		printerFabricator	miner_disctrower	rusty_shards rusty_shards rusty_shards rusty_shards																								
+		printerFabricator	miner_flametrower	rusty_shards rusty_shards rusty_shards rusty_shards																								
+		printerFabricator	sigs_kosmos	sorbent sorbent sorbent sorbent																								
+		printerFabricator	servo_backpack	rusty_shards rusty_shards rusty_shards rusty_shards																								
+		printerFabricator	ceramit_vest	ceramite_shards ceramite_shards ceramite_shards ceramite_shards																								
+		printerFabricator	packaged_industrial_robot	armor_shards armor_shards armor_shards armor_shards																								
+		printerFabricator	packaged_security_robot	ceramite_shards ceramite_shards ceramite_shards ceramite_shards																								
+		printerFabricator	packaged_recreational_robot	rubber rubber rubber rubber																								
+#end																												
+																												
+#itemreceipts																												
+Id		OutputItem	RequiredItems	ProduceTimeInHours	ModifyStartCost	ModifyStep	ModifyItemsGrades																					
+		synthChicken	plastic	4	1	1.05																						
+		synthBeef	plastic	4	1	1.05																						
+		bandit_vest	rags tread	8	1	1.05																						
+		small_backpack	rags rags rags tread	8	1	1.05																						
+		blue_tshirt	rags tread	6	1	1.05	tread 1 rags 6 itemChip 20 mediumItemChip 40																					
+		dark_pants	rags tread	6	1	1.05	tread 1 rags 6 itemChip 20 mediumItemChip 40																					
+		blue_boots	rags tread plastic	6	1	1.05	rags 1 rubber 5 itemChip 10 mediumItemChip 40																					
+		army_knife	pierce_melee_shards plastic	8	1	1.05																						
+		army_pistol	plastic spring	10	1	1.05	weapon_shards 1 lens 5 itemChip 25 mediumItemChip 60																					
+		pmc_pistol	plastic spring	10	1	1.05	weapon_shards 1 lens 5 itemChip 25 mediumItemChip 60																					
+		pistol_basic_ammo	powder	0.5	1	1.05																						
+		shotgun_shrapnel_ammo	powder	0.5	1	1.05																						
+		bandage	rags rags	6	1	1.05																						
+		splint	rags plastic	6	1	1.05																						
+		antibiotics	plastic rottenMeat	10	1	1.05																						
+		medpack	bandage splint antibiotics	18	1	1.05																						
+		morphine	glass poppy_box	18	1	1.05																						
+		sorbent		2	1	1.05																						
+		phase_bomb	microelectronics microelectronics capacitor explosives circuit_board	6	1	1.05																						
+		tech_katana	pierce_melee_shards metal_tread plastic rubber	32	1	1.05																						
+		pmc_club	blunt_melee_shards rod plastic	14	1	1.05																						
+		franch_baton	blunt_melee_shards rod bulb	24	1	1.05																						
+		hatchet	pierce_melee_shards blunt_melee_shards rubber	24	1	1.05																						
+		spec_hatchet	pierce_melee_shards blunt_melee_shards armor_shards	28	1	1.05																						
+		sapper_shovel	rusty_shards pierce_melee_shards rod	12	1	1.05																						
+		army_pistol_2	plastic weapon_shards	14	2	1.06	weapon_shards 1 spring 5 itemChip 25 mediumItemChip 40																					
+		army_pistol_3	plastic weapon_shards metal_tread	18	3	1.07	spring 1 weapon_repair_kit 3 itemChip 6 mediumItemChip 36																					
+		army_pistol_4	ceramite_shards weapon_shards metal_tread	36	4	1.07	spring 1 weapon_repair_kit 3 itemChip 6 mediumItemChip 36																					
+		pmc_pistol_2	plastic weapon_shards	16	2	1.06	weapon_shards 1 spring 5 itemChip 25 mediumItemChip 40																					
+		pmc_pistol_3	plastic weapon_shards metal_tread spring	18	3	1.07	spring 1 weapon_repair_kit 3 itemChip 6 mediumItemChip 36																					
+		spec_pistol_2	rubber weapon_shards metal_tread	24	2	1.06	weapon_shards 1 spring 5 itemChip 25 mediumItemChip 40																					
+		spec_pistol_3	rubber weapon_shards metal_tread blunt_melee_shards	38	3	1.07	spring 1 weapon_repair_kit 3 itemChip 6 mediumItemChip 36																					
+		spec_pistol_rv	ceramite_shards armor_shards weapon_shards circuit_board	42	1	1.05	weapon_shards 1 spring 5 itemChip 9 mediumItemChip 25																					
+		dark_pistol_2	rubber weapon_shards blunt_melee_shards	24	2	1.06	weapon_shards 1 spring 5 itemChip 25 mediumItemChip 45																					
+		dark_pistol_3	rubber weapon_shards spring blunt_melee_shards	26	3	1.07	spring 1 weapon_repair_kit 3 itemChip 6 mediumItemChip 36																					
+		dark_pistol_4	ceramite_shards weapon_shards blunt_melee_shards	36	5	1.09	weapon_container 1 itemChip 3 mediumItemChip 6 highItemChip 24																					
+		dark_pistol_5	ceramite_shards weapon_shards spring	36	5	1.09	weapon_container 1 itemChip 3 mediumItemChip 6 highItemChip 24																					
+		rail_pistol_2	rubber circuit_board capacitor metal_tread	30	2	1.06	capacitor 1 transformer 5 itemChip 25 mediumItemChip 50																					
+		rail_pistol_3	rubber microelectronics capacitor metal_tread	34	1	1.05	transformer 1 research_disk 3 itemChip 15 mediumItemChip 60																					
+		tech_pistol_2	plastic circuit_board bulb wire	36	2	1.05	wire 1 circuit_board 5 itemChip 25 mediumItemChip 60																					
+		tech_pistol_3	plastic microelectronics bulb wire	40	4	1.06	circuit_board 1 microelectronics 3 itemChip 15 mediumItemChip 60																					
+		petrov_pistol_2	plastic spring	20	1	1.05	weapon_shards 1 spring 5 itemChip 25 mediumItemChip 40																					
+		petrov_pistol_3	plastic weapon_shards	24	1	1.05	spring 1 weapon_repair_kit 3 itemChip 6 mediumItemChip 36																					
+		core_nailgun	rusty_shards plastic spring	26	1	1.05	rusty_shards 1 spring 5 itemChip 25 mediumItemChip 45																					
+		ancm_quasi_pistol	ceramite_shards microelectronics venus_weapon_shard wire	46	1	1.05	broken_weapon 1 quasisamples 3 itemChip 15 AncomItemChip 30																					
+		sbn_pistol	armor_shards microelectronics capacitor metal_tread	36	1	1.05	weapon_shards 1 circuit_board 5 itemChip 10 SBNItemChip 30																					
+		daydream_frostgun	plastic circuit_board circuit_board bulb wire	40	1	1.05	wire 1 circuit_board 5 itemChip 10 DayDreamItemChip 30																					
+		gh_pistol	rubber weapon_shards spring	32	1	1.05	weapon_shards 1 rod 5 itemChip 10 GrassHopperItemChip 30																					
+		sl_pistol	armor_shards microelectronics bulb wire	42	1	1.05	wire 1 capacitor 7 itemChip 12 SunLightItemChip 30																					
+		franch_pistol	rubber weapon_shards spring metal_tread	28	1	1.05	weapon_shards 1 rod 5 itemChip 10 FrancheItemChip 30																					
+		pmc_shotgun	rubber weapon_shards blunt_melee_shards	24	2	1.06	weapon_shards 1 broken_weapon 5 itemChip 25 mediumItemChip 60																					
+		pmc_shotgun_2	armor_shards weapon_shards blunt_melee_shards	38	1	1.05	weapon_shards 1 weapon_repair_kit 3 itemChip 40 mediumItemChip 80																					
+		dark_shotgun	rubber weapon_shards spring blunt_melee_shards	28	3	1.08	weapon_shards 1 blunt_melee_shards 5 itemChip 25 mediumItemChip 60																					
+		dark_shotgun_2	armor_shards weapon_shards spring blunt_melee_shards	36	5	1.09	blunt_melee_shards 1 weapon_repair_kit 3 itemChip 6 mediumItemChip 36																					
+		dark_shotgun_3	ceramite_shards weapon_shards spring blunt_melee_shards	44	8	1.1	weapon_container 1 itemChip 3 mediumItemChip 6 highItemChip 24																					
+		desert_shotgun_2	rubber weapon_shards spring blunt_melee_shards	24	1	1.05	weapon_shards 1 blunt_melee_shards 5 itemChip 26 mediumItemChip 80																					
+		plazma_shotgun	ceramite_shards ceramite_shards microelectronics capacitor	50	1	1.05	electrical_parts_container 1 itemChip 3 mediumItemChip 6 highItemChip 24																					
+		spec_shotgun	armor_shards weapon_shards blunt_melee_shards	26	10	1.08	weapon_container 1 itemChip 3 mediumItemChip 6 highItemChip 24																					
+		church_shotgun	ceramite_shards ceramite_shards weapon_shards spring blunt_melee_shards	50	1	1.05	weapon_container 1 itemChip 6 mediumItemChip 12 ChurchItemChip 24																					
+		ancm_shotgun	armor_shards ceramite_shards weapon_shards blunt_melee_shards	48	1	1.05	weapon_container 1 itemChip 6 mediumItemChip 12 AncomItemChip 24																					
+		sbn_shotgun	armor_shards microelectronics capacitor metal_tread	40	1	1.05	circuit_board 1 itemChip 5 mediumItemChip 10 SBNItemChip 15																					
+		sl_shotgun	ceramite_shards ceramite_shards microelectronics capacitor	48	1	1.05	circuit_board 1 itemChip 5 mediumItemChip 15 SunLightItemChip 25																					
+		pmc_smg	rubber weapon_shards blunt_melee_shards	18	1	1.05	weapon_shards 1 spring 5 itemChip 25 mediumItemChip 50																					
+		pmc_smg_2	rubber weapon_shards spring blunt_melee_shards	22	2	1.06	spring 1 weapon_repair_kit 3 itemChip 6 mediumItemChip 36																					
+		pmc_smg_3	rubber weapon_shards weapon_shards spring blunt_melee_shards	32	1	1.05	weapon_shards 1 weapon_repair_kit 5 itemChip 26 mediumItemChip 40																					
+		spec_smg	armor_shards weapon_shards spring blunt_melee_shards	28	4	1.07	spring 1 weapon_repair_kit 3 itemChip 6 mediumItemChip 36																					
+		bandit_smg_2	rubber weapon_shards blunt_melee_shards	18	2	1.06	weapon_shards 1 spring 5 itemChip 25 mediumItemChip 50																					
+		tech_smg	plastic circuit_board bulb wire capacitor	48	1	1.05	bulb 1 microelectronics 3 itemChip 15 mediumItemChip 60																					
+		plazma_smg	ceramite_shards circuit_board microelectronics transformer	42	1	1.05	circuit_board 1 microelectronics 3 itemChip 15 mediumItemChip 60																					
+		spec_smg_rv	ceramite_shards weapon_shards spring blunt_melee_shards	48	1	1.05	weapon_repair_kit 1 itemChip 7 mediumItemChip 14 highItemChip 28																					
+		ancm_smg	armor_shards armor_shards weapon_shards spring	36	1	1.05	weapon_shards 1 itemChip 3 mediumItemChip 6 AncomItemChip 24																					
+		franch_smg	rubber weapon_shards spring spring	40	1	1.05	weapon_shards 1 itemChip 3 mediumItemChip 6 FrancheItemChip 24																					
+		sbn_smg	ceramite_shards microelectronics capacitor metal_tread	44	1	1.05	weapon_shards 1 itemChip 3 mediumItemChip 6 SBNItemChip 24																					
+		toxic_smg	plastic glass circuit_board metal_tread	26	1	1.05	weapon_shards 1 acid 5 itemChip 25 mediumItemChip 50																					
+		pmc_assault	armor_shards weapon_shards lens blunt_melee_shards	32	6	1.06	lens 1 weapon_repair_kit 3 itemChip 6 mediumItemChip 36																					
+		spec_assault	ceramite_shards weapon_shards lens blunt_melee_shards	42	1	1.05	weapon_container 1 itemChip 3 mediumItemChip 6 highItemChip 24																					
+		spec_assault_rv	ceramite_shards armor_shards weapon_shards microelectronics circuit_board	52	1	1.05	weapon_repair_kit 1 itemChip 6 mediumItemChip 12 RealWareItemChip 28																					
+		desert_assault	armor_shards weapon_shards spring blunt_melee_shards	36	6	1.06	lens 1 weapon_repair_kit 3 itemChip 6 mediumItemChip 36																					
+		ancm_quasi_assault	armor_shards ceramite_shards microelectronics venus_weapon_shard wire	50	1	1.05	quasisamples 1 itemChip 8 mediumItemChip 15 AncomItemChip 30																					
+		gh_assault	armor_shards weapon_shards lens blunt_melee_shards	30	1	1.05	weapon_shards 1 itemChip 7 mediumItemChip 14 GrassHopperItemChip 28																					
+		franch_assault	ceramite_shards armor_shards weapon_shards lens	38	1	1.05	weapon_shards 1 itemChip 8 mediumItemChip 15 FrancheItemChip 30																					
+		plazma_assault	ceramite_shards circuit_board microelectronics capacitor	44	1	1.05	transformer 1 itemChip 6 mediumItemChip 12 highItemChip 24																					
+		army_sniper	ceramite_shards weapon_shards lens spring blunt_melee_shards blunt_melee_shards	54	6	1.06	lens 1 weapon_repair_kit 3 itemChip 6 mediumItemChip 36																					
+		army_sniper_2	ceramite_shards weapon_shards lens microelectronics	58	8	1.08	weapon_container 1 itemChip 3 mediumItemChip 6 highItemChip 24																					
+		desert_marksman	rubber weapon_shards blunt_melee_shards	30	4	1.05	weapon_shards 1 lens 5 itemChip 25 mediumItemChip 50																					
+		desert_marksman_2	armor_shards weapon_shards lens blunt_melee_shards blunt_melee_shards	40	5	1.05	lens 1 weapon_repair_kit 3 itemChip 6 mediumItemChip 36																					
+		tech_marksman	plastic microelectronics lens bulb transformer	60	1	1.05	electrical_parts_container 1 itemChip 3 mediumItemChip 6 highItemChip 24																					
+		tech_rifle	plastic microelectronics lens bulb capacitor	44	1	1.05	electrical_parts_container 1 itemChip 3 mediumItemChip 6 highItemChip 24																					
+		ancm_marksman	ceramite_shards weapon_shards lens microelectronics blunt_melee_shards	62	1	1.05	lens 1 weapon_repair_kit 4 mediumItemChip 12 AncomItemChip 30																					
+		rail_rifle	ceramite_shards microelectronics capacitor metal_tread metal_tread	54	1	1.05	wire 1 circuit_board 6 electrical_parts_container 9 itemChip 25																					
+		gh_marksman	armor_shards weapon_shards lens blunt_melee_shards	48	1	1.05	lens 1 weapon_repair_kit 3 itemChip 9 mediumItemChip 24																					
+		sl_sniper	ceramite_shards microelectronics lens transformer capacitor	64	1	1.05	electrical_parts_container 1 itemChip 3 mediumItemChip 6 highItemChip 24																					
+		core_nailmachinegun	rusty_shards coarse_gears spring rod	34	1	1.05	rusty_shards 1 spring 5 itemChip 25 highItemChip 36																					
+		core_laser	armor_shards plastic circuit_board bulb wire	40	1	1.05	electrical_parts_container 1 electrical_parts_container 3 itemChip 12 CoreItemChip 24																					
+		desert_hmg	ceramite_shards weapon_shards spring blunt_melee_shards blunt_melee_shards	52	8	1.08	weapon_shards 1 blunt_melee_shards 5 itemChip 25 mediumItemChip 60																					
+		plazma_hmg	ceramite_shards microelectronics wire capacitor transformer	64	1	1.05	electrical_parts_container 1 itemChip 5 mediumItemChip 15 SBNItemChip 36																					
+		spec_hmg	ceramite_shards weapon_shards metal_tread spring blunt_melee_shards blunt_melee_shards	62	12	1.1	weapon_container 1 itemChip 3 mediumItemChip 6 highItemChip 36																					
+		pb_shockgun	ceramite_shards microelectronics microelectronics bulb capacitor transformer	70	1	1.05	electrical_parts_container 1 itemChip 4 mediumItemChip 9 PlanetBridgeItemChip 28																					
+		core_disctrower	coarse_gears spring armor_shards rod	38	1	1.05	coarse_gears 1 spring 3 itemChip 8 mediumItemChip 24																					
+		core_flametrower	coarse_gears metal_tread armor_shards rod	36	1	1.05	coarse_gears 1 weapon_repair_kit 3 mediumItemChip 9 CoreItemChip 24																					
+		toxic_trower	armor_shards glass circuit_board capacitor	48	1	1.05	weapon_shards 1 acid 5 itemChip 25 mediumItemChip 60																					
+		regular_launcher	armor_shards weapon_shards spring metal_tread blunt_melee_shards	56	1	1.05	spring 1 weapon_repair_kit 3 mediumItemChip 12 highItemChip 24																					
+		pistol_burst_ammo	powder gas_ammo	0.8	1	1.05																						
+		pistol_expansive_ammo	powder powder	1	1	1.05																						
+		miner_bolts_ammo	broken_weapon	0.2	1	1.05																						
+		shotgun_bullet_ammo	powder powder	0.8	1	1.05																						
+		shotgun_flechette_ammo	powder miner_bolts_ammo	1	1	1.05																						
+		shotgun_dragon_ammo	powder gas_ammo	1.2	1	1.05																						
+		medium_basic_ammo	powder	1	1	1.05																						
+		medium_police_ammo	powder powder	1.5	1	1.05																						
+		heavy_basic_ammo	powder powder	1	1	1.05																						
+		heavy_armorpierce_ammo	powder powder powder	2	1	1.05																						
+		battery_charge	glass acid	2.5	1	1.05																						
+		sawblade_ammo	broken_weapon	0.8	1	1.05																						
+		toxic_ammo	acid	1	1	1.05																						
+		medicalClue	plastic antibiotics	8	1	1.05																						
+		surgicalKit	medpack morphine medicalClue naloxone	40	1	1.05																						
+		antidote	plastic spider_poisongland	12	1	1.05																						
+		bloodBag	plastic trowable_heart	10	1	1.05																						
+		painkillers	plastic poppy_box	8	1	1.05																						
+		vodka	glassBottle water human_poop	8	1	1.05																						
+		mre_pack	cannedMeat synthBeef chocolateBar	10	1	1.05																						
+		medium_backpack	rags rags plastic rubber tread	36	1	1.05																						
+		big_backpack	rags plastic rubber armor_shards tread	48	1	1.05																						
+		servo_backpack	plastic plastic rubber metal_tread wire	30	1	1.05																						
+		pmc_vest	rags rags metal_tread tread	24	1	1.05																						
+		pmc_vest_armored	pmc_vest armor_shards metal_tread	36	1	1.05																						
+		bandit_vest_armored	bandit_vest rusty_shards metal_tread	24	1	1.05																						
+		army_vest	rags rags tread	12	1	1.05																						
+		cevlar_vest	armor_shards rubber metal_tread	24	1	1.05																						
+		cevlar_vest_pockets	cevlar_vest rags tread	36	1	1.05																						
+		ceramit_vest	ceramite_shards rubber metal_tread	36	1	1.05																						
+		doom_armor	armor_shards ceramite_shards metal_tread capacitor	48	1	1.05	armor_repair_kit 1 itemChip 10 mediumItemChip 18 highItemChip 42																					
+		ancom_armor	armor_shards ceramite_shards rubber rubber capacitor	52	1	1.05	ceramite_shards 1 itemChip 12 mediumItemChip 24 AncomItemChip 36																					
+		power_armor	armor_shards capacitor metal_tread	48	1	1.05	ceramite_shards 1 itemChip 9 mediumItemChip 15 highItemChip 30																					
+		realwear_armor	armor_shards armor_shards ceramite_shards rubber capacitor	54	1	1.05	armor_repair_kit 1 itemChip 10 mediumItemChip 18 RealWareItemChip 32																					
+		smuggler_armor	armor_shards rubber tread	24	1	1.05	rubber 1 armor_shards 9 itemChip 25 mediumItemChip 30																					
+		solnet_armor	armor_shards ceramite_shards rubber capacitor capacitor	50	1	1.05	ceramite_shards 1 itemChip 12 mediumItemChip 30 highItemChip 40																					
+		worker_armor	armor_shards rubber rubber tread	30	1	1.05	rubber 1 armor_shards 12 mediumItemChip 25 highItemChip 35																					
+		pmc_armor	armor_shards rags tread	18	1	1.05	armor_shards 1 itemChip 5 mediumItemChip 10 highItemChip 30																					
+		security_armor	armor_shards rags tread tread	24	1	1.05	armor_shards 1 itemChip 9 mediumItemChip 15 highItemChip 30																					
+		rw_militia_vest	armor_shards rags rags tread	22	1	1.05	armor_shards 1 itemChip 5 mediumItemChip 10 RealWareItemChip 30																					
+		rw_warlord_armor	ceramite_shards ceramite_shards armor_shards rubber capacitor	64	1	1.05	armor_repair_kit 1 mediumItemChip 6 highItemChip 18 RealWareItemChip 40																					
+		svn_cap_vest	armor_shards rags rags tread	22	1	1.05	armor_shards 1 armor_repair_kit 3 itemChip 20 SBNItemChip 45																					
+		svn_heavy_armor	ceramite_shards ceramite_shards armor_shards rubber capacitor	64	1	1.05	ceramite_shards 1 armor_repair_kit 5 mediumItemChip 15 SBNItemChip 30																					
+		daydream_chem_vest	rubber rubber plastic tread	32	1	1.05	rubber 1 armor_repair_kit 3 itemChip 15 DayDreamItemChip 40																					
+		daydream_armored_vest	armor_shards armor_shards rubber plastic tread	60	1	1.05	ceramite_shards 1 itemChip 6 mediumItemChip 15 DayDreamItemChip 28																					
+		sl_power_armor	armor_shards ceramite_shards rubber capacitor microelectronics	62	1	1.05	armor_repair_kit 1 itemChip 9 mediumItemChip 18 SunLightItemChip 36																					
+		ancom_police_armor	armor_shards armor_shards rags tread	34	1	1.05	armor_shards 1 itemChip 6 highItemChip 25 AncomItemChip 45																					
+		ancom_agent_armor	rags rags rubber rubber tread	36	1	1.05	armor_shards 1 itemChip 7 highItemChip 21 AncomItemChip 42																					
+		church_priest_shirt	rags rags rubber plastic tread	34	1	1.05	rags 1 itemChip 7 mediumItemChip 21 ChurchItemChip 35																					
+		church_power_armor	ceramite_shards ceramite_shards capacitor metal_tread	40	1	1.05	ceramite_shards 1 itemChip 9 mediumItemChip 18 ChurchItemChip 36																					
+		pb_vest	rags rags rusty_shards tread	16	1	1.05	rags 1 blunt_melee_shards 5 itemChip 15 mediumItemChip 30																					
+		pb_heavy_armor	armor_shards ceramite_shards capacitor metal_tread metal_tread	46	1	1.05	ceramite_shards 1 armor_repair_kit 2 mediumItemChip 15 PlanetBridgeItemChip 35																					
+		franch_heavy_armor	armor_shards ceramite_shards rubber rubber capacitor	52	1	1.05	ceramite_shards 1 mediumItemChip 5 highItemChip 12 FrancheItemChip 30																					
+		core_hard_vest	rags rags rusty_shards tread	16	1	1.05	rubber 1 armor_shards 6 itemChip 25 mediumItemChip 40																					
+		core_power_armor	ceramite_shards ceramite_shards armor_shards armor_shards capacitor	64	1	1.05	armor_repair_kit 1 itemChip 9 mediumItemChip 18 CoreItemChip 28																					
+		doom_helmet	armor_shards ceramite_shards glass circuit_board	48	1	1.05	armor_repair_kit 1 itemChip 10 mediumItemChip 18 highItemChip 42																					
+		ancom_helmet	armor_shards ceramite_shards glass microelectronics microelectronics	52	1	1.05	ceramite_shards 1 itemChip 12 mediumItemChip 24 AncomItemChip 36																					
+		power_helmet	armor_shards glass circuit_board	48	1	1.05	ceramite_shards 1 itemChip 9 mediumItemChip 15 highItemChip 30																					
+		realwear_helmet	armor_shards armor_shards ceramite_shards glass microelectronics	54	1	1.05	armor_repair_kit 1 itemChip 10 mediumItemChip 18 RealWareItemChip 32																					
+		smuggler_helmet	armor_shards rubber glass	24	1	1.05	rubber 1 armor_shards 9 itemChip 25 mediumItemChip 40																					
+		solnet_helmet	armor_shards ceramite_shards glass glass microelectronics	50	1	1.05	ceramite_shards 1 itemChip 12 mediumItemChip 30 highItemChip 40																					
+		worker_helmet	armor_shards rubber rubber glass	30	1	1.05	rubber 1 armor_shards 12 mediumItemChip 25 highItemChip 35																					
+		pmc_helmet	armor_shards plastic glass	18	1	1.05	armor_shards 1 itemChip 15 mediumItemChip 25 highItemChip 50																					
+		rw_militia_helmet	armor_shards plastic	22	1	1.05	armor_shards 1 itemChip 5 mediumItemChip 9 RealWareItemChip 40																					
+		rw_warlord_helmet	ceramite_shards ceramite_shards armor_shards armor_shards glass microelectronics	64	1	1.05	armor_repair_kit 1 mediumItemChip 6 highItemChip 12 RealWareItemChip 24																					
+		svn_cap_hat	rags rags tread	22	1	1.05	armor_shards 1 armor_repair_kit 3 itemChip 6 SBNItemChip 35																					
+		svn_heavy_helmet	ceramite_shards ceramite_shards armor_shards glass microelectronics	64	1	1.05	ceramite_shards 1 armor_repair_kit 5 mediumItemChip 15 SBNItemChip 30																					
+		daydream_chem_helmet	armor_shards rubber rubber glass	32	1	1.05	rubber 1 armor_repair_kit 3 itemChip 6 DayDreamItemChip 40																					
+		daydream_armored_helmet	armor_shards ceramite_shards glass glass microelectronics	60	1	1.05	ceramite_shards 1 itemChip 6 mediumItemChip 15 DayDreamItemChip 28																					
+		sl_power_helmet	armor_shards ceramite_shards glass microelectronics	62	1	1.05	armor_repair_kit 1 itemChip 9 mediumItemChip 18 SunLightItemChip 36																					
+		ancom_police_mask	armor_shards plastic glass	34	1	1.05	armor_shards 1 itemChip 6 highItemChip 9 AncomItemChip 45																					
+		ancom_agent_mask	armor_shards armor_shards glass	36	1	1.05	armor_shards 1 itemChip 6 highItemChip 12 AncomItemChip 30																					
+		church_priest_helmet	armor_shards glass glass	34	1	1.05	rags 1 itemChip 3 mediumItemChip 9 ChurchItemChip 45																					
+		church_power_helmet	armor_shards armor_shards glass circuit_board	40	1	1.05	ceramite_shards 1 itemChip 9 mediumItemChip 18 ChurchItemChip 36																					
+		pb_hard_hat	rags rags rusty_shards	16	1	1.05	rags 1 blunt_melee_shards 5 itemChip 15 mediumItemChip 30																					
+		pb_heavy_helmet	armor_shards ceramite_shards glass circuit_board	46	1	1.05	ceramite_shards 1 armor_repair_kit 2 itemChip 10 PlanetBridgeItemChip 30																					
+		franch_helmet	armor_shards plastic plastic	24	1	1.05	ceramite_shards 1 mediumItemChip 5 highItemChip 12 FrancheItemChip 30																					
+		franch_heavy_mask	armor_shards armor_shards ceramite_shards glass microelectronics	52	1	1.05	ceramite_shards 1 mediumItemChip 5 highItemChip 12 FrancheItemChip 30																					
+		core_hard_hat	rags rags rusty_shards	16	1	1.05	rubber 1 armor_shards 6 itemChip 12 mediumItemChip 45																					
+		core_power_helmet	ceramite_shards armor_shards armor_shards glass microelectronics	64	1	1.05	armor_repair_kit 1 itemChip 9 mediumItemChip 18 CoreItemChip 28																					
+		balaklava	rags tread	10	1	1.05	tread 1 rags 5 itemChip 10 mediumItemChip 30																					
+		doom_pants	armor_shards ceramite_shards rubber metal_tread	48	1	1.05	armor_repair_kit 1 itemChip 10 mediumItemChip 18 highItemChip 42																					
+		ancom_pants	armor_shards ceramite_shards rubber plastic plastic	52	1	1.05	ceramite_shards 1 itemChip 12 mediumItemChip 24 AncomItemChip 36																					
+		power_pants	armor_shards rubber metal_tread	48	1	1.05	ceramite_shards 1 itemChip 9 mediumItemChip 15 highItemChip 30																					
+		realwear_pants	armor_shards armor_shards ceramite_shards rubber plastic	54	1	1.05	armor_repair_kit 1 itemChip 10 mediumItemChip 18 RealWareItemChip 32																					
+		smuggler_pants	armor_shards rubber tread	10	1	1.05	rubber 1 armor_shards 9 itemChip 25 mediumItemChip 30																					
+		solnet_pants	armor_shards ceramite_shards rubber rubber plastic	50	1	1.05	ceramite_shards 1 itemChip 12 mediumItemChip 30 highItemChip 40																					
+		worker_pants	armor_shards rubber rubber tread	30	1	1.05	rubber 1 armor_shards 12 mediumItemChip 25 highItemChip 35																					
+		pmc_pants	armor_shards rags tread	12	1	1.05	armor_shards 1 itemChip 6 mediumItemChip 9 highItemChip 50																					
+		rw_militia_pants	armor_shards rags rags tread	22	1	1.05	armor_shards 1 itemChip 5 mediumItemChip 9 RealWareItemChip 40																					
+		rw_warlord_pants	ceramite_shards ceramite_shards armor_shards armor_shards rubber	64	1	1.05	armor_repair_kit 1 mediumItemChip 6 highItemChip 12 RealWareItemChip 24																					
+		svn_cap_pants	armor_shards rags	22	1	1.05	armor_shards 1 armor_repair_kit 3 itemChip 6 SBNItemChip 35																					
+		svn_heavy_pants	ceramite_shards ceramite_shards armor_shards rubber rubber	64	1	1.05	ceramite_shards 1 armor_repair_kit 5 mediumItemChip 15 SBNItemChip 30																					
+		daydream_chem_pants	armor_shards rubber rubber tread	32	1	1.05	rubber 1 armor_repair_kit 3 itemChip 6 DayDreamItemChip 40																					
+		daydream_armored_pants	armor_shards armor_shards ceramite_shards rubber plastic	60	1	1.05	ceramite_shards 1 itemChip 6 mediumItemChip 15 DayDreamItemChip 28																					
+		sl_power_pants	armor_shards ceramite_shards rubber plastic plastic	62	1	1.05	armor_repair_kit 1 itemChip 9 mediumItemChip 18 SunLightItemChip 36																					
+		ancom_police_pants	armor_shards armor_shards rags tread	34	1	1.05	armor_shards 1 itemChip 6 highItemChip 9 AncomItemChip 45																					
+		ancom_agent_pants	armor_shards armor_shards rubber tread	36	1	1.05	armor_shards 1 itemChip 6 highItemChip 12 AncomItemChip 30																					
+		church_priest_pants	armor_shards rubber tread tread	34	1	1.05	rags 1 itemChip 3 mediumItemChip 9 ChurchItemChip 45																					
+		church_power_pants	armor_shards armor_shards rubber metal_tread	40	1	1.05	ceramite_shards 1 itemChip 9 mediumItemChip 18 ChurchItemChip 36																					
+		pb_pants	rags rusty_shards tread	16	1	1.05	rags 1 blunt_melee_shards 5 itemChip 15 mediumItemChip 30																					
+		pb_heavy_pants	armor_shards ceramite_shards rubber metal_tread metal_tread	46	1	1.05	ceramite_shards 1 armor_repair_kit 2 itemChip 10 PlanetBridgeItemChip 30																					
+		franch_pants	armor_shards armor_shards rags tread	24	1	1.05	armor_shards 1 itemChip 5 mediumItemChip 12 FrancheItemChip 30																					
+		franch_heavy_pants	armor_shards ceramite_shards rubber rubber plastic	52	1	1.05	ceramite_shards 1 mediumItemChip 5 highItemChip 12 FrancheItemChip 30																					
+		core_hard_pants	rags rusty_shards tread	16	1	1.05	rubber 1 armor_shards 6 itemChip 12 mediumItemChip 45																					
+		core_power_pants	ceramite_shards ceramite_shards armor_shards rubber rubber	64	1	1.05	armor_repair_kit 1 itemChip 9 mediumItemChip 18 CoreItemChip 28																					
+		doom_boots	ceramite_shards armor_shards rubber metal_tread	48	1	1.05	armor_repair_kit 1 itemChip 10 mediumItemChip 18 highItemChip 42																					
+		ancom_boots	armor_shards ceramite_shards rubber plastic plastic	52	1	1.05	ceramite_shards 1 itemChip 12 mediumItemChip 24 AncomItemChip 36																					
+		power_boots	armor_shards rubber metal_tread	48	1	1.05	ceramite_shards 1 itemChip 9 mediumItemChip 15 highItemChip 30																					
+		realwear_boots	armor_shards armor_shards ceramite_shards rubber plastic	54	1	1.05	armor_repair_kit 1 itemChip 10 mediumItemChip 18 RealWareItemChip 32																					
+		smuggler_boots	armor_shards rubber rubber	10	1	1.05	rubber 1 armor_shards 9 itemChip 25 mediumItemChip 40																					
+		solnet_boots	armor_shards ceramite_shards rubber rubber plastic	50	1	1.05	ceramite_shards 1 itemChip 12 mediumItemChip 30 highItemChip 40																					
+		worker_boots	armor_shards rubber rubber	30	1	1.05	rubber 1 armor_shards 12 mediumItemChip 25 highItemChip 35																					
+		pmc_boots	armor_shards plastic rubber	12	1	1.05	armor_shards 1 itemChip 6 mediumItemChip 9 highItemChip 50																					
+		rw_warlord_boots	ceramite_shards ceramite_shards armor_shards rubber plastic	64	1	1.05	armor_repair_kit 1 mediumItemChip 6 highItemChip 12 RealWareItemChip 24																					
+		svn_heavy_boots	ceramite_shards armor_shards rubber rubber plastic	64	1	1.05	ceramite_shards 1 armor_repair_kit 5 mediumItemChip 15 SBNItemChip 30																					
+		daydream_chem_boots	armor_shards armor_shards rubber rubber	32	1	1.05	rubber 1 armor_repair_kit 3 itemChip 6 DayDreamItemChip 40																					
+		sl_power_boots	armor_shards armor_shards ceramite_shards rubber plastic	62	1	1.05	armor_repair_kit 1 itemChip 9 mediumItemChip 18 SunLightItemChip 36																					
+		ancom_police_boots	armor_shards armor_shards plastic rubber	34	1	1.05	armor_shards 1 itemChip 6 highItemChip 9 AncomItemChip 45																					
+		ancom_agent_boots	armor_shards armor_shards rubber	36	1	1.05	armor_shards 1 itemChip 6 highItemChip 12 AncomItemChip 30																					
+		church_priest_boots	armor_shards rubber rubber	34	1	1.05	rags 1 itemChip 3 mediumItemChip 9 ChurchItemChip 40																					
+		church_power_boots	armor_shards armor_shards rubber metal_tread	40	1	1.05	ceramite_shards 1 itemChip 9 mediumItemChip 18 ChurchItemChip 36																					
+		pb_boots	rusty_shards plastic rubber	16	1	1.05	rags 1 blunt_melee_shards 5 itemChip 15 mediumItemChip 30																					
+		pb_heavy_boots	armor_shards ceramite_shards rubber metal_tread metal_tread	46	1	1.05	ceramite_shards 1 armor_repair_kit 2 itemChip 10 PlanetBridgeItemChip 45																					
+		franch_boots	armor_shards plastic plastic rubber	24	1	1.05	armor_shards 1 itemChip 5 mediumItemChip 12 FrancheItemChip 30																					
+		franch_heavy_boots	armor_shards armor_shards ceramite_shards rubber plastic	52	1	1.05	ceramite_shards 1 mediumItemChip 5 highItemChip 12 FrancheItemChip 30																					
+		common_boots	rusty_shards plastic rubber	16	1	1.05	rags 1 rubber 5 itemChip 20 mediumItemChip 35																					
+		core_power_boots	ceramite_shards armor_shards rubber plastic plastic	64	1	1.05	armor_repair_kit 1 itemChip 9 mediumItemChip 18 CoreItemChip 28																					
+		armor_repair_kit	tread rubber armor_shards ceramite_shards	24	1	1.05																						
+		weapon_repair_kit	plastic weapon_shards lens microelectronics	24	1	1.05																						
+		melee_repair_kit	metal_tread pierce_melee_shards blunt_melee_shards rod	24	1	1.05																						
+		automap	circuit_board circuit_board microelectronics bulb	64	1	1.05																						
+		frag_grenade	tin miner_bolts_ammo explosives	16	1	1.05																						
+		thermal_grenade	tin gas_ammo powder	14	1	1.05																						
+		stun_grenade	tin acid human_poop	12	1	1.05																						
+		frag_mine	tin explosives explosives explosives	16	1	1.05																						
+		stationary_turret	spec_hmg armor_shards weapon_shards circuit_board	52	1	1.05																						
+		fire_turret	miner_flametrower armor_shards weapon_shards circuit_board	64	1	1.05																						
+		energy_turret	tech_marksman armor_shards weapon_shards circuit_board circuit_board	80	1	1.05																						
+#end																												
+																												
+#itemexpire																												
+Id		ExpiresAfterHours	ConvertedItemId																									
+meat1		24	rottenMeat																									
+aztec_rags		336	rags																									
+quasi_bolts_ammo		168	broken_weapon																									
+quasi_energy_ammo		168	bloodBag																									
+demonic_medicine		168	furuncle																									
+demonic_idol		336	trowable_heart																									
+furuncle		48	rottenMeat																									
+demonic_shards		504	broken_weapon																									
+demonic_aye		504	human_aye																									
+qwasi_grenade		504	human_aye																									
+trowable_heart		24	rottenMeat																									
+#end																												

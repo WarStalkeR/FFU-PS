@@ -34,6 +34,7 @@
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\Quasimorph_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
+    <Reference Include="SimpleJSON, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -48,6 +49,10 @@
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>..\..\..\Quasimorph_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Quasimorph_Data\Managed\UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FFU_PS_Init.cs" />
@@ -58,6 +63,7 @@
   <ItemGroup>
     <None Include="Files\Configs\cfg_global_tutorial_items.csv" />
     <None Include="Files\modmanifest.json" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Files\logo_full.png" />
