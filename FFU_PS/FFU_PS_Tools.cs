@@ -7,21 +7,18 @@ using System.Text.RegularExpressions;
 using UnityEngine;
 
 namespace FFU_Phase_Shift {
-    public class ModTools {
-        private bool _verbose = false;
-        private string _cntPath = null;
-        private ModConfigLoader _cfgLoader = null;
+    public static class ModTools {
+        private static bool _verbose = false;
+        private static string _cntPath = null;
+        private static ModConfigLoader _cfgLoader = null;
 
-        public ModTools() {
-        }
-
-        public void Setup(string contentPath = null, ModConfigLoader configLoader = null, bool logVerbose = false) {
+        public static void Setup(string contentPath = null, ModConfigLoader configLoader = null, bool logVerbose = false) {
             if (contentPath != null) _cntPath = contentPath;
             if (configLoader != null) _cfgLoader = configLoader;
             if (logVerbose) _verbose = true;
         }
 
-        public void Initialize() {
+        public static void Initialize() {
             if (_cfgLoader == null) { ModLog.Error($"Initialize: config loader is not referenced!"); return; }
             _cfgLoader.OnDescriptorsLoaded += delegate (string header, DescriptorsCollection descriptors) {
                 if (!Data.Descriptors.ContainsKey(header)) {
@@ -228,8 +225,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<AmmoRecord>("ammo", delegate (AmmoRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, ammo: {r.Id}");
-                bool isReference = r.Id.StartsWith("*");
-                if (isReference) r.TrimId();
+                bool isOnTop = r.Id.StartsWith("*");
+                if (isOnTop) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     var multiRecord = Data.Items._records[r.Id] as CompositeItemRecord;
                     if (multiRecord != null) {
@@ -237,7 +234,7 @@ namespace FFU_Phase_Shift {
                             int index = multiRecord.Records.FindIndex(rec => rec is AmmoRecord);
                             if (index != -1) multiRecord.Records[index] = r;
                         } else {
-                            if (isReference) multiRecord.Records.Insert(0, r);
+                            if (isOnTop) multiRecord.Records.Insert(0, r);
                             else multiRecord.Records.Add(r);
                         }
                     } else Data.Items._records[r.Id] = r;
@@ -246,8 +243,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<WeaponRecord>("meleeweapons", delegate (WeaponRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, meleeweapons: {r.Id}");
-                bool isReference = r.Id.StartsWith("*");
-                if (isReference) r.TrimId();
+                bool isOnTop = r.Id.StartsWith("*");
+                if (isOnTop) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     var multiRecord = Data.Items._records[r.Id] as CompositeItemRecord;
                     if (multiRecord != null) {
@@ -255,7 +252,7 @@ namespace FFU_Phase_Shift {
                             int index = multiRecord.Records.FindIndex(rec => rec is WeaponRecord);
                             if (index != -1) multiRecord.Records[index] = r;
                         } else {
-                            if (isReference) multiRecord.Records.Insert(0, r);
+                            if (isOnTop) multiRecord.Records.Insert(0, r);
                             else multiRecord.Records.Add(r);
                         }
                     } else Data.Items._records[r.Id] = r;
@@ -268,8 +265,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<WeaponRecord>("rangeweapons", delegate (WeaponRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, rangeweapons: {r.Id}");
-                bool isReference = r.Id.StartsWith("*");
-                if (isReference) r.TrimId();
+                bool isOnTop = r.Id.StartsWith("*");
+                if (isOnTop) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     var multiRecord = Data.Items._records[r.Id] as CompositeItemRecord;
                     if (multiRecord != null) {
@@ -277,7 +274,7 @@ namespace FFU_Phase_Shift {
                             int index = multiRecord.Records.FindIndex(rec => rec is WeaponRecord);
                             if (index != -1) multiRecord.Records[index] = r;
                         } else {
-                            if (isReference) multiRecord.Records.Insert(0, r);
+                            if (isOnTop) multiRecord.Records.Insert(0, r);
                             else multiRecord.Records.Add(r);
                         }
                     } else Data.Items._records[r.Id] = r;
@@ -287,8 +284,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<MedkitRecord>("medkits", delegate (MedkitRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, medkits: {r.Id}");
-                bool isReference = r.Id.StartsWith("*");
-                if (isReference) r.TrimId();
+                bool isOnTop = r.Id.StartsWith("*");
+                if (isOnTop) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     var multiRecord = Data.Items._records[r.Id] as CompositeItemRecord;
                     if (multiRecord != null) {
@@ -296,7 +293,7 @@ namespace FFU_Phase_Shift {
                             int index = multiRecord.Records.FindIndex(rec => rec is MedkitRecord);
                             if (index != -1) multiRecord.Records[index] = r;
                         } else {
-                            if (isReference) multiRecord.Records.Insert(0, r);
+                            if (isOnTop) multiRecord.Records.Insert(0, r);
                             else multiRecord.Records.Add(r);
                         }
                     } else Data.Items._records[r.Id] = r;
@@ -305,8 +302,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<FoodRecord>("food", delegate (FoodRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, food: {r.Id}");
-                bool isReference = r.Id.StartsWith("*");
-                if (isReference) r.TrimId();
+                bool isOnTop = r.Id.StartsWith("*");
+                if (isOnTop) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     var multiRecord = Data.Items._records[r.Id] as CompositeItemRecord;
                     if (multiRecord != null) {
@@ -314,7 +311,7 @@ namespace FFU_Phase_Shift {
                             int index = multiRecord.Records.FindIndex(rec => rec is FoodRecord);
                             if (index != -1) multiRecord.Records[index] = r;
                         } else {
-                            if (isReference) multiRecord.Records.Insert(0, r);
+                            if (isOnTop) multiRecord.Records.Insert(0, r);
                             else multiRecord.Records.Add(r);
                         }
                     } else Data.Items._records[r.Id] = r;
@@ -323,8 +320,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<BackpackRecord>("backpacks", delegate (BackpackRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, backpacks: {r.Id}");
-                bool isReference = r.Id.StartsWith("*");
-                if (isReference) r.TrimId();
+                bool isOnTop = r.Id.StartsWith("*");
+                if (isOnTop) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     var multiRecord = Data.Items._records[r.Id] as CompositeItemRecord;
                     if (multiRecord != null) {
@@ -332,7 +329,7 @@ namespace FFU_Phase_Shift {
                             int index = multiRecord.Records.FindIndex(rec => rec is BackpackRecord);
                             if (index != -1) multiRecord.Records[index] = r;
                         } else {
-                            if (isReference) multiRecord.Records.Insert(0, r);
+                            if (isOnTop) multiRecord.Records.Insert(0, r);
                             else multiRecord.Records.Add(r);
                         }
                     } else Data.Items._records[r.Id] = r;
@@ -341,8 +338,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<VestRecord>("vests", delegate (VestRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, vests: {r.Id}");
-                bool isReference = r.Id.StartsWith("*");
-                if (isReference) r.TrimId();
+                bool isOnTop = r.Id.StartsWith("*");
+                if (isOnTop) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     var multiRecord = Data.Items._records[r.Id] as CompositeItemRecord;
                     if (multiRecord != null) {
@@ -350,7 +347,7 @@ namespace FFU_Phase_Shift {
                             int index = multiRecord.Records.FindIndex(rec => rec is VestRecord);
                             if (index != -1) multiRecord.Records[index] = r;
                         } else {
-                            if (isReference) multiRecord.Records.Insert(0, r);
+                            if (isOnTop) multiRecord.Records.Insert(0, r);
                             else multiRecord.Records.Add(r);
                         }
                     } else Data.Items._records[r.Id] = r;
@@ -359,8 +356,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<HelmetRecord>("helmets", delegate (HelmetRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, helmets: {r.Id}");
-                bool isReference = r.Id.StartsWith("*");
-                if (isReference) r.TrimId();
+                bool isOnTop = r.Id.StartsWith("*");
+                if (isOnTop) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     var multiRecord = Data.Items._records[r.Id] as CompositeItemRecord;
                     if (multiRecord != null) {
@@ -368,7 +365,7 @@ namespace FFU_Phase_Shift {
                             int index = multiRecord.Records.FindIndex(rec => rec is HelmetRecord);
                             if (index != -1) multiRecord.Records[index] = r;
                         } else {
-                            if (isReference) multiRecord.Records.Insert(0, r);
+                            if (isOnTop) multiRecord.Records.Insert(0, r);
                             else multiRecord.Records.Add(r);
                         }
                     } else Data.Items._records[r.Id] = r;
@@ -377,8 +374,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<ArmorRecord>("armors", delegate (ArmorRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, armors: {r.Id}");
-                bool isReference = r.Id.StartsWith("*");
-                if (isReference) r.TrimId();
+                bool isOnTop = r.Id.StartsWith("*");
+                if (isOnTop) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     var multiRecord = Data.Items._records[r.Id] as CompositeItemRecord;
                     if (multiRecord != null) {
@@ -386,7 +383,7 @@ namespace FFU_Phase_Shift {
                             int index = multiRecord.Records.FindIndex(rec => rec is ArmorRecord);
                             if (index != -1) multiRecord.Records[index] = r;
                         } else {
-                            if (isReference) multiRecord.Records.Insert(0, r);
+                            if (isOnTop) multiRecord.Records.Insert(0, r);
                             else multiRecord.Records.Add(r);
                         }
                     } else Data.Items._records[r.Id] = r;
@@ -395,8 +392,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<LeggingsRecord>("leggings", delegate (LeggingsRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, leggings: {r.Id}");
-                bool isReference = r.Id.StartsWith("*");
-                if (isReference) r.TrimId();
+                bool isOnTop = r.Id.StartsWith("*");
+                if (isOnTop) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     var multiRecord = Data.Items._records[r.Id] as CompositeItemRecord;
                     if (multiRecord != null) {
@@ -404,7 +401,7 @@ namespace FFU_Phase_Shift {
                             int index = multiRecord.Records.FindIndex(rec => rec is LeggingsRecord);
                             if (index != -1) multiRecord.Records[index] = r;
                         } else {
-                            if (isReference) multiRecord.Records.Insert(0, r);
+                            if (isOnTop) multiRecord.Records.Insert(0, r);
                             else multiRecord.Records.Add(r);
                         }
                     } else Data.Items._records[r.Id] = r;
@@ -413,8 +410,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<BootsRecord>("boots", delegate (BootsRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, boots: {r.Id}");
-                bool isReference = r.Id.StartsWith("*");
-                if (isReference) r.TrimId();
+                bool isOnTop = r.Id.StartsWith("*");
+                if (isOnTop) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     var multiRecord = Data.Items._records[r.Id] as CompositeItemRecord;
                     if (multiRecord != null) {
@@ -422,7 +419,7 @@ namespace FFU_Phase_Shift {
                             int index = multiRecord.Records.FindIndex(rec => rec is BootsRecord);
                             if (index != -1) multiRecord.Records[index] = r;
                         } else {
-                            if (isReference) multiRecord.Records.Insert(0, r);
+                            if (isOnTop) multiRecord.Records.Insert(0, r);
                             else multiRecord.Records.Add(r);
                         }
                     } else Data.Items._records[r.Id] = r;
@@ -431,8 +428,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<RepairRecord>("repairs", delegate (RepairRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, repairs: {r.Id}");
-                bool isReference = r.Id.StartsWith("*");
-                if (isReference) r.TrimId();
+                bool isOnTop = r.Id.StartsWith("*");
+                if (isOnTop) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     var multiRecord = Data.Items._records[r.Id] as CompositeItemRecord;
                     if (multiRecord != null) {
@@ -440,7 +437,7 @@ namespace FFU_Phase_Shift {
                             int index = multiRecord.Records.FindIndex(rec => rec is RepairRecord);
                             if (index != -1) multiRecord.Records[index] = r;
                         } else {
-                            if (isReference) multiRecord.Records.Insert(0, r);
+                            if (isOnTop) multiRecord.Records.Insert(0, r);
                             else multiRecord.Records.Add(r);
                         }
                     } else Data.Items._records[r.Id] = r;
@@ -449,8 +446,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<SkullRecord>("skulls", delegate (SkullRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, skulls: {r.Id}");
-                bool isReference = r.Id.StartsWith("*");
-                if (isReference) r.TrimId();
+                bool isOnTop = r.Id.StartsWith("*");
+                if (isOnTop) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     var multiRecord = Data.Items._records[r.Id] as CompositeItemRecord;
                     if (multiRecord != null) {
@@ -458,7 +455,7 @@ namespace FFU_Phase_Shift {
                             int index = multiRecord.Records.FindIndex(rec => rec is SkullRecord);
                             if (index != -1) multiRecord.Records[index] = r;
                         } else {
-                            if (isReference) multiRecord.Records.Insert(0, r);
+                            if (isOnTop) multiRecord.Records.Insert(0, r);
                             else multiRecord.Records.Add(r);
                         }
                     } else Data.Items._records[r.Id] = r;
@@ -467,8 +464,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<QuasiArtifactRecord>("quasiartifacts", delegate (QuasiArtifactRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, quasiartifacts: {r.Id}");
-                bool isReference = r.Id.StartsWith("*");
-                if (isReference) r.TrimId();
+                bool isOnTop = r.Id.StartsWith("*");
+                if (isOnTop) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     var multiRecord = Data.Items._records[r.Id] as CompositeItemRecord;
                     if (multiRecord != null) {
@@ -476,7 +473,7 @@ namespace FFU_Phase_Shift {
                             int index = multiRecord.Records.FindIndex(rec => rec is QuasiArtifactRecord);
                             if (index != -1) multiRecord.Records[index] = r;
                         } else {
-                            if (isReference) multiRecord.Records.Insert(0, r);
+                            if (isOnTop) multiRecord.Records.Insert(0, r);
                             else multiRecord.Records.Add(r);
                         }
                     } else Data.Items._records[r.Id] = r;
@@ -485,8 +482,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<GrenadeRecord>("grenades", delegate (GrenadeRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, grenades: {r.Id}");
-                bool isReference = r.Id.StartsWith("*");
-                if (isReference) r.TrimId();
+                bool isOnTop = r.Id.StartsWith("*");
+                if (isOnTop) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     var multiRecord = Data.Items._records[r.Id] as CompositeItemRecord;
                     if (multiRecord != null) {
@@ -494,7 +491,7 @@ namespace FFU_Phase_Shift {
                             int index = multiRecord.Records.FindIndex(rec => rec is GrenadeRecord);
                             if (index != -1) multiRecord.Records[index] = r;
                         } else {
-                            if (isReference) multiRecord.Records.Insert(0, r);
+                            if (isOnTop) multiRecord.Records.Insert(0, r);
                             else multiRecord.Records.Add(r);
                         }
                     } else Data.Items._records[r.Id] = r;
@@ -503,8 +500,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<MineRecord>("mines", delegate (MineRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, mines: {r.Id}");
-                bool isReference = r.Id.StartsWith("*");
-                if (isReference) r.TrimId();
+                bool isOnTop = r.Id.StartsWith("*");
+                if (isOnTop) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     var multiRecord = Data.Items._records[r.Id] as CompositeItemRecord;
                     if (multiRecord != null) {
@@ -512,7 +509,7 @@ namespace FFU_Phase_Shift {
                             int index = multiRecord.Records.FindIndex(rec => rec is MineRecord);
                             if (index != -1) multiRecord.Records[index] = r;
                         } else {
-                            if (isReference) multiRecord.Records.Insert(0, r);
+                            if (isOnTop) multiRecord.Records.Insert(0, r);
                             else multiRecord.Records.Add(r);
                         }
                     } else Data.Items._records[r.Id] = r;
@@ -521,8 +518,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<AutomapRecord>("automaps", delegate (AutomapRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, automaps: {r.Id}");
-                bool isReference = r.Id.StartsWith("*");
-                if (isReference) r.TrimId();
+                bool isOnTop = r.Id.StartsWith("*");
+                if (isOnTop) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     var multiRecord = Data.Items._records[r.Id] as CompositeItemRecord;
                     if (multiRecord != null) {
@@ -530,7 +527,7 @@ namespace FFU_Phase_Shift {
                             int index = multiRecord.Records.FindIndex(rec => rec is AutomapRecord);
                             if (index != -1) multiRecord.Records[index] = r;
                         } else {
-                            if (isReference) multiRecord.Records.Insert(0, r);
+                            if (isOnTop) multiRecord.Records.Insert(0, r);
                             else multiRecord.Records.Add(r);
                         }
                     } else Data.Items._records[r.Id] = r;
@@ -539,8 +536,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<ResurrectKitRecord>("resurrectkits", delegate (ResurrectKitRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, resurrectkits: {r.Id}");
-                bool isReference = r.Id.StartsWith("*");
-                if (isReference) r.TrimId();
+                bool isOnTop = r.Id.StartsWith("*");
+                if (isOnTop) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     var multiRecord = Data.Items._records[r.Id] as CompositeItemRecord;
                     if (multiRecord != null) {
@@ -548,7 +545,7 @@ namespace FFU_Phase_Shift {
                             int index = multiRecord.Records.FindIndex(rec => rec is ResurrectKitRecord);
                             if (index != -1) multiRecord.Records[index] = r;
                         } else {
-                            if (isReference) multiRecord.Records.Insert(0, r);
+                            if (isOnTop) multiRecord.Records.Insert(0, r);
                             else multiRecord.Records.Add(r);
                         }
                     } else Data.Items._records[r.Id] = r;
@@ -557,8 +554,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<TrashRecord>("trash", delegate (TrashRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, trash: {r.Id}");
-                bool isReference = r.Id.StartsWith("*");
-                if (isReference) r.TrimId();
+                bool isOnTop = r.Id.StartsWith("*");
+                if (isOnTop) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     var multiRecord = Data.Items._records[r.Id] as CompositeItemRecord;
                     if (multiRecord != null) {
@@ -566,7 +563,7 @@ namespace FFU_Phase_Shift {
                             int index = multiRecord.Records.FindIndex(rec => rec is TrashRecord);
                             if (index != -1) multiRecord.Records[index] = r;
                         } else {
-                            if (isReference) multiRecord.Records.Insert(0, r);
+                            if (isOnTop) multiRecord.Records.Insert(0, r);
                             else multiRecord.Records.Add(r);
                         }
                     } else Data.Items._records[r.Id] = r;
@@ -575,8 +572,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<DatadiskRecord>("datadisks", delegate (DatadiskRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, datadisks: {r.Id}");
-                bool isReference = r.Id.StartsWith("*");
-                if (isReference) r.TrimId();
+                bool isOnTop = r.Id.StartsWith("*");
+                if (isOnTop) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     var multiRecord = Data.Items._records[r.Id] as CompositeItemRecord;
                     if (multiRecord != null) {
@@ -584,7 +581,7 @@ namespace FFU_Phase_Shift {
                             int index = multiRecord.Records.FindIndex(rec => rec is DatadiskRecord);
                             if (index != -1) multiRecord.Records[index] = r;
                         } else {
-                            if (isReference) multiRecord.Records.Insert(0, r);
+                            if (isOnTop) multiRecord.Records.Insert(0, r);
                             else multiRecord.Records.Add(r);
                         }
                     } else Data.Items._records[r.Id] = r;
@@ -593,8 +590,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<TurretRecord>("turrets", delegate (TurretRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, turrets: {r.Id}");
-                bool isReference = r.Id.StartsWith("*");
-                if (isReference) r.TrimId();
+                bool isOnTop = r.Id.StartsWith("*");
+                if (isOnTop) r.TrimId();
                 if (Data.Items.GetRecord(r.Id) != null) {
                     var multiRecord = Data.Items._records[r.Id] as CompositeItemRecord;
                     if (multiRecord != null) {
@@ -602,7 +599,7 @@ namespace FFU_Phase_Shift {
                             int index = multiRecord.Records.FindIndex(rec => rec is TurretRecord);
                             if (index != -1) multiRecord.Records[index] = r;
                         } else {
-                            if (isReference) multiRecord.Records.Insert(0, r);
+                            if (isOnTop) multiRecord.Records.Insert(0, r);
                             else multiRecord.Records.Add(r);
                         }
                     } else Data.Items._records[r.Id] = r;
@@ -647,7 +644,7 @@ namespace FFU_Phase_Shift {
             }));
         }
 
-        public void LoadConfigFile(string configName) {
+        public static void LoadConfigFile(string configName) {
             // Ensure that everything is in place
             if (_cntPath == null) { ModLog.Error($"LoadConfigFile: content path is undefined!"); return; }
             if (_cfgLoader == null) { ModLog.Error($"LoadConfigFile: config loader is not referenced!"); return; }
@@ -659,14 +656,14 @@ namespace FFU_Phase_Shift {
             _cfgLoader.ProcessConfigFile(cfgPath, _verbose);
         }
 
-        public void DumpConfig(string configName, string savePath) {
+        public static void DumpConfig(string configName, string savePath) {
             TextAsset tAsset = Resources.Load(configName) as TextAsset;
             if (tAsset == null) { ModLog.Error($"DumpConfig: '{configName}' text asset doesn't exist!"); return; };
             if (!Directory.Exists(savePath)) Directory.CreateDirectory(savePath);
             File.WriteAllText(Path.Combine(savePath, $"{configName}.csv"), tAsset.text);
             ModLog.Info($"DUMP: TextAsset '{configName}' saved as {configName}.csv");
         }
-        public void DumpDescriptor() {
+        public static void DumpDescriptor() {
             var refDesc = Data.Descriptors.First().Value.Descriptors.First() as WeaponDescriptor;
             string descDump = JsonUtility.ToJson(refDesc);
             ModLog.Info($"{refDesc.name}: {descDump}");
@@ -677,7 +674,7 @@ namespace FFU_Phase_Shift {
             //test._hasHFGOverlay = true;
         }
 
-        public void DumpDescriptors() {
+        public static void DumpDescriptors() {
             foreach (var collection in Data.Descriptors) {
                 ModLog.Info($"COLLECTION: {collection.Key}");
                 foreach (var descriptor in collection.Value.Descriptors) {
