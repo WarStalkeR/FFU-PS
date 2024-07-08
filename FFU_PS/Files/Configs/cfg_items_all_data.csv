@@ -1256,8 +1256,8 @@ Id		OutputItem	RequiredItems	ProduceTimeInHours	ModifyStartCost	ModifyStep	Modif
 		desert_shotgun	rubber weapon_shards blunt_melee_shards	20	1	1.01	shotgun_shrapnel_ammo 1 blunt_melee_shards 20 coarse_gears 100 weapon_container 500																					
 		desert_shotgun_2	rubber weapon_shards spring blunt_melee_shards	24	1	1.01	shotgun_shrapnel_ammo 1 blunt_melee_shards 20 spring 100 weapon_container 500																					
 		plazma_shotgun	ceramite_shards ceramite_shards microelectronics capacitor	50	1	1.01	battery_charge 1 capacitor 15 ceramite_shards 45 microelectronics 145 weapon_container 500																					
-		spec_shotgun	armor_shards weapon_shards blunt_melee_shards	26	1	1.01	weapon_container 1 itemChip 3 mediumItemChip 6 highItemChip 24																					
-		church_shotgun	ceramite_shards ceramite_shards weapon_shards spring blunt_melee_shards	50	1	1.01	weapon_container 1 itemChip 6 mediumItemChip 12 ChurchItemChip 24																					
+		spec_shotgun	armor_shards weapon_shards blunt_melee_shards	26	1	1.01	shotgun_shrapnel_ammo 1 weapon_shards 15 blunt_melee_shards 45 weapon_repair_kit 145 weapon_container 500																					
+		church_shotgun	ceramite_shards ceramite_shards weapon_shards spring blunt_melee_shards	50	1	1.01	shotgun_shrapnel_ammo 1 weapon_shards 15 spring 45 ceramite_shards 145 weapon_container 500																					
 		ancm_shotgun	armor_shards ceramite_shards weapon_shards blunt_melee_shards	48	1	1.01	weapon_container 1 itemChip 6 mediumItemChip 12 AncomItemChip 24																					
 		sbn_shotgun	armor_shards microelectronics capacitor metal_tread	40	1	1.01	circuit_board 1 itemChip 5 mediumItemChip 10 SBNItemChip 15																					
 		sl_shotgun	ceramite_shards ceramite_shards microelectronics capacitor	48	1	1.01	circuit_board 1 itemChip 5 mediumItemChip 15 SunLightItemChip 25																					

@@ -780,7 +780,7 @@ namespace FFU_Phase_Shift {
             string[] configEntries = configFile.Split(new char[] { '\n' }, StringSplitOptions.None);
             bool headerParsed = false;
             string currentKey = string.Empty;
-            DescriptorsCollection colDescriptors = null;
+            DescriptorsCollection cDescriptors = null;
             IConfigParser currParser = null;
             foreach (string cfgEntry in configEntries) {
                 if (!string.IsNullOrEmpty(cfgEntry) && (cfgEntry.Length < 2 || cfgEntry[0] != '/' || cfgEntry[1] != '/')) {
@@ -789,7 +789,7 @@ namespace FFU_Phase_Shift {
                         currParser.ParseHeaders(SplitLine(cfgEntry));
                     } else if (cfgEntry.Contains("#end")) {
                         currParser = null;
-                        colDescriptors = null;
+                        cDescriptors = null;
                     } else if (cfgEntry[0] == '#') {
                         currentKey = cfgEntry.Trim(new char[] { '\t', '\r', '\n', '#' });
                         foreach (IConfigParser refParser in _parsers) {
@@ -798,13 +798,13 @@ namespace FFU_Phase_Shift {
                                 currParser = refParser;
                             }
                         }
-                        colDescriptors = Resources.Load<DescriptorsCollection>("DescriptorsCollections/" + currentKey + "_descriptors");
-                        if (colDescriptors != null) {
-                            OnDescriptorsLoaded(currentKey, colDescriptors);
+                        cDescriptors = Resources.Load<DescriptorsCollection>("DescriptorsCollections/" + currentKey + "_descriptors");
+                        if (cDescriptors != null) {
+                            OnDescriptorsLoaded(currentKey, cDescriptors);
                         }
                     } else if (currParser != null) {
                         try {
-                            currParser.ParseLine(SplitLine(cfgEntry), currentKey, colDescriptors);
+                            currParser.ParseLine(SplitLine(cfgEntry), currentKey, cDescriptors);
                         } catch (Exception ex) { 
                             ModLog.Warning($"ERROR: {cfgEntry.Trim(new char[] { '\t', '\r', '\n' })}");
                             if (verboseLogging) ModLog.Error(ex.ToString());

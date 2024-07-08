@@ -10,7 +10,13 @@ namespace FFU_Phase_Shift {
             ModLog.Info("Initializing...");
             ModLog.Info($"Content Path: {context.ModContentPath}");
 
-            // Setting up prerequisites
+            // Load custom assets
+            string astFolder = Path.Combine(context.ModContentPath, "Assets");
+            foreach (var descriptor in Data.Descriptors) {
+                ModLog.Info($"TEST: {descriptor.Key}");
+            }
+
+            // Config files prerequisites
             ModTools mTools = new ModTools();
             string cfgFolder = Path.Combine(context.ModContentPath, "Configs");
             mTools.Setup(cfgFolder, new ModConfigLoader());

@@ -66,19 +66,32 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>rmdir /S /Q "$(SolutionDir)..\..\Mods\FFU_PS\Configs"
-rmdir /S /Q "$(SolutionDir)..\..\..\..\workshop\content\2059170\3283318778\Configs"
+    <PostBuildEvent>@echo off
+setlocal
 
-echo F | xcopy /F /Y "$(TargetPath)" "$(SolutionDir)..\..\Mods\FFU_PS\FFU_Phase_Shift.dll"
-echo F | xcopy /F /Y "$(ProjectDir)\Files\thumbnail.png" "$(SolutionDir)..\..\Mods\FFU_PS\thumbnail.png"
-echo F | xcopy /F /Y "$(ProjectDir)\Files\modmanifest.json" "$(SolutionDir)..\..\Mods\FFU_PS\modmanifest.json"
-xcopy /E /H /C /I /Y "$(ProjectDir)\Files\Configs" "$(SolutionDir)..\..\Mods\FFU_PS\Configs"
+set "folder_cfg=Configs"
+set "deploy_local=$(SolutionDir)..\..\Mods\FFU_PS"
+set "deploy_remote=$(SolutionDir)..\..\..\..\workshop\content\2059170\3283318778"
 
-echo F | xcopy /F /Y "$(TargetPath)" "$(SolutionDir)..\..\..\..\workshop\content\2059170\3283318778\FFU_Phase_Shift.dll"
-echo F | xcopy /F /Y "$(ProjectDir)\Files\thumbnail.png" "$(SolutionDir)..\..\..\..\workshop\content\2059170\3283318778\thumbnail.png"
-echo F | xcopy /F /Y "$(ProjectDir)\Files\modmanifest.json" "$(SolutionDir)..\..\..\..\workshop\content\2059170\3283318778\modmanifest.json"
-xcopy /E /H /C /I /Y "$(ProjectDir)\Files\Configs" "$(SolutionDir)..\..\..\..\workshop\content\2059170\3283318778\Configs"
+rmdir /S /Q "%25deploy_local%25\%25folder_cfg%25"
+rmdir /S /Q "%25deploy_remote%25\%25folder_cfg%25"
 
-del "$(TargetPath)" /F</PostBuildEvent>
+echo F | xcopy /F /Y "$(TargetPath)" "%25deploy_local%25\FFU_Phase_Shift.dll"
+echo F | xcopy /F /Y "$(TargetPath)" "%25deploy_remote%25\FFU_Phase_Shift.dll"
+
+echo F | xcopy /F /Y "$(ProjectDir)\Files\thumbnail.png" "%25deploy_local%25\thumbnail.png"
+echo F | xcopy /F /Y "$(ProjectDir)\Files\thumbnail.png" "%25deploy_remote%25\thumbnail.png"
+
+echo F | xcopy /F /Y "$(ProjectDir)\Files\modmanifest.json" "%25deploy_local%25\modmanifest.json"
+echo F | xcopy /F /Y "$(ProjectDir)\Files\modmanifest.json" "%25deploy_remote%25\modmanifest.json"
+
+for /R "$(ProjectDir)\Files\%25folder_cfg%25" %25%25f in (*.csv) do (
+    echo F | xcopy /F /Y "%25%25f" "%25deploy_local%25\%25folder_cfg%25\%25%25~xnf"
+    echo F | xcopy /F /Y "%25%25f" "%25deploy_remote%25\%25folder_cfg%25\%25%25~xnf"
+)
+
+del "$(TargetPath)" /F
+
+endlocal</PostBuildEvent>
   </PropertyGroup>
 </Project>
