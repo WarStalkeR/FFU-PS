@@ -23,7 +23,7 @@ namespace FFU_Phase_Shift {
             // mTools.DumpConfig("config_barter", dumpFolder);
             // mTools.DumpConfig("config_magnum", dumpFolder);
             // mTools.DumpDescriptors();
-            mTools.DumpDescriptor();
+            // mTools.DumpDescriptor();
 
             // Load custom assets
             string astFolder = Path.Combine(context.ModContentPath, "Assets");
