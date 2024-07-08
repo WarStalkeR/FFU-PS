@@ -676,82 +676,46 @@ namespace FFU_Phase_Shift {
 
         public static void DumpDescriptors() {
             foreach (var collection in Data.Descriptors) {
-                ModLog.Info($"COLLECTION: {collection.Key}");
-                foreach (var descriptor in collection.Value.Descriptors) {
-                    switch (descriptor.GetType().ToString()) {
-                        case "MGSC.WeaponDescriptor": {
-                            var refDesc = descriptor as WeaponDescriptor;
-                            string descDump = JsonUtility.ToJson(refDesc);
-                            ModLog.Info(descDump);
-                            break;
-                        }
-                        case "MGSC.FireModeDescriptor": {
-                            break;
-                        }
-                        case "MGSC.AmmoDescriptor": {
-                            break;
-                        }
-                        case "MGSC.MedkitDescriptor": {
-                            break;
-                        }
-                        case "MGSC.FoodDescriptor": {
-                            break;
-                        }
-                        case "MGSC.BackpackDescriptor": {
-                            break;
-                        }
-                        case "MGSC.VestDescriptor": {
-                            break;
-                        }
-                        case "MGSC.ArmorDescriptor": {
-                            break;
-                        }
-                        case "MGSC.HelmetDescriptor": {
-                            break;
-                        }
-                        case "MGSC.LeggingsDescriptor": {
-                            break;
-                        }
-                        case "MGSC.BootsDescriptor": {
-                            break;
-                        }
-                        case "MGSC.RepairDescriptor": {
-                            break;
-                        }
-                        case "MGSC.AutomapDescriptor": {
-                            break;
-                        }
-                        case "MGSC.SkullDescriptor": {
-                            break;
-                        }
-                        case "MGSC.QuasiArtifactDescriptor": {
-                            break;
-                        }
-                        case "MGSC.GrenadeItemDescriptor": {
-                            break;
-                        }
-                        case "MGSC.MineItemDescriptor": {
-                            break;
-                        }
-                        case "MGSC.TurretDescriptor": {
-                            break;
-                        }
-                        case "MGSC.ItemContentDescriptor": {
-                            break;
-                        }
-                        case "MGSC.DatadiskDescriptor": {
-                            break;
-                        }
-                        case "UnityEngine.GameObject": {
-                            break;
-                        }
-                        case "MGSC.StatusEffectDescriptor": {
-                            break;
-                        }
-                        case "MGSC.DamageTypesDescriptor": {
-                            break;
-                        }
-                    }
+                ModLog.Info($"DESCRIPTORS COLLECTION: {collection.Key}");
+                switch (collection.Key) {
+                    case "meleeweapons": { break; }
+                    case "rangeweapons": { break; }
+                    case "firemodes": { break; }
+                    case "ammo": { break; }
+                    case "medkits": { break; }
+                    case "food": { break; }
+                    case "backpacks": { break; }
+                    case "vests": { break; }
+                    case "armors": { break; }
+                    case "helmets": { break; }
+                    case "leggings": { break; }
+                    case "boots": { break; }
+                    case "repairs": { break; }
+                    case "automaps": { break; }
+                    case "skulls": { break; }
+                    case "quasiartifacts": { break; }
+                    case "grenades": { break; }
+                    case "mines": { break; }
+                    case "turrets": { break; }
+                    case "trash": { break; }
+                    case "datadisks": { break; }
+                    case "resurrectkits": { break; }
+                    case "monsters": { break; }
+                    case "statuseffects": { break; }
+                    case "damagetypes": { break; }
+                    case "woundtypes": { break; }
+                    case "woundslots": { break; }
+                    case "mercenary_profiles": { break; }
+                    case "mercenary_classes": { break; }
+                    case "perks": { break; }
+                    case "factions": { break; }
+                    case "stations": { break; }
+                    case "storymissions": { break; }
+                    case "magnum_perks": { break; }
+                }
+                foreach (var descriptor in collection.Value._descriptors) {
+                    var descIndex = Array.IndexOf(collection.Value._descriptors, descriptor);
+                    ModLog.Info($"DESC: {collection.Value._ids[descIndex]}");
                 }
             }
         }
