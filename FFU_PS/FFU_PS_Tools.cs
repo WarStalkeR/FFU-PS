@@ -750,7 +750,7 @@ namespace FFU_Phase_Shift {
         /// </remarks>
         public void ProcessConfigFile(string configPath, bool verboseLogging = false) {
             string configFile = File.ReadAllText(configPath);
-            string[] configEntries = configFile.Split(new char[] { '\n' }, StringSplitOptions.None);
+            string[] configEntries = configFile.Split(new char[] {'\n'}, StringSplitOptions.None);
             bool headerParsed = false;
             string currentKey = string.Empty;
             DescriptorsCollection desCollection = null;
@@ -764,7 +764,7 @@ namespace FFU_Phase_Shift {
                         currParser = null;
                         desCollection = null;
                     } else if (cfgEntry[0] == '#') {
-                        currentKey = cfgEntry.Trim(new char[] { '\t', '\r', '\n', '#' });
+                        currentKey = cfgEntry.Trim(new char[] {'\t', '\r', '\n', '#'});
                         foreach (IConfigParser refParser in _parsers) {
                             if (refParser.ValidTableKey(currentKey)) {
                                 headerParsed = true;
@@ -779,7 +779,7 @@ namespace FFU_Phase_Shift {
                         try {
                             currParser.ParseLine(SplitLine(cfgEntry), currentKey, desCollection);
                         } catch (Exception ex) {
-                            ModLog.Warning($"ERROR: {cfgEntry.Trim(new char[] { '\t', '\r', '\n' })}");
+                            ModLog.Warning($"ERROR: {cfgEntry.Trim(new char[] {'\t', '\r', '\n'})}");
                             if (verboseLogging) ModLog.Error(ex.ToString());
                         }
                     }
