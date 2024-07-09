@@ -21,7 +21,7 @@ namespace FFU_Phase_Shift {
             // ModTools.DumpConfig("config_spacesandbox", dumpFolder);
             // ModTools.DumpConfig("config_barter", dumpFolder);
             // ModTools.DumpConfig("config_magnum", dumpFolder);
-            ModTools.DumpDescriptors();
+            // ModTools.DumpDescriptors();
 
             // Load custom assets
             string astFolder = Path.Combine(context.ModContentPath, "Assets");
@@ -30,6 +30,7 @@ namespace FFU_Phase_Shift {
             string cfgFolder = Path.Combine(context.ModContentPath, "Configs");
             ModTools.Setup(cfgFolder, new ModConfigLoader());
             ModTools.Initialize();
+            // ModTools.Verbose();
 
             // Load all config files
             if (Directory.Exists(cfgFolder)) {

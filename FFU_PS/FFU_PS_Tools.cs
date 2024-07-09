@@ -12,10 +12,13 @@ namespace FFU_Phase_Shift {
         private static string _cntPath = null;
         private static ModConfigLoader _cfgLoader = null;
 
-        public static void Setup(string contentPath = null, ModConfigLoader configLoader = null, bool logVerbose = false) {
+        public static void Setup(string contentPath = null, ModConfigLoader configLoader = null) {
             if (contentPath != null) _cntPath = contentPath;
             if (configLoader != null) _cfgLoader = configLoader;
-            if (logVerbose) _verbose = true;
+        }
+
+        public static void Verbose() {
+            _verbose = !_verbose;
         }
 
         public static void Initialize() {
