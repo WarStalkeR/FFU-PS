@@ -1,6 +1,7 @@
 ﻿using MGSC;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -667,61 +668,69 @@ namespace FFU_Phase_Shift {
             File.WriteAllText(Path.Combine(savePath, $"{configName}.csv"), tAsset.text);
             ModLog.Info($"DUMP: TextAsset '{configName}' saved as {configName}.csv");
         }
-        public static void DumpDescriptor() {
-            var refDesc = Data.Descriptors.First().Value.Descriptors.First() as WeaponDescriptor;
-            string descDump = JsonUtility.ToJson(refDesc);
-            ModLog.Info($"{refDesc.name}: {descDump}");
-            //var test = new WeaponDescriptor();
-            //test.LoadJSON(descDump);
-            //ModLog.Info($"TEST: {test.RandomDryShotSoundBank.name}");
-            //WeaponDescriptor test = ScriptableObject.CreateInstance("WeaponDescriptor") as WeaponDescriptor;
-            //test._hasHFGOverlay = true;
+
+        public static void DumpDescriptors(string savePath) {
+            // if (!Directory.Exists(savePath)) Directory.CreateDirectory(savePath);
+            foreach (KeyValuePair<string, DescriptorsCollection> collection in Data.Descriptors) {
+                ModLog.Info($">>>>>>>>>>>>>>>>>>>> {collection.Key} <<<<<<<<<<<<<<<<<<<<");
+                DumpDescriptors(collection, savePath);
+            }
         }
 
-        public static void DumpDescriptors() {
-            foreach (var collection in Data.Descriptors) {
-                ModLog.Info($"DESCRIPTORS COLLECTION: {collection.Key}");
-                switch (collection.Key) {
-                    case "meleeweapons": { break; }
-                    case "rangeweapons": { break; }
-                    case "firemodes": { break; }
-                    case "ammo": { break; }
-                    case "medkits": { break; }
-                    case "food": { break; }
-                    case "backpacks": { break; }
-                    case "vests": { break; }
-                    case "armors": { break; }
-                    case "helmets": { break; }
-                    case "leggings": { break; }
-                    case "boots": { break; }
-                    case "repairs": { break; }
-                    case "automaps": { break; }
-                    case "skulls": { break; }
-                    case "quasiartifacts": { break; }
-                    case "grenades": { break; }
-                    case "mines": { break; }
-                    case "turrets": { break; }
-                    case "trash": { break; }
-                    case "datadisks": { break; }
-                    case "resurrectkits": { break; }
-                    case "monsters": { break; }
-                    case "statuseffects": { break; }
-                    case "damagetypes": { break; }
-                    case "woundtypes": { break; }
-                    case "woundslots": { break; }
-                    case "mercenary_profiles": { break; }
-                    case "mercenary_classes": { break; }
-                    case "perks": { break; }
-                    case "factions": { break; }
-                    case "stations": { break; }
-                    case "storymissions": { break; }
-                    case "magnum_perks": { break; }
+        public static void DumpDescriptors(KeyValuePair<string, DescriptorsCollection> refCol, string savePath) {
+            string colPath = Path.Combine(savePath, refCol.Key);
+            switch (refCol.Key) {
+                case "meleeweapons":
+                case "rangeweapons": {
+                    // if (!Directory.Exists(colPath)) Directory.CreateDirectory(colPath);
+                    foreach (WeaponDescriptor descriptor in refCol.Value._descriptors) {
+                        int idx = Array.IndexOf(refCol.Value._descriptors, descriptor);
+                        DumpDescriptor(refCol.Value._ids[idx], descriptor, colPath);
+                    }
+                    break;
                 }
-                foreach (var descriptor in collection.Value._descriptors) {
-                    var descIndex = Array.IndexOf(collection.Value._descriptors, descriptor);
-                    ModLog.Info($"DESC: {collection.Value._ids[descIndex]}");
-                }
+                case "firemodes": { break; }
+                case "ammo": { break; }
+                case "medkits": { break; }
+                case "food": { break; }
+                case "backpacks": { break; }
+                case "vests": { break; }
+                case "armors": { break; }
+                case "helmets": { break; }
+                case "leggings": { break; }
+                case "boots": { break; }
+                case "repairs": { break; }
+                case "automaps": { break; }
+                case "skulls": { break; }
+                case "quasiartifacts": { break; }
+                case "grenades": { break; }
+                case "mines": { break; }
+                case "turrets": { break; }
+                case "trash": { break; }
+                case "datadisks": { break; }
+                case "resurrectkits": { break; }
+                case "monsters": { break; }
+                case "statuseffects": { break; }
+                case "damagetypes": { break; }
+                case "woundtypes": { break; }
+                case "woundslots": { break; }
+                case "mercenary_profiles": { break; }
+                case "mercenary_classes": { break; }
+                case "perks": { break; }
+                case "factions": { break; }
+                case "stations": { break; }
+                case "storymissions": { break; }
+                case "magnum_perks": { break; }
             }
+        }
+
+        public static void DumpDescriptor(string descId, WeaponDescriptor refDesc, string savePath) {
+            string descPath = Path.Combine(savePath, descId);
+            // if (!Directory.Exists(descPath)) Directory.CreateDirectory(descPath);
+            // ModTools.DumpAsset(descriptor._icon);
+            // ModTools.DumpAsset(descriptor._smallIcon);
+            // ModTools.DumpAsset(descriptor._shadow);
+            ModLog.Info($"DUMPED: {descId}");
         }
 
         public static void CleanRecordIdentifier(ConfigTableRecord refRecord) {
