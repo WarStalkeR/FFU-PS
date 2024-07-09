@@ -1447,8 +1447,8 @@ Id		OutputItem	RequiredItems	ProduceTimeInHours	ModifyStartCost	ModifyStep	Modif
 Id		ExpiresAfterHours	ConvertedItemId																									
 meat1		24	rottenMeat																									
 aztec_rags		336	rags																									
---quasi_bolts_ammo		168	broken_weapon																									
---quasi_energy_ammo		168	bloodBag																									
+^quasi_bolts_ammo		168	broken_weapon																									
+^quasi_energy_ammo		168	bloodBag																									
 demonic_medicine		168	furuncle																									
 demonic_idol		336	trowable_heart																									
 furuncle		48	rottenMeat																									

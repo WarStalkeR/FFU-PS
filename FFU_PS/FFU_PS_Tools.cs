@@ -161,8 +161,8 @@ namespace FFU_Phase_Shift {
             }));
             _cfgLoader.AddParser(new TableParser<ItemExpireRecord>("itemexpire", delegate (ItemExpireRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, itemexpire: {r.Id}");
-                if (r.Id.StartsWith("--")) {
-                    r.Id.CleanId();
+                if (r.Id.StartsWith("^")) {
+                    CleanRecordIdentifier(r);
                     if (Data.ItemExpire.GetRecord(r.Id) != null) 
                         Data.ItemExpire.RemoveRecord(r.Id);
                 } else {
@@ -723,6 +723,10 @@ namespace FFU_Phase_Shift {
                 }
             }
         }
+
+        public static void CleanRecordIdentifier(ConfigTableRecord refRecord) {
+            refRecord.Id = refRecord.Id.Trim(new char[] {'*', '-', '+', '^'});
+        }
     }
 
     public class ModConfigLoader {
@@ -737,11 +741,17 @@ namespace FFU_Phase_Shift {
         /// <remarks>
         /// Loads custom configuration files and overwrites existing entries, if possible.
         /// 
-        /// <br/><br/>Configuration file is a TAB-bases CSV file that follows extremely strict writing pattern:
+        /// <br/><br/><u>Configuration File TAB CSV Writing Pattern</u>
         /// <br/><c>#region_name</c> - defines start of the config region and its type (i.e. <c>#ammo</c>).
-        /// <br/><c>[Key][Value]</c> - defines parameter columns (i.e. <c>ammoId</c>, <c>maxStack</c>). Can have more columns.
-        /// <br/><c>[123][Data_45]</c> - row(s) with data that follow defined pattern by parameter columns.
+        /// <br/><c>|Key| |Value|</c> - defines parameter columns (i.e. <c>ammoId</c>, <c>maxStack</c>). Can have more columns.
+        /// <br/><c>|entry_id| |20 50 C1|</c> - row(s) with data that follow defined pattern by parameter columns.
         /// <br/><c>#end</c> - defines end of the config region. Add blank line after it, if there are more configs regions.
+        /// 
+        /// <br/><br/><u>Identifier Prefix Information</u>
+        /// <br/><c>*entry_id</c> - will put entry as topmost in composite records only. Reads all values.
+        /// <br/><c>+entry_id</c> - will append data to records and values that allow it. Reads some values.
+        /// <br/><c>-entry_id</c> - will remove data from records and values that allow it. Reads some values.
+        /// <br/><c>^entry_id</c> - will delete record from the collection. Disregards values, can't be empty.
         /// 
         /// <br/><br/>Since config file is pretty much TAB-based CSV, just use CSV editor to handle it.
         /// <br/>Such as LibreCalc. Just make sure that you save it as TAB-based CSV as well.
@@ -789,12 +799,6 @@ namespace FFU_Phase_Shift {
 
         private string[] SplitLine(string s) {
             return Regex.Replace(s, "\\n|\\r", string.Empty).Split('\t');
-        }
-    }
-
-    public static class StringExtensions {
-        public static string CleanId(this string str) {
-            return str.Trim(new char[] {'*', '-', '+', '^'});
         }
     }
 }
