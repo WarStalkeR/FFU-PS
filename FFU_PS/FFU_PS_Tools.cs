@@ -162,8 +162,9 @@ namespace FFU_Phase_Shift {
             _cfgLoader.AddParser(new TableParser<ItemExpireRecord>("itemexpire", delegate (ItemExpireRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, itemexpire: {r.Id}");
                 if (r.Id.StartsWith("--")) {
-                    string refId = r.Id.Replace("--", string.Empty);
-                    if (Data.ItemExpire.GetRecord(refId) != null) Data.ItemExpire.RemoveRecord(refId);
+                    r.Id.CleanId();
+                    if (Data.ItemExpire.GetRecord(r.Id) != null) 
+                        Data.ItemExpire.RemoveRecord(r.Id);
                 } else {
                     if (Data.ItemExpire.GetRecord(r.Id) != null) {
                         Data.ItemExpire._records[r.Id] = r;
@@ -752,7 +753,7 @@ namespace FFU_Phase_Shift {
             string[] configEntries = configFile.Split(new char[] { '\n' }, StringSplitOptions.None);
             bool headerParsed = false;
             string currentKey = string.Empty;
-            DescriptorsCollection cDescriptors = null;
+            DescriptorsCollection desCollection = null;
             IConfigParser currParser = null;
             foreach (string cfgEntry in configEntries) {
                 if (!string.IsNullOrEmpty(cfgEntry) && (cfgEntry.Length < 2 || cfgEntry[0] != '/' || cfgEntry[1] != '/')) {
@@ -761,7 +762,7 @@ namespace FFU_Phase_Shift {
                         currParser.ParseHeaders(SplitLine(cfgEntry));
                     } else if (cfgEntry.Contains("#end")) {
                         currParser = null;
-                        cDescriptors = null;
+                        desCollection = null;
                     } else if (cfgEntry[0] == '#') {
                         currentKey = cfgEntry.Trim(new char[] { '\t', '\r', '\n', '#' });
                         foreach (IConfigParser refParser in _parsers) {
@@ -770,13 +771,13 @@ namespace FFU_Phase_Shift {
                                 currParser = refParser;
                             }
                         }
-                        cDescriptors = Resources.Load<DescriptorsCollection>("DescriptorsCollections/" + currentKey + "_descriptors");
-                        if (cDescriptors != null) {
-                            OnDescriptorsLoaded(currentKey, cDescriptors);
+                        desCollection = Resources.Load<DescriptorsCollection>("DescriptorsCollections/" + currentKey + "_descriptors");
+                        if (desCollection != null) {
+                            OnDescriptorsLoaded(currentKey, desCollection);
                         }
                     } else if (currParser != null) {
                         try {
-                            currParser.ParseLine(SplitLine(cfgEntry), currentKey, cDescriptors);
+                            currParser.ParseLine(SplitLine(cfgEntry), currentKey, desCollection);
                         } catch (Exception ex) {
                             ModLog.Warning($"ERROR: {cfgEntry.Trim(new char[] { '\t', '\r', '\n' })}");
                             if (verboseLogging) ModLog.Error(ex.ToString());
@@ -788,6 +789,12 @@ namespace FFU_Phase_Shift {
 
         private string[] SplitLine(string s) {
             return Regex.Replace(s, "\\n|\\r", string.Empty).Split('\t');
+        }
+    }
+
+    public static class StringExtensions {
+        public static string CleanId(this string str) {
+            return str.Trim(new char[] {'*', '-', '+', '^'});
         }
     }
 }
