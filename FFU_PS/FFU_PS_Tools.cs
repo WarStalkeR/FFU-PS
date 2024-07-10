@@ -651,11 +651,11 @@ namespace FFU_Phase_Shift {
 
         public static void LoadConfigFile(string configName) {
             // Ensure that everything is in place
-            if (_cntPath == null) { ModLog.Error($"LoadConfigFile: content path is undefined!"); return; }
-            if (_cfgLoader == null) { ModLog.Error($"LoadConfigFile: config loader is not referenced!"); return; }
-            if (configName == null) { ModLog.Error($"LoadConfigFile: config name is undefined!"); return; }
+            if (_cntPath == null) { ModLog.Warning($"LoadConfigFile: content path is undefined!"); return; }
+            if (_cfgLoader == null) { ModLog.Warning($"LoadConfigFile: config loader is not referenced!"); return; }
+            if (configName == null) { ModLog.Warning($"LoadConfigFile: config name is undefined!"); return; }
             string cfgPath = Path.Combine(_cntPath, configName);
-            if (!File.Exists(cfgPath)) { ModLog.Error($"LoadConfigFile: config file doesn't exist!"); return; }
+            if (!File.Exists(cfgPath)) { ModLog.Warning($"LoadConfigFile: config file doesn't exist!"); return; }
 
             // Read and parse config file into data
             _cfgLoader.ProcessConfigFile(cfgPath, _verbose);
@@ -663,7 +663,7 @@ namespace FFU_Phase_Shift {
 
         public static void DumpConfig(string configName, string savePath) {
             TextAsset tAsset = Resources.Load(configName) as TextAsset;
-            if (tAsset == null) { ModLog.Error($"DumpConfig: '{configName}' text asset doesn't exist!"); return; };
+            if (tAsset == null) { ModLog.Warning($"DumpConfig: '{configName}' text asset doesn't exist!"); return; };
             if (!Directory.Exists(savePath)) Directory.CreateDirectory(savePath);
             File.WriteAllText(Path.Combine(savePath, $"{configName}.csv"), tAsset.text);
             ModLog.Info($"DUMP: TextAsset '{configName}' saved as {configName}.csv");
@@ -677,15 +677,15 @@ namespace FFU_Phase_Shift {
             }
         }
 
-        public static void DumpDescriptors(KeyValuePair<string, DescriptorsCollection> refCol, string savePath) {
-            string colPath = Path.Combine(savePath, refCol.Key);
-            switch (refCol.Key) {
+        public static void DumpDescriptors(KeyValuePair<string, DescriptorsCollection> colRef, string savePath) {
+            string colPath = Path.Combine(savePath, colRef.Key);
+            switch (colRef.Key) {
                 case "meleeweapons":
                 case "rangeweapons": {
                     // if (!Directory.Exists(colPath)) Directory.CreateDirectory(colPath);
-                    foreach (WeaponDescriptor descriptor in refCol.Value._descriptors) {
-                        int idx = Array.IndexOf(refCol.Value._descriptors, descriptor);
-                        DumpDescriptor(refCol.Value._ids[idx], descriptor, colPath);
+                    foreach (WeaponDescriptor descriptor in colRef.Value._descriptors) {
+                        int idx = Array.IndexOf(colRef.Value._descriptors, descriptor);
+                        DumpDescriptor(colRef.Value._ids[idx], descriptor, colPath);
                     }
                     break;
                 }
@@ -724,13 +724,173 @@ namespace FFU_Phase_Shift {
             }
         }
 
-        public static void DumpDescriptor(string descId, WeaponDescriptor refDesc, string savePath) {
+        public static void DumpDescriptor(string itemId, string collectionId, string savePath) {
+            string colPath = Path.Combine(savePath, collectionId);
+            switch (collectionId) {
+                case "meleeweapons": 
+                case "rangeweapons": {
+                    var refDesc = Data.Descriptors[collectionId]?.GetDescriptor(itemId);
+                    DumpDescriptor(itemId, refDesc as WeaponDescriptor, colPath);
+                    break;
+                }
+                case "firemodes": { break; }
+                case "ammo": { break; }
+                case "medkits": { break; }
+                case "food": { break; }
+                case "backpacks": { break; }
+                case "vests": { break; }
+                case "armors": { break; }
+                case "helmets": { break; }
+                case "leggings": { break; }
+                case "boots": { break; }
+                case "repairs": { break; }
+                case "automaps": { break; }
+                case "skulls": { break; }
+                case "quasiartifacts": { break; }
+                case "grenades": { break; }
+                case "mines": { break; }
+                case "turrets": { break; }
+                case "trash": { break; }
+                case "datadisks": { break; }
+                case "resurrectkits": { break; }
+                case "monsters": { break; }
+                case "statuseffects": { break; }
+                case "damagetypes": { break; }
+                case "woundtypes": { break; }
+                case "woundslots": { break; }
+                case "mercenary_profiles": { break; }
+                case "mercenary_classes": { break; }
+                case "perks": { break; }
+                case "factions": { break; }
+                case "stations": { break; }
+                case "storymissions": { break; }
+                case "magnum_perks": { break; }
+            }
+        }
+
+        public static void DumpDescriptor(string descId, WeaponDescriptor descRef, string savePath) {
             string descPath = Path.Combine(savePath, descId);
-            // if (!Directory.Exists(descPath)) Directory.CreateDirectory(descPath);
-            // ModTools.DumpAsset(descriptor._icon);
-            // ModTools.DumpAsset(descriptor._smallIcon);
-            // ModTools.DumpAsset(descriptor._shadow);
-            ModLog.Info($"DUMPED: {descId}");
+            string descData = $"Descriptor: {descId}";
+            try {
+                if (descRef == null) { ModLog.Warning($"DumpDescriptor: descriptor for '{descId}' is not referenced!"); return; }
+                descData += $"\n  _overridenRenderId: {descRef._overridenRenderId}";
+                descData += $"\n  _icon: {descRef._icon.name}";
+                descData += $"\n  _smallIcon: {descRef._smallIcon.name}";
+                descData += $"\n  _shadow: {descRef._shadow.name}";
+                descData += $"\n  _attackSoundBanks:";
+                if (descRef._attackSoundBanks.Length > 0)
+                foreach (var soundBank in descRef._attackSoundBanks) {
+                    int idx = Array.IndexOf(descRef._attackSoundBanks, soundBank);
+                    descData += $"\n    sound_bank_{idx}: {soundBank?.name}";
+                    DumpDescriptorData("\n      ", ref descData, soundBank);
+                }
+                descData += $"\n  _reloadSoundBanks:";
+                if (descRef._reloadSoundBanks.Length > 0)
+                foreach (var soundBank in descRef._reloadSoundBanks) {
+                    int idx = Array.IndexOf(descRef._reloadSoundBanks, soundBank);
+                    descData += $"\n    sound_bank_{idx}: {soundBank?.name}";
+                    DumpDescriptorData("\n      ", ref descData, soundBank);
+                }
+                descData += $"\n  _dryShotSoundBanks:";
+                if (descRef._dryShotSoundBanks.Length > 0)
+                foreach (var soundBank in descRef._dryShotSoundBanks) {
+                    int idx = Array.IndexOf(descRef._dryShotSoundBanks, soundBank);
+                    descData += $"\n    sound_bank_{idx}: {soundBank?.name}";
+                    DumpDescriptorData("\n      ", ref descData, soundBank);
+                }
+                descData += $"\n  _failedAttackSoundBanks:";
+                if (descRef._failedAttackSoundBanks.Length > 0)
+                foreach (var soundBank in descRef._failedAttackSoundBanks) {
+                    int idx = Array.IndexOf(descRef._failedAttackSoundBanks, soundBank);
+                    descData += $"\n    sound_bank_{idx}: {soundBank?.name}";
+                    DumpDescriptorData("\n      ", ref descData, soundBank);
+                }
+                descData += $"\n  _muzzles:";
+                if (descRef._muzzles.Length > 0)
+                foreach (var muzzle in descRef._muzzles) {
+                    int idx = Array.IndexOf(descRef._muzzles, muzzle);
+                    descData += $"\n    muzzle_{idx}: {muzzle.name}";
+                    descData += $"\n      _muzzleIntensityCurve:";
+                    DumpDescriptorData($"\n        ", ref descData, muzzle._muzzleIntensityCurve?.keys);
+                    descData += $"\n      _additionalLight: {muzzle._additionalLight?.name}";
+                    descData += $"\n      _additLightIntencityMult: {muzzle._additLightIntencityMult}";
+                    descData += $"\n      _muzzleLight: {muzzle._muzzleLight?.name}";
+                }
+                descData += $"\n  _grip: {descRef._grip}";
+                descData += $"\n  _visualReachCellDuration: {descRef._visualReachCellDuration}";
+                descData += $"\n  _entityFlySprites:";
+                if (descRef._entityFlySprites.Length > 0)
+                foreach (var sprite in descRef._entityFlySprites) {
+                    int idx = Array.IndexOf(descRef._entityFlySprites, sprite);
+                    descData += $"\n    {idx}: {sprite?.name}";
+                }
+                descData += $"\n  _overrideBullet: {descRef._overrideBullet?.name}";
+                descData += $"\n    _bulletSpeed: {descRef._overrideBullet?._bulletSpeed}";
+                descData += $"\n    _makeBloodDecals: {descRef._overrideBullet?._makeBloodDecals}";
+                descData += $"\n    _putShotDecalsOnWalls: {descRef._overrideBullet?._putShotDecalsOnWalls}";
+                descData += $"\n    _putBulletShellsOnFloor: {descRef._overrideBullet?._putBulletShellsOnFloor}";
+                descData += $"\n    _rotateBulletInShotDir: {descRef._overrideBullet?._rotateBulletInShotDir}";
+                descData += $"\n    _shakeDuration: {descRef._overrideBullet?._shakeDuration}";
+                descData += $"\n    _shakeStrength: {descRef._overrideBullet?._shakeStrength}";
+                descData += $"\n    _facadeDecals:";
+                if (descRef._overrideBullet && 
+                    descRef._overrideBullet._facadeDecals != null && 
+                    descRef._overrideBullet._facadeDecals.Length > 0)
+                foreach (var sprite in descRef._overrideBullet._facadeDecals) {
+                    int idx = Array.IndexOf(descRef._overrideBullet._facadeDecals, sprite);
+                    descData += $"\n      {idx}: {sprite?.name}";
+                }
+                descData += $"\n    _gibsController_MORE_DATA: {descRef._overrideBullet?._gibsController?.name}";
+                descData += $"\n    _putDecals: {descRef._overrideBullet?._putDecals}";
+                descData += $"\n  _hasHFGOverlay: {descRef._hasHFGOverlay}";
+                ModLog.Info(descData);
+                // if (!Directory.Exists(descPath)) Directory.CreateDirectory(descPath);
+                // ModTools.DumpAsset(descriptor._icon);
+                // ModTools.DumpAsset(descriptor._smallIcon);
+                // ModTools.DumpAsset(descriptor._shadow);
+                ModLog.Info($"DUMPED: {descId}");
+            } catch (Exception ex) {
+                ModLog.Error($"DUMP FAIL AT '{descId}' ITEM: {ex}");
+            }
+        }
+
+        public static void DumpDescriptorData(string infoPrefix, ref string descData, SoundBank soundBank) {
+            try {
+                descData += $"{infoPrefix}_clips: ";
+                if (soundBank._clips.Length > 0)
+                foreach (var audio in soundBank._clips)
+                    descData += $"{audio.name}{(soundBank._clips.Last() != audio ? "|" : "")}";
+                descData += $"{infoPrefix}_customMixerGroup: {soundBank._customMixerGroup?.name}";
+                descData += $"{infoPrefix}_volume: {soundBank._volume}";
+                descData += $"{infoPrefix}_priority: {soundBank._priority}";
+                descData += $"{infoPrefix}_pitch: {soundBank._pitch}";
+                descData += $"{infoPrefix}_stereoPan: {soundBank._stereoPan}";
+                descData += $"{infoPrefix}_spatialBlend: {soundBank._spatialBlend}";
+                descData += $"{infoPrefix}_minDistanceInCells: {soundBank._minDistanceInCells}";
+                descData += $"{infoPrefix}_maxDistanceInCells: {soundBank._maxDistanceInCells}";
+                descData += $"{infoPrefix}_rolloffMode: {soundBank._rolloffMode}";
+                descData += $"{infoPrefix}_customRollOffCurve: ";
+                DumpDescriptorData($"{infoPrefix}  ", ref descData, soundBank._customRollOffCurve?.keys);
+            } catch (Exception ex) {
+                ModLog.Error($"DUMP FAIL AT 'SoundBank' TYPE: {ex}");
+            }
+        }
+
+        public static void DumpDescriptorData(string infoPrefix, ref string descData, Keyframe[] keyFrames) {
+            try {
+                if (keyFrames.Length > 0)
+                foreach (var keyFrame in keyFrames) {
+                    descData += $"{infoPrefix}m_Time: {keyFrame.time}";
+                    descData += $"{infoPrefix}m_Value: {keyFrame.value}";
+                    descData += $"{infoPrefix}m_InTangent: {keyFrame.inTangent}";
+                    descData += $"{infoPrefix}m_OutTangent: {keyFrame.outTangent}";
+                    descData += $"{infoPrefix}m_WeightedMode: {keyFrame.weightedMode}";
+                    descData += $"{infoPrefix}m_InWeight: {keyFrame.inWeight}";
+                    descData += $"{infoPrefix}m_OutWeight: {keyFrame.outWeight}";
+                }
+            } catch (Exception ex) {
+                ModLog.Error($"DUMP FAIL AT 'Keyframe[]' TYPE: {ex}");
+            }
         }
 
         public static void CleanRecordIdentifier(ConfigTableRecord refRecord) {

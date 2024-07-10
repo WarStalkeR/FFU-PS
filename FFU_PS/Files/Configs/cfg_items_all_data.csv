@@ -1258,9 +1258,9 @@ Id		OutputItem	RequiredItems	ProduceTimeInHours	ModifyStartCost	ModifyStep	Modif
 		plazma_shotgun	ceramite_shards ceramite_shards microelectronics capacitor	50	1	1.01	battery_charge 1 capacitor 15 ceramite_shards 45 microelectronics 145 weapon_container 500																					
 		spec_shotgun	armor_shards weapon_shards blunt_melee_shards	26	1	1.01	shotgun_shrapnel_ammo 1 weapon_shards 15 blunt_melee_shards 45 weapon_repair_kit 145 weapon_container 500																					
 		church_shotgun	ceramite_shards ceramite_shards weapon_shards spring blunt_melee_shards	50	1	1.01	shotgun_shrapnel_ammo 1 weapon_shards 15 spring 45 ceramite_shards 145 weapon_container 500																					
-		ancm_shotgun	armor_shards ceramite_shards weapon_shards blunt_melee_shards	48	1	1.01	weapon_container 1 itemChip 6 mediumItemChip 12 AncomItemChip 24																					
-		sbn_shotgun	armor_shards microelectronics capacitor metal_tread	40	1	1.01	circuit_board 1 itemChip 5 mediumItemChip 10 SBNItemChip 15																					
-		sl_shotgun	ceramite_shards ceramite_shards microelectronics capacitor	48	1	1.01	circuit_board 1 itemChip 5 mediumItemChip 15 SunLightItemChip 25																					
+		ancm_shotgun	armor_shards ceramite_shards weapon_shards blunt_melee_shards	48	1	1.01	shotgun_shrapnel_ammo 1 armor_shards 15 blunt_melee_shards 45 weapon_repair_kit 145 weapon_container 500																					
+		sbn_shotgun	armor_shards microelectronics capacitor metal_tread	40	1	1.01	battery_charge 1 armor_shards 15 capacitor 45 microelectronics 145 weapon_container 500																					
+		sl_shotgun	ceramite_shards ceramite_shards microelectronics capacitor	48	1	1.01	battery_charge 1 capacitor 15 ceramite_shards 45 microelectronics 145 weapon_container 500																					
 		pmc_smg	rubber weapon_shards blunt_melee_shards	18	1	1.01	weapon_shards 1 spring 5 itemChip 25 mediumItemChip 50																					
 		pmc_smg_2	rubber weapon_shards spring blunt_melee_shards	22	1	1.01	spring 1 weapon_repair_kit 3 itemChip 6 mediumItemChip 36																					
 		pmc_smg_3	rubber weapon_shards weapon_shards spring blunt_melee_shards	32	1	1.01	weapon_shards 1 weapon_repair_kit 5 itemChip 26 mediumItemChip 40																					
