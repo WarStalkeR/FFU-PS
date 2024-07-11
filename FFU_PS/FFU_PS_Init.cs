@@ -1,8 +1,38 @@
-﻿using MGSC;
+﻿using HarmonyLib;
+using MGSC;
+using System;
 using System.IO;
 
 namespace FFU_Phase_Shift {
     public static class ModMain {
+        // Code Patching
+        [Hook(ModHookType.BeforeBootstrap)]
+        public static void BeforeBootstrap(IModContext context) {
+            ModLog.Info("Patching Code...");
+            try {
+                var Mod = new Harmony("quasimorph.ffu.phase_shift");
+
+                // Patch: MGSC.MagnumDevelopmentSystem.CancelProject()
+                var refCancelProject = AccessTools.Method(typeof(MagnumDevelopmentSystem), "CancelProject");
+                var prefixCancelProject = SymbolExtensions.GetMethodInfo(() => 
+                    ModPatch.CancelProject_ExploitFix(default, default, default, default));
+                Mod.Patch(refCancelProject, new HarmonyMethod(prefixCancelProject));
+                ModLog.Info("Patched: MGSC.MagnumDevelopmentSystem.CancelProject()");
+
+                // Patch: MGSC.ItemInteraction.UseAutomap()
+                var refUseAutomap = AccessTools.Method(typeof(ItemInteraction), "UseAutomap");
+                var prefixUseAutomap = SymbolExtensions.GetMethodInfo(() =>
+                    ModPatch.UseAutomap_UsageFix(default, default, default, default));
+                Mod.Patch(refUseAutomap, new HarmonyMethod(prefixUseAutomap));
+                ModLog.Info("Patched: MGSC.ItemInteraction.UseAutomap()");
+
+                // Patching Complete
+                ModLog.Info("Code Patch Success!");
+            } catch (Exception ex) {
+                ModLog.Info($"Code Patch Failed: {ex}");
+            }
+        }
+
         // Data Modification
         [Hook(ModHookType.AfterConfigsLoaded)]
         public static void AfterConfigsLoaded(IModContext context) {

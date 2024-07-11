@@ -1,6 +1,7 @@
 {
 	"UniqueModName": "FFU_Phase_Shift",
 	"Assemblies": [
+		"0Harmony.dll",
 		"FFU_Phase_Shift.dll"
 	],
 	"Dependencies": []

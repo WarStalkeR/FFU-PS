@@ -1261,10 +1261,10 @@ Id		OutputItem	RequiredItems	ProduceTimeInHours	ModifyStartCost	ModifyStep	Modif
 		ancm_shotgun	armor_shards ceramite_shards weapon_shards blunt_melee_shards	48	1	1.01	shotgun_shrapnel_ammo 1 armor_shards 15 blunt_melee_shards 45 weapon_repair_kit 145 weapon_container 500																					
 		sbn_shotgun	armor_shards microelectronics capacitor metal_tread	40	1	1.01	battery_charge 1 armor_shards 15 capacitor 45 microelectronics 145 weapon_container 500																					
 		sl_shotgun	ceramite_shards ceramite_shards microelectronics capacitor	48	1	1.01	battery_charge 1 capacitor 15 ceramite_shards 45 microelectronics 145 weapon_container 500																					
-		pmc_smg	rubber weapon_shards blunt_melee_shards	18	1	1.01	weapon_shards 1 spring 5 itemChip 25 mediumItemChip 50																					
-		pmc_smg_2	rubber weapon_shards spring blunt_melee_shards	22	1	1.01	spring 1 weapon_repair_kit 3 itemChip 6 mediumItemChip 36																					
-		pmc_smg_3	rubber weapon_shards weapon_shards spring blunt_melee_shards	32	1	1.01	weapon_shards 1 weapon_repair_kit 5 itemChip 26 mediumItemChip 40																					
-		spec_smg	armor_shards weapon_shards spring blunt_melee_shards	28	1	1.01	spring 1 weapon_repair_kit 3 itemChip 6 mediumItemChip 36																					
+		pmc_smg	rubber weapon_shards blunt_melee_shards	18	1	1.01	pistol_basic_ammo 1 weapon_shards 20 blunt_melee_shards 100 weapon_container 500																					
+		pmc_smg_2	rubber weapon_shards spring blunt_melee_shards	22	1	1.01	pistol_basic_ammo 1 weapon_shards 20 spring 100 weapon_container 500																					
+		pmc_smg_3	rubber weapon_shards weapon_shards spring blunt_melee_shards	32	1	1.01	pistol_basic_ammo 1 weapon_shards 20 weapon_repair_kit 100 weapon_container 500																					
+		spec_smg	armor_shards weapon_shards spring blunt_melee_shards	28	1	1.01	medium_basic_ammo 1 weapon_shards 20 blunt_melee_shards 100 weapon_container 500																					
 		bandit_smg_2	rubber weapon_shards blunt_melee_shards	18	1	1.01	weapon_shards 1 spring 5 itemChip 25 mediumItemChip 50																					
 		tech_smg	plastic circuit_board bulb wire capacitor	48	1	1.01	bulb 1 microelectronics 3 itemChip 15 mediumItemChip 60																					
 		plazma_smg	ceramite_shards circuit_board microelectronics transformer	42	1	1.01	circuit_board 1 microelectronics 3 itemChip 15 mediumItemChip 60																					
