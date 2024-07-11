@@ -612,16 +612,19 @@ namespace FFU_Phase_Shift {
                 r.ContentDescriptor = descs.GetDescriptor(r.Id);
             }));
             _cfgLoader.AddParser(new TableParser<ContentDropRecord>("itemdrop_", TableKeyComparisonMode.Contains, delegate (ContentDropRecord r, string header, DescriptorsCollection descs) {
-                // Has Built-in Overwrite
-                Data.LocationItemDrop.AddRecord(header, r);
+                try { // Overwrite Not Available
+                    Data.LocationItemDrop.AddRecord(header, r);
+                } catch { }
             }));
             _cfgLoader.AddParser(new TableParser<ContentDropRecord>("monsterdrop_", TableKeyComparisonMode.Contains, delegate (ContentDropRecord r, string header, DescriptorsCollection descs) {
-                // Has Built-in Overwrite
-                Data.LocationMonsterDrop.AddRecord(header, r);
+                try { // Overwrite Not Available
+                    Data.LocationMonsterDrop.AddRecord(header, r);
+                } catch { }
             }));
             _cfgLoader.AddParser(new TableParser<ContentDropRecord>("factiondrop_", TableKeyComparisonMode.Contains, delegate (ContentDropRecord r, string header, DescriptorsCollection descs) {
-                // Overwrite Implementation Complicated
-                Data.FactionDrop.AddRecord(header, r);
+                try { // Overwrite Not Available
+                    Data.FactionDrop.AddRecord(header, r);
+                } catch { }
             }));
             _cfgLoader.AddParser(new TableParser<MagnumPerkRecord>("magnum_perks", TableKeyComparisonMode.Equals, delegate (MagnumPerkRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, magnum_perks: {r.Id}");

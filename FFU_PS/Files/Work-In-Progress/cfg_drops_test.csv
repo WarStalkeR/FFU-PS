@@ -1,0 +1,16 @@
+#monsterdrop_test1				
+TechLevel	ContentIds	Weight	Points	
+	possesed_jungleman possesed_jungleman possesed_jungleman possesed_jungleman	100	250	
+	possesed_jungleman possesed_jungleman possesed_jungleman possesed_jungleman possesed_jungleman possesed_jungleman	80	750	
+#end				
+				
+#itemdrop_redbarreldrop				
+TechLevel	ContentIds	Weight	Points	
+	gas_ammo	20	20	
+#end				
+				
+#factiondrop_AnCom_units				
+TechLevel	ContentIds	Weight	Points	
+1	man_worker woman_worker man_scientist_ancom	5	40	
+1	man_worker woman_worker man_worker woman_worker	5	40	
+#end				
