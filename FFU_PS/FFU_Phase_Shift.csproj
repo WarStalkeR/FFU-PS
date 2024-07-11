@@ -31,6 +31,9 @@
     <Reference Include="UnityEngine.JSONSerializeModule">
       <HintPath>..\..\..\Quasimorph_Data\Managed\UnityEngine.JSONSerializeModule.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\..\Quasimorph_Data\Managed\UnityEngine.UI.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">

@@ -58,5 +58,43 @@ namespace FFU_Phase_Shift {
             if (item.StackCount <= 0) item.Storage?.Remove(item);
             return false; // Original function is completely replaced
         }
+
+        // Original function isn't displaying the grid correctly, if its height is bigger than 4 rows
+        public static bool RefreshItemsList_FixUI(InventoryScreen __instance, bool refreshFloor) {
+            ModLog.Info("Triggered: MGSC.InventoryScreen.RefreshItemsList()");
+            Inventory inventory = __instance._creatures.Player.Inventory;
+            __instance._backpackGridView.Initialize(inventory.BackpackStore);
+            __instance._backpackGridView.InitFakeGrid(6, 3);
+            __instance._backpackScrollbar.gameObject.SetActive(false);
+            __instance._backpackSlot.Initialize(inventory.BackpackSlot.First, inventory.BackpackSlot);
+            SingletonMonoBehaviour<DungeonUI>.Instance.Hud.RefreshWeapon();
+            SingletonMonoBehaviour<DungeonUI>.Instance.Hud.RefreshVest();
+            SingletonMonoBehaviour<TooltipFactory>.Instance.HideTooltip();
+            __instance.RefreshHelmetAndArmor();
+            __instance.RefreshVest();
+            __instance.RefreshWeapon();
+            if (__instance._lastInteractObstacle != null) {
+                __instance._lastInteractObstacle.RefreshVisual();
+            }
+            if (!__instance.IsViewActive) {
+                return false;
+            }
+            ItemOnFloor orCreate = __instance._itemsOnFloor.GetOrCreate(__instance._creatures.Player.pos);
+            if (refreshFloor) {
+                if (orCreate.Storage.Empty && __instance._tabsView.HasTab(orCreate.Storage)) {
+                    __instance._tabsView.RemoveTab(orCreate.Storage);
+                    if (__instance._tabsView.TabsCount > 0) {
+                        __instance._tabsView.SelectAndShowFirstTab();
+                    }
+                } else if (!orCreate.Storage.Empty && !__instance._tabsView.HasTab(orCreate.Storage)) {
+                    ItemTab itemTab = __instance._tabsView.AddTab(__instance._itemsOnFloorView, orCreate.Storage);
+                    if (__instance._tabsView.TabsCount == 1) {
+                        itemTab.Select(val: true);
+                    }
+                }
+            }
+            __instance._tabsView.RefreshAllTabs();
+            return false; // Original function is completely replaced
+        }
     }
 }
