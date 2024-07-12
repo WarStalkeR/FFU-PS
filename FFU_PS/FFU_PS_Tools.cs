@@ -640,7 +640,7 @@ namespace FFU_Phase_Shift {
             _cfgLoader.AddParser(new TableParser<ContentDropRecord>("factiondrop_", TableKeyComparisonMode.Contains, delegate (ContentDropRecord r, string header, DescriptorsCollection descs) {
                 try { // Overwrite Not Available
                     Data.FactionDrop.AddRecord(header, r);
-                } catch { }
+                } catch { ModLog.Warning("Failed processing FactionDrop record!"); }
             }));
             _cfgLoader.AddParser(new TableParser<MagnumPerkRecord>("magnum_perks", TableKeyComparisonMode.Equals, delegate (MagnumPerkRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, magnum_perks: {r.Id}");

@@ -60,12 +60,12 @@ namespace FFU_Phase_Shift {
         }
 
         // Original function isn't displaying the grid correctly, if its height is bigger than 4 rows
-        public static bool RefreshItemsList_FixUI(InventoryScreen __instance, bool refreshFloor) {
+        public static bool RefreshItemsList_FixMissUI(InventoryScreen __instance, bool refreshFloor) {
             ModLog.Info("Triggered: MGSC.InventoryScreen.RefreshItemsList()");
             Inventory inventory = __instance._creatures.Player.Inventory;
             __instance._backpackGridView.Initialize(inventory.BackpackStore);
-            __instance._backpackGridView.InitFakeGrid(6, 3);
-            __instance._backpackScrollbar.gameObject.SetActive(false);
+            __instance._backpackGridView.InitFakeGrid(6, 4);
+            __instance._backpackScrollbar.gameObject.SetActive(inventory.BackpackStore.Height > 4);
             __instance._backpackSlot.Initialize(inventory.BackpackSlot.First, inventory.BackpackSlot);
             SingletonMonoBehaviour<DungeonUI>.Instance.Hud.RefreshWeapon();
             SingletonMonoBehaviour<DungeonUI>.Instance.Hud.RefreshVest();
@@ -94,6 +94,26 @@ namespace FFU_Phase_Shift {
                 }
             }
             __instance._tabsView.RefreshAllTabs();
+            return false; // Original function is completely replaced
+        }
+
+        // Original function isn't displaying the grid correctly, if its height is bigger than 4 rows
+        public static bool RefreshItemsList_FixShipUI(NoPlayerInventoryView __instance) {
+            ModLog.Info("Triggered: MGSC.NoPlayerInventoryView.RefreshItemsList()");
+            Inventory inventory = __instance._merc.Inventory;
+            __instance._backpackGrid.Initialize(inventory.BackpackStore);
+            __instance._vestGrid.Initialize(inventory.VestStore);
+            __instance._backpackGrid.InitFakeGrid(6, 4); // 6, 5
+            __instance._vestGrid.InitFakeGrid(8, 1); // 6, 1
+            __instance._backpackScrollbar.gameObject.SetActive(inventory.BackpackStore.Height > 4);
+            __instance._armorSlot.Initialize(inventory.ArmorSlot.First, inventory.ArmorSlot);
+            __instance._helmetSlot.Initialize(inventory.HelmetSlot.First, inventory.HelmetSlot);
+            __instance._leggingsSlot.Initialize(inventory.LeggingsSlot.First, inventory.LeggingsSlot);
+            __instance._bootsSlot.Initialize(inventory.BootsSlot.First, inventory.BootsSlot);
+            __instance._backpackSlot.Initialize(inventory.BackpackSlot.First, inventory.BackpackSlot);
+            __instance._vestSlot.Initialize(inventory.VestSlot.First, inventory.VestSlot);
+            __instance.RefreshWeapon();
+            SingletonMonoBehaviour<TooltipFactory>.Instance.HideTooltip();
             return false; // Original function is completely replaced
         }
     }

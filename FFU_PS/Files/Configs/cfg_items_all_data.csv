@@ -1265,30 +1265,31 @@ Id		OutputItem	RequiredItems	ProduceTimeInHours	ModifyStartCost	ModifyStep	Modif
 		pmc_smg_2	rubber weapon_shards spring blunt_melee_shards	22	1	1.01	pistol_basic_ammo 1 weapon_shards 20 spring 100 weapon_container 500																					
 		pmc_smg_3	rubber weapon_shards weapon_shards spring blunt_melee_shards	32	1	1.01	pistol_basic_ammo 1 weapon_shards 20 weapon_repair_kit 100 weapon_container 500																					
 		spec_smg	armor_shards weapon_shards spring blunt_melee_shards	28	1	1.01	medium_basic_ammo 1 weapon_shards 20 blunt_melee_shards 100 weapon_container 500																					
-		bandit_smg_2	rubber weapon_shards blunt_melee_shards	18	1	1.01	weapon_shards 1 spring 5 itemChip 25 mediumItemChip 50																					
-		tech_smg	plastic circuit_board bulb wire capacitor	48	1	1.01	bulb 1 microelectronics 3 itemChip 15 mediumItemChip 60																					
-		plazma_smg	ceramite_shards circuit_board microelectronics transformer	42	1	1.01	circuit_board 1 microelectronics 3 itemChip 15 mediumItemChip 60																					
-		spec_smg_rv	ceramite_shards weapon_shards spring blunt_melee_shards	48	1	1.01	weapon_repair_kit 1 itemChip 7 mediumItemChip 14 highItemChip 28																					
-		ancm_smg	armor_shards armor_shards weapon_shards spring	36	1	1.01	weapon_shards 1 itemChip 3 mediumItemChip 6 AncomItemChip 24																					
-		franch_smg	rubber weapon_shards spring spring	40	1	1.01	weapon_shards 1 itemChip 3 mediumItemChip 6 FrancheItemChip 24																					
-		sbn_smg	ceramite_shards microelectronics capacitor metal_tread	44	1	1.01	weapon_shards 1 itemChip 3 mediumItemChip 6 SBNItemChip 24																					
-		toxic_smg	plastic glass circuit_board metal_tread	26	1	1.01	weapon_shards 1 acid 5 itemChip 25 mediumItemChip 50																					
-		pmc_assault	armor_shards weapon_shards lens blunt_melee_shards	32	1	1.01	lens 1 weapon_repair_kit 3 itemChip 6 mediumItemChip 36																					
-		spec_assault	ceramite_shards weapon_shards lens blunt_melee_shards	42	1	1.01	weapon_container 1 itemChip 3 mediumItemChip 6 highItemChip 24																					
-		spec_assault_rv	ceramite_shards armor_shards weapon_shards microelectronics circuit_board	52	1	1.01	weapon_repair_kit 1 itemChip 6 mediumItemChip 12 RealWareItemChip 28																					
-		desert_assault	armor_shards weapon_shards spring blunt_melee_shards	36	1	1.01	lens 1 weapon_repair_kit 3 itemChip 6 mediumItemChip 36																					
-		ancm_quasi_assault	armor_shards ceramite_shards microelectronics venus_weapon_shard wire	50	1	1.01	quasisamples 1 itemChip 8 mediumItemChip 15 AncomItemChip 30																					
-		gh_assault	armor_shards weapon_shards lens blunt_melee_shards	30	1	1.01	weapon_shards 1 itemChip 7 mediumItemChip 14 GrassHopperItemChip 28																					
-		franch_assault	ceramite_shards armor_shards weapon_shards lens	38	1	1.01	weapon_shards 1 itemChip 8 mediumItemChip 15 FrancheItemChip 30																					
-		plazma_assault	ceramite_shards circuit_board microelectronics capacitor	44	1	1.01	transformer 1 itemChip 6 mediumItemChip 12 highItemChip 24																					
-		army_sniper	ceramite_shards weapon_shards lens spring blunt_melee_shards blunt_melee_shards	54	1	1.01	lens 1 weapon_repair_kit 3 itemChip 6 mediumItemChip 36																					
-		army_sniper_2	ceramite_shards weapon_shards lens microelectronics	58	1	1.01	weapon_container 1 itemChip 3 mediumItemChip 6 highItemChip 24																					
-		desert_marksman	rubber weapon_shards blunt_melee_shards	30	1	1.01	weapon_shards 1 lens 5 itemChip 25 mediumItemChip 50																					
-		desert_marksman_2	armor_shards weapon_shards lens blunt_melee_shards blunt_melee_shards	40	1	1.01	lens 1 weapon_repair_kit 3 itemChip 6 mediumItemChip 36																					
-		tech_marksman	plastic microelectronics lens bulb transformer	60	1	1.01	electrical_parts_container 1 itemChip 3 mediumItemChip 6 highItemChip 24																					
-		tech_rifle	plastic microelectronics lens bulb capacitor	44	1	1.01	electrical_parts_container 1 itemChip 3 mediumItemChip 6 highItemChip 24																					
-		ancm_marksman	ceramite_shards weapon_shards lens microelectronics blunt_melee_shards	62	1	1.01	lens 1 weapon_repair_kit 4 mediumItemChip 12 AncomItemChip 30																					
-		rail_rifle	ceramite_shards microelectronics capacitor metal_tread metal_tread	54	1	1.01	wire 1 circuit_board 6 electrical_parts_container 9 itemChip 25																					
+		bandit_smg	rubber weapon_shards	14	1	1.01	shotgun_shrapnel_ammo 1 weapon_shards 20 rubber 100 weapon_container 500																					
+		bandit_smg_2	rubber weapon_shards blunt_melee_shards	18	1	1.01	shotgun_shrapnel_ammo 1 weapon_shards 20 blunt_melee_shards 100 weapon_container 500																					
+		tech_smg	plastic circuit_board bulb wire capacitor	48	1	1.01	battery_charge 1 plastic 15 capacitor 45 circuit_board 145 weapon_container 500																					
+		plazma_smg	ceramite_shards circuit_board microelectronics transformer	42	1	1.01	battery_charge 1 weapon_shards 15 transformer 45 microelectronics 145 weapon_container 500																					
+		spec_smg_rv	ceramite_shards weapon_shards spring blunt_melee_shards	48	1	1.01	medium_basic_ammo 1 weapon_shards 15 spring 45 ceramite_shards 145 weapon_container 500																					
+		ancm_smg	armor_shards armor_shards weapon_shards spring	36	1	1.01	medium_basic_ammo 1 armor_shards 15 spring 45 weapon_repair_kit 145 weapon_container 500																					
+		franch_smg	rubber weapon_shards spring spring	40	1	1.01	pistol_basic_ammo 1 weapon_shards 15 rubber 45 spring 145 weapon_container 500																					
+		sbn_smg	ceramite_shards microelectronics capacitor metal_tread	44	1	1.01	battery_charge 1 weapon_shards 15 capacitor 45 microelectronics 145 weapon_container 500																					
+		toxic_smg	plastic glass circuit_board metal_tread	26	1	1.01	toxic_ammo 1 plastic 15 glass 45 circuit_board 145 weapon_container 500																					
+		pmc_assault	armor_shards weapon_shards lens blunt_melee_shards	32	1	1.01	heavy_basic_ammo 1 weapon_shards 15 blunt_melee_shards 45 lens 145 weapon_container 500																					
+		spec_assault	ceramite_shards weapon_shards lens blunt_melee_shards	42	1	1.01	heavy_basic_ammo 1 weapon_shards 15 lens 45 ceramite_shards 145 weapon_container 500																					
+		spec_assault_rv	ceramite_shards armor_shards weapon_shards microelectronics circuit_board	52	1	1.01	heavy_basic_ammo 1 weapon_shards 15 lens 45 circuit_board 145 weapon_container 500																					
+		desert_assault	armor_shards weapon_shards spring blunt_melee_shards	36	1	1.01	heavy_basic_ammo 1 weapon_shards 15 armor_shards 45 spring 145 weapon_container 500																					
+		ancm_quasi_assault	armor_shards ceramite_shards microelectronics venus_weapon_shard wire	50	1	1.01	quasi_basic_ammo 1 armor_shards 15 venus_weapon_shard 45 quasisamples 145 weapon_container 500																					
+		gh_assault	armor_shards weapon_shards lens blunt_melee_shards	30	1	1.01	heavy_basic_ammo 1 weapon_shards 15 lens 45 weapon_repair_kit 145 weapon_container 500																					
+		franch_assault	ceramite_shards armor_shards weapon_shards lens	38	1	1.01	heavy_basic_ammo 1 armor_shards 15 lens 45 ceramite_shards 145 weapon_container 500																					
+		plazma_assault	ceramite_shards circuit_board microelectronics capacitor	44	1	1.01	battery_charge 1 weapon_shards 15 circuit_board 45 microelectronics 145 weapon_container 500																					
+		army_sniper	ceramite_shards weapon_shards lens spring blunt_melee_shards blunt_melee_shards	54	1	1.01	heavy_basic_ammo 1 blunt_melee_shards 15 lens 45 weapon_repair_kit 145 weapon_container 500																					
+		army_sniper_2	ceramite_shards weapon_shards lens microelectronics	58	1	1.01	heavy_basic_ammo 1 blunt_melee_shards 15 lens 45 microelectronics 145 weapon_container 500																					
+		desert_marksman	rubber weapon_shards blunt_melee_shards	30	1	1.01	heavy_basic_ammo 1 weapon_shards 15 rubber 45 blunt_melee_shards 145 weapon_container 500																					
+		desert_marksman_2	armor_shards weapon_shards lens blunt_melee_shards blunt_melee_shards	40	1	1.01	heavy_basic_ammo 1 weapon_shards 15 blunt_melee_shards 45 weapon_repair_kit 145 weapon_container 500																					
+		tech_marksman	plastic microelectronics lens bulb transformer	60	1	1.01	battery_charge 1 bulb 15 transformer 45 microelectronics 145 weapon_container 500																					
+		tech_rifle	plastic microelectronics lens bulb capacitor	44	1	1.01	battery_charge 1 bulb 15 capacitor 45 microelectronics 145 weapon_container 500																					
+		ancm_marksman	ceramite_shards weapon_shards lens microelectronics blunt_melee_shards	62	1	1.01	medium_basic_ammo 1 weapon_shards 15 lens 45 microelectronics 145 weapon_container 500																					
+		rail_rifle	ceramite_shards microelectronics capacitor metal_tread metal_tread	54	1	1.01	battery_charge 1 capacitor 15 ceramite_shards 45 microelectronics 145 weapon_container 500																					
 		gh_marksman	armor_shards weapon_shards lens blunt_melee_shards	48	1	1.01	lens 1 weapon_repair_kit 3 itemChip 9 mediumItemChip 24																					
 		sl_sniper	ceramite_shards microelectronics lens transformer capacitor	64	1	1.01	electrical_parts_container 1 itemChip 3 mediumItemChip 6 highItemChip 24																					
 		core_nailmachinegun	rusty_shards coarse_gears spring rod	34	1	1.01	rusty_shards 1 spring 5 itemChip 25 highItemChip 36																					
