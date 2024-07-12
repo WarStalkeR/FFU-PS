@@ -612,14 +612,30 @@ namespace FFU_Phase_Shift {
                 r.ContentDescriptor = descs.GetDescriptor(r.Id);
             }));
             _cfgLoader.AddParser(new TableParser<ContentDropRecord>("itemdrop_", TableKeyComparisonMode.Contains, delegate (ContentDropRecord r, string header, DescriptorsCollection descs) {
-                try { // Overwrite Not Available
-                    Data.LocationItemDrop.AddRecord(header, r);
-                } catch { }
+                bool removeRecord = r.ContentIds[0].StartsWith("^");
+                if (removeRecord) r.ContentIds[0] = CleanRecord(r.ContentIds[0]);
+                string key = header.Replace(Data.LocationItemDrop._headerPrefix, string.Empty);
+                if (Data.LocationItemDrop._recordsByLocations.ContainsKey(key)) {
+                    int idx = Data.LocationItemDrop._recordsByLocations[key].FindIndex(
+                        x => x.ContentIds.SequenceEqual(r.ContentIds));
+                    if (idx >= 0) {
+                        if (removeRecord) Data.LocationItemDrop._recordsByLocations[key].RemoveAt(idx);
+                        else Data.LocationItemDrop._recordsByLocations[key][idx] = r;
+                    } else Data.LocationItemDrop._recordsByLocations[key].Add(r);
+                } else Data.LocationItemDrop._recordsByLocations[key] = new List<ContentDropRecord> { r };
             }));
             _cfgLoader.AddParser(new TableParser<ContentDropRecord>("monsterdrop_", TableKeyComparisonMode.Contains, delegate (ContentDropRecord r, string header, DescriptorsCollection descs) {
-                try { // Overwrite Not Available
-                    Data.LocationMonsterDrop.AddRecord(header, r);
-                } catch { }
+                bool removeRecord = r.ContentIds[0].StartsWith("^");
+                if (removeRecord) r.ContentIds[0] = CleanRecord(r.ContentIds[0]);
+                string key = header.Replace(Data.LocationMonsterDrop._headerPrefix, string.Empty);
+                if (Data.LocationMonsterDrop._recordsByLocations.ContainsKey(key)) {
+                    int idx = Data.LocationMonsterDrop._recordsByLocations[key].FindIndex(
+                        x => x.ContentIds.SequenceEqual(r.ContentIds));
+                    if (idx >= 0) {
+                        if (removeRecord) Data.LocationMonsterDrop._recordsByLocations[key].RemoveAt(idx);
+                        else Data.LocationMonsterDrop._recordsByLocations[key][idx] = r;
+                    } else Data.LocationMonsterDrop._recordsByLocations[key].Add(r);
+                } else Data.LocationMonsterDrop._recordsByLocations[key] = new List<ContentDropRecord> { r };
             }));
             _cfgLoader.AddParser(new TableParser<ContentDropRecord>("factiondrop_", TableKeyComparisonMode.Contains, delegate (ContentDropRecord r, string header, DescriptorsCollection descs) {
                 try { // Overwrite Not Available
@@ -897,7 +913,11 @@ namespace FFU_Phase_Shift {
         }
 
         public static void CleanRecordIdentifier(ConfigTableRecord refRecord) {
-            refRecord.Id = refRecord.Id.Trim(new char[] {'*', '-', '+', '^'});
+            refRecord.Id = CleanRecord(refRecord.Id);
+        }
+
+        public static string CleanRecord(string original) {
+            return original.Trim(new char[] { '*', '-', '+', '^' });
         }
     }
 

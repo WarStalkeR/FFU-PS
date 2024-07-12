@@ -2,6 +2,8 @@
 	"UniqueModName": "FFU_Phase_Shift",
 	"Assemblies": [
 		"0Harmony.dll",
+		"UniverseLib.Mono.dll",
+		"UnityExplorer.STANDALONE.Mono.dll",
 		"FFU_Phase_Shift.dll"
 	],
 	"Dependencies": []
