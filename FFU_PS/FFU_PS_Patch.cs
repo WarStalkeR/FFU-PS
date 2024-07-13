@@ -1,5 +1,4 @@
-﻿using HarmonyLib;
-using MGSC;
+﻿using MGSC;
 using System.Collections.Generic;
 
 namespace FFU_Phase_Shift {

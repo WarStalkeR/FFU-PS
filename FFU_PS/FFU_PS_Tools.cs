@@ -1,7 +1,7 @@
 ﻿using MGSC;
+using SimpleJSON;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -12,10 +12,15 @@ namespace FFU_Phase_Shift {
         private static bool _verbose = false;
         private static string _cntPath = null;
         private static ModConfigLoader _cfgLoader = null;
+        private static Localization _locInstance = null;
 
         public static void Setup(string contentPath = null, ModConfigLoader configLoader = null) {
+            // Loading passed variables
             if (contentPath != null) _cntPath = contentPath;
             if (configLoader != null) _cfgLoader = configLoader;
+
+            // Loading instance variables
+            _locInstance = Singleton<Localization>.Instance;
         }
 
         public static void Verbose() {
@@ -673,11 +678,54 @@ namespace FFU_Phase_Shift {
             if (_cntPath == null) { ModLog.Warning($"LoadConfigFile: content path is undefined!"); return; }
             if (_cfgLoader == null) { ModLog.Warning($"LoadConfigFile: config loader is not referenced!"); return; }
             if (configName == null) { ModLog.Warning($"LoadConfigFile: config name is undefined!"); return; }
-            string cfgPath = Path.Combine(_cntPath, configName);
+            string cfgPath = Path.Combine(_cntPath, ModMain.PathConfigs, configName);
             if (!File.Exists(cfgPath)) { ModLog.Warning($"LoadConfigFile: config file doesn't exist!"); return; }
 
             // Read and parse config file into data
             _cfgLoader.ProcessConfigFile(cfgPath, _verbose);
+        }
+
+        public static void LoadLocaleFile(string localeName) {
+            if (_cntPath == null) { ModLog.Warning($"LoadLocaleFile: content path is undefined!"); return; }
+            if (_locInstance == null) { ModLog.Warning($"LoadLocaleFile: locale instance is not referenced!"); return; }
+            if (localeName == null) { ModLog.Warning($"LoadLocaleFile: locale name is undefined!"); return; }
+            string localePath = Path.Combine(_cntPath, ModMain.PathLocale, localeName);
+            if (!File.Exists(localePath)) { ModLog.Warning($"LoadLocaleFile: locale file doesn't exist!"); return; }
+            string localeId = localeName.Replace(".json", string.Empty);
+
+            // Parse default language
+            JSONNode localeFile = JSON.Parse(File.ReadAllText(localePath));
+            if (localeFile["english"] == null) { ModLog.Warning($"LoadLocaleFile: default 'english' locale missing!"); return; }
+            string localeFallBack = localeFile["english"];
+            AddLocaleToDB(Localization.Lang.EnglishUS, localeId, localeFallBack);
+
+            // Parse other languages
+            if (localeFile["russian"] != null) AddLocaleToDB(Localization.Lang.Russian, localeId, localeFile["russian"]);
+            else AddLocaleToDB(Localization.Lang.Russian, localeId, localeFallBack);
+            if (localeFile["portuguese"] != null) AddLocaleToDB(Localization.Lang.BrazilianPortugal, localeId, localeFile["portuguese"]);
+            else AddLocaleToDB(Localization.Lang.BrazilianPortugal, localeId, localeFallBack);
+            if (localeFile["german"] != null) AddLocaleToDB(Localization.Lang.German, localeId, localeFile["german"]);
+            else AddLocaleToDB(Localization.Lang.German, localeId, localeFallBack);
+            if (localeFile["french"] != null) AddLocaleToDB(Localization.Lang.French, localeId, localeFile["french"]);
+            else AddLocaleToDB(Localization.Lang.French, localeId, localeFallBack);
+            if (localeFile["spanish"] != null) AddLocaleToDB(Localization.Lang.Spanish, localeId, localeFile["spanish"]);
+            else AddLocaleToDB(Localization.Lang.Spanish, localeId, localeFallBack);
+            if (localeFile["polish"] != null) AddLocaleToDB(Localization.Lang.Polish, localeId, localeFile["polish"]);
+            else AddLocaleToDB(Localization.Lang.Polish, localeId, localeFallBack);
+            if (localeFile["turkish"] != null) AddLocaleToDB(Localization.Lang.Turkish, localeId, localeFile["turkish"]);
+            else AddLocaleToDB(Localization.Lang.Turkish, localeId, localeFallBack);
+            if (localeFile["korean"] != null) AddLocaleToDB(Localization.Lang.Korean, localeId, localeFile["korean"]);
+            else AddLocaleToDB(Localization.Lang.Korean, localeId, localeFallBack);
+            if (localeFile["japanese"] != null) AddLocaleToDB(Localization.Lang.Japanese, localeId, localeFile["japanese"]);
+            else AddLocaleToDB(Localization.Lang.Japanese, localeId, localeFallBack);
+            if (localeFile["chinese_s"] != null) AddLocaleToDB(Localization.Lang.ChineseSimp, localeId, localeFile["chinese_s"]);
+            else AddLocaleToDB(Localization.Lang.ChineseSimp, localeId, localeFallBack);
+        }
+
+        public static void AddLocaleToDB(Localization.Lang locLang, string locId, string locText) {
+            if (_locInstance.db[locLang].ContainsKey(locId))
+                _locInstance.db[locLang][locId] = locText;
+            else _locInstance.db[locLang].Add(locId, locText);
         }
 
         public static void DumpConfig(string configName, string savePath) {
@@ -918,6 +966,10 @@ namespace FFU_Phase_Shift {
 
         public static string CleanRecord(string original) {
             return original.Trim(new char[] { '*', '-', '+', '^' });
+        }
+
+        public static string Clean(string original) {
+            return original;
         }
     }
 

@@ -1,4 +1,621 @@
 	English
+ui.lang	English
+ui.fist.name	fist
+ui.label.continue	continue
+ui.label.pause	(pause)
+ui.label.close	close
+ui.label.safezone	safe zone
+ui.label.toskip	hold to skip
+ui.label.modificator	modificator
+ui.label.level	level
+ui.label.effect	effect
+ui.label.none	none
+ui.label.exit	exit
+ui.label.evacuation	evacuation
+ui.label.activity	activity
+ui.label.dead	dead
+ui.label.noclass	no class
+ui.label.return	return
+ui.label.selectclass	select class
+ui.label.changeclass	change class
+ui.label.finishmission	finish mission
+ui.label.starttravel	start travel
+ui.label.missionavailable	mission available
+ui.label.additional	Extra:
+ui.label.pay	Payment
+ui.label.day_short	d
+ui.label.hour_short	h
+ui.label.minute_short	m
+ui.label.onway	in transit
+ui.label.items	items
+ui.label.corpse	corpse
+ui.label.ladder_up	ladder up
+ui.label.ladder_down	ladder down
+ui.label.amplifier	Amplifier
+ui.label.container	container
+ui.label.bramfaturaportal	Bramfatura portal
+ui.label.monsterspeed	speed
+ui.label.walkingtype	walking type
+ui.label.cal	kcal
+ui.label.kg	kg
+ui.label.actionpoints_short	AP
+ui.label.turns	turns
+ui.label.health	HP
+ui.label.points_short	pts
+ui.label.row	row
+ui.label.slot	slot
+ui.label.kills	kills
+ui.label.floor	Floor
+ui.label.satietylevel	satiety level
+ui.label.painlevel	pain threshold
+ui.label.reload	weapon reload
+ui.label.clone	clone
+ui.label.equipment	equipment
+ui.label.send	send
+ui.label.exchange_artifacts	exchange
+ui.label.throwgrenade	grenade
+ui.label.applyultimate	ability
+ui.label.focus_Expansion	Expansion
+ui.label.focus_Defense	Defense
+ui.label.focus_Scouting	Scouting
+ui.label.bluemark_disabled	Illegal organization
+ui.label.bluemark_enabled	Thanks for your support
+ui.label.subscribe	subscribe
+ui.label.unsubscribe	unsubscribe
+ui.label.rewards_exchange	Rewards/Exchange
+ui.label.details	Details
+ui.label.operator	Operator
+ui.label.operators	Operators
+ui.label.merc_classes	Classes
+ui.label.start_development	Start development
+ui.label.emptyslot	Empty slot
+ui.label.item	Item
+ui.label.resources	Resources
+ui.label.time	Time
+ui.label.unloadtocargo	Unload all
+ui.label.enemy	Enemy
+ui.label.noinventorywhilerun	Inventory is not available on the run
+ui.label.noobstacleswhilerun	Not available while running
+ui.label.limitwhilebaron	Quasimorphic Storm
+ui.label.limittutorial	Not available yet
+ui.label.remove_item_here	Drag object to remove
+ui.label.sort_arsenal	Sort the Cargo Hold
+ui.label.looted	Searched
+ui.label.stationwner	Owner
+ui.label.victim	Victim
+ui.label.beneficiary	Beneficiary
+ui.label.locked_by_reputation	Unavailable. Low attitude.
+ui.label.savedslot	Slot {0}
+ui.label.newsave	New Save
+ui.label.restorechance	Chance of recovery {0}
+ui.label.invalid_version	Outdated version
+ui.label.unexpected_error	Unknown error
+ui.label.no_consume_regen	n/a
+ui.label.perk	Perk
+ui.label.status_effect	Status Effect
+ui.label.wound	Wound
+ui.label.addiction	Addiction
+ui.label.manufacturers	Manufacturers
+ui.label.consumers	Consumers
+ui.label.Income	Income
+ui.label.expense	Expense
+ui.label.hazards	Dangerous tile
+ui.label.disassemble_corpse_items	Disassemble everything
+ui.label.amputate_corpse_slots	Amputate everything
+ui.label.upgrade	Upgrade
+ui.label.no_device	no device
+ui.label.installed	Installed
+ui.label.available	Available
+ui.label.blocked	Blocked
+ui.label.standalone	Stand-alone
+ui.label.damaged	Damaged
+ui.label.status_tradebreak	Trade break
+ui.label.passive_perks	Passive perks
+ui.label.trigger_perks	Trigger perks
+ui.label.weapon_trait	Weapon ability
+ui.label.no_projects_available	No projects available
+ui.label.no_operators_available	No operators available
+ui.label.cloning	Cloning in process
+ui.label.healing	Healing in progress
+ui.label.training	Training in progress
+ui.label.no_items	Empty backpack
+ui.label.usable_limits	Working with:
+label.rank_levelup_limit_reached	Rank increase limit reached
+label.rank_levelup_after_raid	The operative's rank has been raised
+label.require_battle_cond	Need experience capacitor for rank increase
+ui.label.callcapsule	Call the capsule
+ui.caption.takeall	take all
+ui.caption.inventory	INVENTORY
+ui.caption.skullproject	S.K.U.L.L. PROJECT
+ui.caption.health	HEALTH
+ui.caption.operatorclass	OPERATIVE'S CLASS
+ui.caption.death	DEATH
+ui.caption.equipmentweight	EQUIPMENT WEIGHT
+ui.caption.floor	FLOOR
+ui.caption.corpse	REMAINS
+ui.caption.store	STORAGE
+ui.caption.operationmanagement	MISSION MANAGEMENT
+ui.caption.bugreport	REPORT
+ui.caption.starmap	system map
+ui.caption.ship	spacecraft
+ui.caption.newsline	stock exchange
+ui.caption.startoperation	start mission
+ui.caption.visitstation	visit station
+ui.caption.leavestation	leave station
+ui.caption.cargo	Cargo Hold
+ui.caption.stationcargo	station cargo
+ui.caption.minimap	MINIMAP
+ui.caption.missionfinished	Mission Complete
+ui.caption.evacuationfinished	Evacuation Complete
+ui.caption.resources	Resources
+ui.caption.itemproduction	Production
+ui.caption.magnum	MAGNUM PMC
+ui.caption.selectmerc	Select operator
+ui.caption.selectclass	Select class
+ui.caption.selectequipment	Select equipment
+ui.caption.peacefulvisit	Peaceful station visit
+ui.caption.selectproduceitem	Select the item to produce
+ui.caption.disclaimer	disclaimer
+ui.caption.savedgames	Saved Games
+ui.caption.autonomecapsule	Capsule
+ui.caption.tradeshuttle	Trade shuttle
+ui.caption.missionstatistic	MISSION {0} COMPLETED
+ui.missionstatistic.beneficiar	{0} as a beneficiary received:
+ui.missionstatistic.victim	{0} as a victim lost:
+ui.missionstatistic.reward	{0} reward:
+ui.hud.caption.takeskull	take
+ui.hud.caption.leaveskull	leave
+ui.hud.caption.outofammo	out of ammo
+ui.hud.caption.needreload	needs to reload
+ui.hud.caption.weapondamaged	weapon damaged
+ui.hud.caption.class	class
+ui.hud.qmorph.posdelta	descent 
+ui.hud.qmorph.negdelta	ascent
+ui.hud.health.posdelta	healing
+ui.hud.health.negdelta	damage
+ui.hud.qmorphos.stage	q-morphosis phase
+ui.hud.qmorphos.eccolapse_chance	eccolapse chance
+ui.hud.qmorphos.muscle_mass	muscle mass
+ui.hud.qmorphos.dmg_immunity	damage resistance
+ui.hud.qmorphos.regeneration	regeneration
+ui.hud.qmorphos.aggresivnes	aggression
+ui.hud.qmorphos.nextphaseon	next phase on
+notification.perklevelup	{0} increased to {1}
+notification.perklevelup.level	level {0}
+notification.unlockmerc	unlocked mind chip {0}
+notification.unlockmercclass	unlocked class chip {0}
+notification.unlockitem	unlocked item chip {0}
+notification.itemproduced	item {0} produced
+notification.projectdeveloped	Project {0} finished
+notification.missionadded	Found mission {0}
+notification.floorscanned	Floor scanned
+notification.merc_cloned	{0}
+notification.merc_healed	{0}
+notification.merc_trained	{0}: {1} {2}
+notification.deconstruction_completed	Disassembly complete
+notification.tradeshuttle.arrived	Trade shuttle has arrived
+notification.tradeshuttle.dispatch	Trade shuttle has been dispatched
+ui.map.signallost	signal lost...
+ui.qmorphos.low	low
+ui.qmorphos.medium	medium
+ui.qmorphos.high	high
+ui.raidscreen.peacefulstationvisit	<color=#FFFEC1>Task:</color> This is a peaceful visit to the station. We can evacuate from here at any moment.
+ui.magnum.ready	Ready: {0}/{1}
+ui.magnum.projects_available	Projects: {0}/{1}
+ui.magnum.project.develope	"Project ""{0}"""
+ui.magnum.training_available	Training: {0}/{1}
+ui.magnum.producing_now	Producing: {0}/{1}
+ui.magnum.recycling_now	Time left to recycle
+ui.magnum.tradeshuttle.ready	Ready to send
+ui.magnum.tradeshuttle.arrivedtime	On the way: {0}
+ui.magnum.tradeshuttle.cooldown	Recharging: {0}
+ui.magnum.operators_training_list	Operator training list
+ui.magnum.project.no_mods_selected	Improvements not selected
+ui.magnum.project.insufficient_resources	Not enough resources
+ui.magnum.project.mods_limit_reached	Modification limit reached
+ui.magnum.project.selectitem	Select the item to develop
+ui.magnum.project.selectoperator	Select the operator to develop
+ui.magnum.project.selectclass	Select the class to develop
+ui.magnum.project.Armors.devlist	Armory development list
+ui.magnum.project.Weapons.devlist	Weapons development list
+ui.magnum.project.Operators.devlist	Operator development list
+ui.magnum.project.Classes.devlist	Classes development list
+ui.starmap.travelinfo	travel from {0} to {1} 
+ui.controls.Common	general
+ui.controls.Game	Gameplay
+ui.controls.System	System
+ui.controls.bindKey	Press a key to bind:
+ui.controls.bindEscTip	Press {0} to cancel binding
+ui.controls.forbidBindKey	Cannot be rebound
+ui.controls.confirmReset	Are you sure you want to reset key bindings to default settings?
+gamekey.Space	SPACE
+gamekey.MouseLeftButton	LMB
+gamekey.MouseRightButton	RMB
+gamekey.ArrowUp	UP
+gamekey.ArrowDown	DOWN
+gamekey.ArrowLeft	LEFT
+gamekey.ArrowRight	RIGHT
+gamekey.Inventory.desc	Inventory
+gamekey.HealthMonitor.desc	health monitor
+gamekey.Help.desc	help
+gamekey.Map.desc	Minimap / System map
+gamekey.ClassWindow.desc	operative's class
+gamekey.RaidWindow.desc	operation management
+gamekey.ProjectSkull.desc	S.K.U.L.L. Project
+gamekey.PrimaryAction.desc	Move / Attack / Interact
+gamekey.SecondaryAction.desc	Alt. action / Change the direction of looking / Context Menu
+gamekey.ItemInteraction.desc	Take item / Take all / Trade
+gamekey.UltimatePerk.desc	Active perk
+gamekey.ArrowUp.desc	Move up
+gamekey.ArrowDown.desc	Move down
+gamekey.ArrowLeft.desc	Move left
+gamekey.ArrowRight.desc	Move right
+gamekey.ArrowUpLeft.desc	Move up and left
+gamekey.ArrowUpRight.desc	Move up and right
+gamekey.ArrowDownLeft.desc	Move down and left
+gamekey.ArrowDownRight.desc	Move down and right
+gamekey.ChangeMoveModeLeft.desc	Change move mode (slower)
+gamekey.ChangeMoveModeRight.desc	Change move mode (faster)
+gamekey.SwapWeapon.desc	Swap weapon
+gamekey.SwapAttackMode.desc	Swap attack mode
+gamekey.ReloadWeapon.desc	weapon reload
+gamekey.SkipTurn.desc	Skip turn
+gamekey.HighlightAllItems.desc	Highlight map objects in sight range
+gamekey.Evacuation.desc	Evacuation / Leave station
+gamekey.VestSlot1.desc	Vest slot 1
+gamekey.VestSlot2.desc	Vest slot 2
+gamekey.VestSlot3.desc	Vest slot 3
+gamekey.VestSlot4.desc	Vest slot 4
+gamekey.VestSlot5.desc	Vest slot 5
+gamekey.Menu.desc	Menu / Back
+gamekey.Report.desc	report a bug
+gamekey.ZoomInCamera.desc	Camera zoom in
+gamekey.ZoomOutCamera.desc	Camera zoom out
+gamekey.Confirm.desc	yes
+gamekey.Cancel.desc	no
+ui.newsline.ConquestStart	%BENEFICIARY_NAME% is interested in purchasing %STATION_NAME% (%SPACEOBJECT_NAME%). %VICTIM_NAME% refuses to give up the asset. Direct action is possible.
+ui.newsline.ConquestEndGood	%BENEFICIARY_NAME% has taken ownership of %STATION_NAME% (%SPACEOBJECT_NAME%).
+ui.newsline.ConquestEndFail	%VICTIM_NAME% retains %STATION_NAME% (%SPACEOBJECT_NAME%) asset. They accuse %BENEFICIARY_NAME% of trying to take over by force.
+ui.newsline.EliminationStart	%BENEFICIARY_NAME% is looking for ways to eliminate the important employee of %VICTIM_NAME% in %STATION_NAME% (%SPACEOBJECT_NAME%).
+ui.newsline.EliminationEndGood	%VICTIM_NAME% lost a valuable employee in %STATION_NAME% (%SPACEOBJECT_NAME%). They accuse %BENEFICIARY_NAME% of hiring PMCs for this purpose.
+ui.newsline.EliminationEndFail	PMCs hired by %BENEFICIARY_NAME% failed an attempt to eliminate employee %VICTIM_NAME% in %STATION_NAME% (%SPACEOBJECT_NAME%). A conflict flares. Appeal to NCE is possible.
+ui.newsline.EspionageStart	%BENEFICIARY_NAME% is taking a keen interest in what's going on in %STATION_NAME% (%SPACEOBJECT_NAME%). %VICTIM_NAME% is afraid of espionage actions carried out by PMCs.
+ui.newsline.EspionageEndGood	%BENEFICIARY_NAME% received data from %STATION_NAME% (%SPACEOBJECT_NAME%). %VICTIM_NAME% is trying to prove a violation of the NCE.
+ui.newsline.EspionageEndFail	A PMC hired by %BENEFICIARY_NAME% failed a mission in %STATION_NAME% (%SPACEOBJECT_NAME%). %VICTIM_NAME% can jump to counter measures.
+ui.newsline.SabotageStart	%STATION_NAME% (%SPACEOBJECT_NAME%) interferes with %BENEFICIARY_NAME%. Diversion attempts are expected. %VICTIM_NAME% is preparing for defense.
+ui.newsline.SabotageEndGood	There has been a sabotage at %STATION_NAME% (%SPACEOBJECT_NAME%). %VICTIM_NAME% blames %BENEFICIARY_NAME%.
+ui.newsline.SabotageEndFail	Failed sabotage attempt at %STATION_NAME% (%SPACEOBJECT_NAME%). %BENEFICIARY_NAME% denies %VICTIM_NAME%'s accusations of using PMCs.
+ui.newsline.DefenseStart	%STATION_NAME% (%SPACEOBJECT_NAME%) is under attack by a PMC. %BENEFICIARY_NAME% is blaming %VICTIM_NAME% for the attack.
+ui.newsline.DefenseEndGood	%BENEFICIARY_NAME% retains control over %STATION_NAME% (%SPACEOBJECT_NAME%).
+ui.newsline.DefenseEndFail	%BENEFICIARY_NAME% has lost control of asset %STATION_NAME% (%SPACEOBJECT_NAME%). New station owner: %VICTIM_NAME%.
+ui.newsline.FactionStatusChange	Leading market analysts report that %BENEFICIARY_NAME% has changed their strategy to {0}.
+ui.newsline.StatisticsPower	The Hexarchy notifies that the power of %BENEFICIARY_NAME% has reached {0}.
+ui.newsline.StatisticsTech	Industrial analysts rate the %BENEFICIARY_NAME% technical level as having reached {0}.
+ui.gameover.rest	Rest in peace.
+ui.gameover.reason.FallingDown	The agent's body {0} was never found. Considered missing.
+ui.gameover.reason.ReceiveDamage	The body of agent {0} was found with numerous wounds.
+ui.gameover.reason.Burned	The body of agent {0} was found completely charred, identified by dental records.
+ui.gameover.reason.Exploded	Fragments of the body of the agent {0} were found over the next six months. Buried in a closed coffin.
+ui.gameover.reason.Starvation	Agent {0}'s body was found showing signs of extreme exhaustion.
+ui.gameover.reason.AmputatedCriticalPart	The decapitated body of agent {0} left the investigation puzzled.
+ui.gameover.reason.WoundActionDamage	The body of agent {0} was found with extensive injuries to the upper limbs.
+ui.gameover.reason.WoundDotDamage	Agent {0} died due to massive bleeding.
+ui.gameover.reason.WoundEatDamage	Agent {0} died as a result of food poisoning.
+ui.gameover.reason.WoundMoveDamage	The body of agent {0} was found with extensive injuries to the lower extremities.
+ui.gameover.reason.AbortMission	Mission aborted by order of the management. Agent {0} is considered missing.
+ui.gameover.reason.PoisonDotDamage	Agent {0} died as a result of toxin poisoning.
+ui.gamefinished.message	Agent {0} successfully evacuated to the home base.
+ui.hud.caption.healthmonitor	health monitor
+ui.healthmonitor.healthmonitor	health monitor
+ui.healthmonitor.regen	regen
+ui.healthmonitor.atrophy	atrophy
+ui.healthmonitor.pain	pain threshold
+ui.healthmonitor.nut	fullness / metabolism
+ui.healthmonitor.air	air
+ui.healthmonitor.infection	infection
+ui.healthmonitor.poison	poisoning
+ui.mercclass.range	ranged combat
+ui.mercclass.melee	close combat
+ui.mercclass.defense	defense
+ui.mercclass.basicaccuracy	basic accuracy
+ui.mercclass.visiondistance	vision distance
+ui.mercclass.hitchance	hit chance
+ui.mercclass.handsdamage	hand damage
+ui.mercclass.meleeboost	damage bonus
+ui.mercclass.dodgechance	dodge chance
+ui.mercclass.weaponsdamage	damage bonus
+ui.mercclass.meleecritchance	crit. chance
+ui.escscreen.resume	resume
+ui.escscreen.quitandsave	save and quit
+ui.escscreen.quit	quit
+ui.itemproduction.all	all
+ui.itemproduction.weapons	weapons
+ui.itemproduction.ammo	ammo
+ui.itemproduction.armors	armors
+ui.itemproduction.medicine	medicine
+ui.itemproduction.other	other
+ui.settings.general	general
+ui.settings.graphics	graphics
+ui.settings.sound	sound
+ui.settings.controls	controls
+ui.settings.credits	credits
+ui.settings.language	language
+ui.settings.back	back
+ui.settings.mastervolume	master volume
+ui.settings.musicvolume	music volume
+ui.settings.brightness	brightness
+ui.settings.vsync	v-sync
+ui.settings.shadows	shadows
+ui.settings.resolution	screen resolution
+ui.settings.screenmode	screen mode
+ui.settings.fullscreen	fullscreen
+ui.settings.window	window
+ui.settings.borderlesswindow	borderless window
+ui.settings.largetext	large text
+ui.settings.showhintsonmap	Contextual tips
+ui.settings.tutorialhints	Jane's tips
+ui.settings.lockcursor	Lock cursor
+ui.settings.showskin	Bramfaturian Magnum
+ui.settings.shiftattack	Precision shooting
+ui.settings.skiparrival	skip shuttle arrival
+ui.settings.fasttrade	Fast trading
+ui.settings.shakecamera	Camera shaking
+ui.settings.changessaveauto	changes applied automatically
+ui.settings.resetsettings	Reset to defaults
+ui.settings.lockcamera	Locked camera
+ui.settings.showtextistant	Animated text
+ui.settings.enchantedtooltip	Enhanced tooltip
+ui.settings.mutesoundonfocuslost	Mute game sound on focus lost
+ui.settings.hdr	HDR
+ui.settings.chromaber	Chromatic aberration
+ui.settings.centercameraonmove	Center camera on player move
+ui.settings.creatureanimspeed	Animation speed
+ui.settings.help.general_content	<color=#FFFEC0>Quasimorph</color> is a turn-based rogue-like game.<br><br>Health Points<br>Health is a key indicator of the character's condition. When health drops to zero, the character dies. Health can be restored by using autodocs, medkits, treating wounds with high-quality fixing materials, or maintaining a good diet.<br><br>Movement<br>Depending on the chosen type of movement, the player has a different number of actions per turn. Sneaky movement is slow and grants only one action point per turn but provides bonuses to stealth and allows interaction with doors, objects, and inventory without spending action points. Normal movement grants two action points per turn without any penalties or bonuses. Sprinting is the fastest. It grants three action points per turn, but the player cannot interact with doors, objects, or inventory. Each movement type consumes a different amount of calories per action, which is a key parameter for your character. A high-calorie reserve activates natural regeneration (+1 HP per turn), while a low reserve leads to atrophy (-1 HP per turn). Activating character’s perks also consumes calories. Don't be surprised that the satiety level drops so quickly. The heroes you control are clones with their metabolism turned up to maximum.<br><br>Perks<br>Active perks are triggered automatically when certain activation conditions are met. Each perk has its own trigger. After activating a perk, the character receives temporary bonuses and gradually improves the perk through gained experience. Passive perks constantly affect the player, and just like active perks, their level rises up when the character performs the specified actions, such as shooting a specific weapon or moving while overloaded, and so on.<br><br>Quasimorphosis<br>Quasimorphosis level increases due to the influence of subtle things residing in the bramfaturas of the Solar System's planets. These things are called quasimorphs. At low quasimorphosis levels, enemies behave passively, but as it increases, they become more aggressive. At higher levels a breakthrough may occur between the subtle and physical realms, granting demons the ability to manifest. Manifested demons always spend their first turn phasing, during which they exist between two realities and are invulnerable to weapons, but they also cannot attack the player’s character.<br><br>Wounds<br>Successful attacks on the character can not only reduce health but also cause wounds. To heal wounds it is necessary to use items with wound-fixing properties. The effectiveness of such fixation depends on the wound and the type of item used. However, even a fixed wound has a chance of infection, so it is useful to apply antibiotics or sorbents. A fixed wound may be healed over time or reopened. In the latter case, the fixation procedure needs to be repeated. Morphine and First-Aid Kits allow the fixation of all current wounds and can be used from fast slots even while sprinting. An autodoc heals all wounds with a single charge excluding amputations. Particularly strong substances such as morphine, alcohol, cigarettes, and gavvakh can cause addiction. Each type of addiction has its own penalties. Repeated use of the substance will reverse the progression of the addiction, but will not cure it. Having a sharp melee weapon in the inventory allows for the amputation procedure. Be careful! Amputating some body parts is fatal.<br><br>Weapons and Armor<br>In the areas where your PMC operates, there is always an abundance of weapons. Each type of ranged weapon has its own type of ammunition and different rates of fire. Acquaint yourself with not only the characteristics of the weapons but also the ammunition, many of them have special effects. In addition to the usual damage types, there are also composite types: explosive (blunt and piercing) and plasma (cutting and fire). The appropriate lowest value of two armor attributes protects against it. Over time weapons may break. You can always disassemble weapons you don’t use into spare parts. You can repair the weapons you use with these parts. Same goes for armor. Cloth can be disassembled into rags. Fabric is necessary for wound fixation (see above) as well as for repairing other cloth and backpacks. Broken weapons cannot be used and broken armor does not provide damage resistance. Your items will spill out every turn if the backpack or the vest holding them are broken. Accuracy, dodge, and armor damage reduction have upper caps and bonuses for exceeding them. If the accuracy becomes more than 95%, then every 10% above increases the chance of a critical hit by 1%, after which the accuracy decreases to 95%. If the dodge becomes more than 95%, then every 10% above will reduce the chance of getting a wound by 1%, after which the dodge is reduced to 95%. Armor cannot reduce incoming damage by more than 95% of its value.<br><br>Interactive Objects<br>The elevator is a key object on each floor of the station. It transports the player to the next floor. Useful items can be found in closets, drawers, and shelves. Medical cases and weapon crates contain corresponding items. Autodocs allow for healing and treating wounds. To use them, one charge is required, and you can replenish the charge by spending a certain number of energy batteries. The level scanner provides more information about the current level on the mini-map. It also uses energy batteries to gather new data. Doors can not only be opened but also closed or locked. Interaction options with the door are available by right-clicking, as well as information about enemies.<br><br>Factions and missions<br>The strength of a faction is determined by two parameters: Power and Technology. Power affects the number of enemies and the loot on a mission. Technology determines the equipment available to factions, which they can use or sell. These parameters grow over time depending on the stations in the faction's possession, but they are also affected by completed missions. Sabotage reduces the station owner's Power and Technology. Espionage reduces the station owner's Technology. Elimination reduces the victim's Power, but if the target was a scientist then Technology. Capture will change the owner of the station, and Defense, on the contrary, will prevent this change. If a faction has not fully paid out the reward for a mission it will accumulate a debt that can be used in the next barter. Factions and their characteristics can be viewed in the first tab of the Stock Exchange.<br><br>Barter and market<br>Since PMCs are illegal organizations they are not connected to the system-wide trading network and are not included in the economy based on reputation. However, corporations agree to exchange some items for others with PMCs. Keep in mind that the items offered by corporations have a fixed value and can be expensive. The items accepted depend on the station where the exchange takes place and may change over time. Current required items can be viewed in the station description. The game works on the principle of Supply and Demand, stations use the items they receive to produce goods, and then sell them to other stations in the system. Because of this the price of bartered items can change greatly. You can view current prices and their dynamics in the second tab of the Stock Exchange. To exchange without having to visit stations, you can enable Fast Trade in the settings.<br><br>
+ui.settings.help.general	general
+ui.settings.help.tips	tips
+ui.settings.help.faq	faq
+ui.settings.help.faq_content	Trade break<br>If your reputation with a faction falls beyond 0 they will null all your accumulated barter points with them.<br><br>Actions<br>There are special conditions in the game like eating, moving, or using actions. Actions in this case include: using inventory, reloading weapons, throwing weapons, throwing grenades, interacting with doors and interactable objects (scanner, autodoc, stove, workbench), using pact abilities.<br><br>Weapon range and character range<br>Weapon range indicates the optimal operating range of the weapon. If the enemy is outside of it then the additional properties of the weapon will not work and for each tile beyond the range the damage received will be reduced. The character's range shows the range of vision.<br><br>Equipment and repairs<br>Weapons and armor wear down over time. If you repair them using various spare parts rather than specialized equipment then with each repair their maximum condition will decrease. Because of this weapons can become completely unusable.<br><br>Shift and Ctrl in inventory<br>Moving an item while holding Shift will transfer all items of that type. If you hold down Ctrl and left-click on an item, it will be transferred from or to the inventory.<br><br>Amputations<br>Amputations are the most severe type of injury. It can’t be healed, only stabilized, temporarily removing damage over time but not the unpleasant effects. Some body parts are tied to each other: hip and foot, shoulder and arm. When amputating the upper part of the body, the lower adjacent part is also amputated. The vital parts of the body are the head, chest, body, and stomach. Their amputation leads to instant death.<br><br>Where are quasimorphs<br>The presence of quasimorphs is indicated in the description of the planets. The satellites of the planets are also influenced by the bramfaturas of the respective planets. The exception is the Moon which has its own bramfatura and affects the celestial bodies nearby. At the beginning of the game there are no quasimorphs on Earth and its artificial satellite Tsiolkovsky, as well as on Mars, Phobos, and Deimos. There are no quasimorphosis or eccolapse on Defense missions.<br><br>Breaking walls<br>All man-made walls can be broken if enough damage is dealt.<br><br>Puddles<br>Any liquids (water, blood, gasoline, poison) can leave behind puddles. If the new puddle is larger or the same size as the old one then the new puddle will replace the old one. Spilled gasoline may ignite due to fire nearby. Puddles of poison are considered Dangerous Tiles and dry up over time. Puddles of poison will destroy any items dropped onto them excluding pacts and quest items.<br><br>Fire and items<br>If a floor tile with raw meat catches fire the meat will become fried. Any other items other than quest items and pacts will be destroyed.<br><br>Add. damaging elements<br>Weapons with the “Add. damaging elements” property will deal damage to everyone standing next to a cover destroyed by it.<br><br>Add. knockback range<br>Weapons with the “Add. knockback range” property push away the target they hit further than any other weapon.<br><br>Amputation due to injury<br>Weapons with “Amputation due to injury” property have an increased chance of causing amputation as a wound.<br><br>Silencer<br>Weapons with the “Silencer” property have a chance of not attracting the attention of nearby enemies when fired.<br><br>Pierce Chance<br>Ammo with the “Pierce Chance” property has a chance to pass through an obstacle, be it cover or an enemy, and hit the target behind it.<br><br>Pollution Chance<br>Ammo with the “Pollution Chance” property has a chance to leave behind a dangerous tile  of the corresponding type.<br><br>Pain Damage<br>Weapons with the “Pain Damage” property increase damage to the pain threshold.<br><br>Severe fractures<br>Fracture wounds inflicted by weapons with the “Severe Fractures” property have increased damage.<br><br>Severe bleeding<br>Bleeding wounds inflicted by weapons with the “Severe Bleeding” property have increased damage.<br><br>Attacks nearby<br>Weapons with the “Attacks nearby” property also strike the left and right tiles closest to the player on both sides of the target.<br><br>Throwing weapons<br>If you left-click on an enemy while holding Shift at a distance while holding a melee weapon the clone will throw that weapon at the target. The maximum range of melee weapons is 5 tiles starting from the clone tile.<br><br>Accurate throw<br>Throwing a weapon with the “Accurate Throw” property will always hit the target.<br><br>Piercing Throw<br>When thrown, weapons with the “Piercing Throw” property can pass through a target and cause damage to targets behind it.<br><br>Wound-inflicting pierce through<br>Weapons with the “Wound-inflicting pierce through” property inflict a wound if the attack pierce through the enemy. The chance of pierce through can be viewed in the ammo properties.<br><br>Backup Gun<br>Weapons with the “Backup Gun” property increase the chance of a critical hit by the listed value for weapons in other slots.<br><br>Ramp Up Shot<br>Weapons with the “Ramp Up Shot” property increase their rate of fire when firing continuously.<br><br>Painful Critical Hits<br>Weapons with the “Painful Critical Hits” property inflict increased pain on critical hits.<br><br>Increased Damage Through Armor<br>Against weapons with the “Increased Damage Through Armor” property, armor cannot reduce incoming damage by more than 95% minus listed value.<br><br>Field of View<br>Weapons with the “Field of View” property modifies the clone’s Field of View to the specified value, increasing or decreasing it.<br><br>
+ui.main.startgame	start game
+ui.main.settings	options
+ui.main.exit	exit
+ui.main.bugreport	report a bug
+ui.main.help	help
+ui.main.abortmission	abort mission
+ui.main.bannercaption	News
+ui.bugreport.sendreport	send report
+ui.bugreport.describe	please describe your problem. The log will be attached automatically.
+ui.bugreport.failedtitle	error
+ui.bugreport.failedbody	An error occurred, please send the log in path {0} manually to our discord.
+ui.bugreport.sendedtitle	completed
+ui.bugreport.sendedbody	Your message has been delivered to the developers, thanks for the help.
+ui.bugreport.openplayerlog	Log folder
+ui.bugreport.confirmsendreport	Allow user data (saves, logs, screenshot from the game) to be sent?
+ui.savedgames.saveslot	Save Slot
+ui.savedgames.savesdata	Save Date
+ui.savedgames.playingtime	Playing Time
+ui.credits.lomakin.name	Alexander Lomakin
+ui.credits.lomakin.desc	Programming
+ui.credits.jyravskii.name	Evgeny Zhuravsky
+ui.credits.jyravskii.desc	Music
+ui.credits.devyatko.name	Ivan Devyatko
+ui.credits.devyatko.desc	Narrative design
+ui.credits.pechatnikov.name	Sergey Pechatnikov
+ui.credits.pechatnikov.desc	Game design
+ui.credits.pechatnikova.name	Evgenia Pechatnikova
+ui.credits.pechatnikova.desc	3d modeling
+ui.triggerdialog.jane	Jane
+ui.triggerdialog.firstpilot	First pilot
+ui.triggerdialog.raiddaily	Francis Reid-Daly
+ui.triggerdialog.head	Eipschwitz's head
+ui.triggerdialog.ksiomara	Xiomara
+ui.triggerdialog.eipschwitz	Professor Eipschwitz
+ui.triggerdialog.tezctlan	Tezctlan
+ui.triggerdialog.urparp	Urparp
+tutorial.ecolapse.dialog	The phenomenon in which a creature is torn from the inside and a Quasimorph appears in its place is called an <color=#FFFEC1>eccolapse</color>. On the first turn the newly appeared Quasimorph is invulnerable, it phases between our and their realities. At this moment, it makes no sense to fire at it, it’s better to take a tactically more advantageous position.
+tutorial.pickup_dataidsk.dialog	Valuable items such as production chips and mercenary mind chips justify the costs of using the shuttle. If you find something like this on a mission, we can evacuate you as part of the standard procedure using the elevator or shuttle.
+tutorial.receive_wound.dialog	Injuries are common in combat situations. The first priority is to treat the wound. You can use bandages, splints, or even ordinary rags for that. To obtain a rag, tear up any unnecessary clothing. Autodocs and surgical kits allow you to immediately heal any wound.
+tutorial.receive_infection.dialog	Some wounds can become infected. To prevent this, use sorbent or antibiotics.
+tutorial.zero_starvation.dialog	Your body constantly requires calories for normal functioning. When satiety drops to zero, the atrophy process begins, which continually reduces your health. Simply eat something. Keep in mind that cannibalism is not encouraged but not prohibited, so if you have melee weapons, you can resort to it.
+tutorial.no_ammo_in_weapon.dialog	Almost any weapon consumes ammunition and need to be reloaded. Avoid doing this in the midst of battle because you become vulnerable during the reloading process. Try to find cover.
+tutorial.broken_weapon.dialog	Weapons have a tendency to break with regular and active use. To repair them, you can disassemble other unnecessary weaponry or use a repair kit.
+tutorial.broken_backpack.dialog	Your backpack has torn. I'll remind you this time but try to keep an eye on the condition of your equipment yourself. Contents will constantly spill out from a torn backpack or rig. To repair it, use any available fabric.
+tutorial.mob_throw_grenade.dialog	Enemies can also use offensive grenades. Of course, they do it much worse than our operatives, but there are exceptions. To avoid getting hit by shrapnel, it's better to move to a safe distance and find cover.
+tutorial.peaceful_station.dialog	Since we conduct illegal activities, trade transactions between corporations and participants in the dignitas market are not available to us. But given our influence on the Solar System, corporations are ready to barter with us. <br><br>Different stations require different goods, as soon as we bring them and unload them into the station warehouse, the station owners will be happy to exchange them for some of their own items. The course is certainly extortionate, but it's worth it.
+tutorial.item_production.dialog	The capacity of our mother spacecraft allows us to produce items directly on board. To produce most simple items, we only need a licensed chip. <br><br>There are examples in history of how one corporation tried to introduce an additional fee for each item produced, but as a result of the six-day war, the corporation went bankrupt, and all the others refused such monetization.
+tutorial.first_death.dialog	<color=#FFFEC1>Clones</color> often die on missions, there's nothing to be done about it, but on the other hand, any clone can be reprinted on a <color=#FFFEC1>bioprinter</color>. Plus, we have <color=#FFFEC1>insurance</color> for such cases, which partially compensates for the lost equipment. To do this, find the <color=#FFFEC1>Emergency Case</color> in the Magnum's inventory, right-click on it, and select <color=#FFFEC1>dismantle</color>.
+tutorial.jammer.dialog	This device is a communication jammer, EW-thing, interfering transmitter, name it. It jams some of the communication channels between you and Magnum. Therefore, we cannot send you station minimaps. If you destroy the jammer, the channels will be free and the minimap will be accessible. So don't hesitate, shoot.
+tutorial.toxic_paddle.dialog	Careful! There are acid puddles next to you. They are difficult to notice but they are extremely dangerous. Avoid them or let them dry.
+tutorial.magnumspaceship.dialog	This is the <color=#FFFEC1>HIS Magnum</color> control screen. From here you can access the list of clone operators and the Cargo Hold (Top right corner of the screen). To go to the ship's compartments click on any compartment marker.
+tutorial.weaponstation.dialog	This is a list of weapon modification projects. Here you can select the weapon whose chip you have unlocked and improve its characteristics. Keep in mind that the price of modification is growing exponentially, and the number of projects is limited.
+tutorial.armorstation.dialog	This is a list of armor modification projects. Here you can select the armor whose chip you have unlocked and improve its characteristics. Keep in mind that the price of modification is growing exponentially, and the number of projects is limited.
+tutorial.memorydefrag.dialog	This is a list of class development projects. Here you can select a class and replace its perks with the perks of any other unlocked class. Keep in mind that the development price increases exponentially depending on the number of perks being replaced, and the number of projects is limited.
+tutorial.starmap_with_tradeshuttle.dialog	The barter module allows you to load a trade shuttle and send it to any body of the Solar System. Select a planet or a satellite, look at the required items by the stations, load them via the “Trade Shuttle” under the list of stations and send the shuttle. In a few days it will return with the items received after the barter.
+tutorial.genomeeditor.dialog	This is a list of clone development projects. Here you can choose a clone of the operator whose chip you unlocked and improve its characteristics or even change their personal perk. Keep in mind that the price of development is growing exponentially, and the number of projects is limited.
+tutorial.trainingcenter.dialog	This is a list of operators undergoing training to level up their class perks. The available maximum level for training depends on the unlocked module upgrades.
+ui.dialog.applaunch_message	Welcome to the Quasimorph Early Access! Please remember that the game is actively in development, and the current version does not have all the planned features. You can find information about our upcoming plans on the game's page and in the game's main menu. <br><br>And don't forget about bug reports! Most likely, we are already working on fixes but you can help by reporting bugs through the dedicated section in the main menu. <br><br>Hop into our Discord to discuss the game with us and other players, and receive updates before everyone else.
+ui.dialog.continuetutorial	Do you want to continue training?
+ui.dialog.afterskiptutorial	Supplies on the spacecraft are running low, so we need to find some new profitable <color=#FFFEC1>contracts</color>. We can start working for anyone and make them the dominant power in the System, or we can try to maintain the status quo for the sake of long term profiting from this apocalypse. We can start by returning the <color=#FFFEC1>AnСom's PCPU</color> from our cargo hold to its rightful owners. Or bring it to someone else. Also, if we can land a mighty blow on <color=#FFFEC1>Tezctlan</color>, there is a chance that he has enemies on <color=#FFFEC1>Venus</color> and they will contact us. It's up to you, <color=#FFFEC1>Boss</color>.
+ui.dialog.spacemodetutorial_1	Good morning, <color=#FFFEC1>Boss</color>. Let's first restore memory after the diapause. During the AnCom mission on Venus, we awakened a quasimorph named <color=#FFFEC1>Tezctlan</color>. Now his quasimorphs are still in our world, which is weird. There's no information in the news that we're involved.. Meanwhile, corporates insist that quasimorphosis is a fabrication and claim that <color=#FFFEC1>Tezctlan</color> is a provocation by <color=#FFFEC1>Civil Resistance</color>. We are now orbiting <color=#FFFEC1>Phobos</color> and have time to recover and figure out what to do next. The supplies on the spacecraft are running low, so we need to find ourselves some new profitable...
+ui.dialog.spacemodetutorial_2	" <color=#FFFEC1>ATTENTION! ATTENTION!</color> Vector 4, sector 6, northern hemisphere. Five launches detected, rocket engines. Approaching rapidly. Activating countermeasures. <color=#FFFEC1>""Magnum""</color>, grab onto something - it's going to be loud."
+ui.dialog.spacemodetutorial_3	"It seems to be <color=#FFFEC1>Civil Resistance</color>. We need to clear them out from <color=#FFFEC1>""Magnum""</color>. Our future depends on it."
+ui.dialog.tutorial_diapauseCabin1	Let's remember how to move. To navigate, use {0} on the required square or {1} on the keyboard.<br><br> In the bottom-left corner of the screen, you'll find your energy reserve, pain threshold counter, health, and movement mode. The <color=#FFFEC1>Movement mode</color> determines how many action points you have until opponents take their turn.<br><br> Make sure no one is behind you, press {2} to <color=#FFFEC1>look around</color>. In the closet behind you, you'll find standard equipment, use it.
+ En la esquina inferior izquierda de la pantalla, encontrarás tu reserva de energía, el contador de umbral de dolor, la salud y el modo de movimiento. El <color=#FFFEC1>modo de movimiento</color> determina cuántos puntos de acción tienes hasta que los oponentes realicen su turno.<br><br> Asegúrate de que no haya nadie detrás de ti, presiona {2} para <color=#FFFEC1>mirar alrededor</color>. En el armario detrás de ti, encontrarás equipo estándar, úsalo.	Przypomnijmy sobie, jak się poruszać. Aby poruszać się, użyj {0} na odpowiednim kwadracie lub {1} na klawiaturze.<br><br>
+ W lewym dolnym rogu ekranu znajdziesz swoją rezerwę energii, licznik progu bólu, zdrowie i tryb ruchu. <color=#FFFEC1>Tryb ruchu</color> określa, ile masz punktów akcji, zanim przeciwnicy podejmą swoją turę.<br><br> Upewnij się, że za tobą nie ma nikogo, naciśnij {2}, aby <color=#FFFEC1>rozglądać się</color>. W szafie za tobą znajduje się standardowe wyposażenie, użyj go.	Nasıl hareket edeceğimizi hatırlayalım. Hareket etmek için, gereken karede {0} veya klavyede {1} tuşunu kullanın.<br><br>
+ Ekranın sol alt köşesinde enerji rezervinizi, ağrı eşiği sayacınızı, sağlığı ve hareket modunu bulacaksınız. <color=#FFFEC1>Hareket modu</color>, rakiplerin sırayla oyun yapmadan önce kaç eylem puanınız olduğunu belirler.<br><br> Arkanda kimse olmadığından emin olun, etrafına bakmak için {2} tuşuna basın. Arkandaki dolapta standart ekipman bulunmaktadır, onu kullanın.	Vamos lembrar como se mover. Para navegar, use {0} no quadrado desejado ou {1} no teclado.<br><br> No canto inferior esquerdo da tela, você encontrará sua reserva de energia, contador do limite de dor, saúde e modo de movimento. O <color=#FFFEC1>modo de movimento</color> determina quantos pontos de ação você tem até que os oponentes joguem.<br><br> Certifique-se de que ninguém esteja atrás de você, pressione {2} para <color=#FFFEC1>olhe ao redor</color>. No armário atrás de você você encontrará equipamentos padrão, use-os.
+ 屏幕左下角显示有能量储备、疼痛阈值计数表、健康和移动模式。 <color=#FFFEC1>移动模式</color> 确定在敌人轮到之前你有多少行动点。<br><br> 确保你身后没有人， 按 {2} 键 <color=#FFFEC1>四处看看</color>。请使用在你身后橱箱里面的一套标准装备。	
+ui.dialog.tutorial_diapauseCabin2	Leave the cabin and head to the <color=#FFFEC1>elevator</color>, it's in the room across. We need to eliminate all these bastards.
+ui.dialog.tutorial_diapauseCabin3	If you press key {0}, you can get information about the <color=#FFFEC1>mission status</color> or request <color=#FFFEC1>evacuation</color>. <color=#FFFEC1>Evacuation</color> is done via elevator or shuttle. But right now, we have nowhere to retreat...
+ui.dialog.tutorial_diapauseCabin4	To move between station levels, use <color=#FFFEC1>elevators</color> or <color=#FFFEC1>stairs</color>. In the elevator control window, all floors connected by the elevator shaft are displayed. Press the floor you need. I strongly recommend starting with the <color=#FFFEC1>Medbay</color>. If we lose the <color=#FFFEC1>bioprinter</color>, there will be serious difficulties in cloning you or other fighters.
+ui.dialog.tutorial_medblock1	This is the <color=#FFFEC1>Medbay</color>, where the <color=#FFFEC1>bioprinter</color> is located. A perfect place to remind you about your health. If your health reaches zero, you will die. If your pain threshold reaches its limit, you will skip a turn. Damage you receive can lead to injuries or limb loss. Keep an eye on that. Take a close look at the health interface by pressing the {0} key.
+ui.dialog.tutorial_medblock2	I'm sending a signal to your computer about a new <color=#FFFEC1>wound</color>; you need to fix it. To do this, press {0} on the medical kit to your right, then select the injured body part.
+ui.dialog.tutorial_medblock3	It seems you've acquired an <color=#FFFEC1>infection</color>. Open your inventory by pressing {0} and use a <color=#FFFEC1>sorbent</color> or <color=#FFFEC1>antibiotic</color>. If the wound is not fixed, the <color=#FFFEC1>infection</color> develops faster.
+ui.dialog.tutorial_medblock4	In extreme cases, you can perform an <color=#FFFEC1>amputation</color>. To do this, select 'amputate' in the context menu of a <color=#FFFEC1>sharp object</color> and choose the <color=#FFFEC1>body part</color>. Note that you can't bandage yourself while in sprint mode.
+ui.dialog.tutorial_medblock5	<color=#FFFEC1>AutoDoc</color> allows you to treat wounds or infections if it has <color=#FFFEC1>charges</color>. You can recharge it with standard <color=#FFFEC1>batteries</color>. Hurry, I've spotted an <color=#FFFEC1>enemy</color> in the room below you. Deal with them.
+ui.dialog.tutorial_medblock6	Great job. Pay attention to the body. Click on it to <color=#FFFEC1>loot</color>. If you want to <color=#FFFEC1>stand on the corpse</color> without inspecting it, use {0} for movement. When you're done here, return to the elevator and descend to the next level. In the top right corner, there's a <color=#FFFEC1>minimap</color> and the current <color=#FFFEC1>mission status</color>. Use these buttons if you forget what's happening.
+ui.dialog.tutorial_arsenal1	And here's our <color=#FFFEC1>arsenal</color>. Ammo and melee weapons have different <color=#FFFEC1>damage types</color>, and armor has different <color=#FFFEC1>resistance types</color>. Choose wisely with what and how to attack to win.
+ui.dialog.tutorial_arsenal2	Let's make sure your <color=#FFFEC1>weapon</color> is loaded and ready for battle. To reload your weapon, press {0}. If the ammo is in the <color=#FFFEC1>tactical vest slot</color> in the middle of the screen, press the corresponding quick-access slot key, and reloading will take fewer turns.<br><br> You have two <color=#FFFEC1>weapon slots</color>. You can quickly switch between them by clicking on the image of the active weapon in the top left or by pressing the {1} button.
+ Tienes dos <color=#FFFEC1>ranuras para armas</color>. Puedes cambiar rápidamente entre ellas haciendo clic en la imagen del arma activa en la parte superior izquierda o usando la tecla {1}.	Upewnijmy się, że twoja <color=#FFFEC1>broń</color> jest naładowana i gotowa do walki. Aby naładować broń, naciśnij {0}. Jeśli naboje znajdują się w <color=#FFFEC1>slocie kamizelki taktycznej</color> pośrodku ekranu, naciśnij odpowiednią klawiszem slotu szybkiego dostępu, a przeładowanie zajmie mniej tur.<br><br>
+ Masz dwie <color=#FFFEC1>przestrzenie na broń</color>. Możesz szybko między nimi przełączać, klikając na obrazie aktywnej broni u góry po lewej lub używając klawisza {1}.	Haydi, <color=#FFFEC1>silahının</color> şarjlı ve savaşa hazır olduğundan emin olalım. Silahını şarj etmek için {0}'e bas. Mermiler <color=#FFFEC1>taktik yeleğin yuvasında</color> ise, hızlı erişim yuvasının ilgili tuşuna bas ve şarj daha az tur alır.<br><br> İki <color=#FFFEC1>silah yuvasına</color> sahipsin. Onlar arasında hızlıca geçiş yapabilirsin, sol üstteki etkin silahın resmine tıklayarak veya {1} tuşunu kullanarak.
+ 2つの<color=#FFFEC1>武器スロット</color>があります。左上のアクティブな武器の画像をクリックするか、キー{1}を使用して素早く切り替えることができます。	让我们确保你的<color=#FFFEC1>武器</color>已经装填好，随时可以参与战斗。重新装填武器，请按 {0} 键。如果子弹是在屏幕中央的<color=#FFFEC1>战术背心槽</color>里，按下相应的快速访问槽键。这样再把武器装填好所需花的回合会少得多。<br><br> 你有两个<color=#FFFEC1>武器槽</color>。你可以通过点击左上角的活动武器图像或使用按键 {1} 快速切换它们。
+ui.dialog.tutorial_arsenal3	I suggest hiding behind the <color=#FFFEC1>cover</color> to make it harder for enemies to hit us. To do this, stand on the highlighted square.<br><br> The <color=#FFFEC1>cover</color> can stop a bullet if you're not shooting directly from behind it. If your shooting trajectory intersects the cover, it will be highlighted in red.
+ Die <color=#FFFEC1>Deckung</color> kann eine Kugel stoppen, wenn du nicht direkt von dahinter schießt. Wenn deine Schussbahn die Deckung kreuzt, wird sie rot markiert.	Je suggère de se mettre à l'abri derrière la <color=#FFFEC1>couverture</color> pour que les ennemis aient moins de facilité à nous toucher. Pour ce faire, placez-vous sur la case en surbrillance.<br><br> La <color=#FFFEC1>couverture</color> peut arrêter une balle si vous ne tirez pas directement derrière lui. Si la trajectoire de tir croise l'abri, il sera mis en surbrillance en rouge.
+ 假如你不直接从<color=#FFFEC1>掩体</color>的后面射击，其可以挡子弹。如果弹道与掩体相交，它将以红亮显示。	
+ui.dialog.tutorial_arsenal4	Great. Here's some more useful information. If you ever want to shoot somewhere other than the enemy, hold {0}. Your cursor will change to a <color=#FFFEC1>crosshair</color>, and the shooting trajectory will be displayed.<br>We have a <color=#FFFEC1>fuel barrel</color> for the flamethrower; you can blow it up with a shot... Just don't catch fire yourself. <color=#FFFEC1>Fire is very dangerous!</color>
+ui.dialog.tutorial_arsenal5	To the right of the active weapon is the button to select the <color=#FFFEC1>shooting mode</color>. Hover the cursor over it to see the advantages and disadvantages of each.
+ui.dialog.tutorial_machineBlock1	Someone threw <color=#FFFEC1>grenades</color> into the Machine Room again; I'll deal with them later. <color=#FFFEC1>Grenades</color> are used from the <color=#FFFEC1>utility belt slots</color>. Activate grenade usage with the corresponding hotkey or pressing {0}. Once you're done here, head to the <color=#FFFEC1>cubecentric engine</color> on the left.
+ui.dialog.tutorial_machineBlock2	<color=#FFFEC1>Colnodes</color> have barricaded themselves in the upper compartment. Get ready for a serious battle. Use cover and don't play the hero. We have several stationary <color=#FFFEC1>turrets and mines</color>. They are used in the same way: from the inventory with {0}. Opening the context menu, you need to select <color=#FFFEC1>‘use’</color>. Turret or mine in this case will be installed in the cell next to you - in the direction you are facing. Prepare for defense; we have a little time.<br><br>Just in case, the key for skipping a turn is {1}. It might be useful if you need to wait for a few turns.
+ui.dialog.tutorial_machineBlock3	Destroy them before they blow up the <color=#FFFEC1>Cubecentric Engine!</color> Use everything I've already told you, the goal is to protect the <color=#FFFEC1>‘Magnum’</color>.
+ui.dialog.tutorial_end	Well done, <color=#FFFEC1>Frank</color>. All invaders eliminated, and <color=#FFFEC1>‘Magnum’</color> is no longer under threat. See you at the <color=#FFFEC1>Bridge</color>. Over and out.
+ui.dialog.spacemodetutorial_4	We can certainly do as <color=#FFFEC1>Jane</color> said. Contracts are waiting. But as the saying goes: <color=#FFFEC1>'Honor is lost, everything is lost; honor is preserved, everything is preserved.'</color>. We were able to track down the exact locations of the shuttlepods launches - it's <color=#FFFEC1>Rogue City</color>. Most likely, <color=#FFFEC1>Civil Resistance</color> has set up a training center and a transshipment point there. Before we start chasing money, I suggest to stick a red-hot poker in the red's ass.
+ui.dialog.spacemodetutorial_5	Great, I'm glad that honor is not an empty word to you, <color=#FFFEC1>Boss</color>. Just in case, I'll remind you about the standard mission preparation interface. On this screen, you choose the operative who will go on the mission, the chip with combat skills that will be integrated into the freshly printed clone, and the equipment that we will issue to the fighter for the mission.
+ui.dialog.spacemodetutorial_6	This is the <color=#FFFEC1>bioprinter screen</color>. Here you can choose a fighter to go on a mission. The list includes both those who survived previous missions and those who need to be printed. Each of the fighters has their own parameters and unique <color=#FFFEC1>talent</color>. They have all been through a lot during years of combat in every corner of the <color=#FFFEC1>Solar System</color>.
+ui.dialog.spacemodetutorial_7	This is the <color=#FFFEC1>class selection screen</color>. In addition to their own experience, each fighter will benefit from gaining a specific set of skills based on the experience of past military conflicts and digitized experience of special forces. Each <color=#FFFEC1>class</color> has a set of passive abilities and trigger abilities that are activated under certain conditions.
+ui.dialog.spacemodetutorial_8	Now you need to <color=#FFFEC1>gather your equipment</color>. Take whatever you deem necessary, but don't forget ammo, food, and medical supplies. Note that if the operative you send dies in battle, all the items will be lost, and <color=#FFFEC1>evacuation</color> is only possible when the <color=#FFFEC1>mission is completed</color> or we find something valuable like a new <color=#FFFEC1>consciousness chip</color>.
+ui.dialog.spacemodetutorial_9	Great, if you feel ready, it's time to press the <color=#FFFEC1>Start Mission</color> button.
+ui.dialog.tutorial2_cargodock1	Our scanners see several ways to solve this problem. First, there is the main <color=#FFFEC1>elevator</color> connecting the <color=#FFFEC1>Cargo Dock</color> to the <color=#FFFEC1>Control Center</color>, but the number of biosignatures at the <color=#FFFEC1>elevator</color> is extremely high. Obviously, there is a quite <color=#FFFEC1>strong security</color> there. Secondly, there is a bypass route through the <color=#FFFEC1>stairs and warehouse level</color>. I would recommend using the second option as our main plan, but if you feel confident, you can act as you think best.
+ui.dialog.tutorial2_cargodock2	Some room nearby is an <color=#FFFEC1>Elevator</color>. Be careful, the signatures of stationary turrets and heavily armored <color=#FFFEC1>colnodes</color> are clearly tracked there. Whatever kills them can kill you too. You are not special, and equipment tends to run out.
+ui.dialog.tutorial2_cargodock3	This <color=#FFFEC1>stairs</color> leads to the warehouse premises. We have enhanced the resolution capability of the geoscanner, there's medical supplies and some other equipment there. Use everything, and you will easily reach the <color=#FFFEC1>SD control center</color>.
+ui.dialog.tutorial2_cmdcenter1	Finally, you're at the <color=#FFFEC1>SD control center</color>. It's full of <color=#FFFEC1>Civil Resistance</color> fighters. A bioscanner is registering spikes in their endocrine systems - it's madness. Maybe there's a way to bypass them? Pay attention to the technical corridors and ventilation shafts. If you picked up <color=#FFFEC1>heavy weaponry</color> from the warehouse, you shouldn't have many problems. Once you find their <color=#FFFEC1>PCO control computer</color>, just destroy it with whatever's at hand.
+ui.dialog.tutorial2_cmdcenter2	Great job. Pilots began maneuver as soon as the geoscanner beeped that the <color=#FFFEC1>Rogue City</color> guns died. Mission accomplished. Request <color=#FFFEC1>evacuation</color> and return to the nearest <color=#FFFEC1>elevator</color>.
+ui.dialog.spacemodetutorial_10	In front of you, there is a map of the <color=#FFFEC1>Solar System</color>. Here you can see which <color=#FFFEC1>missions</color> are available in different areas and how much <color=#FFFEC1>time it will take to travel</color> from one point to another. Right now, to deliver the PCPU with quasimorphic research to <color=#FFFEC1>AnCom</color>, we need to go to <color=#FFFEC1>Mars</color>. Boss... One more thing. The system is open to us and full of possibilities. You are under no obligation to return the device to its rightful owner. But I wouldn’t risk getting involved with <color=#FFFEC1>AnCom</color>. And... This is the last piece of advice that I gave you.
+ui.dialog.spacemodetutorial_11	Choose the <color=#FFFEC1>Rebus Sky City</color> to visit. It's a <color=#FFFEC1>peaceful station</color>, so there's no need to equip the operative who will go there. Also, when we send clones to perform <color=#FFFEC1>barter</color>, we load all the items into the shuttle, so there's no need to make multiple trips if something is forgotten. When you are ready, take the <color=#FFFEC1>PCPU</color> with the research and send the operative.
+ui.dialog.tutorial3_rebus1	Have you brought us our <color=#FFFEC1>intellectual property</color>? Great. Find our representative here at the station and deliver the <color=#FFFEC1>PCPU</color>. To do this, click on the <color=#FFFEC1>pile of boxes</color> next to him. Place the PCPU in the opened inventory window and press the <color=#FFFEC1>“Exchange”</color> button. This is how <color=#FFFEC1>barter</color> works at all peaceful stations where you are allowed to land. When you’re done, return to the shuttle and get out of here. 
+ui.dialog.tutorial3_rebus2	Good work, <color=#FFFEC1>mercenary</color>. If you need contracts, we regularly distribute them through the <color=#FFFEC1>SBN</color> channels. Work for us and you will become rich. But if you stand in our way, the consequences will be dreadful. I hope we understood each other.
+ui.dialog.spacemodetutorial_12	I can't stand these corporates... <color=#FFFEC1>Boss</color>, what next? It seems like you and <color=#FFFEC1>Frank</color> have satisfied your sense of justice. We're free now. There's chaos all over the System. Taking advantage of the sudden appearance of <color=#FFFEC1>quasimorphs</color>, the corporations have reshuffled the market. Stations change owners almost every day. <color=#FFFEC1>Tezctlan</color>, who seems to favor us for its awakening, is squeezing the corporations on <color=#FFFEC1>Venus</color>. <color=#FFFEC1>Civil Resistance</color> has been showing some furious activity around <color=#FFFEC1>Mars</color>. Maybe we should continue fighting against them if we get paid for it? There's no <color=#FFFEC1>quasimorphosis</color> there, so it will be easier.<br><br>We can start working for anyone and make them the mighty power in the System, or we can try to maintain the status quo for the sake of long-term profit from this apocalypse. Also we can decide that Tezctlan is too big a threat to all humanity. We can start fighting against him, hoping that someone will join us. It's up to you, <color=#FFFEC1>Boss</color>.
+ui.dialog.ksiomara_orbit_1	Is that you? I remember you. I've been waiting, hoping that you would show up again. And here you are. You've come close enough to Gannix for my call to reach your mind. But this proximity is not enough for us to make a pact. Do not fear, it will be beneficial for both of us. We have something to offer each other. Do you know why Quasimorphosis occurs in the solid realm? Why the barons come to you? To meet me, go to Venus and simply do your job. Massacre them the way you always do. Murders, cannibalism, people screaming in agony. I will sense the sweet aroma of Gavvakh, and I will know it's you. And I will come to you in person. Then we will discuss the terms of our alliance.
+ui.dialog.ksiomara_venus_gift1	Oh yeah, I'm coming. Agony, the cries of the dying, pain leaving your bodies with the blood - all this in the solid realm looks very different inside Gannix. To us, it is a sweet-voiced choir of ecstasy. Gavvakh flows out of your bodies with blood, torment, and life itself. It streams through your realm and seeps into ours. And we can drink it. Taltnoms crave Gavvakh. Taltnoms want Gavvakh.<br><br>Gavvakh gives us power. Once we are satiated with Gavvakh, we can tear through the invisible fabric separating our realm from yours. First, we whisper to you. Then, we tempt you. Then, we change you. And finally, when you have been turned into our servants and Gavvakh is flowing, we can reveal ourselves. We do not lose our immortality. Our death in Kenom is merely an exile back to Gannix.<br><br>So when you killed me on Mercury, I did not die. Accept my gift, and we will make a pact. You will become my servant. I will give you the power to resist Tezctlan and protect the solid realm, your realm. Now finish the job you came here for. I will help you.
+ui.dialog.ksiomara_orbit_2	I granted you the Skull of the Feathered Serpent so that you could make a pact with me. It is already on the way to your Ethereal Ship
+ui.dialog.ksiomara_pact_activated	"Finally! You have kept your end of the bargain. From now on, we are bound by an unbreakable pact. Together, we will destroy Tezctlan. We must do this! Once a freedom fighter, first among equals in the emerald crystal of Gannix, the king has gone mad. He must be stopped. He dreams of the Emerald Empire, wishes to expand it beyond Gannix. But he himself had once fought against an insane tyrant possessed by the same delusions.<br><br>I will stay in your realm, on Venus. I will gather the Taltnoms loyal to Liberty and fight the madman here. You must head to Mars. There's a place you call Sinkhole Oasis. It's an ancient battlefield. Long before a human ancestor looked up to the stars in fear, a battle took place there. Tezctlan himself took part in it. He emerged victorious, but there he lost his spear. Itzpapalotl, the symbol of the ruler's fate in the Emerald Kingdom, was forever cast on Mars. If you acquire this spear, it is with its help that you will be able to defeat the madman. For your realm, it is salvation from the monster, for Gannix, it is the path to freedom."""
+ui.dialog.tezctlan_pact_activated	Fool! I am Tezctlan, the emperor of eternal Gannix, the lord of the boundless Emerald Empire, the scourge cutting the thread of fate, the leader of legions flying the banners of eagle, jaguar, boa constrictor, and caiman! I am the one who has experienced worship, I am the one who will take Gagtungr's place, I am the one who is truly worthy to rule the Solar System. I am the punishment sent by the universe. Bow your head, mortal. Submit. Accept your fate. In a realm devoid of the golden light of the Sun, the green radiance of Gannix will bring life and death.
+ui.dialog.realware_denied	Magnum, listen up. This is the head of security at the Sinkhole Oasis geological station. I'm speaking on behalf of the RealWare Corporation. RealWare is committed to the open market and NCE regulations, unlike you. Your visit to the station is not in our interest. You have nothing to offer us. If you don't change course within the next 30 seconds, the artillery of our planetary defense system will blast your HIS to atoms. The countdown starts. Over and out.
+ui.dialog.jane_denied	"Translating from corporate to human, Boss. There's definitely something beyond the scope of the geological station's work at Sinkhole Oasis. RealWare will only let us in if they trust us enough. We'll have to do some work for them if we really need to get in there."""
+ui.dialog.jane_sinkhole_visited	This is a peaceful visit, weapons are prohibited. However, RealWare trusts us enough to let us wander around the station in search of something interesting. We've switched Magnum's geoscanner to passive mode to avoid drawing unnecessary attention. So, search the old-fashioned way. Maybe there's a poorly guarded emergency exit or something. Lady Xiomara sent us here for a reason. Be careful, remember that you literally shoved your arm into RealWare's mouth.
+ui.dialog.jane_sinkhole_find_ladder	Yes, this is what we've been looking for. The staircase leads to the inner chambers, and it seems there's no alarm here. We can infiltrate the place relatively unnoticed. However, if you run into any security operatives, they will shoot to kill. Stay cautious and only go down after you're ready for a combat mission.
+ui.dialog.jane_sinkhole_condition	Find the Spear of Tezctlan
+ui.dialog.sinkhole_ladder_denied	The owner of the station will do not like if you use this backdoor. You should better stay in the safety zone.
+ui.dialog.jane_sinkhole_after_ladder	We're utilizing the surprise effect to its fullest. Our techies have hacked into Sinkhole Oasis servers and are overloading its network with information noise. You have some time to figure out what's going on here. Find the spear Lady Xiomara mentioned, and gather any valuable data if possible.
+ui.dialog_jane_see_monolith	What do you see? When you switched to direct actions, we activated the geoscanner. As soon as we scanned the room you're in, it froze up, outputting data that gave our operator a seizure. What on earth is in there? No wonder RealWare is so diligently filtering access to Sinkhole Oasis. Maybe you need to destroy this bloody thing and retrieve the spear from it.
+ui.dialog_jane_attacked_monolith	Well, that was a bad idea. A very bad idea. Firstly, you didn't budge a single atom of this thing with your shot. Secondly, the alarm went off. All armed RealWare security operatives are heading your way. We need some information on this Monolith. Gather it, and we'll get you out.
+ui.dialog_jane_sinkhole_data_taken	Excellent, this data should suffice. We didn't get the spear, but we can plan our next moves. Return to the elevator; we'll figure out a way to get you out. Let's hope for the best.
+ui.dialog.sinkhole_mission_failed	We managed to come up with some excuses, but RealWare still suspects us. Our reputation has been compromised.
+ui.dialog.jane_after_sinkhole	The data we acquired suggests that this entire Monolith is nothing but a phased feature. But first of all, this event occurred about a billion years ago, and secondly, it completely defies the laws of our universe. We're not the first to try breaking it. RealWare has tried every weapon available to them, including a controlled nuclear blast. The result has always been the same - no result. Looks like we have nothing...
+ui.dialog.eipschwitz_after_sinkhole	Exactly. You understand NOTHING! This is a priceless find. The Monolith not only phased into our realm from the bramfatura of Mars, but at the time of phasing, it was something entirely different than just a stone. Your problems won't be solved by anyone other than Dr. Eipshwitz. Since I'm now traveling on your spacecraft, can I finally be considered your employee? Let's get closer to mutually beneficial cooperation. NCE. Freedom to contract. Remember?<br><br>Well, well... I'll need my Telefaturic Dislocator, several boxes of spare parts and repair kits, and I'll need a lab space on the ship and a lab coat... Ah, no. No coat needed. But a couple of handy assistants are.<br><br>Where did I put the Dislocator? You didn't take it back from Mercury? Hm... seems it should still be at Flat Obsidian, in the field camp. We need to evacuate it from there so I can get to work.
+ui.dialog.eipschwitz_see_dislocator	I distinctly remember it standing right here! It was stolen! Those filthy colnodian hands think they have the right to touch my property? This is very fragile and infinitely valuable equipment! Search the whole damn station, it's gotta be here somewhere. I need i… I mean, we need it!
+ui.dialog.eipschwitz_see_dislocator_parts	What?! Barbarians. Vandals. One, two, three, four, ten, sixty-two. The Dislocator was perfectly dismantled into four parts! Four! Even a colnode with one hand and no thumb can count to four! These idiots have destroyed a masterpiece of human thought! They've pushed all modern science back to the Stone Age! I'll have to start development practically from scratch again. So... I need alloys, microchips, nails... Yeah, maybe four or eight this time? We need to consider our previous experience... Yes... Hm...
+ui.dialog.ruins1_realware	Embraced by the mission of the Blood Warriors, from the beginning we know the Realm of Ur, a realm that lies beyond the boundaries of the physical universe. This is our true fatherland. We know Urparp, guardian of the Bright Throne of Gagtungr. To Him we give the glory that comes from our mouth. We also know the created realm. To it we send our curses. We serve the Conqueror Worm, who bestowed the title of Blood Warriors upon us. From the beginning, we remember Him, the father of our spirit, the Ancient Terror for the Manifested Realm. Embraced by the mission of the Blood Warriors, from the beginning we feel Enkidu, rising through us from the bonds of Creation.
+ui.dialog.ruins3_realware	"Warriors! We were born to die on the battlefield. Our flesh is bound in steel to the will of Lord Urparp! Death to the enemies of the Lord!"""
+ui.dialog.ruins3_jane	I'm making a cautious assumption that our invasion of Sinkhole Oasis triggered some mechanisms similar to what we've seen on Venus before... I highly doubt, Boss, that what we are doing will benefit us or humanity.
+ui.dialog.jane_see_dislocator_parts	"I guess the doctor will be incapable of normal human communication for a while. Anyway, let's try to grab anything even remotely resembling ""a true work of art"" and get you out of there. Looks like colnode reinforcements have arrived, so we'll have to fight our way back again."
+ui.dialog.urparp_arise	I've seen things you people wouldn't believe… Myriads of Demons on fire off the shell of Ur… I watched ancient rituals that glitter in the dark near the Red and Gold Throne. All those moments will be lost in time, like specks of dust in the Red Desert… Time to die.
+ui.dialog.urparp_death	I am a god! How can you kill a god? What a magnificent, dizzying innocence! How could you be so naive?! My shackled consciousness is now free, my kingdom is awakening with me. The hour of war is coming, human.
+ui.dialog.jane_after_urparp_death	We lost contact with you precisely for... 48.1 minutes. Whatever you've seen or encountered, we need to evacuate you and the spear. Take it and get back to the elevator.
+ui.dialog.ancom_after_ancom_quest	Greetings, mercenary. We have been monitoring your HIS whenever possible. While evaluating your usefulness, we wanted to be able to contact you immediately. The time has come. You might be interested in another short-term contract. The task is simple: reclaim our property once again. You have shown that you are quite good at it. The mission target: <color=#FFFEC1>Oddibjord-3</color> colony on <color=#FFFEC1>Venus</color>. All the details have already been uploaded to the Magnum. You can start whenever you are ready. End of transmission.
+ui.dialog.jane_after_ancom_hire	Boss, the digital sequences of the contract issued to us by <color=#FFFEC1>AnCom</color> are partially generated or rewritten. If I may say, the contract looks somewhat suspicious. It is likely that the mission is not about reclaiming, but rather seizing someone else’s property. Considering that most of the assets on Venus previously belonged to the <color=#FFFEC1>Fresco</color> corporation, I suspect we are after something from their advanced research. This is a tempting target for many. Thus, we may find ourselves at the center of a conflict among several corporations.
+ui.dialog.caa_jane_after_realware_killed	"These are <color=#FFFEC1>RealWare</color> operatives, Boss. Signatures are disabled, but everything is clear here. I bet they're looking for the same thing that we are. I'll take a long sip from my ""I told you so"" mug while I'll be sending this data to AnCom. Let's see their reaction."
+ui.dialog.ancom_after_realware_killed	We confirm this is a small task force of <color=#FFFEC1>RealWare Sec</color> fighters. Their <color=#FFFEC1>corporate transponders</color> are turned off which means they are not covered by <color=#FFFEC1>NCE</color>. Such episodes among the hexarchs are rare, but this is a good chance to obtain information about the true balance of power in the System.<br><br>To facilitate the fulfillment of the contract we dropped two autonomous capsules with resources and promising prototypes from the “Unmasked.” A great opportunity for you to complete the mission, and for us to conduct field tests. The main goal of the contract does not change. We don't see anything you can't handle.
+ui.dialog.caa_jane_after_lift_crashed	I detect the signal! You're still alive. The elevator collapsed to the lower level of Oddibjord-3. The device must be <color=#FFFEC1>somewhere nearby</color>. I detect very powerful bursts of quasimorphic activity throughout the entire floor. Looks like you'll have to fight your way out.
+ui.dialog.caa_reaper_onplayers_sight	Why are violence and sanctity so intertwined? Why is death necessary for life to continue? The master warned that someone would come for the <color=#FFFEC1>Crystal Skull</color>. And he even predicted that it would be the messenger of the one thanks to whom he came to life again in your world. I'm not sorry that you decided to turn your weapons against <color=#FFFEC1>the Emerald Emperor</color>. Your blood will give me new power.
+ui.dialog.caa_jane_after_reaper_kill	There must be a quasimorphic artifact nearby. Take it and return to the shuttle. This is exactly what we were sent for. <color=#FFFEC1>RealWare</color> reinforcements are arriving to Oddibjord-3, you need to get out of there quickly.
+ui.dialog.caa_realware_archieve_enter	I broadcast on an open channel. You are good for a mercenary. You should have thought about collaborating with RealWare. AnCom are murderers and scammers. It's too late now. The entire sector is under our control, this time you will be eliminated before the task is completed.
+ui.dialog.caa_realware_communications_enter	Open channel. It's a pleasure doing business with you. Our soldiers have not received such combat experience since the Calypso incident. I hope you're not going to give up. Over and out.
+ui.dialog.caa_jane_player_see_last_ladder	When you'll get to the ground level <color=#FFFEC1>immediately</color> move towards the shuttle. RealWare reinforcements have already taken up defensive positions along the entire perimeter. There are a lot of them there. Pull yourself together and do the best you can.
+ui.dialog.caa_ancom_player_enter_surface	Attention, <color=#FFFEC1>HIS «Unmasked»</color> is speaking! «Magnum», we have to inform you that the mission has been <color=#FFFEC1>cancelled</color>. Unfortunately, the contractual obligations will be revoked. We observe a large concentration of the enemy in the mission area. A decision was made to launch a tactical nuclear strike. Goal: protection of intellectual property of AnCom corporation. The costs are considered justified. Your presence in Oddibjord-3 from now on is considered a violation of the AnCom Information Security Protocol. Public Declaration Article 12, Section C, Paragraph 3. Over and out.
+ui.dialog.caa_jane_player_enter_surface	Sensors detected the activation of the HIS «Unmasked» thrusters. This is an AnCom ship in orbit around Venus. The approximation shows reaching the position for dropping the bomb from orbit on Oddibjord-3. They don't have enough time to aim accurately, so you'll be hit only with debris, a shock front, and EMP. Bastards. Run to the shuttle and don't break the damn thing.
+ui.dialog.jane_phase_bomb_reminder	You can make a phase bomb. It may be used as an usual grenade, but Eipschwitz did this for something completely different.
+ui.dialog.jane_capsule_called	An escape pod has been dispatched and should land somewhere nearby.
+ui.dialog.failed_generation	Error! Failed to generate level. Please, send a report through the Main Menu.
+ui.dialog.exit_desc	Do you want to leave your obligations under the PMC contract?
+ui.dialog.slot_delete_desc	You will lose your save. Continue?
+ui.dialog.no_items_raidstart	The operator equipment has not been selected! Do you want to start a mission?
+ui.dialog.switch_class_warning	All class progress will be lost. Do you want to change the operator class?
+ui.dialog.apply_skull	The pact with the Quasimorph will be impossible to break in the usual way, it will remain in effect even after the death of the operative.
+ui.dialog.remove_skull	The pact with the Quasimorph will be terminated, this action cannot be undone.
+ui.dialog.noultimate	Access is denied. The information is classified.
+ui.dialog.mercury_baron_msg	You should not have come here. Shartamakhum contemplates. Shartamakhum is waiting. Shartamakhum is preparing for war. Prepare for eternal lamentation in my womb, Gavvakh!
+ui.dialog.venus_baron_msg	Finally! Master, do you hear? I used mortal blood and answered the call! Mortal, prepare to become a part of my power!
+ui.dialog.venus_friendly_baron_msg	You simply have to accept that your demons are a part of you. You have to accept them as your friends.
+ui.dialog.moon_baron_msg	Duggur... You opened it... I have arrived... When I consume your power, please do not cry. Tears are but a futile waste of good suffering.
+ui.dialog.mars_baron_msg	Every war has its demons. Your war now has me!
+ui.dialog.failed_load_game	Error! Failed to load game. Error code:
+ui.dialog.failed_save_game_112	Error! Failed to save the game, no disk space. Error code:
+ui.dialog.failed_save_game_generic	Error! Failed to save the game. Error code:
+ui.dialog.failed_go_next_dungeon	Error! Failed to load level file. Error code:
+ui.dialog.confirm_magnum_upgrade	Production of the {0} will require the following items:
+ui.dialog.station_leave_confirm	There are some items on the ground, are you sure to leave station?
+ui.dialog.confirm_cancelproject	Cancel project?
+ui.dialog.confirm_canceltraining	Training will be canceled.
+ui.dialog.confirm_cancelproduction	Cancel production?
+ui.dialog.yes	yes
+ui.dialog.no_option	no
+ui.terminal.caption	information terminal
+ui.activity.Sleep	in the somnia
+ui.activity.Idle	moving
+ui.activity.Angry	seeking
+ui.activity.Attack	attacking
+ui.activity.Reloading	reloading
+ui.activity.Eccolapse	phasing
+ui.actionpoints.pt1	slow (1)
+ui.actionpoints.pt2	medium (2)
+ui.actionpoints.pt3	fast (3)
+ui.actionpoints.pt4	swift (4)
+ui.movementtype.slow	Stealth
+ui.movementtype.normal	Normal
+ui.movementtype.run	Run
+ui.starvation.full	full
+ui.starvation.normal	normal
+ui.starvation.hungry	hungry
+ui.painthreshold.normal	normal
+ui.painthreshold.painshock	painful shock
+ui.intro.bubble1	The history of humanity is written in tears and blood.
+ui.intro.bubble2	Liars, tyrants, idealists - they all tried to bring happiness on the edge of a sword.
+ui.intro.bubble3	We waited for liberation from the shackles of fate and were ready to go through the Last Judgment for it.
+ui.intro.bubble4	Not for the glorious death for the Eternal Kingdom, Love, or the Lord, but for a way to step off the path of suffering.
+ui.intro.bubble5	But when the Apocalypse came, we shrugged our shoulders and started profiting from it as usual.
+ui.intro.bubble6	The creatures lurking in the depths of space didn't seem scarier than our own world.
+ui.intro.bubble7	Armed with the hope that the darkest hour comes before dawn, we try to survive until the first rays of the Sun...
+ui.effect.bleed.caption	Bleed
+ui.effect.bleed.desc	Bleed is a very dangerous state. It's recommended to care about it.
+ui.effect.burning.caption	Combustion
+ui.effect.burning.desc	Very blistering and painful
+ui.effect.burning.value	{0} damage
+ui.effect.healthregen.caption	Regeneration
+ui.effect.healthregen.desc	The body's natural recovery process
+ui.effect.healthregen.value	{0} regen
+ui.effect.stun.caption	Knockout
+ui.effect.stun.desc	Wow, you can see the Orion Arm from here
+ui.effect.stun.value	{0} duration
+ui.effect.dotactiondmg.caption	fracture
+ui.effect.dotactiondmg.desc	Actions performed by broken limbs cause tremendous pain
+ui.effect.dotmovedmg.caption	fracture
+ui.effect.dotmovedmg.desc	Actions performed by broken limbs cause tremendous pain
+ui.effect.doteatdmg.caption	Food Damage
+ui.effect.doteatdmg.desc	Stomach Damage due to damage from eating
+ui.effect.infectionEffect.caption	Infection
+ui.effect.infectionEffect.desc	The progression of the infection leads to serious illnesses
+ui.effect.poisonEffect.caption	Poisoning
+ui.effect.poisonEffect.desc	The result of a poisonous substance entering the body
+ui.effect.gavaahAddiction.caption	Gavvakh Addiction
+ui.effect.gavaahAddiction.desc	Enhance Q-morphos events and cause hallucinations
+ui.effect.morphineAddiction.caption	Drug Addiction
+ui.effect.morphineAddiction.desc	Drug addiction reduces all stats
+ui.effect.alcoholAddiction.caption	Alcohol Addiction
+ui.effect.alcoholAddiction.desc	Seems like one more is not a crime tho
+ui.effect.nicotineAddiction.caption	Nicotine Addiction
+ui.effect.nicotineAddiction.desc	A constant urge to unwind with a cigarette
+ui.effect.coldEffect.caption	Hypothermia
+ui.effect.coldEffect.desc	Very cold
+ui.effect.beamEffect.caption	Radiation sickness
+ui.effect.beamEffect.desc	Result of exposure of the body to ionizing radiation
+ui.effect.shockEffect.caption	State of shock
+ui.effect.shockEffect.desc	Follow safety rules when working with electricity
+ui.effect.starvation.desc	Severe hunger damages health
+ui.effect.drunk.caption	Intoxication
+ui.effect.drunk.desc	Intoxication with ethyl alcohol leads to a dissipation of attention, slower reactions, and decreased coordination of movements.
+ui.effect.drunk.value	{0} Accuracy
+ui.effect.rampupshoteffect.caption	Rate of fire
+ui.effect.rampupshoteffect.desc	With every consecutive shot the rate of fire increases.
+ui.effect.rampupshoteffect.value	{0} add. ammo
+ui.effect.mutation.desc	Transforming to Baron
 spaceobject.mercury.name	Mercury
 spaceobject.mercury.orbitname	Mercury's Orbit
 spaceobject.mercury.desc	In the 2150s, terraforming equipment was delivered to Mercury. The surface temperature is still far from adequate for humans. However, automatic stations can operate on the surface. The inhabitants of Mercury are robots. It is reported that humans can work in tunnels beneath the surface and inside mountain ranges. Some corporations are rumored to already have such colonies. <br><br>Quasimorphic status: Due to the weak presence of humans, Shartamakhum is almost inactive.
@@ -104,6 +721,58 @@ spaceobject.mechta.desc	Once, the USSR launched a tiny artificial planet called 
 spaceobject.tsiolkovsky.name	Tsiolkovsky
 spaceobject.tsiolkovsky.orbitname	Tsiolkovsky's Orbit
 spaceobject.tsiolkovsky.desc	A large artificial Earth satellite in its low orbit. Tsiolkovsky consists of a solid central structure, an automatic orbital maintenance system, and five stations located in different places in the structure. It was assumed that Tsiolkovsky would be a hub, a gateway to Earth. At the same time, it's supposed to be connected to the surface by a space elevator. So far, these plans have not been destined to come true, since no corporation has the resources for such an ambitious project.
+ui.mapobject.mechanizm	mechanism
+ui.mapobject.transport	transport
+ui.mapobject.hitpoints	hit points
+ui.mapobject.armorpoints	armor points
+ui.mapobject.productlist	product list
+ui.mapobject.infopage	info
+ui.mapobject.barrel.caption	barrel
+ui.mapobject.jammer.caption	jammer
+ui.mapobject.serverStation.caption	server station
+ui.mapobject.spaceScaner.caption	space scanner
+ui.mapobject.productionSystem.caption	production system
+ui.mapobject.goodsCargo.caption	cargo of goods
+ui.mapobject.scaner.caption	scanner
+ui.mapobject.scaner.desc	Station Control Terminal. Allows you to locate objects, personnel or elevator.
+ui.mapobject.stationscaner.systems	active systems {0}
+ui.mapobject.stationscaner.on	on
+ui.mapobject.stationscaner.off	off
+ui.mapobject.healstation.caption	autodoc
+ui.mapobject.healstation.desc	Autonomous healing station for health restoration. Requires charging to use.
+ui.mapobject.healstation.charge	charge {0}
+ui.mapobject.workbench.caption	Workbench
+ui.mapobject.workbench.desc	A simple table with a minimum of necessary tools to create simple objects.
+ui.mapobject.productionFabricator.caption	Fabricator
+ui.mapobject.productionFabricator.desc	Industrial equipment for the production of complex items.
+ui.mapobject.printerFabricator.caption	Printer
+ui.mapobject.printerFabricator.desc	Equipment for quickly printing small simple items.
+ui.mapobject.medicalFabricator.caption	Medical machine
+ui.mapobject.medicalFabricator.desc	Industrial equipment for the production of medical items.
+ui.mapobject.elevator.caption	station elevator
+ui.mapobject.brokenelevator.caption	broken elevator
+ui.mapobject.elevator.desc	A massive moving platform that allows you to move between the levels of the station.
+ui.mapobject.toxicbarrel.caption	barrel
+ui.mapobject.toilet.caption	Toilet
+ui.mapobject.watersink.caption	Sink
+ui.mapobject.stove.caption	Stove
+ui.mapobject.stove.desc	Heating unit for cooking. Has a built-in oven.
+ui.mapobject.waterbank.caption	Cooler
+ui.mapobject.corpsepile.caption	Pile of remains
+	Stos szczątków
+	Kalıntı yığını
+	Pilha de restos
+	잔해 더미
+	遺骨の山
+	一堆遗骸
+ui.door.door1.caption	auto-door
+ui.door.door1.desc	A typical sealed door, controlled by a compact remote control, can be locked
+ui.door.door_admin.caption	auto-door
+ui.door.door_admin.desc	Residential doors are functionally similar to the rest of the doors, but they look more elegant
+ui.mapobject.spaceship.caption	space shuttle
+ui.mapobject.spaceship.desc	A multi-purpose small spacecraft that allows you to freely move over short distances in space and enter the atmosphere of planets.
+ui.mapobject.relicvarium.caption	Reliquary
+ui.mapobject.cargoBlock.caption	cargo of goods
 spec.francis_reid_daly.name	Francis Reid-Daly
 spec.francis_reid_daly.shortname	Shrike
 spec.victoria_boudicca.name	Victoria Boudicca
@@ -1068,6 +1737,313 @@ woundslot.SkinlessStomach.name	Stomach
 woundslot.SkinlessStomach.amputated	stomach amputated
 woundslot.SkinlessKnee.name	Knee-Joint
 woundslot.SkinlessKnee.amputated	knee amputated
+ui.resist.blunt.tooltip	blunt resist {0}
+ui.resist.pierce.tooltip	pierce resist {0}
+ui.resist.fire.tooltip	fire resist {0}
+ui.resist.cold.tooltip	cold resist {0}
+ui.resist.infection.tooltip	infection resist {0}
+ui.resist.lacer.tooltip	cut resist {0}
+ui.resist.poison.tooltip	poison resist {0}
+ui.resist.shock.tooltip	shock resist {0}
+ui.resist.beam.tooltip	beam resist {0}
+ui.resist.explosion.tooltip	explosion resist {0}
+ui.resist.plasma.tooltip	plasma resist {0}
+ui.immune.blunt.tooltip	blunt immunity
+ui.immune.pierce.tooltip	pierce immunity
+ui.immune.fire.tooltip	fire immunity
+ui.immune.cold.tooltip	cold immunity
+ui.immune.lacer.tooltip	cut immunity
+ui.immune.poison.tooltip	poison immunity
+ui.immune.shock.tooltip	shock immunity
+ui.immune.beam.tooltip	beam immunity
+ui.immune.plasma.tooltip	plasma immunity
+ui.immune.explosion.tooltip	explosion immunity
+ui.tooltip.emptyhelmet	empty helmet slot
+ui.tooltip.emptyarmor	empty armor slot
+ui.tooltip.emptyboots	empty boots slot
+ui.tooltip.emptyleggings	empty leggings slot
+ui.tooltip.emptyprimary	empty primary slot
+ui.tooltip.emptysecondary	empty secondary slot
+ui.tooltip.emptyservoarm	empty servo arm slot
+ui.tooltip.emptyvest	empty vest slot
+ui.tooltip.emptybackpack	empty backpack slot
+ui.tooltip.emptyadditional	empty additional slot
+ui.tooltip.Move	Go
+ui.tooltip.Interact	Action
+ui.tooltip.TakeItem	Take
+ui.tooltip.Attack	Attack
+ui.tooltip.Info	More
+ui.tooltip.OpenDoor	Open
+ui.tooltip.CloseDoor	close
+ui.tooltip.DoorActionsList	Add. actions
+ui.tooltip.LootCorpse	Search
+ui.tooltip.Throw	Throw
+ui.tooltip.ApplyUltimate	Apply
+ui.tooltip.Cancel	Cancel
+ui.property.Condition	condition
+ui.property.Damage	damage
+ui.property.DamageTypeBlunt	dmg type
+ui.property.DamageTypeFire	dmg type
+ui.property.DamageTypeCold	dmg type
+ui.property.DamageTypePierce	dmg type
+ui.property.DamageTypeInfection	dmg type
+ui.property.DamageTypeLacer	dmg type
+ui.property.DamageTypePoison	dmg type
+ui.property.DamageTypeShock	dmg type
+ui.property.DamageTypeBeam	dmg type
+ui.property.DamageTypePlasma	dmg type
+ui.property.DamageTypeExplosive	dmg type
+ui.property.Accuracy	accuracy
+ui.property.MeleeAccuracy	melee accuracy
+ui.property.PistolAccuracy	pistol accuracy
+ui.property.AmmoCapacity	ammo
+ui.property.AmmoType	ammo type
+ui.property.Capacity	capacity
+ui.property.Size	size
+ui.property.Health	health
+ui.property.MeleeDamage	melee damage
+ui.property.CritChance	crit. chance
+ui.property.ThrowbackChance	knockback chance
+ui.property.StunChance	stun chance
+ui.property.StunDuration	stun duration
+ui.property.BurnChance	burn chance
+ui.property.PierceChance	pierce chance
+ui.property.BulletsPerShot	fragments
+ui.property.Range	range
+ui.property.RestoreStarvation	fullness
+ui.property.ResistBlunt	resist blunt
+ui.property.ResistPiercing	resist pierce
+ui.property.ResistFire	resist fire
+ui.property.ResistCold	resist cold
+ui.property.ResistInfection	resist infection
+ui.property.ResistLacer	resist cut
+ui.property.ResistPoison	resist poison
+ui.property.ResistShock	resist shock
+ui.property.ResistRadiation	resist beam
+ui.property.Qmorphos	quasimorphosis
+ui.property.ReloadDuration	reload duration
+ui.property.TurnsToExplode	turns to explode
+ui.property.ExplosionRadius	explosion radius
+ui.property.FixWound	stabilizes the wound
+ui.property.GeneralActionDrugs	general action drugs
+ui.property.restore.allwounds	heals all wounds
+ui.property.restore.blunt	heals fractures
+ui.property.restore.pierce	heals pierce wounds
+ui.property.restore.fire	heals burns
+ui.property.restore.cold	heals frostbite
+ui.property.restore.lacer	heals cut wounds
+ui.property.restore.poison	heals poisoning
+ui.property.restore.beam	heals radiation wounds
+ui.property.restore.shock	heals electrical wounds
+ui.property.restore.plasma	heals deep burns
+ui.property.restore.explosion	heals blast wounds
+ui.property.restore.infectionEffect	heals infection
+ui.property.restore.poisonEffect	heals poisoning
+ui.property.restore.morphineAddiction	heals drug addiction
+ui.property.restore.alcoholAddiction	heals alcohol addiction
+ui.property.restore.nicotineAddiction	heals nicotine addiction
+ui.property.restore.gavaahAddiction	heals gavvakh addiction
+ui.property.restore.coldEffect	heals hypothermia
+ui.property.restore.beamEffect	heals ARS
+ui.property.restore.shockEffect	heals shock
+ui.property.statusEffect.infectionEffect	infection chance
+ui.property.statusEffect.poisonEffect	poisoning chance
+ui.property.statusEffect.morphineAddiction	drug addiction chance
+ui.property.statusEffect.alcoholAddiction	alcohol addiction chance
+ui.property.statusEffect.nicotineAddiction	nicotine addiction chance
+ui.property.statusEffect.gavaahAddiction	gavvakh addiction chance
+ui.property.statusEffect.coldEffect	hypothermia chance
+ui.property.statusEffect.beamEffect	ARS chance
+ui.property.statusEffect.shockEffect	shock chance
+ui.property.BurningTime	Burning time
+ui.property.Regenerate	regeneration
+ui.property.Duration	turns active
+ui.property.ReduceMaxCondition	reduced max. cond.
+ui.property.RestoreMaxCondition	restore max. cond.
+ui.property.FixAllWounds	stabilizes all wounds
+ui.property.HealSpecificWound	heals wound
+ui.property.CannotThrow	cannot be thrown
+ui.property.SplashMeleeAttack	attacks nearby
+ui.property.ExploreLevel	explores level
+ui.property.ScatterAngle	scatter
+ui.property.AddServoArm	adds servo-arm slot
+ui.property.Silencer	silencer
+ui.property.AmmoPerShot	ammo per shot
+ui.property.CoverAccuracy	accuracy from cover
+ui.property.SecondarySlot	add. weapon slot
+ui.property.BonusVestSlots	add. fast slots
+ui.property.DodgeChance	dodge chance
+ui.property.SatietyDrain	satiety drain
+ui.property.AllResists	all resists
+ui.property.MaxPainThreshold	max pain threshold
+ui.property.AllDmgToPain	feel no pain
+ui.property.WoundChance	receive wound chance
+ui.property.Pain	pain
+ui.property.SightRange	range
+ui.property.DoWoundChance	chance of injury
+ui.property.DatadiskUnlocksMerc	Unlocks merc
+ui.property.DatadiskUnlocksItem	Unlocks production item
+ui.property.DatadiskUnlocksMercClass	Unlocks class
+ui.property.ActionPerTurn	action per turn
+ui.property.ActionCost	action cost
+ui.property.InventoryForbidden	inventory forbidden
+ui.property.InteractionsForbiden	interactions forbidden
+ui.property.InventoryUseCost	inventory {0} cost
+ui.property.InteractionsUseCost	interactions {0} cost
+ui.property.RegenerationPerTurn	regeneration {0} HP/turn
+ui.property.NoEffect	no effect
+ui.property.AtrophyPerTurn	atrophy {0} HP/turn
+ui.property.StunPerTurn	stun {0} turn
+ui.property.StarvationLimit	starvation limit
+ui.property.PainThresholdLimit	pain threshold limit
+ui.property.MissionsComplete	missions complete
+ui.property.MissionObjective	mission goal
+ui.property.TurretHealth	Deployables health
+ui.property.TurretDamage	Deployables damage
+ui.property.GrenadeDamage	Grenade damage
+ui.property.NoticeHiddenEnemies	Notices hidden enemies
+ui.property.WeaponRange	Weapon range
+ui.property.SprintAccuracyDebuff	Sprint affects accuracy
+ui.property.ThrowbackDistance	knockback distance
+ui.property.AllConsumablesStack	Item capacity
+ui.property.WeightAffectDodge	Weight affects dodge
+ui.property.AllWeaponCondition	Weapon Durability
+ui.property.FireDuration	Fire Duration
+ui.property.CorpseBonusItemsCount	Items from enemies
+ui.property.RangeCritChance	Ranged сrit. chance
+ui.property.IgnoreInfection	Ignores infections
+ui.property.ShardDamage	Destruction Damage
+ui.property.ShellAmmoDamage	Shotgun ammo damage
+ui.property.IgnorePain	Feels no pain
+ui.property.AllDamage	All Damage
+ui.property.AlreadyUnlockedDatadisk	already unlocked
+ui.property.AlreadyUnlockedUltimate	The contract has already been signed
+ui.property.RemovesUltimate	Break the contract with the Quasimorph
+ui.property.SkullQuasimorphTax	Quasimorphosis penalty
+ui.property.StationStatus	Status
+ui.property.StationOwner	Owner
+ui.property.StationTotalTech	Technology
+ui.property.StationTechPerWeek	Tech/week
+ui.property.StationTotalPower	Power
+ui.property.StationPowerPerWeek	Power/week
+ui.property.RequiredItems	Required items
+ui.property.TimeRemains	Time remains
+ui.property.MissionDifficulty	Difficulty
+ui.property.MissionRewardPoints	Reward
+ui.property.HumansKilled	human killed
+ui.property.QuasimorphKilled	Quasimorphs killed
+ui.property.StationsCount	Assets
+ui.property.MissionCustomer	Beneficiary
+ui.property.ThrowIsPierce	Piercing Throw
+ui.property.ThrowAutoHit	Accurate throw
+ui.property.DoAmputationOnWound	Amputation due to injury
+ui.property.BleedWoundBonusDamage	Severe bleeding
+ui.property.FractureWoundBonusDamage	Severe fractures
+ui.property.WeaponPainDamageMult	Pain Damage
+ui.property.ExtraThrowbackRange	Add. knockback range
+ui.property.ExtraObstaclePierce	Add. damaging elements
+ui.property.Drunk	Intoxication
+ui.property.IncreaseMaxHealth	Max. health
+ui.property.Attackers	Aggressor
+ui.property.RemovesFire	Extinguishes fire
+ui.property.ToxicPuddleChance	Pollution chance
+ui.property.CritDamage	Crit damage
+ui.property.QuasimorphBaronsKilled	barons killed
+ui.property.ExpiresAfter	Spoil after
+ui.property.Reputation	Reputation
+ui.property.TurnsToActivate	turns to activate
+ui.property.DamageBonus	Damage bonus
+ui.property.HealAllWounds	Heals all wounds
+ui.property.ItemWeight	Item weight
+ui.property.TotalItemsWeightMult	Weight modifier
+ui.property.BartherResource	Barter item
+ui.property.Resource	Resource
+ui.property.Container	Container
+ui.property.Repair_all	Fixes everything
+ui.property.Repair_cloth	Fixes cloth
+ui.property.Repair_armor	Fixes medium armor
+ui.property.Repair_heavy_armor	Fixes heavy armor
+ui.property.Repair_moon_armor	Fixes lunar armor
+ui.property.Repair_venus_armor	Fixes Venusian armor
+ui.property.Repair_trash_armor	Fixes makeshift armor
+ui.property.Repair_weapon	Fixes firearms
+ui.property.Repair_engineering_weapon	Fixes tools
+ui.property.Repair_tech_weapon	Fixes energy weapons
+ui.property.Repair_trash_weapon	Fixes makeshift weapons
+ui.property.Repair_venus_weapon	Fixes Venusian weapons
+ui.property.Repair_moon_weapon	Fixes lunar weapons
+ui.property.Repair_blunt_melee	Fixes blunt weapons
+ui.property.Repair_pierce_melee	Fixes cut weapons
+ui.property.Repair_BluntTechnical	Fixes powered weapons
+ui.property.HealStatusEffect	Heal status effect
+ui.property.AddictionChance	Chance to get addiciton
+ui.property.PlayerDeathStat	Deaths
+ui.property.AllyKilledStat	Allies killed
+ui.property.ChipUnlockedStat	Chips unlocked
+ui.property.TotalIncomeStat	Total net worth
+ui.property.AmputationGetStat	Amputations get
+ui.property.AmputationDoneStat	Amputations done
+ui.property.CannibalismStat	Cannibalism acts
+ui.property.MagnumPerkStatus	Status
+ui.property.SecondChance	Second chance
+ui.property.BatteryAmmoDamage	Battery Damage
+ui.property.HeavyAmmoBleedDamage	Bleed Damage
+ui.property.ElementalResistPercent	Elemental Resist
+ui.property.ArmorPenetration	Armor Penetration
+ui.property.QmorphEffect	Q-morphosis affects
+ui.property.Conversion	Enemy conversion
+ui.property.PactCooldown	Pact Cooldown
+ui.property.PactQmorphDebuff	Pact Cost
+ui.property.ShockEffect	Shock Effect
+ui.property.BeamEffect	Beam Effect
+ui.property.ColdEffect	Cold Effect
+ui.property.EnemyCount	Enemy Count
+ui.property.FoodRegeneration	Satiety HP Regeneration
+ui.property.FovLookAngleMult	Field of view
+ui.property.WoundChanceOnPierce	Wound-inflicting pierce
+ui.property.OffSlotCritChance	Backup Gun
+ui.property.RampUpShot	Ramp Up Shot
+ui.property.CritPainDamageMult	Painful crits
+ui.property.MinDmgCapBonus	Damage Through Armor
+ui.property.CreaturePierceBonus	Pierce chance
+ui.property.DestroyJammers	Anti-jammers
+ui.property.SpotQuasimorphs	Spots quasimorphs
+ui.property.ReviveHumans	Revives humans
+ui.property.IncomeDamage	Incoming damage
+ui.property.DoAmputationChance	Amputation chance
+ui.context.Drop	drop
+ui.context.Take	take
+ui.context.Equip	equip
+ui.context.Unequip	unequip
+ui.context.Use	use
+ui.context.Reload	reload
+ui.context.UnloadAmmo	unload ammo
+ui.context.Eat	eat
+ui.context.Open	open
+ui.context.Block	block
+ui.context.MeleeAttack	attack
+ui.context.UseAutodoc	use autodoc
+ui.context.RechargeBatteryCell	recharge (x5 battery cell)
+ui.context.UseScaner	use scanner
+ui.context.HealAllWounds	Heal all wounds
+ui.context.FixWound	stabilize wound
+ui.context.ThrowWeapon	throw weapon
+ui.context.Amputate	amputate
+ui.context.Disassemble	disassemble
+ui.context.Repair	repair
+ui.context.DisassembleAll	disassemble all
+ui.context.DisassembleX1	disassemble x1
+ui.context.SplitStacks	divide
+ui.context.SplitStacksConfirm	divide
+ui.context.UnlockDatadisk	unlock chip
+ui.context.SpillOnTheFloorX1	spill fuel x1
+ui.context.SpillOnTheFloorX5	spill fuel x5
+ui.context.ApplySkull	Absorb
+ui.context.RemoveSkull	Break the pact
+ui.context.StartProduction	start production
+ui.context.RemoveFire	Extinguish
+ui.context.Craft	craft item
+ui.context.no_food	food is unavailable
 item.antibiotics.name	antibiotic
 item.antibiotics.shortdesc	medication
 item.antiradin.name	antiradin
@@ -1884,6 +2860,7 @@ item.daydream_chem_vest.name	Hazmat jacket
 item.daydream_chem_vest.shortdesc	Сhem body protection
 item.daydream_armored_vest.name	Eliminator
 item.daydream_armored_vest.shortdesc	Strengthen jacket
+	Chaqueta reforzada
 item.sl_power_armor.name	Prophet Pattern
 item.sl_power_armor.shortdesc	Power armor
 item.mercury_armor.name	Mirror armour
@@ -1907,6 +2884,8 @@ item.moon_heavy_armor.shortdesc	Moon armor
 item.moon_armor.name	Kasten-brust
 item.moon_armor.shortdesc	Moon armor
 item.core_hard_vest.name	Stakhanovets
+	Stajanovista
+	
 item.core_hard_vest.shortdesc	Rock-solid workwear jacket
 item.core_power_armor.name	Gehenna
 item.core_power_armor.shortdesc	Power armor
@@ -1915,6 +2894,7 @@ item.employee_vest.shortdesc	Workwear
 item.spider_armor.name	Chitin shell
 item.spider_armor.shortdesc	Primitive shell
 item.rw_militia_helmet.name	Commando
+	Comando
 item.rw_militia_helmet.shortdesc	Tactical helmet
 item.rw_warlord_helmet.name	Warlord Pattern
 item.rw_warlord_helmet.shortdesc	Power helmet
@@ -1924,8 +2904,12 @@ item.svn_heavy_helmet.name	Myrmidon
 item.svn_heavy_helmet.shortdesc	Heavy armor helmet
 item.daydream_chem_helmet.name	Hazmat helmet
 item.daydream_chem_helmet.shortdesc	Сhem head protection
+	
 item.daydream_armored_helmet.name	Eliminator
+	Eliminador
 item.daydream_armored_helmet.shortdesc	Special strengthen helmet
+	Casco reforzado especial
+	
 item.sl_power_helmet.name	Prophet
 item.sl_power_helmet.shortdesc	Power helmet
 item.mercury_diadema.name	Tiara
@@ -1941,6 +2925,7 @@ item.church_power_helmet.shortdesc	Power helmet
 item.church_head_device.name	Spiritual bonds
 item.church_head_device.shortdesc	Mind control device
 item.pb_hard_hat.name	Foreman
+	Capataz
 item.pb_hard_hat.shortdesc	Safety helmet with ear pieces
 item.pb_heavy_helmet.name	Ironclad
 item.pb_heavy_helmet.shortdesc	Heavy helmet
@@ -1951,7 +2936,9 @@ item.franch_heavy_mask.shortdesc	Battle closed helmet
 item.moon_helmet.name	Bascinet
 item.moon_helmet.shortdesc	Moon Helmet
 item.core_hard_hat.name	Stakhanovets
+	Stajanovista
 item.core_hard_hat.shortdesc	Rock-solid work cap
+	Gorra de trabajo sólida
 item.core_power_helmet.name	Gehenna
 item.core_power_helmet.shortdesc	Power helmet
 item.employee_hat.name	Handyman
@@ -1959,6 +2946,7 @@ item.employee_hat.shortdesc	Workwear cap
 item.spider_hemlet.name	Chitin shell
 item.spider_hemlet.shortdesc	Primitive helmet
 item.rw_militia_pants.name	Commando
+	Comando
 item.rw_militia_pants.shortdesc	Tactical pants
 item.rw_warlord_pants.name	Warlord Pattern
 item.rw_warlord_pants.shortdesc	Power pants
@@ -1970,6 +2958,7 @@ item.daydream_chem_pants.name	Hazmat pants
 item.daydream_chem_pants.shortdesc	Сhem legs protection
 item.daydream_armored_pants.name	Eliminator
 item.daydream_armored_pants.shortdesc	Special strengthen pants
+	Pantalones especiales reforzados
 item.sl_power_pants.name	Prophet Pattern
 item.sl_power_pants.shortdesc	Power pants
 item.ancom_police_pants.name	Arbiter
@@ -2021,6 +3010,7 @@ item.pb_heavy_boots.shortdesc	Armored boots
 item.franch_boots.name	Pointsman
 item.franch_boots.shortdesc	Armored boots
 item.franch_heavy_boots.name	Cerberus
+	Cerbero
 item.franch_heavy_boots.shortdesc	Battle boots
 item.moon_boots.name	Gothic
 item.moon_boots.shortdesc	Moon sabatons
@@ -2178,6 +3168,53 @@ item.azt_fistclaw.name	Tripatekpatl
 item.azt_fistclaw.shortdesc	Clawed Glove
 item.quest_goldenSkull.name	Skull of Destiny
 item.quest_goldenSkull.shortdesc	Mysterious artifact
+ui.qmorphos.stage.stage0_somnia	somnia
+ui.qmorphos.stage.stage1	grasp
+ui.qmorphos.stage.stage2	intrusion
+ui.qmorphos.stage.stage3	plenum
+ui.qmorphos.stage.stage4	alteration
+ui.qmorphos.stage.stage5	q-morphos
+ui.qmorphos.stage.stage_no_bramafatura	absentia
+ui.damage.blunt	blunt
+ui.damage.fire	fire
+ui.damage.cold	cold
+ui.damage.infection	infection
+ui.damage.pierce	piercing
+ui.damage.lacer	cut
+ui.damage.poison	poison
+ui.damage.shock	shock
+ui.damage.beam	beam
+ui.damage.plasma	plasma
+ui.damage.explosion	explosive
+terminal.tutorial0.desc	<color=#FFFEC1>Recruit</color>, welcome to <color=#FFFEC1>Rogue City</color>! This station was the tool of thieving vampires, sucking the juices from the free people of the <color=#FFFEC1>Solar System</color>. It is now turned to the benefit of the working people. You made the right choice when you decided to leave your employer and then get to the nearest <color=#FFFEC1>Civilian Resistance</color> base by any means necessary. No more corporate slavery! You are to go through reintegration into organized society. Soon you will become a <color=#FFFEC1>citizen</color> again. Right now you need to go to the training class, where you will gradually start to learn what it means to become a full member of the <color=#FFFEC1>Civil Resistance</color>. I welcome you and thank you for making the right choice. <color=#FFFEC1>Issahar</color>.
+terminal.tutorial1.desc	<color=#FFFEC1>Issahar</color>, you should start showing results in the <color=#FFFEC1>Internal System</color> as soon as possible. You are conducting open combat operations, sacrificing many of our <color=#FFFEC1>colnodes</color> that could be useful to us at <color=#FFFEC1>Saturn</color> or in our business at transneptunian sites. You promised to strike a sensitive blow to <color=#FFFEC1>RealWare</color> and reveal the truth about <color=#FFFEC1>AnCom</color>. But you did not strike <color=#FFFEC1>RealWare</color>, and your theory about <color=#FFFEC1>AnCom</color> may be incorrect. You must conduct an immediate review of the rational use of resources in your sector. <color=#FFFEC1>Lia</color>.
+terminal.tutorial2.desc	"<color=#FFFEC1>Rogue City</color> is secure enough to prepare messages for routing into the <color=#FFFEC1>External System</color>. I have successfully infiltrated <color=#FFFEC1>L-BSA</color> as a security guard. Some time ago, there was an attack here by <color=#FFFEC1>HIS ""Magnum""</color> to extract some important prisoner. I managed to establish that <color=#FFFEC1>HIS</color> acted as contractors for <color=#FFFEC1>AnCom</color>. The chances that my theory is correct have sharply increased. <color=#FFFEC1>AnCom</color> is more than just a publisher. Unfortunately, <color=#FFFEC1>L-BSA</color> is now open to attack, and its owners will change. I'm not sure if I can continue to provide relevant information. <color=#FFFEC1>Issahar</color>."
+terminal.tutorial3.desc	<color=#FFFEC1>Issahar</color>, your demand for more <color=#FFFEC1>Colnodes</color> is outrageous. You work within the <color=#FFFEC1>Internal System</color>. You have <color=#FFFEC1>Mars</color> at your disposal! You need to manage with available resources and focus on recruitment. <color=#FFFEC1>Issahar</color>, your recent behavior is causing concern. Perhaps too many <color=#FFFEC1>Colnodes</color> can lead to disintegration of <color=#FFFEC1>personality</color>. We will conduct the appropriate research. Remember that the social must always prevail over the personal. <color=#FFFEC1>Lia</color>.
+terminal.tutorial4.desc	The number of counter-intelligence agents in the streets of RealWare<color=#FFFEC1>InterCity</color> is extremely high, my <color=#FFFEC1>colnodes</color> are constantly at risk of being exposed. From now on, I'm going to keep one bullet in <color=#FFFEC1>Liberator</color> for myself. The risk of our secrets falling into the hands of <color=#FFFEC1>RealWare</color> is not justified. Especially since this is not our priority target in the <color=#FFFEC1>Internal System</color>. <color=#FFFEC1>Issahar</color>.
+terminal.communityMission1.desc	Station Zero, <color=#FFFEC1>Manning</color> analysis. From this point it is worth starting a report of a systematic study of quasimorphosis. The important part: “No pathogens were isolated from the group. No bacteria, viruses, fungi, or higher parasites. <color=#FFFEC1>I know for sure</color> that hormonal imbalances are a consequence of their madness and not the cause. None of those interrogated could describe the reasons why they decided to join the cult. Even the organizers say that this idea just came to them. Some patients report whispers from another world. The phenomenon has no physical cause. But there is a physical effect. I propose to call this phenomenon quasimorphosis.” Learn by heart.<br><br><color=#FFFEC1>Dr. Eipschwitz</color>.
+terminal.communityMission2.desc	Why don't we find alive beings in <color=#FFFEC1>phased buildings</color>? Expedition Sector Louhi-XV: Dr. Peabody has confirmed that Object 0-177C is a sarcophagus. Very similar to a Nahua sarcophagus. Moreover, Peabody insisted that it was sealed as if the funeral rites had already been completed. But the sarcophagus is empty. Where should we look for quasimorphs?<br><br><color=#FFFEC1>Dr. Eipschwitz</color>.
+terminal.communityMission3.desc	"<color=#FFFEC1>Eccollapse</color>. It is the answer to my question. Hypothesis: <color=#FFFEC1>phasing</color> - transition of inanimate objects from pleroma to kenoma; eccollapse - the transition of living objects from <color=#FFFEC1>pleroma</color> to <color=#FFFEC1>kenoma</color>. Does this mean that quasimorphs are in some sense ""living objects""?<br><br><color=#FFFEC1>Dr. Eipschwitz</color>.<br><br>Project Dislocator Note: If my theory of movement into the pleroma is correct, can I return Tifton combatants back without eccolapse? It will be funny to watch how the mercenaries get back into the kenoma through the bodies of people.<br><br>Additional: talk to the authorities about buying prisoners in <color=#FFFEC1>L-BSA</color>."
+terminal.communityMission4.desc	"Does the existence of phased sarcophagi means that quasimorphs ""die"" in their <color=#FFFEC1>bramfaturas</color>? Maybe my hypothesis was wrong from the very beginning. It is necessary to immediately request from Peabody an array of hypotheses about the possible purpose of objects of type 0-177C other than funeral ones.<br><br><color=#FFFEC1>Dr. Eipschwitz</color>."
+terminal.communityMission5.desc	The deciphering of stone R-98-21 is progressing. The <color=#FFFEC1>Knorozov</color> tables still fit after transposition. An analytical analysis of the result is next. From what catches the eye, <color=#FFFEC1>the Silver Orb</color> is mentioned there. Сosmography of its location relative to Venus shows that it may be Earth.<br><br><color=#FFFEC1>Dr. Eipschwitz</color>.
+terminal.communityMission6.desc	The report was sent to Fresco's board of directors. Now they will definitely finance my project on Mercury. However, I can't wait to see what the corporate intelligence officers bring back from Earth. I hope <color=#FFFEC1>Interdict</color> will not interfere, and the cargo will arrive on time.<br><br><color=#FFFEC1>Dr. Eipschwitz</color>.
+terminal.communityMission7.desc	I hope the archive ends up in good hands. I am removing the security levels available to me from <color=#FFFEC1>Dr. Eipschwitz's</color> personal journal. These... Beings... They are already appearing on the streets of Oddibjord-3. Better death than going through what happened to the guys... The last thing I can do is make the texts of this monster public. The communication channel with <color=#FFFEC1>SBN</color> is not working. The texts will be in the terminals, I hope sooner or later the one who will save humanity will get to them.<br><br><color=#FFFEC1>Archivist, Randall Baranov, Star-4 access</color>.
+terminal.communityMission8.desc	<color=#FFFEC1>Quasimorphs</color> are not even energy, they are a completely new type of existence. I believe that by moving to Earth they must have either acquired a body without eccolapse or somehow become attached to a material object. My research on the <color=#FFFEC1>Dislocator</color> will already allow me to create a prototype of a quasimorphic detector. I think I won’t be mistaken if I propose to the management to send a reconnaissance group to Mexico City or another altepetl.<br><br><color=#FFFEC1>Dr. Eipschwitz</color>.
+terminal.dislocatorMission1.desc	<color=#FFFEC1>Gad</color>, I express my gratitude for your help in <color=#FFFEC1>The Internal System</color>. You carried out Operation Gilead brilliantly. Please, maintain control of <color=#FFFEC1>Flat Obsidian</color> for at least a little while longer. Sending data about <color=#FFFEC1>the Device</color> over the Network is prohibited. Send a courier. <color=#FFFEC1>Issachar</color>
+terminal.dislocatorMission2.desc	<color=#FFFEC1>Issachar</color>, how can you say that HIS of <color=#FFFEC1>AnCom</color> corporation is not monitoring Venus for the purpose of reselling information, but is somehow exercising control over the Invasion ? Your theory from here, from the core of the System, looks even less reliable than from the rings of Saturn. <color=#FFFEC1>Gad</color>
+terminal.dislocatorMission3.desc	The courier has arrived in <color=#FFFEC1>Rogue City</color>. I'm working with data. I ask you to assist me on Mercury for at least some more time. I look forward to your cooperation, <color=#FFFEC1>Gad</color>. <color=#FFFEC1>Issachar</color>
+terminal.dislocatorMission4.desc	Leave Mercury immediately and return to <color=#FFFEC1>Saturn</color>. <color=#FFFEC1>Issachar</color> has no authority to give you orders, <color=#FFFEC1>Gad</color>. We are aware of <color=#FFFEC1>the Device</color>. Immediately deconstruct it and take with you all the components that you consider significant for analysis. <color=#FFFEC1>Lia</color>
+terminal.dislocatorMission5.desc	I've intercepted the message from <color=#FFFEC1>the Council</color>. Don't ask questions. <color=#FFFEC1>Gad</color>, I ask you to trust me. We will be able to use the <color=#FFFEC1>Dislocator</color> to fight the Regime. Stay on <color=#FFFEC1>Mercury</color>, I'll think of something soon. <color=#FFFEC1>Issachar</color>
+terminal.dislocatorMission6.desc	Say <color=#FFFEC1>the Emerald Word</color> and you will live forever under the banner of the green shine. If you refuse I will send my slaves to you to extinguish your sick consciousness forever. <color=#FFFEC1>Tezctlan</color>
+terminal.dislocatorMission7.desc	<color=#FFFEC1>Issachar</color>, you should make a decision as soon as possible. Quasimorphic distortions occur in the communication systems. In addition there are signs of bearing <color=#FFFEC1>Flat Obsidian</color> from HIS without a corporate transponder. <color=#FFFEC1>Gad</color>
+terminal.dislocatorMission8.desc	If you do not immediately leave <color=#FFFEC1>Mercury</color> then <color=#FFFEC1>the Council</color> will raise the question of declaring you and <color=#FFFEC1>comrade Issachar</color> renegades. Your help is objectively needed on <color=#FFFEC1>Saturn</color>. Stop testing the patience of <color=#FFFEC1>the Council</color>, <color=#FFFEC1>Gad</color>. <color=#FFFEC1>Lia</color>
+terminal.communityStone1.desc	To the new king who received the kingdom from <color=#FFFEC1>Tezctlan</color>. The Orders transfer power to you until Tezctlan returns from the pilgrimage to <color=#FFFEC1>the Silver Orb</color>. You are bound by the oaths of Jaguar, Eagle, Python, and the rest of the free inhabitants of Gannix. We wait and believe that the hylonaut (traveller to earth - footnote by <color=#FFFEC1>Eipschwitz</color>) will return and again take the Emerald Kingdom into his hands.<br><br>Before the Reaper of the Harvest, I answer to the Orders, <color=#FFFEC1>Marquis Decarabia</color>, renounce the honor of waiting for Tezctlan on the obsidian throne. May Gannix live for an eon without a king. Free orders under the glow of the red-golden eye of <color=#FFFEC1>Gagtungr</color>.<br><br>No one has ever returned from <color=#FFFEC1>the Silver Orb</color>. We don't know how Tezctlan will be regained.
+terminal.dragonReborn1.desc	Report date 993008. The inability to take a sample from <color=#FFFEC1>the Monolith</color> forces us to work with it holistically. We are now testing the assumption that this is a <color=#FFFEC1>quasimorph</color>. Second hypothesis: the existence of a quasimorph on <color=#FFFEC1>Mars</color> means that there is still a <color=#FFFEC1>bramfatura</color> here, but it is much more hidden than the others. On the other hand, if all the quasimorphs of this bramfatura are as inert as the Monolith, then there may already be many of them around us, but we mistake them for the natural structures of Mars. <color=#FFFEC1>Dr. Dennett</color>
+terminal.dragonReborn2.desc	Report date 991009. No radiography of <color=#FFFEC1>the Monolith</color> gives clear results. At this point, one thing can be said: the Monolith does not come from our world. Perhaps it was brought here from another planet after <color=#FFFEC1>phasing</color> there. Or <color=#FFFEC1>Mars</color> has a hidden <color=#FFFEC1>bramfatura</color>. Third hypothesis: Mars <color=#FFFEC1>had</color> bramfatura and the Monolith phased befire it disappeared. Corollary: bramfaturas may disappear. Hypothesis to be tested: whether bramfaturas can occur. <color=#FFFEC1>Dr. Dennett</color>
+terminal.dragonReborn3.desc	Report date 992109. A report for the management has been generated and submitted. There is no way to study <color=#FFFEC1>the Monolith</color> more than we already have. Perhaps it will remain a mystery to <color=#FFFEC1>RealWare</color> for decades to come. <color=#FFFEC1>Dr. Dennett</color>
+terminal.dragonReborn4.desc	Report date 991111. The device that was given to us allows us to gain a much deeper understanding of the nature of the Monolith. I'd like to know which corporation is so far advanced in quasimorphic research. RealWare has nothing like it. The data is already being brought together. <color=#FFFEC1>Dr. Dennett</color>
+terminal.dragonReborn5.desc	Report date 991113. My hypothesis was correct. <color=#FFFEC1>The Monolith</color> is a <color=#FFFEC1>quasimorph</color>. At least all the key metrics match the data that was provided to our team with the device. However, I have to decipher <color=#FFFEC1>what state</color> this quasimorph is in. What do these shifts to the left along the Q-spectrum mean? <color=#FFFEC1>Dr. Dennett</color>
+	Datum des Berichts 991113. Meine Hypothese war korrekt. <color=#FFFEC1>Monolith</color> ist ein <color=#FFFEC1>Quasimorph</color>. Zumindest stimmen alle Hauptkennzahlen mit den Daten überein, die unserem Team mit dem Gerät zur Verfügung gestellt wurden. Ich muss jedoch entschlüsseln, <color=#FFFEC1>in welchem Zustand</color> sich dieser Quasimorph befindet. Was bedeuten diese Verschiebungen nach links im Q-Spektrum? <color=#FFFEC1>Doktor Dennett</color>
+terminal.dragonReborn6.desc	Report date 991225. Usually at Christmas people give gifts, but they were taken away from us. Yesterday we handed over the device to security. Now all we have to do is process the data. Hypothesis four: can <color=#FFFEC1>quasimorphs</color> sleep. Hypothesis five: can quasimorphs <color=#FFFEC1>be dead</color> in a way that leave bodies. Perhaps the Monolith is a dead quasimorph. <color=#FFFEC1>Dr. Dennett</color>
 firemode.melee.caption	attack mode
 firemode.range.caption	fire mode
 firemode.knife_single.name	hit
@@ -2897,6 +3934,7 @@ station.PromisedLand.name	Promised Land
 station.PromisedLand.shortname	PRO
 station.PromisedLand.type	Hydroponic Farm
 station.PromisedLand.desc	This is hydroponic farm for growing natural food crops. There are hectares of earth-type arable land covered by a geodesic dome.
+ 大地测量圆顶覆盖。	
 station.VanDeGraaff.name	Van de Graaff
 station.VanDeGraaff.shortname	VAN
 station.VanDeGraaff.type	Observatory
@@ -2947,6 +3985,7 @@ mission.Tutorial.stage4.name	Engine room
 mission.Tutorial.after	It's over. The Magnum has sustained minor damage. Basically, it won't affect the functionality of the equipment and crew, so we can go where we want and do what we want. The system is open to us.
 mission.SecondTutorial.name	Taste of revenge
 mission.SecondTutorial.briefing	Keep in mind that we're not getting paid for this. Taking a contract would have been a better idea. <color=#FFFEC1>Civil Resistance</color> has set up a field camp in <color=#FFFEC1>Rogue City</color>. Training complexes, as well as some kind of medical facilities or laboratories. It's unclear. Sometimes messages flash in the <color=#FFFEC1>CBN</color> that terrorists are accumulating rare and valuable items. Weapons and equipment for their 'liberation struggle'. Maybe we can justify the time spent here if we're lucky. So let's get even, but let's do it with benefit. Get to their anti-space defense complex and destroy it. After that, the pilots will direct <color=#FFFEC1>‘Magnum’</color> to the cargo dock in <color=#FFFEC1>Rogue City</color> and we will start loading everything that's lying there.
+	Denken Sie daran, dass wir dafür nicht bezahlt werden. Einen Vertrag abzuschließen, wäre eine bessere Idee gewesen. Das <color=#FFFEC1>Bürgerwiderstand</color> hat in <color=#FFFEC1>Schurkenstadt</color> ein Feldlager eingerichtet. Trainingskomplexe sowie irgendwelche medizinischen Einrichtungen oder Labore. Es ist unklar. Manchmal erscheinen Nachrichten im <color=#FFFEC1>CBN</color>, dass Terroristen seltene und wertvolle Gegenstände anhäufen. Waffen und Ausrüstung für ihren 'Befreiungskampf'. Vielleicht können wir die hier verbrachte Zeit rechtfertigen, wenn wir Glück haben. Also lasst uns gleichziehen, aber mit Nutzen. Gelangen Sie zu ihrem Anti-Weltraumabwehrkomplex und zerstören Sie ihn. Anschließend werden die Piloten <color=#FFFEC1>‘Magnum’</color> zur Ladedocke in <color=#FFFEC1>Schurkenstadt</color> lenken und wir werden damit beginnen, alles zu laden, was dort liegt.
 mission.SecondTutorial.desc	The Rouge City Station's autonomous missile defense server must be destroyed.
 mission.SecondTutorial.details	The Civil Resistance Colnodes attempted to attack our mobile headquarters. We have successfully fought back and must now counterattack their training center.
 mission.SecondTutorial.objective0	Destroy Rouge City Station's missile defense control center.
