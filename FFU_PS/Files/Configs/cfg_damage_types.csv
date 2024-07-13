@@ -10,6 +10,6 @@ poison	poison	none	false	0	0	0
 cold	cold	coldEffect	false	1	2	0
 explosion	blunt pierce	none	true	0	1	1
 plasma	fire lacer	none	false	0	1	1
-chemical	poison cold	none	true	0	1	1
-particle	beam shock	none	false	0	1	1
+//chemical	poison cold	none	true	0	1	1
+//particle	beam shock	none	false	0	1	1
 #end						

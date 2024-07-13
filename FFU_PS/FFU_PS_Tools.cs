@@ -686,6 +686,7 @@ namespace FFU_Phase_Shift {
         }
 
         public static void LoadLocaleFile(string localeName) {
+            // Ensure that everything is in place
             if (_cntPath == null) { ModLog.Warning($"LoadLocaleFile: content path is undefined!"); return; }
             if (_locInstance == null) { ModLog.Warning($"LoadLocaleFile: locale instance is not referenced!"); return; }
             if (localeName == null) { ModLog.Warning($"LoadLocaleFile: locale name is undefined!"); return; }
@@ -723,6 +724,7 @@ namespace FFU_Phase_Shift {
         }
 
         public static void AddLocaleToDB(Localization.Lang locLang, string locId, string locText) {
+            if (_locInstance == null) { ModLog.Warning($"AddLocaleToDB: locale instance is not referenced!"); return; }
             if (_locInstance.db[locLang].ContainsKey(locId))
                 _locInstance.db[locLang][locId] = locText;
             else _locInstance.db[locLang].Add(locId, locText);
