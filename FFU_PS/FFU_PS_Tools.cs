@@ -686,7 +686,7 @@ namespace FFU_Phase_Shift {
         }
 
         /// <remarks>
-        /// Loads custom localization files and overwrites existing entries, if possible.
+        /// Loads custom localization files. Allows precise overwrite of existing localization entries.
         /// 
         /// <br/><br/><u>Localization File JSON Writing Pattern</u>
         /// <code>{
