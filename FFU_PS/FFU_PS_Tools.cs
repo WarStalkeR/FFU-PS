@@ -709,7 +709,8 @@ namespace FFU_Phase_Shift {
         /// <br/><c>english</c>, <c>russian</c>, <c>portuguese</c>, <c>german</c>, <c>french</c>,
         /// <c>spanish</c>, <br/><c>polish</c>, <c>turkish</c>, <c>korean</c>, <c>japanese</c>, 
         /// <c>chinese_s</c>.
-        /// <br/>If <b>english</b> is set, it will be used as default for other undefined localization entries.
+        /// 
+        /// <br/><br/>If <b>english</b> is set, it will be used as default for other undefined localization entries.
         /// 
         /// <br/><br/>For in-depth analysis of custom localization algorithm please inspect code itself.
         /// </remarks>
