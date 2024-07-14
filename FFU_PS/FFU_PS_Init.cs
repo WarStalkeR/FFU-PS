@@ -33,17 +33,17 @@ namespace FFU_Phase_Shift {
             } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
 
             try { ModLog.Info("Patching: MGSC.InventoryScreen.RefreshItemsList()");
-                var refMethod = AccessTools.Method(typeof(InventoryScreen), "RefreshItemsList");
+                /*var refMethod = AccessTools.Method(typeof(InventoryScreen), "RefreshItemsList");
                 var prefixPatch = SymbolExtensions.GetMethodInfo(() =>
                     ModPatch.RefreshItemsList_FixMissUI(default, default));
-                Mod.Patch(refMethod, new HarmonyMethod(prefixPatch));
+                Mod.Patch(refMethod, new HarmonyMethod(prefixPatch));*/
             } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
 
             try { ModLog.Info("Patching: MGSC.NoPlayerInventoryView.RefreshItemsList()");
-                var refMethod = AccessTools.Method(typeof(NoPlayerInventoryView), "RefreshItemsList");
+                /*var refMethod = AccessTools.Method(typeof(NoPlayerInventoryView), "RefreshItemsList");
                 var prefixPatch = SymbolExtensions.GetMethodInfo(() =>
                     ModPatch.RefreshItemsList_FixShipUI(default));
-                Mod.Patch(refMethod, new HarmonyMethod(prefixPatch));
+                Mod.Patch(refMethod, new HarmonyMethod(prefixPatch));*/
             } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
 
             // Patching Complete
