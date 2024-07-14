@@ -115,5 +115,40 @@ namespace FFU_Phase_Shift {
             SingletonMonoBehaviour<TooltipFactory>.Instance.HideTooltip();
             return false; // Original function is completely replaced
         }
+
+        // Data disks rework to prioritize unlocking unknown data first
+        public static void CreateComponent_BetterUnlock(ItemFactory __instance, PickupItem item, List<PickupItemComponent> itemComponents, 
+            BasePickupItemRecord itemRecord, bool randomizeConditionAndCapacity, bool isPrimary) {
+            DatadiskRecord datadiskRecord = itemRecord as DatadiskRecord;
+            if (datadiskRecord != null) {
+                var refDatadiskComponent = __instance._componentsCache.Find(x => x is DatadiskComponent) as DatadiskComponent;
+                if (refDatadiskComponent != null) {
+                    List<string> lockedIds = new List<string>();
+                    Mercenaries refMercs = SingletonMonoBehaviour<SpaceGameMode>.Instance.Get<Mercenaries>();
+                    MagnumCargo refCargo = SingletonMonoBehaviour<SpaceGameMode>.Instance.Get<MagnumCargo>();
+                    switch (datadiskRecord.UnlockType) {
+                        case DatadiskUnlockType.ProductionItem: {
+                            foreach (var unlockId in datadiskRecord.UnlockIds)
+                                if (!refCargo.UnlockedProductionItems.Contains(unlockId))
+                                    lockedIds.Add(unlockId);
+                            break;
+                        }
+                        case DatadiskUnlockType.MercenaryClass: {
+                            foreach (var unlockId in datadiskRecord.UnlockIds)
+                                if (!refMercs.UnlockedClasses.Contains(unlockId))
+                                    lockedIds.Add(unlockId);
+                            break;
+                        }
+                        case DatadiskUnlockType.Mercenary: {
+                            foreach (var unlockId in datadiskRecord.UnlockIds)
+                                if (!refMercs.UnlockedMercenaries.Contains(unlockId))
+                                    lockedIds.Add(unlockId);
+                            break;
+                        }
+                    }
+                    if (lockedIds.Count > 0) refDatadiskComponent.SetUnlockId(lockedIds[UnityEngine.Random.Range(0, lockedIds.Count)]);
+                }
+            }
+        }
     }
 }

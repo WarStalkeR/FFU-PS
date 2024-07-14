@@ -663,7 +663,7 @@ spider_poisongland		20	0.1	1	200	Resource
 *broken_weapon		5	0.1	1	500	Resource																						
 plastic		5	0.1	1	200	Resource																						
 powder		1	0.01	1	500	Resource																						
-glass		5	0.05	1	500	Resource																						
+glass		5	0.05	1	200	Resource																						
 metal_tread		10	0.4	1	200	Resource																						
 *tape		20	0.1	1	200	Resource																						
 wire		20	0.2	1	200	Resource																						
@@ -701,8 +701,8 @@ quest_AncomData		0	1	1	1	QuestItem
 quest_secret_data		0	1	1	3	QuestItem																						
 quest_dislocatorDetal		0	1	1	4	QuestItem																						
 quest_goldenSkull		0	1	1	4	QuestItem																						
-regular_food_container		76	2.2	2	10	Container																						
-military_food_container		78	2.2	2	10	Container																						
+regular_food_container		76	2.2	2	20	Container																						
+military_food_container		78	2.2	2	20	Container																						
 luxury_food_container		98	1.5	1	20	Container																						
 water_container		28	1.5	1	20	Container																						
 alcogol_container		87	1.5	1	20	Container																						
