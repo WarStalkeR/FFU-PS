@@ -1,0 +1,30 @@
+{
+	"ui.damage.chemical": {
+		"english": "chemical",
+		"russian": "химический"
+	},
+	"ui.immune.chemical.tooltip": {
+		"english": "chemical immunity",
+		"russian": "Иммун. к хим. урону"
+	},
+	"ui.property.DamageTypeChemical": {
+		"english": "dmg type",
+		"russian": "тип урона"
+	},
+	"ui.property.restore.chemical": {
+		"english": "heals chemical burns",
+		"russian": "лечит химические ожоги"
+	},
+	"ui.resist.chemical.tooltip": {
+		"english": "chemical resist {0}",
+		"russian": "сопр. хим. урону {0}"
+	},
+	"weapon.subclass.Chemical": {
+		"english": "Chemical",
+		"russian": "Химическое"
+	},
+	"woundtype.chemical": {
+		"english": "chemical burn",
+		"russian": "хим. ожог"
+	}
+}

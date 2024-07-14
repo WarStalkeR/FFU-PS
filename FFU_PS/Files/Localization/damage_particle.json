@@ -1,0 +1,30 @@
+{
+	"ui.damage.particle": {
+		"english": "particle",
+		"russian": "пучковый"
+	},
+	"ui.immune.particle.tooltip": {
+		"english": "particle immunity",
+		"russian": "Иммун. к пуч. урону"
+	},
+	"ui.property.DamageTypeParticle": {
+		"english": "dmg type",
+		"russian": "тип урона"
+	},
+	"ui.property.restore.particle": {
+		"english": "heals particle rupture",
+		"russian": "лечит пучковые разрывы"
+	},
+	"ui.resist.particle.tooltip": {
+		"english": "particle resist {0}",
+		"russian": "сопр. пуч. урону {0}"
+	},
+	"weapon.subclass.Particle": {
+		"english": "Particle",
+		"russian": "Пучковое"
+	},
+	"woundtype.particle": {
+		"english": "particle rupture",
+		"russian": "пуч. разрыв"
+	}
+}

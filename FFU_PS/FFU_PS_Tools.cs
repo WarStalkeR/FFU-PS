@@ -685,6 +685,34 @@ namespace FFU_Phase_Shift {
             _cfgLoader.ProcessConfigFile(cfgPath, _verbose);
         }
 
+        /// <remarks>
+        /// Loads custom localization files and overwrites existing entries, if possible.
+        /// 
+        /// <br/><br/><u>Localization File JSON Writing Pattern</u>
+        /// <code>{
+        ///     "translation.id.1": {
+        ///         "language.id.a": "localized_string_1",
+        ///         "language.id.b": "localized_string_2"
+        ///     },
+        ///     "translation.id.2": {
+        ///         "language.id.a": "localized_string_3",
+        ///         "language.id.b": "localized_string_4"
+        ///     }
+        /// }</code>
+        /// 
+        /// <br/><br/><u>Localization Settings Information</u>
+        /// <br/><c>translation.id</c> - corresponds to the identifier of localized value.
+        /// <br/><c>language.id</c> - the language of localized value. Refer to the list below.
+        /// <br/><c>localized_string</c> - localized string itself that will be rendered in-game.
+        /// 
+        /// <br/><br/><u>Allowed Localization Languages</u>
+        /// <br/><c>english</c>, <c>russian</c>, <c>portuguese</c>, <c>german</c>, <c>french</c>,
+        /// <c>spanish</c>, <br/><c>polish</c>, <c>turkish</c>, <c>korean</c>, <c>japanese</c>, 
+        /// <c>chinese_s</c>.
+        /// <br/>If <b>english</b> is set, it will be used as default for other undefined localization entries.
+        /// 
+        /// <br/><br/>For in-depth analysis of custom localization algorithm please inspect code itself.
+        /// </remarks>
         public static void LoadLocaleFile(string localeName) {
             // Ensure that everything is in place
             if (_cntPath == null) { ModLog.Warning($"LoadLocaleFile: content path is undefined!"); return; }
@@ -692,35 +720,47 @@ namespace FFU_Phase_Shift {
             if (localeName == null) { ModLog.Warning($"LoadLocaleFile: locale name is undefined!"); return; }
             string localePath = Path.Combine(_cntPath, ModMain.PathLocale, localeName);
             if (!File.Exists(localePath)) { ModLog.Warning($"LoadLocaleFile: locale file doesn't exist!"); return; }
-            string localeId = localeName.Replace(".json", string.Empty);
 
-            // Parse default language
             JSONNode localeFile = JSON.Parse(File.ReadAllText(localePath));
-            if (localeFile["english"] == null) { ModLog.Warning($"LoadLocaleFile: default 'english' locale missing!"); return; }
-            string localeFallBack = localeFile["english"];
-            AddLocaleToDB(Localization.Lang.EnglishUS, localeId, localeFallBack);
+            foreach (var locNode in localeFile.AsObject) {
+                // Parse default language
+                if (locNode.Value["english"] != null)
+                    AddLocaleToDB(Localization.Lang.EnglishUS, locNode.Key, locNode.Value["english"].Value);
+                bool hasDefault = locNode.Value["english"] != null;
+                string localeDefault = locNode.Value["english"]?.Value;
 
-            // Parse other languages
-            if (localeFile["russian"] != null) AddLocaleToDB(Localization.Lang.Russian, localeId, localeFile["russian"]);
-            else AddLocaleToDB(Localization.Lang.Russian, localeId, localeFallBack);
-            if (localeFile["portuguese"] != null) AddLocaleToDB(Localization.Lang.BrazilianPortugal, localeId, localeFile["portuguese"]);
-            else AddLocaleToDB(Localization.Lang.BrazilianPortugal, localeId, localeFallBack);
-            if (localeFile["german"] != null) AddLocaleToDB(Localization.Lang.German, localeId, localeFile["german"]);
-            else AddLocaleToDB(Localization.Lang.German, localeId, localeFallBack);
-            if (localeFile["french"] != null) AddLocaleToDB(Localization.Lang.French, localeId, localeFile["french"]);
-            else AddLocaleToDB(Localization.Lang.French, localeId, localeFallBack);
-            if (localeFile["spanish"] != null) AddLocaleToDB(Localization.Lang.Spanish, localeId, localeFile["spanish"]);
-            else AddLocaleToDB(Localization.Lang.Spanish, localeId, localeFallBack);
-            if (localeFile["polish"] != null) AddLocaleToDB(Localization.Lang.Polish, localeId, localeFile["polish"]);
-            else AddLocaleToDB(Localization.Lang.Polish, localeId, localeFallBack);
-            if (localeFile["turkish"] != null) AddLocaleToDB(Localization.Lang.Turkish, localeId, localeFile["turkish"]);
-            else AddLocaleToDB(Localization.Lang.Turkish, localeId, localeFallBack);
-            if (localeFile["korean"] != null) AddLocaleToDB(Localization.Lang.Korean, localeId, localeFile["korean"]);
-            else AddLocaleToDB(Localization.Lang.Korean, localeId, localeFallBack);
-            if (localeFile["japanese"] != null) AddLocaleToDB(Localization.Lang.Japanese, localeId, localeFile["japanese"]);
-            else AddLocaleToDB(Localization.Lang.Japanese, localeId, localeFallBack);
-            if (localeFile["chinese_s"] != null) AddLocaleToDB(Localization.Lang.ChineseSimp, localeId, localeFile["chinese_s"]);
-            else AddLocaleToDB(Localization.Lang.ChineseSimp, localeId, localeFallBack);
+                // Parse other languages
+                if (locNode.Value["russian"] != null) 
+                    AddLocaleToDB(Localization.Lang.Russian, locNode.Key, locNode.Value["russian"].Value);
+                else if (hasDefault) AddLocaleToDB(Localization.Lang.Russian, locNode.Key, localeDefault);
+                if (locNode.Value["portuguese"] != null) 
+                    AddLocaleToDB(Localization.Lang.BrazilianPortugal, locNode.Key, locNode.Value["portuguese"].Value);
+                else if (hasDefault) AddLocaleToDB(Localization.Lang.BrazilianPortugal, locNode.Key, localeDefault);
+                if (locNode.Value["german"] != null) 
+                    AddLocaleToDB(Localization.Lang.German, locNode.Key, locNode.Value["german"].Value);
+                else if (hasDefault) AddLocaleToDB(Localization.Lang.German, locNode.Key, localeDefault);
+                if (locNode.Value["french"] != null) 
+                    AddLocaleToDB(Localization.Lang.French, locNode.Key, locNode.Value["french"].Value);
+                else if (hasDefault) AddLocaleToDB(Localization.Lang.French, locNode.Key, localeDefault);
+                if (locNode.Value["spanish"] != null) 
+                    AddLocaleToDB(Localization.Lang.Spanish, locNode.Key, locNode.Value["spanish"].Value);
+                else if (hasDefault) AddLocaleToDB(Localization.Lang.Spanish, locNode.Key, localeDefault);
+                if (locNode.Value["polish"] != null) 
+                    AddLocaleToDB(Localization.Lang.Polish, locNode.Key, locNode.Value["polish"].Value);
+                else if (hasDefault) AddLocaleToDB(Localization.Lang.Polish, locNode.Key, localeDefault);
+                if (locNode.Value["turkish"] != null) 
+                    AddLocaleToDB(Localization.Lang.Turkish, locNode.Key, locNode.Value["turkish"].Value);
+                else if (hasDefault) AddLocaleToDB(Localization.Lang.Turkish, locNode.Key, localeDefault);
+                if (locNode.Value["korean"] != null) 
+                    AddLocaleToDB(Localization.Lang.Korean, locNode.Key, locNode.Value["korean"].Value);
+                else if (hasDefault) AddLocaleToDB(Localization.Lang.Korean, locNode.Key, localeDefault);
+                if (locNode.Value["japanese"] != null) 
+                    AddLocaleToDB(Localization.Lang.Japanese, locNode.Key, locNode.Value["japanese"].Value);
+                else if (hasDefault) AddLocaleToDB(Localization.Lang.Japanese, locNode.Key, localeDefault);
+                if (locNode.Value["chinese_s"] != null) 
+                    AddLocaleToDB(Localization.Lang.ChineseSimp, locNode.Key, locNode.Value["chinese_s"].Value);
+                else if (hasDefault) AddLocaleToDB(Localization.Lang.ChineseSimp, locNode.Key, localeDefault);
+            }
         }
 
         public static void AddLocaleToDB(Localization.Lang locLang, string locId, string locText) {
@@ -968,10 +1008,6 @@ namespace FFU_Phase_Shift {
 
         public static string CleanRecord(string original) {
             return original.Trim(new char[] { '*', '-', '+', '^' });
-        }
-
-        public static string Clean(string original) {
-            return original;
         }
     }
 
