@@ -731,43 +731,43 @@ namespace FFU_Phase_Shift {
 
                 // Parse other languages
                 if (locNode.Value["russian"] != null) 
-                    AddLocaleToDB(Localization.Lang.Russian, locNode.Key, locNode.Value["russian"].Value);
+                    AddLocaleToDB(Localization.Lang.Russian, locNode.Key, locNode.Value["russian"].Value, true);
                 else if (hasDefault) AddLocaleToDB(Localization.Lang.Russian, locNode.Key, localeDefault);
                 if (locNode.Value["portuguese"] != null) 
-                    AddLocaleToDB(Localization.Lang.BrazilianPortugal, locNode.Key, locNode.Value["portuguese"].Value);
+                    AddLocaleToDB(Localization.Lang.BrazilianPortugal, locNode.Key, locNode.Value["portuguese"].Value, true);
                 else if (hasDefault) AddLocaleToDB(Localization.Lang.BrazilianPortugal, locNode.Key, localeDefault);
                 if (locNode.Value["german"] != null) 
-                    AddLocaleToDB(Localization.Lang.German, locNode.Key, locNode.Value["german"].Value);
+                    AddLocaleToDB(Localization.Lang.German, locNode.Key, locNode.Value["german"].Value, true);
                 else if (hasDefault) AddLocaleToDB(Localization.Lang.German, locNode.Key, localeDefault);
                 if (locNode.Value["french"] != null) 
-                    AddLocaleToDB(Localization.Lang.French, locNode.Key, locNode.Value["french"].Value);
+                    AddLocaleToDB(Localization.Lang.French, locNode.Key, locNode.Value["french"].Value, true);
                 else if (hasDefault) AddLocaleToDB(Localization.Lang.French, locNode.Key, localeDefault);
                 if (locNode.Value["spanish"] != null) 
-                    AddLocaleToDB(Localization.Lang.Spanish, locNode.Key, locNode.Value["spanish"].Value);
+                    AddLocaleToDB(Localization.Lang.Spanish, locNode.Key, locNode.Value["spanish"].Value, true);
                 else if (hasDefault) AddLocaleToDB(Localization.Lang.Spanish, locNode.Key, localeDefault);
                 if (locNode.Value["polish"] != null) 
-                    AddLocaleToDB(Localization.Lang.Polish, locNode.Key, locNode.Value["polish"].Value);
+                    AddLocaleToDB(Localization.Lang.Polish, locNode.Key, locNode.Value["polish"].Value, true);
                 else if (hasDefault) AddLocaleToDB(Localization.Lang.Polish, locNode.Key, localeDefault);
                 if (locNode.Value["turkish"] != null) 
-                    AddLocaleToDB(Localization.Lang.Turkish, locNode.Key, locNode.Value["turkish"].Value);
+                    AddLocaleToDB(Localization.Lang.Turkish, locNode.Key, locNode.Value["turkish"].Value, true);
                 else if (hasDefault) AddLocaleToDB(Localization.Lang.Turkish, locNode.Key, localeDefault);
                 if (locNode.Value["korean"] != null) 
-                    AddLocaleToDB(Localization.Lang.Korean, locNode.Key, locNode.Value["korean"].Value);
+                    AddLocaleToDB(Localization.Lang.Korean, locNode.Key, locNode.Value["korean"].Value, true);
                 else if (hasDefault) AddLocaleToDB(Localization.Lang.Korean, locNode.Key, localeDefault);
                 if (locNode.Value["japanese"] != null) 
-                    AddLocaleToDB(Localization.Lang.Japanese, locNode.Key, locNode.Value["japanese"].Value);
+                    AddLocaleToDB(Localization.Lang.Japanese, locNode.Key, locNode.Value["japanese"].Value, true);
                 else if (hasDefault) AddLocaleToDB(Localization.Lang.Japanese, locNode.Key, localeDefault);
                 if (locNode.Value["chinese_s"] != null) 
-                    AddLocaleToDB(Localization.Lang.ChineseSimp, locNode.Key, locNode.Value["chinese_s"].Value);
+                    AddLocaleToDB(Localization.Lang.ChineseSimp, locNode.Key, locNode.Value["chinese_s"].Value, true);
                 else if (hasDefault) AddLocaleToDB(Localization.Lang.ChineseSimp, locNode.Key, localeDefault);
             }
         }
 
-        public static void AddLocaleToDB(Localization.Lang locLang, string locId, string locText) {
+        public static void AddLocaleToDB(Localization.Lang locLang, string locId, string locText, bool overwrite = false) {
             if (_locInstance == null) { ModLog.Warning($"AddLocaleToDB: locale instance is not referenced!"); return; }
-            if (_locInstance.db[locLang].ContainsKey(locId))
-                _locInstance.db[locLang][locId] = locText;
-            else _locInstance.db[locLang].Add(locId, locText);
+            bool hasLoc = _locInstance.db[locLang].ContainsKey(locId);
+            if (hasLoc && overwrite) _locInstance.db[locLang][locId] = locText;
+            else if (!hasLoc) _locInstance.db[locLang].Add(locId, locText);
         }
 
         public static void DumpConfig(string configName, string savePath) {
