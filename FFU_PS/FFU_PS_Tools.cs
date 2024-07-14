@@ -690,19 +690,19 @@ namespace FFU_Phase_Shift {
         /// 
         /// <br/><br/><u>Localization File JSON Writing Pattern</u>
         /// <code>{
-        ///     "translation.id.1": {
-        ///         "language.id.a": "localized_string_1",
-        ///         "language.id.b": "localized_string_2"
-        ///     },
-        ///     "translation.id.2": {
-        ///         "language.id.a": "localized_string_3",
-        ///         "language.id.b": "localized_string_4"
-        ///     }
+        ///   "translation.id.1": {
+        ///     "language.id.a": "localized_string_1",
+        ///     "language.id.b": "localized_string_2"
+        ///   },
+        ///   "translation.id.2": {
+        ///     "language.id.a": "localized_string_3",
+        ///     "language.id.b": "localized_string_4"
+        ///   }
         /// }</code>
         /// 
         /// <br/><br/><u>Localization Settings Information</u>
-        /// <br/><c>translation.id</c> - corresponds to the identifier of localized value.
-        /// <br/><c>language.id</c> - the language of localized value. Refer to the list below.
+        /// <br/><c>translation.id</c> - corresponds to the identifier of localized value in-game.
+        /// <br/><c>language.id</c> - the language of localized value. Refer to the language list below.
         /// <br/><c>localized_string</c> - localized string itself that will be rendered in-game.
         /// 
         /// <br/><br/><u>Allowed Localization Languages</u>
@@ -765,9 +765,9 @@ namespace FFU_Phase_Shift {
 
         public static void AddLocaleToDB(Localization.Lang locLang, string locId, string locText, bool overwrite = false) {
             if (_locInstance == null) { ModLog.Warning($"AddLocaleToDB: locale instance is not referenced!"); return; }
-            bool hasLoc = _locInstance.db[locLang].ContainsKey(locId);
-            if (hasLoc && overwrite) _locInstance.db[locLang][locId] = locText;
-            else if (!hasLoc) _locInstance.db[locLang].Add(locId, locText);
+            bool hasLocale = _locInstance.db[locLang].ContainsKey(locId);
+            if (hasLocale && overwrite) _locInstance.db[locLang][locId] = locText;
+            else if (!hasLocale) _locInstance.db[locLang].Add(locId, locText);
         }
 
         public static void DumpConfig(string configName, string savePath) {
