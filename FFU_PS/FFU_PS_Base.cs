@@ -1,21 +1,22 @@
 ﻿using HarmonyLib;
 using MGSC;
 using System;
+using System.Collections.Generic;
 using System.IO;
+using UnityEngine;
 
 namespace FFU_Phase_Shift {
     public static class ModMain {
-        // Initial Variables
-        public const string PathDump = "_Dump";
-        public const string PathAssets = "Assets";
-        public const string PathConfigs = "Configs";
-        public const string PathLocale = "Localization";
-
         // Code Patching
         [Hook(ModHookType.BeforeBootstrap)]
         public static void BeforeBootstrap(IModContext context) {
-            // Patching Start
-            ModLog.Info("Patching Code...");
+            // Start loading mod
+            ModLog.Info("Loading Mod...");
+
+            // Load mod settings
+
+
+            // Initialize code patcher 
             var Mod = new Harmony("quasimorph.ffu.phase_shift");
 
             try { ModLog.Info("Patching: MGSC.MagnumDevelopmentSystem.CancelProject()");
@@ -53,8 +54,8 @@ namespace FFU_Phase_Shift {
                 Mod.Patch(refMethod, postfix: new HarmonyMethod(postfixPatch));
             } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
 
-            // Patching Complete
-            ModLog.Info("Code Patched.");
+            // Finish mod loading
+            ModLog.Info("Mod Loaded.");
         }
 
         // Data Modification
@@ -65,7 +66,7 @@ namespace FFU_Phase_Shift {
             ModLog.Info($"Content Path: {context.ModContentPath}");
 
             // Dump original assets
-            string dumpFolder = Path.Combine(context.ModContentPath, PathDump);
+            string dumpFolder = Path.Combine(context.ModContentPath, ModConfig.PathDump);
             // ModTools.DumpConfig("config_globals", dumpFolder);
             // ModTools.DumpConfig("config_items", dumpFolder);
             // ModTools.DumpConfig("config_monsters", dumpFolder);
@@ -77,13 +78,17 @@ namespace FFU_Phase_Shift {
             // ModTools.DumpConfig("config_magnum", dumpFolder);
             // ModTools.DumpDescriptors(dumpFolder);
             // ModTools.DumpDescriptor("rail_rifle", "rangeweapons", dumpFolder);
+            // var tests = new List<TextAsset>(Resources.FindObjectsOfTypeAll<TextAsset>());
+            // foreach (var test in tests) {
+            //     ModLog.Info($"FOUND <TextAsset>: {test.name}");
+            // }
 
             // Load custom assets
-            string astFolder = Path.Combine(context.ModContentPath, PathAssets);
+            string astFolder = Path.Combine(context.ModContentPath, ModConfig.PathAssets);
 
             // Config files prerequisites
-            string cfgFolder = Path.Combine(context.ModContentPath, PathConfigs);
-            string locFolder = Path.Combine(context.ModContentPath, PathLocale);
+            string cfgFolder = Path.Combine(context.ModContentPath, ModConfig.PathConfigs);
+            string locFolder = Path.Combine(context.ModContentPath, ModConfig.PathLocale);
             ModTools.Setup(context.ModContentPath, new ModConfigLoader());
             ModTools.Initialize();
 
@@ -107,7 +112,7 @@ namespace FFU_Phase_Shift {
                 }
             } else ModLog.Warning($"Main: {cfgFolder} is missing. Ignoring.");
 
-            // Finish mod initialization
+            // Finish initialization
             ModLog.Info("Initialized.");
         }
     }

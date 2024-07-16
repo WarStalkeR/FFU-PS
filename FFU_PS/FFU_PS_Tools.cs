@@ -678,7 +678,7 @@ namespace FFU_Phase_Shift {
             if (_cntPath == null) { ModLog.Warning($"LoadConfigFile: content path is undefined!"); return; }
             if (_cfgLoader == null) { ModLog.Warning($"LoadConfigFile: config loader is not referenced!"); return; }
             if (configName == null) { ModLog.Warning($"LoadConfigFile: config name is undefined!"); return; }
-            string cfgPath = Path.Combine(_cntPath, ModMain.PathConfigs, configName);
+            string cfgPath = Path.Combine(_cntPath, ModConfig.PathConfigs, configName);
             if (!File.Exists(cfgPath)) { ModLog.Warning($"LoadConfigFile: config file doesn't exist!"); return; }
 
             // Read and parse config file into data
@@ -719,7 +719,7 @@ namespace FFU_Phase_Shift {
             if (_cntPath == null) { ModLog.Warning($"LoadLocaleFile: content path is undefined!"); return; }
             if (_locInstance == null) { ModLog.Warning($"LoadLocaleFile: locale instance is not referenced!"); return; }
             if (localeName == null) { ModLog.Warning($"LoadLocaleFile: locale name is undefined!"); return; }
-            string localePath = Path.Combine(_cntPath, ModMain.PathLocale, localeName);
+            string localePath = Path.Combine(_cntPath, ModConfig.PathLocale, localeName);
             if (!File.Exists(localePath)) { ModLog.Warning($"LoadLocaleFile: locale file doesn't exist!"); return; }
 
             JSONNode localeFile = JSON.Parse(File.ReadAllText(localePath));
