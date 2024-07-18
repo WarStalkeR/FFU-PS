@@ -3,7 +3,10 @@
 using HarmonyLib;
 using MGSC;
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using UnityEngine;
 
 namespace FFU_Phase_Shift {
     public static class ModMain {
@@ -72,21 +75,24 @@ namespace FFU_Phase_Shift {
 
             // Dump original assets
             string dumpFolder = Path.Combine(context.ModContentPath, ModConfig.PathDump);
-            // ModTools.DumpConfig("config_globals", dumpFolder);
-            // ModTools.DumpConfig("config_items", dumpFolder);
-            // ModTools.DumpConfig("config_monsters", dumpFolder);
-            // ModTools.DumpConfig("config_drops", dumpFolder);
-            // ModTools.DumpConfig("config_wounds", dumpFolder);
-            // ModTools.DumpConfig("config_mercenaries", dumpFolder);
-            // ModTools.DumpConfig("config_spacesandbox", dumpFolder);
-            // ModTools.DumpConfig("config_barter", dumpFolder);
-            // ModTools.DumpConfig("config_magnum", dumpFolder);
-            // ModTools.DumpDescriptors(dumpFolder);
-            // ModTools.DumpDescriptor("rail_rifle", "rangeweapons", dumpFolder);
-            // var tests = new List<TextAsset>(Resources.FindObjectsOfTypeAll<TextAsset>());
-            // foreach (var test in tests) {
-            //     ModLog.Info($"FOUND <TextAsset>: {test.name}");
-            // }
+            if (ModConfig.DoAssetsDump) {
+
+            }
+            if (ModConfig.DoConfigsDump) {
+                if (ModConfig.AllConfigsDump) {
+                    List<TextAsset> configFiles = Resources.FindObjectsOfTypeAll<TextAsset>()
+                        .Where(x => x.name.StartsWith("config_")).ToList();
+                    foreach (TextAsset configFile in configFiles) 
+                        ModTools.DumpText(configFile, dumpFolder);
+                } else {
+                    if (ModConfig.ToDumpConfigs.Count > 0)
+                        foreach (string configEntry in ModConfig.ToDumpConfigs)
+                            ModTools.DumpText(configEntry, dumpFolder);
+                }
+            }
+            if (ModConfig.DoLocalesDump) {
+                ModTools.DumpText("localization", dumpFolder);
+            }
 
             // Load custom assets
             string astFolder = Path.Combine(context.ModContentPath, ModConfig.PathAssets);

@@ -771,12 +771,17 @@ namespace FFU_Phase_Shift {
             else if (!hasLocale) _locInstance.db[locLang].Add(locId, locText);
         }
 
-        public static void DumpConfig(string configName, string savePath) {
-            TextAsset tAsset = Resources.Load(configName) as TextAsset;
-            if (tAsset == null) { ModLog.Warning($"DumpConfig: '{configName}' text asset doesn't exist!"); return; };
+        public static void DumpText(string assetName, string savePath, string assetExt = "csv") {
+            TextAsset refAsset = Resources.Load(assetName) as TextAsset;
+            if (refAsset == null) { ModLog.Warning($"DumpText: '{assetName}' text asset doesn't exist!"); return; };
+            DumpText(refAsset, savePath, assetExt);
+        }
+
+        public static void DumpText(TextAsset refAsset, string savePath, string assetExt = "csv") {
+            if (refAsset == null) { ModLog.Warning($"DumpText: text asset doesn't exist!"); return; };
             if (!Directory.Exists(savePath)) Directory.CreateDirectory(savePath);
-            File.WriteAllText(Path.Combine(savePath, $"{configName}.csv"), tAsset.text);
-            ModLog.Info($"DUMP: TextAsset '{configName}' saved as {configName}.csv");
+            File.WriteAllText(Path.Combine(savePath, $"{refAsset.name}.{assetExt}"), refAsset.text);
+            ModLog.Info($"DUMP: TextAsset '{refAsset.name}' saved as {refAsset.name}.{assetExt}");
         }
 
         public static void DumpDescriptors(string savePath) {
