@@ -1,9 +1,9 @@
-﻿using HarmonyLib;
+﻿#pragma warning disable CS0162
+
+using HarmonyLib;
 using MGSC;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using UnityEngine;
 
 namespace FFU_Phase_Shift {
     public static class ModMain {
@@ -14,45 +14,50 @@ namespace FFU_Phase_Shift {
             ModLog.Info("Loading Mod...");
 
             // Load mod settings
-
+            ModConfig.LoadModConfiguration(context.ModContentPath);
 
             // Initialize code patcher 
             var Mod = new Harmony("quasimorph.ffu.phase_shift");
 
-            try { ModLog.Info("Patching: MGSC.MagnumDevelopmentSystem.CancelProject()");
-                var refMethod = AccessTools.Method(typeof(MagnumDevelopmentSystem), "CancelProject");
-                var prefixPatch = SymbolExtensions.GetMethodInfo(() =>
-                    ModPatch.CancelProject_ExploitFix(default, default, default, default));
-                Mod.Patch(refMethod, prefix: new HarmonyMethod(prefixPatch));
-            } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
+            if (ModConfig.FixProjectExploit)
+                try { ModLog.Info("Patching: MGSC.MagnumDevelopmentSystem.CancelProject()");
+                    var refMethod = AccessTools.Method(typeof(MagnumDevelopmentSystem), "CancelProject");
+                    var prefixPatch = SymbolExtensions.GetMethodInfo(() =>
+                        ModPatch.CancelProject_ExploitFix(default, default, default, default));
+                    Mod.Patch(refMethod, prefix: new HarmonyMethod(prefixPatch));
+                } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
 
-            try { ModLog.Info("Patching: MGSC.ItemInteraction.UseAutomap()");
-                var refMethod = AccessTools.Method(typeof(ItemInteraction), "UseAutomap");
-                var prefixPatch = SymbolExtensions.GetMethodInfo(() =>
-                    ModPatch.UseAutomap_UsageFix(default, default, default, default));
-                Mod.Patch(refMethod, prefix: new HarmonyMethod(prefixPatch));
-            } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
+            if (ModConfig.FixAutomapStackUse)
+                try { ModLog.Info("Patching: MGSC.ItemInteraction.UseAutomap()");
+                    var refMethod = AccessTools.Method(typeof(ItemInteraction), "UseAutomap");
+                    var prefixPatch = SymbolExtensions.GetMethodInfo(() =>
+                        ModPatch.UseAutomap_UsageFix(default, default, default, default));
+                    Mod.Patch(refMethod, prefix: new HarmonyMethod(prefixPatch));
+                } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
 
-            try { ModLog.Info("Patching: MGSC.InventoryScreen.RefreshItemsList()");
-                /*var refMethod = AccessTools.Method(typeof(InventoryScreen), "RefreshItemsList");
-                var prefixPatch = SymbolExtensions.GetMethodInfo(() =>
-                    ModPatch.RefreshItemsList_FixMissUI(default, default));
-                Mod.Patch(refMethod, prefix: new HarmonyMethod(prefixPatch));*/
-            } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
+            if (ModConfig.BetterItemUnlocks)
+                try { ModLog.Info("Patching: MGSC.ItemFactory.CreateComponent()");
+                    var refMethod = AccessTools.Method(typeof(ItemFactory), "CreateComponent");
+                    var postfixPatch = SymbolExtensions.GetMethodInfo(() =>
+                        ModPatch.CreateComponent_BetterUnlock(default, default, default, default, default, default));
+                    Mod.Patch(refMethod, postfix: new HarmonyMethod(postfixPatch));
+                } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
 
-            try { ModLog.Info("Patching: MGSC.NoPlayerInventoryView.RefreshItemsList()");
-                /*var refMethod = AccessTools.Method(typeof(NoPlayerInventoryView), "RefreshItemsList");
-                var prefixPatch = SymbolExtensions.GetMethodInfo(() =>
-                    ModPatch.RefreshItemsList_FixShipUI(default));
-                Mod.Patch(refMethod, prefix: new HarmonyMethod(prefixPatch));*/
-            } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
+            if (ModConfig.IsExperimental)
+                try { ModLog.Info("Patching: MGSC.InventoryScreen.RefreshItemsList()");
+                    var refMethod = AccessTools.Method(typeof(InventoryScreen), "RefreshItemsList");
+                    var prefixPatch = SymbolExtensions.GetMethodInfo(() =>
+                        ModPatch.RefreshItemsList_FixMissUI(default, default));
+                    Mod.Patch(refMethod, prefix: new HarmonyMethod(prefixPatch));
+                } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
 
-            try { ModLog.Info("Patching: MGSC.ItemFactory.CreateComponent()");
-                var refMethod = AccessTools.Method(typeof(ItemFactory), "CreateComponent");
-                var postfixPatch = SymbolExtensions.GetMethodInfo(() =>
-                    ModPatch.CreateComponent_BetterUnlock(default, default, default, default, default, default));
-                Mod.Patch(refMethod, postfix: new HarmonyMethod(postfixPatch));
-            } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
+            if (ModConfig.IsExperimental)
+                try { ModLog.Info("Patching: MGSC.NoPlayerInventoryView.RefreshItemsList()");
+                    var refMethod = AccessTools.Method(typeof(NoPlayerInventoryView), "RefreshItemsList");
+                    var prefixPatch = SymbolExtensions.GetMethodInfo(() =>
+                        ModPatch.RefreshItemsList_FixShipUI(default));
+                    Mod.Patch(refMethod, prefix: new HarmonyMethod(prefixPatch));
+                } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
 
             // Finish mod loading
             ModLog.Info("Mod Loaded.");

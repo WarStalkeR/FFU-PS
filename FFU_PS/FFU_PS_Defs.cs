@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace FFU_Phase_Shift {
@@ -9,65 +10,123 @@ namespace FFU_Phase_Shift {
         public const string PathAssets = "Assets";
         public const string PathConfigs = "Configs";
         public const string PathLocale = "Localization";
+        public const bool IsExperimental = false;
 
         // Initial Variables
-        public static bool allAssetsLoad = true;
-        public static bool allConfigsLoad = true;
-        public static bool allLocalesLoad = true;
-        public static bool doAssetsDump = false;
-        public static bool doConfigsDump = false;
-        public static bool doLocalesDump = false;
-        public static bool allAssetsDump = false;
-        public static bool allConfigsDump = false;
-        public static List<string> toLoadConfigs = new List<string>();
-        public static List<string> toLoadLocales = new List<string>();
-        public static List<string> toDumpConfigs = new List<string>();
-        public static List<Dictionary<string, string>> toLoadAssets = new List<Dictionary<string, string>>();
-        public static List<Dictionary<string, string>> toDumpAssets = new List<Dictionary<string, string>>();
+        public static bool FixProjectExploit = true;
+        public static bool FixAutomapStackUse = true;
+        public static bool BetterItemUnlocks = true;
+        public static bool AllAssetsLoad = true;
+        public static bool AllConfigsLoad = true;
+        public static bool AllLocalesLoad = true;
+        public static bool DoAssetsDump = false;
+        public static bool DoConfigsDump = false;
+        public static bool DoLocalesDump = false;
+        public static bool AllAssetsDump = false;
+        public static bool AllConfigsDump = false;
+        public static List<string> ToLoadConfigs = new List<string>();
+        public static List<string> ToLoadLocales = new List<string>();
+        public static List<string> ToDumpConfigs = new List<string>();
+        public static Dictionary<string, string> ToLoadAssets = new Dictionary<string, string>();
+        public static Dictionary<string, string> ToDumpAssets = new Dictionary<string, string>();
 
         public static void CreateModConfig(string savePath) {
-            ModLog.Warning("Mod configuration file doesn't exists or obsolete!");
+            ModLog.Warning("Mod settings file doesn't exists or obsolete!");
             IniFile modConfig = new IniFile();
 
             // Mod settings template variables
-            modConfig["InitConfig"]["modVersion"] = ModVersion;
-            modConfig["LoaderConfig"]["toLoadAssets"] = "ALL";
-            modConfig["LoaderConfig"]["toLoadConfigs"] = "ALL";
-            modConfig["LoaderConfig"]["toLoadLocales"] = "ALL";
-            modConfig["DumpConfig"]["doAssetsDump"] = false;
-            modConfig["DumpConfig"]["doConfigsDump"] = false;
-            modConfig["DumpConfig"]["doLocalesDump"] = false;
-            modConfig["DumpConfig"]["toDumpAssets"] = "rail_rifle*rangeweapons, nanoinjection*medkits, doom_armor*armors";
-            modConfig["DumpConfig"]["toDumpConfigs"] = "config_globals, config_items, config_wounds, config_mercenaries, config_magnum";
+            modConfig["InitConfig"]["ModVersion"] = ModVersion;
+            modConfig["PatchConfig"]["FixProjectExploit"] = true;
+            modConfig["PatchConfig"]["FixAutomapStackUse"] = true;
+            modConfig["PatchConfig"]["BetterItemUnlocks"] = true;
+            modConfig["LoaderConfig"]["ToLoadAssets"] = "ALL";
+            modConfig["LoaderConfig"]["ToLoadConfigs"] = "ALL";
+            modConfig["LoaderConfig"]["ToLoadLocales"] = "ALL";
+            modConfig["DumpConfig"]["DoAssetsDump"] = false;
+            modConfig["DumpConfig"]["DoConfigsDump"] = false;
+            modConfig["DumpConfig"]["DoLocalesDump"] = false;
+            modConfig["DumpConfig"]["ToDumpAssets"] = "rail_rifle*rangeweapons, nanoinjection*medkits, doom_armor*armors";
+            modConfig["DumpConfig"]["ToDumpConfigs"] = "config_globals, config_items, config_wounds,config_mercenaries, config_magnum";
 
             // Get the correct path and save mod settings
             string settingsPath = Path.Combine(savePath, "mod_settings.ini");
-            ModLog.Warning($"Creating template mod configuration file at {settingsPath}");
+            ModLog.Warning($"Creating template mod settings file at {settingsPath}");
             modConfig.Save(settingsPath);
         }
 
         public static void LoadModConfiguration(string savePath) {
             string settingsPath = Path.Combine(savePath, "mod_settings.ini");
-            ModLog.Info("Loading Mod Configuration...");
+            ModLog.Info("Loading Settings...");
             IniFile modConfig = new IniFile();
-            modConfig.Load(settingsPath);
+
+            if (File.Exists(settingsPath)) modConfig.Load(settingsPath);
 
             // Check if settings file is valid and create new if not
-            if (string.IsNullOrEmpty(modConfig["InitConfig"]["modVersion"].Value) ||
-                modConfig["InitConfig"]["modVersion"].ToString() != ModVersion) {
+            if (string.IsNullOrEmpty(modConfig["InitConfig"]["modVersion"].GetString()) ||
+                modConfig["InitConfig"]["modVersion"].GetString() != ModVersion) {
                 CreateModConfig(savePath);
                 return;
             }
 
-            // Load mod settings variables from settings file
-            allAssetsLoad = modConfig["LoaderConfig"]["toLoadAssets"].GetString() == "ALL";
-            allConfigsLoad = modConfig["LoaderConfig"]["toLoadConfigs"].GetString() == "ALL";
-            allLocalesLoad = modConfig["LoaderConfig"]["toLoadLocales"].GetString() == "ALL";
-            doAssetsDump = modConfig["DumpConfig"]["doAssetsDump"].ToBool(doAssetsDump);
-            doConfigsDump = modConfig["DumpConfig"]["doConfigsDump"].ToBool(doConfigsDump);
-            doLocalesDump = modConfig["DumpConfig"]["doLocalesDump"].ToBool(doLocalesDump);
-            allAssetsDump = modConfig["DumpConfig"]["toDumpAssets"].GetString() == "ALL";
-            allConfigsDump = modConfig["DumpConfig"]["toDumpConfigs"].GetString() == "ALL";
+            // Load patch settings variables
+            FixProjectExploit = modConfig["PatchConfig"]["FixProjectExploit"].ToBool(FixProjectExploit);
+            FixAutomapStackUse = modConfig["PatchConfig"]["FixAutomapStackUse"].ToBool(FixAutomapStackUse);
+            BetterItemUnlocks = modConfig["PatchConfig"]["BetterItemUnlocks"].ToBool(BetterItemUnlocks);
+
+            // Load loader settings variables
+            AllAssetsLoad = modConfig["LoaderConfig"]["ToLoadAssets"].GetString() == "ALL";
+            AllConfigsLoad = modConfig["LoaderConfig"]["ToLoadConfigs"].GetString() == "ALL";
+            AllLocalesLoad = modConfig["LoaderConfig"]["ToLoadLocales"].GetString() == "ALL";
+
+            // Load dump settings variables
+            DoAssetsDump = modConfig["DumpConfig"]["DoAssetsDump"].ToBool(DoAssetsDump);
+            DoConfigsDump = modConfig["DumpConfig"]["DoConfigsDump"].ToBool(DoConfigsDump);
+            DoLocalesDump = modConfig["DumpConfig"]["DoLocalesDump"].ToBool(DoLocalesDump);
+            AllAssetsDump = modConfig["DumpConfig"]["ToDumpAssets"].GetString() == "ALL";
+            AllConfigsDump = modConfig["DumpConfig"]["ToDumpConfigs"].GetString() == "ALL";
+
+            // Conditional settings lists parsing
+            if (!AllAssetsLoad) {
+                try {
+                    string[] items = modConfig["LoaderConfig"]["ToLoadAssets"]
+                        .GetString().Replace(" ","").Split(',');
+                    foreach (string item in items) {
+                        string[] pair = item.Split('*');
+                        if (pair.Length == 2) ToLoadAssets.Add(pair[0], pair[1]);
+                    }
+                } catch (Exception ex) { ModLog.Error($"ToLoadAssets Parsing Failed: {ex}"); }
+            }
+            if (!AllConfigsLoad) {
+                try {
+                    string[] items = modConfig["LoaderConfig"]["ToLoadConfigs"]
+                        .GetString().Replace(" ", "").Split(',');
+                    foreach (string item in items) ToLoadConfigs.Add(item);
+                } catch (Exception ex) { ModLog.Error($"ToLoadConfigs Parsing Failed: {ex}"); }
+            }
+            if (!AllLocalesLoad) {
+                try {
+                    string[] items = modConfig["LoaderConfig"]["ToLoadLocales"]
+                        .GetString().Replace(" ", "").Split(',');
+                    foreach (string item in items) ToLoadLocales.Add(item);
+                } catch (Exception ex) { ModLog.Error($"ToLoadLocales Parsing Failed: {ex}"); }
+            }
+            if (!AllAssetsDump) {
+                try {
+                    string[] items = modConfig["DumpConfig"]["ToDumpAssets"]
+                        .GetString().Replace(" ", "").Split(',');
+                    foreach (string item in items) {
+                        string[] pair = item.Split('*');
+                        if (pair.Length == 2) ToDumpAssets.Add(pair[0], pair[1]);
+                    }
+                } catch (Exception ex) { ModLog.Error($"ToDumpAssets Parsing Failed: {ex}"); }
+            }
+            if (!AllConfigsDump) {
+                try {
+                    string[] items = modConfig["DumpConfig"]["ToDumpConfigs"]
+                        .GetString().Replace(" ", "").Split(',');
+                    foreach (string item in items) ToDumpConfigs.Add(item);
+                } catch (Exception ex) { ModLog.Error($"ToDumpConfigs Parsing Failed: {ex}"); }
+            }
         }
     }
 }
