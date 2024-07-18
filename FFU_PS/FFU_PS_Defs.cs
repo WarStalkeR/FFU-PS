@@ -110,7 +110,7 @@ namespace FFU_Phase_Shift {
                     foreach (string item in items) ToLoadLocales.Add(item);
                 } catch (Exception ex) { ModLog.Error($"ToLoadLocales Parsing Failed: {ex}"); }
             }
-            if (!AllAssetsDump) {
+            if (DoAssetsDump && !AllAssetsDump) {
                 try {
                     string[] items = modConfig["DumpConfig"]["ToDumpAssets"]
                         .GetString().Replace(" ", "").Split(',');
@@ -120,7 +120,7 @@ namespace FFU_Phase_Shift {
                     }
                 } catch (Exception ex) { ModLog.Error($"ToDumpAssets Parsing Failed: {ex}"); }
             }
-            if (!AllConfigsDump) {
+            if (DoConfigsDump && !AllConfigsDump) {
                 try {
                     string[] items = modConfig["DumpConfig"]["ToDumpConfigs"]
                         .GetString().Replace(" ", "").Split(',');
