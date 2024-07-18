@@ -1,0 +1,33 @@
+#itemtransformation																												
+Id		OutputItems																										
+corp_bone		human_rib human_rib human_rib																										
+rags		tread tread tread tread tread																										
+#end																												
+																												
+#itemreceipts																												
+Id		OutputItem	RequiredItems	ProduceTimeInHours	ModifyStartCost	ModifyStep	ModifyItemsGrades																					
+		civres_powerfist	blunt_melee_shards rod coarse_gears	20	1	1.02	broken_weapon 2 blunt_melee_shards 20 coarse_gears 100 tool_container 500																					
+		bandit_sawblade	plastic weapon_shards	14	1	1.02	gas_ammo 1 pierce_melee_shards 15 coarse_gears 45 melee_repair_kit 145 engineering_parts_container 500																					
+		spec_pistol	rubber weapon_shards	24	1	1.02	pistol_basic_ammo 1 weapon_shards 20 coarse_gears 100 tool_container 500																					
+		dark_pistol	rubber weapon_shards	24	1	1.02	heavy_basic_ammo 1 weapon_shards 20 coarse_gears 100 tool_container 500																					
+		rail_pistol	rubber wire capacitor metal_tread	26	1	1.02	broken_weapon 1 weapon_shards 20 capacitor 100 tool_container 500																					
+		tech_pistol	plastic metal_tread bulb wire	36	1	1.02	battery_charge 1 weapon_shards 20 bulb 100 tool_container 500																					
+		petrov_pistol	plastic plastic	20	1	1.02	pistol_basic_ammo 1 weapon_shards 20 coarse_gears 100 tool_container 500																					
+		civres_pistol	plastic plastic	20	1	1.02	pistol_basic_ammo 1 weapon_shards 20 coarse_gears 100 tool_container 500																					
+		civres_pistol_2	plastic spring	20	1	1.02	pistol_basic_ammo 1 weapon_shards 20 spring 100 tool_container 500																					
+		desert_shotgun	rubber weapon_shards blunt_melee_shards	20	1	1.02	shotgun_shrapnel_ammo 1 blunt_melee_shards 20 coarse_gears 100 weapon_container 500																					
+		bandit_smg	rubber weapon_shards	14	1	1.02	shotgun_shrapnel_ammo 1 weapon_shards 20 rubber 100 weapon_container 500																					
+		civres_smg	rubber weapon_shards spring	30	1	1.02	medium_basic_ammo 1 weapon_shards 20 spring 100 tool_container 500																					
+		civres_assault	armor_shards weapon_shards spring blunt_melee_shards	32	1	1.02	heavy_basic_ammo 1 weapon_shards 15 armor_shards 45 blunt_melee_shards 145 tool_container 500																					
+		civres_marksman	weapon_shards armor_shards blunt_melee_shards lens	62	1	1.02	medium_basic_ammo 1 weapon_shards 15 armor_shards 45 lens 145 tool_container 500																					
+		miner_disctrower	coarse_gears spring armor_shards rod	26	1	1.02	sawblade_ammo 1 coarse_gears 20 spring 100 engineering_parts_container 500																					
+		miner_flametrower	coarse_gears metal_tread armor_shards rod	24	1	1.02	gas_ammo 1 coarse_gears 20 spring 100 engineering_parts_container 500																					
+		toxic_launcher	ceramite_shards armor_shards glass circuit_board capacitor	60	1	1.02	toxic_ammo 1 armor_shards 15 glass 45 ceramite_shards 145 engineering_parts_container 500																					
+		battery_crafted_charge	broken_weapon acid	1.5	1	1.01																						
+		civres_armor	armor_shards ceramite_shards metal_tread rubber	42	1	1.05	armor_shards 1 metal_tread 3 rubber 9 ceramite_shards 25 miner_clothing_container 80																					
+		civres_helmet	armor_shards ceramite_shards glass metal_tread	42	1	1.05	armor_shards 1 metal_tread 3 glass 9 ceramite_shards 25 miner_clothing_container 80																					
+		civres_pants	armor_shards ceramite_shards rubber rubber 	42	1	1.05	armor_shards 1 rags 3 rubber 9 ceramite_shards 25 miner_clothing_container 80																					
+		civres_boots	ceramite_shards armor_shards rubber plastic	42	1	1.05	armor_shards 1 rags 3 rubber 9 ceramite_shards 25 miner_clothing_container 80																					
+		quasi_sensor_device	circuit_board transformer bulb	48	1	1.01																						
+		nanorobot_grenade	glass transformer explosives acid acid acid microelectronics	24	1	1.01																						
+#end																												

@@ -1,0 +1,46 @@
+								
+#magnum_default_params								
+Parameter	Value							
+WPSTUpgradeMoreWeapon	10							
+ARMSTUpgradeMoreArmors	10							
+MEMDFPerkCountToSwitch	10							
+#end								
+								
+#magnum_perks								
+Id	Enabled	ModuleId	DepartmentId	IsDepartment	PositionInGraph	Parents	Modifiers	UpgradePrice
+wpst_upg_more_weapons	TRUE	engineer	weaponstation_department	FALSE	3 1	wpst_weapon_upgrade_speed	WPSTUpgradeMoreWeapon + 30	robot_parts_container lens
+wpst_upg_more_weapons_2	TRUE	engineer	weaponstation_department	FALSE	5 1	wpst_upg_weapon_cost_reduce	WPSTUpgradeMoreWeapon + 60	robot_parts_container robot_parts_container lens
+armst_upg_more_armors	TRUE	engineer	armorstation_department	FALSE	0 0	armorstation_department	ARMSTUpgradeMoreArmors + 30	robot_parts_container security_clothing_container
+armst_upg_more_armors_2	TRUE	engineer	armorstation_department	FALSE	1 2	armst_upg_armor_cost_reduce	ARMSTUpgradeMoreArmors + 60	robot_parts_container robot_parts_container security_clothing_container
+memdf_perks_count_to_switch	TRUE	research	memdefrag_department	FALSE	1 1	memdf_class_upgrade_speed	MEMDFPerkCountToSwitch + 30	scientific_equipment chemical_analyzer
+memdf_perks_count_to_switch_2	TRUE	research	memdefrag_department	FALSE	3 1	memdf_class_upgrade_speed_2	MEMDFPerkCountToSwitch + 60	scientific_equipment scientific_equipment chemical_analyzer
+trdsh_shuttle_move_speed	TRUE	hangar	tradeshuttle_department	FALSE	4 3	tradeshuttle_department	TRDSHShuttleMoveSpeed - 24	darknet_unit precious_metals
+trdsh_value_of_shuttle_items	TRUE	hangar	tradeshuttle_department	FALSE	4 4	trdsh_shuttle_move_speed	TRDSHValueOfShuttleItems + 1000	ledgerBook darknet_unit
+trdsh_shuttle_restore_speed	TRUE	hangar	tradeshuttle_department	FALSE	2 3	tradeshuttle_department	TRDSHShuttleRestoreSpeed - 8	memory_software
+trdsh_shuttle_move_speed_2	TRUE	hangar	tradeshuttle_department	FALSE	1 3	trdsh_shuttle_restore_speed	TRDSHShuttleMoveSpeed - 24	darknet_unit darknet_unit precious_metals
+trdsh_shuttle_restore_speed_2	TRUE	hangar	tradeshuttle_department	FALSE	1 4	trdsh_shuttle_move_speed_2	TRDSHShuttleRestoreSpeed - 8	memory_software memory_software
+trdsh_value_of_shuttle_items_2	TRUE	hangar	tradeshuttle_department	FALSE	0 4	trdsh_shuttle_restore_speed_2	TRDSHValueOfShuttleItems + 1000	ledgerBook darknet_unit ledgerBook darknet_unit
+trdsh_shuttle_move_speed_3	TRUE	hangar	tradeshuttle_department	FALSE	2 4	trdsh_shuttle_restore_speed_2	TRDSHShuttleMoveSpeed - 24	darknet_unit darknet_unit darknet_unit precious_metals
+#end								
+								
+#magnum_projects_params								
+Id	ParameterName	ParameterType	ProjectType	ViewType	MinValue	MaxValue	Step	TooltipTag
+mercenary_health	Health	Integer	Mercenary	Integer		999	10	ui.property.Health
+mercenary_starvation	StarvationLimit	Integer	Mercenary	Integer	1	9999	100	ui.property.StarvationLimit
+mercenary_dodge	Dodge	Float	Mercenary	Percent	0	1	0.05	ui.property.DodgeChance
+mercenary_range_accuracy	RangeAccuracy	Float	Mercenary	Percent	0	1	0.05	ui.property.Accuracy
+mercenary_melee_accuracy	MeleeAccuracy	Float	Mercenary	Percent	0	1	0.05	ui.property.MeleeAccuracy
+mercenary_melee_critdamage	MeleeDamage	CritDamage	Mercenary	Percent		999	0.05	ui.property.CritDamage
+#end								
+								
+#magnum_projects_prices								
+ProjectType	ItemsGrades							
+RangeWeapon	broken_weapon 2 weapon_shards 20 coarse_gears 100 weapon_container 500							
+MeleeWeapon	broken_weapon 2 pierce_melee_shards 20 rusty_shards 100 weapon_container 500							
+Helmet	rubber 2 armor_shards 10 ceramite_shards 50 armor_container 250							
+Armor	rubber 2 armor_shards 10 ceramite_shards 50 armor_container 250							
+Leggings	rubber 2 armor_shards 10 ceramite_shards 50 armor_container 250							
+Boots	rubber 2 armor_shards 10 ceramite_shards 50 armor_container 250							
+Mercenary	synthBeef 10 organsBox 100 biomass_tank 1000 medical_components 10000							
+MercenaryClass	memory_software 4 research_disk 20 ai_module 60							
+#end								
