@@ -13,7 +13,7 @@ namespace FFU_Phase_Shift {
         public const bool IsExperimental = false;
 
         // Initial Variables
-        public static bool FixProjectExploit = true;
+        public static bool FixCancelOverflow = true;
         public static bool FixAutomapStackUse = true;
         public static bool BetterItemUnlocks = true;
         public static bool AllAssetsLoad = true;
@@ -36,7 +36,7 @@ namespace FFU_Phase_Shift {
 
             // Mod settings template variables
             modConfig["InitConfig"]["ModVersion"] = ModVersion;
-            modConfig["PatchConfig"]["FixProjectExploit"] = true;
+            modConfig["PatchConfig"]["FixCancelOverflow"] = true;
             modConfig["PatchConfig"]["FixAutomapStackUse"] = true;
             modConfig["PatchConfig"]["BetterItemUnlocks"] = true;
             modConfig["LoaderConfig"]["ToLoadAssets"] = "ALL";
@@ -69,7 +69,7 @@ namespace FFU_Phase_Shift {
             }
 
             // Load patch settings variables
-            FixProjectExploit = modConfig["PatchConfig"]["FixProjectExploit"].ToBool(FixProjectExploit);
+            FixCancelOverflow = modConfig["PatchConfig"]["FixCancelOverflow"].ToBool(FixCancelOverflow);
             FixAutomapStackUse = modConfig["PatchConfig"]["FixAutomapStackUse"].ToBool(FixAutomapStackUse);
             BetterItemUnlocks = modConfig["PatchConfig"]["BetterItemUnlocks"].ToBool(BetterItemUnlocks);
 

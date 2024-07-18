@@ -19,7 +19,7 @@ namespace FFU_Phase_Shift {
             // Initialize code patcher 
             var Mod = new Harmony("quasimorph.ffu.phase_shift");
 
-            if (ModConfig.FixProjectExploit)
+            if (ModConfig.FixCancelOverflow)
                 try { ModLog.Info("Patching: MGSC.MagnumDevelopmentSystem.CancelProject()");
                     var refMethod = AccessTools.Method(typeof(MagnumDevelopmentSystem), "CancelProject");
                     var prefixPatch = SymbolExtensions.GetMethodInfo(() =>
