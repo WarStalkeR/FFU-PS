@@ -18,6 +18,7 @@ namespace FFU_Phase_Shift {
 
             // Load mod settings
             ModConfig.LoadModConfiguration(context.ModContentPath);
+            ModLog.Info($"Content Path: {context.ModContentPath}");
 
             // Initialize code patcher 
             var Mod = new Harmony("quasimorph.ffu.phase_shift");
@@ -71,7 +72,6 @@ namespace FFU_Phase_Shift {
         public static void AfterConfigsLoaded(IModContext context) {
             // Starting initialization
             ModLog.Info("Initializing...");
-            ModLog.Info($"Content Path: {context.ModContentPath}");
 
             // Config files prerequisites
             string dumpFolder = Path.Combine(context.ModContentPath, ModConfig.PathDump);
