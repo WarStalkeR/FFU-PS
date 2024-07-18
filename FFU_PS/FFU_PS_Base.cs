@@ -73,55 +73,79 @@ namespace FFU_Phase_Shift {
             ModLog.Info("Initializing...");
             ModLog.Info($"Content Path: {context.ModContentPath}");
 
-            // Dump original assets
+            // Config files prerequisites
             string dumpFolder = Path.Combine(context.ModContentPath, ModConfig.PathDump);
-            if (ModConfig.DoAssetsDump) {
+            string assetFolder = Path.Combine(context.ModContentPath, ModConfig.PathAssets);
+            string configFolder = Path.Combine(context.ModContentPath, ModConfig.PathConfigs);
+            string localeFolder = Path.Combine(context.ModContentPath, ModConfig.PathLocale);
+            ModTools.Setup(context.ModContentPath, new ModConfigLoader());
+            ModTools.Initialize();
 
+            // Dump original asset files
+            if (ModConfig.DoAssetsDump) {
+                // Not Implemented Yet
             }
+
+            // Dump original locale files
+            if (ModConfig.DoLocalesDump) {
+                ModTools.DumpText("localization", dumpFolder);
+            }
+
+            // Dump original config files
             if (ModConfig.DoConfigsDump) {
                 if (ModConfig.AllConfigsDump) {
                     List<TextAsset> configFiles = Resources.FindObjectsOfTypeAll<TextAsset>()
                         .Where(x => x.name.StartsWith("config_")).ToList();
                     foreach (TextAsset configFile in configFiles) 
                         ModTools.DumpText(configFile, dumpFolder);
-                } else {
-                    if (ModConfig.ToDumpConfigs.Count > 0)
-                        foreach (string configEntry in ModConfig.ToDumpConfigs)
-                            ModTools.DumpText(configEntry, dumpFolder);
+                } else if (ModConfig.ToDumpConfigs.Count > 0) {
+                    foreach (string configEntry in ModConfig.ToDumpConfigs)
+                        ModTools.DumpText(configEntry, dumpFolder);
                 }
             }
-            if (ModConfig.DoLocalesDump) {
-                ModTools.DumpText("localization", dumpFolder);
+
+            // Load new asset files
+            if (Directory.Exists(assetFolder)) {
+                if (ModConfig.AllAssetsLoad) {
+                    // Not Implemented Yet
+                } else if (ModConfig.ToLoadAssets.Count > 0) {
+                    // Not Implemented Yet
+                }
             }
 
-            // Load custom assets
-            string astFolder = Path.Combine(context.ModContentPath, ModConfig.PathAssets);
-
-            // Config files prerequisites
-            string cfgFolder = Path.Combine(context.ModContentPath, ModConfig.PathConfigs);
-            string locFolder = Path.Combine(context.ModContentPath, ModConfig.PathLocale);
-            ModTools.Setup(context.ModContentPath, new ModConfigLoader());
-            ModTools.Initialize();
-
-            // Load all localization files
-            if (Directory.Exists(locFolder)) {
-                string[] localeFiles = Directory.GetFiles(locFolder, "*.json");
-                foreach (string localeFile in localeFiles) {
-                    string localeName = Path.GetFileName(localeFile);
-                    ModLog.Info($"Localizing: {localeName.Replace(".json", string.Empty)}");
-                    ModTools.LoadLocaleFile(localeName);
+            // Load new locale files
+            if (Directory.Exists(localeFolder)) {
+                if (ModConfig.AllLocalesLoad) {
+                    string[] localeFiles = Directory.GetFiles(localeFolder, "*.json");
+                    foreach (string localeFile in localeFiles) {
+                        string localeName = Path.GetFileName(localeFile);
+                        ModLog.Info($"Localizing: {localeName.Replace(".json", string.Empty)}");
+                        ModTools.LoadLocaleFile(localeName);
+                    }
+                } else if (ModConfig.ToLoadLocales.Count > 0) {
+                    foreach (string localeItem in ModConfig.ToLoadLocales) {
+                        ModLog.Info($"Localizing: {localeItem}");
+                        ModTools.LoadLocaleFile(localeItem + ".json");
+                    }
                 }
-            } else ModLog.Warning($"Main: {locFolder} is missing. Ignoring.");
+            } else ModLog.Warning($"Main: {localeFolder} is missing. Ignoring.");
 
-            // Load all config files
-            if (Directory.Exists(cfgFolder)) {
-                string[] configFiles = Directory.GetFiles(cfgFolder, "*.csv");
-                foreach (string configFile in configFiles) {
-                    string configName = Path.GetFileName(configFile);
-                    ModLog.Info($"Loading: {configName.Replace(".csv", string.Empty)}");
-                    ModTools.LoadConfigFile(configName);
+            // Load new config files
+            if (Directory.Exists(configFolder)) {
+                if (ModConfig.AllConfigsLoad) {
+                    string[] configFiles = Directory.GetFiles(configFolder, "*.csv");
+                    foreach (string configFile in configFiles) {
+                        string configName = Path.GetFileName(configFile);
+                        ModLog.Info($"Loading: {configName.Replace(".csv", string.Empty)}");
+                        ModTools.LoadConfigFile(configName);
+                    }
+                } else if (ModConfig.ToLoadConfigs.Count > 0) {
+                    foreach (string configItem in ModConfig.ToLoadConfigs) {
+                        ModLog.Info($"Loading: {configItem}");
+                        ModTools.LoadConfigFile(configItem + ".csv");
+                    }
                 }
-            } else ModLog.Warning($"Main: {cfgFolder} is missing. Ignoring.");
+            } else ModLog.Warning($"Main: {configFolder} is missing. Ignoring.");
 
             // Finish initialization
             ModLog.Info("Initialized.");

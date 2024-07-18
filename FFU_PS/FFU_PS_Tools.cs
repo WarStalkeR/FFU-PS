@@ -781,7 +781,7 @@ namespace FFU_Phase_Shift {
             if (refAsset == null) { ModLog.Warning($"DumpText: text asset doesn't exist!"); return; };
             if (!Directory.Exists(savePath)) Directory.CreateDirectory(savePath);
             File.WriteAllText(Path.Combine(savePath, $"{refAsset.name}.{assetExt}"), refAsset.text);
-            ModLog.Info($"DUMP: TextAsset '{refAsset.name}' saved as {refAsset.name}.{assetExt}");
+            ModLog.Info($"Dumping: TextAsset '{refAsset.name}' saved as {refAsset.name}.{assetExt}");
         }
 
         public static void DumpDescriptors(string savePath) {
