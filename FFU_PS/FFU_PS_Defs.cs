@@ -5,12 +5,13 @@ using System.IO;
 namespace FFU_Phase_Shift {
     public static class ModConfig {
         // Constant Variables
+        public const bool IsExperimental = false;
         public const string ModVersion = "0.1.5.0";
         public const string PathDump = "_Dump";
         public const string PathAssets = "Assets";
         public const string PathConfigs = "Configs";
         public const string PathLocale = "Localization";
-        public const bool IsExperimental = false;
+        private const string ALL = "all";
 
         // Initial Variables
         public static bool FixCancelOverflow = true;
@@ -74,16 +75,16 @@ namespace FFU_Phase_Shift {
             BetterItemUnlocks = modConfig["PatchConfig"]["BetterItemUnlocks"].ToBool(BetterItemUnlocks);
 
             // Load loader settings variables
-            AllAssetsLoad = modConfig["LoaderConfig"]["ToLoadAssets"].GetString() == "ALL";
-            AllConfigsLoad = modConfig["LoaderConfig"]["ToLoadConfigs"].GetString() == "ALL";
-            AllLocalesLoad = modConfig["LoaderConfig"]["ToLoadLocales"].GetString() == "ALL";
+            AllAssetsLoad = modConfig["LoaderConfig"]["ToLoadAssets"].GetString().ToLower() == ALL;
+            AllConfigsLoad = modConfig["LoaderConfig"]["ToLoadConfigs"].GetString().ToLower() == ALL;
+            AllLocalesLoad = modConfig["LoaderConfig"]["ToLoadLocales"].GetString().ToLower() == ALL;
 
             // Load dump settings variables
             DoAssetsDump = modConfig["DumpConfig"]["DoAssetsDump"].ToBool(DoAssetsDump);
             DoConfigsDump = modConfig["DumpConfig"]["DoConfigsDump"].ToBool(DoConfigsDump);
             DoLocalesDump = modConfig["DumpConfig"]["DoLocalesDump"].ToBool(DoLocalesDump);
-            AllAssetsDump = modConfig["DumpConfig"]["ToDumpAssets"].GetString() == "ALL";
-            AllConfigsDump = modConfig["DumpConfig"]["ToDumpConfigs"].GetString() == "ALL";
+            AllAssetsDump = modConfig["DumpConfig"]["ToDumpAssets"].GetString().ToLower() == ALL;
+            AllConfigsDump = modConfig["DumpConfig"]["ToDumpConfigs"].GetString().ToLower() == ALL;
 
             // Conditional settings lists parsing
             if (!AllAssetsLoad) {
