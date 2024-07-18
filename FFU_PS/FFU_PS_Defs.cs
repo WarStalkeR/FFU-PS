@@ -46,7 +46,7 @@ namespace FFU_Phase_Shift {
             modConfig["DumpConfig"]["DoConfigsDump"] = false;
             modConfig["DumpConfig"]["DoLocalesDump"] = false;
             modConfig["DumpConfig"]["ToDumpAssets"] = "rail_rifle*rangeweapons, nanoinjection*medkits, doom_armor*armors";
-            modConfig["DumpConfig"]["ToDumpConfigs"] = "config_globals, config_items, config_wounds,config_mercenaries, config_magnum";
+            modConfig["DumpConfig"]["ToDumpConfigs"] = "config_globals, config_items, config_wounds, config_mercenaries, config_magnum";
 
             // Get the correct path and save mod settings
             string settingsPath = Path.Combine(savePath, "mod_settings.ini");
