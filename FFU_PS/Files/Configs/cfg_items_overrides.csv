@@ -326,8 +326,8 @@ Id		OutputItem	RequiredItems	ProduceTimeInHours	ModifyStartCost	ModifyStep	Modif
 		army_knife	pierce_melee_shards plastic	8	1	1.02	broken_weapon 2 pierce_melee_shards 20 rusty_shards 100 tool_container 500																					
 		army_pistol	plastic spring	10	1	1.02	shotgun_shrapnel_ammo 1 weapon_shards 20 coarse_gears 100 tool_container 500																					
 		pmc_pistol	plastic spring	10	1	1.02	medium_basic_ammo 1 weapon_shards 20 coarse_gears 100 tool_container 500																					
-		pistol_basic_ammo	powder	0.5	1	1.01																						
-		shotgun_shrapnel_ammo	powder	0.5	1	1.01																						
+		pistol_basic_ammo	powder	0.1	1	1.01																						
+		shotgun_shrapnel_ammo	powder	0.2	1	1.01																						
 		bandage	rags rags	6	1	1.01																						
 		splint	rags plastic	6	1	1.01																						
 		antibiotics	plastic rottenMeat	10	1	1.01																						
@@ -418,19 +418,19 @@ Id		OutputItem	RequiredItems	ProduceTimeInHours	ModifyStartCost	ModifyStep	Modif
 		core_flametrower	ceramite_shards coarse_gears metal_tread armor_shards rod	36	1	1.02	gas_ammo 1 coarse_gears 15 spring 45 ceramite_shards 145 engineering_parts_container 500																					
 		toxic_trower	armor_shards glass circuit_board capacitor	48	1	1.02	toxic_ammo 1 armor_shards 20 glass 100 engineering_parts_container 500																					
 		regular_launcher	armor_shards weapon_shards spring metal_tread blunt_melee_shards	56	1	1.02	powder 1 weapon_shards 15 spring 45 weapon_repair_kit 145 military_parts_container 500																					
-		pistol_burst_ammo	powder gas_ammo	0.8	1	1.01																						
-		pistol_expansive_ammo	powder powder	1	1	1.01																						
-		miner_bolts_ammo	broken_weapon	0.2	1	1.01																						
-		shotgun_bullet_ammo	powder powder	0.8	1	1.01																						
-		shotgun_flechette_ammo	powder miner_bolts_ammo	1	1	1.01																						
-		shotgun_dragon_ammo	powder gas_ammo	1.2	1	1.01																						
-		medium_basic_ammo	powder	1	1	1.01																						
-		medium_police_ammo	powder powder	1.5	1	1.01																						
-		heavy_basic_ammo	powder powder	1	1	1.01																						
-		heavy_armorpierce_ammo	powder powder powder	2	1	1.01																						
-		battery_charge	glass acid	2.5	1	1.01																						
-		sawblade_ammo	broken_weapon	0.8	1	1.01																						
-		toxic_ammo	acid	1	1	1.01																						
+		pistol_burst_ammo	powder gas_ammo	0.15	1	1.01																						
+		pistol_expansive_ammo	powder powder	0.2	1	1.01																						
+		miner_bolts_ammo	broken_weapon	0.1	1	1.01																						
+		shotgun_bullet_ammo	powder powder	0.25	1	1.01																						
+		shotgun_flechette_ammo	powder miner_bolts_ammo	0.25	1	1.01																						
+		shotgun_dragon_ammo	powder gas_ammo	0.3	1	1.01																						
+		medium_basic_ammo	powder	0.15	1	1.01																						
+		medium_police_ammo	powder powder	0.2	1	1.01																						
+		heavy_basic_ammo	powder powder	0.2	1	1.01																						
+		heavy_armorpierce_ammo	powder powder powder	0.3	1	1.01																						
+		battery_charge	glass acid	0.3	1	1.01																						
+		sawblade_ammo	broken_weapon	0.4	1	1.01																						
+		toxic_ammo	acid	0.2	1	1.01																						
 		medicalClue	plastic antibiotics	8	1	1.01																						
 		surgicalKit	medpack morphine medicalClue naloxone	40	1	1.01																						
 		antidote	plastic spider_poisongland	12	1	1.01																						

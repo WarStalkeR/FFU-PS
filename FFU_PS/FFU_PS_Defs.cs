@@ -6,7 +6,7 @@ namespace FFU_Phase_Shift {
     public static class ModConfig {
         // Constant Variables
         public const bool IsExperimental = false;
-        public const string ModVersion = "0.1.5.0";
+        public const string ModVersion = "0.1.5.3";
         public const string PathDump = "_Dump";
         public const string PathAssets = "Assets";
         public const string PathConfigs = "Configs";
@@ -15,8 +15,10 @@ namespace FFU_Phase_Shift {
 
         // Initial Variables
         public static bool FixCancelOverflow = true;
-        public static bool FixAutomapStackUse = true;
+        public static bool FixAutoMapStackUse = true;
         public static bool BetterItemUnlocks = true;
+        public static bool PreciseProduction = true;
+        public static float PreciseThreshold = 3.5f;
         public static bool AllAssetsLoad = true;
         public static bool AllConfigsLoad = true;
         public static bool AllLocalesLoad = true;
@@ -38,8 +40,10 @@ namespace FFU_Phase_Shift {
             // Mod settings template variables
             modConfig["InitConfig"]["ModVersion"] = ModVersion;
             modConfig["PatchConfig"]["FixCancelOverflow"] = true;
-            modConfig["PatchConfig"]["FixAutomapStackUse"] = true;
+            modConfig["PatchConfig"]["FixAutoMapStackUse"] = true;
             modConfig["PatchConfig"]["BetterItemUnlocks"] = true;
+            modConfig["PatchConfig"]["PreciseProduction"] = true;
+            modConfig["ModConfig"]["PreciseThreshold"] = 3.5f;
             modConfig["LoaderConfig"]["ToLoadAssets"] = "ALL";
             modConfig["LoaderConfig"]["ToLoadConfigs"] = "ALL";
             modConfig["LoaderConfig"]["ToLoadLocales"] = "ALL";
@@ -71,8 +75,12 @@ namespace FFU_Phase_Shift {
 
             // Load patch settings variables
             FixCancelOverflow = modConfig["PatchConfig"]["FixCancelOverflow"].ToBool(FixCancelOverflow);
-            FixAutomapStackUse = modConfig["PatchConfig"]["FixAutomapStackUse"].ToBool(FixAutomapStackUse);
+            FixAutoMapStackUse = modConfig["PatchConfig"]["FixAutoMapStackUse"].ToBool(FixAutoMapStackUse);
             BetterItemUnlocks = modConfig["PatchConfig"]["BetterItemUnlocks"].ToBool(BetterItemUnlocks);
+            PreciseProduction = modConfig["PatchConfig"]["PreciseProduction"].ToBool(PreciseProduction);
+
+            // Load custom settings variables
+            PreciseThreshold = modConfig["ModConfig"]["PreciseThreshold"].ToFloat(PreciseThreshold);
 
             // Load loader settings variables
             AllAssetsLoad = modConfig["LoaderConfig"]["ToLoadAssets"].GetString().ToLower() == ALL;

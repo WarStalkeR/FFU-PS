@@ -1,5 +1,6 @@
 ﻿using MGSC;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace FFU_Phase_Shift {
     public static class ModPatch {
@@ -55,6 +56,63 @@ namespace FFU_Phase_Shift {
             }
             item.StackCount--;
             if (item.StackCount <= 0) item.Storage?.Remove(item);
+            return false; // Original function is completely replaced
+        }
+
+        // Data disks rework to prioritize unlocking unknown data first
+        public static void CreateComponent_BetterUnlock(ItemFactory __instance, PickupItem item, List<PickupItemComponent> itemComponents,
+            BasePickupItemRecord itemRecord, bool randomizeConditionAndCapacity, bool isPrimary) {
+            DatadiskRecord datadiskRecord = itemRecord as DatadiskRecord;
+            if (datadiskRecord != null) {
+                var refDatadiskComponent = __instance._componentsCache.Find(x => x is DatadiskComponent) as DatadiskComponent;
+                if (refDatadiskComponent != null) {
+                    List<string> lockedIds = new List<string>();
+                    Mercenaries refMercs = SingletonMonoBehaviour<SpaceGameMode>.Instance.Get<Mercenaries>();
+                    MagnumCargo refCargo = SingletonMonoBehaviour<SpaceGameMode>.Instance.Get<MagnumCargo>();
+                    switch (datadiskRecord.UnlockType) {
+                        case DatadiskUnlockType.ProductionItem: {
+                            foreach (var unlockId in datadiskRecord.UnlockIds)
+                                if (!refCargo.UnlockedProductionItems.Contains(unlockId))
+                                    lockedIds.Add(unlockId);
+                            break;
+                        }
+                        case DatadiskUnlockType.MercenaryClass: {
+                            foreach (var unlockId in datadiskRecord.UnlockIds)
+                                if (!refMercs.UnlockedClasses.Contains(unlockId))
+                                    lockedIds.Add(unlockId);
+                            break;
+                        }
+                        case DatadiskUnlockType.Mercenary: {
+                            foreach (var unlockId in datadiskRecord.UnlockIds)
+                                if (!refMercs.UnlockedMercenaries.Contains(unlockId))
+                                    lockedIds.Add(unlockId);
+                            break;
+                        }
+                    }
+                    if (lockedIds.Count > 0) refDatadiskComponent.SetUnlockId(lockedIds[UnityEngine.Random.Range(0, lockedIds.Count)]);
+                }
+            }
+        }
+
+        // Item production rework to allow precise production hours for small items
+        public static bool StartItemProduction_Precise(MagnumCargo magnumCargo, MagnumProjects projects, MagnumSpaceship magnumSpaceship, SpaceTime time, ItemProduceReceipt receipt, int count, int lineIndex) {
+            MagnumProject withModifications = projects.GetWithModifications(receipt.OutputItem);
+            float prodlineProduceSpeedBonus = magnumSpaceship.ProdlineProduceSpeedBonus;
+            int durationInHours = receipt.ProduceTimeInHours > ModConfig.PreciseThreshold ?
+                (int)Mathf.Max(receipt.ProduceTimeInHours + prodlineProduceSpeedBonus, 1f) * count :
+                (int)Mathf.Max(receipt.ProduceTimeInHours * count + prodlineProduceSpeedBonus, 1f);
+            if (!magnumCargo.ItemProduceOrders.ContainsKey(lineIndex)) 
+                magnumCargo.ItemProduceOrders[lineIndex] = new List<ItemProduceOrder>();
+            ItemProduceOrder itemProduceOrder = new ItemProduceOrder {
+                OrderId = ((withModifications != null) ? withModifications.CustomRecord.Id : receipt.OutputItem),
+                Count = count,
+                DurationInHours = durationInHours,
+                StartTime = time.Time
+            };
+            itemProduceOrder.RequiredItems.AddRange(receipt.RequiredItems);
+            magnumCargo.ItemProduceOrders[lineIndex].Add(itemProduceOrder);
+            foreach (string requiredItem in receipt.RequiredItems) 
+                MagnumCargoSystem.RemoveSpecificCargo(magnumCargo, requiredItem, (short)count);
             return false; // Original function is completely replaced
         }
 
@@ -114,41 +172,6 @@ namespace FFU_Phase_Shift {
             __instance.RefreshWeapon();
             SingletonMonoBehaviour<TooltipFactory>.Instance.HideTooltip();
             return false; // Original function is completely replaced
-        }
-
-        // Data disks rework to prioritize unlocking unknown data first
-        public static void CreateComponent_BetterUnlock(ItemFactory __instance, PickupItem item, List<PickupItemComponent> itemComponents, 
-            BasePickupItemRecord itemRecord, bool randomizeConditionAndCapacity, bool isPrimary) {
-            DatadiskRecord datadiskRecord = itemRecord as DatadiskRecord;
-            if (datadiskRecord != null) {
-                var refDatadiskComponent = __instance._componentsCache.Find(x => x is DatadiskComponent) as DatadiskComponent;
-                if (refDatadiskComponent != null) {
-                    List<string> lockedIds = new List<string>();
-                    Mercenaries refMercs = SingletonMonoBehaviour<SpaceGameMode>.Instance.Get<Mercenaries>();
-                    MagnumCargo refCargo = SingletonMonoBehaviour<SpaceGameMode>.Instance.Get<MagnumCargo>();
-                    switch (datadiskRecord.UnlockType) {
-                        case DatadiskUnlockType.ProductionItem: {
-                            foreach (var unlockId in datadiskRecord.UnlockIds)
-                                if (!refCargo.UnlockedProductionItems.Contains(unlockId))
-                                    lockedIds.Add(unlockId);
-                            break;
-                        }
-                        case DatadiskUnlockType.MercenaryClass: {
-                            foreach (var unlockId in datadiskRecord.UnlockIds)
-                                if (!refMercs.UnlockedClasses.Contains(unlockId))
-                                    lockedIds.Add(unlockId);
-                            break;
-                        }
-                        case DatadiskUnlockType.Mercenary: {
-                            foreach (var unlockId in datadiskRecord.UnlockIds)
-                                if (!refMercs.UnlockedMercenaries.Contains(unlockId))
-                                    lockedIds.Add(unlockId);
-                            break;
-                        }
-                    }
-                    if (lockedIds.Count > 0) refDatadiskComponent.SetUnlockId(lockedIds[UnityEngine.Random.Range(0, lockedIds.Count)]);
-                }
-            }
         }
     }
 }

@@ -3,6 +3,7 @@
 Parameter	Value							
 WPSTUpgradeMoreWeapon	10							
 ARMSTUpgradeMoreArmors	10							
+PRLNItemSlotCount	2							
 MEMDFPerkCountToSwitch	10							
 #end								
 								
@@ -12,6 +13,13 @@ wpst_upg_more_weapons	TRUE	engineer	weaponstation_department	FALSE	3 1	wpst_weap
 wpst_upg_more_weapons_2	TRUE	engineer	weaponstation_department	FALSE	5 1	wpst_upg_weapon_cost_reduce	WPSTUpgradeMoreWeapon + 60	robot_parts_container robot_parts_container lens
 armst_upg_more_armors	TRUE	engineer	armorstation_department	FALSE	0 0	armorstation_department	ARMSTUpgradeMoreArmors + 30	robot_parts_container security_clothing_container
 armst_upg_more_armors_2	TRUE	engineer	armorstation_department	FALSE	1 2	armst_upg_armor_cost_reduce	ARMSTUpgradeMoreArmors + 60	robot_parts_container robot_parts_container security_clothing_container
+prln_magnum_produce_speed	TRUE	supply	prodline_department	FALSE	1 0	prodline_department	PRLNProduceSpeed - 12	welding_machine_device
+prln_magnum_produce_speed_2	TRUE	supply	prodline_department	FALSE	3 0	prodline_department	PRLNProduceSpeed - 12	welding_machine_device welding_machine_device
+prln_produce_item_slot_count	TRUE	supply	prodline_department	FALSE	4 0	prln_magnum_produce_speed_2	PRLNItemSlotCount + 2	engineering_parts_container armor_shards
+prln_produce_item_slot_count_2	TRUE	supply	prodline_department	FALSE	1 1	prln_magnum_produce_speed	PRLNItemSlotCount + 2	engineering_parts_container engineering_parts_container armor_shards armor_shards
+prln_magnum_produce_speed_3	TRUE	supply	prodline_department	FALSE	2 1	prln_produce_item_slot_count_2	PRLNProduceSpeed - 12	welding_machine_device welding_machine_device welding_machine_device
+prln_produce_item_slot_count_3	TRUE	supply	prodline_department	FALSE	3 1	prln_magnum_produce_speed_3	PRLNItemSlotCount + 2	engineering_parts_container engineering_parts_container engineering_parts_container armor_shards armor_shards armor_shards
+prln_magnum_produce_speed_4	TRUE	supply	prodline_department	FALSE	4 1	prln_produce_item_slot_count_3 prln_produce_item_slot_count	PRLNProduceSpeed - 12	welding_machine_device welding_machine_device welding_machine_device welding_machine_device
 memdf_perks_count_to_switch	TRUE	research	memdefrag_department	FALSE	1 1	memdf_class_upgrade_speed	MEMDFPerkCountToSwitch + 30	scientific_equipment chemical_analyzer
 memdf_perks_count_to_switch_2	TRUE	research	memdefrag_department	FALSE	3 1	memdf_class_upgrade_speed_2	MEMDFPerkCountToSwitch + 60	scientific_equipment scientific_equipment chemical_analyzer
 trdsh_shuttle_move_speed	TRUE	hangar	tradeshuttle_department	FALSE	4 3	tradeshuttle_department	TRDSHShuttleMoveSpeed - 24	darknet_unit precious_metals

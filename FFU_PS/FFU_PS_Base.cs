@@ -24,15 +24,15 @@ namespace FFU_Phase_Shift {
             var Mod = new Harmony("quasimorph.ffu.phase_shift");
 
             if (ModConfig.FixCancelOverflow)
-                try { ModLog.Info("Patching: MGSC.MagnumDevelopmentSystem.CancelProject()");
+                try { ModLog.Info("Patching: MGSC.MagnumDevelopmentSystem.CancelProject");
                     var refMethod = AccessTools.Method(typeof(MagnumDevelopmentSystem), "CancelProject");
                     var prefixPatch = SymbolExtensions.GetMethodInfo(() =>
                         ModPatch.CancelProject_ExploitFix(default, default, default, default));
                     Mod.Patch(refMethod, prefix: new HarmonyMethod(prefixPatch));
                 } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
 
-            if (ModConfig.FixAutomapStackUse)
-                try { ModLog.Info("Patching: MGSC.ItemInteraction.UseAutomap()");
+            if (ModConfig.FixAutoMapStackUse)
+                try { ModLog.Info("Patching: MGSC.ItemInteraction.UseAutomap");
                     var refMethod = AccessTools.Method(typeof(ItemInteraction), "UseAutomap");
                     var prefixPatch = SymbolExtensions.GetMethodInfo(() =>
                         ModPatch.UseAutomap_UsageFix(default, default, default, default));
@@ -40,15 +40,23 @@ namespace FFU_Phase_Shift {
                 } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
 
             if (ModConfig.BetterItemUnlocks)
-                try { ModLog.Info("Patching: MGSC.ItemFactory.CreateComponent()");
+                try { ModLog.Info("Patching: MGSC.ItemFactory.CreateComponent");
                     var refMethod = AccessTools.Method(typeof(ItemFactory), "CreateComponent");
                     var postfixPatch = SymbolExtensions.GetMethodInfo(() =>
                         ModPatch.CreateComponent_BetterUnlock(default, default, default, default, default, default));
                     Mod.Patch(refMethod, postfix: new HarmonyMethod(postfixPatch));
                 } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
 
+            if (ModConfig.PreciseProduction)
+                try { ModLog.Info("Patching: MGSC.ItemProductionSystem.StartItemProduction");
+                    var refMethod = AccessTools.Method(typeof(ItemProductionSystem), "StartItemProduction");
+                    var prefixPatch = SymbolExtensions.GetMethodInfo(() =>
+                        ModPatch.StartItemProduction_Precise(default, default, default, default, default, default, default));
+                    Mod.Patch(refMethod, prefix: new HarmonyMethod(prefixPatch));
+                } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
+
             if (ModConfig.IsExperimental)
-                try { ModLog.Info("Patching: MGSC.InventoryScreen.RefreshItemsList()");
+                try { ModLog.Info("Patching: MGSC.InventoryScreen.RefreshItemsList");
                     var refMethod = AccessTools.Method(typeof(InventoryScreen), "RefreshItemsList");
                     var prefixPatch = SymbolExtensions.GetMethodInfo(() =>
                         ModPatch.RefreshItemsList_FixMissUI(default, default));
@@ -56,7 +64,7 @@ namespace FFU_Phase_Shift {
                 } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
 
             if (ModConfig.IsExperimental)
-                try { ModLog.Info("Patching: MGSC.NoPlayerInventoryView.RefreshItemsList()");
+                try { ModLog.Info("Patching: MGSC.NoPlayerInventoryView.RefreshItemsList");
                     var refMethod = AccessTools.Method(typeof(NoPlayerInventoryView), "RefreshItemsList");
                     var prefixPatch = SymbolExtensions.GetMethodInfo(() =>
                         ModPatch.RefreshItemsList_FixShipUI(default));
