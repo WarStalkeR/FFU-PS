@@ -1,11 +1,11 @@
 #itemtransformation							
 Id		OutputItems					
 corp_bone		human_rib human_rib human_rib					
-rags		tread tread tread tread tread					
 #end							
 							
 #itemreceipts							
 Id		OutputItem	RequiredItems	ProduceTimeInHours	ModifyStartCost	ModifyStep	ModifyItemsGrades
+		broken_weapon		0.5	1	1.01	
 		civres_powerfist	blunt_melee_shards rod coarse_gears	20	1	1.02	broken_weapon 2 blunt_melee_shards 20 coarse_gears 100 tool_container 500
 		bandit_sawblade	plastic weapon_shards	14	1	1.02	gas_ammo 1 pierce_melee_shards 15 coarse_gears 45 melee_repair_kit 145 engineering_parts_container 500
 		spec_pistol	rubber weapon_shards	24	1	1.02	pistol_basic_ammo 1 weapon_shards 20 coarse_gears 100 tool_container 500
