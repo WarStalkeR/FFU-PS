@@ -47,11 +47,11 @@ namespace FFU_Phase_Shift {
                     Mod.Patch(refMethod, postfix: new HarmonyMethod(postfixPatch));
                 } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
 
-            if (ModConfig.PreciseProduction)
+            if (ModConfig.SmartProduction)
                 try { ModLog.Info("Patching: MGSC.ItemProductionSystem.StartItemProduction");
                     var refMethod = AccessTools.Method(typeof(ItemProductionSystem), "StartItemProduction");
                     var prefixPatch = SymbolExtensions.GetMethodInfo(() =>
-                        ModPatch.StartItemProduction_Precise(default, default, default, default, default, default, default));
+                        ModPatch.StartItemProduction_SmartPrecision(default, default, default, default, default, default, default));
                     Mod.Patch(refMethod, prefix: new HarmonyMethod(prefixPatch));
                 } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
 

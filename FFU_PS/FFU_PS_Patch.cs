@@ -100,13 +100,14 @@ namespace FFU_Phase_Shift {
             }
         }
 
-        // Item production rework to allow precise production hours for small items
-        public static bool StartItemProduction_Precise(MagnumCargo magnumCargo, MagnumProjects projects, MagnumSpaceship magnumSpaceship, SpaceTime time, ItemProduceReceipt receipt, int count, int lineIndex) {
+        // Item production rework to allow precise production hours and smart bonus application
+        public static bool StartItemProduction_SmartPrecision(MagnumCargo magnumCargo, MagnumProjects projects, 
+            MagnumSpaceship magnumSpaceship, SpaceTime time, ItemProduceReceipt receipt, int count, int lineIndex) {
             MagnumProject withModifications = projects.GetWithModifications(receipt.OutputItem);
             float prodlineProduceSpeedBonus = magnumSpaceship.ProdlineProduceSpeedBonus;
-            int durationInHours = receipt.ProduceTimeInHours > ModConfig.PreciseThreshold ?
-                (int)Mathf.Max(receipt.ProduceTimeInHours + prodlineProduceSpeedBonus, 1f) * count :
-                (int)Mathf.Max(receipt.ProduceTimeInHours * count + prodlineProduceSpeedBonus, 1f);
+            int durationInHours = (int)Mathf.Min(
+                Mathf.Max(receipt.ProduceTimeInHours + prodlineProduceSpeedBonus, 1f) * count,
+                Mathf.Max(receipt.ProduceTimeInHours * count + prodlineProduceSpeedBonus, 1f));
             if (!magnumCargo.ItemProduceOrders.ContainsKey(lineIndex)) 
                 magnumCargo.ItemProduceOrders[lineIndex] = new List<ItemProduceOrder>();
             ItemProduceOrder itemProduceOrder = new ItemProduceOrder {

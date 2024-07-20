@@ -1,0 +1,51 @@
+[b]Fight For Universe: Phase Shift[/b] is an extension to the original game that will change it in many expected and unexpected ways.
+
+As of right now changes are very minor and mostly proof of concept:
+* Greatly increased stack sizes for everything that stacks.
+* Changed how much inventory backpacks provide (happy scavenging).
+* Modified some crafting recipes and reworked all upgrade recipes.
+* Data chips attempt to spawn with tech you still don't have.
+* Fixed exploit (cancel project) and bug (whole stack use).
+* Made new playthroughs diligence more rewarding.
+
+This mod is configuration + localization dumper and loader in the first place and everything else can be pretty much changed via settings file (at some point in the future, I will also implement asset dumping and loading as well). It consists from Data Loading Library and Harmony Library for code patching. Additional important information below.
+
+[b]Note[/b]: this mod might be incompatible with other mods that also have Harmony Library in mod folder. Not verified and more testing is needed.
+
+[u]How to find settings file location[/u]:
+1) Install this mod. Launch game with it once.
+2) Open: [i]%userprofile%\AppData\LocalLow\Magnum Scriptum Ltd\Quasimorph\Player.log[/i]
+3) There you will find entry [i][FFU: Phase Shift] Content Path[/i]
+4) This is the mod folder, where you will find everything, including settings.
+
+[u]Mod Setting File Properties[/u]:
+[b]ModVersion[/b] - will recreate config file, if different from what library expects.
+[b]FixCancelOverflow[/b] - fixes items overflow exploit for projects that use ammo.
+[b]FixAutoMapStackUse[/b] - uses sensors one at a time, instead of wasting whole stack.
+[b]BetterItemUnlocks[/b] - reworks for data chips to prioritize not yet unlocked tech.
+[b]SmartProduction[/b] - uses `ProduceTimeInHours` precision and optimizes production.
+[b]ToLoadAssets[/b] - not implemented yet, you can ignore it.
+[b]ToLoadConfigs[/b] - will try to load specific or all files from 'Configs' folder.
+[b]ToLoadLocales[/b] - will try to load specific of all files from 'Localization' folder.
+[b]DoAssetsDump[/b] - not implemented yet, you can ignore it.
+[b]DoConfigsDump[/b] - will dump (all or specific) config files as CSV.
+[b]DoLocalesDump[/b] - will dump main localization file as CSV.
+[b]ToDumpAssets[/b] - not implemented yet, you can ignore it.
+[b]ToDumpConfigs[/b] - list of which config files to dump. Can be used with 'ALL' option.
+
+[u]File Dumping/Loading Information[/u]:
+As of right now dumping only works for config files and for main localization file (no other locale files exist in the first place). Both of them are dumped as CSV files. While config file can be modified and loaded as is (either fully or partially, as long as #regions and columns related to these #regions are preserved), localization file can't be loaded back as CSV and requires to be converted into JSON file that follows this pattern:[code]{
+  "translation.id.1": {
+    "language.id.a": "localized_string_1",
+    "language.id.b": "localized_string_2"
+  },
+  "translation.id.2": {
+    "language.id.a": "localized_string_3",
+    "language.id.b": "localized_string_4"
+  }
+}[/code][b]translation.id[/b] - identifier of translated string. [b]language.id[/b] - language identifier. Must be: english, russian, portuguese, german, french, spanish, polish, turkish, korean, japanese or chinese_s. [b]localized_string[/b] - translated string. Localization loader is very versatile and allows loading and overwriting of any existing and/or new string identifiers. If you want, you can assign to 'translation.id.1' translation in one language and to 'translation.id.2' translation in another language in exactly same file. Or you can divide them into multiple files.
+
+[u]Modding Conclusion[/u]:
+If you don't want any of the mod changes, just remove all existing files from 'Configs' and 'Localization' folders in mod folder and create your own after dumping original config files. If there any issue with parsing specific row, everything will be written in [b]Player.log[/b] file. Always keep backup of your custom config files in a separate folder and to make CSV file editing easier, use [b]LibreOffice Calc[/b] with tab-based separator option.
+
+Source Code is available here: https://github.com/WarStalkeR/FFU-PS

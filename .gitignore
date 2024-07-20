@@ -4,7 +4,6 @@
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 # Custom
-FFU_PS/Files/workshop.txt
 .~lock.*#
 
 # User-specific files
