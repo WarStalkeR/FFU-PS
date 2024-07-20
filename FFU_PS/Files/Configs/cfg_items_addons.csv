@@ -26,7 +26,7 @@ Id		OutputItem	RequiredItems	ProduceTimeInHours	ModifyStartCost	ModifyStep	Modif
 		battery_crafted_charge	broken_weapon acid	0.2	1	1.01	
 		civres_armor	armor_shards ceramite_shards metal_tread rubber	42	1	1.05	armor_shards 1 metal_tread 3 rubber 9 ceramite_shards 25 miner_clothing_container 80
 		civres_helmet	armor_shards ceramite_shards glass metal_tread	42	1	1.05	armor_shards 1 metal_tread 3 glass 9 ceramite_shards 25 miner_clothing_container 80
-		civres_pants	armor_shards ceramite_shards rubber rubber 	42	1	1.05	armor_shards 1 rags 3 rubber 9 ceramite_shards 25 miner_clothing_container 80
+		civres_pants	armor_shards ceramite_shards rubber rubber	42	1	1.05	armor_shards 1 rags 3 rubber 9 ceramite_shards 25 miner_clothing_container 80
 		civres_boots	ceramite_shards armor_shards rubber plastic	42	1	1.05	armor_shards 1 rags 3 rubber 9 ceramite_shards 25 miner_clothing_container 80
 		quasi_sensor_device	circuit_board transformer bulb	48	1	1.01	
 		nanorobot_grenade	glass transformer explosives acid acid acid microelectronics	24	1	1.01	
