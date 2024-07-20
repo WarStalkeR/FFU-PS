@@ -1075,9 +1075,11 @@ namespace FFU_Phase_Shift {
                         }
                     } else if (currParser != null) {
                         try {
+                            if (cfgEntry.Contains(" \t") || cfgEntry.Contains("\t ")) 
+                                ModLog.Warning($"WARNING! Wrong Spacing: {cfgEntry.Trim(new char[] { '\t', '\r', '\n' })}");
                             currParser.ParseLine(SplitLine(cfgEntry), currentKey, desCollection);
                         } catch (Exception ex) {
-                            ModLog.Warning($"ERROR: {cfgEntry.Trim(new char[] {'\t', '\r', '\n'})}");
+                            ModLog.Error($"ERROR! Parsing Failed: {cfgEntry.Trim(new char[] {'\t', '\r', '\n'})}");
                             if (verboseLogging) ModLog.Error(ex.ToString());
                         }
                     }
@@ -1085,8 +1087,8 @@ namespace FFU_Phase_Shift {
             }
         }
 
-        private string[] SplitLine(string s) {
-            return Regex.Replace(s, "\\n|\\r", string.Empty).Split('\t');
+        private string[] SplitLine(string str) {
+            return Regex.Replace(str, "\\n|\\r", string.Empty).Split('\t');
         }
     }
 }
