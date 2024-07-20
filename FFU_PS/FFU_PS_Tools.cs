@@ -1076,7 +1076,7 @@ namespace FFU_Phase_Shift {
                     } else if (currParser != null) {
                         try {
                             if (cfgEntry.Contains(" \t") || cfgEntry.Contains("\t ")) 
-                                ModLog.Warning($"WARNING! Wrong Spacing: {cfgEntry.Trim(new char[] { '\t', '\r', '\n' })}");
+                                ModLog.Warning($"WARNING! Bad Spacing: {cfgEntry.Trim(new char[] { '\t', '\r', '\n' })}");
                             currParser.ParseLine(SplitLine(cfgEntry), currentKey, desCollection);
                         } catch (Exception ex) {
                             ModLog.Error($"ERROR! Parsing Failed: {cfgEntry.Trim(new char[] {'\t', '\r', '\n'})}");
