@@ -578,25 +578,63 @@ namespace FFU_Phase_Shift {
                         }
                     } else Data.Items._records[r.Id] = r;
                 } else Data.Items.AddRecord(r.Id, r);
-                r.ContentDescriptor = descs.GetDescriptor(r.Id);
+                if (descs.GetDescriptor(r.Id) != null) {
+                    r.ContentDescriptor = descs.GetDescriptor(r.Id);
+                } else {
+                    if (Data.Items.GetRecord(r.Id) != null) {
+                        var multiRecord = Data.Items._records[r.Id] as CompositeItemRecord;
+                        if (multiRecord.GetRecord<AutomapRecord>() != null)
+                            r.ContentDescriptor = multiRecord.GetRecord<AutomapRecord>().ContentDescriptor;
+                        else if (multiRecord.GetRecord<SkullRecord>() != null)
+                            r.ContentDescriptor = multiRecord.GetRecord<SkullRecord>().ContentDescriptor;
+                        else if (multiRecord.GetRecord<QuasiArtifactRecord>() != null)
+                            r.ContentDescriptor = multiRecord.GetRecord<QuasiArtifactRecord>().ContentDescriptor;
+                        else if (multiRecord.GetRecord<TurretRecord>() != null)
+                            r.ContentDescriptor = multiRecord.GetRecord<TurretRecord>().ContentDescriptor;
+                        else if (multiRecord.GetRecord<DatadiskRecord>() != null)
+                            r.ContentDescriptor = multiRecord.GetRecord<DatadiskRecord>().ContentDescriptor;
+                        else if (multiRecord.GetRecord<ResurrectKitRecord>() != null)
+                            r.ContentDescriptor = multiRecord.GetRecord<ResurrectKitRecord>().ContentDescriptor;
+                        else ModLog.Warning($"WARNING! Item '{r.Id}' has no fallback descriptor! Expect errors.");
+                    }
+                }
             }));
             _cfgLoader.AddParser(new TableParser<DatadiskRecord>("datadisks", delegate (DatadiskRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, datadisks: {r.Id}");
+                bool isToDel = r.Id.StartsWith("^");
+                bool isToAdd = r.Id.StartsWith("+");
+                bool isToSub = r.Id.StartsWith("-");
                 bool isOnTop = r.Id.StartsWith("*");
-                if (isOnTop) r.TrimId();
+                bool isOperation = isToDel || isToAdd || isToSub;
+                CleanRecordIdentifier(r);
                 if (Data.Items.GetRecord(r.Id) != null) {
                     var multiRecord = Data.Items._records[r.Id] as CompositeItemRecord;
                     if (multiRecord != null) {
                         if (multiRecord.GetRecord<DatadiskRecord>() != null) {
                             int index = multiRecord.Records.FindIndex(rec => rec is DatadiskRecord);
-                            if (index != -1) multiRecord.Records[index] = r;
-                        } else {
+                            if (index != -1) {
+                                var refRecord = multiRecord.Records[index] as DatadiskRecord;
+                                if (!isOperation) {
+                                    multiRecord.Records[index] = r;
+                                } else if (isToDel) {
+                                    // NOT IMPLEMENTED YET //
+                                } else if (isToAdd) {
+                                    foreach (var unlockId in r.UnlockIds)
+                                    if (!refRecord.UnlockIds.Contains(unlockId))
+                                    refRecord.UnlockIds.Add(unlockId);
+                                } else if (isToSub) {
+                                    foreach (var unlockId in r.UnlockIds)
+                                    if (refRecord.UnlockIds.Contains(unlockId))
+                                    refRecord.UnlockIds.Remove(unlockId);
+                                }
+                            }
+                        } else if (!isOperation) {
                             if (isOnTop) multiRecord.Records.Insert(0, r);
                             else multiRecord.Records.Add(r);
                         }
-                    } else Data.Items._records[r.Id] = r;
-                } else Data.Items.AddRecord(r.Id, r);
-                r.ContentDescriptor = descs.GetDescriptor(r.Id);
+                    } else if (!isOperation) Data.Items._records[r.Id] = r;
+                } else if (!isOperation) Data.Items.AddRecord(r.Id, r);
+                if (!isOperation) r.ContentDescriptor = descs.GetDescriptor(r.Id);
             }));
             _cfgLoader.AddParser(new TableParser<TurretRecord>("turrets", delegate (TurretRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, turrets: {r.Id}");
@@ -671,6 +709,12 @@ namespace FFU_Phase_Shift {
                     Data.MagnumDefaultValues[r.Parameter] = r.Value;
                 else Data.MagnumDefaultValues.Add(r.Parameter, r.Value);
             }));
+        }
+
+        public static void SafeWrite(string rawContent, string savePath, string fileName, bool logAction = false) {
+            if (!Directory.Exists(savePath)) Directory.CreateDirectory(savePath);
+            File.WriteAllText(Path.Combine(savePath, fileName), rawContent);
+            if (logAction) ModLog.Info($"Writing: saved raw data to file {fileName}");
         }
 
         public static void LoadConfigFile(string configName) {
@@ -779,8 +823,7 @@ namespace FFU_Phase_Shift {
 
         public static void DumpText(TextAsset refAsset, string savePath, string assetExt = "csv") {
             if (refAsset == null) { ModLog.Warning($"DumpText: text asset doesn't exist!"); return; };
-            if (!Directory.Exists(savePath)) Directory.CreateDirectory(savePath);
-            File.WriteAllText(Path.Combine(savePath, $"{refAsset.name}.{assetExt}"), refAsset.text);
+            SafeWrite(refAsset.text, savePath, $"{refAsset.name}.{assetExt}");
             ModLog.Info($"Dumping: TextAsset '{refAsset.name}' saved as {refAsset.name}.{assetExt}");
         }
 

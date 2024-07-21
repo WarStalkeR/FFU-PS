@@ -39,6 +39,14 @@ namespace FFU_Phase_Shift {
                     Mod.Patch(refMethod, prefix: new HarmonyMethod(prefixPatch));
                 } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
 
+            if (ModConfig.FixContextStackUse)
+                try { ModLog.Info("Patching: MGSC.NoPlayerContextMenu.OnContextCommandClick");
+                    var refMethod = AccessTools.Method(typeof(NoPlayerContextMenu), "OnContextCommandClick");
+                    var prefixPatch = SymbolExtensions.GetMethodInfo(() =>
+                        ModPatch.OnContextCommandClick_SpaceUseFix(default, default));
+                    Mod.Patch(refMethod, prefix: new HarmonyMethod(prefixPatch));
+                } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
+
             if (ModConfig.BetterItemUnlocks)
                 try { ModLog.Info("Patching: MGSC.ItemFactory.CreateComponent");
                     var refMethod = AccessTools.Method(typeof(ItemFactory), "CreateComponent");

@@ -1,3 +1,29 @@
+#datadisks							
+Id		Price	Weight	InventoryWidthSize	UnlockType	UnlockIds	
++itemChip		100	0.1	1	ProductionItem	battery_charge bandit_sawblade army_pistol dark_pistol rail_pistol tech_pistol petrov_pistol desert_shotgun bandit_smg civres_powerfist civres_pistol civres_pistol_2 civres_smg broken_weapon	
++mediumItemChip		200	0.1	1	ProductionItem	miner_disctrower miner_flametrower civres_assault civres_marksman civres_armor civres_helmet civres_pants civres_boots	
++highItemChip		400	0.1	1	ProductionItem	quasi_sensor_device toxic_launcher nanorobot_grenade phase_bomb	
+#end							
+							
+#trash							
+Id		Price	Weight	InventoryWidthSize	MaxStack	SubType	
+*itemChip		100	0.1	1	10	BartherResource	
+*mediumItemChip		200	0.1	1	10	BartherResource	
+*highItemChip		400	0.1	1	10	BartherResource	
+*RealWareItemChip		500	0.1	1	10	BartherResource	
+*SBNItemChip		500	0.1	1	10	BartherResource	
+*AncomItemChip		500	0.1	1	10	BartherResource	
+*DayDreamItemChip		500	0.1	1	10	BartherResource	
+*SunLightItemChip		500	0.1	1	10	BartherResource	
+*CoreItemChip		500	0.1	1	10	BartherResource	
+*PlanetBridgeItemChip		500	0.1	1	10	BartherResource	
+*GrassHopperItemChip		500	0.1	1	10	BartherResource	
+*ChurchItemChip		500	0.1	1	10	BartherResource	
+*FrancheItemChip		500	0.1	1	10	BartherResource	
+*merkUSB		400	0.1	1	10	BartherResource	
+*classUSB		500	0.1	1	10	BartherResource	
+#end		200	0.1	1	10	BartherResource	
+							
 #itemtransformation							
 Id		OutputItems					
 corp_bone		human_rib human_rib human_rib					

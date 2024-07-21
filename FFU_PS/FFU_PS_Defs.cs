@@ -6,7 +6,7 @@ namespace FFU_Phase_Shift {
     public static class ModConfig {
         // Constant Variables
         public const bool IsExperimental = false;
-        public const string ModVersion = "0.1.5.4";
+        public const string ModVersion = "0.1.5.5";
         public const string PathDump = "_Dump";
         public const string PathAssets = "Assets";
         public const string PathConfigs = "Configs";
@@ -16,6 +16,7 @@ namespace FFU_Phase_Shift {
         // Initial Variables
         public static bool FixCancelOverflow = true;
         public static bool FixAutoMapStackUse = true;
+        public static bool FixContextStackUse = true;
         public static bool BetterItemUnlocks = true;
         public static bool SmartProduction = true;
         public static bool AllAssetsLoad = true;
@@ -40,6 +41,7 @@ namespace FFU_Phase_Shift {
             modConfig["InitConfig"]["ModVersion"] = ModVersion;
             modConfig["PatchConfig"]["FixCancelOverflow"] = true;
             modConfig["PatchConfig"]["FixAutoMapStackUse"] = true;
+            modConfig["PatchConfig"]["FixContextStackUse"] = true;
             modConfig["PatchConfig"]["BetterItemUnlocks"] = true;
             modConfig["PatchConfig"]["SmartProduction"] = true;
             modConfig["LoaderConfig"]["ToLoadAssets"] = "ALL";
@@ -74,11 +76,12 @@ namespace FFU_Phase_Shift {
             // Load patch settings variables
             FixCancelOverflow = modConfig["PatchConfig"]["FixCancelOverflow"].ToBool(FixCancelOverflow);
             FixAutoMapStackUse = modConfig["PatchConfig"]["FixAutoMapStackUse"].ToBool(FixAutoMapStackUse);
+            FixContextStackUse = modConfig["PatchConfig"]["FixContextStackUse"].ToBool(FixContextStackUse);
             BetterItemUnlocks = modConfig["PatchConfig"]["BetterItemUnlocks"].ToBool(BetterItemUnlocks);
             SmartProduction = modConfig["PatchConfig"]["SmartProduction"].ToBool(SmartProduction);
 
             // Load custom settings variables
-            // RESERVED //
+            // NOT IMPLEMENTED YET //
 
             // Load loader settings variables
             AllAssetsLoad = modConfig["LoaderConfig"]["ToLoadAssets"].GetString().ToLower() == ALL;
