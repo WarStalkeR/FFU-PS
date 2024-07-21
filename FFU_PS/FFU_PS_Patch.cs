@@ -64,7 +64,9 @@ namespace FFU_Phase_Shift {
         // Data disks rework to prioritize unlocking unknown data first
         public static void CreateComponent_BetterUnlock(ItemFactory __instance, PickupItem item, List<PickupItemComponent> itemComponents,
             BasePickupItemRecord itemRecord, bool randomizeConditionAndCapacity, bool isPrimary) {
-            //if (itemRecord == null) return;
+            if (SingletonMonoBehaviour<DungeonGameMode>.Instance == null &&
+                SingletonMonoBehaviour<SpaceGameMode>.Instance == null)
+                return;
             DatadiskRecord datadiskRecord = itemRecord as DatadiskRecord;
             if (datadiskRecord != null) {
                 var refDatadiskComponent = __instance._componentsCache.Find(x => x is DatadiskComponent) as DatadiskComponent;
