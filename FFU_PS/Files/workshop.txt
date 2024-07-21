@@ -22,6 +22,7 @@ This mod is configuration + localization dumper and loader in the first place an
 [b]ModVersion[/b] - will recreate config file, if different from what library expects.
 [b]FixCancelOverflow[/b] - fixes items overflow exploit for projects that use ammo.
 [b]FixAutoMapStackUse[/b] - uses sensors one at a time, instead of wasting whole stack.
+[b]FixContextStackUse[/b] - allows use of non-stackable items from stacks one at a time.
 [b]BetterItemUnlocks[/b] - reworks for data chips to prioritize not yet unlocked tech.
 [b]SmartProduction[/b] - uses `ProduceTimeInHours` precision and optimizes production.
 [b]ToLoadAssets[/b] - not implemented yet, you can ignore it.
