@@ -229,16 +229,16 @@ spider_chitin		5	0.5	1	200	Resource
 spider_meat		5	1	1	100	Resource																						
 spider_poisongland		20	0.1	1	200	Resource																						
 *broken_weapon		5	0.1	1	500	Resource																						
-plastic		5	0.1	1	200	Resource																						
+plastic		5	0.1	1	500	Resource																						
 powder		1	0.01	1	500	Resource																						
-glass		5	0.05	1	200	Resource																						
+glass		5	0.05	1	500	Resource																						
 metal_tread		10	0.4	1	200	Resource																						
 *tape		20	0.1	1	200	Resource																						
 wire		20	0.2	1	200	Resource																						
 rubber		5	0.3	1	200	Resource																						
-tread		1	0.01	1	200	Resource																						
+tread		1	0.01	1	500	Resource																						
 explosives		10	0.6	1	200	Resource																						
-acid		1	0.01	1	200	Resource																						
+acid		1	0.01	1	500	Resource																						
 tin		1	0.1	1	100	Resource																						
 miner_bolts_ammo		1	0.01	1	10	Resource																						
 gas_ammo		1	0.02	1	10	Resource																						
@@ -318,7 +318,7 @@ watermelon		20	0.4	1	50	Container
 																												
 #itemtransformation																												
 Id		OutputItems																										
-mre_pack		synthBeef synthBeef synthChicken																										
+mre_pack		cannedMeat synthBeef chocolateBar																										
 nanorobot_grenade		glass glass explosives explosives acid acid acid																										
 phase_bomb		broken_weapon broken_weapon explosives explosives explosives																										
 organsBox		bloodBag bloodBag furuncle trowable_heart human_aye human_ear meat1 meat1 meat1																										
@@ -448,7 +448,7 @@ Id		OutputItem	RequiredItems	ProduceTimeInHours	ModifyStartCost	ModifyStep	Modif
 		bloodBag	plastic trowable_heart	10	1	1.01																						
 		painkillers	plastic poppy_box	8	1	1.01																						
 		vodka	glassBottle water human_poop	8	1	1.01																						
-		mre_pack	synthBeef synthBeef synthChicken	10	1	1.01																						
+		mre_pack	cannedMeat synthBeef chocolateBar	10	1	1.05																						
 		medium_backpack	rags rags plastic rubber tread	36	1	1.01																						
 		big_backpack	rags plastic rubber armor_shards tread	48	1	1.01																						
 		servo_backpack	plastic plastic rubber metal_tread wire	30	1	1.01																						

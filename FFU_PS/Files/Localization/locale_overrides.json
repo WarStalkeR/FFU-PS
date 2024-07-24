@@ -1,0 +1,10 @@
+{
+	"item.broken_weapon.name": {
+		"english": "Scrap",
+		"russian": "Металлолом"
+	},
+	"item.broken_weapon.shortdesc": {
+		"english": "crafting component",
+		"russian": "компонент крафта"
+	}
+}

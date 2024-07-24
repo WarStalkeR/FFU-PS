@@ -1,0 +1,23 @@
+#datadisks							
+Id		Price	Weight	InventoryWidthSize	UnlockType	UnlockIds	
++itemChip		100	0.1	1	ProductionItem	broken_weapon plastic powder glass acid tread	
+//+mediumItemChip		200	0.1	1	ProductionItem		
+//+highItemChip		400	0.1	1	ProductionItem		
+#end							
+							
+// Recycling							
+#itemtransformation							
+Id		OutputItems					
+rags		tread tread					
+#end							
+							
+// Basic Resources							
+#itemreceipts							
+Id		OutputItem	RequiredItems	ProduceTimeInHours	ModifyStartCost	ModifyStep	ModifyItemsGrades
+		broken_weapon		0.5	1	1.01	
+		plastic		0.5	1	1.01	
+		powder		0.5	1	1.01	
+		glass		0.5	1	1.01	
+		acid		0.5	1	1.01	
+		tread		0.5	1	1.01	
+#end							

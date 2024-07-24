@@ -1,6 +1,6 @@
 #datadisks							
 Id		Price	Weight	InventoryWidthSize	UnlockType	UnlockIds	
-+itemChip		100	0.1	1	ProductionItem	battery_charge bandit_sawblade army_pistol dark_pistol rail_pistol tech_pistol petrov_pistol desert_shotgun bandit_smg civres_powerfist civres_pistol civres_pistol_2 civres_smg broken_weapon	
++itemChip		100	0.1	1	ProductionItem	battery_charge bandit_sawblade army_pistol dark_pistol rail_pistol tech_pistol petrov_pistol desert_shotgun bandit_smg civres_powerfist civres_pistol civres_pistol_2 civres_smg	
 +mediumItemChip		200	0.1	1	ProductionItem	miner_disctrower miner_flametrower civres_assault civres_marksman civres_armor civres_helmet civres_pants civres_boots	
 +highItemChip		400	0.1	1	ProductionItem	quasi_sensor_device toxic_launcher nanorobot_grenade phase_bomb	
 #end							
@@ -31,7 +31,6 @@ corp_bone		human_rib human_rib human_rib
 							
 #itemreceipts							
 Id		OutputItem	RequiredItems	ProduceTimeInHours	ModifyStartCost	ModifyStep	ModifyItemsGrades
-		broken_weapon		0.5	1	1.01	
 		civres_powerfist	blunt_melee_shards rod coarse_gears	20	1	1.02	broken_weapon 2 blunt_melee_shards 20 coarse_gears 100 tool_container 500
 		bandit_sawblade	plastic weapon_shards	14	1	1.02	gas_ammo 1 pierce_melee_shards 15 coarse_gears 45 melee_repair_kit 145 engineering_parts_container 500
 		spec_pistol	rubber weapon_shards	24	1	1.02	pistol_basic_ammo 1 weapon_shards 20 coarse_gears 100 tool_container 500

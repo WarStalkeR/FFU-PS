@@ -3,7 +3,7 @@ setlocal
 
 set "folder_cfg=Configs"
 set "folder_loc=Localization"
-set "deploy_local=..\..\..\..\Mods\FFU_Phase_Shift"
+set "deploy_local=..\..\..\_Release\FFU_Phase_Shift"
 set "deploy_remote=..\..\..\..\..\..\workshop\content\2059170\3283318778"
 
 rmdir /S /Q "%deploy_local%\%folder_cfg%"
