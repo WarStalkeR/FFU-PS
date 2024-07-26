@@ -31,7 +31,7 @@ namespace FFU_Phase_Shift {
                     Mod.Patch(refMethod, prefix: new HarmonyMethod(prefixPatch));
                 } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
 
-            if (ModConfig.FixAutoMapStackUse)
+            if (ModConfig.FixContextStackUse)
                 try { ModLog.Info("Patching: MGSC.ItemInteraction.UseAutomap");
                     var refMethod = AccessTools.Method(typeof(ItemInteraction), "UseAutomap");
                     var prefixPatch = SymbolExtensions.GetMethodInfo(() =>
@@ -43,7 +43,16 @@ namespace FFU_Phase_Shift {
                 try { ModLog.Info("Patching: MGSC.NoPlayerContextMenu.OnContextCommandClick");
                     var refMethod = AccessTools.Method(typeof(NoPlayerContextMenu), "OnContextCommandClick");
                     var prefixPatch = SymbolExtensions.GetMethodInfo(() =>
-                        ModPatch.OnContextCommandClick_SpaceUseFix(default, default));
+                        ModPatch.OnContextCommandClick_UsageFix(default, default));
+                    Mod.Patch(refMethod, prefix: new HarmonyMethod(prefixPatch));
+                } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
+
+            if (ModConfig.FixContextStackUse)
+                try { ModLog.Info("Patching: MGSC.InventoryScreen.InteractWithCharacter");
+                    bool result = false;
+                    var refMethod = AccessTools.Method(typeof(InventoryScreen), "InteractWithCharacter");
+                    var prefixPatch = SymbolExtensions.GetMethodInfo(() =>
+                        ModPatch.InteractWithCharacter_UsageFix(default, default, default, ref result));
                     Mod.Patch(refMethod, prefix: new HarmonyMethod(prefixPatch));
                 } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
 

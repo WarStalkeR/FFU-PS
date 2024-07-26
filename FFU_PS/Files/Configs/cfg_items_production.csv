@@ -5,15 +5,14 @@ Id		Price	Weight	InventoryWidthSize	UnlockType	UnlockIds
 //+highItemChip		400	0.1	1	ProductionItem		
 #end							
 							
-// Recycling							
 #itemtransformation							
 Id		OutputItems					
 rags		tread tread					
 #end							
 							
-// Basic Resources							
 #itemreceipts							
 Id		OutputItem	RequiredItems	ProduceTimeInHours	ModifyStartCost	ModifyStep	ModifyItemsGrades
+// Basic Resources							
 		broken_weapon		0.5	1	1.01	
 		plastic		0.5	1	1.01	
 		powder		0.5	1	1.01	

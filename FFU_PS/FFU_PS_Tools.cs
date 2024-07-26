@@ -770,7 +770,7 @@ namespace FFU_Phase_Shift {
             foreach (var locNode in localeFile.AsObject) {
                 // Parse default language
                 if (locNode.Value["english"] != null)
-                    AddLocaleToDB(Localization.Lang.EnglishUS, locNode.Key, locNode.Value["english"].Value);
+                    AddLocaleToDB(Localization.Lang.EnglishUS, locNode.Key, locNode.Value["english"].Value, true);
                 bool hasDefault = locNode.Value["english"] != null;
                 string localeDefault = locNode.Value["english"]?.Value;
 

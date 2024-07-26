@@ -61,6 +61,111 @@ namespace FFU_Phase_Shift {
             return false; // Original function is completely replaced
         }
 
+        // Spaceship inventory context interaction improvement with initially non-stackable item stacks
+        public static bool OnContextCommandClick_UsageFix(NoPlayerContextMenu __instance, CommonButton button) {
+            bool wasTriggered = false;
+            ContextMenuCommand contextCommand = __instance._commandBinds[button];
+            switch (contextCommand) {
+                case ContextMenuCommand.UnlockDatadisk: {
+                    DatadiskComponent datadiskComponent = __instance._item.Comp<DatadiskComponent>();
+                    DatadiskRecord datadiskRecord = __instance._item.Record<DatadiskRecord>();
+                    SpaceTime time = SingletonMonoBehaviour<SpaceGameMode>.Instance.Get<SpaceTime>();
+                    Mercenaries mercenaries = SingletonMonoBehaviour<SpaceGameMode>.Instance.Get<Mercenaries>();
+                    MagnumCargo magnumCargo = SingletonMonoBehaviour<SpaceGameMode>.Instance.Get<MagnumCargo>();
+                    MagnumProjects magnumProjects = SingletonMonoBehaviour<SpaceGameMode>.Instance.Get<MagnumProjects>();
+                    Statistics statistics = SingletonMonoBehaviour<SpaceGameMode>.Instance.Get<Statistics>();
+                    switch (datadiskRecord.UnlockType) {
+                        case DatadiskUnlockType.Mercenary:
+                            if (mercenaries.UnlockedMercenaries.IndexOf(datadiskComponent.UnlockId) == -1) {
+                                mercenaries.UnlockedMercenaries.Add(datadiskComponent.UnlockId);
+                                MercenarySystem.CloneMercenary(time, magnumProjects, mercenaries, datadiskComponent.UnlockId, cloneInstant: false);
+                                SharedUi.NotificationPanel.AddUnlockDatadiskNotify(__instance._item);
+                                statistics.IncreaseStatistic(StatisticType.ChipUnlock);
+                                __instance._item.StackCount--;
+                                if (__instance._item.StackCount <= 0)
+                                    __instance._item.Storage.Remove(__instance._item);
+                                wasTriggered = true;
+                            }
+                            break;
+                        case DatadiskUnlockType.MercenaryClass:
+                            if (mercenaries.UnlockedClasses.IndexOf(datadiskComponent.UnlockId) == -1) {
+                                mercenaries.UnlockedClasses.Add(datadiskComponent.UnlockId);
+                                SharedUi.NotificationPanel.AddUnlockDatadiskNotify(__instance._item);
+                                statistics.IncreaseStatistic(StatisticType.ChipUnlock);
+                                __instance._item.StackCount--;
+                                if (__instance._item.StackCount <= 0)
+                                    __instance._item.Storage.Remove(__instance._item);
+                                wasTriggered = true;
+                            }
+                            break;
+                        case DatadiskUnlockType.ProductionItem: {
+                            WeaponRecord record = (Data.Items.GetRecord(datadiskComponent.UnlockId) as CompositeItemRecord).GetRecord<WeaponRecord>();
+                            if (magnumCargo.UnlockedProductionItems.IndexOf(datadiskComponent.UnlockId) == -1) {
+                                magnumCargo.UnlockedProductionItems.Add(datadiskComponent.UnlockId);
+                                SharedUi.NotificationPanel.AddUnlockDatadiskNotify(__instance._item);
+                                statistics.IncreaseStatistic(StatisticType.ChipUnlock);
+                                __instance._item.StackCount--;
+                                if (__instance._item.StackCount <= 0)
+                                    __instance._item.Storage.Remove(__instance._item);
+                                if (record != null && !string.IsNullOrEmpty(record.RequiredAmmo) &&
+                                    magnumCargo.UnlockedProductionItems.IndexOf(record.DefaultAmmoId) == -1) {
+                                    magnumCargo.UnlockedProductionItems.Add(record.DefaultAmmoId);
+                                }
+                                wasTriggered = true;
+                            }
+                            break;
+                        }
+                    }
+                    break;
+                }
+            }
+            if (wasTriggered) {
+                SingletonMonoBehaviour<SpaceUI>.Instance?.ArsenalScreen?.RefreshView();
+                __instance.gameObject.SetActive(value: false);
+                SingletonMonoBehaviour<UiCanvas>.Instance.DragController.Pause(0.1f);
+                return false; // Halt the execution and return.
+            }
+            return true; // Continue with original code.
+        }
+
+        // Mission inventory context interaction improvement with initially non-stackable item stacks
+        public static bool InteractWithCharacter_UsageFix(InventoryScreen __instance, BasePickupItem item, bool spendTurn, ref bool __result) {
+            if (!TurnSystem.CanProcessPlayerTurn(__instance._turnController, __instance._turnMetadata, __instance._creatures)) {
+                SingletonMonoBehaviour<SoundController>.Instance.PlayUiSound(SingletonMonoBehaviour<SoundsStorage>.Instance.EmptyAttack);
+                __result = false;
+                return false;
+            }
+            if (item.Is<TurretRecord>()) {
+                TurretRecord turretRecord = item.Record<TurretRecord>();
+                CellPosition pos = __instance._creatures.Player.pos;
+                int x = pos.X;
+                int y = pos.Y;
+                CellPosition.ChangePositionByCmd(__instance._creatures.Player.LookDirection, ref x, ref y);
+                pos = new CellPosition(x, y);
+                MapCell cell = __instance._mapGrid.GetCell(pos);
+                if (cell != null && cell.IsFloor && !cell.isObjBlockPass && __instance._creatures.GetCreature(x, y) == null) {
+                    __instance._creatures.Player.Mercenary.RaisePerkAction(PerkLevelUpActionType.PlaceTurret);
+                    Monster monster = CreatureSystem.SpawnMonster(__instance._creatures, __instance._turnController, turretRecord.TurretMonsterId, pos);
+                    SingletonMonoBehaviour<SoundController>.Instance.PlayUiSound(SingletonMonoBehaviour<SoundsStorage>.Instance.DeployTurret);
+                    monster.CreatureAlliance = CreatureAlliance.PlayerAlliance;
+                    item.StackCount--;
+                    if (item.StackCount <= 0)
+                        item.Storage?.Remove(item);
+                    int turretHealth = __instance._creatures.Player.Mercenary.GetTurretHealth();
+                    monster.OverallDmgMult = __instance._creatures.Player.Mercenary.GetTurretDamageMult();
+                    if (turretHealth != 0) 
+                        monster.Health.Reinitialize(monster.Health.MaxValue + turretHealth);
+                    __instance.DragControllerRefreshCallback();
+                    __result = true;
+                    return false;
+                }
+                SingletonMonoBehaviour<SoundController>.Instance.PlayUiSound(SingletonMonoBehaviour<SoundsStorage>.Instance.EmptyAttack);
+                __result = false;
+                return false;
+            }
+            return true; // Continue with original code.
+        }
+
         // Data disks rework to prioritize unlocking unknown data first
         public static void CreateComponent_BetterUnlock(ItemFactory __instance, PickupItem item, List<PickupItemComponent> itemComponents,
             BasePickupItemRecord itemRecord, bool randomizeConditionAndCapacity, bool isPrimary) {
@@ -125,73 +230,6 @@ namespace FFU_Phase_Shift {
             foreach (string requiredItem in receipt.RequiredItems) 
                 MagnumCargoSystem.RemoveSpecificCargo(magnumCargo, requiredItem, (short)count);
             return false; // Original function is completely replaced
-        }
-
-        // Spaceship inventory context interaction improvement with initially non-stackable item stacks
-        public static bool OnContextCommandClick_SpaceUseFix(NoPlayerContextMenu __instance, CommonButton button) {
-            bool wasTriggered = false;
-            ContextMenuCommand contextCommand = __instance._commandBinds[button];
-            switch (contextCommand) {
-                case ContextMenuCommand.UnlockDatadisk: {
-                    DatadiskComponent datadiskComponent = __instance._item.Comp<DatadiskComponent>();
-                    DatadiskRecord datadiskRecord = __instance._item.Record<DatadiskRecord>();
-                    SpaceTime time = SingletonMonoBehaviour<SpaceGameMode>.Instance.Get<SpaceTime>();
-                    Mercenaries mercenaries = SingletonMonoBehaviour<SpaceGameMode>.Instance.Get<Mercenaries>();
-                    MagnumCargo magnumCargo = SingletonMonoBehaviour<SpaceGameMode>.Instance.Get<MagnumCargo>();
-                    MagnumProjects magnumProjects = SingletonMonoBehaviour<SpaceGameMode>.Instance.Get<MagnumProjects>();
-                    Statistics statistics = SingletonMonoBehaviour<SpaceGameMode>.Instance.Get<Statistics>();
-                    switch (datadiskRecord.UnlockType) {
-                        case DatadiskUnlockType.Mercenary:
-                            if (mercenaries.UnlockedMercenaries.IndexOf(datadiskComponent.UnlockId) == -1) {
-                                mercenaries.UnlockedMercenaries.Add(datadiskComponent.UnlockId);
-                                MercenarySystem.CloneMercenary(time, magnumProjects, mercenaries, datadiskComponent.UnlockId, cloneInstant: false);
-                                SharedUi.NotificationPanel.AddUnlockDatadiskNotify(__instance._item);
-                                statistics.IncreaseStatistic(StatisticType.ChipUnlock);
-                                __instance._item.StackCount--;
-                                if (__instance._item.StackCount <= 0) 
-                                    __instance._item.Storage.Remove(__instance._item);
-                                wasTriggered = true;
-                            }
-                            break;
-                        case DatadiskUnlockType.MercenaryClass:
-                            if (mercenaries.UnlockedClasses.IndexOf(datadiskComponent.UnlockId) == -1) {
-                                mercenaries.UnlockedClasses.Add(datadiskComponent.UnlockId);
-                                SharedUi.NotificationPanel.AddUnlockDatadiskNotify(__instance._item);
-                                statistics.IncreaseStatistic(StatisticType.ChipUnlock);
-                                __instance._item.StackCount--;
-                                if (__instance._item.StackCount <= 0) 
-                                    __instance._item.Storage.Remove(__instance._item);
-                                wasTriggered = true;
-                            }
-                            break;
-                        case DatadiskUnlockType.ProductionItem: {
-                            WeaponRecord record = (Data.Items.GetRecord(datadiskComponent.UnlockId) as CompositeItemRecord).GetRecord<WeaponRecord>();
-                            if (magnumCargo.UnlockedProductionItems.IndexOf(datadiskComponent.UnlockId) == -1) {
-                                magnumCargo.UnlockedProductionItems.Add(datadiskComponent.UnlockId);
-                                SharedUi.NotificationPanel.AddUnlockDatadiskNotify(__instance._item);
-                                statistics.IncreaseStatistic(StatisticType.ChipUnlock);
-                                __instance._item.StackCount--;
-                                if (__instance._item.StackCount <= 0) 
-                                    __instance._item.Storage.Remove(__instance._item);
-                                if (record != null && !string.IsNullOrEmpty(record.RequiredAmmo) && 
-                                    magnumCargo.UnlockedProductionItems.IndexOf(record.DefaultAmmoId) == -1) {
-                                    magnumCargo.UnlockedProductionItems.Add(record.DefaultAmmoId);
-                                }
-                                wasTriggered = true;
-                            }
-                            break;
-                        }
-                    }
-                    break;
-                }
-            }
-            if (wasTriggered) {
-                SingletonMonoBehaviour<SpaceUI>.Instance?.ArsenalScreen?.RefreshView();
-                __instance.gameObject.SetActive(value: false);
-                SingletonMonoBehaviour<UiCanvas>.Instance.DragController.Pause(0.1f);
-                return false; // Halt the execution and return.
-            }
-            return true; // Continue with original code.
         }
 
         // Original function isn't displaying the grid correctly, if its height is bigger than 4 rows

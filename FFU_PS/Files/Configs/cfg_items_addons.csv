@@ -22,7 +22,15 @@ Id		Price	Weight	InventoryWidthSize	MaxStack	SubType
 *FrancheItemChip		500	0.1	1	10	BartherResource	
 *merkUSB		400	0.1	1	10	BartherResource	
 *classUSB		500	0.1	1	10	BartherResource	
-#end		200	0.1	1	10	BartherResource	
+*automap		82	0.5	1	10	BartherResource	
+*demonic_aye		150	0.4	1	10	BartherResource	
+*stationary_turret		1000	10	2	5	BartherResource	
+*fire_turret		1000	10	2	5	BartherResource	
+*energy_turret		1000	10	2	5	BartherResource	
+*packaged_industrial_robot		93	10	2	5	BartherResource	
+*packaged_security_robot		124	10	2	5	BartherResource	
+*packaged_recreational_robot		118	10	2	5	BartherResource	
+#end							
 							
 #itemtransformation							
 Id		OutputItems					
