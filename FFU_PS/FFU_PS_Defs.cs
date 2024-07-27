@@ -6,7 +6,7 @@ namespace FFU_Phase_Shift {
     public static class ModConfig {
         // Constant Variables
         public const bool IsExperimental = false;
-        public const string ModVersion = "0.1.5.6";
+        public const string ModVersion = "0.1.5.9";
         public const string PathDump = "_Dump";
         public const string PathAssets = "Assets";
         public const string PathConfigs = "Configs";
@@ -18,6 +18,8 @@ namespace FFU_Phase_Shift {
         public static bool FixContextStackUse = true;
         public static bool BetterItemUnlocks = true;
         public static bool SmartProduction = true;
+        public static bool SmartSelectItem = true;
+        public static bool SortUnlockedTech = true;
         public static bool AllAssetsLoad = true;
         public static bool AllConfigsLoad = true;
         public static bool AllLocalesLoad = true;
@@ -42,6 +44,8 @@ namespace FFU_Phase_Shift {
             modConfig["PatchConfig"]["FixContextStackUse"] = true;
             modConfig["PatchConfig"]["BetterItemUnlocks"] = true;
             modConfig["PatchConfig"]["SmartProduction"] = true;
+            modConfig["PatchConfig"]["SmartSelectItem"] = true;
+            modConfig["ModConfig"]["SortUnlockedTech"] = true;
             modConfig["LoaderConfig"]["ToLoadAssets"] = "ALL";
             modConfig["LoaderConfig"]["ToLoadConfigs"] = "ALL";
             modConfig["LoaderConfig"]["ToLoadLocales"] = "ALL";
@@ -76,9 +80,10 @@ namespace FFU_Phase_Shift {
             FixContextStackUse = modConfig["PatchConfig"]["FixContextStackUse"].ToBool(FixContextStackUse);
             BetterItemUnlocks = modConfig["PatchConfig"]["BetterItemUnlocks"].ToBool(BetterItemUnlocks);
             SmartProduction = modConfig["PatchConfig"]["SmartProduction"].ToBool(SmartProduction);
+            SmartSelectItem = modConfig["PatchConfig"]["SmartSelectItem"].ToBool(SmartSelectItem);
 
             // Load custom settings variables
-            // NOT IMPLEMENTED YET //
+            SortUnlockedTech = modConfig["ModConfig"]["SortUnlockedTech"].ToBool(SortUnlockedTech);
 
             // Load loader settings variables
             AllAssetsLoad = modConfig["LoaderConfig"]["ToLoadAssets"].GetString().ToLower() == ALL;

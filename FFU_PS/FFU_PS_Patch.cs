@@ -1,8 +1,9 @@
 ﻿using MGSC;
-using System;
 using System.Collections.Generic;
-using System.Reflection;
+using System.Linq;
 using UnityEngine;
+using static MGSC.MagnumSelectItemToProduceWindow;
+using UnityEngine.UI;
 
 namespace FFU_Phase_Shift {
     public static class ModPatch {
@@ -84,6 +85,9 @@ namespace FFU_Phase_Shift {
                                 __instance._item.StackCount--;
                                 if (__instance._item.StackCount <= 0)
                                     __instance._item.Storage.Remove(__instance._item);
+                                if (ModConfig.SortUnlockedTech)
+                                    mercenaries.UnlockedMercenaries = mercenaries.UnlockedMercenaries
+                                        .OrderBy(merc => merc).ToList();
                                 wasTriggered = true;
                             }
                             break;
@@ -95,6 +99,9 @@ namespace FFU_Phase_Shift {
                                 __instance._item.StackCount--;
                                 if (__instance._item.StackCount <= 0)
                                     __instance._item.Storage.Remove(__instance._item);
+                                if (ModConfig.SortUnlockedTech)
+                                    mercenaries.UnlockedClasses = mercenaries.UnlockedClasses
+                                        .OrderBy(clas => clas).ToList();
                                 wasTriggered = true;
                             }
                             break;
@@ -111,6 +118,10 @@ namespace FFU_Phase_Shift {
                                     magnumCargo.UnlockedProductionItems.IndexOf(record.DefaultAmmoId) == -1) {
                                     magnumCargo.UnlockedProductionItems.Add(record.DefaultAmmoId);
                                 }
+                                if (ModConfig.SortUnlockedTech)
+                                    magnumCargo.UnlockedProductionItems = magnumCargo.UnlockedProductionItems
+                                        .OrderBy(item => ModTools.GetItemOrder(item))
+                                        .ThenBy(item => item).ToList();
                                 wasTriggered = true;
                             }
                             break;
@@ -229,6 +240,98 @@ namespace FFU_Phase_Shift {
             magnumCargo.ItemProduceOrders[lineIndex].Add(itemProduceOrder);
             foreach (string requiredItem in receipt.RequiredItems) 
                 MagnumCargoSystem.RemoveSpecificCargo(magnumCargo, requiredItem, (short)count);
+            return false; // Original function is completely replaced
+        }
+
+        // Rework recipe listing initialization to respect unlock order and/or sorting
+        public static bool InitPanels_SmartSorting(MagnumSelectItemToProduceWindow __instance) {
+            foreach (ItemReceiptPanel receiptPanel in __instance._receiptPanels) {
+                receiptPanel.OnStartProduction -= __instance.ReceiptPanelOnStartProduction;
+                __instance._panelsPool.Put(receiptPanel.gameObject);
+            }
+            __instance._receiptPanels.Clear();
+            foreach (string unlockedItem in __instance._magnumCargo.UnlockedProductionItems) {
+                var refRecipe = Data.ProduceReceipts.Find(x => x.OutputItem == unlockedItem);
+                var refRecord = Data.Items.GetRecord(unlockedItem) as CompositeItemRecord;
+                if (refRecipe != null && refRecord != null) {
+                    switch (__instance._receiptCategory) {
+                        case ReceiptCategory.Weapons: {
+                            if (refRecord.GetRecord<WeaponRecord>() != null) {
+                                ItemReceiptPanel component = __instance._panelsPool.Take().GetComponent<ItemReceiptPanel>();
+                                component.Initialize(__instance._magnumCargo, __instance._magnumSpaceship, __instance._magnumProjects, refRecipe);
+                                component.OnStartProduction += __instance.ReceiptPanelOnStartProduction;
+                                component.transform.SetParent(__instance._panelsRoot, worldPositionStays: false);
+                                component.transform.SetAsLastSibling();
+                                __instance._receiptPanels.Add(component);
+                            }
+                            break;
+                        }
+                        case ReceiptCategory.Ammo: {
+                            if (refRecord.GetRecord<AmmoRecord>() != null) {
+                                ItemReceiptPanel component = __instance._panelsPool.Take().GetComponent<ItemReceiptPanel>();
+                                component.Initialize(__instance._magnumCargo, __instance._magnumSpaceship, __instance._magnumProjects, refRecipe);
+                                component.OnStartProduction += __instance.ReceiptPanelOnStartProduction;
+                                component.transform.SetParent(__instance._panelsRoot, worldPositionStays: false);
+                                component.transform.SetAsLastSibling();
+                                __instance._receiptPanels.Add(component);
+                            }
+                            break;
+                        }
+                        case ReceiptCategory.Armors: {
+                            if (refRecord.GetRecord<ArmorRecord>() != null ||
+                                refRecord.GetRecord<LeggingsRecord>() != null ||
+                                refRecord.GetRecord<HelmetRecord>() != null ||
+                                refRecord.GetRecord<BootsRecord>() != null) {
+                                ItemReceiptPanel component = __instance._panelsPool.Take().GetComponent<ItemReceiptPanel>();
+                                component.Initialize(__instance._magnumCargo, __instance._magnumSpaceship, __instance._magnumProjects, refRecipe);
+                                component.OnStartProduction += __instance.ReceiptPanelOnStartProduction;
+                                component.transform.SetParent(__instance._panelsRoot, worldPositionStays: false);
+                                component.transform.SetAsLastSibling();
+                                __instance._receiptPanels.Add(component);
+                            }
+                            break;
+                        }
+                        case ReceiptCategory.Medicine: {
+                            if (refRecord.GetRecord<MedkitRecord>() != null) {
+                                ItemReceiptPanel component = __instance._panelsPool.Take().GetComponent<ItemReceiptPanel>();
+                                component.Initialize(__instance._magnumCargo, __instance._magnumSpaceship, __instance._magnumProjects, refRecipe);
+                                component.OnStartProduction += __instance.ReceiptPanelOnStartProduction;
+                                component.transform.SetParent(__instance._panelsRoot, worldPositionStays: false);
+                                component.transform.SetAsLastSibling();
+                                __instance._receiptPanels.Add(component);
+                            }
+                            break;
+                        }
+                        case ReceiptCategory.Other: {
+                            if (refRecord.GetRecord<WeaponRecord>() == null &&
+                                refRecord.GetRecord<AmmoRecord>() == null && 
+                                refRecord.GetRecord<MedkitRecord>() == null && 
+                                refRecord.GetRecord<ArmorRecord>() == null &&
+                                refRecord.GetRecord<LeggingsRecord>() == null &&
+                                refRecord.GetRecord<HelmetRecord>() == null &&
+                                refRecord.GetRecord<BootsRecord>() == null) {
+                                ItemReceiptPanel component = __instance._panelsPool.Take().GetComponent<ItemReceiptPanel>();
+                                component.Initialize(__instance._magnumCargo, __instance._magnumSpaceship, __instance._magnumProjects, refRecipe);
+                                component.OnStartProduction += __instance.ReceiptPanelOnStartProduction;
+                                component.transform.SetParent(__instance._panelsRoot, worldPositionStays: false);
+                                component.transform.SetAsLastSibling();
+                                __instance._receiptPanels.Add(component);
+                            }
+                            break;
+                        }
+                        default: {
+                            ItemReceiptPanel component = __instance._panelsPool.Take().GetComponent<ItemReceiptPanel>();
+                            component.Initialize(__instance._magnumCargo, __instance._magnumSpaceship, __instance._magnumProjects, refRecipe);
+                            component.OnStartProduction += __instance.ReceiptPanelOnStartProduction;
+                            component.transform.SetParent(__instance._panelsRoot, worldPositionStays: false);
+                            component.transform.SetAsLastSibling();
+                            __instance._receiptPanels.Add(component);
+                            break;
+                        }
+                    }
+                }
+            }
+            __instance._scrollRect.normalizedPosition = Vector2.one;
             return false; // Original function is completely replaced
         }
 

@@ -72,6 +72,15 @@ namespace FFU_Phase_Shift {
                     Mod.Patch(refMethod, prefix: new HarmonyMethod(prefixPatch));
                 } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
 
+            if (ModConfig.SmartSelectItem)
+                try {
+                    ModLog.Info("Patching: MGSC.MagnumSelectItemToProduceWindow.InitPanels");
+                    var refMethod = AccessTools.Method(typeof(MagnumSelectItemToProduceWindow), "InitPanels");
+                    var prefixPatch = SymbolExtensions.GetMethodInfo(() =>
+                        ModPatch.InitPanels_SmartSorting(default));
+                    Mod.Patch(refMethod, prefix: new HarmonyMethod(prefixPatch));
+                } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
+
             if (ModConfig.IsExperimental)
                 try { ModLog.Info("Patching: MGSC.InventoryScreen.RefreshItemsList");
                     var refMethod = AccessTools.Method(typeof(InventoryScreen), "RefreshItemsList");

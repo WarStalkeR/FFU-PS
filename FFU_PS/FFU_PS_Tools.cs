@@ -711,6 +711,53 @@ namespace FFU_Phase_Shift {
             }));
         }
 
+        public static int GetItemOrder(string itemId) {
+            CompositeItemRecord refItem = Data.Items.GetRecord(itemId) as CompositeItemRecord;
+            if (refItem != null) {
+                if (refItem.GetRecord<WeaponRecord>() != null)
+                    return 100 + (int)refItem.GetRecord<WeaponRecord>().WeaponClass;
+                else if (refItem.GetRecord<AmmoRecord>() != null)
+                    return 200 + (int)refItem.GetRecord<AmmoRecord>().BallisticType;
+                else if (refItem.GetRecord<GrenadeRecord>() != null)
+                    return 300;
+                else if (refItem.GetRecord<MineRecord>() != null)
+                    return 400;
+                else if (refItem.GetRecord<TurretRecord>() != null)
+                    return 500;
+                else if (refItem.GetRecord<MedkitRecord>() != null)
+                    return 600;
+                else if (refItem.GetRecord<FoodRecord>() != null)
+                    return 700;
+                else if (refItem.GetRecord<BackpackRecord>() != null)
+                    return 800;
+                else if (refItem.GetRecord<VestRecord>() != null)
+                    return 900;
+                else if (refItem.GetRecord<HelmetRecord>() != null)
+                    return 1000;
+                else if (refItem.GetRecord<ArmorRecord>() != null)
+                    return 1100;
+                else if (refItem.GetRecord<LeggingsRecord>() != null)
+                    return 1200;
+                else if (refItem.GetRecord<BootsRecord>() != null)
+                    return 1300;
+                else if (refItem.GetRecord<AutomapRecord>() != null)
+                    return 2100;
+                else if (refItem.GetRecord<ResurrectKitRecord>() != null)
+                    return 2200;
+                else if (refItem.GetRecord<DatadiskRecord>() != null)
+                    return 2300;
+                else if (refItem.GetRecord<SkullRecord>() != null)
+                    return 2400;
+                else if (refItem.GetRecord<QuasiArtifactRecord>() != null)
+                    return 2500;
+                else if (refItem.GetRecord<TrashRecord>() != null)
+                    return 10000;
+                else if (refItem.GetRecord<RepairRecord>() != null)
+                    return 2000;
+                else return 100000;
+            } else return 1000000;
+        }
+
         public static void SafeWrite(string rawContent, string savePath, string fileName, bool logAction = false) {
             if (!Directory.Exists(savePath)) Directory.CreateDirectory(savePath);
             File.WriteAllText(Path.Combine(savePath, fileName), rawContent);
