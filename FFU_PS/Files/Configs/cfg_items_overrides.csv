@@ -162,18 +162,18 @@ doom_boots		800	4.1	1	230	0	FALSE	heavy_armor	blunt 10 pierce 10 lacer 8 fire 8 
 																												
 #repairs																												
 Id		Price	Weight	InventoryWidthSize	MaxStack	RestoreAmount	ReduceMaxCapacity	RepairCategories	RestoreMaxCapacity																			
-armor_shards		2	1	1	100	20	10	armor	FALSE																			
+armor_shards		2	1	1	200	20	10	armor	FALSE																			
 weapon_shards		2	0.4	1	200	20	10	weapon tech_weapon	FALSE																			
 blunt_melee_shards		2	0.3	1	200	20	10	blunt_melee	FALSE																			
 pierce_melee_shards		2	0.3	1	200	20	10	pierce_melee	FALSE																			
 broken_weapon		1	0.1	1	500	10	5	trash_weapon	FALSE																			
-rusty_shards		1	1.2	1	100	10	5	trash_armor	FALSE																			
-coarse_gears		1	1	1	100	20	10	engineering_weapon	FALSE																			
-rod		1	0.5	1	200	20	10	blunt_melee	FALSE																			
+rusty_shards		1	1.2	1	300	10	5	trash_armor	FALSE																			
+coarse_gears		1	1	1	300	20	10	engineering_weapon	FALSE																			
+rod		1	0.5	1	300	20	10	blunt_melee	FALSE																			
 microelectronics		10	0.05	1	200	20	5	tech_weapon	FALSE																			
-ceramite_shards		5	0.8	1	100	30	10	heavy_armor	FALSE																			
+ceramite_shards		5	0.8	1	200	30	10	heavy_armor	FALSE																			
 capacitor		10	0.5	1	200	20	5	tech_weapon	FALSE																			
-tape		20	0.1	1	200	15	0	all	FALSE																			
+tape		20	0.1	1	300	15	0	all	FALSE																			
 *rags		1	0.2	1	200	20	10	cloth	FALSE																			
 armor_repair_kit		300	1.2	1	100	50	0	armor trash_armor heavy_armor cloth	TRUE																			
 weapon_repair_kit		300	1.2	1	100	50	0	weapon engineering_weapon tech_weapon trash_weapon	TRUE																			
@@ -232,20 +232,20 @@ spider_poisongland		20	0.1	1	200	Resource
 plastic		5	0.1	1	500	Resource																						
 powder		1	0.01	1	500	Resource																						
 glass		5	0.05	1	500	Resource																						
-metal_tread		10	0.4	1	200	Resource																						
-*tape		20	0.1	1	200	Resource																						
+metal_tread		10	0.4	1	300	Resource																						
+*tape		20	0.1	1	300	Resource																						
 wire		20	0.2	1	200	Resource																						
-rubber		5	0.3	1	200	Resource																						
+rubber		5	0.3	1	300	Resource																						
 tread		1	0.01	1	500	Resource																						
 explosives		10	0.6	1	200	Resource																						
 acid		1	0.01	1	500	Resource																						
-tin		1	0.1	1	100	Resource																						
-miner_bolts_ammo		1	0.01	1	10	Resource																						
-gas_ammo		1	0.02	1	10	Resource																						
+tin		1	0.1	1	200	Resource																						
+miner_bolts_ammo		1	0.01	1	600	Resource																						
+gas_ammo		1	0.02	1	800	Resource																						
 quest_fresco_data		999	1	1	1	QuestItem																						
 quest_prison_head		999	1	1	1	QuestItem																						
 aztKey		999	1	1	1	QuestItem																						
-glassBottle		1	0.35	1	100	Resource																						
+glassBottle		1	0.35	1	200	Resource																						
 organsBox		100	1.5	1	100	Container																						
 itemsBox		999	5	1	10	Container																						
 personalKey		20	0.02	1	100	Resource																						
@@ -255,10 +255,10 @@ moon_guts		20	0.4	1	200	Resource
 aztec_guts		20	0.4	1	200	Resource																						
 mercury_guts		20	0.4	1	200	Resource																						
 mercury_scales		20	0.6	1	200	Resource																						
-*circuit_board		20	0.1	1	200	Resource																						
+*circuit_board		20	0.1	1	300	Resource																						
 ledgerBook		30	0.8	1	100	Resource																						
-poppy_box		20	0.05	1	200	Resource																						
-spring		1	0.1	1	200	Resource																						
+poppy_box		20	0.05	1	300	Resource																						
+spring		1	0.1	1	300	Resource																						
 lens		5	0.1	1	200	Resource																						
 transformer		10	1.2	1	100	Resource																						
 bulb		10	0.3	1	200	Resource																						
@@ -290,14 +290,14 @@ ai_module		120	0.3	1	100	BartherResource
 communication_relay		95	0.4	1	50	BartherResource																						
 *defibrillator_device		99	0.5	1	10	BartherResource																						
 *quasi_sensor_device		86	0.5	1	10	BartherResource																						
-geoscanner_device		73	0.5	1	10	BartherResource																						
-welding_machine_device		68	0.5	1	10	BartherResource																						
+geoscanner_device		73	0.5	1	50	BartherResource																						
+welding_machine_device		68	0.5	1	50	BartherResource																						
 medical_equipment		156	5.8	2	10	BartherResource																						
 scientific_equipment		174	5.6	2	10	BartherResource																						
 mining_equipment		143	6.2	2	10	BartherResource																						
 construction_equipment		168	6.2	2	10	BartherResource																						
-chemical_analyzer		111	1.4	1	10	BartherResource																						
-hydraulic_pump		97	1.6	1	10	BartherResource																						
+chemical_analyzer		111	1.4	1	50	BartherResource																						
+hydraulic_pump		97	1.6	1	50	BartherResource																						
 quasiresearch_disk		118	0.2	1	50	BartherResource																						
 research_disk		104	0.2	1	50	BartherResource																						
 prototype_schematics		69	0.1	1	100	BartherResource																						

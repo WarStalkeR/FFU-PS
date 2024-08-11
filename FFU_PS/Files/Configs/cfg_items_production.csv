@@ -19,4 +19,84 @@ Id		OutputItem	RequiredItems	ProduceTimeInHours	ModifyStartCost	ModifyStep	Modif
 		glass		0.5	1	1.01	
 		acid		0.5	1	1.01	
 		tread		0.5	1	1.01	
+// Intermediate Resources							
+		metal_tread	broken_weapon broken_weapon	2	1	1.01	
+		tape	plastic tread	2	1	1.01	
+		rubber	plastic acid	2	1	1.01	
+		circuit_board	plastic plastic	2	1	1.01	
+		poppy_box	powder glass	2	1	1.01	
+		spring	broken_weapon plastic	2	1	1.01	
+		rags	tread tread	2	1	1.01	
+		rusty_shards	broken_weapon glass	2	1	1.01	
+		coarse_gears	broken_weapon acid	2	1	1.01	
+		rod	broken_weapon powder	2	1	1.01	
+// Advanced Resources							
+		wire	metal_tread rubber tread	8	1	1.01	
+		bulb	metal_tread glass glass acid	8	1	1.01	
+		glassBottle	rubber glass glass acid	8	1	1.01	
+		tin	rusty_shards rubber broken_weapon	8	1	1.01	
+		lens	rags glass glass acid	8	1	1.01	
+		explosives	gas_ammo rubber powder	8	1	1.01	
+		armor_shards	rusty_shards rusty_shards acid	8	1	1.01	
+		weapon_shards	coarse_gears spring broken_weapon	8	1	1.01	
+		blunt_melee_shards	rod rubber broken_weapon	8	1	1.01	
+		pierce_melee_shards	rod toxic_ammo broken_weapon	8	1	1.01	
+		microelectronics	circuit_board metal_tread acid	8	1	1.01	
+		ceramite_shards	rusty_shards toxic_ammo plastic	8	1	1.01	
+		capacitor	rod metal_tread plastic	8	1	1.01	
+// Complex Resources							
+		organsBox		24	1	1.01	
+		transformer		24	1	1.01	
+		ai_module		24	1	1.01	
+		prototype_schematics		24	1	1.01	
+		management_unit		24	1	1.01	
+		darknet_unit		24	1	1.01	
+		military_unit		24	1	1.01	
+		memory_software		24	1	1.01	
+		entertainment_software		24	1	1.01	
+		expert_disk		24	1	1.01	
+		precious_metals		24	1	1.01	
+		gunbang_magazine		24	1	1.01	
+// Assembled Resources							
+		cyborg_head		48	1	1.01	
+		communication_relay		48	1	1.01	
+		geoscanner_device		48	1	1.01	
+		welding_machine_device		48	1	1.01	
+		chemical_analyzer		48	1	1.01	
+		hydraulic_pump		48	1	1.01	
+		quasiresearch_disk		48	1	1.01	
+		research_disk		48	1	1.01	
+		quasisamples		48	1	1.01	
+		biomass_tank		48	1	1.01	
+// Finalized Produce							
+		medical_equipment		96	1	1.01	
+		scientific_equipment		96	1	1.01	
+		mining_equipment		96	1	1.01	
+		construction_equipment		96	1	1.01	
+		packaged_industrial_robot		96	1	1.01	
+		packaged_security_robot		96	1	1.01	
+		packaged_recreational_robot		96	1	1.01	
+// Container Packing							
+		drug_cargo		72	1	1.01	
+		medical_components		72	1	1.01	
+		regular_food_container		72	1	1.01	
+		military_food_container		72	1	1.01	
+		luxury_food_container		72	1	1.01	
+		water_container		72	1	1.01	
+		alcogol_container		72	1	1.01	
+		regular_clothing_container		72	1	1.01	
+		miner_clothing_container		72	1	1.01	
+		worker_clothing_container		72	1	1.01	
+		scientist_clothing_container		72	1	1.01	
+		security_clothing_container		72	1	1.01	
+		weapon_container		72	1	1.01	
+		armor_container		72	1	1.01	
+		tool_container		72	1	1.01	
+		robot_parts_container		72	1	1.01	
+		electrical_parts_container		72	1	1.01	
+		military_parts_container		72	1	1.01	
+		engineering_parts_container		72	1	1.01	
+// Ammunition							
+		gas_ammo	powder acid	0.7	1	1.01	
+		toxic_ammo	acid acid	0.7	1	1.01	
 #end							
