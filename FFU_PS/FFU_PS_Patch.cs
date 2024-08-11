@@ -4,6 +4,7 @@ using System.Linq;
 using UnityEngine;
 using static MGSC.MagnumSelectItemToProduceWindow;
 using UnityEngine.UI;
+using System;
 
 namespace FFU_Phase_Shift {
     public static class ModPatch {
@@ -336,61 +337,31 @@ namespace FFU_Phase_Shift {
         }
 
         // Original function isn't displaying the grid correctly, if its height is bigger than 4 rows
-        public static bool RefreshItemsList_FixMissUI(InventoryScreen __instance, bool refreshFloor) {
-            ModLog.Info("Triggered: MGSC.InventoryScreen.RefreshItemsList()");
-            Inventory inventory = __instance._creatures.Player.Inventory;
-            __instance._backpackGridView.Initialize(inventory.BackpackStore);
-            __instance._backpackGridView.InitFakeGrid(6, 4);
-            __instance._backpackScrollbar.gameObject.SetActive(inventory.BackpackStore.Height > 4);
-            __instance._backpackSlot.Initialize(inventory.BackpackSlot.First, inventory.BackpackSlot);
-            SingletonMonoBehaviour<DungeonUI>.Instance.Hud.RefreshWeapon();
-            SingletonMonoBehaviour<DungeonUI>.Instance.Hud.RefreshVest();
-            SingletonMonoBehaviour<TooltipFactory>.Instance.HideTooltip();
-            __instance.RefreshHelmetAndArmor();
-            __instance.RefreshVest();
-            __instance.RefreshWeapon();
-            if (__instance._lastInteractObstacle != null) {
-                __instance._lastInteractObstacle.RefreshVisual();
+        public static void Show_FixShipUI(ArsenalScreen __instance, Mercenary mercenary, bool showShuttle, Action closeCallback) {
+            if (__instance._merc == null) return;
+            ModLog.Info("Triggered: MGSC.ArsenalScreen.Show");
+            // DUMP
+            foreach (var obj in Resources.FindObjectsOfTypeAll<GameObject>())
+                ModLog.Info($"FixShipUI DEBUG. Object: {obj.name} - {obj.GetType()} - {obj.transform.GetTransformPath()}");
+            // INIT
+            GameObject refBackpackView = Resources.FindObjectsOfTypeAll<GameObject>().FirstOrDefault(
+                x => x.transform.name == "Viewport" && x.transform.parent.name == "BackpackGrid");
+            RectTransform refBackpackRect = refBackpackView.transform.parent.GetComponent<RectTransform>();
+            // BEFORE
+            if (refBackpackRect != null) {
+                ModLog.Info($"FixShipUI DEBUG: {refBackpackRect.name}, " +
+                    $"X:{refBackpackRect.rect.x}, Y:{refBackpackRect.rect.y}, " +
+                    $"W:{refBackpackRect.rect.width}, H:{refBackpackRect.rect.height}");
             }
-            if (!__instance.IsViewActive) {
-                return false;
+            // CHANGE
+            refBackpackRect.rect.Set(refBackpackRect.rect.x, refBackpackRect.rect.y, 
+                refBackpackRect.rect.width, Mathf.Min(refBackpackRect.rect.height, 102));
+            // AFTER
+            if (refBackpackRect != null) {
+                ModLog.Info($"FixShipUI DEBUG: {refBackpackRect.name}, " +
+                    $"X:{refBackpackRect.rect.x}, Y:{refBackpackRect.rect.y}, " +
+                    $"W:{refBackpackRect.rect.width}, H:{refBackpackRect.rect.height}");
             }
-            ItemOnFloor orCreate = __instance._itemsOnFloor.GetOrCreate(__instance._creatures.Player.pos);
-            if (refreshFloor) {
-                if (orCreate.Storage.Empty && __instance._tabsView.HasTab(orCreate.Storage)) {
-                    __instance._tabsView.RemoveTab(orCreate.Storage);
-                    if (__instance._tabsView.TabsCount > 0) {
-                        __instance._tabsView.SelectAndShowFirstTab();
-                    }
-                } else if (!orCreate.Storage.Empty && !__instance._tabsView.HasTab(orCreate.Storage)) {
-                    ItemTab itemTab = __instance._tabsView.AddTab(__instance._itemsOnFloorView, orCreate.Storage);
-                    if (__instance._tabsView.TabsCount == 1) {
-                        itemTab.Select(val: true);
-                    }
-                }
-            }
-            __instance._tabsView.RefreshAllTabs();
-            return false; // Original function is completely replaced
-        }
-
-        // Original function isn't displaying the grid correctly, if its height is bigger than 4 rows
-        public static bool RefreshItemsList_FixShipUI(NoPlayerInventoryView __instance) {
-            ModLog.Info("Triggered: MGSC.NoPlayerInventoryView.RefreshItemsList()");
-            Inventory inventory = __instance._merc.Inventory;
-            __instance._backpackGrid.Initialize(inventory.BackpackStore);
-            __instance._vestGrid.Initialize(inventory.VestStore);
-            __instance._backpackGrid.InitFakeGrid(6, 4); // 6, 5
-            __instance._vestGrid.InitFakeGrid(8, 1); // 6, 1
-            __instance._backpackScrollbar.gameObject.SetActive(inventory.BackpackStore.Height > 4);
-            __instance._armorSlot.Initialize(inventory.ArmorSlot.First, inventory.ArmorSlot);
-            __instance._helmetSlot.Initialize(inventory.HelmetSlot.First, inventory.HelmetSlot);
-            __instance._leggingsSlot.Initialize(inventory.LeggingsSlot.First, inventory.LeggingsSlot);
-            __instance._bootsSlot.Initialize(inventory.BootsSlot.First, inventory.BootsSlot);
-            __instance._backpackSlot.Initialize(inventory.BackpackSlot.First, inventory.BackpackSlot);
-            __instance._vestSlot.Initialize(inventory.VestSlot.First, inventory.VestSlot);
-            __instance.RefreshWeapon();
-            SingletonMonoBehaviour<TooltipFactory>.Instance.HideTooltip();
-            return false; // Original function is completely replaced
         }
     }
 }

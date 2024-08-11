@@ -82,19 +82,12 @@ namespace FFU_Phase_Shift {
                 } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
 
             if (ModConfig.IsExperimental)
-                try { ModLog.Info("Patching: MGSC.InventoryScreen.RefreshItemsList");
-                    var refMethod = AccessTools.Method(typeof(InventoryScreen), "RefreshItemsList");
-                    var prefixPatch = SymbolExtensions.GetMethodInfo(() =>
-                        ModPatch.RefreshItemsList_FixMissUI(default, default));
-                    Mod.Patch(refMethod, prefix: new HarmonyMethod(prefixPatch));
-                } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
-
-            if (ModConfig.IsExperimental)
-                try { ModLog.Info("Patching: MGSC.NoPlayerInventoryView.RefreshItemsList");
-                    var refMethod = AccessTools.Method(typeof(NoPlayerInventoryView), "RefreshItemsList");
-                    var prefixPatch = SymbolExtensions.GetMethodInfo(() =>
-                        ModPatch.RefreshItemsList_FixShipUI(default));
-                    Mod.Patch(refMethod, prefix: new HarmonyMethod(prefixPatch));
+                try { ModLog.Info("Patching: MGSC.ArsenalScreen.Show");
+                    var refMethod = AccessTools.Method(typeof(ArsenalScreen), "Show", 
+                        new Type[] { typeof(Mercenary), typeof(bool), typeof(Action) });
+                    var postfixPatch = SymbolExtensions.GetMethodInfo(() =>
+                        ModPatch.Show_FixShipUI(default, default, default, default));
+                    Mod.Patch(refMethod, postfix: new HarmonyMethod(postfixPatch));
                 } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
 
             // Finish mod loading
