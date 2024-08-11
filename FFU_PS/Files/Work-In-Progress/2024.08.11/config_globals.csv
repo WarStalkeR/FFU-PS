@@ -1,0 +1,221 @@
+#global								
+Parameter	Value							
+// Build info								
+BuildVersion	0.7.2.130s.029ab17
+SaveVersion	43							
+Console	false
+SkipIntro	FALSE							
+SkipStartTutorialDialog	FALSE							
+								
+// Other								
+LosLookAngle	100							
+MonsterLosRange	6							
+NotifyHiddenEnemiesRadius	6							
+BrokenWeaponItemId	broken_weapon							
+SummonedExpireTurns	15							
+DefenseMissionsBramfaturaId	Defense							
+StartSpaceObjectId	phobos							
+SpawnItemOnDisassembleChance	0.5							
+StartGameDate	2200-09-13 12:00:00							
+StartMercenaries	francis_reid_daly victoria_boudicca persival_fawcett Isabella_capet							
+StartClasses	scouts_of_hades ecclipse_blades							
+StartReceipts	synthChicken synthBeef small_backpack bandit_vest blue_tshirt dark_pants blue_boots army_knife pmc_pistol spec_pistol pistol_basic_ammo medium_basic_ammo shotgun_shrapnel_ammo bandage splint medpack morphine sorbent antibiotics armor_repair_kit weapon_repair_kit melee_repair_kit							
+StartItems	army_knife army_knife pmc_club hatchet pmc_pistol_2 spec_pistol petrov_pistol_2 pmc_shotgun pmc_shotgun pmc_smg pmc_smg pmc_assault pistol_basic_ammo pistol_basic_ammo medium_basic_ammo medium_police_ammo shotgun_shrapnel_ammo shotgun_shrapnel_ammo heavy_basic_ammo battery_charge bandage bandage bandage bandage splint splint splint splint antibiotics antibiotics antibiotics antibiotics sorbent sorbent sorbent sorbent sorbent sorbent sorbent sorbent sigs_kosmos sigs_kosmos painkillers painkillers medpack medpack bloodBag bloodBag bloodBag bloodBag cannedMeat cannedMeat cannedMeat cannedMeat cannedVeg cannedVeg mre_pack mre_pack packedGoodRation packedGoodRation packedRation packedRation water water water water synthChicken synthChicken synthChicken synthChicken synthBeef synthBeef synthBeef synthBeef medium_backpack small_backpack bandit_vest bandit_vest bandit_vest bandit_vest green_vest green_vest balaklava blue_pants blue_pants smuggler_boots common_boots armor_shards armor_shards armor_shards armor_shards weapon_shards weapon_shards weapon_shards weapon_shards armor_repair_kit armor_repair_kit weapon_repair_kit weapon_repair_kit melee_repair_kit melee_repair_kit frag_grenade frag_grenade stun_grenade frag_mine stationary_turret tape tape medical_components transformer tread tread tread pmc_armor welding_machine_device							
+AllowEvacuationItems								
+								
+// Tutorial								
+TutorialItemsInLocker	spec_pistol_2 pistol_basic_ammo bandit_vest small_backpack green_tshirt blue_boots splint bandage antibiotics blue_pants							
+TutorialItemsOnCharacter	hyber_shirt hyber_pants							
+TutorialAncomRewardItems	itemChip medium_backpack heavy_armorpierce_ammo pmc_assault weapon_repair_kit armor_repair_kit							
+TutorialMachineBlockWait	15							
+								
+// Sandbox								
+MissionAddTimeHours	8							
+StationVisitAddTimeHours	4							
+TechLevelToPower	100 200 300 400 500 600 700 800 900 1000							
+StationChangeOwnerCooldownHours	96							
+StationAttackTargetCooldownMinHours	168							
+StationAttackTargetCooldownMaxHours	504							
+MissionMinLifeTimeHours	336							
+MissionMaxLifeTimeHours	672							
+StationProduceItemsIntervalHours	2							
+StationReplacingRandomItemIntervalHours	336							
+StationShippingMinHours	340							
+StationShippingMaxHours	408							
+StationStorageLimit	100							
+StationProductionTimeRatio	2							
+RefreshBasicPriceInMonths	3							
+FactionDefenseBonusGainIntervalHours	48							
+FactionDefenseBonusGainVal	1							
+PowerToRepMult	0.01							
+MinReputation	-100							
+MaxReputation	100							
+MinReputationToVisitStation	-20							
+ReputationRewardLimit	20							
+TimeScaleX1Mult	100							
+TimeScaleX4Mult	400							
+TimeScaleX10Mult	1000							
+TimeScaleX100Mult	10000							
+DistanceToHours	0.2							
+NewsLifetimeInHours	24							
+FactionPowerGainNews	1000 2000 5000 10000							
+FactionTechLevelGainNews	2 3 4 5 6 7 8 9 10							
+MaxShippingCountForStation	50							
+StationShippingMaxStack	50							
+StationShippingMaxItemsCount	3							
+StationStartItemsCount	100							
+MaxBarterPrice	5000							
+FlightTimeToPlanet	20							
+FlightTimeToSatelite	10							
+								
+// Price Multipliers								
+PriceMultipliersNoStock	1.3							
+PriceMultipliersLowStock	1							
+PriceMultipliersMeidumStock	0.8							
+PriceMultipliersHighStock	0.5							
+PriceMultipliersExcessStock	0.3							
+								
+// Mercenary								
+TrainingPerkInHours	36							
+CloneMercDurationInHours	10							
+RestoreMercHealthHours	2							
+RestoreMercWoundInHours	4							
+RestoreMercAmpInHours	6							
+								
+// Dungeon generation								
+CorridorWeightInDropMult	0.5							
+								
+// Movement								
+SlowMoveStarvationMult	1							
+NormalMoveStarvationMult	2							
+RunMoveStarvationMult	10							
+RunAccuracyDebuff	0.25							
+PlayerSlowMoveTimeScale	1							
+PlayerNormalMoveTimeScale	1.25							
+PlayerRunMoveTimeScale	1.5							
+MonsterSlowMoveTimeScale	1							
+MonsterNormalMoveTimeScale	2							
+MonsterRunMoveTimeScale	2							
+								
+// AI								
+SomniaMoveTimerMin	1							
+SomniaMoveTimerMax	20							
+IdleMoveTimerMin	1							
+IdleMoveTimerMax	10							
+AggroExplosionChance	1							
+AggroExplosionRadius	8							
+AggroGunshotRadius	4							
+								
+// Obstacles								
+MapObstacleDamageWhitefadeDuration	0.25							
+MaxCorpsesInTile	6							
+ValidRechargeBatteries	battery_crafted_charge battery_charge							
+								
+// Quazimorphosis								
+QmorphosMaxLevel	1000							
+QmorphosPerTurnPoints	2 1 -1							
+QmorphosPerTurnWeights	20 50 30							
+Qmorphos2PhaseOstMinLevel	200							
+Qmorphos3PhaseOstMinLevel	800							
+								
+// Fire								
+StrongFireDuration	5							
+WeakFireDuration	3							
+SpawnWeakFireDuringLifetime	1 0.8 0.6 0.4 0.2							
+BurningCreatureSpawnFireChance	0.2							
+BurningDamagePerTurnMin	15							
+BurningDamagePerTurnMax	30							
+BurningEffectWoundChance	0.9							
+OilSpawnFireChance	0.8							
+FireDamageToItemPerTurn	2							
+FireItemConvertsFrom	meat1							
+FireItemConvertsTo	roastedMeat							
+								
+// Toxic								
+ToxicDamagePerPuddleSize	4 6 10 14 18							
+ToxicDamageToItemPerTurn	4							
+ToxicDamageType	poison							
+ToxicDamageMulti	0.5							
+ToxicPuddleLifeTime	5							
+								
+// Damage								
+IncomeDamageMinThreshold	0.05							
+MinHitChance	0.1							
+CapAccuracy	0.95							
+CapDodge	0.95							
+OvercapCritModifier	0.1							
+								
+// Amputation								
+AmputationMaxHealthPenalty	10							
+								
+// Starvation								
+StarvationRegenWeights	0 0.01 61 81							
+StarvationRegenValues	-1 0 0 1							
+								
+// Pain threshold								
+PainThresholdYellowPercent	70							
+PainThresholdRedPercent	25							
+PainThresholdGlobalDmgMult	0.5							
+								
+// Medicine								
+WoundFixedResolutionPeriod	10							
+WoundDefaultResolutionChance	0.5							
+								
+// WoundEffects								
+FrozenStunAfterProgressionLevel	50							
+ShockStunAfterProgressionLevel	0							
+QmorphSummonCountMin	1							
+QmorphSummonCountMax	2							
+#end								
+								
+#game_difficulty								
+CompletedMissionNumber	MonsterPoints	ItemPoints	PlayerDodgeBonus	MaxRoomsPerFloor	MaxCreaturesGroupSize			
+0	200	200	0.2	4	2			
+1	250	220	0.2	5	2			
+2	295	240	0.15	6	3			
+3	335	265	0.1	7	3			
+4	370	300	0.05	8	4			
+5	400	340	0	-1	-1			
+6	425	380	0	-1	-1			
+7	445	420	0	-1	-1			
+8	460	450	0	-1	-1			
+9	480	480	0	-1	-1			
+#end								
+								
+#mission_difficulty								
+DifficultyRating	MonsterPointsPerStage	ItemPointsPerStage	MinStages	MaxStages	MinRooms	MaxRooms	MinCorridors	MaxCorridors
+1	250	250	2	2	8	12	1	3
+2	375	375	2	3	8	12	1	3
+3	500	500	2	4	8	12	1	3
+4	625	625	3	4	8	12	1	3
+5	750	750	4	4	8	12	1	3
+#end								
+								
+#prizes_by_rating								
+ProcMissionType	DifficultyRating	MinPrizePoints	MaxPrizePoints	PowerToPrizePointsMult	PowerToMonsterPointsMult	MinPrizeItemsCount	MaxPrizeItemsCount	
+RaiderCapture	1	450	600	0.1	0.1	1	10	
+RaiderCapture	2	750	900	0.1	0.1	1	10	
+RaiderCapture	3	1150	1400	0.1	0.1	1	10	
+RaiderCapture	4	1700	2000	0.1	0.1	1	10	
+RaiderCapture	5	2500	3000	0.1	0.1	1	10	
+Elimination	1	400	500	0.1	0.1	1	8	
+Elimination	2	700	800	0.1	0.1	1	8	
+Elimination	3	1000	1200	0.1	0.1	1	8	
+Elimination	4	1500	1800	0.1	0.1	1	8	
+Elimination	5	2200	2700	0.1	0.1	1	8	
+Sabotage	1	400	500	0.1	0.1	1	8	
+Sabotage	2	700	800	0.1	0.1	1	8	
+Sabotage	3	1000	1200	0.1	0.1	1	8	
+Sabotage	4	1500	1800	0.1	0.1	1	8	
+Sabotage	5	2200	2700	0.1	0.1	1	8	
+Espionage	1	400	500	0.1	0.1	1	8	
+Espionage	2	700	800	0.1	0.1	1	8	
+Espionage	3	1000	1200	0.1	0.1	1	8	
+Espionage	4	1500	1800	0.1	0.1	1	8	
+Espionage	5	2200	2700	0.1	0.1	1	8	
+Defense	1	300	450	0.1	0.1	1	8	
+Defense	2	600	750	0.1	0.1	1	8	
+Defense	3	900	1150	0.1	0.1	1	8	
+Defense	4	1400	1700	0.1	0.1	1	8	
+Defense	5	2000	2500	0.1	0.1	1	8	
+#end								

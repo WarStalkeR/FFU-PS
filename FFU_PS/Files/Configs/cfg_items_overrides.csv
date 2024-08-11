@@ -463,7 +463,7 @@ Id		OutputItem	RequiredItems	ProduceTimeInHours	ModifyStartCost	ModifyStep	Modif
 		ancom_armor	armor_shards ceramite_shards rubber rubber capacitor	52	1	1.05	armor_shards 1 rubber 3 capacitor 9 ceramite_shards 25 robot_parts_container 80																					
 		power_armor	armor_shards capacitor metal_tread	48	1	1.05	armor_shards 1 metal_tread 3 capacitor 9 armor_repair_kit 25 armor_container 80																					
 		realwear_armor	armor_shards armor_shards ceramite_shards rubber capacitor	54	1	1.05	armor_shards 1 rubber 3 capacitor 9 ceramite_shards 25 robot_parts_container 80																					
-		smuggler_armor	armor_shards rubber tread	24	1	1.05	armor_shards 1 tread 4 rubber 20 worker_clothing_container 80																					
+		smuggler_armor	rusty_shards rubber tread	24	1	1.05	armor_shards 1 tread 4 rubber 20 worker_clothing_container 80																					
 		solnet_armor	armor_shards ceramite_shards rubber capacitor capacitor	50	1	1.05	armor_shards 1 rubber 3 capacitor 9 ceramite_shards 25 scientist_clothing_container 80																					
 		worker_armor	armor_shards rubber rubber tread	30	1	1.05	armor_shards 1 tread 4 rubber 20 worker_clothing_container 80																					
 		pmc_armor	armor_shards rags tread	18	1	1.05	armor_shards 1 rags 4 tread 20 armor_container 80																					
@@ -488,7 +488,7 @@ Id		OutputItem	RequiredItems	ProduceTimeInHours	ModifyStartCost	ModifyStep	Modif
 		ancom_helmet	armor_shards ceramite_shards glass microelectronics microelectronics	52	1	1.05	armor_shards 1 glass 3 ceramite_shards 9 microelectronics 25 robot_parts_container 80																					
 		power_helmet	armor_shards glass circuit_board	48	1	1.05	armor_shards 1 glass 3 circuit_board 9 armor_repair_kit 25 armor_container 80																					
 		realwear_helmet	armor_shards armor_shards ceramite_shards glass microelectronics	54	1	1.05	armor_shards 1 glass 3 ceramite_shards 9 microelectronics 25 robot_parts_container 80																					
-		smuggler_helmet	armor_shards rubber glass	24	1	1.05	armor_shards 1 rubber 4 glass 20 worker_clothing_container 80																					
+		smuggler_helmet	rusty_shards rubber glass	24	1	1.05	armor_shards 1 rubber 4 glass 20 worker_clothing_container 80																					
 		solnet_helmet	armor_shards ceramite_shards glass glass microelectronics	50	1	1.05	armor_shards 1 rubber 3 glass 9 ceramite_shards 25 scientist_clothing_container 80																					
 		worker_helmet	armor_shards rubber rubber glass	30	1	1.05	armor_shards 1 rubber 4 glass 20 worker_clothing_container 80																					
 		pmc_helmet	armor_shards plastic glass	18	1	1.05	armor_shards 1 plastic 4 glass 20 armor_container 80																					
@@ -514,7 +514,7 @@ Id		OutputItem	RequiredItems	ProduceTimeInHours	ModifyStartCost	ModifyStep	Modif
 		ancom_pants	armor_shards ceramite_shards rubber plastic plastic	52	1	1.05	armor_shards 1 plastic 3 rubber 9 ceramite_shards 25 robot_parts_container 80																					
 		power_pants	armor_shards rubber metal_tread	48	1	1.05	armor_shards 1 metal_tread 3 rubber 9 armor_repair_kit 25 armor_container 80																					
 		realwear_pants	armor_shards armor_shards ceramite_shards rubber plastic	54	1	1.05	armor_shards 1 plastic 3 rubber 9 ceramite_shards 25 robot_parts_container 80																					
-		smuggler_pants	armor_shards rubber tread	10	1	1.05	armor_shards 1 tread 4 rubber 20 worker_clothing_container 80																					
+		smuggler_pants	rusty_shards rubber tread	10	1	1.05	armor_shards 1 tread 4 rubber 20 worker_clothing_container 80																					
 		solnet_pants	armor_shards ceramite_shards rubber rubber plastic	50	1	1.05	armor_shards 1 rubber 3 plastic 9 ceramite_shards 25 scientist_clothing_container 80																					
 		worker_pants	armor_shards rubber rubber tread	30	1	1.05	armor_shards 1 tread 4 rubber 20 worker_clothing_container 80																					
 		pmc_pants	armor_shards rags tread	12	1	1.05	armor_shards 1 rags 4 tread 20 armor_container 80																					
@@ -539,7 +539,7 @@ Id		OutputItem	RequiredItems	ProduceTimeInHours	ModifyStartCost	ModifyStep	Modif
 		ancom_boots	armor_shards ceramite_shards rubber plastic plastic	52	1	1.05	armor_shards 1 plastic 3 rubber 9 ceramite_shards 25 robot_parts_container 80																					
 		power_boots	armor_shards rubber metal_tread	48	1	1.05	armor_shards 1 metal_tread 3 rubber 9 armor_repair_kit 25 armor_container 80																					
 		realwear_boots	armor_shards armor_shards ceramite_shards rubber plastic	54	1	1.05	armor_shards 1 plastic 3 rubber 9 ceramite_shards 25 robot_parts_container 80																					
-		smuggler_boots	armor_shards rubber rubber	10	1	1.05	armor_shards 1 rags 4 rubber 20 worker_clothing_container 80																					
+		smuggler_boots	rusty_shards rubber rubber	10	1	1.05	armor_shards 1 rags 4 rubber 20 worker_clothing_container 80																					
 		solnet_boots	armor_shards ceramite_shards rubber rubber plastic	50	1	1.05	armor_shards 1 rubber 3 plastic 9 ceramite_shards 25 scientist_clothing_container 80																					
 		worker_boots	armor_shards rubber rubber	30	1	1.05	armor_shards 1 rags 4 rubber 20 worker_clothing_container 80																					
 		pmc_boots	armor_shards plastic rubber	12	1	1.05	armor_shards 1 plastic 4 rubber 20 armor_container 80																					
