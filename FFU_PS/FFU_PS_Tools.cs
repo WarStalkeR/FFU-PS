@@ -1183,3 +1183,500 @@ namespace FFU_Phase_Shift {
         }
     }
 }
+
+// Reference Output: ILSpy v9.0.0.7660 / C# 11.0 / 2022.4
+/*
+public class Data
+{
+	public static Dictionary<string, DescriptorsCollection> Descriptors { get; private set; }
+
+	public static GlobalSettings Global { get; private set; }
+
+	public static Tilesets Tilesets { get; private set; }
+
+	public static FactionDropCollection FactionDrop { get; private set; }
+
+	public static ItemsCollection Items { get; private set; }
+
+	public static LocationBasedDropCollection LocationItemDrop { get; private set; }
+
+	public static LocationBasedDropCollection LocationMonsterDrop { get; private set; }
+
+	public static List<ProcMissionParametersRecord> ProcMissionParameters { get; private set; }
+
+	public static List<PrizeByRatingRecord> PrizesByRatings { get; private set; }
+
+	public static List<WorkbenchReceiptRecord> WorkbenchReceipts { get; private set; }
+
+	public static List<ItemProduceReceipt> ProduceReceipts { get; private set; }
+
+	public static List<ProcMissionObjectiveRecord> ProcMissionObjectives { get; private set; }
+
+	public static List<GameDifficultyRecord> GameDifficulty { get; private set; }
+
+	public static List<MissionDifficultyRecord> MissionDifficulty { get; private set; }
+
+	public static ConfigRecordCollection<CreatureRecord> Creatures { get; private set; }
+
+	public static ConfigRecordCollection<AiPresetRecord> AiPresets { get; private set; }
+
+	public static ConfigRecordCollection<WoundRecord> Wounds { get; private set; }
+
+	public static ConfigRecordCollection<QmorphosRecord> Qmorphos { get; private set; }
+
+	public static ConfigRecordCollection<ItemTransformationRecord> ItemTransformation { get; private set; }
+
+	public static ConfigRecordCollection<BarterReceipt> BarterReceipts { get; private set; }
+
+	public static ConfigRecordCollection<EquipmentVariantRecord> MonsterEquipments { get; private set; }
+
+	public static ConfigRecordCollection<FireModeRecord> Firemodes { get; private set; }
+
+	public static ConfigRecordCollection<PerkRecord> Perks { get; private set; }
+
+	public static ConfigRecordCollection<MercenaryClassRecord> MercenaryClasses { get; private set; }
+
+	public static ConfigRecordCollection<MercenaryProfileRecord> MercenaryProfiles { get; private set; }
+
+	public static ConfigRecordCollection<WoundSlotRecord> WoundSlots { get; private set; }
+
+	public static ConfigRecordCollection<StoryMissionRecord> StoryMissions { get; private set; }
+
+	public static ConfigRecordCollection<SpaceObjectRecord> SpaceObjects { get; private set; }
+
+	public static ConfigRecordCollection<TileTransformationRecord> TileTransformation { get; private set; }
+
+	public static ConfigRecordCollection<FactionRecord> Factions { get; private set; }
+
+	public static ConfigRecordCollection<AllianceRecord> Alliances { get; private set; }
+
+	public static ConfigRecordCollection<StationRecord> Stations { get; private set; }
+
+	public static ConfigRecordCollection<StationBarterRecord> StationBarter { get; private set; }
+
+	public static ConfigRecordCollection<ProcMissionTemplate> ProcMissionTemplates { get; private set; }
+
+	public static ConfigRecordCollection<ItemExpireRecord> ItemExpire { get; private set; }
+
+	public static ConfigRecordCollection<StatusEffectsRecord> StatusEffects { get; private set; }
+
+	public static ConfigRecordCollection<DamageTypeRecord> DamageTypes { get; private set; }
+
+	public static ConfigRecordCollection<MagnumPerkRecord> MagnumPerks { get; private set; }
+
+	public static ConfigRecordCollection<MagnumProjectParameter> MagnumProjectParameters { get; private set; }
+
+	public static List<MagnumProjectPrice> MagnumProjectPrices { get; private set; }
+
+	public static Dictionary<SpaceshipParameter, float> MagnumDefaultValues { get; private set; }
+
+	public static void Load()
+	{
+		Tilesets = new Tilesets(Resources.Load<DescriptorsCollection>("DescriptorsCollections/tilesets_descriptors"));
+		Descriptors = new Dictionary<string, DescriptorsCollection>();
+		Global = new GlobalSettings();
+		GameDifficulty = new List<GameDifficultyRecord>();
+		MissionDifficulty = new List<MissionDifficultyRecord>();
+		Creatures = new ConfigRecordCollection<CreatureRecord>();
+		AiPresets = new ConfigRecordCollection<AiPresetRecord>();
+		Items = new ItemsCollection();
+		Wounds = new ConfigRecordCollection<WoundRecord>();
+		Qmorphos = new ConfigRecordCollection<QmorphosRecord>();
+		LocationItemDrop = new LocationBasedDropCollection("itemdrop_");
+		LocationMonsterDrop = new LocationBasedDropCollection("monsterdrop_");
+		FactionDrop = new FactionDropCollection();
+		ItemTransformation = new ConfigRecordCollection<ItemTransformationRecord>();
+		WorkbenchReceipts = new List<WorkbenchReceiptRecord>();
+		ProduceReceipts = new List<ItemProduceReceipt>();
+		BarterReceipts = new ConfigRecordCollection<BarterReceipt>();
+		MonsterEquipments = new ConfigRecordCollection<EquipmentVariantRecord>();
+		Firemodes = new ConfigRecordCollection<FireModeRecord>();
+		Perks = new ConfigRecordCollection<PerkRecord>();
+		MercenaryClasses = new ConfigRecordCollection<MercenaryClassRecord>();
+		MercenaryProfiles = new ConfigRecordCollection<MercenaryProfileRecord>();
+		WoundSlots = new ConfigRecordCollection<WoundSlotRecord>();
+		StoryMissions = new ConfigRecordCollection<StoryMissionRecord>();
+		SpaceObjects = new ConfigRecordCollection<SpaceObjectRecord>();
+		TileTransformation = new ConfigRecordCollection<TileTransformationRecord>();
+		Factions = new ConfigRecordCollection<FactionRecord>();
+		Alliances = new ConfigRecordCollection<AllianceRecord>();
+		Stations = new ConfigRecordCollection<StationRecord>();
+		StationBarter = new ConfigRecordCollection<StationBarterRecord>();
+		ProcMissionParameters = new List<ProcMissionParametersRecord>();
+		ProcMissionObjectives = new List<ProcMissionObjectiveRecord>();
+		ProcMissionTemplates = new ConfigRecordCollection<ProcMissionTemplate>();
+		ItemExpire = new ConfigRecordCollection<ItemExpireRecord>();
+		StatusEffects = new ConfigRecordCollection<StatusEffectsRecord>();
+		DamageTypes = new ConfigRecordCollection<DamageTypeRecord>();
+		PrizesByRatings = new List<PrizeByRatingRecord>();
+		MagnumPerks = new ConfigRecordCollection<MagnumPerkRecord>();
+		MagnumProjectParameters = new ConfigRecordCollection<MagnumProjectParameter>();
+		MagnumProjectPrices = new List<MagnumProjectPrice>();
+		MagnumDefaultValues = new Dictionary<SpaceshipParameter, float>();
+		ConfigLoader configLoader = new ConfigLoader();
+		configLoader.OnDescriptorsLoaded += delegate(string header, DescriptorsCollection descriptors)
+		{
+			Descriptors.Add(header, descriptors);
+		};
+		configLoader.AddParser(new VertTableParser<GlobalSettings>(Global, "global"));
+		configLoader.AddParser(new TableParser<CreatureRecord>("monsters", delegate(CreatureRecord r, string header, DescriptorsCollection descs)
+		{
+			Creatures.AddRecord(r.Id, r);
+			r.ContentDescriptor = descs.GetDescriptor(r.Id);
+		}));
+		configLoader.AddParser(new TableParser<GameDifficultyRecord>("game_difficulty", delegate(GameDifficultyRecord r, string header, DescriptorsCollection descs)
+		{
+			GameDifficulty.Add(r);
+		}));
+		configLoader.AddParser(new TableParser<MissionDifficultyRecord>("mission_difficulty", delegate(MissionDifficultyRecord r, string header, DescriptorsCollection descs)
+		{
+			MissionDifficulty.Add(r);
+		}));
+		configLoader.AddParser(new TableParser<ProcMissionParametersRecord>("procmissionparameters", delegate(ProcMissionParametersRecord r, string header, DescriptorsCollection descs)
+		{
+			ProcMissionParameters.Add(r);
+		}));
+		configLoader.AddParser(new TableParser<PrizeByRatingRecord>("prizes_by_rating", delegate(PrizeByRatingRecord r, string header, DescriptorsCollection descs)
+		{
+			PrizesByRatings.Add(r);
+		}));
+		configLoader.AddParser(new TableParser<DamageTypeRecord>("damagetypes", delegate(DamageTypeRecord r, string header, DescriptorsCollection descs)
+		{
+			DamageTypes.AddRecord(r.Id, r);
+			r.ContentDescriptor = descs.GetDescriptor(r.Id);
+		}));
+		configLoader.AddParser(new TableParser<EquipmentVariantRecord>("monster_equipment", delegate(EquipmentVariantRecord r, string header, DescriptorsCollection descs)
+		{
+			MonsterEquipments.AddRecord(r.Id, r);
+		}));
+		configLoader.AddParser(new TableParser<AiPresetRecord>("ai-presets", delegate(AiPresetRecord r, string header, DescriptorsCollection descs)
+		{
+			AiPresets.AddRecord(r.Id, r);
+		}));
+		configLoader.AddParser(new TableParser<StatusEffectsRecord>("statuseffects", delegate(StatusEffectsRecord r, string header, DescriptorsCollection descs)
+		{
+			StatusEffects.AddRecord(r.Id, r);
+			r.ContentDescriptor = descs.GetDescriptor(r.Id);
+		}));
+		configLoader.AddParser(new TableParser<FactionRecord>("factions", delegate(FactionRecord r, string header, DescriptorsCollection descs)
+		{
+			Factions.AddRecord(r.Id, r);
+			r.ContentDescriptor = descs.GetDescriptor(r.Id);
+		}));
+		configLoader.AddParser(new TableParser<MercenaryClassRecord>("mercenary_classes", delegate(MercenaryClassRecord r, string header, DescriptorsCollection descs)
+		{
+			MercenaryClasses.AddRecord(r.Id, r);
+			r.ContentDescriptor = descs.GetDescriptor(r.Id);
+		}));
+		configLoader.AddParser(new TableParser<MercenaryProfileRecord>("mercenary_profiles", delegate(MercenaryProfileRecord r, string header, DescriptorsCollection descs)
+		{
+			MercenaryProfiles.AddRecord(r.Id, r);
+			r.ContentDescriptor = descs.GetDescriptor(r.Id);
+		}));
+		configLoader.AddParser(new TableParser<PerkRecord>("perks", delegate(PerkRecord r, string header, DescriptorsCollection descs)
+		{
+			Perks.AddRecord(r.Id, r);
+			r.ContentDescriptor = descs.GetDescriptor(r.Id);
+		}));
+		configLoader.AddParser(new TableParser<AllianceRecord>("alliances", delegate(AllianceRecord r, string header, DescriptorsCollection descs)
+		{
+			Alliances.AddRecord(r.Id, r);
+		}));
+		configLoader.AddParser(new TableParser<ProcMissionTemplate>("procmissiontemplates", delegate(ProcMissionTemplate r, string header, DescriptorsCollection descs)
+		{
+			ProcMissionTemplates.AddRecord(r.Id, r);
+		}));
+		configLoader.AddParser(new TableParser<StationRecord>("stations", delegate(StationRecord r, string header, DescriptorsCollection descs)
+		{
+			Stations.AddRecord(r.Id, r);
+			r.ContentDescriptor = descs.GetDescriptor(r.Id);
+		}));
+		configLoader.AddParser(new TableParser<StoryMissionRecord>("storymissions", delegate(StoryMissionRecord r, string header, DescriptorsCollection descs)
+		{
+			StoryMissions.AddRecord(r.Id, r);
+			r.ContentDescriptor = descs.GetDescriptor(r.Id);
+		}));
+		configLoader.AddParser(new TableParser<SpaceObjectRecord>("spaceobjects", delegate(SpaceObjectRecord r, string header, DescriptorsCollection descs)
+		{
+			SpaceObjects.AddRecord(r.Id, r);
+		}));
+		configLoader.AddParser(new TableParser<TileTransformationRecord>("tilesettransformation", delegate(TileTransformationRecord r, string header, DescriptorsCollection descs)
+		{
+			TileTransformation.AddRecord(r.Id, r);
+		}));
+		configLoader.AddParser(new TableParser<FireModeRecord>("firemodes", delegate(FireModeRecord r, string header, DescriptorsCollection descs)
+		{
+			Firemodes.AddRecord(r.Id, r);
+			r.ContentDescriptor = descs.GetDescriptor(r.Id);
+		}));
+		configLoader.AddParser(new TableParser<ItemExpireRecord>("itemexpire", delegate(ItemExpireRecord r, string header, DescriptorsCollection descs)
+		{
+			ItemExpire.AddRecord(r.Id, r);
+		}));
+		configLoader.AddParser(new TableParser<WoundSlotRecord>("woundslots", delegate(WoundSlotRecord r, string header, DescriptorsCollection descs)
+		{
+			WoundSlots.AddRecord(r.Id, r);
+			r.ContentDescriptor = descs.GetDescriptor(r.Id);
+		}));
+		configLoader.AddParser(new TableParser<WoundRecord>("woundtypes", delegate(WoundRecord r, string header, DescriptorsCollection descs)
+		{
+			Wounds.AddRecord(r.Id, r);
+		}));
+		configLoader.AddParser(new TableParser<ItemTransformationRecord>("itemtransformation", delegate(ItemTransformationRecord r, string header, DescriptorsCollection descs)
+		{
+			ItemTransformation.AddRecord(r.Id, r);
+		}));
+		configLoader.AddParser(new TableParser<WorkbenchReceiptRecord>("workbenchreceipts", delegate(WorkbenchReceiptRecord r, string header, DescriptorsCollection descs)
+		{
+			WorkbenchReceipts.Add(r);
+			r.GenerateId();
+		}));
+		configLoader.AddParser(new TableParser<ItemProduceReceipt>("itemreceipts", delegate(ItemProduceReceipt r, string header, DescriptorsCollection descs)
+		{
+			ProduceReceipts.Add(r);
+		}));
+		configLoader.AddParser(new TableParser<BarterReceipt>("barter_receipts", delegate(BarterReceipt r, string header, DescriptorsCollection descs)
+		{
+			BarterReceipts.AddRecord(r.Id, r);
+		}));
+		configLoader.AddParser(new TableParser<StationBarterRecord>("station_barter", delegate(StationBarterRecord r, string header, DescriptorsCollection descs)
+		{
+			StationBarter.AddRecord(r.Id, r);
+		}));
+		configLoader.AddParser(new TableParser<QmorphosRecord>("quazimorphosis", delegate(QmorphosRecord r, string header, DescriptorsCollection descs)
+		{
+			Qmorphos.AddRecord(r.Id, r);
+		}));
+		configLoader.AddParser(new TableParser<ProcMissionObjectiveRecord>("missionobjectives", delegate(ProcMissionObjectiveRecord r, string header, DescriptorsCollection descs)
+		{
+			ProcMissionObjectives.Add(r);
+		}));
+		configLoader.AddParser(new TableParser<AmmoRecord>("ammo", delegate(AmmoRecord r, string header, DescriptorsCollection descs)
+		{
+			Items.AddRecord(r.Id, r);
+			r.ContentDescriptor = descs.GetDescriptor(r.Id);
+		}));
+		configLoader.AddParser(new TableParser<WeaponRecord>("meleeweapons", delegate(WeaponRecord r, string header, DescriptorsCollection descs)
+		{
+			Items.AddRecord(r.Id, r);
+			r.IsMelee = true;
+			r.CanThrow = r.ThrowRange != 0;
+			r.Range = 1;
+			r.DefineClassTraits();
+			r.ContentDescriptor = descs.GetDescriptor(r.Id);
+		}));
+		configLoader.AddParser(new TableParser<WeaponRecord>("rangeweapons", delegate(WeaponRecord r, string header, DescriptorsCollection descs)
+		{
+			Items.AddRecord(r.Id, r);
+			r.DefineClassTraits();
+			r.ContentDescriptor = descs.GetDescriptor(r.Id);
+		}));
+		configLoader.AddParser(new TableParser<MedkitRecord>("medkits", delegate(MedkitRecord r, string header, DescriptorsCollection descs)
+		{
+			Items.AddRecord(r.Id, r);
+			r.ContentDescriptor = descs.GetDescriptor(r.Id);
+		}));
+		configLoader.AddParser(new TableParser<FoodRecord>("food", delegate(FoodRecord r, string header, DescriptorsCollection descs)
+		{
+			Items.AddRecord(r.Id, r);
+			r.ContentDescriptor = descs.GetDescriptor(r.Id);
+		}));
+		configLoader.AddParser(new TableParser<BackpackRecord>("backpacks", delegate(BackpackRecord r, string header, DescriptorsCollection descs)
+		{
+			Items.AddRecord(r.Id, r);
+			r.ContentDescriptor = descs.GetDescriptor(r.Id);
+		}));
+		configLoader.AddParser(new TableParser<VestRecord>("vests", delegate(VestRecord r, string header, DescriptorsCollection descs)
+		{
+			Items.AddRecord(r.Id, r);
+			r.ContentDescriptor = descs.GetDescriptor(r.Id);
+		}));
+		configLoader.AddParser(new TableParser<HelmetRecord>("helmets", delegate(HelmetRecord r, string header, DescriptorsCollection descs)
+		{
+			Items.AddRecord(r.Id, r);
+			r.ContentDescriptor = descs.GetDescriptor(r.Id);
+		}));
+		configLoader.AddParser(new TableParser<ArmorRecord>("armors", delegate(ArmorRecord r, string header, DescriptorsCollection descs)
+		{
+			Items.AddRecord(r.Id, r);
+			r.ContentDescriptor = descs.GetDescriptor(r.Id);
+		}));
+		configLoader.AddParser(new TableParser<LeggingsRecord>("leggings", delegate(LeggingsRecord r, string header, DescriptorsCollection descs)
+		{
+			Items.AddRecord(r.Id, r);
+			r.ContentDescriptor = descs.GetDescriptor(r.Id);
+		}));
+		configLoader.AddParser(new TableParser<BootsRecord>("boots", delegate(BootsRecord r, string header, DescriptorsCollection descs)
+		{
+			Items.AddRecord(r.Id, r);
+			r.ContentDescriptor = descs.GetDescriptor(r.Id);
+		}));
+		configLoader.AddParser(new TableParser<RepairRecord>("repairs", delegate(RepairRecord r, string header, DescriptorsCollection descs)
+		{
+			Items.AddRecord(r.Id, r);
+			r.ContentDescriptor = descs.GetDescriptor(r.Id);
+		}));
+		configLoader.AddParser(new TableParser<SkullRecord>("skulls", delegate(SkullRecord r, string header, DescriptorsCollection descs)
+		{
+			Items.AddRecord(r.Id, r);
+			r.ContentDescriptor = descs.GetDescriptor(r.Id);
+		}));
+		configLoader.AddParser(new TableParser<QuasiArtifactRecord>("quasiartifacts", delegate(QuasiArtifactRecord r, string header, DescriptorsCollection descs)
+		{
+			Items.AddRecord(r.Id, r);
+			r.ContentDescriptor = descs.GetDescriptor(r.Id);
+		}));
+		configLoader.AddParser(new TableParser<GrenadeRecord>("grenades", delegate(GrenadeRecord r, string header, DescriptorsCollection descs)
+		{
+			Items.AddRecord(r.Id, r);
+			r.ContentDescriptor = descs.GetDescriptor(r.Id);
+		}));
+		configLoader.AddParser(new TableParser<MineRecord>("mines", delegate(MineRecord r, string header, DescriptorsCollection descs)
+		{
+			Items.AddRecord(r.Id, r);
+			r.ContentDescriptor = descs.GetDescriptor(r.Id);
+		}));
+		configLoader.AddParser(new TableParser<AutomapRecord>("automaps", delegate(AutomapRecord r, string header, DescriptorsCollection descs)
+		{
+			Items.AddRecord(r.Id, r);
+			r.ContentDescriptor = descs.GetDescriptor(r.Id);
+		}));
+		configLoader.AddParser(new TableParser<ResurrectKitRecord>("resurrectkits", delegate(ResurrectKitRecord r, string header, DescriptorsCollection descs)
+		{
+			Items.AddRecord(r.Id, r);
+			r.ContentDescriptor = descs.GetDescriptor(r.Id);
+		}));
+		configLoader.AddParser(new TableParser<TrashRecord>("trash", delegate(TrashRecord r, string header, DescriptorsCollection descs)
+		{
+			Items.AddRecord(r.Id, r);
+			r.ContentDescriptor = descs.GetDescriptor(r.Id);
+		}));
+		configLoader.AddParser(new TableParser<DatadiskRecord>("datadisks", delegate(DatadiskRecord r, string header, DescriptorsCollection descs)
+		{
+			Items.AddRecord(r.Id, r);
+			r.ContentDescriptor = descs.GetDescriptor(r.Id);
+		}));
+		configLoader.AddParser(new TableParser<TurretRecord>("turrets", delegate(TurretRecord r, string header, DescriptorsCollection descs)
+		{
+			Items.AddRecord(r.Id, r);
+			r.ContentDescriptor = descs.GetDescriptor(r.Id);
+		}));
+		configLoader.AddParser(new TableParser<ContentDropRecord>("itemdrop_", TableKeyComparisonMode.Contains, delegate(ContentDropRecord r, string header, DescriptorsCollection descs)
+		{
+			LocationItemDrop.AddRecord(header, r);
+		}));
+		configLoader.AddParser(new TableParser<ContentDropRecord>("monsterdrop_", TableKeyComparisonMode.Contains, delegate(ContentDropRecord r, string header, DescriptorsCollection descs)
+		{
+			LocationMonsterDrop.AddRecord(header, r);
+		}));
+		configLoader.AddParser(new TableParser<ContentDropRecord>("factiondrop_", TableKeyComparisonMode.Contains, delegate(ContentDropRecord r, string header, DescriptorsCollection descs)
+		{
+			FactionDrop.AddRecord(header, r);
+		}));
+		configLoader.AddParser(new TableParser<MagnumPerkRecord>("magnum_perks", TableKeyComparisonMode.Equals, delegate(MagnumPerkRecord r, string header, DescriptorsCollection descs)
+		{
+			MagnumPerks.AddRecord(r.Id, r);
+			r.ContentDescriptor = descs.GetDescriptor(r.Id);
+		}));
+		configLoader.AddParser(new TableParser<MagnumProjectParameter>("magnum_projects_params", delegate(MagnumProjectParameter r, string header, DescriptorsCollection descs)
+		{
+			MagnumProjectParameters.AddRecord(r.Id, r);
+		}));
+		configLoader.AddParser(new TableParser<MagnumProjectPrice>("magnum_projects_prices", delegate(MagnumProjectPrice r, string header, DescriptorsCollection descs)
+		{
+			MagnumProjectPrices.Add(r);
+		}));
+		configLoader.AddParser(new TableParser<MagnumDefaultParameterRecord>("magnum_default_params", delegate(MagnumDefaultParameterRecord r, string header, DescriptorsCollection descs)
+		{
+			MagnumDefaultValues.Add(r.Parameter, r.Value);
+		}));
+		configLoader.Load();
+		MagnumPerkRecord.CacheChilds(MagnumPerks.Records);
+	}
+}
+
+public class ConfigLoader
+{
+	private readonly List<IConfigParser> _parsers = new List<IConfigParser>();
+
+	public event Action<string, DescriptorsCollection> OnDescriptorsLoaded = delegate
+	{
+	};
+
+	public void AddParser(IConfigParser parser)
+	{
+		_parsers.Add(parser);
+	}
+
+	public void Load()
+	{
+		LoadSpecificFile("config_globals");
+		LoadSpecificFile("config_items");
+		LoadSpecificFile("config_monsters");
+		LoadSpecificFile("config_drops");
+		LoadSpecificFile("config_wounds");
+		LoadSpecificFile("config_mercenaries");
+		LoadSpecificFile("config_spacesandbox");
+		LoadSpecificFile("config_barter");
+		LoadSpecificFile("config_magnum");
+	}
+
+	public void LoadSpecificFile(string path)
+	{
+		TextAsset obj = Resources.Load(path) as TextAsset;
+		if (obj == null)
+		{
+			throw new NotImplementedException("Failed open " + path + " in Resources folder.");
+		}
+		string[] array = obj.text.Split('\n');
+		bool flag = false;
+		string text = string.Empty;
+		DescriptorsCollection descriptorsCollection = null;
+		IConfigParser configParser = null;
+		string[] array2 = array;
+		foreach (string text2 in array2)
+		{
+			if (string.IsNullOrEmpty(text2) || (text2.Length >= 2 && text2[0] == '/' && text2[1] == '/'))
+			{
+				continue;
+			}
+			if (flag)
+			{
+				flag = false;
+				configParser.ParseHeaders(SplitLine(text2));
+			}
+			else if (text2.Contains("#end"))
+			{
+				configParser = null;
+				descriptorsCollection = null;
+			}
+			else if (text2[0] == '#')
+			{
+				text = text2.Trim('\t', '\r', '\n', '#');
+				foreach (IConfigParser parser in _parsers)
+				{
+					if (parser.ValidTableKey(text))
+					{
+						flag = true;
+						configParser = parser;
+					}
+				}
+				descriptorsCollection = Resources.Load<DescriptorsCollection>("DescriptorsCollections/" + text + "_descriptors");
+				if (descriptorsCollection != null)
+				{
+					this.OnDescriptorsLoaded(text, descriptorsCollection);
+				}
+			}
+			else
+			{
+				configParser?.ParseLine(SplitLine(text2), text, descriptorsCollection);
+			}
+		}
+	}
+
+	private string[] SplitLine(string s)
+	{
+		return Regex.Replace(s, "\\n|\\r", string.Empty).Split('\t');
+	}
+}
+*/
