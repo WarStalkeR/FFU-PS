@@ -43,11 +43,18 @@ namespace FFU_Phase_Shift {
                 } else Data.Creatures.AddRecord(r.Id, r);
                 r.ContentDescriptor = descs.GetDescriptor(r.Id);
             }));
-            _cfgLoader.AddParser(new TableParser<GameDifficultyRecord>("game_difficulty", delegate (GameDifficultyRecord r, string header, DescriptorsCollection descs) {
-                int index = Data.GameDifficulty.FindIndex(x => x.CompletedMissionNumber == r.CompletedMissionNumber);
+            _cfgLoader.AddParser(new MultiColVertTableParser<DifficultyPreset>(Data.DifficultyPresets, "difficulty_presets"));
+            _cfgLoader.AddParser(new TableParser<DifficultySettingsRecord>("difficulty_settings", delegate (DifficultySettingsRecord r, string header, DescriptorsCollection descs) {
+                if (_verbose) ModLog.Info($"TRACE, difficulty_settings: {r.Id}");
+                if (Data.DifficultySettings.GetRecord(r.Id) != null) {
+                    Data.DifficultySettings._records[r.Id] = r;
+                } else Data.DifficultySettings.AddRecord(r.Id, r);
+            }));
+            _cfgLoader.AddParser(new TableParser<ProgressionDifficultyRecord>("progression_difficulty", delegate (ProgressionDifficultyRecord r, string header, DescriptorsCollection descs){
+                int index = Data.ProgressionDifficulty.FindIndex(x => x.CompletedMissionNumber == r.CompletedMissionNumber);
                 if (index != -1) {
-                    Data.GameDifficulty[index] = r;
-                } else Data.GameDifficulty.Add(r);
+                    Data.ProgressionDifficulty[index] = r;
+                } else Data.ProgressionDifficulty.Add(r);
             }));
             _cfgLoader.AddParser(new TableParser<MissionDifficultyRecord>("mission_difficulty", delegate (MissionDifficultyRecord r, string header, DescriptorsCollection descs) {
                 int index = Data.MissionDifficulty.FindIndex(x => x.DifficultyRating == r.DifficultyRating);
@@ -55,17 +62,25 @@ namespace FFU_Phase_Shift {
                     Data.MissionDifficulty[index] = r;
                 } else Data.MissionDifficulty.Add(r);
             }));
-            _cfgLoader.AddParser(new TableParser<ProcMissionParametersRecord>("procmissionparameters", delegate (ProcMissionParametersRecord r, string header, DescriptorsCollection descs) {
-                int index = Data.ProcMissionParameters.FindIndex(x => x.ProcMissionType == r.ProcMissionType);
+            _cfgLoader.AddParser(new TableParser<ProcMissionRecord>("procmissions", delegate (ProcMissionRecord r, string header, DescriptorsCollection descs) {
+                int index = Data.ProcMissions.FindIndex(x => x.ProcMissionType == r.ProcMissionType);
                 if (index != -1) {
-                    Data.ProcMissionParameters[index] = r;
-                } else Data.ProcMissionParameters.Add(r);
+                    Data.ProcMissions[index] = r;
+                } else Data.ProcMissions.Add(r);
+                r.ContentDescriptor = descs.GetDescriptor(r.ProcMissionType.ToString()) as ProcMissionDescriptor;
             }));
             _cfgLoader.AddParser(new TableParser<PrizeByRatingRecord>("prizes_by_rating", delegate (PrizeByRatingRecord r, string header, DescriptorsCollection descs) {
                 int index = Data.PrizesByRatings.FindIndex(x => x.ProcMissionType == r.ProcMissionType && x.DifficultyRating == r.DifficultyRating);
                 if (index != -1) {
                     Data.PrizesByRatings[index] = r;
                 } else Data.PrizesByRatings.Add(r);
+            }));
+            _cfgLoader.AddParser(new TableParser<StartingItemsRecord>("starting_items", delegate (StartingItemsRecord r, string header, DescriptorsCollection descs) {
+                if (_verbose) ModLog.Info($"TRACE, starting_items: {r.Id}");
+                int index = Data.StartingItems.FindIndex(x => x.Id == r.Id);
+                if (index != -1) {
+                    Data.StartingItems[index] = r;
+                } else Data.StartingItems.Add(r);
             }));
             _cfgLoader.AddParser(new TableParser<DamageTypeRecord>("damagetypes", delegate (DamageTypeRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, damagetypes: {r.Id}");
@@ -126,6 +141,7 @@ namespace FFU_Phase_Shift {
                 if (Data.Alliances.GetRecord(r.Id) != null) {
                     Data.Alliances._records[r.Id] = r;
                 } else Data.Alliances.AddRecord(r.Id, r);
+                r.ContentDescriptor = descs.GetDescriptor(r.Id);
             }));
             _cfgLoader.AddParser(new TableParser<ProcMissionTemplate>("procmissiontemplates", delegate (ProcMissionTemplate r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, procmissiontemplates: {r.Id}");
@@ -152,6 +168,7 @@ namespace FFU_Phase_Shift {
                 if (Data.SpaceObjects.GetRecord(r.Id) != null) {
                     Data.SpaceObjects._records[r.Id] = r;
                 } else Data.SpaceObjects.AddRecord(r.Id, r);
+                r.ContentDescriptor = descs.GetDescriptor(r.Id);
             }));
             _cfgLoader.AddParser(new TableParser<TileTransformationRecord>("tilesettransformation", delegate (TileTransformationRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, tilesettransformation: {r.Id}");
@@ -233,6 +250,12 @@ namespace FFU_Phase_Shift {
                 if (index != -1) {
                     Data.ProcMissionObjectives[index] = r;
                 } else Data.ProcMissionObjectives.Add(r);
+            }));
+            _cfgLoader.AddParser(new TableParser<PopulationReceipt>("population_receipts", delegate (PopulationReceipt r, string header, DescriptorsCollection descs) {
+                int index = Data.PopulationReceipts.FindIndex(x => x.BartherReceiptId == r.BartherReceiptId);
+                if (index != -1) {
+                    Data.PopulationReceipts[index] = r;
+                } else Data.PopulationReceipts.Add(r);
             }));
             _cfgLoader.AddParser(new TableParser<AmmoRecord>("ammo", delegate (AmmoRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, ammo: {r.Id}");
@@ -545,6 +568,24 @@ namespace FFU_Phase_Shift {
                 } else Data.Items.AddRecord(r.Id, r);
                 r.ContentDescriptor = descs.GetDescriptor(r.Id);
             }));
+            _cfgLoader.AddParser(new TableParser<ExpGainerRecord>("expgainers", delegate (ExpGainerRecord r, string header, DescriptorsCollection descs) {
+                if (_verbose) ModLog.Info($"TRACE, expgainers: {r.Id}");
+                bool isOnTop = r.Id.StartsWith("*");
+                if (isOnTop) r.TrimId();
+                if (Data.Items.GetRecord(r.Id) != null) {
+                    var multiRecord = Data.Items._records[r.Id] as CompositeItemRecord;
+                    if (multiRecord != null) {
+                        if (multiRecord.GetRecord<ExpGainerRecord>() != null) {
+                            int index = multiRecord.Records.FindIndex(rec => rec is ExpGainerRecord);
+                            if (index != -1) multiRecord.Records[index] = r;
+                        } else {
+                            if (isOnTop) multiRecord.Records.Insert(0, r);
+                            else multiRecord.Records.Add(r);
+                        }
+                    } else Data.Items._records[r.Id] = r;
+                } else Data.Items.AddRecord(r.Id, r);
+                r.ContentDescriptor = descs.GetDescriptor(r.Id);
+            }));
             _cfgLoader.AddParser(new TableParser<ResurrectKitRecord>("resurrectkits", delegate (ResurrectKitRecord r, string header, DescriptorsCollection descs) {
                 if (_verbose) ModLog.Info($"TRACE, resurrectkits: {r.Id}");
                 bool isOnTop = r.Id.StartsWith("*");
@@ -710,6 +751,11 @@ namespace FFU_Phase_Shift {
                     Data.MagnumDefaultValues[r.Parameter] = r.Value;
                 else Data.MagnumDefaultValues.Add(r.Parameter, r.Value);
             }));
+            _cfgLoader.AddParser(new TableParser<TechLevelRecord>("techlevels", delegate (TechLevelRecord r, string s, DescriptorsCollection descs) {
+                if (Data.TechLevels.ContainsKey(r.TechLevel))
+                    Data.TechLevels[r.TechLevel] = r;
+                else Data.TechLevels.Add(r.TechLevel, r);
+            }));
         }
 
         public static int GetItemOrder(string itemId) {
@@ -745,12 +791,14 @@ namespace FFU_Phase_Shift {
                     return 2100;
                 else if (refItem.GetRecord<ResurrectKitRecord>() != null)
                     return 2200;
-                else if (refItem.GetRecord<DatadiskRecord>() != null)
+                else if (refItem.GetRecord<ExpGainerRecord>() != null)
                     return 2300;
+                else if (refItem.GetRecord<DatadiskRecord>() != null)
+                    return 2800;
                 else if (refItem.GetRecord<SkullRecord>() != null)
-                    return 2400;
+                    return 2900;
                 else if (refItem.GetRecord<QuasiArtifactRecord>() != null)
-                    return 2500;
+                    return 3000;
                 else if (refItem.GetRecord<TrashRecord>() != null)
                     return 10000;
                 else if (refItem.GetRecord<RepairRecord>() != null)
