@@ -442,11 +442,22 @@ public static void UseAutomap(MapController mapController, MapObstacles mapObsta
 	item.Storage?.Remove(item);
 }
 
-protected override void OnContextCommandClick(CommonButton button)
+protected override void OnContextCommandClick(CommonButton button, int clickCount)
 {
 	ContextMenuCommand bind = _commandBinds[button];
 	switch (bind)
 	{
+	case ContextMenuCommand.Use:
+		if (_item.Is<ExpGainerRecord>())
+		{
+			_merc.OnPerkLevelUp += MercOnOnPerkLevelUp;
+			if (!ItemInteraction.UseExpGainer(_item, _merc, _perkFactory, spendCount: true))
+			{
+				SingletonMonoBehaviour<SoundController>.Instance.PlayUiSound(SingletonMonoBehaviour<SoundsStorage>.Instance.EmptyAttack);
+			}
+			_merc.OnPerkLevelUp -= MercOnOnPerkLevelUp;
+		}
+		break;
 	case ContextMenuCommand.Drop:
 		PutItemInStorage(_storageForDrop, _item);
 		break;
@@ -455,11 +466,11 @@ protected override void OnContextCommandClick(CommonButton button)
 		break;
 	case ContextMenuCommand.Unequip:
 	{
-		ItemStorage itemStorage2 = new ItemStorage(ItemStorageSource.ShipCargo, 2, 1);
-		_merc.Inventory.Unequip(_item, itemStorage2);
-		if (!itemStorage2.Empty)
+		ItemStorage itemStorage4 = new ItemStorage(ItemStorageSource.ShipCargo, 2, 1);
+		_merc.Inventory.Unequip(_item, itemStorage4);
+		if (!itemStorage4.Empty)
 		{
-			PutItemInStorage(_storageForDrop, itemStorage2.First);
+			PutItemInStorage(_storageForDrop, itemStorage4.First);
 		}
 		break;
 	}
@@ -482,8 +493,8 @@ protected override void OnContextCommandClick(CommonButton button)
 		break;
 	case ContextMenuCommand.Equip:
 	{
-		ItemStorage itemStorage4 = new ItemStorage(ItemStorageSource.ShipCargo, 2, 1);
-		if (_merc.Inventory.Equip(_item, itemStorage4))
+		ItemStorage itemStorage3 = new ItemStorage(ItemStorageSource.ShipCargo, 2, 1);
+		if (_merc.Inventory.Equip(_item, itemStorage3))
 		{
 			if (_item.Is<WeaponRecord>())
 			{
@@ -498,9 +509,9 @@ protected override void OnContextCommandClick(CommonButton button)
 		{
 			SingletonMonoBehaviour<SoundController>.Instance.PlayUiSound(SingletonMonoBehaviour<SoundsStorage>.Instance.EmptyAttack);
 		}
-		if (!itemStorage4.Empty)
+		if (!itemStorage3.Empty)
 		{
-			_storageForDrop.TryPutItem(itemStorage4.First, CellPosition.Zero);
+			_storageForDrop.TryPutItem(itemStorage3.First, CellPosition.Zero);
 		}
 		break;
 	}
@@ -546,7 +557,7 @@ protected override void OnContextCommandClick(CommonButton button)
 			if (mercenaries.UnlockedMercenaries.IndexOf(datadiskComponent.UnlockId) == -1)
 			{
 				mercenaries.UnlockedMercenaries.Add(datadiskComponent.UnlockId);
-				MercenarySystem.CloneMercenary(time, magnumProjects, mercenaries, datadiskComponent.UnlockId, cloneInstant: false);
+				MercenarySystem.CloneMercenary(time, magnumProjects, mercenaries, datadiskComponent.UnlockId, cloneInstant: false, _difficulty, _perkFactory);
 				SharedUi.NotificationPanel.AddUnlockDatadiskNotify(_item);
 				statistics.IncreaseStatistic(StatisticType.ChipUnlock);
 				_item.Storage.Remove(_item);
@@ -582,8 +593,8 @@ protected override void OnContextCommandClick(CommonButton button)
 	}
 	case ContextMenuCommand.UnloadAmmo:
 	{
-		ItemStorage itemStorage3 = new ItemStorage(ItemStorageSource.ShipCargo, 2, 1);
-		if (ItemInteraction.UnloadWeapon(_item, _merc?.Inventory, itemStorage3))
+		ItemStorage itemStorage2 = new ItemStorage(ItemStorageSource.ShipCargo, 2, 1);
+		if (ItemInteraction.UnloadWeapon(_item, _merc?.Inventory, itemStorage2))
 		{
 			SingletonMonoBehaviour<SoundController>.Instance.PlayUiSound(SingletonMonoBehaviour<SoundsStorage>.Instance.AmmoReceived);
 		}
@@ -591,9 +602,9 @@ protected override void OnContextCommandClick(CommonButton button)
 		{
 			SingletonMonoBehaviour<SoundController>.Instance.PlayUiSound(SingletonMonoBehaviour<SoundsStorage>.Instance.EmptyAttack);
 		}
-		while (!itemStorage3.Empty)
+		while (!itemStorage2.Empty)
 		{
-			PutItemInStorage(_storageForDrop, itemStorage3.First);
+			PutItemInStorage(_storageForDrop, itemStorage2.First);
 		}
 		break;
 	}
@@ -640,8 +651,12 @@ protected override void OnContextCommandClick(CommonButton button)
 			Missions missions = SingletonMonoBehaviour<SpaceGameMode>.Instance.Get<Missions>();
 			item.Storage.Remove(item);
 			mercenaries2.MercToUltimateSkulls.Add(_merc.ProfileId, skullRecord.Id);
-			_merc?.AddUltimatePerk(skullRecord.PerkId, skullRecord.Id);
+			if (_merc != null)
+			{
+				PerkSystem.AddUltimatePerk(skullRecord.PerkId, skullRecord.Id, _merc, _perkFactory);
+			}
 			StorySystem.ApplySkull(storyTriggers, stations, missions, factions, spaceTime, travelMetadata, item);
+			SingletonMonoBehaviour<SoundController>.Instance.PlayUISound(SingletonMonoBehaviour<SoundsStorage>.Instance.SkullApply);
 			this.OnContextActionPerformed(bind, _item);
 		});
 		break;
@@ -651,6 +666,7 @@ protected override void OnContextCommandClick(CommonButton button)
 			item.Storage.Remove(item);
 			SingletonMonoBehaviour<SpaceGameMode>.Instance.Get<Mercenaries>().MercToUltimateSkulls.Remove(_merc.ProfileId);
 			_merc?.RemoveUltimatePerk();
+			SingletonMonoBehaviour<SoundController>.Instance.PlayUISound(SingletonMonoBehaviour<SoundsStorage>.Instance.SkullCancel);
 			this.OnContextActionPerformed(bind, _item);
 		});
 		break;
@@ -661,6 +677,10 @@ protected override void OnContextCommandClick(CommonButton button)
 		base.gameObject.SetActive(value: false);
 	}
 	SingletonMonoBehaviour<UiCanvas>.Instance.DragController.Pause(0.1f);
+	static void MercOnOnPerkLevelUp(PerkRecord obj)
+	{
+		SharedUi.NotificationPanel.AddPerkLevelUpNotify(obj);
+	}
 }
 
 public bool InteractWithCharacter(BasePickupItem item, bool spendTurn)
@@ -676,6 +696,10 @@ public bool InteractWithCharacter(BasePickupItem item, bool spendTurn)
 		if (item.Is<FoodRecord>())
 		{
 			PutFoodInCharacter(item, spendTurn: false, spendCount: false);
+		}
+		if (item.Is<ExpGainerRecord>() && ItemInteraction.UseExpGainer(item, _merc, _perkFactory, spendCount: false))
+		{
+			DragControllerRefreshCallback();
 		}
 		if (medkitRecord.HealSpecificWound)
 		{
@@ -698,7 +722,7 @@ public bool InteractWithCharacter(BasePickupItem item, bool spendTurn)
 		MapCell cell = _mapGrid.GetCell(pos);
 		if (cell != null && cell.IsFloor && !cell.isObjBlockPass && _creatures.GetCreature(x, y) == null)
 		{
-			_creatures.Player.Mercenary.RaisePerkAction(PerkLevelUpActionType.PlaceTurret);
+			_creatures.Player.RaisePerkAction(PerkLevelUpActionType.PlaceTurret);
 			Monster monster = CreatureSystem.SpawnMonster(_creatures, _turnController, turretRecord.TurretMonsterId, pos);
 			SingletonMonoBehaviour<SoundController>.Instance.PlayUiSound(SingletonMonoBehaviour<SoundsStorage>.Instance.DeployTurret);
 			monster.CreatureAlliance = CreatureAlliance.PlayerAlliance;
@@ -776,6 +800,20 @@ public bool InteractWithCharacter(BasePickupItem item, bool spendTurn)
 			return false;
 		}
 		Hide();
+		if (spendTurn)
+		{
+			PlayerInteractionSystem.EndPlayerTurn(_creatures, PlayerEndTurnContext.InventoryInteraction);
+		}
+		return true;
+	}
+	if (item.Is<ExpGainerRecord>())
+	{
+		if (!ItemInteraction.UseExpGainer(item, _merc, _perkFactory, spendCount: true))
+		{
+			SingletonMonoBehaviour<SoundController>.Instance.PlayUiSound(SingletonMonoBehaviour<SoundsStorage>.Instance.EmptyAttack);
+			return false;
+		}
+		DragControllerRefreshCallback();
 		if (spendTurn)
 		{
 			PlayerInteractionSystem.EndPlayerTurn(_creatures, PlayerEndTurnContext.InventoryInteraction);
@@ -898,27 +936,33 @@ private void CreateComponent(PickupItem item, List<PickupItemComponent> itemComp
 	}
 }
 
-public static void StartItemProduction(MagnumCargo magnumCargo, MagnumProjects projects, MagnumSpaceship magnumSpaceship, SpaceTime time, ItemProduceReceipt receipt, int count, int lineIndex)
+public static void StartMagnumItemProduction(MagnumCargo magnumCargo, MagnumProjects projects, MagnumSpaceship magnumSpaceship, SpaceTime time, Difficulty difficulty, ItemProduceReceipt receipt, int count, int lineIndex)
 {
 	MagnumProject withModifications = projects.GetWithModifications(receipt.OutputItem);
 	float prodlineProduceSpeedBonus = magnumSpaceship.ProdlineProduceSpeedBonus;
-	int durationInHours = (int)Mathf.Max(receipt.ProduceTimeInHours + prodlineProduceSpeedBonus, 1f) * count;
+	int durationInHours = (int)Mathf.Max((receipt.ProduceTimeInHours + prodlineProduceSpeedBonus) * (1f / difficulty.Preset.MagnumCraftingTime), 1f) * count;
 	if (!magnumCargo.ItemProduceOrders.ContainsKey(lineIndex))
 	{
-		magnumCargo.ItemProduceOrders[lineIndex] = new List<ItemProduceOrder>();
+		magnumCargo.ItemProduceOrders[lineIndex] = new List<ProduceOrder>();
 	}
-	ItemProduceOrder itemProduceOrder = new ItemProduceOrder
+	ProduceOrder produceOrder = new ProduceOrder
 	{
 		OrderId = ((withModifications != null) ? withModifications.CustomRecord.Id : receipt.OutputItem),
 		Count = count,
 		DurationInHours = durationInHours,
 		StartTime = time.Time
 	};
-	itemProduceOrder.RequiredItems.AddRange(receipt.RequiredItems);
-	magnumCargo.ItemProduceOrders[lineIndex].Add(itemProduceOrder);
-	foreach (string requiredItem in receipt.RequiredItems)
+	foreach (ItemQuantity requiredItem in receipt.RequiredItems)
 	{
-		MagnumCargoSystem.RemoveSpecificCargo(magnumCargo, requiredItem, (short)count);
+		for (int i = 0; i < requiredItem.Count; i++)
+		{
+			produceOrder.RequiredItems.Add(requiredItem.ItemId);
+		}
+	}
+	magnumCargo.ItemProduceOrders[lineIndex].Add(produceOrder);
+	foreach (ItemQuantity requiredItem2 in receipt.RequiredItems)
+	{
+		MagnumCargoSystem.RemoveSpecificCargo(magnumCargo, requiredItem2.ItemId, (short)(count * requiredItem2.Count));
 	}
 }
 
@@ -939,12 +983,24 @@ private void InitPanels()
 		CompositeItemRecord compositeItemRecord = Data.Items.GetRecord(produceReceipt.OutputItem) as CompositeItemRecord;
 		switch (_receiptCategory)
 		{
-		case ReceiptCategory.Weapons:
-			if (compositeItemRecord.GetRecord<WeaponRecord>() == null)
+		case ReceiptCategory.RangeWeapons:
+		{
+			WeaponRecord record = compositeItemRecord.GetRecord<WeaponRecord>();
+			if (record == null || record.IsMelee)
 			{
 				continue;
 			}
 			break;
+		}
+		case ReceiptCategory.MeleeWeapons:
+		{
+			WeaponRecord record2 = compositeItemRecord.GetRecord<WeaponRecord>();
+			if (record2 == null || !record2.IsMelee)
+			{
+				continue;
+			}
+			break;
+		}
 		case ReceiptCategory.Ammo:
 			if (compositeItemRecord.GetRecord<AmmoRecord>() == null)
 			{
@@ -971,7 +1027,7 @@ private void InitPanels()
 			break;
 		}
 		ItemReceiptPanel component = _panelsPool.Take().GetComponent<ItemReceiptPanel>();
-		component.Initialize(_magnumCargo, _magnumSpaceship, _magnumProjects, produceReceipt);
+		component.Initialize(_magnumCargo, _magnumSpaceship, _magnumProjects, produceReceipt, _difficulty);
 		component.OnStartProduction += ReceiptPanelOnStartProduction;
 		component.transform.SetParent(_panelsRoot, worldPositionStays: false);
 		component.transform.SetAsLastSibling();

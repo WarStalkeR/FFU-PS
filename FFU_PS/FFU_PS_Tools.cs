@@ -1192,7 +1192,13 @@ public class Data
 
 	public static GlobalSettings Global { get; private set; }
 
+	public static ConfigRecordCollection<DifficultySettingsRecord> DifficultySettings { get; private set; }
+
+	public static Dictionary<string, DifficultyPreset> DifficultyPresets { get; private set; }
+
 	public static Tilesets Tilesets { get; private set; }
+
+	public static BinaryPresetsMap PresetsMap { get; private set; }
 
 	public static FactionDropCollection FactionDrop { get; private set; }
 
@@ -1202,9 +1208,11 @@ public class Data
 
 	public static LocationBasedDropCollection LocationMonsterDrop { get; private set; }
 
-	public static List<ProcMissionParametersRecord> ProcMissionParameters { get; private set; }
+	public static List<ProcMissionRecord> ProcMissions { get; private set; }
 
 	public static List<PrizeByRatingRecord> PrizesByRatings { get; private set; }
+
+	public static List<StartingItemsRecord> StartingItems { get; private set; }
 
 	public static List<WorkbenchReceiptRecord> WorkbenchReceipts { get; private set; }
 
@@ -1212,9 +1220,11 @@ public class Data
 
 	public static List<ProcMissionObjectiveRecord> ProcMissionObjectives { get; private set; }
 
-	public static List<GameDifficultyRecord> GameDifficulty { get; private set; }
+	public static List<ProgressionDifficultyRecord> ProgressionDifficulty { get; private set; }
 
 	public static List<MissionDifficultyRecord> MissionDifficulty { get; private set; }
+
+	public static List<PopulationReceipt> PopulationReceipts { get; private set; }
 
 	public static ConfigRecordCollection<CreatureRecord> Creatures { get; private set; }
 
@@ -1266,6 +1276,8 @@ public class Data
 
 	public static ConfigRecordCollection<MagnumProjectParameter> MagnumProjectParameters { get; private set; }
 
+	public static Dictionary<int, TechLevelRecord> TechLevels { get; private set; }
+
 	public static List<MagnumProjectPrice> MagnumProjectPrices { get; private set; }
 
 	public static Dictionary<SpaceshipParameter, float> MagnumDefaultValues { get; private set; }
@@ -1273,9 +1285,12 @@ public class Data
 	public static void Load()
 	{
 		Tilesets = new Tilesets(Resources.Load<DescriptorsCollection>("DescriptorsCollections/tilesets_descriptors"));
+		PresetsMap = Resources.Load<BinaryPresetsMap>("PresetsMap");
 		Descriptors = new Dictionary<string, DescriptorsCollection>();
 		Global = new GlobalSettings();
-		GameDifficulty = new List<GameDifficultyRecord>();
+		DifficultySettings = new ConfigRecordCollection<DifficultySettingsRecord>();
+		DifficultyPresets = new Dictionary<string, DifficultyPreset>();
+		ProgressionDifficulty = new List<ProgressionDifficultyRecord>();
 		MissionDifficulty = new List<MissionDifficultyRecord>();
 		Creatures = new ConfigRecordCollection<CreatureRecord>();
 		AiPresets = new ConfigRecordCollection<AiPresetRecord>();
@@ -1302,15 +1317,18 @@ public class Data
 		Alliances = new ConfigRecordCollection<AllianceRecord>();
 		Stations = new ConfigRecordCollection<StationRecord>();
 		StationBarter = new ConfigRecordCollection<StationBarterRecord>();
-		ProcMissionParameters = new List<ProcMissionParametersRecord>();
+		ProcMissions = new List<ProcMissionRecord>();
 		ProcMissionObjectives = new List<ProcMissionObjectiveRecord>();
 		ProcMissionTemplates = new ConfigRecordCollection<ProcMissionTemplate>();
+		PopulationReceipts = new List<PopulationReceipt>();
 		ItemExpire = new ConfigRecordCollection<ItemExpireRecord>();
 		StatusEffects = new ConfigRecordCollection<StatusEffectsRecord>();
 		DamageTypes = new ConfigRecordCollection<DamageTypeRecord>();
 		PrizesByRatings = new List<PrizeByRatingRecord>();
+		StartingItems = new List<StartingItemsRecord>();
 		MagnumPerks = new ConfigRecordCollection<MagnumPerkRecord>();
 		MagnumProjectParameters = new ConfigRecordCollection<MagnumProjectParameter>();
+		TechLevels = new Dictionary<int, TechLevelRecord>();
 		MagnumProjectPrices = new List<MagnumProjectPrice>();
 		MagnumDefaultValues = new Dictionary<SpaceshipParameter, float>();
 		ConfigLoader configLoader = new ConfigLoader();
@@ -1324,21 +1342,31 @@ public class Data
 			Creatures.AddRecord(r.Id, r);
 			r.ContentDescriptor = descs.GetDescriptor(r.Id);
 		}));
-		configLoader.AddParser(new TableParser<GameDifficultyRecord>("game_difficulty", delegate(GameDifficultyRecord r, string header, DescriptorsCollection descs)
+		configLoader.AddParser(new MultiColVertTableParser<DifficultyPreset>(DifficultyPresets, "difficulty_presets"));
+		configLoader.AddParser(new TableParser<DifficultySettingsRecord>("difficulty_settings", delegate(DifficultySettingsRecord r, string header, DescriptorsCollection descs)
 		{
-			GameDifficulty.Add(r);
+			DifficultySettings.AddRecord(r.Id, r);
+		}));
+		configLoader.AddParser(new TableParser<ProgressionDifficultyRecord>("progression_difficulty", delegate(ProgressionDifficultyRecord r, string header, DescriptorsCollection descs)
+		{
+			ProgressionDifficulty.Add(r);
 		}));
 		configLoader.AddParser(new TableParser<MissionDifficultyRecord>("mission_difficulty", delegate(MissionDifficultyRecord r, string header, DescriptorsCollection descs)
 		{
 			MissionDifficulty.Add(r);
 		}));
-		configLoader.AddParser(new TableParser<ProcMissionParametersRecord>("procmissionparameters", delegate(ProcMissionParametersRecord r, string header, DescriptorsCollection descs)
+		configLoader.AddParser(new TableParser<ProcMissionRecord>("procmissions", delegate(ProcMissionRecord r, string header, DescriptorsCollection descs)
 		{
-			ProcMissionParameters.Add(r);
+			ProcMissions.Add(r);
+			r.ContentDescriptor = descs.GetDescriptor(r.ProcMissionType.ToString()) as ProcMissionDescriptor;
 		}));
 		configLoader.AddParser(new TableParser<PrizeByRatingRecord>("prizes_by_rating", delegate(PrizeByRatingRecord r, string header, DescriptorsCollection descs)
 		{
 			PrizesByRatings.Add(r);
+		}));
+		configLoader.AddParser(new TableParser<StartingItemsRecord>("starting_items", delegate(StartingItemsRecord r, string header, DescriptorsCollection descs)
+		{
+			StartingItems.Add(r);
 		}));
 		configLoader.AddParser(new TableParser<DamageTypeRecord>("damagetypes", delegate(DamageTypeRecord r, string header, DescriptorsCollection descs)
 		{
@@ -1381,6 +1409,7 @@ public class Data
 		configLoader.AddParser(new TableParser<AllianceRecord>("alliances", delegate(AllianceRecord r, string header, DescriptorsCollection descs)
 		{
 			Alliances.AddRecord(r.Id, r);
+			r.ContentDescriptor = descs.GetDescriptor(r.Id);
 		}));
 		configLoader.AddParser(new TableParser<ProcMissionTemplate>("procmissiontemplates", delegate(ProcMissionTemplate r, string header, DescriptorsCollection descs)
 		{
@@ -1399,6 +1428,7 @@ public class Data
 		configLoader.AddParser(new TableParser<SpaceObjectRecord>("spaceobjects", delegate(SpaceObjectRecord r, string header, DescriptorsCollection descs)
 		{
 			SpaceObjects.AddRecord(r.Id, r);
+			r.ContentDescriptor = descs.GetDescriptor(r.Id);
 		}));
 		configLoader.AddParser(new TableParser<TileTransformationRecord>("tilesettransformation", delegate(TileTransformationRecord r, string header, DescriptorsCollection descs)
 		{
@@ -1450,6 +1480,10 @@ public class Data
 		configLoader.AddParser(new TableParser<ProcMissionObjectiveRecord>("missionobjectives", delegate(ProcMissionObjectiveRecord r, string header, DescriptorsCollection descs)
 		{
 			ProcMissionObjectives.Add(r);
+		}));
+		configLoader.AddParser(new TableParser<PopulationReceipt>("population_receipts", delegate(PopulationReceipt r, string header, DescriptorsCollection descs)
+		{
+			PopulationReceipts.Add(r);
 		}));
 		configLoader.AddParser(new TableParser<AmmoRecord>("ammo", delegate(AmmoRecord r, string header, DescriptorsCollection descs)
 		{
@@ -1546,6 +1580,11 @@ public class Data
 			Items.AddRecord(r.Id, r);
 			r.ContentDescriptor = descs.GetDescriptor(r.Id);
 		}));
+		configLoader.AddParser(new TableParser<ExpGainerRecord>("expgainers", delegate(ExpGainerRecord r, string header, DescriptorsCollection descs)
+		{
+			Items.AddRecord(r.Id, r);
+			r.ContentDescriptor = descs.GetDescriptor(r.Id);
+		}));
 		configLoader.AddParser(new TableParser<TrashRecord>("trash", delegate(TrashRecord r, string header, DescriptorsCollection descs)
 		{
 			Items.AddRecord(r.Id, r);
@@ -1590,6 +1629,10 @@ public class Data
 		{
 			MagnumDefaultValues.Add(r.Parameter, r.Value);
 		}));
+		configLoader.AddParser(new TableParser<TechLevelRecord>("techlevels", delegate(TechLevelRecord r, string s, DescriptorsCollection descs)
+		{
+			TechLevels.TryAdd(r.TechLevel, r);
+		}));
 		configLoader.Load();
 		MagnumPerkRecord.CacheChilds(MagnumPerks.Records);
 	}
@@ -1611,6 +1654,7 @@ public class ConfigLoader
 	public void Load()
 	{
 		LoadSpecificFile("config_globals");
+		LoadSpecificFile("config_difficulty");
 		LoadSpecificFile("config_items");
 		LoadSpecificFile("config_monsters");
 		LoadSpecificFile("config_drops");
