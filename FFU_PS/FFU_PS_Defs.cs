@@ -6,7 +6,7 @@ namespace FFU_Phase_Shift {
     public static class ModConfig {
         // Constant Variables
         public const bool IsExperimental = false;
-        public const string ModVersion = "0.1.5.9";
+        public const string ModVersion = "0.1.8.0";
         public const string PathDump = "_Dump";
         public const string PathAssets = "Assets";
         public const string PathConfigs = "Configs";

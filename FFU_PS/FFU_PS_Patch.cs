@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using static MGSC.MagnumSelectItemToProduceWindow;
-using UnityEngine.UI;
 using System;
 
 namespace FFU_Phase_Shift {
@@ -80,7 +79,8 @@ namespace FFU_Phase_Shift {
                         case DatadiskUnlockType.Mercenary:
                             if (mercenaries.UnlockedMercenaries.IndexOf(datadiskComponent.UnlockId) == -1) {
                                 mercenaries.UnlockedMercenaries.Add(datadiskComponent.UnlockId);
-                                MercenarySystem.CloneMercenary(time, magnumProjects, mercenaries, datadiskComponent.UnlockId, cloneInstant: false);
+                                MercenarySystem.CloneMercenary(time, magnumProjects, mercenaries, 
+									datadiskComponent.UnlockId, false, __instance._difficulty, __instance._perkFactory);
                                 SharedUi.NotificationPanel.AddUnlockDatadiskNotify(__instance._item);
                                 statistics.IncreaseStatistic(StatisticType.ChipUnlock);
                                 __instance._item.StackCount--;
@@ -156,7 +156,7 @@ namespace FFU_Phase_Shift {
                 pos = new CellPosition(x, y);
                 MapCell cell = __instance._mapGrid.GetCell(pos);
                 if (cell != null && cell.IsFloor && !cell.isObjBlockPass && __instance._creatures.GetCreature(x, y) == null) {
-                    __instance._creatures.Player.Mercenary.RaisePerkAction(PerkLevelUpActionType.PlaceTurret);
+                    __instance._creatures.Player.RaisePerkAction(PerkLevelUpActionType.PlaceTurret);
                     Monster monster = CreatureSystem.SpawnMonster(__instance._creatures, __instance._turnController, turretRecord.TurretMonsterId, pos);
                     SingletonMonoBehaviour<SoundController>.Instance.PlayUiSound(SingletonMonoBehaviour<SoundsStorage>.Instance.DeployTurret);
                     monster.CreatureAlliance = CreatureAlliance.PlayerAlliance;
@@ -222,25 +222,27 @@ namespace FFU_Phase_Shift {
         }
 
         // Item production rework to allow precise production hours and smart bonus application
-        public static bool StartItemProduction_SmartPrecision(MagnumCargo magnumCargo, MagnumProjects projects, 
-            MagnumSpaceship magnumSpaceship, SpaceTime time, ItemProduceReceipt receipt, int count, int lineIndex) {
+        public static bool StartMagnumItemProduction_SmartPrecision(MagnumCargo magnumCargo, MagnumProjects projects, 
+            MagnumSpaceship magnumSpaceship, SpaceTime time, Difficulty difficulty, ItemProduceReceipt receipt, int count, int lineIndex) {
             MagnumProject withModifications = projects.GetWithModifications(receipt.OutputItem);
             float prodlineProduceSpeedBonus = magnumSpaceship.ProdlineProduceSpeedBonus;
             int durationInHours = (int)Mathf.Min(
-                Mathf.Max(receipt.ProduceTimeInHours + prodlineProduceSpeedBonus, 1f) * count,
-                Mathf.Max(receipt.ProduceTimeInHours * count + prodlineProduceSpeedBonus, 1f));
+                Mathf.Max((receipt.ProduceTimeInHours + prodlineProduceSpeedBonus) * (1f / difficulty.Preset.MagnumCraftingTime), 1f) * count,
+                Mathf.Max(receipt.ProduceTimeInHours * (1f / difficulty.Preset.MagnumCraftingTime) * count + prodlineProduceSpeedBonus, 1f));
             if (!magnumCargo.ItemProduceOrders.ContainsKey(lineIndex)) 
-                magnumCargo.ItemProduceOrders[lineIndex] = new List<ItemProduceOrder>();
-            ItemProduceOrder itemProduceOrder = new ItemProduceOrder {
-                OrderId = ((withModifications != null) ? withModifications.CustomRecord.Id : receipt.OutputItem),
+                magnumCargo.ItemProduceOrders[lineIndex] = new List<ProduceOrder>();
+            ProduceOrder produceOrder = new ProduceOrder {
+                OrderId = (withModifications != null) ? withModifications.CustomRecord.Id : receipt.OutputItem,
                 Count = count,
                 DurationInHours = durationInHours,
                 StartTime = time.Time
             };
-            itemProduceOrder.RequiredItems.AddRange(receipt.RequiredItems);
-            magnumCargo.ItemProduceOrders[lineIndex].Add(itemProduceOrder);
-            foreach (string requiredItem in receipt.RequiredItems) 
-                MagnumCargoSystem.RemoveSpecificCargo(magnumCargo, requiredItem, (short)count);
+            foreach (ItemQuantity requiredItem in receipt.RequiredItems)
+                for (int i = 0; i < requiredItem.Count; i++)
+                    produceOrder.RequiredItems.Add(requiredItem.ItemId);
+            magnumCargo.ItemProduceOrders[lineIndex].Add(produceOrder);
+            foreach (ItemQuantity requiredItem in receipt.RequiredItems)
+                MagnumCargoSystem.RemoveSpecificCargo(magnumCargo, requiredItem.ItemId, (short)(count * requiredItem.Count));
             return false; // Original function is completely replaced
         }
 
@@ -256,10 +258,23 @@ namespace FFU_Phase_Shift {
                 var refRecord = Data.Items.GetRecord(unlockedItem) as CompositeItemRecord;
                 if (refRecipe != null && refRecord != null) {
                     switch (__instance._receiptCategory) {
-                        case ReceiptCategory.Weapons: {
-                            if (refRecord.GetRecord<WeaponRecord>() != null) {
+                        case ReceiptCategory.RangeWeapons: {
+                            if (refRecord.GetRecord<WeaponRecord>() != null && !refRecord.GetRecord<WeaponRecord>().IsMelee) {
                                 ItemReceiptPanel component = __instance._panelsPool.Take().GetComponent<ItemReceiptPanel>();
-                                component.Initialize(__instance._magnumCargo, __instance._magnumSpaceship, __instance._magnumProjects, refRecipe);
+                                component.Initialize(__instance._magnumCargo, __instance._magnumSpaceship, 
+									__instance._magnumProjects, refRecipe, __instance._difficulty);
+                                component.OnStartProduction += __instance.ReceiptPanelOnStartProduction;
+                                component.transform.SetParent(__instance._panelsRoot, worldPositionStays: false);
+                                component.transform.SetAsLastSibling();
+                                __instance._receiptPanels.Add(component);
+                            }
+                            break;
+                        }
+                        case ReceiptCategory.MeleeWeapons: {
+                            if (refRecord.GetRecord<WeaponRecord>() != null && refRecord.GetRecord<WeaponRecord>().IsMelee) {
+                                ItemReceiptPanel component = __instance._panelsPool.Take().GetComponent<ItemReceiptPanel>();
+                                component.Initialize(__instance._magnumCargo, __instance._magnumSpaceship,
+                                    __instance._magnumProjects, refRecipe, __instance._difficulty);
                                 component.OnStartProduction += __instance.ReceiptPanelOnStartProduction;
                                 component.transform.SetParent(__instance._panelsRoot, worldPositionStays: false);
                                 component.transform.SetAsLastSibling();
@@ -270,7 +285,8 @@ namespace FFU_Phase_Shift {
                         case ReceiptCategory.Ammo: {
                             if (refRecord.GetRecord<AmmoRecord>() != null) {
                                 ItemReceiptPanel component = __instance._panelsPool.Take().GetComponent<ItemReceiptPanel>();
-                                component.Initialize(__instance._magnumCargo, __instance._magnumSpaceship, __instance._magnumProjects, refRecipe);
+                                component.Initialize(__instance._magnumCargo, __instance._magnumSpaceship, 
+									__instance._magnumProjects, refRecipe, __instance._difficulty);
                                 component.OnStartProduction += __instance.ReceiptPanelOnStartProduction;
                                 component.transform.SetParent(__instance._panelsRoot, worldPositionStays: false);
                                 component.transform.SetAsLastSibling();
@@ -284,7 +300,8 @@ namespace FFU_Phase_Shift {
                                 refRecord.GetRecord<HelmetRecord>() != null ||
                                 refRecord.GetRecord<BootsRecord>() != null) {
                                 ItemReceiptPanel component = __instance._panelsPool.Take().GetComponent<ItemReceiptPanel>();
-                                component.Initialize(__instance._magnumCargo, __instance._magnumSpaceship, __instance._magnumProjects, refRecipe);
+                                component.Initialize(__instance._magnumCargo, __instance._magnumSpaceship, 
+									__instance._magnumProjects, refRecipe, __instance._difficulty);
                                 component.OnStartProduction += __instance.ReceiptPanelOnStartProduction;
                                 component.transform.SetParent(__instance._panelsRoot, worldPositionStays: false);
                                 component.transform.SetAsLastSibling();
@@ -295,7 +312,8 @@ namespace FFU_Phase_Shift {
                         case ReceiptCategory.Medicine: {
                             if (refRecord.GetRecord<MedkitRecord>() != null) {
                                 ItemReceiptPanel component = __instance._panelsPool.Take().GetComponent<ItemReceiptPanel>();
-                                component.Initialize(__instance._magnumCargo, __instance._magnumSpaceship, __instance._magnumProjects, refRecipe);
+                                component.Initialize(__instance._magnumCargo, __instance._magnumSpaceship, 
+									__instance._magnumProjects, refRecipe, __instance._difficulty);
                                 component.OnStartProduction += __instance.ReceiptPanelOnStartProduction;
                                 component.transform.SetParent(__instance._panelsRoot, worldPositionStays: false);
                                 component.transform.SetAsLastSibling();
@@ -312,7 +330,8 @@ namespace FFU_Phase_Shift {
                                 refRecord.GetRecord<HelmetRecord>() == null &&
                                 refRecord.GetRecord<BootsRecord>() == null) {
                                 ItemReceiptPanel component = __instance._panelsPool.Take().GetComponent<ItemReceiptPanel>();
-                                component.Initialize(__instance._magnumCargo, __instance._magnumSpaceship, __instance._magnumProjects, refRecipe);
+                                component.Initialize(__instance._magnumCargo, __instance._magnumSpaceship, 
+									__instance._magnumProjects, refRecipe, __instance._difficulty);
                                 component.OnStartProduction += __instance.ReceiptPanelOnStartProduction;
                                 component.transform.SetParent(__instance._panelsRoot, worldPositionStays: false);
                                 component.transform.SetAsLastSibling();
@@ -322,7 +341,8 @@ namespace FFU_Phase_Shift {
                         }
                         default: {
                             ItemReceiptPanel component = __instance._panelsPool.Take().GetComponent<ItemReceiptPanel>();
-                            component.Initialize(__instance._magnumCargo, __instance._magnumSpaceship, __instance._magnumProjects, refRecipe);
+                            component.Initialize(__instance._magnumCargo, __instance._magnumSpaceship, 
+								__instance._magnumProjects, refRecipe, __instance._difficulty);
                             component.OnStartProduction += __instance.ReceiptPanelOnStartProduction;
                             component.transform.SetParent(__instance._panelsRoot, worldPositionStays: false);
                             component.transform.SetAsLastSibling();

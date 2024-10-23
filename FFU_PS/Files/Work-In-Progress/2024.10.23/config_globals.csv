@@ -1,0 +1,212 @@
+#global		
+Parameter	Value	
+// Build info		
+BuildVersion	0.8.182s.992eb1a
+SaveVersion	43	
+Console	false
+SkipIntro	FALSE	
+SkipStartTutorialDialog	FALSE	
+DateFormats	dd.MM.yyyy MM/dd/yyyy yyyy-MM-dd	
+		
+// Other		
+LosLookAngle	100	
+MonsterLosRange	6	
+NotifyHiddenEnemiesRadius	6	
+BrokenWeaponItemId	broken_weapon	
+SummonedExpireTurns	15	
+StartSpaceObjectId	phobos	
+SpawnItemOnDisassembleChance	0.5	
+StartGameDate	2200-09-13 12:00:00	
+StartMercenaries	francis_reid_daly victoria_boudicca persival_fawcett Isabella_capet maximilian_rohr priya_marlon	
+StartClasses	scouts_of_hades ecclipse_blades tifton_elite phoenix_brigade	
+StartReceipts	synthChicken synthBeef small_backpack bandit_vest blue_tshirt dark_pants blue_boots army_knife pmc_pistol spec_pistol pistol_basic_ammo medium_basic_ammo shotgun_shrapnel_ammo bandage splint medpack morphine sorbent antibiotics armor_repair_kit weapon_repair_kit melee_repair_kit	
+AllowEvacuationItems		
+DefaultDifficulty	Normal	
+DefaultDifficultyPage	general	
+DeathGiftId	itemsBox	
+		
+// Tutorial		
+TutorialItemsInLocker	spec_pistol_2 pistol_basic_ammo bandit_vest small_backpack green_tshirt blue_boots splint bandage antibiotics blue_pants	
+TutorialItemsOnCharacter	hyber_shirt hyber_pants	
+TutorialAncomRewardItems	itemChip medium_backpack weapon_repair_kit armor_repair_kit stationary_turret weapon_container armor_container	
+TutorialAncomRewardItemsTezctlan	itemChip medium_backpack weapon_repair_kit armor_repair_kit demonic_medicine demonic_idol azt_heavy_armor azt_mask azt_linecloth azt_boots venus_armor_shards	
+TutorialAncomRewardItemsRealWare	itemChip medium_backpack weapon_repair_kit armor_repair_kit spec_smg_rv medium_basic_ammo ceramit_vest	
+TutorialAncomRewardItemsAnCom	itemChip medium_backpack heavy_armorpierce_ammo pmc_assault weapon_repair_kit armor_repair_kit	
+TutorialMachineBlockWait	15	
+TutorialAncomQuestItemId	quest_AncomData	
+		
+// Sandbox		
+ResetIncomeDeltaDay	Monday	
+ResetIncomeDeltaHours	0	
+GrabTechLevelDay	Monday	
+GrabTechLevelHours	2	
+FactionTickIntervalHours	1	
+MissionAddTimeHours	8	
+StationVisitAddTimeHours	4	
+TechLevelToPower	100 200 300 400 500 600 700 800 900 1000	
+StationChangeOwnerCooldownHours	96	
+StationAttackTargetCooldownMinHours	168	
+StationAttackTargetCooldownMaxHours	504	
+MissionMinLifeTimeHours	432	
+MissionMaxLifeTimeHours	960	
+StationProduceTimeInHours	2	
+StationProducePopulationMult	1.6	
+StationReplacingRandomItemIntervalHours	336	
+StationShippingMinHours	340	
+StationShippingMaxHours	408	
+StationStorageLimit	100	
+StationProductionTimeRatio	2	
+FactionDefenseBonusGainIntervalHours	48	
+FactionDefenseBonusGainVal	1	
+PowerToRepMult	0.01	
+MinReputation	-100	
+MaxReputation	100	
+ReputationRewardLimit	20	
+TimeScaleX1Mult	100	
+TimeScaleX4Mult	400	
+TimeScaleX10Mult	1000	
+TimeScaleX100Mult	10000	
+DistanceToHours	0.2	
+NewsLifetimeInHours	24	
+FactionPowerGainNews	1000 2000 5000 10000	
+FactionTechLevelGainNews	2 3 4 5 6 7 8 9 10	
+MaxShippingCountForStation	50	
+StationShippingMaxStack	50	
+StationShippingMaxItemsCount	5	
+StationShippingLeftNumber	3	
+StationShippingMonthConsumeThreshold	2	
+StationStartItemsCount	100	
+MaxBarterPrice	5000	
+FlightTimeToPlanet	20	
+FlightTimeToSatelite	10	
+MissionRewardMaxConsumables	5	
+MaxTechLevel	10	
+FactionAbsorbTechLevelMult	0.5	
+WorldPriceUpdateIntervalMonths	3	
+WorldPriceOvergrowthPercent	5	
+WorldPriceOvergrowthBonusItems	20	
+WipeRelationsReputationThreshold	0	
+CounterattackMissionDurationTurns	80	
+CounterattackMonsterGroupTechLevelBonus	4	
+InfiltrationMonsterGroupTechLevelBonus	2	
+RitualMonsterGroupTechLevelBonus	2	
+RitualMissionDefenseDurationTurns	80	
+DefenseMissionDurationTurns	80	
+DefenseMissionsBramfaturaId	Defense	
+DefenseMissionWavePowerMults	0.2 0.3 0.5	
+		
+// Price Multipliers		
+PriceMultipliersNoStock	1.3	
+PriceMultipliersLowStock	1	
+PriceMultipliersMeidumStock	0.8	
+PriceMultipliersHighStock	0.5	
+PriceMultipliersExcessStock	0.3	
+		
+// Trade		
+TradeMinReputationToExchange	-20	
+TradeMinReputationToSell	25	
+TradeMinReputationToBuy	25	
+TradeBuyItemRepThreshold	75	
+TradeSellItemRepThreshold	100	
+TradeSellItemMult1	0.70	
+TradeSellItemMult2	0.20	
+		
+// Mercenary		
+TrainingPerkInHours	36	
+CloneMercDurationInHours	10	
+RestoreMercHealthHours	2	
+RestoreMercWoundInHours	4	
+RestoreMercAmpInHours	6	
+		
+// Dungeon generation		
+CorridorWeightInDropMult	0.5	
+		
+// Movement		
+SlowMoveStarvationMult	1	
+NormalMoveStarvationMult	2	
+RunMoveStarvationMult	10	
+RunAccuracyDebuff	0.25	
+PlayerSlowMoveTimeScale	1	
+PlayerNormalMoveTimeScale	1.25	
+PlayerRunMoveTimeScale	1.5	
+MonsterSlowMoveTimeScale	1	
+MonsterNormalMoveTimeScale	2	
+MonsterRunMoveTimeScale	2	
+		
+// AI		
+SomniaMoveTimerMin	1	
+SomniaMoveTimerMax	20	
+IdleMoveTimerMin	1	
+IdleMoveTimerMax	10	
+AggroExplosionChance	1	
+AggroExplosionRadius	8	
+AggroGunshotRadius	4	
+		
+// Obstacles		
+MapObstacleDamageWhitefadeDuration	0.25	
+MaxCorpsesInTile	6	
+ValidRechargeBatteries	battery_crafted_charge battery_charge	
+		
+// Quazimorphosis		
+QmorphosMaxLevel	1000	
+QmorphosPerTurnPoints	2 1 -1	
+QmorphosPerTurnWeights	20 50 30	
+Qmorphos2PhaseOstMinLevel	200	
+Qmorphos3PhaseOstMinLevel	800	
+		
+// Fire		
+StrongFireDuration	5	
+WeakFireDuration	3	
+SpawnWeakFireDuringLifetime	1 0.8 0.6 0.4 0.2	
+BurningCreatureSpawnFireChance	0.2	
+BurningDamagePerTurnMin	15	
+BurningDamagePerTurnMax	30	
+BurningEffectWoundChance	0.9	
+OilSpawnFireChance	0.8	
+FireDamageToItemPerTurn	2	
+FireItemConvertsFrom	meat1	
+FireItemConvertsTo	roastedMeat	
+		
+// Toxic		
+ToxicDamagePerPuddleSize	4 6 10 14 18	
+ToxicDamageToItemPerTurn	4	
+ToxicDamageType	poison	
+ToxicDamageMulti	0.5	
+ToxicPuddleLifeTime	5	
+		
+// Damage		
+MinHitChance	0.1	
+CapAccuracy	0.95	
+CapDodge	0.95	
+OvercapCritModifier	0.1	
+CurveSmoothingCoef	0.025	
+ExponentCoef	2.718	
+WoundChanceModifier	0.035	
+		
+// Starvation		
+StarvationRegenWeights	0 0.01 61 81	
+StarvationRegenValues	-1 0 0 1	
+		
+// Pain threshold		
+PainThresholdYellowPercent	70	
+PainThresholdRedPercent	25	
+PainThresholdGlobalDmgMult	0.3	
+		
+// Medicine		
+WoundFixedResolutionPeriod	10	
+WoundDefaultResolutionChance	0.5	
+		
+// WoundEffects		
+FrozenStunAfterProgressionLevel	50	
+ShockStunAfterProgressionLevel	0	
+QmorphSummonCountMin	1	
+QmorphSummonCountMax	2	
+#end		
+		
+#starting_items		
+Id	Items	Points
+none		0
+low	army_knife spec_hatchet petrov_pistol pmc_shotgun spec_pistol pmc_pistol bandit_vest balaklava green_vest blue_pants common_boots small_backpack pistol_basic_ammo medium_basic_ammo heavy_basic_ammo shotgun_shrapnel_ammo cannedMeat cannedVeg synthBeef synthBeef synthChicken synthChicken water water weapon_repair_kit melee_repair_kit armor_repair_kit tape tread welding_machine_device	300
+normal	stationary_turret army_knife spec_hatchet petrov_pistol pmc_shotgun spec_pistol pmc_pistol pmc_smg pmc_club bandit_vest bandit_vest balaklava green_vest blue_pants common_boots small_backpack pistol_basic_ammo medium_basic_ammo heavy_basic_ammo battery_charge shotgun_shrapnel_ammo frag_grenade stun_grenade frag_mine bandage bandage splint splint antibiotics antibiotics medpack sorbent bloodBag painkillers sigs_kosmos cannedMeat cannedMeat cannedVeg mre_pack packedGoodRation packedRation synthBeef synthBeef synthChicken synthChicken water water weapon_repair_kit melee_repair_kit armor_repair_kit weapon_shards weapon_shards armor_shards armor_shards tape tread transformer medical_components tread welding_machine_device	500
+high	stationary_turret army_knife army_knife spec_hatchet petrov_pistol pmc_shotgun pmc_shotgun spec_pistol pmc_pistol pmc_smg pmc_assault pmc_club bandit_vest bandit_vest balaklava balaklava green_vest green_vest blue_pants blue_pants smuggler_boots common_boots small_backpack small_backpack pistol_basic_ammo pistol_basic_ammo medium_basic_ammo heavy_basic_ammo battery_charge shotgun_shrapnel_ammo shotgun_shrapnel_ammo frag_grenade frag_grenade stun_grenade frag_mine bandage bandage bandage bandage splint splint splint splint antibiotics antibiotics antibiotics antibiotics medpack medpack sorbent sorbent bloodBag bloodBag painkillers painkillers sigs_kosmos sigs_kosmos cannedMeat cannedMeat cannedMeat cannedMeat cannedVeg cannedVeg mre_pack mre_pack packedGoodRation packedGoodRation packedRation packedRation synthBeef synthBeef synthBeef synthBeef synthChicken synthChicken synthChicken synthChicken water water water water weapon_repair_kit weapon_repair_kit melee_repair_kit melee_repair_kit armor_repair_kit armor_repair_kit weapon_shards weapon_shards weapon_shards weapon_shards armor_shards armor_shards armor_shards armor_shards tape tread transformer medical_components tape tread tread welding_machine_device	800
+#end		

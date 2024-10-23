@@ -1,0 +1,424 @@
+#factions																	
+Id	Enabled	InitialPower	InitialTechLevel	InitialPlayerReputation	FactionType	AllianceType	SpawnMissionChance	Strategies	StrategyDurationMinHours	StrategyDurationMaxHours	GuardCreatureId	AgentCreatureId	MinQmorphosWhenVictims	UseGeneralRewards			
+AnCom	TRUE	0	1	20	Corp	Hexarchy	0.1	Expansion 25 Defense 35 Scouting 45	672	1344	ancom_elite_man	man_professor	0	TRUE			
+Tezctlan	TRUE	800	2	20	Tezctlan	TezctlanAliance	0.5	Expansion 70 Defense 10 Scouting 20	672	1344	venus_jaguar_knight	venus_acolyte	100	FALSE			
+XiomaraMasks	FALSE	0	1	0	Xiomara	XiomaraAliance	0.1	Expansion 70 Defense 10 Scouting 20	672	1344	venus_eagle_knight	venus_acolyte	100	FALSE			
+SBN	TRUE	0	1	10	Corp	Hexarchy	0.1	Expansion 25 Defense 35 Scouting 45	672	1344	sbn_elite_man	woman_manager	0	TRUE			
+RealWare	TRUE	0	1	10	Corp	Hexarchy	0.1	Expansion 25 Defense 35 Scouting 45	672	1344	realware_elite_man	man_manager	0	TRUE			
+DaydreamChems	TRUE	0	1	0	Corp	Corporation	0.25	Expansion 25 Defense 25 Scouting 25	672	1344	stationary_turret	woman_medic	0	TRUE			
+PlanetBridge	TRUE	0	1	0	Corp	Corporation	0.25	Expansion 25 Defense 25 Scouting 25	672	1344	heavy_security_man_pb	woman_professor	0	TRUE			
+Grasshopper	TRUE	0	1	0	Corp	Corporation	0.25	Expansion 25 Defense 25 Scouting 25	672	1344	mercury_force_man	woman_manager	0	TRUE			
+Sunlight	TRUE	0	1	0	Corp	Corporation	0.25	Expansion 25 Defense 25 Scouting 25	672	1344	mercury_force_man	woman_scientist_sl	0	TRUE			
+FrancheComte	TRUE	0	1	0	Corp	Corporation	0.25	Expansion 25 Defense 25 Scouting 25	672	1344	heavy_security_man_fc	man_manager	0	TRUE			
+ChurchRevelation	TRUE	0	1	0	Corp	Corporation	0.25	Expansion 25 Defense 25 Scouting 25	672	1344	pmc_man_soldier	woman_scientist_ch	0	TRUE			
+CoreWard	TRUE	0	1	0	Corp	Corporation	0.25	Expansion 25 Defense 25 Scouting 25	672	1344	pmc_man_soldier	man_manager	0	TRUE			
+CResistance	TRUE	0	1	-10	CivilRes	Resistance	0.5	Expansion 25 Defense 35 Scouting 40	672	1344	cresist_elite_man	woman_worker	0	TRUE			
+Dilthey	TRUE	300	1	20	Corp	Hexarchy	0.1	Expansion 20 Defense 40 Scouting 45	672	1344	ancom_elite_man	man_professor	0	TRUE			
+UnchainedBelt	TRUE	300	1	-10	Pirates	Pirates	0.5	Expansion 25 Defense 35 Scouting 40	672	1344	cresist_elite_man	woman_worker	0	TRUE			
+SheduThousand	FALSE	0	1	0	Shedu	SheduThousand	0.1	Expansion 70 Defense 10 Scouting 20	672	1344	venus_eagle_knight	venus_acolyte	100	FALSE			
+EipschwitzHead	FALSE	0	1	0	Xiomara	XiomaraAliance	0	Expansion 25 Defense 25 Scouting 25	672	1344	mercury_force_man	venus_acolyte	0	TRUE			
+Unknown	FALSE	0	1	0	Corp	Corporation	0	Expansion 25 Defense 25 Scouting 25	672	1344	mercury_force_man	venus_acolyte	0	TRUE			
+Magnum	FALSE	0	0	100	Xiomara	XiomaraAliance	0	Expansion 25 Defense 25 Scouting 25	672	1344	mercury_force_man	venus_acolyte	0	TRUE			
+#end																	
+																	
+#alliances																	
+Id	AllowStrife	TradeFactionLists															
+Hexarchy	FALSE	AnCom SBN RealWare DaydreamChems PlanetBridge Grasshopper Sunlight FrancheComte ChurchRevelation CoreWard Dilthey															
+Corporation	TRUE	AnCom SBN RealWare DaydreamChems PlanetBridge Grasshopper Sunlight FrancheComte ChurchRevelation CoreWard Dilthey															
+Resistance	FALSE	CResistance															
+TezctlanAliance	FALSE	Tezctlan															
+XiomaraAliance	FALSE	XiomaraMasks															
+Pirates	TRUE	UnchainedBelt															
+SheduThousand	FALSE	SheduThousand															
+#end																	
+																	
+#spaceobjects																	
+Id	Available	SpaceObjectType	ParentId	RootNeighbourIndex													
+mercury	TRUE	Planet		1													
+volcano	TRUE	Satelite	mercury														
+citadel	TRUE	Satelite	mercury														
+venus	TRUE	Planet		2													
+havoc	TRUE	Satelite	venus														
+mechta	TRUE	Satelite	venus														
+earth	TRUE	Planet		3													
+tsiolkovsky	TRUE	Satelite	earth														
+moon	TRUE	Satelite	earth														
+fuller	TRUE	Satelite	moon														
+mars	TRUE	Planet		4													
+phobos	TRUE	Satelite	mars														
+deimos	TRUE	Satelite	mars														
+ceres	TRUE	Planet		5													
+wernher	TRUE	Planet		5													
+vesta	TRUE	Planet		5													
+pallas	TRUE	Planet		5													
+geist	TRUE	Planet		5													
+interamnia	TRUE	Planet		5													
+hekate	FALSE	Planet		5													
+jupiter	FALSE	Planet		6													
+io	FALSE	Satelite	jupiter														
+europa	FALSE	Satelite	jupiter														
+ganymede	FALSE	Satelite	jupiter														
+callisto	FALSE	Satelite	jupiter														
+saturn	FALSE	Planet		7													
+mimas	FALSE	Satelite	saturn														
+enceladus	FALSE	Satelite	saturn														
+tethys	FALSE	Satelite	saturn														
+dione	FALSE	Satelite	saturn														
+rhea	FALSE	Satelite	saturn														
+titan	FALSE	Satelite	saturn														
+iapetus	FALSE	Satelite	saturn														
+uranus	FALSE	Planet		8													
+miranda	FALSE	Satelite	uranus														
+ariel	FALSE	Satelite	uranus														
+umbriel	FALSE	Satelite	uranus														
+titania	FALSE	Satelite	uranus														
+oberon	FALSE	Satelite	uranus														
+neptune	FALSE	Planet		9													
+triton	FALSE	Satelite	neptune														
+pluto	FALSE	Planet		10													
+#end																	
+																	
+#stations																	
+Id	SpaceObjectId	InitialOwnerFactionId	Power	PowerGain	TechLevelGain	UncapturableByDefault	CaptureChance	MissionTemplateId	MissionNameTemplateId	BramfaturaId	InitialPopulation	MaxPopulation					
+FlatObsidian	mercury	CResistance	0	1	1	FALSE	0.2	mercury2	mercurySurfaceLevels	Mercury	8379	44100					
+Rachmaninoff	mercury	CoreWard	0	1	3	TRUE	0.2	orbit1	mercurySurfaceLevels	Mercury	18538	40300					
+Discovery	mercury	AnCom	0	2	3	FALSE	0.2	lab1	mercurySurfaceLevels	Mercury	28985	52700					
+CalorisPlanitia	mercury	RealWare	0	1	1	FALSE	0.2	mercury5	mercurySurfaceLevels	Mercury	7524	41800					
+Goethe	mercury	RealWare	0	1	2	FALSE	0.2	military1	mercurySurfaceLevels	Mercury	17200	43000					
+Boethius	mercury	SBN	0	1	3	FALSE	0.2	mercury4	mercurySurfaceLevels	Mercury	11240	56200					
+Mammoth	mercury	PlanetBridge	0	1	3	FALSE	0.2	mercury1	mercurySurfaceLevels	Mercury	17197	59300					
+Rhino	volcano	RealWare	0	1	2	FALSE	0.2	mercury1	mercurySurfaceLevels	Mercury	29521	55700					
+Kizzuwatna	volcano	AnCom	0	1	3	FALSE	0.2	mercury1	mercurySurfaceLevels	Mercury	17777	61300					
+Lomonosov	volcano	PlanetBridge	0	1	3	FALSE	0.2	moon2	mercurySurfaceLevels	Mercury	10647	50700					
+GammaHydra	citadel	PlanetBridge	0	1	3	FALSE	0.2	lab1	mercurySurfaceLevels	Mercury	11115	58500					
+EnergyOne	citadel	ChurchRevelation	0	1	3	FALSE	0.2	orbit1	mercurySurfaceLevels	Mercury	23638	44600					
+Photosphere	citadel	RealWare	0	1	3	FALSE	0.2	orbit1	mercurySurfaceLevels	Mercury	19364	41200					
+JourneyOfFire	citadel	AnCom	0	2	2	FALSE	0.2	mercury4	mercurySurfaceLevels	Mercury	24596	57200					
+Campbell	citadel	DaydreamChems	0	2	3	FALSE	0.2	orbit1	mercurySurfaceLevels	Mercury	13392	55800					
+IbsaPrison	venus	Tezctlan	0	2	1	FALSE	0.2	prison1	mercurySurfaceLevels	Venus	21087	63900					
+Jinxing	venus	Grasshopper	0	1	3	FALSE	0.2	venus3	mercurySurfaceLevels	Venus	10920	36400					
+HISUnveiled	venus	AnCom	0	4	3	TRUE	0.2	lab1	mercurySurfaceLevels	Venus	13662	41400					
+FrescoPlatforms	venus	Tezctlan	0	1	1	FALSE	0.2	venus3	mercurySurfaceLevels	Venus	32945	59900					
+LouhiCity	venus	CoreWard	0	2	2	FALSE	0.2	venus1	mercurySurfaceLevels	Venus	35145	63900					
+Fortuna	venus	ChurchRevelation	0	2	3	FALSE	0.2	venus2	mercurySurfaceLevels	Venus	14450	57800					
+Oddibjord	venus	Tezctlan	0	1	1	TRUE	0.2	venus1	mercurySurfaceLevels	Venus	14056	50200					
+Clotho	venus	RealWare	0	1	1	FALSE	0.2	venus3	mercurySurfaceLevels	Venus	18942	57400					
+FeatheredTemple	venus	Tezctlan	0	5	5	TRUE	0.2	venus1	mercurySurfaceLevels	Venus	19320	69000					
+SubRosa	mechta	AnCom	0	2	3	FALSE	0.2	orbit1	mercurySurfaceLevels	Venus	16140	53800					
+February	mechta	FrancheComte	0	1	2	TRUE	0.2	prison1	mercurySurfaceLevels	Venus	40474	68600					
+Kyoko	mechta	DaydreamChems	0	1	2	FALSE	0.2	orbit1	mercurySurfaceLevels	Venus	28704	55200					
+MechtaShooting	mechta	Sunlight	0	2	2	FALSE	0.2	lab1	mercurySurfaceLevels	Venus	15179	35300					
+Kitchen	mechta	AnCom	0	1	3	FALSE	0.2	orbit1	mercurySurfaceLevels	Venus	23016	54800					
+EStation	mechta	Grasshopper	0	1	1	FALSE	0.2	orbit1	mercurySurfaceLevels	Venus	12927	41700					
+Purgatory	mechta	SBN	0	1	3	FALSE	0.2	moon2	mercurySurfaceLevels	Venus	9265	54500					
+Edge	havoc	FrancheComte	0	2	3	FALSE	0.2	mars1	mercurySurfaceLevels	Venus	7575	50500					
+Blade	havoc	Sunlight	0	1	2	FALSE	0.2	mars1	mercurySurfaceLevels	Venus	16564	40400					
+SampoQuern	havoc	SBN	0	2	2	FALSE	0.2	venus3	mercurySurfaceLevels	Venus	21240	35400					
+VenusTwo	havoc	AnCom	0	1	1	FALSE	0.2	moon1	mercurySurfaceLevels	Venus	13272	63200					
+PromisedLand	havoc	Grasshopper	0	1	1	FALSE	0.2	venus3	mercurySurfaceLevels	Venus	10098	37400					
+HeritageStation	earth	SBN	0	1	2	TRUE	0.2	orbit1	mercurySurfaceLevels	Earth	24794	53900					
+ArcadisTerminal	earth	PlanetBridge	0	1	3	TRUE	0.2	orbit1	mercurySurfaceLevels	Earth	31460	57200					
+PineGapTraining	earth	ChurchRevelation	0	1	3	TRUE	0.2	military1	mercurySurfaceLevels	Earth	16380	36400					
+Skylab	earth	RealWare	0	1	3	TRUE	0.2	orbit1	mercurySurfaceLevels	Earth	14300	55000					
+ISSStation	earth	SBN	0	2	2	TRUE	0.2	orbit1	mercurySurfaceLevels	Earth	18672	38900					
+Akatsuki	earth	DaydreamChems	0	2	3	TRUE	0.2	orbit1	mercurySurfaceLevels	Earth	11910	39700					
+Paragon	earth	Grasshopper	0	2	3	TRUE	0.2	orbit1	mercurySurfaceLevels	Earth	19504	42400					
+Phenomenon	earth	AnCom	0	2	2	TRUE	0.2	orbit1	mercurySurfaceLevels	Earth	20678	42200					
+SterlingsFarm	fuller	ChurchRevelation	0	1	1	FALSE	0.2	orbit1	mercurySurfaceLevels	Moon	6300	35000					
+HartsWarehouse	fuller	CoreWard	0	1	1	FALSE	0.2	orbit1	mercurySurfaceLevels	Moon	14760	36900					
+FullersCore	fuller	FrancheComte	0	2	3	FALSE	0.2	orbit1	mercurySurfaceLevels	Moon	16260	54200					
+PlatosAcademy	fuller	AnCom	0	1	2	FALSE	0.2	orbit1	mercurySurfaceLevels	Moon	24144	50300					
+AvicennasClinic	fuller	DaydreamChems	0	1	2	TRUE	0.2	orbit1	mercurySurfaceLevels	Moon	9280	58000					
+VanDeGraaff	tsiolkovsky	SBN	0	1	2	FALSE	0.3	orbit1	mercurySurfaceLevels	Earth	11252	38800					
+ChickMoo	tsiolkovsky	RealWare	0	1	3	FALSE	0.4	orbit1	mercurySurfaceLevels	Earth	9816	40900					
+LandscronaCenter	tsiolkovsky	Sunlight	0	2	1	FALSE	0.5	orbit1	mercurySurfaceLevels	Earth	12480	52000					
+CenterDefense	tsiolkovsky	DaydreamChems	0	1	3	FALSE	0.6	orbit1	mercurySurfaceLevels	Earth	17808	37100					
+ZeroGravity	tsiolkovsky	SBN	0	1	3	FALSE	0.7	orbit1	mercurySurfaceLevels	Earth	19769	37300					
+MTZ	moon	Sunlight	0	2	2	FALSE	0.2	lab1	mercurySurfaceLevels	Moon	30660	73000					
+QiHelium	moon	FrancheComte	0	1	3	FALSE	0.2	orbit3	mercurySurfaceLevels	Moon	21471	42100					
+AnCapDogma	moon	Grasshopper	0	1	1	FALSE	0.2	orbit1	mercurySurfaceLevels	Moon	18011	58100					
+MoonTradeCenter	moon	SBN	0	1	3	FALSE	0.2	moon2	mercurySurfaceLevels	Moon	26256	54700					
+Candle	moon	RealWare	0	2	3	TRUE	0.2	military1	mercurySurfaceLevels	Moon	17197	59300					
+AllianceArcology	moon	ChurchRevelation	0	2	2	FALSE	0.2	moon2	mercurySurfaceLevels	Moon	11020	58000					
+Tycho	moon	PlanetBridge	0	2	1	FALSE	0.2	moon1	mercurySurfaceLevels	Moon	20736	57600					
+ShuCenter	mars	SBN	0	1	2	FALSE	0.2	lab1	mercurySurfaceLevels	Mars	34980	58300					
+RedTiangong	mars	CoreWard	0	2	2	FALSE	0.2	mars5	mercurySurfaceLevels	Mars	14328	39800					
+RebusSkyCity	mars	AnCom	0	2	3	FALSE	0.2	mars3	mercurySurfaceLevels	Mars	38760	64600					
+HISAres	mars	RealWare	0	2	2	TRUE	0.2	orbit1	mercurySurfaceLevels	Mars	22440	44000					
+Argyre	mars	DaydreamChems	0	2	2	FALSE	0.2	mars4	mercurySurfaceLevels	Mars	17433	44700					
+SinkholeOasis	mars	FrancheComte	0	2	3	TRUE	0.2	mars1	mercurySurfaceLevels	Mars	15392	41600					
+Gloria	mars	Sunlight	0	1	2	FALSE	0.2	mars1	mercurySurfaceLevels	Mars	27097	55300					
+IntercityTradeCenter	mars	SBN	0	2	2	FALSE	0.2	mars3	mercurySurfaceLevels	Mars	22192	58400					
+Charon	phobos	PlanetBridge	0	1	1	FALSE	0.2	moon1	mercurySurfaceLevels	Mars	29100	58200					
+Canaan	phobos	CoreWard	0	1	1	FALSE	0.2	moon1	mercurySurfaceLevels	Mars	25429	43100					
+Hypnos	phobos	Sunlight	0	1	2	FALSE	0.2	moon3	mercurySurfaceLevels	Mars	23328	72900					
+Orphan	phobos	CResistance	0	1	3	FALSE	0.2	moon4	mercurySurfaceLevels	Mars	11178	41400					
+RogueCity	phobos	CResistance	0	4	2	TRUE	0.2	moon3	mercurySurfaceLevels	Mars	13300	66500					
+SwiftAndVoltaire	deimos	ChurchRevelation	0	2	2	FALSE	0.2	moon2	mercurySurfaceLevels	Mars	29645	53900					
+AresPost	deimos	RealWare	0	1	1	FALSE	0.2	moon4	mercurySurfaceLevels	Mars	6912	38400					
+Warden	deimos	CResistance	0	1	3	FALSE	0.2	moon1	mercurySurfaceLevels	Mars	15550	62200					
+DarkFlora	deimos	Sunlight	0	2	3	TRUE	0.2	military1	mercurySurfaceLevels	Mars	27000	60000					
+Sundog	deimos	CResistance	0	1	1	FALSE	0.2	moon4	mercurySurfaceLevels	Mars	14619	44300					
+Epitome	ceres	Dilthey	0	2	2	FALSE	0.2	cerera1	mercurySurfaceLevels	Cattaram	24124	65200					
+Angel	ceres	Grasshopper	0	2	1	TRUE	0.2	cerera2	mercurySurfaceLevels	Cattaram	11220	37400					
+Eos	ceres	CoreWard	0	2	1	FALSE	0.2	cerera1	mercurySurfaceLevels	Cattaram	15906	72300					
+Lumina	ceres	Grasshopper	0	1	1	FALSE	0.2	cerera2	mercurySurfaceLevels	Cattaram	19656	35100					
+Oracle	ceres	RealWare	0	1	1	FALSE	0.2	cerera1	mercurySurfaceLevels	Cattaram	26312	57200					
+Flinthold	ceres	ChurchRevelation	0	1	1	FALSE	0.2	cerera2	mercurySurfaceLevels	Cattaram	18870	37000					
+Nox	ceres	SBN	0	1	2	FALSE	0.2	moon4	mercurySurfaceLevels	Cattaram	22048	41600					
+BlueMoon	ceres	UnchainedBelt	0	1	1	FALSE	0.2	moon4	mercurySurfaceLevels	Cattaram	29121	57100					
+Pedigree	ceres	Dilthey	0	1	1	FALSE	0.2	moon4	mercurySurfaceLevels	Cattaram	30299	73900					
+Frostreach	wernher	SBN	0	2	2	FALSE	0.2	moon4	mercurySurfaceLevels	Cattaram	23055	43500					
+Jaffa	wernher	Grasshopper	0	1	1	FALSE	0.2	moon4	mercurySurfaceLevels	Cattaram	20026	52700					
+Cryptoria	wernher	PlanetBridge	0	1	2	FALSE	0.2	moon4	mercurySurfaceLevels	Cattaram	17616	36700					
+Carmel	vesta	CoreWard	0	1	1	FALSE	0.2	moon4	mercurySurfaceLevels	Ron	18814	40900					
+Lavinium	vesta	CoreWard	0	1	1	FALSE	0.2	moon4	mercurySurfaceLevels	Ron	17602	67700					
+AriciaTholus	vesta	Dilthey	0	1	2	FALSE	0.2	moon4	mercurySurfaceLevels	Ron	14355	43500					
+HISWoodpecker	vesta	CoreWard	0	2	2	FALSE	0.2	moon4	mercurySurfaceLevels	Ron	19504	36800					
+Bethlehem	pallas	UnchainedBelt	0	1	1	FALSE	0.2	moon4	mercurySurfaceLevels	Ron	9972	55400					
+TSWatcher	pallas	UnchainedBelt	0	2	2	FALSE	0.2	moon4	mercurySurfaceLevels	Ron	12672	39600					
+HumankindsHope	pallas	AnCom	0	2	2	FALSE	0.2	moon4	mercurySurfaceLevels	Ron	15531	50100					
+Origin	pallas	CoreWard	0	1	1	FALSE	0.2	moon4	mercurySurfaceLevels	Ron	14665	41900					
+Vasa	geist	Dilthey	0	2	3	TRUE	0.2	moon4	mercurySurfaceLevels	Scrivnus	37408	66800					
+Malmo	geist	Dilthey	0	1	2	FALSE	0.2	moon4	mercurySurfaceLevels	Scrivnus	20064	62700					
+Schwerin	geist	UnchainedBelt	0	1	1	FALSE	0.2	moon4	mercurySurfaceLevels	Scrivnus	14703	50700					
+Hargeysa	interamnia	UnchainedBelt	0	2	3	TRUE	0.2	moon4	mercurySurfaceLevels	Scrivnus	41325	72500					
+Jamame	interamnia	CResistance	0	1	1	FALSE	0.2	moon4	mercurySurfaceLevels	Scrivnus	25830	57400					
+RedThrone	hekate	CResistance	0	2	3	TRUE	0.2	moon4	mercurySurfaceLevels	Earth	43542	73800					
+#end																	
+																	
+#procmissions																	
+ProcMissionType	WeightsByStrategy	ReverseMissionType	PowerCost	MinObjectivesCount	MaxObjectivesCount	CapturesStationOnWin	LosesStationOnLose	StationPopulationDebuffRange	StationPowerDebuff	PowerBuff	PowerDebuff	StationTechLevelDebuff	TechLevelBuff	TechLevelDebuff	NewsTypeStart	NewsTypeEndGood	NewsTypeEndFail
+RaiderCapture	Expansion 100	Defense	150	0	0	TRUE	FALSE	200 500	0	200	0	0	0	0	ConquestStart	ConquestEndGood	ConquestEndFail
+Elimination	Expansion 35 Scouting 65	Escort	150	1	1	FALSE	FALSE	100 250	100	200	200	0	0	0	EliminationStart	EliminationEndGood	EliminationEndFail
+Sabotage	Scouting 65 Expansion 35	Control	150	1	3	FALSE	FALSE	100 250	200	400	400	50	0	0	SabotageStart	SabotageEndGood	SabotageEndFail
+Espionage	Scouting 65 Defense 35	Infiltration	150	1	1	FALSE	FALSE	100 250	0	200	200	100	20	10	EspionageStart	EspionageEndGood	EspionageEndFail
+Ritual	Expansion 65 Scouting 35	Counterattack	150	0	0	FALSE	FALSE	200 500	100	200	200	0	20	0	RitualStart	RitualEndGood	RitualEndFail
+Robbery	Expansion 33 Scouting 33 Defense 33	Security	150	2	6	FALSE	FALSE	100 250	200	400	400	0	0	0	RobberyStart	RobberyEndGood	RobberyEndFail
+Defense		RaiderCapture	0	0	0	FALSE	TRUE	0 100	0	200	0	0	5	0	DefenseStart	DefenseEndGood	DefenseEndFail
+Infiltration		Espionage	0	2	4	FALSE	FALSE	0 50	0	200	0	0	0	0	InfiltrationStart	InfiltrationEndGood	InfiltrationEndFail
+Control		Sabotage	0	2	3	FALSE	FALSE	0 50	0	400	0	0	0	0	ControlStart	ControlEndGood	ControlEndFail
+Escort		Elimination	0	0	0	FALSE	FALSE	0 50	0	200	0	0	0	0	EscortStart	EscortEndGood	EscortEndFail
+Counterattack		Ritual	0	0	0	FALSE	FALSE	0 100	0	200	0	0	0	10	CounterattackStart	CounterattackEndGood	CounterattackEndFail
+Security		Robbery	0	0	0	FALSE	FALSE	0 50	0	400	0	0	0	0	SecurityStart	SecurityEndGood	SecurityEndFail
+#end																	
+																	
+#procmissiontemplates																	
+Id	StartFromSpaceship	GridWidth	GridHeight	PresetFolders	ItemTablesIds	GlobalLight	GlobalLightIntensity	SurfaceTilsets	SurfaceTilsetsAlt	CornerWallTilesets	CornerWallTilesetsAlt	FillType	FillTypeAlt				
+venus1	TRUE	100	65	JunglePlatform MercuryStation	venusDrop1	#a5bd7d	0.7	venus_jungle_surface venus_jungle_surface venus_jungle_surface venus_jungle_surface venus_jungle_surface gray_metal_deep_draft	mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal	venus_jungle_cornerwall venus_jungle_cornerwall venus_jungle_cornerwall venus_jungle_cornerwall venus_jungle_cornerwall venera_surface_cave_cornerwall_normal	gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal venera_surface_cave_cornerwall_normal	FillBordersSolid	FillBordersSolid				
+venus2	TRUE	100	65	JunglePlatform VenusLab	labDrop1	#a5bd7d	0.7	venus_jungle_surface venus_jungle_surface venus_jungle_surface venus_jungle_surface venus_jungle_surface gray_metal_deep_draft	lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal	venus_jungle_cornerwall venus_jungle_cornerwall venus_jungle_cornerwall venus_jungle_cornerwall venus_jungle_cornerwall venera_surface_cave_cornerwall_normal	moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal venera_surface_cave_cornerwall_normal	FillBordersSolid	FillBordersSolid				
+venus3	TRUE	100	65	JunglePlatform VenusLab	industry1	#a5bd7d	0.7	venus_jungle_surface venus_jungle_surface venus_jungle_surface venus_jungle_surface venus_jungle_surface gray_metal_deep_draft	lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal	venus_jungle_cornerwall venus_jungle_cornerwall venus_jungle_cornerwall venus_jungle_cornerwall venus_jungle_cornerwall venera_surface_cave_cornerwall_normal	moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal venera_surface_cave_cornerwall_normal	FillBordersSolid	FillBordersSolid				
+venus4	TRUE	100	65	JunglePlatform VenusLab	office	#a5bd7d	0.7	venus_jungle_surface venus_jungle_surface venus_jungle_surface venus_jungle_surface venus_jungle_surface gray_metal_deep_draft	lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal	venus_jungle_cornerwall venus_jungle_cornerwall venus_jungle_cornerwall venus_jungle_cornerwall venus_jungle_cornerwall venera_surface_cave_cornerwall_normal	moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal venera_surface_cave_cornerwall_normal	FillBordersSolid	FillBordersSolid				
+venus5	TRUE	100	65	JunglePlatform VenusLab	mining	#a5bd7d	0.7	venus_jungle_surface venus_jungle_surface venus_jungle_surface venus_jungle_surface venus_jungle_surface gray_metal_deep_draft	lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal	venus_jungle_cornerwall venus_jungle_cornerwall venus_jungle_cornerwall venus_jungle_cornerwall venus_jungle_cornerwall venera_surface_cave_cornerwall_normal	moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal venera_surface_cave_cornerwall_normal	FillBordersSolid	FillBordersSolid				
+mercury1	TRUE	100	65	MercurySurface MercuryStation	mercuryDrop1	#bd9c7f	0.7	venera_surface_floor_normal venera_surface_floor_normal venera_surface_floor_normal venera_surface_floor_normal venera_surface_floor_normal gray_metal_deep_draft	mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal	venera_surface_cave_cornerwall_normal venera_surface_cave_cornerwall_normal venera_surface_cave_cornerwall_normal venera_surface_cave_cornerwall_normal venera_surface_cave_cornerwall_normal venera_surface_cave_cornerwall_normal	gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal venera_surface_cave_cornerwall_normal	FillBordersSolid	FillBordersSolid				
+mercury2	TRUE	100	65	MercurySurface VenusLab	labDrop1	#bd9c7f	0.7	venera_surface_floor_normal venera_surface_floor_normal venera_surface_floor_normal venera_surface_floor_normal venera_surface_floor_normal gray_metal_deep_draft	lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal	venera_surface_cave_cornerwall_normal venera_surface_cave_cornerwall_normal venera_surface_cave_cornerwall_normal venera_surface_cave_cornerwall_normal venera_surface_cave_cornerwall_normal venera_surface_cave_cornerwall_normal	moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal venera_surface_cave_cornerwall_normal	FillBordersSolid	FillBordersSolid				
+mercury3	TRUE	100	65	MercurySurface VenusLab	industry1	#bd9c7f	0.7	venera_surface_floor_normal venera_surface_floor_normal venera_surface_floor_normal venera_surface_floor_normal venera_surface_floor_normal gray_metal_deep_draft	lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal	venera_surface_cave_cornerwall_normal venera_surface_cave_cornerwall_normal venera_surface_cave_cornerwall_normal venera_surface_cave_cornerwall_normal venera_surface_cave_cornerwall_normal venera_surface_cave_cornerwall_normal	moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal venera_surface_cave_cornerwall_normal	FillBordersSolid	FillBordersSolid				
+mercury4	TRUE	100	65	MercurySurface VenusLab	office	#bd9c7f	0.7	venera_surface_floor_normal venera_surface_floor_normal venera_surface_floor_normal venera_surface_floor_normal venera_surface_floor_normal gray_metal_deep_draft	lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal	venera_surface_cave_cornerwall_normal venera_surface_cave_cornerwall_normal venera_surface_cave_cornerwall_normal venera_surface_cave_cornerwall_normal venera_surface_cave_cornerwall_normal venera_surface_cave_cornerwall_normal	moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal venera_surface_cave_cornerwall_normal	FillBordersSolid	FillBordersSolid				
+mercury5	TRUE	100	65	MercurySurface VenusLab	mining	#bd9c7f	0.7	venera_surface_floor_normal venera_surface_floor_normal venera_surface_floor_normal venera_surface_floor_normal venera_surface_floor_normal gray_metal_deep_draft	lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal	venera_surface_cave_cornerwall_normal venera_surface_cave_cornerwall_normal venera_surface_cave_cornerwall_normal venera_surface_cave_cornerwall_normal venera_surface_cave_cornerwall_normal venera_surface_cave_cornerwall_normal	moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal venera_surface_cave_cornerwall_normal	FillBordersSolid	FillBordersSolid				
+orbit1	TRUE	100	65	VenOrbit	test1	#8ba7bd	0.7	gray_metal_floor_normal gray_metal_floor_normal gray_metal_floor_normal gray_metal_floor_normal gray_metal_floor_normal gray_metal_deep_draft	gray_metal_floor_normal gray_metal_floor_normal gray_metal_floor_normal gray_metal_floor_normal gray_metal_floor_normal gray_metal_deep_draft	gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal moon_rock_cornerwall_normal	gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal moon_rock_cornerwall_normal	FillBordersSpace	FillBordersSolid				
+orbit2	TRUE	100	65	MercuryStation	office	#bdb67d	0.7	mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal gray_metal_deep_draft	mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal gray_metal_deep_draft	gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal moon_rock_cornerwall_normal	gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal moon_rock_cornerwall_normal	FillBordersAsteroid	FillBordersSolid				
+orbit3	TRUE	100	65	VenOrbit	industry1	#bdb67d	0.7	mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal gray_metal_deep_draft	mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal gray_metal_deep_draft	gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal moon_rock_cornerwall_normal	gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal moon_rock_cornerwall_normal	FillBordersAsteroid	FillBordersSolid				
+prison1	TRUE	100	65	Prison	prison	#bd9f5d	0.7	mech_metal_floor_normal mech_metal_floor_normal mech_metal_floor_normal mech_metal_floor_normal mech_metal_floor_normal gray_metal_deep_draft	mech_metal_floor_normal mech_metal_floor_normal mech_metal_floor_normal mech_metal_floor_normal mech_metal_floor_normal gray_metal_deep_draft	gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal moon_rock_cornerwall_normal	gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal moon_rock_cornerwall_normal	FillBordersSpace	FillBordersSolid				
+military1	TRUE	100	65	Prison	military1	#bd9f5d	0.7	mech_metal_floor_normal mech_metal_floor_normal mech_metal_floor_normal mech_metal_floor_normal mech_metal_floor_normal gray_metal_deep_draft	mech_metal_floor_normal mech_metal_floor_normal mech_metal_floor_normal mech_metal_floor_normal mech_metal_floor_normal gray_metal_deep_draft	gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal moon_rock_cornerwall_normal	gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal moon_rock_cornerwall_normal	FillBordersSpace	FillBordersSolid				
+lab1	TRUE	100	65	VenusLab	labDrop1	#5dbdb1	0.7	lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal gray_metal_deep_draft	lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal gray_metal_deep_draft	moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_rock_cornerwall_normal	moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal venera_surface_cave_cornerwall_normal	FillBordersSpace	FillBordersSolid				
+station1	TRUE	100	65	MercuryStation	office	#bdb67d	0.7	mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal gray_metal_deep_draft	mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal gray_metal_deep_draft	gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal moon_rock_cornerwall_normal	gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal moon_rock_cornerwall_normal	FillBordersAsteroid	FillBordersSolid				
+station2	TRUE	100	65	MercuryStation	industry1	#bdb67d	0.7	mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal gray_metal_deep_draft	mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal gray_metal_deep_draft	gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal moon_rock_cornerwall_normal	gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal moon_rock_cornerwall_normal	FillBordersAsteroid	FillBordersSolid				
+mars1	TRUE	100	65	MarsSurface MercuryStation	test1	#e6c8c8	0.7	mars_floor_normal mars_floor_normal mars_floor_normal mars_floor_normal mars_floor_normal gray_metal_deep_draft	mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal	mars_cornerwall_normal mars_cornerwall_normal mars_cornerwall_normal mars_cornerwall_normal mars_cornerwall_normal mars_cornerwall_normal	gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal moon_rock_cornerwall_normal	FillBordersSolid	FillBordersSolid				
+mars2	TRUE	100	65	MarsSurface VenusLab	labDrop1	#e6c8c8	0.7	mars_floor_normal mars_floor_normal mars_floor_normal mars_floor_normal mars_floor_normal gray_metal_deep_draft	lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal	mars_cornerwall_normal mars_cornerwall_normal mars_cornerwall_normal mars_cornerwall_normal mars_cornerwall_normal mars_cornerwall_normal	moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal venera_surface_cave_cornerwall_normal	FillBordersSolid	FillBordersSolid				
+mars3	TRUE	100	65	MarsSurface VenusLab	office	#e6c8c8	0.7	mars_floor_normal mars_floor_normal mars_floor_normal mars_floor_normal mars_floor_normal gray_metal_deep_draft	lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal	mars_cornerwall_normal mars_cornerwall_normal mars_cornerwall_normal mars_cornerwall_normal mars_cornerwall_normal mars_cornerwall_normal	moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal venera_surface_cave_cornerwall_normal	FillBordersSolid	FillBordersSolid				
+mars4	TRUE	100	65	MarsSurface MercuryStation	mining	#e6c8c8	0.7	mars_floor_normal mars_floor_normal mars_floor_normal mars_floor_normal mars_floor_normal gray_metal_deep_draft	mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal	mars_cornerwall_normal mars_cornerwall_normal mars_cornerwall_normal mars_cornerwall_normal mars_cornerwall_normal mars_cornerwall_normal	moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal venera_surface_cave_cornerwall_normal	FillBordersSolid	FillBordersSolid				
+mars5	TRUE	100	65	MarsSurface MercuryStation	industry1	#e6c8c8	0.7	mars_floor_normal mars_floor_normal mars_floor_normal mars_floor_normal mars_floor_normal gray_metal_deep_draft	mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal	mars_cornerwall_normal mars_cornerwall_normal mars_cornerwall_normal mars_cornerwall_normal mars_cornerwall_normal mars_cornerwall_normal	moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal venera_surface_cave_cornerwall_normal	FillBordersSolid	FillBordersSolid				
+moon1	TRUE	100	65	MoonSurface MercuryStation	test1	#8ba7bd	0.7	moon_surface_normal moon_surface_normal moon_surface_normal moon_surface_normal moon_surface_normal gray_metal_deep_draft	mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal	moon_rock_cornerwall_normal moon_rock_cornerwall_normal moon_rock_cornerwall_normal moon_rock_cornerwall_normal moon_rock_cornerwall_normal moon_rock_cornerwall_normal	gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal moon_rock_cornerwall_normal	FillBordersSolid	FillBordersSolid				
+moon2	TRUE	100	65	MoonSurface VenusLab	labDrop1	#8ba7bd	0.7	moon_surface_normal moon_surface_normal moon_surface_normal moon_surface_normal moon_surface_normal gray_metal_deep_draft	lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal	moon_rock_cornerwall_normal moon_rock_cornerwall_normal moon_rock_cornerwall_normal moon_rock_cornerwall_normal moon_rock_cornerwall_normal moon_rock_cornerwall_normal	moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal venera_surface_cave_cornerwall_normal	FillBordersSolid	FillBordersSolid				
+moon3	TRUE	100	65	MoonSurface MercuryStation	office	#8ba7bd	0.7	moon_surface_normal moon_surface_normal moon_surface_normal moon_surface_normal moon_surface_normal gray_metal_deep_draft	mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal	moon_rock_cornerwall_normal moon_rock_cornerwall_normal moon_rock_cornerwall_normal moon_rock_cornerwall_normal moon_rock_cornerwall_normal moon_rock_cornerwall_normal	gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal moon_rock_cornerwall_normal	FillBordersSolid	FillBordersSolid				
+moon4	TRUE	100	65	MoonSurface MercuryStation	construction	#8ba7bd	0.7	moon_surface_normal moon_surface_normal moon_surface_normal moon_surface_normal moon_surface_normal gray_metal_deep_draft	mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal mercury_metal_floor_normal	moon_rock_cornerwall_normal moon_rock_cornerwall_normal moon_rock_cornerwall_normal moon_rock_cornerwall_normal moon_rock_cornerwall_normal moon_rock_cornerwall_normal	gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal gray_metal_cornerwall_normal moon_rock_cornerwall_normal	FillBordersSolid	FillBordersSolid				
+cerera1	TRUE	100	65	CereraSurface CereraStation	test1	#8ba7bd	0.7	cerera_nature_floor cerera_nature_floor cerera_nature_floor cerera_nature_floor cerera_nature_floor gray_metal_deep_draft	cerera_concrete_normal_floor cerera_concrete_normal_floor cerera_concrete_normal_floor cerera_concrete_normal_floor cerera_concrete_normal_floor cerera_concrete_normal_floor	cerera_nature_cornerwall cerera_nature_cornerwall cerera_nature_cornerwall cerera_nature_cornerwall cerera_nature_cornerwall cerera_nature_cornerwall	cerera_metal_cornerwall cerera_metal_cornerwall cerera_metal_cornerwall cerera_metal_cornerwall cerera_metal_cornerwall cerera_metal_cornerwall	FillBordersSolid	FillBordersSolid				
+cerera2	TRUE	100	65	CereraSurface VenusLab	labDrop1	#8ba7bd	0.7	cerera_nature_floor cerera_nature_floor cerera_nature_floor cerera_nature_floor cerera_nature_floor gray_metal_deep_draft	lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal lab_floor_normal	cerera_nature_cornerwall cerera_nature_cornerwall cerera_nature_cornerwall cerera_nature_cornerwall cerera_nature_cornerwall cerera_nature_cornerwall	moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal moon_metal_cornerwall_normal venera_surface_cave_cornerwall_normal	FillBordersSolid	FillBordersSolid				
+#end																	
+																	
+#storymissions																	
+Id	StationId	BeneficiaryFactionId	VictimFactionId	PrizeItems	WinCondition	WinConditionParameters	UseFactionDropLists	ItemsPointsByStages	MonsterPointsByStages	ItemsRequirement							
+Tutorial	Orphan	Magnum	CResistance		KillAllPercent	1	FALSE										
+SecondTutorial	RogueCity	Magnum	CResistance	quest_AncomData pistol_basic_ammo medpack rags rags small_backpack frag_grenade frag_grenade armor_shards armor_shards weapon_shards weapon_shards	KillObstacle	serverStation 1	FALSE	stage1 300 stage2 300 stage3 300	stage1 300 stage2 300 stage3 300								
+SinkholePeaceVisit	SinkholeOasis	XiomaraMasks	RealWare		Custom		TRUE	stage1 300	stage1 300								
+UseYourHead	FlatObsidian	Magnum	CResistance	phase_bomb	Custom		TRUE	stage1 500 stage2 500 stage3 600 stage4 600	stage1 400 stage2 400 stage3 400 stage4 500								
+RuinsOfAncientBramfaturas	SinkholeOasis	XiomaraMasks	RealWare	tezctlan_spear	ItemInInventoryById	tezctlan_spear 1	TRUE	stage1 200 stage2 800 stage3 1000 stage4 0	stage1 400 stage2 400 stage3 600 stage4 0	phase_bomb							
+CommunityAndAnarchy	Oddibjord	AnCom	Unknown		ItemInInventoryById	quest_goldenSkull 1	FALSE	stage1 800 stage2 800 stage3 800 stage4 1000 stage5 1000	stage1 600 stage2 800 stage3 800 stage4 400 stage5 1200								
+UnitedForever	HISUnveiled	CResistance		doom_helmet	KillAllPercent	0.25	TRUE	stage1 100	stage1 100								
+HumansAreSuchEasyPrey	Candle	Tezctlan		doom_helmet	KillAllPercent	0.25	TRUE	stage1 100	stage1 100								
+LesserEvil	Oddibjord	XiomaraMasks		doom_helmet	KillAllPercent	0.25	TRUE	stage1 100	stage1 100								
+Manifesto	HeritageStation	CResistance	SBN	civres_marksman heavy_basic_ammo servo_backpack civres_armor civres_helmet weapon_repair_kit automap thermal_grenade tool_container engineering_parts_container welding_machine_device	Custom	1	FALSE	stage1 300 stage2 300 stage3 300	stage1 300 stage2 400 stage3 500								
+PoisonTrial	FeatheredTemple	Magnum	Tezctlan	skull_blood_revival	Custom	1	TRUE	stage1 100	stage1 100								
+CovertOps	HumankindsHope	RealWare	AnCom	doom_helmet realwear_helmet big_backpack military_kit military_kit military_kit medium_basic_ammo medium_basic_ammo	Custom	1	TRUE	stage1 500 stage2 500 stage3 600 stage4 600	stage1 400 stage2 400 stage3 400 stage4 500	quest_emiBurner							
+GhoulShip	HISWoodpecker	UnchainedBelt	CoreWard	pirates_assault_1 bandit_vest_armored heavy_basic_ammo heavy_basic_ammo alcogol_container alcogol_container	Custom	1	TRUE	stage1 500 stage2 500 stage3 600 stage4 600 stage5 600	stage1 400 stage2 400 stage3 400 stage4 500 stage5 600								
+Raid	Schwerin	SBN	Dilthey	svn_heavy_armor sbn_shotgun energy_turret battery_charge battery_charge	Custom	1	TRUE	stage1 100	stage1 100								
+TestingGround	LouhiCity	AnCom		doom_helmet	KillAllPercent	0.25	TRUE	stage1 100	stage1 100								
+#end																	
+																	
+#tilesettransformation																	
+Id	Health	Armor	TilesetToMutateName														
+gray_metal_cornerwall_normal	100	10	gray_metal_cornerwall_destroyed														
+gray_metal_cornerwall_destroyed	50	10	gray_metal_floor_destroyed														
+gray_metal_floor_normal	100	10	gray_metal_floor_damaged														
+gray_metal_floor_damaged	50	10	gray_metal_floor_destroyed														
+gray_metal_wall_normal	100	10	gray_metal_wall_damaged														
+gray_metal_wall_damaged	50	10	gray_metal_wall_destroyed														
+gray_metal_wall_destroyed	50	10	gray_metal_floor_destroyed														
+gray_metal_elevator_floor_normal	100	10	gray_metal_elevator_floor_damaged														
+moon_metal_cornerwall_normal	100	10	moon_metal_cornerwall_destroyed														
+moon_metal_cornerwall_destroyed	50	10	moon_metal_floor_destroyed														
+moon_metal_floor_normal	100	10	moon_metal_floor_damaged														
+moon_metal_floor_damaged	50	10	moon_metal_floor_destroyed														
+moon_metal_wall_normal	100	10	moon_metal_wall_damaged														
+moon_metal_wall_damaged	50	10	moon_metal_wall_destroyed														
+moon_metal_wall_destroyed	50	10	moon_metal_floor_destroyed														
+moon_rock_cornerwall_normal	300	10	moon_surface_normal														
+moon_rock_wall_normal	300	10	moon_surface_normal														
+green_metal_wall_normal	100	10	gray_metal_floor_destroyed														
+orange_metal_wall_normal	100	10	gray_metal_floor_destroyed														
+conveyer_metal_floor_normal	100	10	gray_metal_floor_destroyed														
+mech_metal_floor_normal	100	10	mech_metal_floor_damaged														
+mech_metal_floor_damaged	50	10	gray_metal_floor_destroyed														
+mech_metal_wall_normal	100	10	mech_metal_wall_damaged														
+mech_metal_wall_damaged	50	10	gray_metal_floor_destroyed														
+mercury_metal_floor_normal	100	10	mercury_metal_floor_damaged														
+mercury_metal_floor_damaged	50	10	gray_metal_floor_destroyed														
+shipmagnum_cornerwall_normal	100	10	shipmagnum_cornerwall_destroyed														
+shipmagnum_cornerwall_destroyed	50	10	magnum_floor_destroyed														
+magnum_floor_normal	100	10	magnum_floor_damaged														
+magnum_floor_damaged	50	10	magnum_floor_destroyed														
+magnum_wall_normal	100	10	magnum_wall_damaged														
+magnum_wall_damaged	50	10	magnum_wall_destroyed														
+magnum_wall_destroyed	50	10	magnum_floor_destroyed														
+lab_floor_normal	100	10	lab_floor_damaged														
+lab_floor_damaged	50	10	lab_floor_totaldestroyed														
+lab_floor_destroyed	50	10	lab_floor_totaldestroyed														
+venus_jungle_cornerwall	300	10	venus_jungle_surface														
+venera_surface_cave_cornerwall_normal	300	10	venera_surface_floor_destroyed														
+mars_temple_cornerwall	300	10	mars_floor_damaged														
+mars_cornerwall_normal	300	10	mars_floor_damaged														
+mars_facewall_normal	300	10	mars_floor_damaged														
+mars_floor_normal	100	10	mars_floor_damaged														
+mars_temple_floor_normal	100	10	mars_floor_damaged														
+venera_surface_floor_normal	100	10	venera_surface_floor_destroyed														
+temple_normal_floor	100	10	temple_floor_destroyed														
+temple_cornerwall	300	200	temple_floor_destroyed														
+temple_facewall_normal	300	200	temple_floor_destroyed														
+cerera_metal_cornerwall	150	15	cerera_concrete_destroyed_floor														
+cerera_metal_facewall	150	15	cerera_concrete_destroyed_floor														
+cerera_concrete_normal_floor	100	10	cerera_concrete_damaged_floor														
+cerera_concrete_damaged_floor	50	10	cerera_concrete_destroyed_floor														
+#end																	
+																	
+#missionobjectives																	
+	BeneficiaryFactionType	VictimFactionType	ValidProcMissionTypes	MonsterVariants	ItemVariants	ObstacleVariants											
+	Corp	Corp	RaiderCapture Elimination Sabotage Espionage	quest_man_manager quest_man_professor	quest_fresco_data quest_device	spaceScaner cargoBlock											
+	Corp	CivilRes	RaiderCapture Elimination Sabotage Espionage	quest_cresist_elite_man	quest_fresco_data	cargoBlock											
+	Corp	Pirates	RaiderCapture Elimination Sabotage Espionage	quest_cresist_elite_man	quest_fresco_data	cargoBlock											
+	Corp	Tezctlan	RaiderCapture Elimination Sabotage Espionage	quest_venus_demon_warrior	quest_igvalit	relicvarium											
+	Corp	Xiomara	RaiderCapture Elimination Sabotage Espionage	quest_venus_demon_warrior	quest_igvalit	relicvarium											
+	Corp	Shedu	RaiderCapture Elimination Sabotage Espionage	quest_venus_demon_warrior	quest_igvalit	relicvarium											
+	Tezctlan	Corp	RaiderCapture Elimination Sabotage Ritual	quest_mercury_force_man	quest_igvalit	spaceScaner											
+	Tezctlan	CivilRes	RaiderCapture Elimination Sabotage Ritual	quest_cresist_elite_man	quest_fresco_data	serverStation											
+	Tezctlan	Pirates	RaiderCapture Elimination Sabotage Ritual	quest_cresist_elite_man	quest_fresco_data	serverStation											
+	Tezctlan	Xiomara	RaiderCapture Elimination Sabotage Espionage	quest_venus_demon_warrior	quest_igvalit	relicvarium											
+	Tezctlan	Shedu	RaiderCapture Elimination Sabotage Espionage	quest_venus_demon_warrior	quest_igvalit	relicvarium											
+	CivilRes	Corp	RaiderCapture Elimination Sabotage Espionage Robbery	quest_man_manager	quest_device	spaceScaner											
+	CivilRes	Pirates	RaiderCapture Elimination Sabotage Espionage Robbery	quest_cresist_elite_man	quest_fresco_data	cargoBlock											
+	CivilRes	Tezctlan	RaiderCapture Elimination Espionage Robbery	quest_venus_demon_warrior	quest_igvalit	relicvarium											
+	CivilRes	Xiomara	RaiderCapture Elimination Espionage Robbery	quest_venus_demon_warrior	quest_igvalit	relicvarium											
+	CivilRes	Shedu	RaiderCapture Elimination Espionage Robbery	quest_venus_demon_warrior	quest_igvalit	relicvarium											
+	Xiomara	Corp	RaiderCapture Elimination Sabotage Ritual	quest_mercury_force_man	quest_igvalit	spaceScaner											
+	Xiomara	CivilRes	RaiderCapture Elimination Sabotage Ritual	quest_cresist_elite_man	quest_fresco_data	serverStation											
+	Xiomara	Pirates	RaiderCapture Elimination Sabotage Ritual	quest_cresist_elite_man	quest_fresco_data	serverStation											
+	Xiomara	Tezctlan	RaiderCapture Elimination Sabotage Espionage	quest_venus_demon_warrior	quest_igvalit	relicvarium											
+	Xiomara	Shedu	RaiderCapture Elimination Sabotage Espionage	quest_venus_demon_warrior	quest_igvalit	relicvarium											
+	Shedu	Corp	RaiderCapture Elimination Sabotage Ritual	quest_mercury_force_man	quest_igvalit	spaceScaner											
+	Shedu	CivilRes	RaiderCapture Elimination Sabotage Ritual	quest_cresist_elite_man	quest_fresco_data	serverStation											
+	Shedu	Pirates	RaiderCapture Elimination Sabotage Ritual	quest_cresist_elite_man	quest_fresco_data	serverStation											
+	Shedu	Tezctlan	RaiderCapture Elimination Sabotage Espionage	quest_venus_demon_warrior	quest_artefact	relicvarium											
+	Shedu	Xiomara	RaiderCapture Elimination Sabotage Espionage	quest_venus_demon_warrior	quest_artefact	relicvarium											
+	Pirates	Corp	RaiderCapture Elimination Sabotage Espionage Robbery	quest_man_manager	quest_device	spaceScaner											
+	Pirates	CivilRes	RaiderCapture Elimination Sabotage Espionage Robbery	quest_cresist_elite_man	quest_fresco_data	cargoBlock											
+	Pirates	Tezctlan	RaiderCapture Elimination Espionage Robbery	quest_venus_demon_warrior	quest_igvalit	relicvarium											
+	Pirates	Xiomara	RaiderCapture Elimination Espionage Robbery	quest_venus_demon_warrior	quest_igvalit	relicvarium											
+	Pirates	Shedu	RaiderCapture Elimination Espionage Robbery	quest_venus_demon_warrior	quest_igvalit	relicvarium											
+#end																	
+																	
+#techlevels																	
+TechLevel	ExperienceToLevelUp	MaxMissionsСount															
+1	500	2															
+2	750	2															
+3	1000	3															
+4	1500	3															
+5	2000	3															
+6	2500	4															
+7	3000	4															
+8	4000	4															
+9	5000	5															
+10	0	5															
+#end																	
+																	
+#prizes_by_rating																	
+ProcMissionType	DifficultyRating	MinPrizePoints	MaxPrizePoints	PowerToPrizePointsMult	PowerToMonsterPointsMult												
+RaiderCapture	1	450	600	0.1	0.1												
+RaiderCapture	2	750	900	0.1	0.1												
+RaiderCapture	3	1150	1400	0.1	0.1												
+RaiderCapture	4	1700	2000	0.1	0.1												
+RaiderCapture	5	2500	3000	0.1	0.1												
+Elimination	1	400	500	0.1	0.1												
+Elimination	2	700	800	0.1	0.1												
+Elimination	3	1000	1200	0.1	0.1												
+Elimination	4	1500	1800	0.1	0.1												
+Elimination	5	2200	2700	0.1	0.1												
+Sabotage	1	400	500	0.1	0.1												
+Sabotage	2	700	800	0.1	0.1												
+Sabotage	3	1000	1200	0.1	0.1												
+Sabotage	4	1500	1800	0.1	0.1												
+Sabotage	5	2200	2700	0.1	0.1												
+Espionage	1	400	500	0.1	0.1												
+Espionage	2	700	800	0.1	0.1												
+Espionage	3	1000	1200	0.1	0.1												
+Espionage	4	1500	1800	0.1	0.1												
+Espionage	5	2200	2700	0.1	0.1												
+Defense	1	300	450	0.1	0.1												
+Defense	2	600	750	0.1	0.1												
+Defense	3	900	1150	0.1	0.1												
+Defense	4	1400	1700	0.1	0.1												
+Defense	5	2000	2500	0.1	0.1												
+Ritual	1	400	500	0.1	0.1												
+Ritual	2	700	800	0.1	0.1												
+Ritual	3	1000	1200	0.1	0.1												
+Ritual	4	1500	1800	0.1	0.1												
+Ritual	5	2200	2700	0.1	0.1												
+Robbery	1	400	500	0.1	0.1												
+Robbery	2	700	800	0.1	0.1												
+Robbery	3	1000	1200	0.1	0.1												
+Robbery	4	1500	1800	0.1	0.1												
+Robbery	5	2200	2700	0.1	0.1												
+Infiltration	1	400	500	0.1	0.1												
+Infiltration	2	700	800	0.1	0.1												
+Infiltration	3	1000	1200	0.1	0.1												
+Infiltration	4	1500	1800	0.1	0.1												
+Infiltration	5	2200	2700	0.1	0.1												
+Control	1	400	500	0.1	0.1												
+Control	2	700	800	0.1	0.1												
+Control	3	1000	1200	0.1	0.1												
+Control	4	1500	1800	0.1	0.1												
+Control	5	2200	2700	0.1	0.1												
+Escort	1	400	500	0.1	0.1												
+Escort	2	700	800	0.1	0.1												
+Escort	3	1000	1200	0.1	0.1												
+Escort	4	1500	1800	0.1	0.1												
+Escort	5	2200	2700	0.1	0.1												
+Counterattack	1	400	500	0.1	0.1												
+Counterattack	2	700	800	0.1	0.1												
+Counterattack	3	1000	1200	0.1	0.1												
+Counterattack	4	1500	1800	0.1	0.1												
+Counterattack	5	2200	2700	0.1	0.1												
+Security	1	400	500	0.1	0.1												
+Security	2	700	800	0.1	0.1												
+Security	3	1000	1200	0.1	0.1												
+Security	4	1500	1800	0.1	0.1												
+Security	5	2200	2700	0.1	0.1												
+#end																	

@@ -761,32 +761,36 @@ namespace FFU_Phase_Shift {
         public static int GetItemOrder(string itemId) {
             CompositeItemRecord refItem = Data.Items.GetRecord(itemId) as CompositeItemRecord;
             if (refItem != null) {
-                if (refItem.GetRecord<WeaponRecord>() != null)
+                if (refItem.GetRecord<WeaponRecord>() != null && !refItem.GetRecord<WeaponRecord>().IsMelee)
                     return 100 + (int)refItem.GetRecord<WeaponRecord>().WeaponClass;
+                else if (refItem.GetRecord<WeaponRecord>() != null && refItem.GetRecord<WeaponRecord>().IsMelee)
+                    return 200 + (int)refItem.GetRecord<WeaponRecord>().WeaponClass;
                 else if (refItem.GetRecord<AmmoRecord>() != null)
-                    return 200 + (int)refItem.GetRecord<AmmoRecord>().BallisticType;
+                    return 300 + (int)refItem.GetRecord<AmmoRecord>().BallisticType;
                 else if (refItem.GetRecord<GrenadeRecord>() != null)
-                    return 300;
-                else if (refItem.GetRecord<MineRecord>() != null)
                     return 400;
-                else if (refItem.GetRecord<TurretRecord>() != null)
+                else if (refItem.GetRecord<MineRecord>() != null)
                     return 500;
-                else if (refItem.GetRecord<MedkitRecord>() != null)
+                else if (refItem.GetRecord<TurretRecord>() != null)
                     return 600;
-                else if (refItem.GetRecord<FoodRecord>() != null)
+                else if (refItem.GetRecord<MedkitRecord>() != null)
                     return 700;
-                else if (refItem.GetRecord<BackpackRecord>() != null)
+                else if (refItem.GetRecord<FoodRecord>() != null)
                     return 800;
-                else if (refItem.GetRecord<VestRecord>() != null)
+                else if (refItem.GetRecord<BackpackRecord>() != null)
                     return 900;
-                else if (refItem.GetRecord<HelmetRecord>() != null)
+                else if (refItem.GetRecord<VestRecord>() != null)
                     return 1000;
-                else if (refItem.GetRecord<ArmorRecord>() != null)
+                else if (refItem.GetRecord<HelmetRecord>() != null)
                     return 1100;
-                else if (refItem.GetRecord<LeggingsRecord>() != null)
+                else if (refItem.GetRecord<ArmorRecord>() != null)
                     return 1200;
-                else if (refItem.GetRecord<BootsRecord>() != null)
+                else if (refItem.GetRecord<LeggingsRecord>() != null)
                     return 1300;
+                else if (refItem.GetRecord<BootsRecord>() != null)
+                    return 1400;
+                else if (refItem.GetRecord<RepairRecord>() != null && refItem.GetRecord<TrashRecord>() == null)
+                    return 2000;
                 else if (refItem.GetRecord<AutomapRecord>() != null)
                     return 2100;
                 else if (refItem.GetRecord<ResurrectKitRecord>() != null)
@@ -794,15 +798,13 @@ namespace FFU_Phase_Shift {
                 else if (refItem.GetRecord<ExpGainerRecord>() != null)
                     return 2300;
                 else if (refItem.GetRecord<DatadiskRecord>() != null)
-                    return 2800;
-                else if (refItem.GetRecord<SkullRecord>() != null)
-                    return 2900;
-                else if (refItem.GetRecord<QuasiArtifactRecord>() != null)
                     return 3000;
+                else if (refItem.GetRecord<SkullRecord>() != null)
+                    return 3100;
+                else if (refItem.GetRecord<QuasiArtifactRecord>() != null)
+                    return 3200;
                 else if (refItem.GetRecord<TrashRecord>() != null)
                     return 10000;
-                else if (refItem.GetRecord<RepairRecord>() != null)
-                    return 2000;
                 else return 100000;
             } else return 1000000;
         }

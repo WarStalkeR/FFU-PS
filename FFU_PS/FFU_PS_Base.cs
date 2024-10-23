@@ -65,10 +65,10 @@ namespace FFU_Phase_Shift {
                 } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
 
             if (ModConfig.SmartProduction)
-                try { ModLog.Info("Patching: MGSC.ItemProductionSystem.StartItemProduction");
-                    var refMethod = AccessTools.Method(typeof(ItemProductionSystem), "StartItemProduction");
+                try { ModLog.Info("Patching: MGSC.ItemProductionSystem.StartMagnumItemProduction");
+                    var refMethod = AccessTools.Method(typeof(ItemProductionSystem), "StartMagnumItemProduction");
                     var prefixPatch = SymbolExtensions.GetMethodInfo(() =>
-                        ModPatch.StartItemProduction_SmartPrecision(default, default, default, default, default, default, default));
+                        ModPatch.StartMagnumItemProduction_SmartPrecision(default, default, default, default, default, default, default, default));
                     Mod.Patch(refMethod, prefix: new HarmonyMethod(prefixPatch));
                 } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
 
