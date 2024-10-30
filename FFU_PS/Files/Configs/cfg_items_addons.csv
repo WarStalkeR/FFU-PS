@@ -40,45 +40,45 @@ corp_bone		human_rib 3
 								
 #itemreceipts								
 Id		OutputItem	RequiredItems	ProduceTimeInHours	ModifyStartCost	ModifyStep	ModifyItemsGrades	ModifyLevelLimit
-		elite_knife	pierce_melee_shards 2 metal_tread 1 rubber 1	12	1	1.02	broken_weapon 2 pierce_melee_shards 20 metal_tread 100 tool_container 500	100
-		miner_knife	broken_weapon 2 pierce_melee_shards 1	10	1	1.02	broken_weapon 2 pierce_melee_shards 20 rusty_shards 100 tool_container 500	100
-		glass_knife	glass 1 tape 1	6	1	1.02	broken_weapon 2 tape 20 glass 100 tool_container 500	100
-		machete	pierce_melee_shards 2 rusty_shards 1 plastic 1	14	1	1.02	broken_weapon 2 pierce_melee_shards 20 rusty_shards 100 tool_container 500	100
+		elite_knife	pierce_melee_shards 2 metal_tread 1 rubber 1	12	1	1.02	broken_weapon 2 pierce_melee_shards 20 metal_tread 100 tool_container 500	90
+		miner_knife	broken_weapon 2 pierce_melee_shards 1	10	1	1.02	broken_weapon 2 pierce_melee_shards 20 rusty_shards 100 tool_container 500	90
+		glass_knife	glass 1 tape 1	6	1	1.02	broken_weapon 2 tape 20 glass 100 tool_container 500	90
+		machete	pierce_melee_shards 2 rusty_shards 1 plastic 1	14	1	1.02	broken_weapon 2 pierce_melee_shards 20 rusty_shards 100 tool_container 500	90
 		metal_pipe	blunt_melee_shards 2	2	1	1.01		
-		scarp_club	coarse_gears 2 rod 1 broken_weapon 1 sawblade_ammo 1	4	1	1.02	broken_weapon 2 rod 20 coarse_gears 100 tool_container 500	100
-		knuckles	rusty_shards 2	3	1	1.02	broken_weapon 2 blunt_melee_shards 20 rusty_shards 100 tool_container 500	100
-		breaker	blunt_melee_shards 2 rod 1 coarse_gears 1	10	1	1.02	broken_weapon 2 rod 20 coarse_gears 100 tool_container 500	100
-		crowbar	blunt_melee_shards 2 rod 1	12	1	1.02	broken_weapon 2 rod 20 blunt_melee_shards 100 tool_container 500	100
-		wrench	blunt_melee_shards 2 coarse_gears 1	14	1	1.02	broken_weapon 2 blunt_melee_shards 20 coarse_gears 100 tool_container 500	100
-		civres_powerfist	blunt_melee_shards 1 rod 1 coarse_gears 1	20	1	1.02	broken_weapon 2 blunt_melee_shards 20 coarse_gears 100 tool_container 500	100
-		choppa_axe	rusty_shards 2 pierce_melee_shards 1 rod 1	14	1	1.02	broken_weapon 2 pierce_melee_shards 20 rod 100 tool_container 500	100
-		bandit_axe	pierce_melee_shards 2 rod 1 rubber 1	16	1	1.02	broken_weapon 2 pierce_melee_shards 20 rod 100 tool_container 500	100
-		bandit_sawblade	plastic 1 weapon_shards 1	24	1	1.02	gas_ammo 1 pierce_melee_shards 15 coarse_gears 45 melee_repair_kit 145 engineering_parts_container 500	100
-		spec_pistol	rubber 1 weapon_shards 1	24	1	1.02	pistol_basic_ammo 1 weapon_shards 20 coarse_gears 100 tool_container 500	100
-		dark_pistol	rubber 1 weapon_shards 1	24	1	1.02	heavy_basic_ammo 1 weapon_shards 20 coarse_gears 100 tool_container 500	100
-		rail_pistol	rubber 1 wire 1 capacitor 1 metal_tread 1	26	1	1.02	broken_weapon 1 weapon_shards 20 capacitor 100 tool_container 500	100
-		tech_pistol	plastic 1 metal_tread 1 bulb 1 wire 1	36	1	1.02	battery_charge 1 weapon_shards 20 bulb 100 tool_container 500	100
-		petrov_pistol	plastic 2	20	1	1.02	pistol_basic_ammo 1 weapon_shards 20 coarse_gears 100 tool_container 500	100
-		civres_pistol	plastic 2	20	1	1.02	pistol_basic_ammo 1 weapon_shards 20 coarse_gears 100 tool_container 500	100
-		civres_pistol_2	plastic 1 spring 1	20	1	1.02	pistol_basic_ammo 1 weapon_shards 20 spring 100 tool_container 500	100
-		civres_plasma_pistol	microelectronics 1 capacitor 1 plastic 1	20	1	1.02	battery_charge 1 plastic 15 capacitor 45 microelectronics 145 engineering_parts_container 500	100
-		shedu_pistol	weapon_shards 1 plastic 1 spring 1	36	1	1.02	shotgun_shrapnel_ammo 1 weapon_shards 20 plastic 100 weapon_container 500	100
-		desert_shotgun	rubber 1 weapon_shards 1 blunt_melee_shards 1	20	1	1.02	shotgun_shrapnel_ammo 1 blunt_melee_shards 20 coarse_gears 100 weapon_container 500	100
-		shedu_gas_shotgun	plastic 1 microelectronics 1 circuit_board 1 wire 1	36	1	1.02	gas_ammo 1 plastic 15 wire 45 circuit_board 145 engineering_parts_container 500	100
-		pirates_smg	broken_weapon 1 weapon_shards 1 rusty_shards 1 rod 1	20	1	1.02	shotgun_shrapnel_ammo 1 broken_weapon 15 rusty_shards 45 weapon_shards 145 weapon_container 500	100
-		pirates_smg_2	rubber 2 weapon_shards 1 blunt_melee_shards 1	28	1	1.02	medium_basic_ammo 1 rubber 15 weapon_shards 45 blunt_melee_shards 145 weapon_container 500	100
-		bandit_smg	rubber 1 weapon_shards 1	14	1	1.02	shotgun_shrapnel_ammo 1 weapon_shards 20 rubber 100 weapon_container 500	100
-		civres_smg	rubber 1 weapon_shards 1 spring 1	30	1	1.02	medium_basic_ammo 1 weapon_shards 20 spring 100 tool_container 500	100
-		civres_smg_2	rubber 2 weapon_shards 1 spring 2 blunt_melee_shards 1	48	1	1.02	pistol_basic_ammo 1 rubber 15 spring 45 blunt_melee_shards 145 tool_container 500	100
-		civres_assault	armor_shards 1 weapon_shards 1 spring 1 blunt_melee_shards 1	32	1	1.02	heavy_basic_ammo 1 weapon_shards 15 armor_shards 45 blunt_melee_shards 145 tool_container 500	100
-		civres_marksman	weapon_shards 1 armor_shards 1 blunt_melee_shards 1 lens 1	62	1	1.02	medium_basic_ammo 1 weapon_shards 15 armor_shards 45 lens 145 tool_container 500	100
-		miner_disctrower	coarse_gears 1 spring 1 armor_shards 1 rod 1	26	1	1.02	sawblade_ammo 1 coarse_gears 20 spring 100 engineering_parts_container 500	100
-		miner_flametrower	coarse_gears 1 metal_tread 1 armor_shards 1 rod 1	24	1	1.02	gas_ammo 1 coarse_gears 20 spring 100 engineering_parts_container 500	100
+		scarp_club	coarse_gears 2 rod 1 broken_weapon 1 sawblade_ammo 1	4	1	1.02	broken_weapon 2 rod 20 coarse_gears 100 tool_container 500	90
+		knuckles	rusty_shards 2	3	1	1.02	broken_weapon 2 blunt_melee_shards 20 rusty_shards 100 tool_container 500	90
+		breaker	blunt_melee_shards 2 rod 1 coarse_gears 1	10	1	1.02	broken_weapon 2 rod 20 coarse_gears 100 tool_container 500	90
+		crowbar	blunt_melee_shards 2 rod 1	12	1	1.02	broken_weapon 2 rod 20 blunt_melee_shards 100 tool_container 500	90
+		wrench	blunt_melee_shards 2 coarse_gears 1	14	1	1.02	broken_weapon 2 blunt_melee_shards 20 coarse_gears 100 tool_container 500	90
+		civres_powerfist	blunt_melee_shards 1 rod 1 coarse_gears 1	20	1	1.02	broken_weapon 2 blunt_melee_shards 20 coarse_gears 100 tool_container 500	90
+		choppa_axe	rusty_shards 2 pierce_melee_shards 1 rod 1	14	1	1.02	broken_weapon 2 pierce_melee_shards 20 rod 100 tool_container 500	90
+		bandit_axe	pierce_melee_shards 2 rod 1 rubber 1	16	1	1.02	broken_weapon 2 pierce_melee_shards 20 rod 100 tool_container 500	90
+		bandit_sawblade	plastic 1 weapon_shards 1	24	1	1.02	gas_ammo 1 pierce_melee_shards 15 coarse_gears 45 melee_repair_kit 145 engineering_parts_container 500	90
+		spec_pistol	rubber 1 weapon_shards 1	24	1	1.02	pistol_basic_ammo 1 weapon_shards 20 coarse_gears 100 tool_container 500	90
+		dark_pistol	rubber 1 weapon_shards 1	24	1	1.02	heavy_basic_ammo 1 weapon_shards 20 coarse_gears 100 tool_container 500	90
+		rail_pistol	rubber 1 wire 1 capacitor 1 metal_tread 1	26	1	1.02	broken_weapon 1 weapon_shards 20 capacitor 100 tool_container 500	90
+		tech_pistol	plastic 1 metal_tread 1 bulb 1 wire 1	36	1	1.02	battery_charge 1 weapon_shards 20 bulb 100 tool_container 500	90
+		petrov_pistol	plastic 2	20	1	1.02	pistol_basic_ammo 1 weapon_shards 20 coarse_gears 100 tool_container 500	90
+		civres_pistol	plastic 2	20	1	1.02	pistol_basic_ammo 1 weapon_shards 20 coarse_gears 100 tool_container 500	90
+		civres_pistol_2	plastic 1 spring 1	20	1	1.02	pistol_basic_ammo 1 weapon_shards 20 spring 100 tool_container 500	90
+		civres_plasma_pistol	microelectronics 1 capacitor 1 plastic 1	20	1	1.02	battery_charge 1 plastic 15 capacitor 45 microelectronics 145 engineering_parts_container 500	90
+		shedu_pistol	weapon_shards 1 plastic 1 spring 1	36	1	1.02	shotgun_shrapnel_ammo 1 weapon_shards 20 plastic 100 weapon_container 500	90
+		desert_shotgun	rubber 1 weapon_shards 1 blunt_melee_shards 1	20	1	1.02	shotgun_shrapnel_ammo 1 blunt_melee_shards 20 coarse_gears 100 weapon_container 500	90
+		shedu_gas_shotgun	plastic 1 microelectronics 1 circuit_board 1 wire 1	36	1	1.02	gas_ammo 1 plastic 15 wire 45 circuit_board 145 engineering_parts_container 500	90
+		pirates_smg	broken_weapon 1 weapon_shards 1 rusty_shards 1 rod 1	20	1	1.02	shotgun_shrapnel_ammo 1 broken_weapon 15 rusty_shards 45 weapon_shards 145 weapon_container 500	90
+		pirates_smg_2	rubber 2 weapon_shards 1 blunt_melee_shards 1	28	1	1.02	medium_basic_ammo 1 rubber 15 weapon_shards 45 blunt_melee_shards 145 weapon_container 500	90
+		bandit_smg	rubber 1 weapon_shards 1	14	1	1.02	shotgun_shrapnel_ammo 1 weapon_shards 20 rubber 100 weapon_container 500	90
+		civres_smg	rubber 1 weapon_shards 1 spring 1	30	1	1.02	medium_basic_ammo 1 weapon_shards 20 spring 100 tool_container 500	90
+		civres_smg_2	rubber 2 weapon_shards 1 spring 2 blunt_melee_shards 1	48	1	1.02	pistol_basic_ammo 1 rubber 15 spring 45 blunt_melee_shards 145 tool_container 500	90
+		civres_assault	armor_shards 1 weapon_shards 1 spring 1 blunt_melee_shards 1	32	1	1.02	heavy_basic_ammo 1 weapon_shards 15 armor_shards 45 blunt_melee_shards 145 tool_container 500	90
+		civres_marksman	weapon_shards 1 armor_shards 1 blunt_melee_shards 1 lens 1	62	1	1.02	medium_basic_ammo 1 weapon_shards 15 armor_shards 45 lens 145 tool_container 500	90
+		miner_disctrower	coarse_gears 1 spring 1 armor_shards 1 rod 1	26	1	1.02	sawblade_ammo 1 coarse_gears 20 spring 100 engineering_parts_container 500	90
+		miner_flametrower	coarse_gears 1 metal_tread 1 armor_shards 1 rod 1	24	1	1.02	gas_ammo 1 coarse_gears 20 spring 100 engineering_parts_container 500	90
 		battery_crafted_charge	broken_weapon 1 acid 1	0.2	1	1.01		
-		civres_armor	armor_shards 1 ceramite_shards 1 metal_tread 1 rubber 1	42	1	1.05	armor_shards 1 metal_tread 3 rubber 9 ceramite_shards 25 miner_clothing_container 80	100
-		civres_helmet	armor_shards 2 glass 1 metal_tread 1	42	1	1.05	armor_shards 1 metal_tread 3 glass 9 ceramite_shards 25 miner_clothing_container 80	100
-		civres_pants	armor_shards 2 rubber 2	42	1	1.05	armor_shards 1 rags 3 rubber 9 ceramite_shards 25 miner_clothing_container 80	100
-		civres_boots	ceramite_shards 1 armor_shards 1 rubber 1 plastic 1	42	1	1.05	armor_shards 1 rags 3 rubber 9 ceramite_shards 25 miner_clothing_container 80	100
+		civres_armor	armor_shards 1 ceramite_shards 1 metal_tread 1 rubber 1	42	1	1.05	armor_shards 1 metal_tread 3 rubber 9 ceramite_shards 25 miner_clothing_container 80	60
+		civres_helmet	armor_shards 2 glass 1 metal_tread 1	42	1	1.05	armor_shards 1 metal_tread 3 glass 9 ceramite_shards 25 miner_clothing_container 80	60
+		civres_pants	armor_shards 2 rubber 2	42	1	1.05	armor_shards 1 rags 3 rubber 9 ceramite_shards 25 miner_clothing_container 80	60
+		civres_boots	ceramite_shards 1 armor_shards 1 rubber 1 plastic 1	42	1	1.05	armor_shards 1 rags 3 rubber 9 ceramite_shards 25 miner_clothing_container 80	60
 		quasi_sensor_device	circuit_board 1 transformer 1 bulb 1	48	1	1.01		
 		nanorobot_grenade	glass 1 transformer 1 explosives 1 acid 3 microelectronics 1	24	1	1.01		
 #end								

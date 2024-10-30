@@ -352,12 +352,12 @@ Id		OutputItem	RequiredItems	ProduceTimeInHours	ModifyStartCost	ModifyStep	Modif
 		synthBeef	plastic 1	4	1	1.01																											
 		bandit_vest	rags 1 tread 1	8	1	1.01																											
 		small_backpack	rags 3 tread 1	8	1	1.01																											
-		blue_tshirt	rags 1 tread 1	6	1	1.02	tread 2 rags 10 rubber 50 regular_clothing_container 250	100																									
-		dark_pants	rags 1 tread 1	6	1	1.02	tread 2 rags 10 rubber 50 regular_clothing_container 250	100																									
-		blue_boots	rags 1 tread 1 plastic 1	6	1	1.02	tread 2 rubber 10 rusty_shards 50 regular_clothing_container 250	100																									
-		army_knife	pierce_melee_shards 1 plastic 1	8	1	1.02	broken_weapon 2 pierce_melee_shards 20 rusty_shards 100 tool_container 500	100																									
-		army_pistol	plastic 1 spring 1	10	1	1.02	shotgun_shrapnel_ammo 1 weapon_shards 20 coarse_gears 100 tool_container 500	100																									
-		pmc_pistol	plastic 1 spring 1	10	1	1.02	medium_basic_ammo 1 weapon_shards 20 coarse_gears 100 tool_container 500	100																									
+		blue_tshirt	rags 1 tread 1	6	1	1.02	tread 2 rags 10 rubber 50 regular_clothing_container 250	60																									
+		dark_pants	rags 1 tread 1	6	1	1.02	tread 2 rags 10 rubber 50 regular_clothing_container 250	60																									
+		blue_boots	rags 1 tread 1 plastic 1	6	1	1.02	tread 2 rubber 10 rusty_shards 50 regular_clothing_container 250	60																									
+		army_knife	pierce_melee_shards 1 plastic 1	8	1	1.02	broken_weapon 2 pierce_melee_shards 20 rusty_shards 100 tool_container 500	90																									
+		army_pistol	plastic 1 spring 1	10	1	1.02	shotgun_shrapnel_ammo 1 weapon_shards 20 coarse_gears 100 tool_container 500	90																									
+		pmc_pistol	plastic 1 spring 1	10	1	1.02	medium_basic_ammo 1 weapon_shards 20 coarse_gears 100 tool_container 500	90																									
 		pistol_basic_ammo	powder 1	0.1	1	1.01																											
 		shotgun_shrapnel_ammo	powder 1	0.2	1	1.01																											
 		bandage	rags 2	6	1	1.01																											
@@ -367,107 +367,107 @@ Id		OutputItem	RequiredItems	ProduceTimeInHours	ModifyStartCost	ModifyStep	Modif
 		morphine	glass 1 poppy_box 1	18	1	1.01																											
 		sorbent		2	1	1.01																											
 		phase_bomb	bulb 1 capacitor 1 explosives 1 circuit_board 1 microelectronics 1	6	1	1.01																											
-		tech_katana	pierce_melee_shards 1 metal_tread 1 plastic 1 rubber 1	32	1	1.02	broken_weapon 2 pierce_melee_shards 20 melee_repair_kit 100 weapon_container 500	100																									
-		pmc_club	blunt_melee_shards 1 rod 1 plastic 1	14	1	1.02	broken_weapon 2 blunt_melee_shards 20 rod 100 tool_container 500	100																									
-		franch_baton	blunt_melee_shards 1 rod 1 bulb 1	24	1	1.02	broken_weapon 2 blunt_melee_shards 20 bulb 100 weapon_container 500	100																									
-		hatchet	pierce_melee_shards 1 blunt_melee_shards 1 rubber 1	24	1	1.02	broken_weapon 2 pierce_melee_shards 20 rusty_shards 100 tool_container 500	100																									
-		spec_hatchet	pierce_melee_shards 1 blunt_melee_shards 1 armor_shards 1	28	1	1.02	broken_weapon 2 pierce_melee_shards 20 melee_repair_kit 100 weapon_container 500	100																									
-		sapper_shovel	rusty_shards 1 pierce_melee_shards 1 rod 1	12	1	1.02	broken_weapon 2 pierce_melee_shards 20 rusty_shards 100 weapon_container 500	100																									
-		army_pistol_2	plastic 1 weapon_shards 1	14	1	1.02	shotgun_shrapnel_ammo 1 weapon_shards 20 spring 100 weapon_container 500	100																									
-		army_pistol_3	plastic 1 weapon_shards 1 metal_tread 1	18	1	1.02	shotgun_shrapnel_ammo 1 weapon_shards 20 weapon_repair_kit 100 weapon_container 500	100																									
-		army_pistol_4	ceramite_shards 1 weapon_shards 1 metal_tread 1	36	1	1.02	shotgun_shrapnel_ammo 1 weapon_shards 15 ceramite_shards 45 weapon_repair_kit 145 military_parts_container 500	100																									
-		pmc_pistol_2	plastic 1 weapon_shards 1	16	1	1.02	medium_basic_ammo 1 weapon_shards 20 spring 100 weapon_container 500	100																									
-		pmc_pistol_3	plastic 1 weapon_shards 1 metal_tread 1 spring 1	18	1	1.02	medium_basic_ammo 1 weapon_shards 20 weapon_repair_kit 100 weapon_container 500	100																									
-		spec_pistol_2	rubber 1 weapon_shards 1 metal_tread 1	24	1	1.02	pistol_basic_ammo 1 weapon_shards 20 spring 100 weapon_container 500	100																									
-		spec_pistol_3	rubber 1 weapon_shards 1 metal_tread 1 blunt_melee_shards 1	38	1	1.02	pistol_basic_ammo 1 weapon_shards 20 weapon_repair_kit 100 weapon_container 500	100																									
-		spec_pistol_rv	ceramite_shards 1 armor_shards 1 weapon_shards 1 circuit_board 1	42	1	1.02	pistol_basic_ammo 1 weapon_shards 15 ceramite_shards 45 circuit_board 145 military_parts_container 500	100																									
-		dark_pistol_2	rubber 1 weapon_shards 1 blunt_melee_shards 1	24	1	1.02	heavy_basic_ammo 1 weapon_shards 20 spring 100 tool_container 500	100																									
-		dark_pistol_3	rubber 1 weapon_shards 1 spring 1 blunt_melee_shards 1	26	1	1.02	heavy_basic_ammo 1 weapon_shards 20 weapon_repair_kit 100 weapon_container 500	100																									
-		dark_pistol_4	ceramite_shards 1 weapon_shards 1 blunt_melee_shards 1	36	1	1.02	heavy_basic_ammo 1 weapon_shards 15 spring 45 weapon_repair_kit 145 weapon_container 500	100																									
-		dark_pistol_5	ceramite_shards 1 weapon_shards 1 spring 1	36	1	1.02	heavy_basic_ammo 1 weapon_shards 15 ceramite_shards 45 weapon_repair_kit 145 military_parts_container 500	100																									
-		rail_pistol_2	rubber 1 circuit_board 1 capacitor 1 metal_tread 1	30	1	1.02	broken_weapon 1 weapon_shards 15 capacitor 45 circuit_board 145 weapon_container 500	100																									
-		rail_pistol_3	rubber 1 microelectronics 1 capacitor 1 metal_tread 1	34	1	1.02	broken_weapon 1 weapon_shards 15 capacitor 45 microelectronics 145 electrical_parts_container 500	100																									
-		tech_pistol_2	plastic 1 circuit_board 1 bulb 1 wire 1	36	1	1.02	battery_charge 1 weapon_shards 15 bulb 45 circuit_board 145 weapon_container 500	100																									
-		tech_pistol_3	plastic 1 microelectronics 1 bulb 1 wire 1	40	1	1.02	battery_charge 1 weapon_shards 15 bulb 45 microelectronics 145 weapon_container 500	100																									
-		petrov_pistol_2	plastic 1 spring 1	20	1	1.02	pistol_basic_ammo 1 weapon_shards 20 spring 100 weapon_container 500	100																									
-		petrov_pistol_3	plastic 1 weapon_shards 1	24	1	1.02	pistol_basic_ammo 1 weapon_shards 20 weapon_repair_kit 100 weapon_container 500	100																									
-		core_nailgun	rusty_shards 1 plastic 1 spring 1	26	1	1.02	miner_bolts_ammo 1 weapon_shards 20 coarse_gears 100 engineering_parts_container 500	100																									
-		ancm_quasi_pistol	ceramite_shards 1 microelectronics 1 venus_weapon_shard 1 wire 1	46	1	1.02	quasi_basic_ammo 1 venus_weapon_shard 15 ceramite_shards 45 microelectronics 145 electrical_parts_container 500	100																									
-		sbn_pistol	armor_shards 1 microelectronics 1 capacitor 1 metal_tread 1	36	1	1.02	battery_charge 1 armor_shards 15 capacitor 45 microelectronics 145 electrical_parts_container 500	100																									
-		daydream_frostgun	plastic 1 circuit_board 2 bulb 1 wire 1	40	1	1.02	battery_charge 1 plastic 15 bulb 45 circuit_board 145 engineering_parts_container 500	100																									
-		gh_pistol	rubber 1 weapon_shards 1 spring 1	32	1	1.02	heavy_basic_ammo 1 weapon_shards 20 spring 100 engineering_parts_container 500	100																									
-		sl_pistol	armor_shards 1 microelectronics 1 bulb 1 wire 1	42	1	1.02	battery_charge 1 armor_shards 15 bulb 45 microelectronics 145 electrical_parts_container 500	100																									
-		franch_pistol	rubber 1 weapon_shards 1 spring 1 metal_tread 1	28	1	1.02	pistol_basic_ammo 1 weapon_shards 20 weapon_repair_kit 100 military_parts_container 500	100																									
-		franch_shock_pistol	ceramite_shards 1 microelectronics 1 bulb 1 capacitor 1 transformer 1	32	1	1.02	battery_charge 1 ceramite_shards 15 capacitor 45 transformer 145 electrical_parts_container 500	100																									
-		dilthey_sound_pistol_1	plastic 1 microelectronics 1 bulb 1	32	1	1.02	battery_charge 1 plastic 15 bulb 45 microelectronics 145 electrical_parts_container 500	100																									
-		dilthey_sound_pistol_2	plastic 1 microelectronics 1 bulb 1 capacitor 1	36	1	1.02	battery_charge 1 plastic 15 bulb 45 microelectronics 145 electrical_parts_container 500	100																									
-		pmc_shotgun	rubber 1 weapon_shards 1 blunt_melee_shards 1	24	1	1.02	shotgun_shrapnel_ammo 1 rubber 20 blunt_melee_shards 100 tool_container 500	100																									
-		pmc_shotgun_2	armor_shards 1 weapon_shards 1 blunt_melee_shards 1	38	1	1.02	shotgun_shrapnel_ammo 1 rubber 15 blunt_melee_shards 45 spring 145 weapon_container 500	100																									
-		dark_shotgun	rubber 1 weapon_shards 1 spring 1 blunt_melee_shards 1	28	1	1.02	shotgun_shrapnel_ammo 1 blunt_melee_shards 20 spring 100 tool_container 500	100																									
-		dark_shotgun_2	armor_shards 1 weapon_shards 1 spring 1 blunt_melee_shards 1	36	1	1.02	shotgun_shrapnel_ammo 1 blunt_melee_shards 15 spring 45 weapon_repair_kit 145 weapon_container 500	100																									
-		dark_shotgun_3	ceramite_shards 1 weapon_shards 1 spring 1 blunt_melee_shards 1	44	1	1.02	shotgun_shrapnel_ammo 1 blunt_melee_shards 15 spring 45 ceramite_shards 145 military_parts_container 500	100																									
-		desert_shotgun_2	rubber 1 weapon_shards 1 spring 1 blunt_melee_shards 1	24	1	1.02	shotgun_shrapnel_ammo 1 blunt_melee_shards 20 spring 100 engineering_parts_container 500	100																									
-		plazma_shotgun	ceramite_shards 2 microelectronics 1 capacitor 1	50	1	1.02	battery_charge 1 capacitor 15 ceramite_shards 45 microelectronics 145 electrical_parts_container 500	100																									
-		spec_shotgun	armor_shards 1 weapon_shards 1 blunt_melee_shards 1	26	1	1.02	shotgun_shrapnel_ammo 1 weapon_shards 15 blunt_melee_shards 45 weapon_repair_kit 145 military_parts_container 500	100																									
-		franch_shotgun	ceramite_shards 1 weapon_shards 1 spring 1 blunt_melee_shards 1	24	1	1.02	shotgun_shrapnel_ammo 1 weapon_shards 15 spring 45 ceramite_shards 145 military_parts_container 500	100																									
-		church_shotgun	ceramite_shards 2 weapon_shards 1 spring 1 blunt_melee_shards 1	50	1	1.02	shotgun_shrapnel_ammo 1 weapon_shards 15 spring 45 ceramite_shards 145 military_parts_container 500	100																									
-		ancm_shotgun	armor_shards 1 ceramite_shards 1 weapon_shards 1 blunt_melee_shards 1	48	1	1.02	shotgun_shrapnel_ammo 1 armor_shards 15 blunt_melee_shards 45 weapon_repair_kit 145 military_parts_container 500	100																									
-		sbn_shotgun	armor_shards 1 microelectronics 1 capacitor 1 metal_tread 1	40	1	1.02	battery_charge 1 armor_shards 15 capacitor 45 microelectronics 145 electrical_parts_container 500	100																									
-		sl_shotgun	ceramite_shards 2 microelectronics 1 capacitor 1	48	1	1.02	battery_charge 1 capacitor 15 ceramite_shards 45 microelectronics 145 electrical_parts_container 500	100																									
-		daydream_toxic_shotgun	bulb 1 microelectronics 1 glass 1 circuit_board 1 metal_tread 1	40	1	1.02	toxic_ammo 1 glass 15 circuit_board 45 microelectronics 145 electrical_parts_container 500	100																									
-		daydream_frost_shotgun	bulb 1 microelectronics 1 glass 1 capacitor 1 transformer 1	48	1	1.02	battery_charge 1 glass 15 transformer 45 microelectronics 145 electrical_parts_container 500	100																									
-		dilthey_sound_shotgun	ceramite_shards 2 microelectronics 1 capacitor 1	40	1	1.02	battery_charge 1 capacitor 15 ceramite_shards 45 microelectronics 145 electrical_parts_container 500	100																									
-		pmc_smg	rubber 1 weapon_shards 1 blunt_melee_shards 1	18	1	1.02	pistol_basic_ammo 1 weapon_shards 20 blunt_melee_shards 100 tool_container 500	100																									
-		pmc_smg_2	rubber 1 weapon_shards 1 spring 1 blunt_melee_shards 1	22	1	1.02	pistol_basic_ammo 1 weapon_shards 20 spring 100 weapon_container 500	100																									
-		pmc_smg_3	rubber 1 weapon_shards 2 spring 1 blunt_melee_shards 1	32	1	1.02	pistol_basic_ammo 1 weapon_shards 20 weapon_repair_kit 100 military_parts_container 500	100																									
-		spec_smg	armor_shards 1 weapon_shards 1 spring 1 blunt_melee_shards 1	28	1	1.02	medium_basic_ammo 1 weapon_shards 20 blunt_melee_shards 100 weapon_container 500	100																									
-		bandit_smg_2	rubber 1 weapon_shards 1 blunt_melee_shards 1	18	1	1.02	shotgun_shrapnel_ammo 1 weapon_shards 20 blunt_melee_shards 100 engineering_parts_container 500	100																									
-		tech_smg	plastic 1 circuit_board 1 bulb 1 wire 1 capacitor 1	48	1	1.02	battery_charge 1 plastic 15 capacitor 45 circuit_board 145 electrical_parts_container 500	100																									
-		plazma_smg	ceramite_shards 1 circuit_board 1 microelectronics 1 transformer 1	42	1	1.02	battery_charge 1 weapon_shards 15 transformer 45 microelectronics 145 electrical_parts_container 500	100																									
-		spec_smg_rv	ceramite_shards 1 weapon_shards 1 spring 1 blunt_melee_shards 1	48	1	1.02	medium_basic_ammo 1 weapon_shards 15 spring 45 ceramite_shards 145 military_parts_container 500	100																									
-		ancm_smg	armor_shards 2 weapon_shards 1 spring 1	36	1	1.02	medium_basic_ammo 1 armor_shards 15 spring 45 weapon_repair_kit 145 military_parts_container 500	100																									
-		grasshopper_smg	ceramite_shards 1 armor_shards 1 weapon_shards 1	40	1	1.02	pistol_basic_ammo 1 weapon_shards 15 armor_shards 45 ceramite_shards 145 military_parts_container 500	100																									
-		franch_smg	rubber 1 weapon_shards 1 spring 2	40	1	1.02	pistol_basic_ammo 1 weapon_shards 15 rubber 45 spring 145 military_parts_container 500	100																									
-		franch_smg_2	ceramite_shards 1 weapon_shards 1 spring 1 blunt_melee_shards 1	40	1	1.02	pistol_basic_ammo 1 weapon_shards 15 spring 45 ceramite_shards 145 military_parts_container 500	100																									
-		franch_shock_smg	ceramite_shards 1 microelectronics 1 bulb 1 capacitor 1 transformer 1	40	1	1.02	battery_charge 1 bulb 15 ceramite_shards 45 microelectronics 145 electrical_parts_container 500	100																									
-		sbn_smg	ceramite_shards 1 microelectronics 1 capacitor 1 metal_tread 1	44	1	1.02	battery_charge 1 weapon_shards 15 capacitor 45 microelectronics 145 electrical_parts_container 500	100																									
-		dilthey_shock_smg	microelectronics 1 bulb 1 capacitor 1 transformer 1	44	1	1.02	battery_charge 1 bulb 15 capacitor 45 transformer 145 electrical_parts_container 500	100																									
-		toxic_smg	plastic 1 glass 1 circuit_board 1 metal_tread 1	26	1	1.02	toxic_ammo 1 plastic 15 glass 45 circuit_board 145 engineering_parts_container 500	100																									
-		pmc_assault	armor_shards 1 weapon_shards 1 lens 1 blunt_melee_shards 1	32	1	1.02	heavy_basic_ammo 1 weapon_shards 15 blunt_melee_shards 45 lens 145 weapon_container 500	100																									
-		spec_assault	ceramite_shards 1 weapon_shards 1 lens 1 blunt_melee_shards 1	42	1	1.02	heavy_basic_ammo 1 weapon_shards 15 lens 45 ceramite_shards 145 weapon_container 500	100																									
-		spec_assault_rv	ceramite_shards 1 armor_shards 1 weapon_shards 1 microelectronics 1 circuit_board 1	52	1	1.02	heavy_basic_ammo 1 weapon_shards 15 lens 45 circuit_board 145 military_parts_container 500	100																									
-		sbn_assault	ceramite_shards 1 microelectronics 1 bulb 1 capacitor 1 transformer 1	42	1	1.02	battery_charge 1 capacitor 15 ceramite_shards 45 microelectronics 145 electrical_parts_container 500	100																									
-		desert_assault	armor_shards 1 weapon_shards 1 spring 1 blunt_melee_shards 1	36	1	1.02	heavy_basic_ammo 1 weapon_shards 15 armor_shards 45 spring 145 weapon_container 500	100																									
-		grasshopper_assault	ceramite_shards 1 armor_shards 1 weapon_shards 1 lens 1	42	1	1.02	heavy_basic_ammo 1 weapon_shards 15 lens 45 ceramite_shards 145 military_parts_container 500	100																									
-		ancm_quasi_assault	armor_shards 1 ceramite_shards 1 microelectronics 1 venus_weapon_shard 1 wire 1	50	1	1.02	quasi_basic_ammo 1 armor_shards 15 venus_weapon_shard 45 quasisamples 145 electrical_parts_container 500	100																									
-		sl_assault	ceramite_shards 1 microelectronics 1 lens 1 transformer 1 capacitor 1	50	1	1.02	battery_charge 1 lens 15 ceramite_shards 45 microelectronics 145 electrical_parts_container 500	100																									
-		gh_assault	armor_shards 1 weapon_shards 1 lens 1 blunt_melee_shards 1	30	1	1.02	heavy_basic_ammo 1 weapon_shards 15 lens 45 weapon_repair_kit 145 engineering_parts_container 500	100																									
-		franch_assault	ceramite_shards 1 armor_shards 1 weapon_shards 1 lens 1	38	1	1.02	heavy_basic_ammo 1 armor_shards 15 lens 45 ceramite_shards 145 military_parts_container 500	100																									
-		dilthey_sound_assault	ceramite_shards 1 microelectronics 1 lens 1 transformer 1 capacitor 1	50	1	1.02	battery_charge 1 lens 15 ceramite_shards 45 transformer 145 electrical_parts_container 500	100																									
-		plazma_assault	ceramite_shards 1 circuit_board 1 microelectronics 1 capacitor 1	44	1	1.02	battery_charge 1 weapon_shards 15 circuit_board 45 microelectronics 145 electrical_parts_container 500	100																									
-		army_sniper	ceramite_shards 1 weapon_shards 1 lens 1 spring 1 blunt_melee_shards 2	54	1	1.02	heavy_basic_ammo 1 blunt_melee_shards 15 lens 45 weapon_repair_kit 145 weapon_container 500	100																									
-		army_sniper_2	ceramite_shards 1 weapon_shards 1 lens 1 microelectronics 1	58	1	1.02	heavy_basic_ammo 1 blunt_melee_shards 15 lens 45 microelectronics 145 military_parts_container 500	100																									
-		desert_marksman	rubber 1 weapon_shards 1 blunt_melee_shards 1	30	1	1.02	heavy_basic_ammo 1 weapon_shards 15 rubber 45 blunt_melee_shards 145 weapon_container 500	100																									
-		desert_marksman_2	armor_shards 1 weapon_shards 1 lens 1 blunt_melee_shards 2	40	1	1.02	heavy_basic_ammo 1 weapon_shards 15 blunt_melee_shards 45 weapon_repair_kit 145 military_parts_container 500	100																									
-		tech_marksman	plastic 1 microelectronics 1 lens 1 bulb 1 transformer 1	60	1	1.02	battery_charge 1 bulb 15 transformer 45 microelectronics 145 electrical_parts_container 500	100																									
-		tech_rifle	plastic 1 microelectronics 1 lens 1 bulb 1 capacitor 1	44	1	1.02	battery_charge 1 bulb 15 capacitor 45 microelectronics 145 electrical_parts_container 500	100																									
-		ancm_marksman	ceramite_shards 1 weapon_shards 1 lens 1 microelectronics 1 blunt_melee_shards 1	62	1	1.02	medium_basic_ammo 1 weapon_shards 15 lens 45 microelectronics 145 military_parts_container 500	100																									
-		rail_rifle	ceramite_shards 1 microelectronics 1 capacitor 1 metal_tread 2	54	1	1.02	battery_charge 1 capacitor 15 ceramite_shards 45 microelectronics 145 electrical_parts_container 500	100																									
-		gh_marksman	armor_shards 1 weapon_shards 1 lens 1 blunt_melee_shards 1	48	1	1.02	heavy_basic_ammo 1 weapon_shards 15 lens 45 weapon_repair_kit 145 engineering_parts_container 500	100																									
-		sl_sniper	ceramite_shards 1 microelectronics 1 lens 1 transformer 1 capacitor 1	64	1	1.02	battery_charge 1 lens 15 transformer 45 microelectronics 145 electrical_parts_container 500	100																									
-		sl_marksman	ceramite_shards 1 weapon_shards 1 lens 1 microelectronics 1 blunt_melee_shards 1	70	1	1.02	battery_charge 1 transformer 15 ceramite_shards 45 microelectronics 145 electrical_parts_container 500	100																									
-		dilthey_shock_sniper	ceramite_shards 1 weapon_shards 1 lens 1 microelectronics 1 blunt_melee_shards 1	70	1	1.02	battery_charge 1 blunt_melee_shards 15 ceramite_shards 45 microelectronics 145 electrical_parts_container 500	100																									
-		core_nailmachinegun	rusty_shards 1 coarse_gears 1 spring 1 rod 1	32	1	1.02	miner_bolts_ammo 1 rusty_shards 15 coarse_gears 45 spring 145 engineering_parts_container 500	100																									
-		core_laser	armor_shards 1 plastic 1 circuit_board 1 bulb 1 wire 1	40	1	1.02	battery_charge 1 plastic 15 bulb 45 circuit_board 145 electrical_parts_container 500	100																									
-		desert_hmg	ceramite_shards 1 weapon_shards 1 spring 1 blunt_melee_shards 2	52	1	1.02	heavy_basic_ammo 1 weapon_shards 15 spring 45 ceramite_shards 145 military_parts_container 500	100																									
-		plazma_hmg	ceramite_shards 1 microelectronics 1 wire 1 capacitor 1 transformer 1	70	1	1.02	battery_charge 1 transformer 15 ceramite_shards 45 microelectronics 145 electrical_parts_container 500	100																									
-		spec_hmg	ceramite_shards 1 weapon_shards 1 metal_tread 1 spring 1 blunt_melee_shards 2	62	1	1.02	heavy_basic_ammo 1 weapon_shards 15 spring 45 ceramite_shards 145 military_parts_container 500	100																									
-		pb_shockgun	ceramite_shards 1 microelectronics 2 bulb 1 capacitor 1 transformer 1	70	1	1.02	battery_charge 1 bulb 15 capacitor 45 transformer 145 electrical_parts_container 500	100																									
-		core_disctrower	coarse_gears 1 spring 1 armor_shards 1 rod 1	38	1	1.02	sawblade_ammo 1 coarse_gears 15 spring 45 ceramite_shards 145 engineering_parts_container 500	100																									
-		core_flametrower	coarse_gears 1 metal_tread 1 armor_shards 1 rod 1	36	1	1.02	gas_ammo 1 coarse_gears 15 spring 45 ceramite_shards 145 engineering_parts_container 500	100																									
-		toxic_trower	armor_shards 1 glass 1 circuit_board 1 capacitor 1	48	1	1.02	toxic_ammo 1 armor_shards 20 glass 100 engineering_parts_container 500	100																									
-		church_meltatrower	coarse_gears 2 metal_tread 1 rusty_shards 1 rod 1	56	1	1.02	gas_ammo 1 rusty_shards 15 coarse_gears 45 metal_tread 145 engineering_parts_container 500	100																									
-		regular_launcher	armor_shards 1 weapon_shards 1 spring 1 metal_tread 1 blunt_melee_shards 1	56	1	1.02	powder 1 weapon_shards 15 spring 45 weapon_repair_kit 145 military_parts_container 500	100																									
+		tech_katana	pierce_melee_shards 1 metal_tread 1 plastic 1 rubber 1	32	1	1.02	broken_weapon 2 pierce_melee_shards 20 melee_repair_kit 100 weapon_container 500	90																									
+		pmc_club	blunt_melee_shards 1 rod 1 plastic 1	14	1	1.02	broken_weapon 2 blunt_melee_shards 20 rod 100 tool_container 500	90																									
+		franch_baton	blunt_melee_shards 1 rod 1 bulb 1	24	1	1.02	broken_weapon 2 blunt_melee_shards 20 bulb 100 weapon_container 500	90																									
+		hatchet	pierce_melee_shards 1 blunt_melee_shards 1 rubber 1	24	1	1.02	broken_weapon 2 pierce_melee_shards 20 rusty_shards 100 tool_container 500	90																									
+		spec_hatchet	pierce_melee_shards 1 blunt_melee_shards 1 armor_shards 1	28	1	1.02	broken_weapon 2 pierce_melee_shards 20 melee_repair_kit 100 weapon_container 500	90																									
+		sapper_shovel	rusty_shards 1 pierce_melee_shards 1 rod 1	12	1	1.02	broken_weapon 2 pierce_melee_shards 20 rusty_shards 100 weapon_container 500	90																									
+		army_pistol_2	plastic 1 weapon_shards 1	14	1	1.02	shotgun_shrapnel_ammo 1 weapon_shards 20 spring 100 weapon_container 500	90																									
+		army_pistol_3	plastic 1 weapon_shards 1 metal_tread 1	18	1	1.02	shotgun_shrapnel_ammo 1 weapon_shards 20 weapon_repair_kit 100 weapon_container 500	90																									
+		army_pistol_4	ceramite_shards 1 weapon_shards 1 metal_tread 1	36	1	1.02	shotgun_shrapnel_ammo 1 weapon_shards 15 ceramite_shards 45 weapon_repair_kit 145 military_parts_container 500	90																									
+		pmc_pistol_2	plastic 1 weapon_shards 1	16	1	1.02	medium_basic_ammo 1 weapon_shards 20 spring 100 weapon_container 500	90																									
+		pmc_pistol_3	plastic 1 weapon_shards 1 metal_tread 1 spring 1	18	1	1.02	medium_basic_ammo 1 weapon_shards 20 weapon_repair_kit 100 weapon_container 500	90																									
+		spec_pistol_2	rubber 1 weapon_shards 1 metal_tread 1	24	1	1.02	pistol_basic_ammo 1 weapon_shards 20 spring 100 weapon_container 500	90																									
+		spec_pistol_3	rubber 1 weapon_shards 1 metal_tread 1 blunt_melee_shards 1	38	1	1.02	pistol_basic_ammo 1 weapon_shards 20 weapon_repair_kit 100 weapon_container 500	90																									
+		spec_pistol_rv	ceramite_shards 1 armor_shards 1 weapon_shards 1 circuit_board 1	42	1	1.02	pistol_basic_ammo 1 weapon_shards 15 ceramite_shards 45 circuit_board 145 military_parts_container 500	90																									
+		dark_pistol_2	rubber 1 weapon_shards 1 blunt_melee_shards 1	24	1	1.02	heavy_basic_ammo 1 weapon_shards 20 spring 100 tool_container 500	90																									
+		dark_pistol_3	rubber 1 weapon_shards 1 spring 1 blunt_melee_shards 1	26	1	1.02	heavy_basic_ammo 1 weapon_shards 20 weapon_repair_kit 100 weapon_container 500	90																									
+		dark_pistol_4	ceramite_shards 1 weapon_shards 1 blunt_melee_shards 1	36	1	1.02	heavy_basic_ammo 1 weapon_shards 15 spring 45 weapon_repair_kit 145 weapon_container 500	90																									
+		dark_pistol_5	ceramite_shards 1 weapon_shards 1 spring 1	36	1	1.02	heavy_basic_ammo 1 weapon_shards 15 ceramite_shards 45 weapon_repair_kit 145 military_parts_container 500	90																									
+		rail_pistol_2	rubber 1 circuit_board 1 capacitor 1 metal_tread 1	30	1	1.02	broken_weapon 1 weapon_shards 15 capacitor 45 circuit_board 145 weapon_container 500	90																									
+		rail_pistol_3	rubber 1 microelectronics 1 capacitor 1 metal_tread 1	34	1	1.02	broken_weapon 1 weapon_shards 15 capacitor 45 microelectronics 145 electrical_parts_container 500	90																									
+		tech_pistol_2	plastic 1 circuit_board 1 bulb 1 wire 1	36	1	1.02	battery_charge 1 weapon_shards 15 bulb 45 circuit_board 145 weapon_container 500	90																									
+		tech_pistol_3	plastic 1 microelectronics 1 bulb 1 wire 1	40	1	1.02	battery_charge 1 weapon_shards 15 bulb 45 microelectronics 145 weapon_container 500	90																									
+		petrov_pistol_2	plastic 1 spring 1	20	1	1.02	pistol_basic_ammo 1 weapon_shards 20 spring 100 weapon_container 500	90																									
+		petrov_pistol_3	plastic 1 weapon_shards 1	24	1	1.02	pistol_basic_ammo 1 weapon_shards 20 weapon_repair_kit 100 weapon_container 500	90																									
+		core_nailgun	rusty_shards 1 plastic 1 spring 1	26	1	1.02	miner_bolts_ammo 1 weapon_shards 20 coarse_gears 100 engineering_parts_container 500	90																									
+		ancm_quasi_pistol	ceramite_shards 1 microelectronics 1 venus_weapon_shard 1 wire 1	46	1	1.02	quasi_basic_ammo 1 venus_weapon_shard 15 ceramite_shards 45 microelectronics 145 electrical_parts_container 500	90																									
+		sbn_pistol	armor_shards 1 microelectronics 1 capacitor 1 metal_tread 1	36	1	1.02	battery_charge 1 armor_shards 15 capacitor 45 microelectronics 145 electrical_parts_container 500	90																									
+		daydream_frostgun	plastic 1 circuit_board 2 bulb 1 wire 1	40	1	1.02	battery_charge 1 plastic 15 bulb 45 circuit_board 145 engineering_parts_container 500	90																									
+		gh_pistol	rubber 1 weapon_shards 1 spring 1	32	1	1.02	heavy_basic_ammo 1 weapon_shards 20 spring 100 engineering_parts_container 500	90																									
+		sl_pistol	armor_shards 1 microelectronics 1 bulb 1 wire 1	42	1	1.02	battery_charge 1 armor_shards 15 bulb 45 microelectronics 145 electrical_parts_container 500	90																									
+		franch_pistol	rubber 1 weapon_shards 1 spring 1 metal_tread 1	28	1	1.02	pistol_basic_ammo 1 weapon_shards 20 weapon_repair_kit 100 military_parts_container 500	90																									
+		franch_shock_pistol	ceramite_shards 1 microelectronics 1 bulb 1 capacitor 1 transformer 1	32	1	1.02	battery_charge 1 ceramite_shards 15 capacitor 45 transformer 145 electrical_parts_container 500	90																									
+		dilthey_sound_pistol_1	plastic 1 microelectronics 1 bulb 1	32	1	1.02	battery_charge 1 plastic 15 bulb 45 microelectronics 145 electrical_parts_container 500	90																									
+		dilthey_sound_pistol_2	plastic 1 microelectronics 1 bulb 1 capacitor 1	36	1	1.02	battery_charge 1 plastic 15 bulb 45 microelectronics 145 electrical_parts_container 500	90																									
+		pmc_shotgun	rubber 1 weapon_shards 1 blunt_melee_shards 1	24	1	1.02	shotgun_shrapnel_ammo 1 rubber 20 blunt_melee_shards 100 tool_container 500	90																									
+		pmc_shotgun_2	armor_shards 1 weapon_shards 1 blunt_melee_shards 1	38	1	1.02	shotgun_shrapnel_ammo 1 rubber 15 blunt_melee_shards 45 spring 145 weapon_container 500	90																									
+		dark_shotgun	rubber 1 weapon_shards 1 spring 1 blunt_melee_shards 1	28	1	1.02	shotgun_shrapnel_ammo 1 blunt_melee_shards 20 spring 100 tool_container 500	90																									
+		dark_shotgun_2	armor_shards 1 weapon_shards 1 spring 1 blunt_melee_shards 1	36	1	1.02	shotgun_shrapnel_ammo 1 blunt_melee_shards 15 spring 45 weapon_repair_kit 145 weapon_container 500	90																									
+		dark_shotgun_3	ceramite_shards 1 weapon_shards 1 spring 1 blunt_melee_shards 1	44	1	1.02	shotgun_shrapnel_ammo 1 blunt_melee_shards 15 spring 45 ceramite_shards 145 military_parts_container 500	90																									
+		desert_shotgun_2	rubber 1 weapon_shards 1 spring 1 blunt_melee_shards 1	24	1	1.02	shotgun_shrapnel_ammo 1 blunt_melee_shards 20 spring 100 engineering_parts_container 500	90																									
+		plazma_shotgun	ceramite_shards 2 microelectronics 1 capacitor 1	50	1	1.02	battery_charge 1 capacitor 15 ceramite_shards 45 microelectronics 145 electrical_parts_container 500	90																									
+		spec_shotgun	armor_shards 1 weapon_shards 1 blunt_melee_shards 1	26	1	1.02	shotgun_shrapnel_ammo 1 weapon_shards 15 blunt_melee_shards 45 weapon_repair_kit 145 military_parts_container 500	90																									
+		franch_shotgun	ceramite_shards 1 weapon_shards 1 spring 1 blunt_melee_shards 1	24	1	1.02	shotgun_shrapnel_ammo 1 weapon_shards 15 spring 45 ceramite_shards 145 military_parts_container 500	90																									
+		church_shotgun	ceramite_shards 2 weapon_shards 1 spring 1 blunt_melee_shards 1	50	1	1.02	shotgun_shrapnel_ammo 1 weapon_shards 15 spring 45 ceramite_shards 145 military_parts_container 500	90																									
+		ancm_shotgun	armor_shards 1 ceramite_shards 1 weapon_shards 1 blunt_melee_shards 1	48	1	1.02	shotgun_shrapnel_ammo 1 armor_shards 15 blunt_melee_shards 45 weapon_repair_kit 145 military_parts_container 500	90																									
+		sbn_shotgun	armor_shards 1 microelectronics 1 capacitor 1 metal_tread 1	40	1	1.02	battery_charge 1 armor_shards 15 capacitor 45 microelectronics 145 electrical_parts_container 500	90																									
+		sl_shotgun	ceramite_shards 2 microelectronics 1 capacitor 1	48	1	1.02	battery_charge 1 capacitor 15 ceramite_shards 45 microelectronics 145 electrical_parts_container 500	90																									
+		daydream_toxic_shotgun	bulb 1 microelectronics 1 glass 1 circuit_board 1 metal_tread 1	40	1	1.02	toxic_ammo 1 glass 15 circuit_board 45 microelectronics 145 electrical_parts_container 500	90																									
+		daydream_frost_shotgun	bulb 1 microelectronics 1 glass 1 capacitor 1 transformer 1	48	1	1.02	battery_charge 1 glass 15 transformer 45 microelectronics 145 electrical_parts_container 500	90																									
+		dilthey_sound_shotgun	ceramite_shards 2 microelectronics 1 capacitor 1	40	1	1.02	battery_charge 1 capacitor 15 ceramite_shards 45 microelectronics 145 electrical_parts_container 500	90																									
+		pmc_smg	rubber 1 weapon_shards 1 blunt_melee_shards 1	18	1	1.02	pistol_basic_ammo 1 weapon_shards 20 blunt_melee_shards 100 tool_container 500	90																									
+		pmc_smg_2	rubber 1 weapon_shards 1 spring 1 blunt_melee_shards 1	22	1	1.02	pistol_basic_ammo 1 weapon_shards 20 spring 100 weapon_container 500	90																									
+		pmc_smg_3	rubber 1 weapon_shards 2 spring 1 blunt_melee_shards 1	32	1	1.02	pistol_basic_ammo 1 weapon_shards 20 weapon_repair_kit 100 military_parts_container 500	90																									
+		spec_smg	armor_shards 1 weapon_shards 1 spring 1 blunt_melee_shards 1	28	1	1.02	medium_basic_ammo 1 weapon_shards 20 blunt_melee_shards 100 weapon_container 500	90																									
+		bandit_smg_2	rubber 1 weapon_shards 1 blunt_melee_shards 1	18	1	1.02	shotgun_shrapnel_ammo 1 weapon_shards 20 blunt_melee_shards 100 engineering_parts_container 500	90																									
+		tech_smg	plastic 1 circuit_board 1 bulb 1 wire 1 capacitor 1	48	1	1.02	battery_charge 1 plastic 15 capacitor 45 circuit_board 145 electrical_parts_container 500	90																									
+		plazma_smg	ceramite_shards 1 circuit_board 1 microelectronics 1 transformer 1	42	1	1.02	battery_charge 1 weapon_shards 15 transformer 45 microelectronics 145 electrical_parts_container 500	90																									
+		spec_smg_rv	ceramite_shards 1 weapon_shards 1 spring 1 blunt_melee_shards 1	48	1	1.02	medium_basic_ammo 1 weapon_shards 15 spring 45 ceramite_shards 145 military_parts_container 500	90																									
+		ancm_smg	armor_shards 2 weapon_shards 1 spring 1	36	1	1.02	medium_basic_ammo 1 armor_shards 15 spring 45 weapon_repair_kit 145 military_parts_container 500	90																									
+		grasshopper_smg	ceramite_shards 1 armor_shards 1 weapon_shards 1	40	1	1.02	pistol_basic_ammo 1 weapon_shards 15 armor_shards 45 ceramite_shards 145 military_parts_container 500	90																									
+		franch_smg	rubber 1 weapon_shards 1 spring 2	40	1	1.02	pistol_basic_ammo 1 weapon_shards 15 rubber 45 spring 145 military_parts_container 500	90																									
+		franch_smg_2	ceramite_shards 1 weapon_shards 1 spring 1 blunt_melee_shards 1	40	1	1.02	pistol_basic_ammo 1 weapon_shards 15 spring 45 ceramite_shards 145 military_parts_container 500	90																									
+		franch_shock_smg	ceramite_shards 1 microelectronics 1 bulb 1 capacitor 1 transformer 1	40	1	1.02	battery_charge 1 bulb 15 ceramite_shards 45 microelectronics 145 electrical_parts_container 500	90																									
+		sbn_smg	ceramite_shards 1 microelectronics 1 capacitor 1 metal_tread 1	44	1	1.02	battery_charge 1 weapon_shards 15 capacitor 45 microelectronics 145 electrical_parts_container 500	90																									
+		dilthey_shock_smg	microelectronics 1 bulb 1 capacitor 1 transformer 1	44	1	1.02	battery_charge 1 bulb 15 capacitor 45 transformer 145 electrical_parts_container 500	90																									
+		toxic_smg	plastic 1 glass 1 circuit_board 1 metal_tread 1	26	1	1.02	toxic_ammo 1 plastic 15 glass 45 circuit_board 145 engineering_parts_container 500	90																									
+		pmc_assault	armor_shards 1 weapon_shards 1 lens 1 blunt_melee_shards 1	32	1	1.02	heavy_basic_ammo 1 weapon_shards 15 blunt_melee_shards 45 lens 145 weapon_container 500	90																									
+		spec_assault	ceramite_shards 1 weapon_shards 1 lens 1 blunt_melee_shards 1	42	1	1.02	heavy_basic_ammo 1 weapon_shards 15 lens 45 ceramite_shards 145 weapon_container 500	90																									
+		spec_assault_rv	ceramite_shards 1 armor_shards 1 weapon_shards 1 microelectronics 1 circuit_board 1	52	1	1.02	heavy_basic_ammo 1 weapon_shards 15 lens 45 circuit_board 145 military_parts_container 500	90																									
+		sbn_assault	ceramite_shards 1 microelectronics 1 bulb 1 capacitor 1 transformer 1	42	1	1.02	battery_charge 1 capacitor 15 ceramite_shards 45 microelectronics 145 electrical_parts_container 500	90																									
+		desert_assault	armor_shards 1 weapon_shards 1 spring 1 blunt_melee_shards 1	36	1	1.02	heavy_basic_ammo 1 weapon_shards 15 armor_shards 45 spring 145 weapon_container 500	90																									
+		grasshopper_assault	ceramite_shards 1 armor_shards 1 weapon_shards 1 lens 1	42	1	1.02	heavy_basic_ammo 1 weapon_shards 15 lens 45 ceramite_shards 145 military_parts_container 500	90																									
+		ancm_quasi_assault	armor_shards 1 ceramite_shards 1 microelectronics 1 venus_weapon_shard 1 wire 1	50	1	1.02	quasi_basic_ammo 1 armor_shards 15 venus_weapon_shard 45 quasisamples 145 electrical_parts_container 500	90																									
+		sl_assault	ceramite_shards 1 microelectronics 1 lens 1 transformer 1 capacitor 1	50	1	1.02	battery_charge 1 lens 15 ceramite_shards 45 microelectronics 145 electrical_parts_container 500	90																									
+		gh_assault	armor_shards 1 weapon_shards 1 lens 1 blunt_melee_shards 1	30	1	1.02	heavy_basic_ammo 1 weapon_shards 15 lens 45 weapon_repair_kit 145 engineering_parts_container 500	90																									
+		franch_assault	ceramite_shards 1 armor_shards 1 weapon_shards 1 lens 1	38	1	1.02	heavy_basic_ammo 1 armor_shards 15 lens 45 ceramite_shards 145 military_parts_container 500	90																									
+		dilthey_sound_assault	ceramite_shards 1 microelectronics 1 lens 1 transformer 1 capacitor 1	50	1	1.02	battery_charge 1 lens 15 ceramite_shards 45 transformer 145 electrical_parts_container 500	90																									
+		plazma_assault	ceramite_shards 1 circuit_board 1 microelectronics 1 capacitor 1	44	1	1.02	battery_charge 1 weapon_shards 15 circuit_board 45 microelectronics 145 electrical_parts_container 500	90																									
+		army_sniper	ceramite_shards 1 weapon_shards 1 lens 1 spring 1 blunt_melee_shards 2	54	1	1.02	heavy_basic_ammo 1 blunt_melee_shards 15 lens 45 weapon_repair_kit 145 weapon_container 500	90																									
+		army_sniper_2	ceramite_shards 1 weapon_shards 1 lens 1 microelectronics 1	58	1	1.02	heavy_basic_ammo 1 blunt_melee_shards 15 lens 45 microelectronics 145 military_parts_container 500	90																									
+		desert_marksman	rubber 1 weapon_shards 1 blunt_melee_shards 1	30	1	1.02	heavy_basic_ammo 1 weapon_shards 15 rubber 45 blunt_melee_shards 145 weapon_container 500	90																									
+		desert_marksman_2	armor_shards 1 weapon_shards 1 lens 1 blunt_melee_shards 2	40	1	1.02	heavy_basic_ammo 1 weapon_shards 15 blunt_melee_shards 45 weapon_repair_kit 145 military_parts_container 500	90																									
+		tech_marksman	plastic 1 microelectronics 1 lens 1 bulb 1 transformer 1	60	1	1.02	battery_charge 1 bulb 15 transformer 45 microelectronics 145 electrical_parts_container 500	90																									
+		tech_rifle	plastic 1 microelectronics 1 lens 1 bulb 1 capacitor 1	44	1	1.02	battery_charge 1 bulb 15 capacitor 45 microelectronics 145 electrical_parts_container 500	90																									
+		ancm_marksman	ceramite_shards 1 weapon_shards 1 lens 1 microelectronics 1 blunt_melee_shards 1	62	1	1.02	medium_basic_ammo 1 weapon_shards 15 lens 45 microelectronics 145 military_parts_container 500	90																									
+		rail_rifle	ceramite_shards 1 microelectronics 1 capacitor 1 metal_tread 2	54	1	1.02	battery_charge 1 capacitor 15 ceramite_shards 45 microelectronics 145 electrical_parts_container 500	90																									
+		gh_marksman	armor_shards 1 weapon_shards 1 lens 1 blunt_melee_shards 1	48	1	1.02	heavy_basic_ammo 1 weapon_shards 15 lens 45 weapon_repair_kit 145 engineering_parts_container 500	90																									
+		sl_sniper	ceramite_shards 1 microelectronics 1 lens 1 transformer 1 capacitor 1	64	1	1.02	battery_charge 1 lens 15 transformer 45 microelectronics 145 electrical_parts_container 500	90																									
+		sl_marksman	ceramite_shards 1 weapon_shards 1 lens 1 microelectronics 1 blunt_melee_shards 1	70	1	1.02	battery_charge 1 transformer 15 ceramite_shards 45 microelectronics 145 electrical_parts_container 500	90																									
+		dilthey_shock_sniper	ceramite_shards 1 weapon_shards 1 lens 1 microelectronics 1 blunt_melee_shards 1	70	1	1.02	battery_charge 1 blunt_melee_shards 15 ceramite_shards 45 microelectronics 145 electrical_parts_container 500	90																									
+		core_nailmachinegun	rusty_shards 1 coarse_gears 1 spring 1 rod 1	32	1	1.02	miner_bolts_ammo 1 rusty_shards 15 coarse_gears 45 spring 145 engineering_parts_container 500	90																									
+		core_laser	armor_shards 1 plastic 1 circuit_board 1 bulb 1 wire 1	40	1	1.02	battery_charge 1 plastic 15 bulb 45 circuit_board 145 electrical_parts_container 500	90																									
+		desert_hmg	ceramite_shards 1 weapon_shards 1 spring 1 blunt_melee_shards 2	52	1	1.02	heavy_basic_ammo 1 weapon_shards 15 spring 45 ceramite_shards 145 military_parts_container 500	90																									
+		plazma_hmg	ceramite_shards 1 microelectronics 1 wire 1 capacitor 1 transformer 1	70	1	1.02	battery_charge 1 transformer 15 ceramite_shards 45 microelectronics 145 electrical_parts_container 500	90																									
+		spec_hmg	ceramite_shards 1 weapon_shards 1 metal_tread 1 spring 1 blunt_melee_shards 2	62	1	1.02	heavy_basic_ammo 1 weapon_shards 15 spring 45 ceramite_shards 145 military_parts_container 500	90																									
+		pb_shockgun	ceramite_shards 1 microelectronics 2 bulb 1 capacitor 1 transformer 1	70	1	1.02	battery_charge 1 bulb 15 capacitor 45 transformer 145 electrical_parts_container 500	90																									
+		core_disctrower	coarse_gears 1 spring 1 armor_shards 1 rod 1	38	1	1.02	sawblade_ammo 1 coarse_gears 15 spring 45 ceramite_shards 145 engineering_parts_container 500	90																									
+		core_flametrower	coarse_gears 1 metal_tread 1 armor_shards 1 rod 1	36	1	1.02	gas_ammo 1 coarse_gears 15 spring 45 ceramite_shards 145 engineering_parts_container 500	90																									
+		toxic_trower	armor_shards 1 glass 1 circuit_board 1 capacitor 1	48	1	1.02	toxic_ammo 1 armor_shards 20 glass 100 engineering_parts_container 500	90																									
+		church_meltatrower	coarse_gears 2 metal_tread 1 rusty_shards 1 rod 1	56	1	1.02	gas_ammo 1 rusty_shards 15 coarse_gears 45 metal_tread 145 engineering_parts_container 500	90																									
+		regular_launcher	armor_shards 1 weapon_shards 1 spring 1 metal_tread 1 blunt_melee_shards 1	56	1	1.02	powder 1 weapon_shards 15 spring 45 weapon_repair_kit 145 military_parts_container 500	90																									
 		pistol_burst_ammo	powder 1 gas_ammo 1	0.15	1	1.01																											
 		pistol_expansive_ammo	powder 1 powder 1	0.2	1	1.01																											
 		miner_bolts_ammo	broken_weapon 1	0.1	1	1.01																											
@@ -503,104 +503,104 @@ Id		OutputItem	RequiredItems	ProduceTimeInHours	ModifyStartCost	ModifyStep	Modif
 		cevlar_vest	armor_shards 1 rubber 1 metal_tread 1	24	1	1.01																											
 		cevlar_vest_pockets	cevlar_vest 1 rags 1 tread 1	36	1	1.01																											
 		ceramit_vest	ceramite_shards 1 rubber 1 metal_tread 1	36	1	1.01																											
-		doom_armor	armor_shards 1 ceramite_shards 1 metal_tread 1 capacitor 1	48	1	1.05	armor_shards 1 metal_tread 3 capacitor 9 ceramite_shards 25 armor_container 80	100																									
-		ancom_armor	armor_shards 1 ceramite_shards 1 rubber 2 capacitor 1	52	1	1.05	armor_shards 1 rubber 3 capacitor 9 ceramite_shards 25 robot_parts_container 80	100																									
-		power_armor	armor_shards 1 capacitor 1 metal_tread 1	48	1	1.05	armor_shards 1 metal_tread 3 capacitor 9 armor_repair_kit 25 armor_container 80	100																									
-		realwear_armor	armor_shards 2 ceramite_shards 1 rubber 1 capacitor 1	54	1	1.05	armor_shards 1 rubber 3 capacitor 9 ceramite_shards 25 robot_parts_container 80	100																									
-		smuggler_armor	rusty_shards 1 rubber 1 tread 1	24	1	1.05	armor_shards 1 tread 4 rubber 20 worker_clothing_container 80	100																									
-		solnet_armor	armor_shards 1 ceramite_shards 1 rubber 1 capacitor 2	50	1	1.05	armor_shards 1 rubber 3 capacitor 9 ceramite_shards 25 scientist_clothing_container 80	100																									
-		worker_armor	armor_shards 1 rubber 2 tread 1	30	1	1.05	armor_shards 1 tread 4 rubber 20 worker_clothing_container 80	100																									
-		pmc_armor	armor_shards 1 rags 1 tread 1	18	1	1.05	armor_shards 1 rags 4 tread 20 armor_container 80	100																									
-		security_armor	armor_shards 1 rags 1 tread 2	24	1	1.05	armor_shards 1 rags 4 tread 20 security_clothing_container 80	100																									
-		rw_militia_vest	armor_shards 1 rags 2 tread 1	22	1	1.05	armor_shards 1 rags 4 tread 20 regular_clothing_container 80	100																									
-		rw_warlord_armor	ceramite_shards 2 armor_shards 1 rubber 1 capacitor 1	64	1	1.05	armor_shards 1 capacitor 3 ceramite_shards 9 armor_repair_kit 25 robot_parts_container 80	100																									
-		svn_cap_vest	armor_shards 1 rags 2 tread 1	22	1	1.05	armor_shards 1 rags 4 tread 20 regular_clothing_container 80	100																									
-		svn_heavy_armor	ceramite_shards 2 armor_shards 1 rubber 1 capacitor 1	64	1	1.05	armor_shards 1 capacitor 3 ceramite_shards 9 armor_repair_kit 25 security_clothing_container 80	100																									
-		daydream_chem_vest	rubber 2 plastic 1 tread 1	32	1	1.05	armor_shards 1 rubber 4 plastic 20 scientist_clothing_container 80	100																									
-		daydream_armored_vest	armor_shards 2 rubber 1 plastic 1 tread 1	60	1	1.05	armor_shards 1 rubber 3 plastic 9 ceramite_shards 25 scientist_clothing_container 80	100																									
-		sl_power_armor	armor_shards 1 ceramite_shards 1 rubber 1 capacitor 1 microelectronics 1	62	1	1.05	armor_shards 1 capacitor 3 ceramite_shards 9 microelectronics 25 scientist_clothing_container 80	100																									
-		ancom_police_armor	armor_shards 2 rags 1 tread 1	34	1	1.05	armor_shards 1 rags 4 tread 20 security_clothing_container 80	100																									
-		ancom_agent_armor	rags 2 rubber 2 tread 1	36	1	1.05	armor_shards 1 rags 4 rubber 20 security_clothing_container 80	100																									
-		church_priest_shirt	rags 2 rubber 1 plastic 1 tread 1	34	1	1.05	armor_shards 1 rags 4 plastic 20 armor_container 80	100																									
-		church_power_armor	ceramite_shards 2 capacitor 1 metal_tread 1	40	1	1.05	armor_shards 1 metal_tread 3 capacitor 9 ceramite_shards 25 robot_parts_container 80	100																									
-		pb_vest	rags 2 rusty_shards 1 tread 1	16	1	1.05	armor_shards 1 rags 4 rusty_shards 20 regular_clothing_container 80	100																									
-		pb_heavy_armor	armor_shards 1 ceramite_shards 1 capacitor 1 metal_tread 2	46	1	1.05	armor_shards 1 metal_tread 3 capacitor 9 ceramite_shards 25 miner_clothing_container 80	100																									
-		franch_heavy_armor	armor_shards 1 ceramite_shards 1 rubber 2 capacitor 1	52	1	1.05	armor_shards 1 rubber 3 capacitor 9 ceramite_shards 25 armor_container 80	100																									
-		core_hard_vest	rags 2 rusty_shards 1 tread 1	16	1	1.05	armor_shards 1 rags 4 rusty_shards 20 worker_clothing_container 80	100																									
-		core_power_armor	ceramite_shards 2 armor_shards 2 capacitor 1	64	1	1.05	armor_shards 1 capacitor 3 ceramite_shards 9 armor_repair_kit 25 miner_clothing_container 80	100																									
-		doom_helmet	armor_shards 1 ceramite_shards 1 glass 1 circuit_board 1	48	1	1.05	armor_shards 1 glass 3 ceramite_shards 9 circuit_board 25 armor_container 80	100																									
-		ancom_helmet	armor_shards 1 ceramite_shards 1 glass 1 microelectronics 2	52	1	1.05	armor_shards 1 glass 3 ceramite_shards 9 microelectronics 25 robot_parts_container 80	100																									
-		power_helmet	armor_shards 1 glass 1 circuit_board 1	48	1	1.05	armor_shards 1 glass 3 circuit_board 9 armor_repair_kit 25 armor_container 80	100																									
-		realwear_helmet	armor_shards 2 ceramite_shards 1 glass 1 microelectronics 1	54	1	1.05	armor_shards 1 glass 3 ceramite_shards 9 microelectronics 25 robot_parts_container 80	100																									
-		smuggler_helmet	rusty_shards 1 rubber 1 glass 1	24	1	1.05	armor_shards 1 rubber 4 glass 20 worker_clothing_container 80	100																									
-		solnet_helmet	armor_shards 1 ceramite_shards 1 glass 2 microelectronics 1	50	1	1.05	armor_shards 1 rubber 3 glass 9 ceramite_shards 25 scientist_clothing_container 80	100																									
-		worker_helmet	armor_shards 1 rubber 2 glass 1	30	1	1.05	armor_shards 1 rubber 4 glass 20 worker_clothing_container 80	100																									
-		pmc_helmet	armor_shards 1 plastic 1 glass 1	18	1	1.05	armor_shards 1 plastic 4 glass 20 armor_container 80	100																									
-		rw_militia_helmet	armor_shards 1 plastic 1	22	1	1.05	armor_shards 1 rags 4 plastic 20 armor_container 80	100																									
-		rw_warlord_helmet	ceramite_shards 2 armor_shards 2 glass 1 microelectronics 1	64	1	1.05	armor_shards 1 glass 3 ceramite_shards 9 microelectronics 25 robot_parts_container 80	100																									
-		svn_cap_hat	rags 2 tread 1	22	1	1.05	armor_shards 1 rags 4 tread 20 regular_clothing_container 80	100																									
-		svn_heavy_helmet	ceramite_shards 2 armor_shards 1 glass 1 microelectronics 1	64	1	1.05	armor_shards 1 glass 3 ceramite_shards 9 microelectronics 25 security_clothing_container 80	100																									
-		daydream_chem_helmet	armor_shards 1 rubber 2 glass 1	32	1	1.05	armor_shards 1 rubber 4 glass 20 scientist_clothing_container 80	100																									
-		daydream_armored_helmet	armor_shards 1 ceramite_shards 1 glass 2 microelectronics 1	60	1	1.05	armor_shards 1 glass 3 ceramite_shards 9 microelectronics 25 scientist_clothing_container 80	100																									
-		sl_power_helmet	armor_shards 1 ceramite_shards 1 glass 1 microelectronics 1	62	1	1.05	armor_shards 1 glass 3 ceramite_shards 9 armor_repair_kit 25 scientist_clothing_container 80	100																									
-		ancom_police_mask	armor_shards 1 plastic 1 glass 1	34	1	1.05	armor_shards 1 plastic 4 glass 20 security_clothing_container 80	100																									
-		ancom_agent_mask	armor_shards 2 glass 1	36	1	1.05	armor_shards 1 glass 4 armor_repair_kit 20 security_clothing_container 80	100																									
-		church_priest_helmet	armor_shards 1 glass 2	34	1	1.05	armor_shards 1 glass 4 armor_repair_kit 20 armor_container 80	100																									
-		church_power_helmet	armor_shards 2 glass 1 circuit_board 1	40	1	1.05	armor_shards 1 glass 3 circuit_board 9 armor_repair_kit 25 robot_parts_container 80	100																									
-		pb_hard_hat	rags 2 rusty_shards 1	16	1	1.05	armor_shards 1 rags 4 rusty_shards 20 miner_clothing_container 80	100																									
-		pb_heavy_helmet	armor_shards 1 ceramite_shards 1 glass 1 circuit_board 1	46	1	1.05	armor_shards 1 glass 3 circuit_board 9 ceramite_shards 25 armor_container 80	100																									
-		franch_helmet	armor_shards 1 plastic 2	24	1	1.05	armor_shards 1 plastic 4 armor_repair_kit 20 worker_clothing_container 80	100																									
-		franch_heavy_mask	armor_shards 2 ceramite_shards 1 glass 1 microelectronics 1	52	1	1.05	armor_shards 1 glass 3 ceramite_shards 9 microelectronics 25 armor_container 80	100																									
-		core_hard_hat	rags 2 rusty_shards 1	16	1	1.05	armor_shards 1 rags 4 rusty_shards 20 worker_clothing_container 80	100																									
-		core_power_helmet	ceramite_shards 1 armor_shards 2 glass 1 microelectronics 1	64	1	1.05	armor_shards 1 glass 3 ceramite_shards 9 microelectronics 25 miner_clothing_container 80	100																									
-		balaklava	rags 1 tread 1	10	1	1.05	armor_shards 1 rags 4 tread 20 regular_clothing_container 80	100																									
-		doom_pants	armor_shards 1 ceramite_shards 1 rubber 1 metal_tread 1	48	1	1.05	armor_shards 1 metal_tread 3 rubber 9 ceramite_shards 25 armor_container 80	100																									
-		ancom_pants	armor_shards 1 ceramite_shards 1 rubber 1 plastic 2	52	1	1.05	armor_shards 1 plastic 3 rubber 9 ceramite_shards 25 robot_parts_container 80	100																									
-		power_pants	armor_shards 1 rubber 1 metal_tread 1	48	1	1.05	armor_shards 1 metal_tread 3 rubber 9 armor_repair_kit 25 armor_container 80	100																									
-		realwear_pants	armor_shards 2 ceramite_shards 1 rubber 1 plastic 1	54	1	1.05	armor_shards 1 plastic 3 rubber 9 ceramite_shards 25 robot_parts_container 80	100																									
-		smuggler_pants	rusty_shards 1 rubber 1 tread 1	10	1	1.05	armor_shards 1 tread 4 rubber 20 worker_clothing_container 80	100																									
-		solnet_pants	armor_shards 1 ceramite_shards 1 rubber 2 plastic 1	50	1	1.05	armor_shards 1 rubber 3 plastic 9 ceramite_shards 25 scientist_clothing_container 80	100																									
-		worker_pants	armor_shards 1 rubber 2 tread 1	30	1	1.05	armor_shards 1 tread 4 rubber 20 worker_clothing_container 80	100																									
-		pmc_pants	armor_shards 1 rags 1 tread 1	12	1	1.05	armor_shards 1 rags 4 tread 20 armor_container 80	100																									
-		rw_militia_pants	armor_shards 1 rags 2 tread 1	22	1	1.05	armor_shards 1 rags 4 tread 20 regular_clothing_container 80	100																									
-		rw_warlord_pants	ceramite_shards 2 armor_shards 2 rubber 1	64	1	1.05	armor_shards 1 rubber 3 ceramite_shards 9 armor_repair_kit 25 robot_parts_container 80	100																									
-		svn_cap_pants	armor_shards 1 rags 1	22	1	1.05	armor_shards 1 rags 4 armor_repair_kit 20 regular_clothing_container 80	100																									
-		svn_heavy_pants	ceramite_shards 2 armor_shards 1 rubber 2	64	1	1.05	armor_shards 1 rubber 3 ceramite_shards 9 armor_repair_kit 25 security_clothing_container 80	100																									
-		daydream_chem_pants	armor_shards 1 rubber 2 tread 1	32	1	1.05	armor_shards 1 rubber 4 tread 20 scientist_clothing_container 80	100																									
-		daydream_armored_pants	armor_shards 2 ceramite_shards 1 rubber 1 plastic 1	60	1	1.05	armor_shards 1 rubber 3 plastic 9 ceramite_shards 25 scientist_clothing_container 80	100																									
-		sl_power_pants	armor_shards 1 ceramite_shards 1 rubber 1 plastic 2	62	1	1.05	armor_shards 1 plastic 3 rubber 9 ceramite_shards 25 scientist_clothing_container 80	100																									
-		ancom_police_pants	armor_shards 2 rags 1 tread 1	34	1	1.05	armor_shards 1 rags 4 tread 20 security_clothing_container 80	100																									
-		ancom_agent_pants	armor_shards 2 rubber 1 tread 1	36	1	1.05	armor_shards 1 rags 4 rubber 20 security_clothing_container 80	100																									
-		church_priest_pants	armor_shards 1 rubber 1 tread 2	34	1	1.05	armor_shards 1 tread 4 rubber 20 armor_container 80	100																									
-		church_power_pants	armor_shards 2 rubber 1 metal_tread 1	40	1	1.05	armor_shards 1 rubber 3 metal_tread 9 ceramite_shards 25 robot_parts_container 80	100																									
-		pb_pants	rags 1 rusty_shards 1 tread 1	16	1	1.05	armor_shards 1 rags 4 rusty_shards 20 miner_clothing_container 80	100																									
-		pb_heavy_pants	armor_shards 1 ceramite_shards 1 rubber 1 metal_tread 2	46	1	1.05	armor_shards 1 metal_tread 3 rubber 9 ceramite_shards 25 armor_container 80	100																									
-		franch_pants	armor_shards 2 rags 1 tread 1	24	1	1.05	armor_shards 1 rags 4 tread 20 worker_clothing_container 80	100																									
-		franch_heavy_pants	armor_shards 1 ceramite_shards 1 rubber 2 plastic 1	52	1	1.05	armor_shards 1 plastic 3 rubber 9 ceramite_shards 25 armor_container 80	100																									
-		core_hard_pants	rags 1 rusty_shards 1 tread 1	16	1	1.05	armor_shards 1 rags 4 rusty_shards 20 worker_clothing_container 80	100																									
-		core_power_pants	ceramite_shards 2 armor_shards 1 rubber 2	64	1	1.05	armor_shards 1 rubber 3 ceramite_shards 9 armor_repair_kit 25 miner_clothing_container 80	100																									
-		doom_boots	ceramite_shards 1 armor_shards 1 rubber 1 metal_tread 1	48	1	1.05	armor_shards 1 metal_tread 3 rubber 9 ceramite_shards 25 armor_container 80	100																									
-		ancom_boots	armor_shards 1 ceramite_shards 1 rubber 1 plastic 2	52	1	1.05	armor_shards 1 plastic 3 rubber 9 ceramite_shards 25 robot_parts_container 80	100																									
-		power_boots	armor_shards 1 rubber 1 metal_tread 1	48	1	1.05	armor_shards 1 metal_tread 3 rubber 9 armor_repair_kit 25 armor_container 80	100																									
-		realwear_boots	armor_shards 2 ceramite_shards 1 rubber 1 plastic 1	54	1	1.05	armor_shards 1 plastic 3 rubber 9 ceramite_shards 25 robot_parts_container 80	100																									
-		smuggler_boots	rusty_shards 1 rubber 2	10	1	1.05	armor_shards 1 rags 4 rubber 20 worker_clothing_container 80	100																									
-		solnet_boots	armor_shards 1 ceramite_shards 1 rubber 2 plastic 1	50	1	1.05	armor_shards 1 rubber 3 plastic 9 ceramite_shards 25 scientist_clothing_container 80	100																									
-		worker_boots	armor_shards 1 rubber 2	30	1	1.05	armor_shards 1 rags 4 rubber 20 worker_clothing_container 80	100																									
-		pmc_boots	armor_shards 1 plastic 1 rubber 1	12	1	1.05	armor_shards 1 plastic 4 rubber 20 armor_container 80	100																									
-		rw_warlord_boots	ceramite_shards 2 armor_shards 1 rubber 1 plastic 1	64	1	1.05	armor_shards 1 rubber 3 ceramite_shards 9 armor_repair_kit 25 robot_parts_container 80	100																									
-		svn_heavy_boots	ceramite_shards 1 armor_shards 1 rubber 2 plastic 1	64	1	1.05	armor_shards 1 rubber 3 plastic 9 ceramite_shards 25 security_clothing_container 80	100																									
-		daydream_chem_boots	armor_shards 2 rubber 2	32	1	1.05	armor_shards 1 rubber 3 ceramite_shards 9 armor_repair_kit 25 scientist_clothing_container 80	100																									
-		sl_power_boots	armor_shards 2 ceramite_shards 1 rubber 1 plastic 1	62	1	1.05	armor_shards 1 rubber 3 plastic 9 ceramite_shards 25 scientist_clothing_container 80	100																									
-		ancom_police_boots	armor_shards 2 plastic 1 rubber 1	34	1	1.05	armor_shards 1 plastic 4 rubber 20 security_clothing_container 80	100																									
-		ancom_agent_boots	armor_shards 2 rubber 1	36	1	1.05	armor_shards 1 rubber 4 armor_repair_kit 20 security_clothing_container 80	100																									
-		church_priest_boots	armor_shards 1 rubber 2	34	1	1.05	armor_shards 1 rubber 4 armor_repair_kit 20 armor_container 80	100																									
-		church_power_boots	armor_shards 2 rubber 1 metal_tread 1	40	1	1.05	armor_shards 1 metal_tread 3 rubber 9 armor_repair_kit 25 robot_parts_container 80	100																									
-		pb_boots	rusty_shards 1 plastic 1 rubber 1	16	1	1.05	armor_shards 1 plastic 4 rubber 20 miner_clothing_container 80	100																									
-		pb_heavy_boots	armor_shards 1 ceramite_shards 1 rubber 1 metal_tread 2	46	1	1.05	armor_shards 1 metal_tread 3 rubber 9 ceramite_shards 25 armor_container 80	100																									
-		franch_boots	armor_shards 1 plastic 2 rubber 1	24	1	1.05	armor_shards 1 plastic 4 rubber 20 worker_clothing_container 80	100																									
-		franch_heavy_boots	armor_shards 2 ceramite_shards 1 rubber 1 plastic 1	52	1	1.05	armor_shards 1 plastic 3 rubber 9 ceramite_shards 25 armor_container 80	100																									
-		common_boots	rusty_shards 1 plastic 1 rubber 1	16	1	1.05	armor_shards 1 plastic 4 rusty_shards 20 regular_clothing_container 80	100																									
-		core_power_boots	ceramite_shards 1 armor_shards 1 rubber 1 plastic 2	64	1	1.05	armor_shards 1 rubber 3 plastic 9 ceramite_shards 25 miner_clothing_container 80	100																									
+		doom_armor	armor_shards 1 ceramite_shards 1 metal_tread 1 capacitor 1	48	1	1.05	armor_shards 1 metal_tread 3 capacitor 9 ceramite_shards 25 armor_container 80	60																									
+		ancom_armor	armor_shards 1 ceramite_shards 1 rubber 2 capacitor 1	52	1	1.05	armor_shards 1 rubber 3 capacitor 9 ceramite_shards 25 robot_parts_container 80	60																									
+		power_armor	armor_shards 1 capacitor 1 metal_tread 1	48	1	1.05	armor_shards 1 metal_tread 3 capacitor 9 armor_repair_kit 25 armor_container 80	60																									
+		realwear_armor	armor_shards 2 ceramite_shards 1 rubber 1 capacitor 1	54	1	1.05	armor_shards 1 rubber 3 capacitor 9 ceramite_shards 25 robot_parts_container 80	60																									
+		smuggler_armor	rusty_shards 1 rubber 1 tread 1	24	1	1.05	armor_shards 1 tread 4 rubber 20 worker_clothing_container 80	60																									
+		solnet_armor	armor_shards 1 ceramite_shards 1 rubber 1 capacitor 2	50	1	1.05	armor_shards 1 rubber 3 capacitor 9 ceramite_shards 25 scientist_clothing_container 80	60																									
+		worker_armor	armor_shards 1 rubber 2 tread 1	30	1	1.05	armor_shards 1 tread 4 rubber 20 worker_clothing_container 80	60																									
+		pmc_armor	armor_shards 1 rags 1 tread 1	18	1	1.05	armor_shards 1 rags 4 tread 20 armor_container 80	60																									
+		security_armor	armor_shards 1 rags 1 tread 2	24	1	1.05	armor_shards 1 rags 4 tread 20 security_clothing_container 80	60																									
+		rw_militia_vest	armor_shards 1 rags 2 tread 1	22	1	1.05	armor_shards 1 rags 4 tread 20 regular_clothing_container 80	60																									
+		rw_warlord_armor	ceramite_shards 2 armor_shards 1 rubber 1 capacitor 1	64	1	1.05	armor_shards 1 capacitor 3 ceramite_shards 9 armor_repair_kit 25 robot_parts_container 80	60																									
+		svn_cap_vest	armor_shards 1 rags 2 tread 1	22	1	1.05	armor_shards 1 rags 4 tread 20 regular_clothing_container 80	60																									
+		svn_heavy_armor	ceramite_shards 2 armor_shards 1 rubber 1 capacitor 1	64	1	1.05	armor_shards 1 capacitor 3 ceramite_shards 9 armor_repair_kit 25 security_clothing_container 80	60																									
+		daydream_chem_vest	rubber 2 plastic 1 tread 1	32	1	1.05	armor_shards 1 rubber 4 plastic 20 scientist_clothing_container 80	60																									
+		daydream_armored_vest	armor_shards 2 rubber 1 plastic 1 tread 1	60	1	1.05	armor_shards 1 rubber 3 plastic 9 ceramite_shards 25 scientist_clothing_container 80	60																									
+		sl_power_armor	armor_shards 1 ceramite_shards 1 rubber 1 capacitor 1 microelectronics 1	62	1	1.05	armor_shards 1 capacitor 3 ceramite_shards 9 microelectronics 25 scientist_clothing_container 80	60																									
+		ancom_police_armor	armor_shards 2 rags 1 tread 1	34	1	1.05	armor_shards 1 rags 4 tread 20 security_clothing_container 80	60																									
+		ancom_agent_armor	rags 2 rubber 2 tread 1	36	1	1.05	armor_shards 1 rags 4 rubber 20 security_clothing_container 80	60																									
+		church_priest_shirt	rags 2 rubber 1 plastic 1 tread 1	34	1	1.05	armor_shards 1 rags 4 plastic 20 armor_container 80	60																									
+		church_power_armor	ceramite_shards 2 capacitor 1 metal_tread 1	40	1	1.05	armor_shards 1 metal_tread 3 capacitor 9 ceramite_shards 25 robot_parts_container 80	60																									
+		pb_vest	rags 2 rusty_shards 1 tread 1	16	1	1.05	armor_shards 1 rags 4 rusty_shards 20 regular_clothing_container 80	60																									
+		pb_heavy_armor	armor_shards 1 ceramite_shards 1 capacitor 1 metal_tread 2	46	1	1.05	armor_shards 1 metal_tread 3 capacitor 9 ceramite_shards 25 miner_clothing_container 80	60																									
+		franch_heavy_armor	armor_shards 1 ceramite_shards 1 rubber 2 capacitor 1	52	1	1.05	armor_shards 1 rubber 3 capacitor 9 ceramite_shards 25 armor_container 80	60																									
+		core_hard_vest	rags 2 rusty_shards 1 tread 1	16	1	1.05	armor_shards 1 rags 4 rusty_shards 20 worker_clothing_container 80	60																									
+		core_power_armor	ceramite_shards 2 armor_shards 2 capacitor 1	64	1	1.05	armor_shards 1 capacitor 3 ceramite_shards 9 armor_repair_kit 25 miner_clothing_container 80	60																									
+		doom_helmet	armor_shards 1 ceramite_shards 1 glass 1 circuit_board 1	48	1	1.05	armor_shards 1 glass 3 ceramite_shards 9 circuit_board 25 armor_container 80	60																									
+		ancom_helmet	armor_shards 1 ceramite_shards 1 glass 1 microelectronics 2	52	1	1.05	armor_shards 1 glass 3 ceramite_shards 9 microelectronics 25 robot_parts_container 80	60																									
+		power_helmet	armor_shards 1 glass 1 circuit_board 1	48	1	1.05	armor_shards 1 glass 3 circuit_board 9 armor_repair_kit 25 armor_container 80	60																									
+		realwear_helmet	armor_shards 2 ceramite_shards 1 glass 1 microelectronics 1	54	1	1.05	armor_shards 1 glass 3 ceramite_shards 9 microelectronics 25 robot_parts_container 80	60																									
+		smuggler_helmet	rusty_shards 1 rubber 1 glass 1	24	1	1.05	armor_shards 1 rubber 4 glass 20 worker_clothing_container 80	60																									
+		solnet_helmet	armor_shards 1 ceramite_shards 1 glass 2 microelectronics 1	50	1	1.05	armor_shards 1 rubber 3 glass 9 ceramite_shards 25 scientist_clothing_container 80	60																									
+		worker_helmet	armor_shards 1 rubber 2 glass 1	30	1	1.05	armor_shards 1 rubber 4 glass 20 worker_clothing_container 80	60																									
+		pmc_helmet	armor_shards 1 plastic 1 glass 1	18	1	1.05	armor_shards 1 plastic 4 glass 20 armor_container 80	60																									
+		rw_militia_helmet	armor_shards 1 plastic 1	22	1	1.05	armor_shards 1 rags 4 plastic 20 armor_container 80	60																									
+		rw_warlord_helmet	ceramite_shards 2 armor_shards 2 glass 1 microelectronics 1	64	1	1.05	armor_shards 1 glass 3 ceramite_shards 9 microelectronics 25 robot_parts_container 80	60																									
+		svn_cap_hat	rags 2 tread 1	22	1	1.05	armor_shards 1 rags 4 tread 20 regular_clothing_container 80	60																									
+		svn_heavy_helmet	ceramite_shards 2 armor_shards 1 glass 1 microelectronics 1	64	1	1.05	armor_shards 1 glass 3 ceramite_shards 9 microelectronics 25 security_clothing_container 80	60																									
+		daydream_chem_helmet	armor_shards 1 rubber 2 glass 1	32	1	1.05	armor_shards 1 rubber 4 glass 20 scientist_clothing_container 80	60																									
+		daydream_armored_helmet	armor_shards 1 ceramite_shards 1 glass 2 microelectronics 1	60	1	1.05	armor_shards 1 glass 3 ceramite_shards 9 microelectronics 25 scientist_clothing_container 80	60																									
+		sl_power_helmet	armor_shards 1 ceramite_shards 1 glass 1 microelectronics 1	62	1	1.05	armor_shards 1 glass 3 ceramite_shards 9 armor_repair_kit 25 scientist_clothing_container 80	60																									
+		ancom_police_mask	armor_shards 1 plastic 1 glass 1	34	1	1.05	armor_shards 1 plastic 4 glass 20 security_clothing_container 80	60																									
+		ancom_agent_mask	armor_shards 2 glass 1	36	1	1.05	armor_shards 1 glass 4 armor_repair_kit 20 security_clothing_container 80	60																									
+		church_priest_helmet	armor_shards 1 glass 2	34	1	1.05	armor_shards 1 glass 4 armor_repair_kit 20 armor_container 80	60																									
+		church_power_helmet	armor_shards 2 glass 1 circuit_board 1	40	1	1.05	armor_shards 1 glass 3 circuit_board 9 armor_repair_kit 25 robot_parts_container 80	60																									
+		pb_hard_hat	rags 2 rusty_shards 1	16	1	1.05	armor_shards 1 rags 4 rusty_shards 20 miner_clothing_container 80	60																									
+		pb_heavy_helmet	armor_shards 1 ceramite_shards 1 glass 1 circuit_board 1	46	1	1.05	armor_shards 1 glass 3 circuit_board 9 ceramite_shards 25 armor_container 80	60																									
+		franch_helmet	armor_shards 1 plastic 2	24	1	1.05	armor_shards 1 plastic 4 armor_repair_kit 20 worker_clothing_container 80	60																									
+		franch_heavy_mask	armor_shards 2 ceramite_shards 1 glass 1 microelectronics 1	52	1	1.05	armor_shards 1 glass 3 ceramite_shards 9 microelectronics 25 armor_container 80	60																									
+		core_hard_hat	rags 2 rusty_shards 1	16	1	1.05	armor_shards 1 rags 4 rusty_shards 20 worker_clothing_container 80	60																									
+		core_power_helmet	ceramite_shards 1 armor_shards 2 glass 1 microelectronics 1	64	1	1.05	armor_shards 1 glass 3 ceramite_shards 9 microelectronics 25 miner_clothing_container 80	60																									
+		balaklava	rags 1 tread 1	10	1	1.05	armor_shards 1 rags 4 tread 20 regular_clothing_container 80	60																									
+		doom_pants	armor_shards 1 ceramite_shards 1 rubber 1 metal_tread 1	48	1	1.05	armor_shards 1 metal_tread 3 rubber 9 ceramite_shards 25 armor_container 80	60																									
+		ancom_pants	armor_shards 1 ceramite_shards 1 rubber 1 plastic 2	52	1	1.05	armor_shards 1 plastic 3 rubber 9 ceramite_shards 25 robot_parts_container 80	60																									
+		power_pants	armor_shards 1 rubber 1 metal_tread 1	48	1	1.05	armor_shards 1 metal_tread 3 rubber 9 armor_repair_kit 25 armor_container 80	60																									
+		realwear_pants	armor_shards 2 ceramite_shards 1 rubber 1 plastic 1	54	1	1.05	armor_shards 1 plastic 3 rubber 9 ceramite_shards 25 robot_parts_container 80	60																									
+		smuggler_pants	rusty_shards 1 rubber 1 tread 1	10	1	1.05	armor_shards 1 tread 4 rubber 20 worker_clothing_container 80	60																									
+		solnet_pants	armor_shards 1 ceramite_shards 1 rubber 2 plastic 1	50	1	1.05	armor_shards 1 rubber 3 plastic 9 ceramite_shards 25 scientist_clothing_container 80	60																									
+		worker_pants	armor_shards 1 rubber 2 tread 1	30	1	1.05	armor_shards 1 tread 4 rubber 20 worker_clothing_container 80	60																									
+		pmc_pants	armor_shards 1 rags 1 tread 1	12	1	1.05	armor_shards 1 rags 4 tread 20 armor_container 80	60																									
+		rw_militia_pants	armor_shards 1 rags 2 tread 1	22	1	1.05	armor_shards 1 rags 4 tread 20 regular_clothing_container 80	60																									
+		rw_warlord_pants	ceramite_shards 2 armor_shards 2 rubber 1	64	1	1.05	armor_shards 1 rubber 3 ceramite_shards 9 armor_repair_kit 25 robot_parts_container 80	60																									
+		svn_cap_pants	armor_shards 1 rags 1	22	1	1.05	armor_shards 1 rags 4 armor_repair_kit 20 regular_clothing_container 80	60																									
+		svn_heavy_pants	ceramite_shards 2 armor_shards 1 rubber 2	64	1	1.05	armor_shards 1 rubber 3 ceramite_shards 9 armor_repair_kit 25 security_clothing_container 80	60																									
+		daydream_chem_pants	armor_shards 1 rubber 2 tread 1	32	1	1.05	armor_shards 1 rubber 4 tread 20 scientist_clothing_container 80	60																									
+		daydream_armored_pants	armor_shards 2 ceramite_shards 1 rubber 1 plastic 1	60	1	1.05	armor_shards 1 rubber 3 plastic 9 ceramite_shards 25 scientist_clothing_container 80	60																									
+		sl_power_pants	armor_shards 1 ceramite_shards 1 rubber 1 plastic 2	62	1	1.05	armor_shards 1 plastic 3 rubber 9 ceramite_shards 25 scientist_clothing_container 80	60																									
+		ancom_police_pants	armor_shards 2 rags 1 tread 1	34	1	1.05	armor_shards 1 rags 4 tread 20 security_clothing_container 80	60																									
+		ancom_agent_pants	armor_shards 2 rubber 1 tread 1	36	1	1.05	armor_shards 1 rags 4 rubber 20 security_clothing_container 80	60																									
+		church_priest_pants	armor_shards 1 rubber 1 tread 2	34	1	1.05	armor_shards 1 tread 4 rubber 20 armor_container 80	60																									
+		church_power_pants	armor_shards 2 rubber 1 metal_tread 1	40	1	1.05	armor_shards 1 rubber 3 metal_tread 9 ceramite_shards 25 robot_parts_container 80	60																									
+		pb_pants	rags 1 rusty_shards 1 tread 1	16	1	1.05	armor_shards 1 rags 4 rusty_shards 20 miner_clothing_container 80	60																									
+		pb_heavy_pants	armor_shards 1 ceramite_shards 1 rubber 1 metal_tread 2	46	1	1.05	armor_shards 1 metal_tread 3 rubber 9 ceramite_shards 25 armor_container 80	60																									
+		franch_pants	armor_shards 2 rags 1 tread 1	24	1	1.05	armor_shards 1 rags 4 tread 20 worker_clothing_container 80	60																									
+		franch_heavy_pants	armor_shards 1 ceramite_shards 1 rubber 2 plastic 1	52	1	1.05	armor_shards 1 plastic 3 rubber 9 ceramite_shards 25 armor_container 80	60																									
+		core_hard_pants	rags 1 rusty_shards 1 tread 1	16	1	1.05	armor_shards 1 rags 4 rusty_shards 20 worker_clothing_container 80	60																									
+		core_power_pants	ceramite_shards 2 armor_shards 1 rubber 2	64	1	1.05	armor_shards 1 rubber 3 ceramite_shards 9 armor_repair_kit 25 miner_clothing_container 80	60																									
+		doom_boots	ceramite_shards 1 armor_shards 1 rubber 1 metal_tread 1	48	1	1.05	armor_shards 1 metal_tread 3 rubber 9 ceramite_shards 25 armor_container 80	60																									
+		ancom_boots	armor_shards 1 ceramite_shards 1 rubber 1 plastic 2	52	1	1.05	armor_shards 1 plastic 3 rubber 9 ceramite_shards 25 robot_parts_container 80	60																									
+		power_boots	armor_shards 1 rubber 1 metal_tread 1	48	1	1.05	armor_shards 1 metal_tread 3 rubber 9 armor_repair_kit 25 armor_container 80	60																									
+		realwear_boots	armor_shards 2 ceramite_shards 1 rubber 1 plastic 1	54	1	1.05	armor_shards 1 plastic 3 rubber 9 ceramite_shards 25 robot_parts_container 80	60																									
+		smuggler_boots	rusty_shards 1 rubber 2	10	1	1.05	armor_shards 1 rags 4 rubber 20 worker_clothing_container 80	60																									
+		solnet_boots	armor_shards 1 ceramite_shards 1 rubber 2 plastic 1	50	1	1.05	armor_shards 1 rubber 3 plastic 9 ceramite_shards 25 scientist_clothing_container 80	60																									
+		worker_boots	armor_shards 1 rubber 2	30	1	1.05	armor_shards 1 rags 4 rubber 20 worker_clothing_container 80	60																									
+		pmc_boots	armor_shards 1 plastic 1 rubber 1	12	1	1.05	armor_shards 1 plastic 4 rubber 20 armor_container 80	60																									
+		rw_warlord_boots	ceramite_shards 2 armor_shards 1 rubber 1 plastic 1	64	1	1.05	armor_shards 1 rubber 3 ceramite_shards 9 armor_repair_kit 25 robot_parts_container 80	60																									
+		svn_heavy_boots	ceramite_shards 1 armor_shards 1 rubber 2 plastic 1	64	1	1.05	armor_shards 1 rubber 3 plastic 9 ceramite_shards 25 security_clothing_container 80	60																									
+		daydream_chem_boots	armor_shards 2 rubber 2	32	1	1.05	armor_shards 1 rubber 3 ceramite_shards 9 armor_repair_kit 25 scientist_clothing_container 80	60																									
+		sl_power_boots	armor_shards 2 ceramite_shards 1 rubber 1 plastic 1	62	1	1.05	armor_shards 1 rubber 3 plastic 9 ceramite_shards 25 scientist_clothing_container 80	60																									
+		ancom_police_boots	armor_shards 2 plastic 1 rubber 1	34	1	1.05	armor_shards 1 plastic 4 rubber 20 security_clothing_container 80	60																									
+		ancom_agent_boots	armor_shards 2 rubber 1	36	1	1.05	armor_shards 1 rubber 4 armor_repair_kit 20 security_clothing_container 80	60																									
+		church_priest_boots	armor_shards 1 rubber 2	34	1	1.05	armor_shards 1 rubber 4 armor_repair_kit 20 armor_container 80	60																									
+		church_power_boots	armor_shards 2 rubber 1 metal_tread 1	40	1	1.05	armor_shards 1 metal_tread 3 rubber 9 armor_repair_kit 25 robot_parts_container 80	60																									
+		pb_boots	rusty_shards 1 plastic 1 rubber 1	16	1	1.05	armor_shards 1 plastic 4 rubber 20 miner_clothing_container 80	60																									
+		pb_heavy_boots	armor_shards 1 ceramite_shards 1 rubber 1 metal_tread 2	46	1	1.05	armor_shards 1 metal_tread 3 rubber 9 ceramite_shards 25 armor_container 80	60																									
+		franch_boots	armor_shards 1 plastic 2 rubber 1	24	1	1.05	armor_shards 1 plastic 4 rubber 20 worker_clothing_container 80	60																									
+		franch_heavy_boots	armor_shards 2 ceramite_shards 1 rubber 1 plastic 1	52	1	1.05	armor_shards 1 plastic 3 rubber 9 ceramite_shards 25 armor_container 80	60																									
+		common_boots	rusty_shards 1 plastic 1 rubber 1	16	1	1.05	armor_shards 1 plastic 4 rusty_shards 20 regular_clothing_container 80	60																									
+		core_power_boots	ceramite_shards 1 armor_shards 1 rubber 1 plastic 2	64	1	1.05	armor_shards 1 rubber 3 plastic 9 ceramite_shards 25 miner_clothing_container 80	60																									
 		armor_repair_kit	tread 1 rubber 1 armor_shards 1 ceramite_shards 1	24	1	1.01																											
 		weapon_repair_kit	plastic 1 weapon_shards 1 lens 1 microelectronics 1	24	1	1.01																											
 		melee_repair_kit	metal_tread 1 pierce_melee_shards 1 blunt_melee_shards 1 rod 1	24	1	1.01																											
@@ -614,10 +614,10 @@ Id		OutputItem	RequiredItems	ProduceTimeInHours	ModifyStartCost	ModifyStep	Modif
 		stationary_turret	spec_hmg 1 armor_shards 1 weapon_shards 1 circuit_board 1	52	1	1.01																											
 		fire_turret	miner_flametrower 1 armor_shards 1 weapon_shards 1 circuit_board 1	64	1	1.01																											
 		energy_turret	tech_marksman 1 armor_shards 1 weapon_shards 1 circuit_board 2	80	1	1.01																											
-		dilthey_medium_helmet	armor_shards 1 ceramite_shards 1 glass 1 microelectronics 1 metal_tread 1 plastic 1	46	1	1.05	armor_shards 1 glass 3 ceramite_shards 9 circuit_board 25 armor_container 80	100																									
-		dilthey_medium_armor	armor_shards 1 ceramite_shards 1 capacitor 1 transformer 1 metal_tread 1 plastic 1	46	1	1.05	armor_shards 1 metal_tread 3 capacitor 9 ceramite_shards 25 armor_container 80	100																									
-		dilthey_medium_pants	armor_shards 1 ceramite_shards 1 capacitor 1 metal_tread 1 plastic	46	1	1.05	armor_shards 1 metal_tread 3 plastic 9 ceramite_shards 25 armor_container 80	100																									
-		dilthey_medium_boots	armor_shards 1 ceramite_shards 1 capacitor 1 metal_tread 1 plastic	46	1	1.05	armor_shards 1 metal_tread 3 plastic 9 ceramite_shards 25 armor_container 80	100																									
+		dilthey_medium_helmet	armor_shards 1 ceramite_shards 1 glass 1 microelectronics 1 metal_tread 1 plastic 1	46	1	1.05	armor_shards 1 glass 3 ceramite_shards 9 circuit_board 25 armor_container 80	60																									
+		dilthey_medium_armor	armor_shards 1 ceramite_shards 1 capacitor 1 transformer 1 metal_tread 1 plastic 1	46	1	1.05	armor_shards 1 metal_tread 3 capacitor 9 ceramite_shards 25 armor_container 80	60																									
+		dilthey_medium_pants	armor_shards 1 ceramite_shards 1 capacitor 1 metal_tread 1 plastic	46	1	1.05	armor_shards 1 metal_tread 3 plastic 9 ceramite_shards 25 armor_container 80	60																									
+		dilthey_medium_boots	armor_shards 1 ceramite_shards 1 capacitor 1 metal_tread 1 plastic	46	1	1.05	armor_shards 1 metal_tread 3 plastic 9 ceramite_shards 25 armor_container 80	60																									
 #end																																	
 																																	
 #itemexpire																																	
