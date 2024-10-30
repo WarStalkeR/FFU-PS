@@ -1,102 +1,106 @@
-#datadisks							
-Id		Price	Weight	InventoryWidthSize	UnlockType	UnlockIds	
-+itemChip		100	0.1	1	ProductionItem	broken_weapon plastic powder glass acid tread	
-//+mediumItemChip		200	0.1	1	ProductionItem		
-//+highItemChip		400	0.1	1	ProductionItem		
-#end							
-							
-#itemtransformation							
-Id		OutputItems					
-rags		tread tread					
-#end							
-							
-#itemreceipts							
-Id		OutputItem	RequiredItems	ProduceTimeInHours	ModifyStartCost	ModifyStep	ModifyItemsGrades
-// Basic Resources							
-		broken_weapon		0.5	1	1.01	
-		plastic		0.5	1	1.01	
-		powder		0.5	1	1.01	
-		glass		0.5	1	1.01	
-		acid		0.5	1	1.01	
-		tread		0.5	1	1.01	
-// Intermediate Resources							
-		metal_tread	broken_weapon broken_weapon	2	1	1.01	
-		tape	plastic tread	2	1	1.01	
-		rubber	plastic acid	2	1	1.01	
-		circuit_board	plastic plastic	2	1	1.01	
-		poppy_box	powder glass	2	1	1.01	
-		spring	broken_weapon plastic	2	1	1.01	
-		rags	tread tread	2	1	1.01	
-		rusty_shards	broken_weapon glass	2	1	1.01	
-		coarse_gears	broken_weapon acid	2	1	1.01	
-		rod	broken_weapon powder	2	1	1.01	
-// Advanced Resources							
-		wire	metal_tread rubber tread	8	1	1.01	
-		bulb	metal_tread glass glass acid	8	1	1.01	
-		glassBottle	rubber glass glass acid	8	1	1.01	
-		tin	rusty_shards rubber broken_weapon	8	1	1.01	
-		lens	rags glass glass acid	8	1	1.01	
-		explosives	gas_ammo rubber powder	8	1	1.01	
-		armor_shards	rusty_shards rusty_shards acid	8	1	1.01	
-		weapon_shards	coarse_gears spring broken_weapon	8	1	1.01	
-		blunt_melee_shards	rod rubber broken_weapon	8	1	1.01	
-		pierce_melee_shards	rod toxic_ammo broken_weapon	8	1	1.01	
-		microelectronics	circuit_board metal_tread acid	8	1	1.01	
-		ceramite_shards	rusty_shards toxic_ammo plastic	8	1	1.01	
-		capacitor	rod metal_tread plastic	8	1	1.01	
-// Complex Resources							
-		organsBox		24	1	1.01	
-		transformer		24	1	1.01	
-		ai_module		24	1	1.01	
-		prototype_schematics		24	1	1.01	
-		management_unit		24	1	1.01	
-		darknet_unit		24	1	1.01	
-		military_unit		24	1	1.01	
-		memory_software		24	1	1.01	
-		entertainment_software		24	1	1.01	
-		expert_disk		24	1	1.01	
-		precious_metals		24	1	1.01	
-		gunbang_magazine		24	1	1.01	
-// Assembled Resources							
-		cyborg_head		48	1	1.01	
-		communication_relay		48	1	1.01	
-		geoscanner_device		48	1	1.01	
-		welding_machine_device		48	1	1.01	
-		chemical_analyzer		48	1	1.01	
-		hydraulic_pump		48	1	1.01	
-		quasiresearch_disk		48	1	1.01	
-		research_disk		48	1	1.01	
-		quasisamples		48	1	1.01	
-		biomass_tank		48	1	1.01	
-// Finalized Produce							
-		medical_equipment		96	1	1.01	
-		scientific_equipment		96	1	1.01	
-		mining_equipment		96	1	1.01	
-		construction_equipment		96	1	1.01	
-		packaged_industrial_robot		96	1	1.01	
-		packaged_security_robot		96	1	1.01	
-		packaged_recreational_robot		96	1	1.01	
-// Container Packing							
-		drug_cargo		72	1	1.01	
-		medical_components		72	1	1.01	
-		regular_food_container		72	1	1.01	
-		military_food_container		72	1	1.01	
-		luxury_food_container		72	1	1.01	
-		water_container		72	1	1.01	
-		alcogol_container		72	1	1.01	
-		regular_clothing_container		72	1	1.01	
-		miner_clothing_container		72	1	1.01	
-		worker_clothing_container		72	1	1.01	
-		scientist_clothing_container		72	1	1.01	
-		security_clothing_container		72	1	1.01	
-		weapon_container		72	1	1.01	
-		armor_container		72	1	1.01	
-		tool_container		72	1	1.01	
-		robot_parts_container		72	1	1.01	
-		electrical_parts_container		72	1	1.01	
-		military_parts_container		72	1	1.01	
-		engineering_parts_container		72	1	1.01	
-// Ammunition							
-		gas_ammo	powder acid	0.7	1	1.01	
-		toxic_ammo	acid acid	0.7	1	1.01	
-#end							
+#datadisks								
+Id		Price	Weight	InventoryWidthSize	UnlockType	UnlockIds		
+//+itemChip		100	0.1	1	ProductionItem	broken_weapon plastic powder glass acid tread gas_ammo toxic_ammo water		
+//+itemChip		100	0.1	1	ProductionItem	metal_tread tape rubber circuit_board poppy_box spring rags rusty_shards coarse_gears rod 		
+//+mediumItemChip		200	0.1	1	ProductionItem	wire bulb glassBottle tin lens explosives armor_shards weapon_shards blunt_melee_shards pierce_melee_shards microelectronics ceramite_shards capacitor		
+//+mediumItemChip		200	0.1	1	ProductionItem	organsBox transformer ai_module prototype_schematics management_unit darknet_unit military_unit memory_software entertainment_software expert_disk precious_metals gunbang_magazine		
+//+highItemChip		400	0.1	1	ProductionItem	cyborg_head communication_relay geoscanner_device welding_machine_device chemical_analyzer hydraulic_pump quasiresearch_disk research_disk quasisamples biomass_tank		
+//+highItemChip		400	0.1	1	ProductionItem	medical_equipment scientific_equipment mining_equipment construction_equipment packaged_industrial_robot packaged_security_robot packaged_recreational_robot		
+//+highItemChip		400	0.1	1	ProductionItem	drug_cargo medical_components regular_food_container military_food_container luxury_food_container water_container alcogol_container regular_clothing_container miner_clothing_container worker_clothing_container scientist_clothing_container security_clothing_container weapon_container armor_container tool_container robot_parts_container electrical_parts_container military_parts_container engineering_parts_container		
+#end								
+								
+#itemtransformation								
+Id		OutputItems						
+rags		tread 2						
+#end								
+								
+#itemreceipts								
+Id		OutputItem	RequiredItems	ProduceTimeInHours	ModifyStartCost	ModifyStep	ModifyItemsGrades	ModifyLevelLimit
+// Basic Resources								
+		broken_weapon		0.5	1	1.01		
+		plastic		0.5	1	1.01		
+		powder		0.5	1	1.01		
+		glass		0.5	1	1.01		
+		acid		0.5	1	1.01		
+		tread		0.5	1	1.01		
+		water		0.5	1	1.01		
+		gas_ammo	powder 1 water 1	0.5	1	1.01		
+		toxic_ammo	acid 2	0.5	1	1.01		
+// Intermediate Resources								
+		metal_tread	broken_weapon 2	2	1	1.01		
+		tape	plastic 1 tread 1	2	1	1.01		
+		rubber	plastic 1 acid 1	2	1	1.01		
+		circuit_board	plastic 1 plastic 1	2	1	1.01		
+		poppy_box	powder 1 glass 1	2	1	1.01		
+		spring	broken_weapon 1 plastic 1	2	1	1.01		
+		rags	tread 1 tread 1	2	1	1.01		
+		rusty_shards	broken_weapon 1 glass 1	2	1	1.01		
+		coarse_gears	broken_weapon 1 acid 1	2	1	1.01		
+		rod	broken_weapon 1 powder 1	2	1	1.01		
+// Advanced Resources								
+		wire	metal_tread 1 rubber 1 tread 1	8	1	1.01		
+		bulb	metal_tread 1 glass 2 acid 1	8	1	1.01		
+		glassBottle	rubber 1 glass 1 acid 1 water 1	8	1	1.01		
+		tin	rusty_shards 1 rubber 1 broken_weapon 1	8	1	1.01		
+		lens	rags 1 glass 1 acid 1 water 1	8	1	1.01		
+		explosives	gas_ammo 1 rubber 1 powder 1	8	1	1.01		
+		armor_shards	rusty_shards 1 rusty_shards 1 acid 1	8	1	1.01		
+		weapon_shards	coarse_gears 1 spring 1 broken_weapon 1	8	1	1.01		
+		blunt_melee_shards	rod 1 rubber 1 broken_weapon 1	8	1	1.01		
+		pierce_melee_shards	rod 1 water 1 broken_weapon 1	8	1	1.01		
+		microelectronics	circuit_board 1 metal_tread 1 acid 1	8	1	1.01		
+		ceramite_shards	rusty_shards 1 toxic_ammo 1 plastic 1	8	1	1.01		
+		capacitor	rod 1 metal_tread 1 plastic 1	8	1	1.01		
+// Complex Resources								
+		organsBox		24	1	1.01		
+		transformer		24	1	1.01		
+		ai_module		24	1	1.01		
+		prototype_schematics		24	1	1.01		
+		management_unit		24	1	1.01		
+		darknet_unit		24	1	1.01		
+		military_unit		24	1	1.01		
+		memory_software		24	1	1.01		
+		entertainment_software		24	1	1.01		
+		expert_disk		24	1	1.01		
+		precious_metals		24	1	1.01		
+		gunbang_magazine		24	1	1.01		
+// Assembled Resources								
+		cyborg_head		48	1	1.01		
+		communication_relay		48	1	1.01		
+		geoscanner_device		48	1	1.01		
+		welding_machine_device		48	1	1.01		
+		chemical_analyzer		48	1	1.01		
+		hydraulic_pump		48	1	1.01		
+		quasiresearch_disk		48	1	1.01		
+		research_disk		48	1	1.01		
+		quasisamples		48	1	1.01		
+		biomass_tank		48	1	1.01		
+// Finalized Produce								
+		medical_equipment		96	1	1.01		
+		scientific_equipment		96	1	1.01		
+		mining_equipment		96	1	1.01		
+		construction_equipment		96	1	1.01		
+		packaged_industrial_robot		96	1	1.01		
+		packaged_security_robot		96	1	1.01		
+		packaged_recreational_robot		96	1	1.01		
+// Container Packing								
+		drug_cargo		72	1	1.01		
+		medical_components		72	1	1.01		
+		regular_food_container		72	1	1.01		
+		military_food_container		72	1	1.01		
+		luxury_food_container		72	1	1.01		
+		water_container		72	1	1.01		
+		alcogol_container		72	1	1.01		
+		regular_clothing_container		72	1	1.01		
+		miner_clothing_container		72	1	1.01		
+		worker_clothing_container		72	1	1.01		
+		scientist_clothing_container		72	1	1.01		
+		security_clothing_container		72	1	1.01		
+		weapon_container		72	1	1.01		
+		armor_container		72	1	1.01		
+		tool_container		72	1	1.01		
+		robot_parts_container		72	1	1.01		
+		electrical_parts_container		72	1	1.01		
+		military_parts_container		72	1	1.01		
+		engineering_parts_container		72	1	1.01		
+#end								

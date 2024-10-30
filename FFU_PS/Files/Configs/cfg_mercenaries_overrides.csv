@@ -1,28 +1,29 @@
-#mercenary_profiles																		
-Id	ModifyStartCost	ModifyStep	Health	ResistSheet	WoundSlots	MeleeDamage	MeleeAccuracy	RangeAccuracy	ReceiveAmputationChance	ReceiveWoundChanceMult	AttackWoundChanceMult	Dodge	Los	StarvationLimit	PainThresholdLimit	PainThresholdRegen	Gender	TalentPerkId
-francis_reid_daly	20	0.2	130	blunt 0 pierce 0 lacer 0 fire 0 cold 0 poison 0 shock 0 beam 0	HumanHead HumanShoulder HumanArm HumanThigh HumanFeet HumanChest HumanBody HumanStomach HumanKnee	blunt 5 10 crit 1.70 critchance 0.2	0.7	0.6	0.04	1	1	0.15	8	2000	10	1	Male	talent_weapon_durability
-victoria_boudicca	20	0.2	100	blunt 0 pierce 0 lacer 0 fire 0 cold 0 poison 0 shock 0 beam 0	HumanHead HumanShoulder HumanArm HumanThigh HumanFeet HumanChest HumanBody HumanStomach HumanKnee	blunt 5 10 crit 1.70 critchance 0.3	0.6	0.65	0.03	1	1	0.15	9	1800	8	1	Female	talent_weapon_distance
-persival_fawcett	20	0.2	150	blunt 0 pierce 0 lacer 0 fire 0 cold 0 poison 0 shock 0 beam 0	HumanHead HumanShoulder HumanArm HumanThigh HumanFeet HumanChest HumanBody HumanStomach HumanKnee	blunt 5 10 crit 1.70 critchance 0.2	0.7	0.55	0.05	0.9	1	0.1	8	2400	18	1	Male	talent_all_resists
-Isabella_capet	20	0.2	100	blunt 0 pierce 0 lacer 0 fire 0 cold 0 poison 0 shock 0 beam 0	HumanHead HumanShoulder HumanArm HumanThigh HumanFeet HumanChest HumanBody HumanStomach HumanKnee	blunt 10 20 crit 1.70 critchance 0.4	0.75	0.5	0.03	1	1.2	0.2	7	1600	10	1	Female	talent_ignore_infection
-maximilian_rohr	20	0.2	120	blunt 0 pierce 0 lacer 0 fire 0 cold 0 poison 0 shock 0 beam 0	HumanHead HumanShoulder HumanArm HumanThigh HumanFeet HumanChest HumanBody HumanStomach HumanKnee	blunt 6 18 crit 1.75 critchance 0.2	0.65	0.65	0.06	0.9	1	0.05	8	2000	10	1	Male	talent_ignore_pain
-priya_marlon	20	0.2	110	blunt 0 pierce 0 lacer 0 fire 0 cold 0 poison 0 shock 0 beam 0	HumanHead HumanShoulder HumanArm HumanThigh HumanFeet HumanChest HumanBody HumanStomach HumanKnee	blunt 5 10 crit 1.70 critchance 0.4	0.6	0.55	0.05	1	1	0.15	7	2200	12	1	Female	talent_all_consumables_stack
-jacques_kennet	20	0.2	120	blunt 0 pierce 0 lacer 0 fire 0 cold 0 poison 0 shock 0 beam 0	HumanHead HumanShoulder HumanArm HumanThigh HumanFeet HumanChest HumanBody HumanStomach HumanKnee	blunt 5 10 crit 1.70 critchance 0.2	0.65	0.55	0.04	1	1	0.1	8	2100	10	1	Male	talent_reload_time
-mirza_aishatu	20	0.2	110	blunt 0 pierce 0 lacer 0 fire 0 cold 0 poison 0 shock 0 beam 0	HumanHead HumanShoulder HumanArm HumanThigh HumanFeet HumanChest HumanBody HumanStomach HumanKnee	blunt 7 14 crit 1.70 critchance 0.2	0.75	0.65	0.03	1	1	0.1	9	2000	9	1	Female	talent_starving_slower
-kenzie_yukio	20	0.2	100	blunt 0 pierce 0 lacer 0 fire 0 cold 0 poison 0 shock 0 beam 0	HumanHead HumanShoulder HumanArm HumanThigh HumanFeet HumanChest HumanBody HumanStomach HumanKnee	blunt 8 18 crit 1.70 critchance 0.3	0.8	0.6	0.04	1	1.4	0.25	7	1700	14	1	Male	talent_weight_dodge_affect
-marika_wulfnod	20	0.2	100	blunt 0 pierce 0 lacer 0 fire 0 cold 0 poison 0 shock 0 beam 0	HumanHead HumanShoulder HumanArm HumanThigh HumanFeet HumanChest HumanBody HumanStomach HumanKnee	blunt 6 12 crit 1.60 critchance 0.2	0.7	0.7	0.04	1	1	0.15	9	1900	12	1	Female	talent_belt_slots
-auberon_lukas	20	0.2	120	blunt 0 pierce 0 lacer 0 fire 0 cold 0 poison 0 shock 0 beam 0	HumanHead HumanShoulder HumanArm HumanThigh HumanFeet HumanChest HumanBody HumanStomach HumanKnee	blunt 4 8 crit 1.60 critchance 0.4	0.6	0.6	0.05	1	1	0.05	8	1800	8	1	Male	talent_weapon_slot
-niko_medich	20	0.2	120	blunt 0 pierce 0 lacer 0 fire 0 cold 0 poison 0 shock 0 beam 0	HumanHead HumanShoulder HumanArm HumanThigh HumanFeet HumanChest HumanBody HumanStomach HumanKnee	blunt 5 10 crit 1.70 critchance 0.2	0.6	0.65	0.05	1	1	0.1	7	2000	10	1	Male	talent_pistol_acc
-#end																		
-																		
-#mercenary_classes																		
-Id	ModifyStartCost	ModifyStep	PerkIds															
-scouts_of_hades	50	0.5	cqc_specialist_basic military_training_basic hardening_basic blind_fury_basic bodybuilding_basic battle_concentration_basic															
-ecclipse_blades	50	0.5	athletics_basic reaction_training_basic cold_weapon_wielding_basic cannibalism_basic carnage_basic taste_of_blood_basic															
-tifton_elite	50	0.5	heavy_weaponary_basic grenadier_basic insensitivity_basic stationary_defense_basic addict_basic last_bullet_basic															
-tunnel_rats	50	0.5	immune_response_basic handmade_shotgun_ammo_basic marauder_basic insensitivity_basic cautious_basic covermaster_basic															
-phoenix_brigade	50	0.5	pyromaniac_basic arsonist_basic reinforced_battery_basic elemental_resist_basic hitech_spec_basic taste_of_blood_basic															
-spaceborn_ghosts	50	0.5	reaction_training_basic immune_response_basic athletics_basic cheap_shot_basic proper_nutrition_basic war_crime_basic															
-angels_of_spades	50	0.5	perfect_opener_basic surgeon_basic precise_shot_basic military_training_basic weak_point_basic enhanced_heavy_ammo_basic															
-doppelganger_pack	50	0.5	possession_basic ritualism_basic masochism_basic cannibalism_basic insanity_basic axe_rage_basic															
-valkyrie_squad	50	0.5	emergency_revival_basic first_aid_basic piersing_burst_basic duty_shift_basic precise_shot_basic tactical_reloading_basic															
-#end																		
+#mercenary_profiles																			
+Id	ModifyStartCost	ModifyStep	ModifyLevelLimit	Health	ResistSheet	WoundSlots	MeleeDamage	MeleeAccuracy	RangeAccuracy	ReceiveAmputationChance	ReceiveWoundChanceMult	AttackWoundChanceMult	Dodge	Los	StarvationLimit	PainThresholdLimit	PainThresholdRegen	Gender	TalentPerkId
+john_hawkwood_boss	20	0.1		140	blunt 0 pierce 0 lacer 0 fire 0 cold 0 poison 0 shock 0 beam 0	HumanHead HumanShoulder HumanArm HumanThigh HumanFeet HumanChest HumanBody HumanStomach HumanKnee	blunt 8 18 crit 1.60 critchance 0.2	0.7	0.7	0.03	0.9	1	0.15	8	2200	16	2	Male	talent_the_man_who_sold_the_world
+francis_reid_daly	20	0.2		130	blunt 0 pierce 0 lacer 0 fire 0 cold 0 poison 0 shock 0 beam 0	HumanHead HumanShoulder HumanArm HumanThigh HumanFeet HumanChest HumanBody HumanStomach HumanKnee	blunt 5 10 crit 1.70 critchance 0.2	0.7	0.6	0.04	1	1	0.15	8	2000	10	1	Male	talent_weapon_durability
+victoria_boudicca	20	0.2		100	blunt 0 pierce 0 lacer 0 fire 0 cold 0 poison 0 shock 0 beam 0	HumanHead HumanShoulder HumanArm HumanThigh HumanFeet HumanChest HumanBody HumanStomach HumanKnee	blunt 5 10 crit 1.70 critchance 0.3	0.6	0.65	0.03	1	1	0.15	9	1800	8	1	Female	talent_weapon_distance
+persival_fawcett	20	0.2		150	blunt 0 pierce 0 lacer 0 fire 0 cold 0 poison 0 shock 0 beam 0	HumanHead HumanShoulder HumanArm HumanThigh HumanFeet HumanChest HumanBody HumanStomach HumanKnee	blunt 5 10 crit 1.70 critchance 0.2	0.7	0.55	0.05	0.9	1	0.1	8	2400	18	1	Male	talent_all_resists
+Isabella_capet	20	0.2		100	blunt 0 pierce 0 lacer 0 fire 0 cold 0 poison 0 shock 0 beam 0	HumanHead HumanShoulder HumanArm HumanThigh HumanFeet HumanChest HumanBody HumanStomach HumanKnee	blunt 10 20 crit 1.70 critchance 0.4	0.75	0.5	0.03	1	1.2	0.2	7	1600	10	1	Female	talent_ignore_infection
+maximilian_rohr	20	0.2		120	blunt 0 pierce 0 lacer 0 fire 0 cold 0 poison 0 shock 0 beam 0	HumanHead HumanShoulder HumanArm HumanThigh HumanFeet HumanChest HumanBody HumanStomach HumanKnee	blunt 6 18 crit 1.75 critchance 0.2	0.65	0.65	0.06	0.9	1	0.05	8	2000	10	1	Male	talent_ignore_pain
+priya_marlon	20	0.2		110	blunt 0 pierce 0 lacer 0 fire 0 cold 0 poison 0 shock 0 beam 0	HumanHead HumanShoulder HumanArm HumanThigh HumanFeet HumanChest HumanBody HumanStomach HumanKnee	blunt 5 10 crit 1.70 critchance 0.4	0.6	0.55	0.05	1	1	0.15	7	2200	12	1	Female	talent_all_consumables_stack
+jacques_kennet	20	0.2		120	blunt 0 pierce 0 lacer 0 fire 0 cold 0 poison 0 shock 0 beam 0	HumanHead HumanShoulder HumanArm HumanThigh HumanFeet HumanChest HumanBody HumanStomach HumanKnee	blunt 5 10 crit 1.70 critchance 0.2	0.65	0.55	0.04	1	1	0.1	8	2100	10	1	Male	talent_reload_time
+mirza_aishatu	20	0.2		110	blunt 0 pierce 0 lacer 0 fire 0 cold 0 poison 0 shock 0 beam 0	HumanHead HumanShoulder HumanArm HumanThigh HumanFeet HumanChest HumanBody HumanStomach HumanKnee	blunt 7 14 crit 1.70 critchance 0.2	0.75	0.65	0.03	1	1	0.1	9	2000	9	1	Female	talent_starving_slower
+kenzie_yukio	20	0.2		100	blunt 0 pierce 0 lacer 0 fire 0 cold 0 poison 0 shock 0 beam 0	HumanHead HumanShoulder HumanArm HumanThigh HumanFeet HumanChest HumanBody HumanStomach HumanKnee	blunt 8 18 crit 1.70 critchance 0.3	0.8	0.6	0.04	1	1.4	0.25	7	1700	14	1	Male	talent_weight_dodge_affect
+marika_wulfnod	20	0.2		100	blunt 0 pierce 0 lacer 0 fire 0 cold 0 poison 0 shock 0 beam 0	HumanHead HumanShoulder HumanArm HumanThigh HumanFeet HumanChest HumanBody HumanStomach HumanKnee	blunt 6 12 crit 1.60 critchance 0.2	0.7	0.7	0.04	1	1	0.15	9	1900	12	1	Female	talent_belt_slots
+auberon_lukas	20	0.2		120	blunt 0 pierce 0 lacer 0 fire 0 cold 0 poison 0 shock 0 beam 0	HumanHead HumanShoulder HumanArm HumanThigh HumanFeet HumanChest HumanBody HumanStomach HumanKnee	blunt 4 8 crit 1.60 critchance 0.4	0.6	0.6	0.05	1	1	0.05	8	1800	8	1	Male	talent_weapon_slot
+niko_medich	20	0.2		120	blunt 0 pierce 0 lacer 0 fire 0 cold 0 poison 0 shock 0 beam 0	HumanHead HumanShoulder HumanArm HumanThigh HumanFeet HumanChest HumanBody HumanStomach HumanKnee	blunt 5 10 crit 1.70 critchance 0.2	0.6	0.65	0.05	1	1	0.1	7	2000	10	1	Male	talent_pistol_acc
+#end																			
+																			
+#mercenary_classes																			
+Id	ModifyStartCost	ModifyStep	PerkIds																
+scouts_of_hades	50	0.5	cqc_specialist_basic military_training_basic hardening_basic blind_fury_basic bodybuilding_basic battle_concentration_basic																
+ecclipse_blades	50	0.5	athletics_basic reaction_training_basic cold_weapon_wielding_basic cannibalism_basic carnage_basic taste_of_blood_basic																
+tifton_elite	50	0.5	heavy_weaponary_basic grenadier_basic insensitivity_basic stationary_defense_basic addict_basic last_bullet_basic																
+tunnel_rats	50	0.5	immune_response_basic handmade_shotgun_ammo_basic marauder_basic insensitivity_basic cautious_basic covermaster_basic																
+phoenix_brigade	50	0.5	pyromaniac_basic arsonist_basic reinforced_battery_basic elemental_resist_basic hitech_spec_basic taste_of_blood_basic																
+spaceborn_ghosts	50	0.5	reaction_training_basic immune_response_basic athletics_basic cheap_shot_basic proper_nutrition_basic war_crime_basic																
+angels_of_spades	50	0.5	perfect_opener_basic surgeon_basic precise_shot_basic military_training_basic weak_point_basic enhanced_heavy_ammo_basic																
+doppelganger_pack	50	0.5	possession_basic ritualism_basic masochism_basic cannibalism_basic insanity_basic axe_rage_basic																
+valkyrie_squad	50	0.5	emergency_revival_basic first_aid_basic piersing_burst_basic duty_shift_basic precise_shot_basic tactical_reloading_basic																
+#end																			
