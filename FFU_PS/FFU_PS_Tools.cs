@@ -635,6 +635,8 @@ namespace FFU_Phase_Shift {
                             r.ContentDescriptor = multiRecord.GetRecord<TurretRecord>().ContentDescriptor;
                         else if (multiRecord.GetRecord<DatadiskRecord>() != null)
                             r.ContentDescriptor = multiRecord.GetRecord<DatadiskRecord>().ContentDescriptor;
+                        else if (multiRecord.GetRecord<ExpGainerRecord>() != null)
+                            r.ContentDescriptor = multiRecord.GetRecord<ExpGainerRecord>().ContentDescriptor;
                         else if (multiRecord.GetRecord<ResurrectKitRecord>() != null)
                             r.ContentDescriptor = multiRecord.GetRecord<ResurrectKitRecord>().ContentDescriptor;
                         else ModLog.Warning($"WARNING! Item '{r.Id}' has no fallback descriptor! Expect errors.");
