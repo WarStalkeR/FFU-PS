@@ -221,6 +221,100 @@ namespace FFU_Phase_Shift {
             }
         }
 
+		// Allow additional items in the vest slots, such as mines, scanners and other devices
+		public static void CreateComponent_VestCompatible(ItemFactory __instance, PickupItem item, List<PickupItemComponent> itemComponents,
+			BasePickupItemRecord itemRecord, bool randomizeConditionAndCapacity, bool isPrimary) {
+            if ((itemRecord is MineRecord || itemRecord is AutomapRecord || itemRecord is ExpGainerRecord || 
+				itemRecord is ResurrectKitRecord || itemRecord is TurretRecord) && !HasCompOfType<AllowPutInVestItemComp>()) {
+                itemComponents.Add(new AllowPutInVestItemComp());
+            }
+            bool HasCompOfType<T>() where T : PickupItemComponent {
+                if (item.Comp<T>() != null) return true;
+                foreach (PickupItemComponent itemComponent in itemComponents) 
+					if (itemComponent is T) return true;
+                return false;
+            }
+        }
+
+		// Enables interaction with additional items that can be placed into vest slots
+        public static void InteractVestSlot_VestCompatible(Creatures creatures, RaidMetadata raidMetadata, 
+			SelectGrenadeTargetController selectGrenade, int slotIndex) {
+            Player player = creatures.Player;
+            BasePickupItem itemByIndex = player.Inventory.VestStore.GetItemByIndex(slotIndex - 1);
+            if (itemByIndex.Is<AutomapRecord>()) {
+                if (raidMetadata.StationVisit) {
+                    SingletonMonoBehaviour<SoundController>.Instance
+						.PlayUiSound(SingletonMonoBehaviour<SoundsStorage>.Instance.EmptyAttack);
+					return;
+                }
+                SingletonMonoBehaviour<DungeonUI>.Instance.InventoryScreen.InteractWithCharacter(itemByIndex, true);
+            } else if (itemByIndex.Is<MineRecord>()) {
+                if (raidMetadata.StationVisit) {
+                    SingletonMonoBehaviour<SoundController>.Instance
+						.PlayUiSound(SingletonMonoBehaviour<SoundsStorage>.Instance.EmptyAttack);
+                    return;
+                }
+                SingletonMonoBehaviour<DungeonUI>.Instance.InventoryScreen.InteractWithCharacter(itemByIndex, true);
+            } else if (itemByIndex.Is<TurretRecord>()) {
+                if (raidMetadata.StationVisit) {
+                    SingletonMonoBehaviour<SoundController>.Instance
+						.PlayUiSound(SingletonMonoBehaviour<SoundsStorage>.Instance.EmptyAttack);
+                    return;
+                }
+                SingletonMonoBehaviour<DungeonUI>.Instance.InventoryScreen.InteractWithCharacter(itemByIndex, true);
+            } else if (itemByIndex.Is<ExpGainerRecord>()) {
+                SingletonMonoBehaviour<DungeonUI>.Instance.InventoryScreen.InteractWithCharacter(itemByIndex, true);
+            } else if (itemByIndex.Is<ResurrectKitRecord>()) {
+                SingletonMonoBehaviour<DungeonUI>.Instance.InventoryScreen.InteractWithCharacter(itemByIndex, true);
+            }
+        }
+
+        // Implements support for rendering wide (1x2) items in the vest slots
+		public static bool Refresh_VestCompatible(SlotsView __instance, ItemStorage storage, int slotsCount) {
+            __instance._storage = storage;
+            __instance._slotsCount = slotsCount;
+            __instance.FreeSlots();
+            if (__instance.Centrate) {
+                float oddOffset = (__instance._storage.Width % 2 != 0) ? 12f : 0f;
+                __instance.transform.localPosition = new Vector3((__instance.MaxSlotWidth - __instance._storage.Width) / 2 * 25f + __instance.centrateOffsetX + oddOffset, __instance.transform.localPosition.y, 0f);
+            }
+            CellPosition cPos = new CellPosition(0, 0);
+            for (int i = 0; i < slotsCount; i++) {
+                ItemSlot component = __instance.SlotsPool.Take().GetComponent<ItemSlot>();
+                BasePickupItem itemByIndex = storage.GetItemByIndex(i);
+                float widthOffset = 0f;
+                __instance._slots.Add(component);
+                component.transform.SetParent(__instance.SlotsParent, false);
+                if (itemByIndex != null) {
+                    cPos = itemByIndex.InventoryPos;
+                    component.Initialize(itemByIndex, itemByIndex.Storage);
+                    if (itemByIndex.InventoryWidthSize == 2) {
+						component._forceSize = ItemSlotForceSize.DoubleSize;
+						component.InitSlotSize();
+                    } else {
+                        component._forceSize = ItemSlotForceSize.SingleSize;
+                        component.InitSlotSize();
+                    }
+                } else {
+                    storage.CalculatePositionByIndex(i, ref cPos);
+                    component.InitializeEmpty(storage);
+                    component._forceSize = ItemSlotForceSize.SingleSize;
+                    component.InitSlotSize();
+                }
+                component.CellPos = cPos;
+                if (!__instance.NoPositionControl) {
+                    component.transform.localPosition = new Vector3(cPos.X * 26f + __instance.OffsetX + widthOffset, cPos.Y * -26 + __instance.OffsetY, 0f);
+                } else {
+                    component.transform.SetAsLastSibling();
+                }
+                component.CachedLocalPosition = component.transform.localPosition;
+                if (itemByIndex != null && itemByIndex.InventoryWidthSize == 2) {
+                    i++;
+                }
+            }
+            return false; // Original function is completely replaced
+        }
+
         // Item production rework to allow precise production hours and smart bonus application
         public static bool StartMagnumItemProduction_SmartPrecision(MagnumCargo magnumCargo, MagnumProjects projects, 
             MagnumSpaceship magnumSpaceship, SpaceTime time, Difficulty difficulty, ItemProduceReceipt receipt, int count, int lineIndex) {
@@ -953,6 +1047,149 @@ private void CreateComponent(PickupItem item, List<PickupItemComponent> itemComp
 			}
 		}
 		return false;
+	}
+}
+
+public static void InteractVestSlot(Creatures creatures, RaidMetadata raidMetadata, SelectGrenadeTargetController selectGrenade, int slotIndex)
+{
+	Player player = creatures.Player;
+	if (player.Inventory.VestStore.GetItemByIndex(slotIndex - 1) == null)
+	{
+		SingletonMonoBehaviour<SoundController>.Instance.PlayUiSound(SingletonMonoBehaviour<SoundsStorage>.Instance.ButtonClick);
+		return;
+	}
+	BasePickupItem itemByIndex = player.Inventory.VestStore.GetItemByIndex(slotIndex - 1);
+	if (itemByIndex.Is<MedkitRecord>())
+	{
+		MedkitRecord medkitRecord = itemByIndex.Record<MedkitRecord>();
+		if (itemByIndex.Is<FoodRecord>())
+		{
+			if (player.EffectsController.HasAnyEffect<WoundEffectNoFood>())
+			{
+				SingletonMonoBehaviour<SoundController>.Instance.PlayUiSound(SingletonMonoBehaviour<SoundsStorage>.Instance.EmptyAttack);
+				return;
+			}
+			SingletonMonoBehaviour<DungeonUI>.Instance.InventoryScreen.PutFoodInCharacter(itemByIndex, false, false);
+		}
+		if (medkitRecord.CanFixWound && !medkitRecord.FixAllWounds)
+		{
+			LimitsTooltip.LimitType limitType;
+			if (!CanUseInventory(creatures, out limitType))
+			{
+				SingletonMonoBehaviour<TooltipFactory>.Instance.ShowLimitsTooltip(limitType);
+				return;
+			}
+			SingletonMonoBehaviour<DungeonUI>.Instance.InventoryScreen.FixWound(itemByIndex, true);
+		}
+		else if (medkitRecord.HealSpecificWound)
+		{
+			LimitsTooltip.LimitType limitType2;
+			if (!CanUseInventory(creatures, out limitType2))
+			{
+				SingletonMonoBehaviour<TooltipFactory>.Instance.ShowLimitsTooltip(limitType2);
+				return;
+			}
+			SingletonMonoBehaviour<DungeonUI>.Instance.InventoryScreen.HealWound(itemByIndex, true);
+		}
+		else
+		{
+			SingletonMonoBehaviour<DungeonUI>.Instance.InventoryScreen.PutMedkitInCharacter(itemByIndex, true);
+		}
+		player.EffectsController.PropagateAction(PlayerActionHappened.HandAction);
+		EndPlayerTurn(creatures, PlayerEndTurnContext.InventoryInteraction);
+	}
+	else if (itemByIndex.Is<FoodRecord>())
+	{
+		if (player.EffectsController.HasAnyEffect<WoundEffectNoFood>())
+		{
+			SingletonMonoBehaviour<SoundController>.Instance.PlayUiSound(SingletonMonoBehaviour<SoundsStorage>.Instance.EmptyAttack);
+			return;
+		}
+		SingletonMonoBehaviour<DungeonUI>.Instance.InventoryScreen.PutFoodInCharacter(itemByIndex, true);
+		player.EffectsController.PropagateAction(PlayerActionHappened.HandAction);
+		EndPlayerTurn(creatures, PlayerEndTurnContext.InventoryInteraction);
+	}
+	else if (itemByIndex.Is<GrenadeRecord>())
+	{
+		if (raidMetadata.StationVisit)
+		{
+			SingletonMonoBehaviour<SoundController>.Instance.PlayUiSound(SingletonMonoBehaviour<SoundsStorage>.Instance.EmptyAttack);
+		}
+		else if (!selectGrenade.IsActive)
+		{
+			selectGrenade.StartSelection(slotIndex);
+		}
+	}
+	else
+	{
+		if (!itemByIndex.Is<AmmoRecord>())
+		{
+			return;
+		}
+		if (player.Inventory.CurrentWeapon != null && ReloadWeapon.CanReload(player.Inventory, player.Inventory.CurrentWeapon, itemByIndex))
+		{
+			player.StartReload(player.Inventory.CurrentWeapon, itemByIndex);
+			player.EffectsController.PropagateAction(PlayerActionHappened.HandAction);
+			SingletonMonoBehaviour<DungeonUI>.Instance.Hud.RefreshVest();
+			SingletonMonoBehaviour<DungeonUI>.Instance.Hud.RefreshWeapon();
+			if (SingletonMonoBehaviour<DungeonUI>.Instance.InventoryScreen.IsViewActive)
+			{
+				SingletonMonoBehaviour<DungeonUI>.Instance.InventoryScreen.DragControllerRefreshCallback();
+			}
+		}
+		else
+		{
+			SingletonMonoBehaviour<SoundController>.Instance.PlayUiSound(SingletonMonoBehaviour<SoundsStorage>.Instance.EmptyAttack);
+		}
+	}
+}
+
+public void Refresh(ItemStorage storage, int slotsCount)
+{
+	_storage = storage;
+	_slotsCount = slotsCount;
+	FreeSlots();
+	if (Centrate)
+	{
+		float num = ((_storage.Width % 2 != 0) ? 12f : 0f);
+		base.transform.localPosition = new Vector3((float)((MaxSlotWidth - _storage.Width) / 2) * 25f + centrateOffsetX + num, base.transform.localPosition.y, 0f);
+	}
+	CellPosition pos = new CellPosition(0, 0);
+	for (int i = 0; i < slotsCount; i++)
+	{
+		ItemSlot component = SlotsPool.Take().GetComponent<ItemSlot>();
+		BasePickupItem itemByIndex = storage.GetItemByIndex(i);
+		float num2 = 0f;
+		_slots.Add(component);
+		component.transform.SetParent(SlotsParent, false);
+		if (itemByIndex != null)
+		{
+			if (itemByIndex.InventoryWidthSize == 2)
+			{
+				num2 = 13f;
+			}
+			pos = itemByIndex.InventoryPos;
+			component.Initialize(itemByIndex, itemByIndex.Storage);
+		}
+		else
+		{
+			storage.CalculatePositionByIndex(i, ref pos);
+			component.InitializeEmpty(storage);
+		}
+		component.CellPos = pos;
+		if (!NoPositionControl)
+		{
+			component.transform.localPosition = new Vector3((float)pos.X * 26f + OffsetX + num2, (float)(pos.Y * -26) + OffsetY, 0f);
+		}
+		else
+		{
+			component.transform.SetAsLastSibling();
+		}
+		component.CachedLocalPosition = component.transform.localPosition;
+		if (itemByIndex != null && itemByIndex.InventoryWidthSize == 2)
+		{
+			i++;
+		}
 	}
 }
 

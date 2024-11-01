@@ -6,7 +6,7 @@ namespace FFU_Phase_Shift {
     public static class ModConfig {
         // Constant Variables
         public const bool IsExperimental = false;
-        public const string ModVersion = "0.1.8.0";
+        public const string ModVersion = "0.2.5.0";
         public const string PathDump = "_Dump";
         public const string PathAssets = "Assets";
         public const string PathConfigs = "Configs";
@@ -17,6 +17,7 @@ namespace FFU_Phase_Shift {
         public static bool FixCancelOverflow = true;
         public static bool FixContextStackUse = true;
         public static bool BetterItemUnlocks = true;
+        public static bool BetterVestSlotting = true;
         public static bool SmartProduction = true;
         public static bool SmartSelectItem = true;
         public static bool SortUnlockedTech = true;
@@ -43,6 +44,7 @@ namespace FFU_Phase_Shift {
             modConfig["PatchConfig"]["FixCancelOverflow"] = true;
             modConfig["PatchConfig"]["FixContextStackUse"] = true;
             modConfig["PatchConfig"]["BetterItemUnlocks"] = true;
+            modConfig["PatchConfig"]["BetterVestSlotting"] = true;
             modConfig["PatchConfig"]["SmartProduction"] = true;
             modConfig["PatchConfig"]["SmartSelectItem"] = true;
             modConfig["ModConfig"]["SortUnlockedTech"] = true;
@@ -79,6 +81,7 @@ namespace FFU_Phase_Shift {
             FixCancelOverflow = modConfig["PatchConfig"]["FixCancelOverflow"].ToBool(FixCancelOverflow);
             FixContextStackUse = modConfig["PatchConfig"]["FixContextStackUse"].ToBool(FixContextStackUse);
             BetterItemUnlocks = modConfig["PatchConfig"]["BetterItemUnlocks"].ToBool(BetterItemUnlocks);
+            BetterVestSlotting = modConfig["PatchConfig"]["BetterVestSlotting"].ToBool(BetterVestSlotting);
             SmartProduction = modConfig["PatchConfig"]["SmartProduction"].ToBool(SmartProduction);
             SmartSelectItem = modConfig["PatchConfig"]["SmartSelectItem"].ToBool(SmartSelectItem);
 

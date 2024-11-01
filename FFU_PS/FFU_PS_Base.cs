@@ -64,6 +64,30 @@ namespace FFU_Phase_Shift {
                     Mod.Patch(refMethod, postfix: new HarmonyMethod(postfixPatch));
                 } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
 
+            if (ModConfig.BetterVestSlotting)
+                try { ModLog.Info("Patching: MGSC.ItemFactory.CreateComponent -> VestCompatible");
+                    var refMethod = AccessTools.Method(typeof(ItemFactory), "CreateComponent");
+                    var postfixPatch = SymbolExtensions.GetMethodInfo(() =>
+                        ModPatch.CreateComponent_VestCompatible(default, default, default, default, default, default));
+                    Mod.Patch(refMethod, postfix: new HarmonyMethod(postfixPatch));
+                } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
+
+            if (ModConfig.BetterVestSlotting)
+                try { ModLog.Info("Patching: MGSC.PlayerInteractionSystem.InteractVestSlot -> VestCompatible");
+                    var refMethod = AccessTools.Method(typeof(PlayerInteractionSystem), "InteractVestSlot");
+                    var postfixPatch = SymbolExtensions.GetMethodInfo(() =>
+                        ModPatch.InteractVestSlot_VestCompatible(default, default, default, default));
+                    Mod.Patch(refMethod, postfix: new HarmonyMethod(postfixPatch));
+                } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
+
+            if (ModConfig.BetterVestSlotting)
+                try { ModLog.Info("Patching: MGSC.SlotsView.Refresh -> VestCompatible");
+                    var refMethod = AccessTools.Method(typeof(SlotsView), "Refresh", new Type[]{typeof(ItemStorage), typeof(int)});
+                    var prefixPatch = SymbolExtensions.GetMethodInfo(() =>
+                        ModPatch.Refresh_VestCompatible(default, default, default));
+                    Mod.Patch(refMethod, prefix: new HarmonyMethod(prefixPatch));
+                } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
+
             if (ModConfig.SmartProduction)
                 try { ModLog.Info("Patching: MGSC.ItemProductionSystem.StartMagnumItemProduction -> SmartPrecision");
                     var refMethod = AccessTools.Method(typeof(ItemProductionSystem), "StartMagnumItemProduction");
