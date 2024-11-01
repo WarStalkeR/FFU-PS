@@ -1,7 +1,7 @@
 #datadisks								
 Id		Price	Weight	InventoryWidthSize	UnlockType	UnlockIds		
-+itemChip		100	0.1	1	ProductionItem	battery_charge bandit_sawblade army_pistol dark_pistol rail_pistol tech_pistol petrov_pistol desert_shotgun bandit_smg civres_powerfist civres_pistol civres_pistol_2 civres_smg civres_plasma_pistol shedu_pistol pirates_smg elite_knife miner_knife glass_knife machete metal_pipe scarp_club knuckles breaker crowbar wrench choppa_axe bandit_axe		
-+mediumItemChip		200	0.1	1	ProductionItem	miner_disctrower miner_flametrower civres_assault civres_marksman civres_armor civres_helmet civres_pants civres_boots shedu_gas_shotgun pirates_smg_2 civres_smg_2		
++itemChip		100	0.1	1	ProductionItem	battery_charge bandit_sawblade army_pistol dark_pistol rail_pistol tech_pistol petrov_pistol desert_shotgun bandit_smg civres_powerfist civres_pistol civres_pistol_2 civres_smg shedu_pistol pirates_smg elite_knife miner_knife glass_knife machete metal_pipe scarp_club knuckles breaker crowbar wrench choppa_axe bandit_axe		
++mediumItemChip		200	0.1	1	ProductionItem	miner_disctrower miner_flametrower civres_assault civres_marksman civres_armor civres_helmet civres_pants civres_boots shedu_gas_shotgun pirates_smg_2 civres_smg_2 civres_plasma_pistol		
 +highItemChip		400	0.1	1	ProductionItem	quasi_sensor_device nanorobot_grenade phase_bomb		
 #end								
 								
@@ -36,6 +36,7 @@ Id		Price	Weight	InventoryWidthSize	MaxStack	SubType
 #itemtransformation								
 Id		OutputItems						
 corp_bone		human_rib 3						
+trowable_heart		bloodBag 5						
 #end								
 								
 #itemreceipts								

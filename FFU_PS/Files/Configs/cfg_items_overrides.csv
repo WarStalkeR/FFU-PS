@@ -488,7 +488,7 @@ Id		OutputItem	RequiredItems	ProduceTimeInHours	ModifyStartCost	ModifyStep	Modif
 		medicalClue	plastic 1 antibiotics 1	8	1	1.01																											
 		surgicalKit	medpack 1 morphine 1 medicalClue 1 naloxone 1	40	1	1.01																											
 		antidote	plastic 1 spider_poisongland 1	12	1	1.01																											
-		bloodBag	plastic 1 trowable_heart 1	10	1	1.01																											
+		bloodBag	plastic 1 water 1	10	1	1.01																											
 		painkillers	plastic 1 poppy_box 1	8	1	1.01																											
 		vodka	glassBottle 1 water 1 human_poop 1	8	1	1.01																											
 		mre_pack	cannedMeat 1 synthBeef 1 chocolateBar 1	10	1	1.01																											
@@ -507,99 +507,99 @@ Id		OutputItem	RequiredItems	ProduceTimeInHours	ModifyStartCost	ModifyStep	Modif
 		ancom_armor	armor_shards 1 ceramite_shards 1 rubber 2 capacitor 1	52	1	1.05	armor_shards 1 rubber 3 capacitor 9 ceramite_shards 25 robot_parts_container 80	60																									
 		power_armor	armor_shards 1 capacitor 1 metal_tread 1	48	1	1.05	armor_shards 1 metal_tread 3 capacitor 9 armor_repair_kit 25 armor_container 80	60																									
 		realwear_armor	armor_shards 2 ceramite_shards 1 rubber 1 capacitor 1	54	1	1.05	armor_shards 1 rubber 3 capacitor 9 ceramite_shards 25 robot_parts_container 80	60																									
-		smuggler_armor	rusty_shards 1 rubber 1 tread 1	24	1	1.05	armor_shards 1 tread 4 rubber 20 worker_clothing_container 80	60																									
+		smuggler_armor	rusty_shards 1 rubber 1 tread 1	24	1	1.05	armor_shards 1 tread 5 rubber 20 worker_clothing_container 80	60																									
 		solnet_armor	armor_shards 1 ceramite_shards 1 rubber 1 capacitor 2	50	1	1.05	armor_shards 1 rubber 3 capacitor 9 ceramite_shards 25 scientist_clothing_container 80	60																									
-		worker_armor	armor_shards 1 rubber 2 tread 1	30	1	1.05	armor_shards 1 tread 4 rubber 20 worker_clothing_container 80	60																									
-		pmc_armor	armor_shards 1 rags 1 tread 1	18	1	1.05	armor_shards 1 rags 4 tread 20 armor_container 80	60																									
-		security_armor	armor_shards 1 rags 1 tread 2	24	1	1.05	armor_shards 1 rags 4 tread 20 security_clothing_container 80	60																									
-		rw_militia_vest	armor_shards 1 rags 2 tread 1	22	1	1.05	armor_shards 1 rags 4 tread 20 regular_clothing_container 80	60																									
+		worker_armor	armor_shards 1 rubber 2 tread 1	30	1	1.05	armor_shards 1 tread 5 rubber 20 worker_clothing_container 80	60																									
+		pmc_armor	armor_shards 1 rags 1 tread 1	18	1	1.05	armor_shards 1 rags 5 tread 20 armor_container 80	60																									
+		security_armor	armor_shards 1 rags 1 tread 2	24	1	1.05	armor_shards 1 rags 5 tread 20 security_clothing_container 80	60																									
+		rw_militia_vest	armor_shards 1 rags 2 tread 1	22	1	1.05	armor_shards 1 rags 5 tread 20 regular_clothing_container 80	60																									
 		rw_warlord_armor	ceramite_shards 2 armor_shards 1 rubber 1 capacitor 1	64	1	1.05	armor_shards 1 capacitor 3 ceramite_shards 9 armor_repair_kit 25 robot_parts_container 80	60																									
-		svn_cap_vest	armor_shards 1 rags 2 tread 1	22	1	1.05	armor_shards 1 rags 4 tread 20 regular_clothing_container 80	60																									
+		svn_cap_vest	armor_shards 1 rags 2 tread 1	22	1	1.05	armor_shards 1 rags 5 tread 20 regular_clothing_container 80	60																									
 		svn_heavy_armor	ceramite_shards 2 armor_shards 1 rubber 1 capacitor 1	64	1	1.05	armor_shards 1 capacitor 3 ceramite_shards 9 armor_repair_kit 25 security_clothing_container 80	60																									
-		daydream_chem_vest	rubber 2 plastic 1 tread 1	32	1	1.05	armor_shards 1 rubber 4 plastic 20 scientist_clothing_container 80	60																									
+		daydream_chem_vest	rubber 2 plastic 1 tread 1	32	1	1.05	armor_shards 1 rubber 5 plastic 20 scientist_clothing_container 80	60																									
 		daydream_armored_vest	armor_shards 2 rubber 1 plastic 1 tread 1	60	1	1.05	armor_shards 1 rubber 3 plastic 9 ceramite_shards 25 scientist_clothing_container 80	60																									
 		sl_power_armor	armor_shards 1 ceramite_shards 1 rubber 1 capacitor 1 microelectronics 1	62	1	1.05	armor_shards 1 capacitor 3 ceramite_shards 9 microelectronics 25 scientist_clothing_container 80	60																									
-		ancom_police_armor	armor_shards 2 rags 1 tread 1	34	1	1.05	armor_shards 1 rags 4 tread 20 security_clothing_container 80	60																									
-		ancom_agent_armor	rags 2 rubber 2 tread 1	36	1	1.05	armor_shards 1 rags 4 rubber 20 security_clothing_container 80	60																									
-		church_priest_shirt	rags 2 rubber 1 plastic 1 tread 1	34	1	1.05	armor_shards 1 rags 4 plastic 20 armor_container 80	60																									
+		ancom_police_armor	armor_shards 2 rags 1 tread 1	34	1	1.05	armor_shards 1 rags 5 tread 20 security_clothing_container 80	60																									
+		ancom_agent_armor	rags 2 rubber 2 tread 1	36	1	1.05	armor_shards 1 rags 5 rubber 20 security_clothing_container 80	60																									
+		church_priest_shirt	rags 2 rubber 1 plastic 1 tread 1	34	1	1.05	armor_shards 1 rags 5 plastic 20 armor_container 80	60																									
 		church_power_armor	ceramite_shards 2 capacitor 1 metal_tread 1	40	1	1.05	armor_shards 1 metal_tread 3 capacitor 9 ceramite_shards 25 robot_parts_container 80	60																									
-		pb_vest	rags 2 rusty_shards 1 tread 1	16	1	1.05	armor_shards 1 rags 4 rusty_shards 20 regular_clothing_container 80	60																									
+		pb_vest	rags 2 rusty_shards 1 tread 1	16	1	1.05	armor_shards 1 rags 5 rusty_shards 20 regular_clothing_container 80	60																									
 		pb_heavy_armor	armor_shards 1 ceramite_shards 1 capacitor 1 metal_tread 2	46	1	1.05	armor_shards 1 metal_tread 3 capacitor 9 ceramite_shards 25 miner_clothing_container 80	60																									
 		franch_heavy_armor	armor_shards 1 ceramite_shards 1 rubber 2 capacitor 1	52	1	1.05	armor_shards 1 rubber 3 capacitor 9 ceramite_shards 25 armor_container 80	60																									
-		core_hard_vest	rags 2 rusty_shards 1 tread 1	16	1	1.05	armor_shards 1 rags 4 rusty_shards 20 worker_clothing_container 80	60																									
+		core_hard_vest	rags 2 rusty_shards 1 tread 1	16	1	1.05	armor_shards 1 rags 5 rusty_shards 20 worker_clothing_container 80	60																									
 		core_power_armor	ceramite_shards 2 armor_shards 2 capacitor 1	64	1	1.05	armor_shards 1 capacitor 3 ceramite_shards 9 armor_repair_kit 25 miner_clothing_container 80	60																									
 		doom_helmet	armor_shards 1 ceramite_shards 1 glass 1 circuit_board 1	48	1	1.05	armor_shards 1 glass 3 ceramite_shards 9 circuit_board 25 armor_container 80	60																									
 		ancom_helmet	armor_shards 1 ceramite_shards 1 glass 1 microelectronics 2	52	1	1.05	armor_shards 1 glass 3 ceramite_shards 9 microelectronics 25 robot_parts_container 80	60																									
 		power_helmet	armor_shards 1 glass 1 circuit_board 1	48	1	1.05	armor_shards 1 glass 3 circuit_board 9 armor_repair_kit 25 armor_container 80	60																									
 		realwear_helmet	armor_shards 2 ceramite_shards 1 glass 1 microelectronics 1	54	1	1.05	armor_shards 1 glass 3 ceramite_shards 9 microelectronics 25 robot_parts_container 80	60																									
-		smuggler_helmet	rusty_shards 1 rubber 1 glass 1	24	1	1.05	armor_shards 1 rubber 4 glass 20 worker_clothing_container 80	60																									
+		smuggler_helmet	rusty_shards 1 rubber 1 glass 1	24	1	1.05	armor_shards 1 rubber 5 glass 20 worker_clothing_container 80	60																									
 		solnet_helmet	armor_shards 1 ceramite_shards 1 glass 2 microelectronics 1	50	1	1.05	armor_shards 1 rubber 3 glass 9 ceramite_shards 25 scientist_clothing_container 80	60																									
-		worker_helmet	armor_shards 1 rubber 2 glass 1	30	1	1.05	armor_shards 1 rubber 4 glass 20 worker_clothing_container 80	60																									
-		pmc_helmet	armor_shards 1 plastic 1 glass 1	18	1	1.05	armor_shards 1 plastic 4 glass 20 armor_container 80	60																									
-		rw_militia_helmet	armor_shards 1 plastic 1	22	1	1.05	armor_shards 1 rags 4 plastic 20 armor_container 80	60																									
+		worker_helmet	armor_shards 1 rubber 2 glass 1	30	1	1.05	armor_shards 1 rubber 5 glass 20 worker_clothing_container 80	60																									
+		pmc_helmet	armor_shards 1 plastic 1 glass 1	18	1	1.05	armor_shards 1 plastic 5 glass 20 armor_container 80	60																									
+		rw_militia_helmet	armor_shards 1 plastic 1	22	1	1.05	armor_shards 1 rags 5 plastic 20 armor_container 80	60																									
 		rw_warlord_helmet	ceramite_shards 2 armor_shards 2 glass 1 microelectronics 1	64	1	1.05	armor_shards 1 glass 3 ceramite_shards 9 microelectronics 25 robot_parts_container 80	60																									
-		svn_cap_hat	rags 2 tread 1	22	1	1.05	armor_shards 1 rags 4 tread 20 regular_clothing_container 80	60																									
+		svn_cap_hat	rags 2 tread 1	22	1	1.05	armor_shards 1 rags 5 tread 20 regular_clothing_container 80	60																									
 		svn_heavy_helmet	ceramite_shards 2 armor_shards 1 glass 1 microelectronics 1	64	1	1.05	armor_shards 1 glass 3 ceramite_shards 9 microelectronics 25 security_clothing_container 80	60																									
-		daydream_chem_helmet	armor_shards 1 rubber 2 glass 1	32	1	1.05	armor_shards 1 rubber 4 glass 20 scientist_clothing_container 80	60																									
+		daydream_chem_helmet	armor_shards 1 rubber 2 glass 1	32	1	1.05	armor_shards 1 rubber 5 glass 20 scientist_clothing_container 80	60																									
 		daydream_armored_helmet	armor_shards 1 ceramite_shards 1 glass 2 microelectronics 1	60	1	1.05	armor_shards 1 glass 3 ceramite_shards 9 microelectronics 25 scientist_clothing_container 80	60																									
 		sl_power_helmet	armor_shards 1 ceramite_shards 1 glass 1 microelectronics 1	62	1	1.05	armor_shards 1 glass 3 ceramite_shards 9 armor_repair_kit 25 scientist_clothing_container 80	60																									
-		ancom_police_mask	armor_shards 1 plastic 1 glass 1	34	1	1.05	armor_shards 1 plastic 4 glass 20 security_clothing_container 80	60																									
-		ancom_agent_mask	armor_shards 2 glass 1	36	1	1.05	armor_shards 1 glass 4 armor_repair_kit 20 security_clothing_container 80	60																									
-		church_priest_helmet	armor_shards 1 glass 2	34	1	1.05	armor_shards 1 glass 4 armor_repair_kit 20 armor_container 80	60																									
+		ancom_police_mask	armor_shards 1 plastic 1 glass 1	34	1	1.05	armor_shards 1 plastic 5 glass 20 security_clothing_container 80	60																									
+		ancom_agent_mask	armor_shards 2 glass 1	36	1	1.05	armor_shards 1 glass 5 armor_repair_kit 20 security_clothing_container 80	60																									
+		church_priest_helmet	armor_shards 1 glass 2	34	1	1.05	armor_shards 1 glass 5 armor_repair_kit 20 armor_container 80	60																									
 		church_power_helmet	armor_shards 2 glass 1 circuit_board 1	40	1	1.05	armor_shards 1 glass 3 circuit_board 9 armor_repair_kit 25 robot_parts_container 80	60																									
-		pb_hard_hat	rags 2 rusty_shards 1	16	1	1.05	armor_shards 1 rags 4 rusty_shards 20 miner_clothing_container 80	60																									
+		pb_hard_hat	rags 2 rusty_shards 1	16	1	1.05	armor_shards 1 rags 5 rusty_shards 20 miner_clothing_container 80	60																									
 		pb_heavy_helmet	armor_shards 1 ceramite_shards 1 glass 1 circuit_board 1	46	1	1.05	armor_shards 1 glass 3 circuit_board 9 ceramite_shards 25 armor_container 80	60																									
-		franch_helmet	armor_shards 1 plastic 2	24	1	1.05	armor_shards 1 plastic 4 armor_repair_kit 20 worker_clothing_container 80	60																									
+		franch_helmet	armor_shards 1 plastic 2	24	1	1.05	armor_shards 1 plastic 5 armor_repair_kit 20 worker_clothing_container 80	60																									
 		franch_heavy_mask	armor_shards 2 ceramite_shards 1 glass 1 microelectronics 1	52	1	1.05	armor_shards 1 glass 3 ceramite_shards 9 microelectronics 25 armor_container 80	60																									
-		core_hard_hat	rags 2 rusty_shards 1	16	1	1.05	armor_shards 1 rags 4 rusty_shards 20 worker_clothing_container 80	60																									
+		core_hard_hat	rags 2 rusty_shards 1	16	1	1.05	armor_shards 1 rags 5 rusty_shards 20 worker_clothing_container 80	60																									
 		core_power_helmet	ceramite_shards 1 armor_shards 2 glass 1 microelectronics 1	64	1	1.05	armor_shards 1 glass 3 ceramite_shards 9 microelectronics 25 miner_clothing_container 80	60																									
-		balaklava	rags 1 tread 1	10	1	1.05	armor_shards 1 rags 4 tread 20 regular_clothing_container 80	60																									
+		balaklava	rags 1 tread 1	10	1	1.05	armor_shards 1 rags 5 tread 20 regular_clothing_container 80	60																									
 		doom_pants	armor_shards 1 ceramite_shards 1 rubber 1 metal_tread 1	48	1	1.05	armor_shards 1 metal_tread 3 rubber 9 ceramite_shards 25 armor_container 80	60																									
 		ancom_pants	armor_shards 1 ceramite_shards 1 rubber 1 plastic 2	52	1	1.05	armor_shards 1 plastic 3 rubber 9 ceramite_shards 25 robot_parts_container 80	60																									
 		power_pants	armor_shards 1 rubber 1 metal_tread 1	48	1	1.05	armor_shards 1 metal_tread 3 rubber 9 armor_repair_kit 25 armor_container 80	60																									
 		realwear_pants	armor_shards 2 ceramite_shards 1 rubber 1 plastic 1	54	1	1.05	armor_shards 1 plastic 3 rubber 9 ceramite_shards 25 robot_parts_container 80	60																									
-		smuggler_pants	rusty_shards 1 rubber 1 tread 1	10	1	1.05	armor_shards 1 tread 4 rubber 20 worker_clothing_container 80	60																									
+		smuggler_pants	rusty_shards 1 rubber 1 tread 1	10	1	1.05	armor_shards 1 tread 5 rubber 20 worker_clothing_container 80	60																									
 		solnet_pants	armor_shards 1 ceramite_shards 1 rubber 2 plastic 1	50	1	1.05	armor_shards 1 rubber 3 plastic 9 ceramite_shards 25 scientist_clothing_container 80	60																									
-		worker_pants	armor_shards 1 rubber 2 tread 1	30	1	1.05	armor_shards 1 tread 4 rubber 20 worker_clothing_container 80	60																									
-		pmc_pants	armor_shards 1 rags 1 tread 1	12	1	1.05	armor_shards 1 rags 4 tread 20 armor_container 80	60																									
-		rw_militia_pants	armor_shards 1 rags 2 tread 1	22	1	1.05	armor_shards 1 rags 4 tread 20 regular_clothing_container 80	60																									
+		worker_pants	armor_shards 1 rubber 2 tread 1	30	1	1.05	armor_shards 1 tread 5 rubber 20 worker_clothing_container 80	60																									
+		pmc_pants	armor_shards 1 rags 1 tread 1	12	1	1.05	armor_shards 1 rags 5 tread 20 armor_container 80	60																									
+		rw_militia_pants	armor_shards 1 rags 2 tread 1	22	1	1.05	armor_shards 1 rags 5 tread 20 regular_clothing_container 80	60																									
 		rw_warlord_pants	ceramite_shards 2 armor_shards 2 rubber 1	64	1	1.05	armor_shards 1 rubber 3 ceramite_shards 9 armor_repair_kit 25 robot_parts_container 80	60																									
-		svn_cap_pants	armor_shards 1 rags 1	22	1	1.05	armor_shards 1 rags 4 armor_repair_kit 20 regular_clothing_container 80	60																									
+		svn_cap_pants	armor_shards 1 rags 1	22	1	1.05	armor_shards 1 rags 5 armor_repair_kit 20 regular_clothing_container 80	60																									
 		svn_heavy_pants	ceramite_shards 2 armor_shards 1 rubber 2	64	1	1.05	armor_shards 1 rubber 3 ceramite_shards 9 armor_repair_kit 25 security_clothing_container 80	60																									
-		daydream_chem_pants	armor_shards 1 rubber 2 tread 1	32	1	1.05	armor_shards 1 rubber 4 tread 20 scientist_clothing_container 80	60																									
+		daydream_chem_pants	armor_shards 1 rubber 2 tread 1	32	1	1.05	armor_shards 1 rubber 5 tread 20 scientist_clothing_container 80	60																									
 		daydream_armored_pants	armor_shards 2 ceramite_shards 1 rubber 1 plastic 1	60	1	1.05	armor_shards 1 rubber 3 plastic 9 ceramite_shards 25 scientist_clothing_container 80	60																									
 		sl_power_pants	armor_shards 1 ceramite_shards 1 rubber 1 plastic 2	62	1	1.05	armor_shards 1 plastic 3 rubber 9 ceramite_shards 25 scientist_clothing_container 80	60																									
-		ancom_police_pants	armor_shards 2 rags 1 tread 1	34	1	1.05	armor_shards 1 rags 4 tread 20 security_clothing_container 80	60																									
-		ancom_agent_pants	armor_shards 2 rubber 1 tread 1	36	1	1.05	armor_shards 1 rags 4 rubber 20 security_clothing_container 80	60																									
-		church_priest_pants	armor_shards 1 rubber 1 tread 2	34	1	1.05	armor_shards 1 tread 4 rubber 20 armor_container 80	60																									
+		ancom_police_pants	armor_shards 2 rags 1 tread 1	34	1	1.05	armor_shards 1 rags 5 tread 20 security_clothing_container 80	60																									
+		ancom_agent_pants	armor_shards 2 rubber 1 tread 1	36	1	1.05	armor_shards 1 rags 5 rubber 20 security_clothing_container 80	60																									
+		church_priest_pants	armor_shards 1 rubber 1 tread 2	34	1	1.05	armor_shards 1 tread 5 rubber 20 armor_container 80	60																									
 		church_power_pants	armor_shards 2 rubber 1 metal_tread 1	40	1	1.05	armor_shards 1 rubber 3 metal_tread 9 ceramite_shards 25 robot_parts_container 80	60																									
-		pb_pants	rags 1 rusty_shards 1 tread 1	16	1	1.05	armor_shards 1 rags 4 rusty_shards 20 miner_clothing_container 80	60																									
+		pb_pants	rags 1 rusty_shards 1 tread 1	16	1	1.05	armor_shards 1 rags 5 rusty_shards 20 miner_clothing_container 80	60																									
 		pb_heavy_pants	armor_shards 1 ceramite_shards 1 rubber 1 metal_tread 2	46	1	1.05	armor_shards 1 metal_tread 3 rubber 9 ceramite_shards 25 armor_container 80	60																									
-		franch_pants	armor_shards 2 rags 1 tread 1	24	1	1.05	armor_shards 1 rags 4 tread 20 worker_clothing_container 80	60																									
+		franch_pants	armor_shards 2 rags 1 tread 1	24	1	1.05	armor_shards 1 rags 5 tread 20 worker_clothing_container 80	60																									
 		franch_heavy_pants	armor_shards 1 ceramite_shards 1 rubber 2 plastic 1	52	1	1.05	armor_shards 1 plastic 3 rubber 9 ceramite_shards 25 armor_container 80	60																									
-		core_hard_pants	rags 1 rusty_shards 1 tread 1	16	1	1.05	armor_shards 1 rags 4 rusty_shards 20 worker_clothing_container 80	60																									
+		core_hard_pants	rags 1 rusty_shards 1 tread 1	16	1	1.05	armor_shards 1 rags 5 rusty_shards 20 worker_clothing_container 80	60																									
 		core_power_pants	ceramite_shards 2 armor_shards 1 rubber 2	64	1	1.05	armor_shards 1 rubber 3 ceramite_shards 9 armor_repair_kit 25 miner_clothing_container 80	60																									
 		doom_boots	ceramite_shards 1 armor_shards 1 rubber 1 metal_tread 1	48	1	1.05	armor_shards 1 metal_tread 3 rubber 9 ceramite_shards 25 armor_container 80	60																									
 		ancom_boots	armor_shards 1 ceramite_shards 1 rubber 1 plastic 2	52	1	1.05	armor_shards 1 plastic 3 rubber 9 ceramite_shards 25 robot_parts_container 80	60																									
 		power_boots	armor_shards 1 rubber 1 metal_tread 1	48	1	1.05	armor_shards 1 metal_tread 3 rubber 9 armor_repair_kit 25 armor_container 80	60																									
 		realwear_boots	armor_shards 2 ceramite_shards 1 rubber 1 plastic 1	54	1	1.05	armor_shards 1 plastic 3 rubber 9 ceramite_shards 25 robot_parts_container 80	60																									
-		smuggler_boots	rusty_shards 1 rubber 2	10	1	1.05	armor_shards 1 rags 4 rubber 20 worker_clothing_container 80	60																									
+		smuggler_boots	rusty_shards 1 rubber 2	10	1	1.05	armor_shards 1 rags 5 rubber 20 worker_clothing_container 80	60																									
 		solnet_boots	armor_shards 1 ceramite_shards 1 rubber 2 plastic 1	50	1	1.05	armor_shards 1 rubber 3 plastic 9 ceramite_shards 25 scientist_clothing_container 80	60																									
-		worker_boots	armor_shards 1 rubber 2	30	1	1.05	armor_shards 1 rags 4 rubber 20 worker_clothing_container 80	60																									
-		pmc_boots	armor_shards 1 plastic 1 rubber 1	12	1	1.05	armor_shards 1 plastic 4 rubber 20 armor_container 80	60																									
+		worker_boots	armor_shards 1 rubber 2	30	1	1.05	armor_shards 1 rags 5 rubber 20 worker_clothing_container 80	60																									
+		pmc_boots	armor_shards 1 plastic 1 rubber 1	12	1	1.05	armor_shards 1 plastic 5 rubber 20 armor_container 80	60																									
 		rw_warlord_boots	ceramite_shards 2 armor_shards 1 rubber 1 plastic 1	64	1	1.05	armor_shards 1 rubber 3 ceramite_shards 9 armor_repair_kit 25 robot_parts_container 80	60																									
 		svn_heavy_boots	ceramite_shards 1 armor_shards 1 rubber 2 plastic 1	64	1	1.05	armor_shards 1 rubber 3 plastic 9 ceramite_shards 25 security_clothing_container 80	60																									
 		daydream_chem_boots	armor_shards 2 rubber 2	32	1	1.05	armor_shards 1 rubber 3 ceramite_shards 9 armor_repair_kit 25 scientist_clothing_container 80	60																									
 		sl_power_boots	armor_shards 2 ceramite_shards 1 rubber 1 plastic 1	62	1	1.05	armor_shards 1 rubber 3 plastic 9 ceramite_shards 25 scientist_clothing_container 80	60																									
-		ancom_police_boots	armor_shards 2 plastic 1 rubber 1	34	1	1.05	armor_shards 1 plastic 4 rubber 20 security_clothing_container 80	60																									
-		ancom_agent_boots	armor_shards 2 rubber 1	36	1	1.05	armor_shards 1 rubber 4 armor_repair_kit 20 security_clothing_container 80	60																									
-		church_priest_boots	armor_shards 1 rubber 2	34	1	1.05	armor_shards 1 rubber 4 armor_repair_kit 20 armor_container 80	60																									
+		ancom_police_boots	armor_shards 2 plastic 1 rubber 1	34	1	1.05	armor_shards 1 plastic 5 rubber 20 security_clothing_container 80	60																									
+		ancom_agent_boots	armor_shards 2 rubber 1	36	1	1.05	armor_shards 1 rubber 5 armor_repair_kit 20 security_clothing_container 80	60																									
+		church_priest_boots	armor_shards 1 rubber 2	34	1	1.05	armor_shards 1 rubber 5 armor_repair_kit 20 armor_container 80	60																									
 		church_power_boots	armor_shards 2 rubber 1 metal_tread 1	40	1	1.05	armor_shards 1 metal_tread 3 rubber 9 armor_repair_kit 25 robot_parts_container 80	60																									
-		pb_boots	rusty_shards 1 plastic 1 rubber 1	16	1	1.05	armor_shards 1 plastic 4 rubber 20 miner_clothing_container 80	60																									
+		pb_boots	rusty_shards 1 plastic 1 rubber 1	16	1	1.05	armor_shards 1 plastic 5 rubber 20 miner_clothing_container 80	60																									
 		pb_heavy_boots	armor_shards 1 ceramite_shards 1 rubber 1 metal_tread 2	46	1	1.05	armor_shards 1 metal_tread 3 rubber 9 ceramite_shards 25 armor_container 80	60																									
-		franch_boots	armor_shards 1 plastic 2 rubber 1	24	1	1.05	armor_shards 1 plastic 4 rubber 20 worker_clothing_container 80	60																									
+		franch_boots	armor_shards 1 plastic 2 rubber 1	24	1	1.05	armor_shards 1 plastic 5 rubber 20 worker_clothing_container 80	60																									
 		franch_heavy_boots	armor_shards 2 ceramite_shards 1 rubber 1 plastic 1	52	1	1.05	armor_shards 1 plastic 3 rubber 9 ceramite_shards 25 armor_container 80	60																									
-		common_boots	rusty_shards 1 plastic 1 rubber 1	16	1	1.05	armor_shards 1 plastic 4 rusty_shards 20 regular_clothing_container 80	60																									
+		common_boots	rusty_shards 1 plastic 1 rubber 1	16	1	1.05	armor_shards 1 plastic 5 rusty_shards 20 regular_clothing_container 80	60																									
 		core_power_boots	ceramite_shards 1 armor_shards 1 rubber 1 plastic 2	64	1	1.05	armor_shards 1 rubber 3 plastic 9 ceramite_shards 25 miner_clothing_container 80	60																									
 		armor_repair_kit	tread 1 rubber 1 armor_shards 1 ceramite_shards 1	24	1	1.01																											
 		weapon_repair_kit	plastic 1 weapon_shards 1 lens 1 microelectronics 1	24	1	1.01																											

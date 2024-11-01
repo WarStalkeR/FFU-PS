@@ -44,12 +44,12 @@ mercenary_melee_critdamage	MeleeDamage	CritDamage	Mercenary	Percent		999	0.1	ui.
 								
 #magnum_projects_prices								
 ProjectType	ItemsGrades	ModifyLevelLimit						
-RangeWeapon	broken_weapon 2 weapon_shards 20 coarse_gears 100 weapon_container 500	90						
-MeleeWeapon	broken_weapon 2 pierce_melee_shards 20 rusty_shards 100 weapon_container 500	90						
-Helmet	rubber 2 armor_shards 10 ceramite_shards 50 armor_container 250	60						
-Armor	rubber 2 armor_shards 10 ceramite_shards 50 armor_container 250	60						
-Leggings	rubber 2 armor_shards 10 ceramite_shards 50 armor_container 250	60						
-Boots	rubber 2 armor_shards 10 ceramite_shards 50 armor_container 250	60						
+RangeWeapon	broken_weapon 2 weapon_shards 20 coarse_gears 100 weapon_container 500	0						
+MeleeWeapon	broken_weapon 2 pierce_melee_shards 20 rusty_shards 100 weapon_container 500	0						
+Helmet	rubber 2 armor_shards 10 ceramite_shards 50 armor_container 250	0						
+Armor	rubber 2 armor_shards 10 ceramite_shards 50 armor_container 250	0						
+Leggings	rubber 2 armor_shards 10 ceramite_shards 50 armor_container 250	0						
+Boots	rubber 2 armor_shards 10 ceramite_shards 50 armor_container 250	0						
 Mercenary	synthBeef 10 organsBox 100 biomass_tank 1000 medical_components 10000	-1						
 MercenaryClass	memory_software 4 research_disk 20 ai_module 60	-1						
 #end								
