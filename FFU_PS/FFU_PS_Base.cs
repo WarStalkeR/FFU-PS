@@ -24,7 +24,7 @@ namespace FFU_Phase_Shift {
             var Mod = new Harmony("quasimorph.ffu.phase_shift");
 
             if (ModConfig.FixCancelOverflow)
-                try { ModLog.Info("Patching: MGSC.MagnumDevelopmentSystem.CancelProject");
+                try { ModLog.Info("Patching: MGSC.MagnumDevelopmentSystem.CancelProject -> ExploitFix");
                     var refMethod = AccessTools.Method(typeof(MagnumDevelopmentSystem), "CancelProject");
                     var prefixPatch = SymbolExtensions.GetMethodInfo(() =>
                         ModPatch.CancelProject_ExploitFix(default, default, default, default));
@@ -32,7 +32,7 @@ namespace FFU_Phase_Shift {
                 } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
 
             if (ModConfig.FixContextStackUse)
-                try { ModLog.Info("Patching: MGSC.ItemInteraction.UseAutomap");
+                try { ModLog.Info("Patching: MGSC.ItemInteraction.UseAutomap -> UsageFix");
                     var refMethod = AccessTools.Method(typeof(ItemInteraction), "UseAutomap");
                     var prefixPatch = SymbolExtensions.GetMethodInfo(() =>
                         ModPatch.UseAutomap_UsageFix(default, default, default, default));
@@ -40,7 +40,7 @@ namespace FFU_Phase_Shift {
                 } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
 
             if (ModConfig.FixContextStackUse)
-                try { ModLog.Info("Patching: MGSC.NoPlayerContextMenu.OnContextCommandClick");
+                try { ModLog.Info("Patching: MGSC.NoPlayerContextMenu.OnContextCommandClick -> UsageFix");
                     var refMethod = AccessTools.Method(typeof(NoPlayerContextMenu), "OnContextCommandClick");
                     var prefixPatch = SymbolExtensions.GetMethodInfo(() =>
                         ModPatch.OnContextCommandClick_UsageFix(default, default));
@@ -48,7 +48,7 @@ namespace FFU_Phase_Shift {
                 } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
 
             if (ModConfig.FixContextStackUse)
-                try { ModLog.Info("Patching: MGSC.InventoryScreen.InteractWithCharacter");
+                try { ModLog.Info("Patching: MGSC.InventoryScreen.InteractWithCharacter -> UsageFix");
                     bool result = false;
                     var refMethod = AccessTools.Method(typeof(InventoryScreen), "InteractWithCharacter");
                     var prefixPatch = SymbolExtensions.GetMethodInfo(() =>
@@ -57,7 +57,7 @@ namespace FFU_Phase_Shift {
                 } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
 
             if (ModConfig.BetterItemUnlocks)
-                try { ModLog.Info("Patching: MGSC.ItemFactory.CreateComponent");
+                try { ModLog.Info("Patching: MGSC.ItemFactory.CreateComponent -> BetterUnlock");
                     var refMethod = AccessTools.Method(typeof(ItemFactory), "CreateComponent");
                     var postfixPatch = SymbolExtensions.GetMethodInfo(() =>
                         ModPatch.CreateComponent_BetterUnlock(default, default, default, default, default, default));
@@ -65,7 +65,7 @@ namespace FFU_Phase_Shift {
                 } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
 
             if (ModConfig.SmartProduction)
-                try { ModLog.Info("Patching: MGSC.ItemProductionSystem.StartMagnumItemProduction");
+                try { ModLog.Info("Patching: MGSC.ItemProductionSystem.StartMagnumItemProduction -> SmartPrecision");
                     var refMethod = AccessTools.Method(typeof(ItemProductionSystem), "StartMagnumItemProduction");
                     var prefixPatch = SymbolExtensions.GetMethodInfo(() =>
                         ModPatch.StartMagnumItemProduction_SmartPrecision(default, default, default, default, default, default, default, default));
@@ -74,7 +74,7 @@ namespace FFU_Phase_Shift {
 
             if (ModConfig.SmartSelectItem)
                 try {
-                    ModLog.Info("Patching: MGSC.MagnumSelectItemToProduceWindow.InitPanels");
+                    ModLog.Info("Patching: MGSC.MagnumSelectItemToProduceWindow.InitPanels -> SmartSorting");
                     var refMethod = AccessTools.Method(typeof(MagnumSelectItemToProduceWindow), "InitPanels");
                     var prefixPatch = SymbolExtensions.GetMethodInfo(() =>
                         ModPatch.InitPanels_SmartSorting(default));
@@ -82,7 +82,7 @@ namespace FFU_Phase_Shift {
                 } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
 
             if (ModConfig.IsExperimental)
-                try { ModLog.Info("Patching: MGSC.ArsenalScreen.Show");
+                try { ModLog.Info("Patching: MGSC.ArsenalScreen.Show -> FixShipUI");
                     var refMethod = AccessTools.Method(typeof(ArsenalScreen), "Show", 
                         new Type[] { typeof(Mercenary), typeof(bool), typeof(Action) });
                     var postfixPatch = SymbolExtensions.GetMethodInfo(() =>
