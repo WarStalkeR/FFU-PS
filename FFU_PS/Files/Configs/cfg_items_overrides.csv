@@ -5,52 +5,52 @@ regular_launcher		2000	4	2	GrenadeLauncher	Launcher	Heavy		heavy_basic_ammo	frag
 																																	
 #ammo																																	
 Id		Price	Weight	InventoryWidthSize	MaxStack	BallisticType	MinAmmoAmount	MaxAmmoAmount	AmmoType	DmgType	DmgCritChance	AccuracyMult	DamageMult	BulletCastsPerShot	TargetBurningChance	TileBurningChance	TileToxicLiquidChance	PierceCreaturesChance	ThrowBackChance	StunChance	StunDuration												
-pistol_basic_ammo		10	0.01	1	600	Ballistic	10	20	Bullets	blunt	0.03	1	1	1	0	0	0	0	0.1	0	0												
-pistol_burst_ammo		20	0.01	1	600	Ballistic	10	20	Bullets	explosion	0.06	1	1.2	1	0.2	0.1	0	0	0.2	0	0												
-pistol_expansive_ammo		20	0.01	1	600	Ballistic	10	20	Bullets	lacer	0.16	1	1.4	1	0	0	0	0	0	0	0												
-*miner_bolts_ammo		1	0.01	1	600	Ballistic	10	20	Bolts	pierce	0.24	1	1	1	0	0	0	0.8	0	0	0												
-medium_basic_ammo		10	0.02	1	600	Ballistic	10	20	Medium	pierce	0.03	1	1	1	0	0	0	0.4	0	0	0												
-medium_police_ammo		10	0.02	1	600	Ballistic	10	20	Medium	blunt	0.06	1	1.2	1	0	0	0	0	0.25	0	0												
-shotgun_bullet_ammo		10	0.03	1	400	Ballistic	10	20	Shells	blunt	0.06	1	0.8	1	0	0	0	0.2	0.2	0	0												
-shotgun_shrapnel_ammo		10	0.03	1	400	Ballistic	10	20	Shells	lacer	0.16	1	2	4	0	0	0	0	0.05	0	0												
-shotgun_flechette_ammo		20	0.03	1	400	Ballistic	10	20	Shells	pierce	0.24	1	1.2	4	0	0	0	0.8	0	0	0												
-shotgun_explosion_ammo		20	0.03	1	400	Ballistic	10	20	Shells	explosion	0.16	1	1.2	4	0.2	0.1	0	0	0.2	0	0												
-shotgun_dragon_ammo		20	0.03	1	400	Ballistic	10	20	Shells	fire	0.16	1	1.2	4	0.2	0.8	0	0	0.2	0	0												
+pistol_basic_ammo		10	0.01	1	800	Ballistic	10	20	Bullets	blunt	0.03	1	1	1	0	0	0	0	0.1	0	0												
+pistol_burst_ammo		20	0.01	1	800	Ballistic	10	20	Bullets	explosion	0.06	1	1.2	1	0.2	0.1	0	0	0.2	0	0												
+pistol_expansive_ammo		20	0.01	1	800	Ballistic	10	20	Bullets	lacer	0.16	1	1.4	1	0	0	0	0	0	0	0												
+*miner_bolts_ammo		1	0.01	1	800	Ballistic	10	20	Bolts	pierce	0.24	1	1	1	0	0	0	0.8	0	0	0												
+medium_basic_ammo		10	0.02	1	800	Ballistic	10	20	Medium	pierce	0.03	1	1	1	0	0	0	0.4	0	0	0												
+medium_police_ammo		10	0.02	1	800	Ballistic	10	20	Medium	blunt	0.06	1	1.2	1	0	0	0	0	0.25	0	0												
+shotgun_bullet_ammo		10	0.03	1	800	Ballistic	10	20	Shells	blunt	0.06	1	0.8	1	0	0	0	0.2	0.2	0	0												
+shotgun_shrapnel_ammo		10	0.03	1	800	Ballistic	10	20	Shells	lacer	0.16	1	2	4	0	0	0	0	0.05	0	0												
+shotgun_flechette_ammo		20	0.03	1	800	Ballistic	10	20	Shells	pierce	0.24	1	1.2	4	0	0	0	0.8	0	0	0												
+shotgun_explosion_ammo		20	0.03	1	800	Ballistic	10	20	Shells	explosion	0.16	1	1.2	4	0.2	0.1	0	0	0.2	0	0												
+shotgun_dragon_ammo		20	0.03	1	800	Ballistic	10	20	Shells	fire	0.16	1	1.2	4	0.2	0.8	0	0	0.2	0	0												
 heavy_basic_ammo		10	0.02	1	800	Ballistic	10	20	Heavy	pierce	0.03	1	1	1	0	0	0	0.6	0	0	0												
 heavy_armorpierce_ammo		20	0.02	1	800	Ballistic	10	20	Heavy	pierce	0.05	1	1.2	1	0	0	0	0.95	0	0	0												
-heavy_plasma_ammo		20	0.02	1	600	Ballistic	10	20	Heavy	plasma	0.05	1	1.3	1	0.8	0	0	0.6	0	0	0												
-battery_charge		30	0.02	1	600	Ballistic	10	20	BatteryCells	beam	0.06	1	1	1	0.2	0	0	0.7	0	0	0												
-dilthye_battery_charge		30	0.015	1	600	Ballistic	10	20	BatteryCells	beam	0.16	1	0.9	1	0.2	0	0	0.8	0	0	0												
-battery_crafted_charge		1	0.02	1	600	Ballistic	10	20	BatteryCells	beam	0.02	1	0.8	1	0.1	0	0	0.5	0	0	0												
+heavy_plasma_ammo		20	0.02	1	800	Ballistic	10	20	Heavy	plasma	0.05	1	1.3	1	0.8	0	0	0.6	0	0	0												
+battery_charge		30	0.02	1	800	Ballistic	10	20	BatteryCells	beam	0.06	1	1	1	0.2	0	0	0.7	0	0	0												
+dilthye_battery_charge		30	0.015	1	800	Ballistic	10	20	BatteryCells	beam	0.16	1	0.9	1	0.2	0	0	0.8	0	0	0												
+battery_crafted_charge		1	0.02	1	800	Ballistic	10	20	BatteryCells	beam	0.02	1	0.8	1	0.1	0	0	0.5	0	0	0												
 *gas_ammo		1	0.02	1	800	Ballistic	10	20	Gas	fire	0	1	1	6	0.8	0.8	0	0	0	0	0												
-sawblade_ammo		2	0.04	1	200	Richoshet	10	20	SawBlade	lacer	0.16	1	1	1	0	0	0	0.85	0	0	0												
-quasi_basic_ammo		4	0.04	1	200	Ballistic	10	20	QuasiCells	poison	0.05	1	1	1	0	0	0	0.2	0	0	0												
-quasi_bolts_ammo		4	0.04	1	600	Ballistic	10	20	Bolts	pierce	1	1	1	1	0	0	0	1	0	0	0												
-quasi_energy_ammo		4	0.04	1	600	Ballistic	10	20	BatteryCells	plasma	0.3	1	1.4	1	1	0.4	0	0	0	0	0												
-toxic_ammo		1	0.01	1	600	Ballistic	10	20	Toxic	poison	0.08	1	1	1	0	0	0.25	0	0	0	0												
-superheavy_basic_ammo		30	0.05	1	400	Ballistic	10	20	SuperHeavy	blunt	0.06	1	1	1	0	0	0	0	0.25	0	0												
-pirates_flack_ammo		30	0.05	1	400	Ballistic	10	20	SuperHeavy	pierce	0.16	1	1.6	4	0	0	0	0	0.1	0	0												
+sawblade_ammo		2	0.04	1	800	Richoshet	10	20	SawBlade	lacer	0.16	1	1	1	0	0	0	0.85	0	0	0												
+quasi_basic_ammo		4	0.04	1	800	Ballistic	10	20	QuasiCells	poison	0.05	1	1	1	0	0	0	0.2	0	0	0												
+quasi_bolts_ammo		4	0.04	1	800	Ballistic	10	20	Bolts	pierce	1	1	1	1	0	0	0	1	0	0	0												
+quasi_energy_ammo		4	0.04	1	800	Ballistic	10	20	BatteryCells	plasma	0.3	1	1.4	1	1	0.4	0	0	0	0	0												
+toxic_ammo		1	0.01	1	800	Ballistic	10	20	Toxic	poison	0.08	1	1	1	0	0	0.25	0	0	0	0												
+superheavy_basic_ammo		30	0.05	1	800	Ballistic	10	20	SuperHeavy	blunt	0.06	1	1	1	0	0	0	0	0.25	0	0												
+pirates_flack_ammo		30	0.05	1	800	Ballistic	10	20	SuperHeavy	pierce	0.16	1	1.6	4	0	0	0	0	0.1	0	0												
 implicted_em_ammo		100	1	1	0	Ballistic	0	0	Bolts	pierce	0.05	1	1	1	0	0	0	0.8	0	0	0												
 implicted_em_blunt_ammo		100	1	1	0	Ballistic	0	0	Bolts	blunt	0.03	1	1	1	0	0	0	0.2	0.2	0	0												
-implicted_combat_knife		100	1	1	400	Ballistic	0	0		pierce	0.12	1	1	1	0	0	0	0	0	0	0												
-implicted_knife		100	1	1	400	Ballistic	0	0		pierce	0.05	1	1	1	0	0	0	0	0	0	0												
-implicted_club		100	1	1	400	Ballistic	0	0		blunt	0.06	1	1	1	0	0	0	0	0.3	0	0												
-implicted_shockclub		100	1	1	400	Ballistic	0	0		shock	0.1	1	1	1	0	0	0	0	0.3	0	0												
-implicted_shockgun		100	1	1	600	Ballistic	0	0		shock	0	1	1	1	0	0	0	0	0	0	0												
-implicted_coldgun		100	1	1	600	Ballistic	0	0	BatteryCells	cold	0.06	1	1	1	0	0	0	0	0	0	0												
-implicted_heavy_axe		100	1	1	400	Ballistic	0	0		lacer	0.03	1	1	1	0	0	0	0	0.6	0	0												
-implicted_katana		100	1	1	400	Ballistic	0	0		lacer	0.24	1	1	1	0	0	0	0	0	0	0												
-implicted_body_part		100	1	1	400	Ballistic	0	0		blunt	0.03	1	1	1	0	0	0	0	0.2	0	0												
-implicted_xiomara_range		100	1	1	400	Ballistic	0	0		poison	0	1	1	1	0	0	0	0	0	0	0												
+implicted_combat_knife		100	1	1	800	Ballistic	0	0		pierce	0.12	1	1	1	0	0	0	0	0	0	0												
+implicted_knife		100	1	1	800	Ballistic	0	0		pierce	0.05	1	1	1	0	0	0	0	0	0	0												
+implicted_club		100	1	1	800	Ballistic	0	0		blunt	0.06	1	1	1	0	0	0	0	0.3	0	0												
+implicted_shockclub		100	1	1	800	Ballistic	0	0		shock	0.1	1	1	1	0	0	0	0	0.3	0	0												
+implicted_shockgun		100	1	1	800	Ballistic	0	0		shock	0	1	1	1	0	0	0	0	0	0	0												
+implicted_coldgun		100	1	1	800	Ballistic	0	0	BatteryCells	cold	0.06	1	1	1	0	0	0	0	0	0	0												
+implicted_heavy_axe		100	1	1	800	Ballistic	0	0		lacer	0.03	1	1	1	0	0	0	0	0.6	0	0												
+implicted_katana		100	1	1	800	Ballistic	0	0		lacer	0.24	1	1	1	0	0	0	0	0	0	0												
+implicted_body_part		100	1	1	800	Ballistic	0	0		blunt	0.03	1	1	1	0	0	0	0	0.2	0	0												
+implicted_xiomara_range		100	1	1	800	Ballistic	0	0		poison	0	1	1	1	0	0	0	0	0	0	0												
 implicted_flamethrower		100	1	1	0	Flame	0	0		fire	0	1	1	1	1	0.8	0	0	0	0	0												
 implicted_sawblade		100	1	1	0	Ballistic	0	0		lacer	0.12	1	1	1	0	0	0	0	0	0	0												
-implicted_toxic_shrapnel		100	1	1	600	Ballistic	10	20	Toxic	poison	0.08	1	1	4	0	0	0.25	0	0	0	0												
-implicted_coldgun_shrapnel		100	1	1	600	Ballistic	10	20	BatteryCells	cold	0.06	1	1	4	0	0	0	0	0	0	0												
-implicted_energy_shrapnel		100	1	1	600	Ballistic	10	20		plasma	0.06	1	1	4	0.8	0	0	0.4	0	0	0												
-implicted_plasma_shrapnel		100	1	1	600	Ballistic	10	20		plasma	0.06	1	1	4	0.8	0	0	0.4	0	0	0												
-implicted_plasma_charge		100	1	1	400	Ballistic	10	20		plasma	0.06	1	1	1	0.2	0	0	0.7	0	0	0												
+implicted_toxic_shrapnel		100	1	1	800	Ballistic	10	20	Toxic	poison	0.08	1	1	4	0	0	0.25	0	0	0	0												
+implicted_coldgun_shrapnel		100	1	1	800	Ballistic	10	20	BatteryCells	cold	0.06	1	1	4	0	0	0	0	0	0	0												
+implicted_energy_shrapnel		100	1	1	800	Ballistic	10	20		plasma	0.06	1	1	4	0.8	0	0	0.4	0	0	0												
+implicted_plasma_shrapnel		100	1	1	800	Ballistic	10	20		plasma	0.06	1	1	4	0.8	0	0	0.4	0	0	0												
+implicted_plasma_charge		100	1	1	800	Ballistic	10	20		plasma	0.06	1	1	1	0.2	0	0	0.7	0	0	0												
 implicted_toxicthrower		100	1	1	0	ToxicFlame	0	0		poison	0	1	1	1	0	0	0.8	0	0	0	0												
-implicted_quasi_beam		100	1	1	200	Ballistic	10	20	QuasiCells	beam	0.05	1	1	1	0	0	0	0.2	0	0	0												
+implicted_quasi_beam		100	1	1	800	Ballistic	10	20	QuasiCells	beam	0.05	1	1	1	0	0	0	0.2	0	0	0												
 #end																																	
 																																	
 #medkits																																	
@@ -108,7 +108,7 @@ mre_pack		200	0.6	1	40	2400	0	plastic	FALSE	0	FALSE
 packedGoodRation		4	0.28	1	80	450	0	plastic	FALSE	0	FALSE																						
 packedRation		4	0.24	1	80	450	0	plastic	FALSE	0	FALSE																						
 redSoda		1	0.3	1	80	300	0	tin	FALSE	0	TRUE																						
-water		1	0.5	1	50	0	10	plastic	FALSE	0	TRUE																						
+water		1	0.1	1	500	0	1		FALSE	0	TRUE																						
 *beer		4	0.5	1	50	400	0	tin	FALSE	0.5	TRUE																						
 burgerMeat		5	0.34	1	80	500	0	plastic	FALSE	0	FALSE																						
 burgerVeg		5	0.24	1	80	450	0	plastic	FALSE	0	FALSE																						
@@ -258,7 +258,7 @@ explosives		10	0.6	1	200	Resource
 acid		1	0.01	1	500	Resource																											
 tin		1	0.1	1	200	Resource																											
 miner_bolts_ammo		1	0.01	1	600	Resource																											
-gas_ammo		1	0.02	1	800	Resource																											
+gas_ammo		1	0.02	1	500	Resource																											
 quest_fresco_data		999	1	1	1	QuestItem																											
 quest_prison_head		999	1	1	1	QuestItem																											
 aztKey		999	1	1	1	QuestItem																											
@@ -310,7 +310,7 @@ ai_module		120	0.3	1	100	BartherResource
 communication_relay		95	0.4	1	50	BartherResource																											
 *defibrillator_device		99	0.5	1	10	BartherResource																											
 *robot_resurrect_device		129	0.7	1	10	BartherResource																											
-*quasi_sensor_device		86	0.5	1	10	BartherResource																											
+*quasi_sensor_device		86	0.5	1	20	BartherResource																											
 geoscanner_device		73	0.5	1	50	BartherResource																											
 welding_machine_device		68	0.5	1	50	BartherResource																											
 medical_equipment		156	5.8	2	10	BartherResource																											

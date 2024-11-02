@@ -1,6 +1,6 @@
 #datadisks								
 Id		Price	Weight	InventoryWidthSize	UnlockType	UnlockIds		
-+itemChip		100	0.1	1	ProductionItem	battery_charge bandit_sawblade army_pistol dark_pistol rail_pistol tech_pistol petrov_pistol desert_shotgun bandit_smg civres_powerfist civres_pistol civres_pistol_2 civres_smg shedu_pistol pirates_smg elite_knife miner_knife glass_knife machete metal_pipe scarp_club knuckles breaker crowbar wrench choppa_axe bandit_axe		
++itemChip		100	0.1	1	ProductionItem	battery_charge gas_ammo toxic_ammo bandit_sawblade army_pistol dark_pistol rail_pistol tech_pistol petrov_pistol desert_shotgun bandit_smg civres_powerfist civres_pistol civres_pistol_2 civres_smg shedu_pistol pirates_smg elite_knife miner_knife glass_knife machete metal_pipe scarp_club knuckles breaker crowbar wrench choppa_axe bandit_axe		
 +mediumItemChip		200	0.1	1	ProductionItem	miner_disctrower miner_flametrower civres_assault civres_marksman civres_armor civres_helmet civres_pants civres_boots shedu_gas_shotgun pirates_smg_2 civres_smg_2 civres_plasma_pistol		
 +highItemChip		400	0.1	1	ProductionItem	quasi_sensor_device nanorobot_grenade phase_bomb		
 #end								
@@ -23,8 +23,8 @@ Id		Price	Weight	InventoryWidthSize	MaxStack	SubType
 *DiltheyItemChip		500	0.1	1	10	BartherResource		
 *merkUSB		400	0.1	1	10	BartherResource		
 *classUSB		500	0.1	1	10	BartherResource		
-*automap		82	0.5	1	10	BartherResource		
-*demonic_aye		150	0.4	1	10	BartherResource		
+*automap		82	0.5	1	20	BartherResource		
+*demonic_aye		150	0.4	1	20	BartherResource		
 *stationary_turret		1000	10	2	5	BartherResource		
 *fire_turret		1000	10	2	5	BartherResource		
 *energy_turret		1000	10	2	5	BartherResource		
@@ -76,6 +76,8 @@ Id		OutputItem	RequiredItems	ProduceTimeInHours	ModifyStartCost	ModifyStep	Modif
 		miner_disctrower	coarse_gears 1 spring 1 armor_shards 1 rod 1	26	1	1.02	sawblade_ammo 1 coarse_gears 20 spring 100 engineering_parts_container 500	90
 		miner_flametrower	coarse_gears 1 metal_tread 1 armor_shards 1 rod 1	24	1	1.02	gas_ammo 1 coarse_gears 20 spring 100 engineering_parts_container 500	90
 		battery_crafted_charge	broken_weapon 1 acid 1	0.2	1	1.01		
+		gas_ammo	powder 1 water 1	0.3	1	1.01		
+		toxic_ammo	acid 2	0.3	1	1.01		
 		civres_armor	armor_shards 1 ceramite_shards 1 metal_tread 1 rubber 1	42	1	1.05	armor_shards 1 metal_tread 3 rubber 9 ceramite_shards 25 miner_clothing_container 80	60
 		civres_helmet	armor_shards 2 glass 1 metal_tread 1	42	1	1.05	armor_shards 1 metal_tread 3 glass 9 ceramite_shards 25 miner_clothing_container 80	60
 		civres_pants	armor_shards 2 rubber 2	42	1	1.05	armor_shards 1 rags 3 rubber 9 ceramite_shards 25 miner_clothing_container 80	60
