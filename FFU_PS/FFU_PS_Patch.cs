@@ -178,6 +178,88 @@ namespace FFU_Phase_Shift {
             return true; // Continue with original code.
         }
 
+        // Rebalances post-mission rewards: bullets grant 10% ~ 60% of stack, everything else grants 1 unit ~ 20% of stack
+        public static bool MissionFinishedByPlayer_Rebalance(Missions missions, Stations stations, MagnumCargo magnumCargo, MagnumSpaceship magnumSpaceship, SpaceTime spaceTime, PopulationDebugData populationDebugData, TravelMetadata travelMetadata, Factions factions, ItemsPrices itemsPrices, Difficulty difficulty, Mission mission) {
+            if (!mission.IsStoryMission) {
+                MissionSystem.ProcessMissionSuccessActions(stations, spaceTime, 
+				populationDebugData, travelMetadata, factions, itemsPrices, difficulty, mission);
+            }
+            MissionSystem.RemoveMission(missions, mission.StationId);
+            Faction fBeneficiary = factions.Get(mission.BeneficiaryFactionId);
+            Faction fVictim = factions.Get(mission.VictimFactionId);
+            float repPlayer = fVictim.PlayerReputation;
+            fBeneficiary.PlayerReputation += mission.BeneficiaryReputationDelta;
+            fVictim.PlayerReputation += mission.VictimReputationDelta;
+            fBeneficiary.PlayerReputation = Mathf.Clamp(fBeneficiary.PlayerReputation, Data.Global.MinReputation, Data.Global.MaxReputation);
+            fVictim.PlayerReputation = Mathf.Clamp(fVictim.PlayerReputation, Data.Global.MinReputation, Data.Global.MaxReputation);
+            int repThreshold = Data.Global.WipeRelationsReputationThreshold;
+            if (fVictim.PlayerReputation < repThreshold && repPlayer >= repThreshold) {
+                FactionSystem.WipeTradeRelations(stations, fVictim);
+            }
+            if (mission.IsStoryMission) {
+                foreach (BasePickupItem storyPickup in mission.RewardItems) {
+                    if (storyPickup.MaxStack > 1) {
+                        if (storyPickup.Is<AmmoRecord>())
+                            storyPickup.StackCount = (short)UnityEngine.Random.Range
+                            (storyPickup.MaxStack * 0.1f, storyPickup.MaxStack * 0.5f);
+                        else if (!storyPickup.Is<TrashRecord>())
+							storyPickup.StackCount = (short)UnityEngine.Random.Range
+                            (1f, Mathf.Max(1f, storyPickup.MaxStack * 0.2f));
+                    }
+                    MagnumCargoSystem.AddCargo(magnumCargo, spaceTime, storyPickup);
+                }
+                return false;
+            }
+            fBeneficiary.PlayerTradePoints += mission.RemainsRewardPoints;
+            foreach (BasePickupItem missionPickup in mission.RewardItems) {
+                if (missionPickup.MaxStack > 1) {
+                    if (missionPickup.Is<AmmoRecord>())
+                        missionPickup.StackCount = (short)UnityEngine.Random.Range
+                        (missionPickup.MaxStack * 0.1f, missionPickup.MaxStack * 0.5f);
+                    else missionPickup.StackCount = (short)UnityEngine.Random.Range
+                        (1f, Mathf.Max(1f, missionPickup.MaxStack * 0.2f));
+                }
+                MagnumCargoSystem.AddCargo(magnumCargo, spaceTime, missionPickup);
+            }
+            if (!magnumSpaceship.HasPurgeBrigadeDepartment) 
+				return false;
+            Station station = stations.Get(mission.StationId);
+            ProcMissionTemplate record = Data.ProcMissionTemplates.GetRecord(station.Record.MissionTemplateId);
+            List<ContentDropRecord> dropRecords = new List<ContentDropRecord>();
+            foreach (string itemTablesId in record.ItemTablesIds) 
+				dropRecords.AddRange(Data.LocationItemDrop.Get(itemTablesId));
+            List<ItemRecord> salvageItems = new List<ItemRecord>();
+            salvageItems.AddRange(DropManager.DropWithLimit(DropManager.GetItemsByType<TrashRecord>(dropRecords), (int)magnumSpaceship.PurgeBrigadeResourcesBonus));
+            List<ItemRecord> armorItems = DropManager.GetItemsByType<ArmorRecord>(dropRecords);
+            List<ItemRecord> weaponItems = DropManager.GetItemsByType<WeaponRecord>(dropRecords);
+            List<ItemRecord> bonusEquipment = armorItems.Concat(weaponItems).ToList();
+            salvageItems.AddRange(DropManager.DropWithLimit(bonusEquipment, (int)magnumSpaceship.PurgeBrigadeArmorWeaponBonus));
+            List<ItemRecord> foodItems = DropManager.GetItemsByType<FoodRecord>(dropRecords);
+            List<ItemRecord> medicalItems = DropManager.GetItemsByType<MedkitRecord>(dropRecords);
+            List<ItemRecord> bonusProvisions = foodItems.Concat(medicalItems).ToList();
+            salvageItems.AddRange(DropManager.DropWithLimit(bonusProvisions, (int)magnumSpaceship.PurgeBrigadeFoodMedsBonus));
+            List<ItemRecord> ammoItems = DropManager.GetItemsByType<AmmoRecord>(dropRecords);
+            List<ItemRecord> grenadeItems = DropManager.GetItemsByType<GrenadeRecord>(dropRecords);
+            List<ItemRecord> bonusSupplies = ammoItems.Concat(grenadeItems).ToList();
+            salvageItems.AddRange(DropManager.DropWithLimit(bonusSupplies, (int)magnumSpaceship.PurgeBrigadeAmmoGrenadesBonus));
+            foreach (ItemRecord salvageItem in salvageItems) {
+                BasePickupItem salvagePickup = SingletonMonoBehaviour<ItemFactory>.Instance.CreateForInventory(salvageItem.Id);
+                if (salvagePickup != null) {
+                    if (salvagePickup.MaxStack > 1) {
+                        if (salvagePickup.Is<AmmoRecord>())
+                            salvagePickup.StackCount = (short)UnityEngine.Random.Range
+                            (salvagePickup.MaxStack * 0.1f, salvagePickup.MaxStack * 0.6f);
+                        else salvagePickup.StackCount = (short)UnityEngine.Random.Range
+                            (1f, Mathf.Max(1f, salvagePickup.MaxStack * 0.2f));
+                    }
+                    mission.RewardItems.Add(salvagePickup);
+                    salvagePickup.ExaminedItem = false;
+                    MagnumCargoSystem.AddCargo(magnumCargo, spaceTime, salvagePickup);
+                }
+            }
+            return false; // Original function is completely replaced
+        }
+
         // Data disks rework to prioritize unlocking unknown data first
         public static void CreateComponent_BetterUnlock(ItemFactory __instance, PickupItem item, List<PickupItemComponent> itemComponents,
             BasePickupItemRecord itemRecord, bool randomizeConditionAndCapacity, bool isPrimary) {
@@ -936,6 +1018,75 @@ public bool InteractWithCharacter(BasePickupItem item, bool spendTurn)
 	}
 	SingletonMonoBehaviour<SoundController>.Instance.PlayUiSound(SingletonMonoBehaviour<SoundsStorage>.Instance.EmptyAttack);
 	return false;
+}
+
+public static void MissionFinishedByPlayer(Missions missions, Stations stations, MagnumCargo magnumCargo, MagnumSpaceship magnumSpaceship, SpaceTime spaceTime, PopulationDebugData populationDebugData, TravelMetadata travelMetadata, Factions factions, ItemsPrices itemsPrices, Difficulty difficulty, Mission mission)
+{
+	if (!mission.IsStoryMission)
+	{
+		ProcessMissionSuccessActions(stations, spaceTime, populationDebugData, travelMetadata, factions, itemsPrices, difficulty, mission);
+	}
+	RemoveMission(missions, mission.StationId);
+	Faction faction = factions.Get(mission.BeneficiaryFactionId);
+	Faction faction2 = factions.Get(mission.VictimFactionId);
+	float playerReputation = faction2.PlayerReputation;
+	faction.PlayerReputation += mission.BeneficiaryReputationDelta;
+	faction2.PlayerReputation += mission.VictimReputationDelta;
+	faction.PlayerReputation = Mathf.Clamp(faction.PlayerReputation, Data.Global.MinReputation, Data.Global.MaxReputation);
+	faction2.PlayerReputation = Mathf.Clamp(faction2.PlayerReputation, Data.Global.MinReputation, Data.Global.MaxReputation);
+	int wipeRelationsReputationThreshold = Data.Global.WipeRelationsReputationThreshold;
+	if (faction2.PlayerReputation < (float)wipeRelationsReputationThreshold && playerReputation >= (float)wipeRelationsReputationThreshold)
+	{
+		FactionSystem.WipeTradeRelations(stations, faction2);
+	}
+	if (mission.IsStoryMission)
+	{
+		foreach (BasePickupItem rewardItem in mission.RewardItems)
+		{
+			MagnumCargoSystem.AddCargo(magnumCargo, spaceTime, rewardItem);
+		}
+		return;
+	}
+	faction.PlayerTradePoints += mission.RemainsRewardPoints;
+	foreach (BasePickupItem rewardItem2 in mission.RewardItems)
+	{
+		MagnumCargoSystem.AddCargo(magnumCargo, spaceTime, rewardItem2);
+	}
+	if (!magnumSpaceship.HasPurgeBrigadeDepartment)
+	{
+		return;
+	}
+	Station station = stations.Get(mission.StationId);
+	ProcMissionTemplate record = Data.ProcMissionTemplates.GetRecord(station.Record.MissionTemplateId);
+	List<ContentDropRecord> list = new List<ContentDropRecord>();
+	foreach (string itemTablesId in record.ItemTablesIds)
+	{
+		list.AddRange(Data.LocationItemDrop.Get(itemTablesId));
+	}
+	List<ItemRecord> list2 = new List<ItemRecord>();
+	list2.AddRange(DropManager.DropWithLimit(DropManager.GetItemsByType<TrashRecord>(list), (int)magnumSpaceship.PurgeBrigadeResourcesBonus));
+	List<ItemRecord> itemsByType = DropManager.GetItemsByType<AmmoRecord>(list);
+	List<ItemRecord> itemsByType2 = DropManager.GetItemsByType<WeaponRecord>(list);
+	List<ItemRecord> dropCollection = itemsByType.Concat(itemsByType2).ToList();
+	list2.AddRange(DropManager.DropWithLimit(dropCollection, (int)magnumSpaceship.PurgeBrigadeArmorWeaponBonus));
+	List<ItemRecord> itemsByType3 = DropManager.GetItemsByType<FoodRecord>(list);
+	List<ItemRecord> itemsByType4 = DropManager.GetItemsByType<MedkitRecord>(list);
+	List<ItemRecord> dropCollection2 = itemsByType3.Concat(itemsByType4).ToList();
+	list2.AddRange(DropManager.DropWithLimit(dropCollection2, (int)magnumSpaceship.PurgeBrigadeFoodMedsBonus));
+	List<ItemRecord> itemsByType5 = DropManager.GetItemsByType<AmmoRecord>(list);
+	List<ItemRecord> itemsByType6 = DropManager.GetItemsByType<GrenadeRecord>(list);
+	List<ItemRecord> dropCollection3 = itemsByType5.Concat(itemsByType6).ToList();
+	list2.AddRange(DropManager.DropWithLimit(dropCollection3, (int)magnumSpaceship.PurgeBrigadeAmmoGrenadesBonus));
+	foreach (ItemRecord item in list2)
+	{
+		BasePickupItem basePickupItem = SingletonMonoBehaviour<ItemFactory>.Instance.CreateForInventory(item.Id);
+		if (basePickupItem != null)
+		{
+			mission.RewardItems.Add(basePickupItem);
+			basePickupItem.ExaminedItem = false;
+			MagnumCargoSystem.AddCargo(magnumCargo, spaceTime, basePickupItem);
+		}
+	}
 }
 
 private void CreateComponent(PickupItem item, List<PickupItemComponent> itemComponents, BasePickupItemRecord itemRecord, bool randomizeConditionAndCapacity, bool isPrimary)

@@ -6,7 +6,7 @@ namespace FFU_Phase_Shift {
     public static class ModConfig {
         // Constant Variables
         public const bool IsExperimental = false;
-        public const string ModVersion = "0.2.5.0";
+        public const string ModVersion = "0.2.6.5";
         public const string PathDump = "_Dump";
         public const string PathAssets = "Assets";
         public const string PathConfigs = "Configs";
@@ -16,6 +16,7 @@ namespace FFU_Phase_Shift {
         // Initial Variables
         public static bool FixCancelOverflow = true;
         public static bool FixContextStackUse = true;
+        public static bool RewardsRebalance = true;
         public static bool BetterItemUnlocks = true;
         public static bool BetterVestSlotting = true;
         public static bool SmartProduction = true;
@@ -43,6 +44,7 @@ namespace FFU_Phase_Shift {
             modConfig["InitConfig"]["ModVersion"] = ModVersion;
             modConfig["PatchConfig"]["FixCancelOverflow"] = true;
             modConfig["PatchConfig"]["FixContextStackUse"] = true;
+            modConfig["PatchConfig"]["RewardsRebalance"] = true;
             modConfig["PatchConfig"]["BetterItemUnlocks"] = true;
             modConfig["PatchConfig"]["BetterVestSlotting"] = true;
             modConfig["PatchConfig"]["SmartProduction"] = true;
@@ -80,6 +82,7 @@ namespace FFU_Phase_Shift {
             // Load patch settings variables
             FixCancelOverflow = modConfig["PatchConfig"]["FixCancelOverflow"].ToBool(FixCancelOverflow);
             FixContextStackUse = modConfig["PatchConfig"]["FixContextStackUse"].ToBool(FixContextStackUse);
+            RewardsRebalance = modConfig["PatchConfig"]["RewardsRebalance"].ToBool(RewardsRebalance);
             BetterItemUnlocks = modConfig["PatchConfig"]["BetterItemUnlocks"].ToBool(BetterItemUnlocks);
             BetterVestSlotting = modConfig["PatchConfig"]["BetterVestSlotting"].ToBool(BetterVestSlotting);
             SmartProduction = modConfig["PatchConfig"]["SmartProduction"].ToBool(SmartProduction);

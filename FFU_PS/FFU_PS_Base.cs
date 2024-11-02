@@ -56,11 +56,21 @@ namespace FFU_Phase_Shift {
                     Mod.Patch(refMethod, prefix: new HarmonyMethod(prefixPatch));
                 } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
 
+            if (ModConfig.RewardsRebalance)
+                try { ModLog.Info("Patching: MGSC.MissionSystem.MissionFinishedByPlayer -> Rebalance");
+                    var refMethod = AccessTools.Method(typeof(MissionSystem), "MissionFinishedByPlayer");
+                    var prefixPatch = SymbolExtensions.GetMethodInfo(() =>
+                        ModPatch.MissionFinishedByPlayer_Rebalance(default, default, default, default, 
+                        default, default, default, default, default, default, default));
+                    Mod.Patch(refMethod, prefix: new HarmonyMethod(prefixPatch));
+                } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
+
             if (ModConfig.BetterItemUnlocks)
                 try { ModLog.Info("Patching: MGSC.ItemFactory.CreateComponent -> BetterUnlock");
                     var refMethod = AccessTools.Method(typeof(ItemFactory), "CreateComponent");
                     var postfixPatch = SymbolExtensions.GetMethodInfo(() =>
-                        ModPatch.CreateComponent_BetterUnlock(default, default, default, default, default, default));
+                        ModPatch.CreateComponent_BetterUnlock(default, default, default, 
+                        default, default, default));
                     Mod.Patch(refMethod, postfix: new HarmonyMethod(postfixPatch));
                 } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
 
@@ -68,7 +78,8 @@ namespace FFU_Phase_Shift {
                 try { ModLog.Info("Patching: MGSC.ItemFactory.CreateComponent -> VestCompatible");
                     var refMethod = AccessTools.Method(typeof(ItemFactory), "CreateComponent");
                     var postfixPatch = SymbolExtensions.GetMethodInfo(() =>
-                        ModPatch.CreateComponent_VestCompatible(default, default, default, default, default, default));
+                        ModPatch.CreateComponent_VestCompatible(default, default, 
+                        default, default, default, default));
                     Mod.Patch(refMethod, postfix: new HarmonyMethod(postfixPatch));
                 } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
 
@@ -82,7 +93,8 @@ namespace FFU_Phase_Shift {
 
             if (ModConfig.BetterVestSlotting)
                 try { ModLog.Info("Patching: MGSC.SlotsView.Refresh -> VestCompatible");
-                    var refMethod = AccessTools.Method(typeof(SlotsView), "Refresh", new Type[]{typeof(ItemStorage), typeof(int)});
+                    var refMethod = AccessTools.Method(typeof(SlotsView), "Refresh", 
+                        new Type[]{typeof(ItemStorage), typeof(int)});
                     var prefixPatch = SymbolExtensions.GetMethodInfo(() =>
                         ModPatch.Refresh_VestCompatible(default, default, default));
                     Mod.Patch(refMethod, prefix: new HarmonyMethod(prefixPatch));
@@ -92,7 +104,8 @@ namespace FFU_Phase_Shift {
                 try { ModLog.Info("Patching: MGSC.ItemProductionSystem.StartMagnumItemProduction -> SmartPrecision");
                     var refMethod = AccessTools.Method(typeof(ItemProductionSystem), "StartMagnumItemProduction");
                     var prefixPatch = SymbolExtensions.GetMethodInfo(() =>
-                        ModPatch.StartMagnumItemProduction_SmartPrecision(default, default, default, default, default, default, default, default));
+                        ModPatch.StartMagnumItemProduction_SmartPrecision(default, default, default, default, 
+                        default, default, default, default));
                     Mod.Patch(refMethod, prefix: new HarmonyMethod(prefixPatch));
                 } catch (Exception ex) { ModLog.Error($"Patch Failed: {ex}"); }
 
