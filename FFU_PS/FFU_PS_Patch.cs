@@ -201,7 +201,7 @@ namespace FFU_Phase_Shift {
                     if (storyPickup.MaxStack > 1) {
                         if (storyPickup.Is<AmmoRecord>())
                             storyPickup.StackCount = (short)UnityEngine.Random.Range
-                            (storyPickup.MaxStack * 0.1f, storyPickup.MaxStack * 0.5f);
+                            (storyPickup.MaxStack * 0.1f, storyPickup.MaxStack * 0.6f);
                         else if (!storyPickup.Is<TrashRecord>())
 							storyPickup.StackCount = (short)UnityEngine.Random.Range
                             (1f, Mathf.Max(1f, storyPickup.MaxStack * 0.2f));
@@ -215,7 +215,7 @@ namespace FFU_Phase_Shift {
                 if (missionPickup.MaxStack > 1) {
                     if (missionPickup.Is<AmmoRecord>())
                         missionPickup.StackCount = (short)UnityEngine.Random.Range
-                        (missionPickup.MaxStack * 0.1f, missionPickup.MaxStack * 0.5f);
+                        (missionPickup.MaxStack * 0.1f, missionPickup.MaxStack * 0.6f);
                     else missionPickup.StackCount = (short)UnityEngine.Random.Range
                         (1f, Mathf.Max(1f, missionPickup.MaxStack * 0.2f));
                 }
