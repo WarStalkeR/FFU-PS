@@ -229,19 +229,33 @@ namespace FFU_Phase_Shift {
             foreach (string itemTablesId in record.ItemTablesIds) 
 				dropRecords.AddRange(Data.LocationItemDrop.Get(itemTablesId));
             List<ItemRecord> salvageItems = new List<ItemRecord>();
-            salvageItems.AddRange(DropManager.DropWithLimit(DropManager.GetItemsByType<TrashRecord>(dropRecords), (int)magnumSpaceship.PurgeBrigadeResourcesBonus));
+			List<ItemRecord> trashItems = DropManager.GetItemsByType<TrashRecord>(dropRecords);
+            salvageItems.AddRange(DropManager.DropWithLimit(trashItems, 
+				(int)magnumSpaceship.PurgeBrigadeResourcesBonus));
+            List<ItemRecord> helmetItems = DropManager.GetItemsByType<HelmetRecord>(dropRecords);
             List<ItemRecord> armorItems = DropManager.GetItemsByType<ArmorRecord>(dropRecords);
+            List<ItemRecord> leggingItems = DropManager.GetItemsByType<LeggingsRecord>(dropRecords);
+            List<ItemRecord> bootItems = DropManager.GetItemsByType<BootsRecord>(dropRecords);
+            List<ItemRecord> vestItems = DropManager.GetItemsByType<VestRecord>(dropRecords);
+            List<ItemRecord> backpackItems = DropManager.GetItemsByType<BackpackRecord>(dropRecords);
             List<ItemRecord> weaponItems = DropManager.GetItemsByType<WeaponRecord>(dropRecords);
-            List<ItemRecord> bonusEquipment = armorItems.Concat(weaponItems).ToList();
-            salvageItems.AddRange(DropManager.DropWithLimit(bonusEquipment, (int)magnumSpaceship.PurgeBrigadeArmorWeaponBonus));
+            List<ItemRecord> bonusEquipment = weaponItems.Concat(helmetItems).Concat(armorItems)
+				.Concat(leggingItems).Concat(bootItems).Concat(vestItems).Concat(backpackItems).ToList();
+            bonusEquipment.Shuffle();
+            salvageItems.AddRange(DropManager.DropWithLimit(bonusEquipment, 
+				(int)magnumSpaceship.PurgeBrigadeArmorWeaponBonus));
             List<ItemRecord> foodItems = DropManager.GetItemsByType<FoodRecord>(dropRecords);
             List<ItemRecord> medicalItems = DropManager.GetItemsByType<MedkitRecord>(dropRecords);
             List<ItemRecord> bonusProvisions = foodItems.Concat(medicalItems).ToList();
-            salvageItems.AddRange(DropManager.DropWithLimit(bonusProvisions, (int)magnumSpaceship.PurgeBrigadeFoodMedsBonus));
+            bonusProvisions.Shuffle();
+            salvageItems.AddRange(DropManager.DropWithLimit(bonusProvisions, 
+				(int)magnumSpaceship.PurgeBrigadeFoodMedsBonus));
             List<ItemRecord> ammoItems = DropManager.GetItemsByType<AmmoRecord>(dropRecords);
             List<ItemRecord> grenadeItems = DropManager.GetItemsByType<GrenadeRecord>(dropRecords);
             List<ItemRecord> bonusSupplies = ammoItems.Concat(grenadeItems).ToList();
-            salvageItems.AddRange(DropManager.DropWithLimit(bonusSupplies, (int)magnumSpaceship.PurgeBrigadeAmmoGrenadesBonus));
+            bonusSupplies.Shuffle();
+            salvageItems.AddRange(DropManager.DropWithLimit(bonusSupplies, 
+				(int)magnumSpaceship.PurgeBrigadeAmmoGrenadesBonus));
             foreach (ItemRecord salvageItem in salvageItems) {
                 BasePickupItem salvagePickup = SingletonMonoBehaviour<ItemFactory>.Instance.CreateForInventory(salvageItem.Id);
                 if (salvagePickup != null) {
